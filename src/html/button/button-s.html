@@ -1,12 +1,11 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 <polymer-element name="y-buttons" attributes="name">
 	<template>
-		<p>Script status yo from {{name}}</p>
 		<content></content>
+		<p>Script status yo from {{name}}</p>
+		<!-- <shadow></shadow> -->
 	</template>
-	<script>
-		Polymer('y-buttons',{
-			name: 'Jeremy'
-		});
+	<script type="text/javascript">
+		Polymer('y-buttons');
 	</script>
 </polymer-element>
