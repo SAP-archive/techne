@@ -11,5 +11,8 @@
     "url": "ssh://git@stash.hybris.com:7999/cx/techne-components.git"
   },
   "author": "Hybris Software",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.11.2"
+  }
 }
