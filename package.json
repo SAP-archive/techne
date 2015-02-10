@@ -16,6 +16,9 @@
     "express": "^4.11.2"
   },
   "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11",
+    "gulp-less": "^2.0.1"
     "gulp-groc": "^0.4.1"
   }
 }
