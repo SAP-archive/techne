@@ -11,5 +11,10 @@
     "url": "ssh://git@stash.hybris.com:7999/cx/techne-components.git"
   },
   "author": "Hybris Software",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11",
+    "gulp-less": "^2.0.1"
+  }
 }
