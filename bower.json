@@ -5,6 +5,9 @@
   "authors": [
     "Hybris Software"
   ],
+   "ignore": [
+    "docs"
+  ],
   "license": "MIT",
   "private": true,
   "dependencies": {
