@@ -1,0 +1,13 @@
+{
+  "name": "hyTechne",
+  "version": "0.0.1",
+  "description": "Hybris Techne style guide",
+  "authors": [
+    "Hybris Software"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
