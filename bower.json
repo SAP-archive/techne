@@ -5,13 +5,14 @@
   "authors": [
     "Hybris Software"
   ],
-   "ignore": [
+  "ignore": [
     "docs"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
     "bootstrap": "~3.3.2",
-    "select2": "~3.5.2"
+    "select2": "~3.5.2",
+    "polymer": "Polymer/polymer#~0.5.4"
   }
 }
