@@ -3,3 +3,7 @@ bower_components/
 
 ## NODE MODULES
 node_modules/
+
+## IDE Specfici folders
+.idea/
+
