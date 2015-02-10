@@ -1,0 +1,15 @@
+{
+  "name": "techne-components",
+  "version": "1.0.0",
+  "description": "Hybris Techne Style Guide",
+  "main": "docs/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.hybris.com:7999/cx/techne-components.git"
+  },
+  "author": "Hybris Software",
+  "license": "MIT"
+}
