@@ -11,6 +11,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "select2": "~3.5.2"
   }
 }
