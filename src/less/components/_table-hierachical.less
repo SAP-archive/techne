@@ -1,0 +1,273 @@
+// Hierachical Table
+//
+// A majority of buttons in the site are built from the same base class.
+// 
+// Markup:
+//<table class="table y-responsive-table">
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//</table>
+// 
+// Styleguide 2.1
+
+.y-h-table{
+	background: #EDF1F5;
+
+	.y-h-tablehead{
+		background: @dark-blue-100;
+		color: #fff;
+		overflow: hidden;
+	}
+
+	.seperator{
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.toggle{
+		width: 40px;
+	}
+
+	.row-image{
+		margin-right: 15px;
+		max-width: 50px;
+	}
+
+	.row-image-cell{
+		width: 65px;
+	}
+
+	.name-cell{
+		max-width: 200px;
+
+	}
+
+	.y-h-table-row{
+		border-top: 2px solid #EDF1F5;
+		border-radius: 2px;
+		background: #fff;
+		position: relative;
+		.y-h-table-row{
+				border-top: 2px solid rgba(255, 255, 255, 1);
+				background: rgba(151, 165, 180, 0.2);
+				
+
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+
+	div[class*='col-'] {
+		padding: 15px 0 15px 15px;
+	}
+
+	 @media (max-width: @screen-sm-max) {
+
+       .y-h-tablehead{
+       		display: none;
+       }
+
+       .value-cell{
+       		padding-top:0!important;
+       }
+
+       	.y-h-table-row{
+       		div[class*='col-'] {
+				padding: 10px 45px;
+			}
+       }
+       	.row-image-cell{
+			display: none!important;
+		}
+
+		.sticky-right{
+			position: absolute;
+			right: 0;
+			top:  	0;
+			height: 100%;
+			text-align: right;
+			padding: 0!important;
+		}
+
+		.toggle-cell{
+				position: absolute;
+				left: 4px;
+				top: 4px;
+				display: block!important;
+				width: 40px!important;
+		}
+
+		.name-cell{
+			display: block!important;
+		}
+     }
+}
+
+
+// <table> approach
+/*
+.y-hierarchy-table{
+	.seperator{
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.row-image{
+		margin-right: 15px;
+	}
+
+	> tbody{
+		> tr{
+			> td{
+				//border-top: 2px solid #fff;
+				vertical-align: middle;
+
+			}
+		}
+	}
+
+	@media (max-width: @screen-sm-min) {
+		.seperator{
+			width: 0!important;
+		}
+
+		&.table tbody > tr > td{display: block; border: none; box-shadow: 0 0 0;}
+		th{display: none;}
+
+		> tbody{
+			> tr{
+				display:block;
+				
+				border-bottom: 5px solid #EDF1F5;
+				padding-left: 45px;
+				padding-right: 45px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				position: relative;
+
+				&.single-row{
+					padding: 0px;
+				}
+
+				&:last-child{
+					border:none;
+				}
+
+				> td{
+					padding: 0px;
+					padding-bottom: 0.5em;
+					display: inline;
+
+					&.sticky-right{
+						position: absolute;
+						right: 0;
+						top:  	0;
+						height: 100%;
+						text-align: right;
+					}
+
+					&:first-child{
+						.toggle{
+							position: absolute;
+							left: 0;
+							top:  	0;
+						}
+					}
+				}
+			}
+		}
+
+		.row-image{
+			display: none;
+		}
+	}
+}
+*/
+
+
+.generate-hierarchy-level(10);
+
+.generate-hierarchy-level(@n, @i: 1) when (@i =< @n) {
+  .y-hierarchy-table-level-@{i} {
+    background: rgba(44, 75, 107, (@i * 0.2 ));
+  }
+  .generate-hierarchy-level(@n, (@i + 1));
+}
+
+
+// Keep content aligned in the same row when one is getting to big
+.table-behavoir{
+	display: table;
+	width: 100%;
+	.table-behavoir-cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/* Temp closedbeta workaround - write mixin afterwards */
+.y-h-table-row {
+  	.seperator{
+  		width: 40px;
+  	}
+
+  	.y-h-table-row {
+		.seperator{
+			width: 50px;
+		} 
+		.y-h-table-row {
+			.seperator{
+				width: 60px;
+			} 
+			.y-h-table-row {
+				.seperator{
+					width: 70px;
+				} 
+				.y-h-table-row {
+					.seperator{
+						width: 80px;
+					} 
+			  		.y-h-table-row {
+						.seperator{
+							width: 90px;
+						} 
+						.y-h-table-row {
+							.seperator{
+								width: 100px;
+							} 
+							.y-h-table-row {
+								.seperator{
+									width: 110px;
+								} 
+								.y-h-table-row {
+									.seperator{
+										width: 120px;
+									} 
+									.y-h-table-row {
+										.seperator{
+											width: 130px;
+										} 
+							  		}
+						  		}
+					  		}
+				  		}
+		  			}
+		  		}
+	  		}
+  		}
+  	}
+
+}
+
+

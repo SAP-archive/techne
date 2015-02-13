@@ -15,8 +15,7 @@
   "author": "Hybris Software",
   "license": "MIT",
   "dependencies": {
-    "gulp-connect-multi": "^1.0.8",
-    "lodash": "^3.2.0"
+    "gulp-connect-multi": "^1.0.8"
   },
   "devDependencies": {
     "bower": "^1.3.12",
@@ -28,6 +27,7 @@
     "gulp-kss": "0.0.2",
     "gulp-less": "^2.0.1",
     "gulp-sourcemaps": "^1.3.0",
-    "gulp-watch": "^4.1.1"
+    "gulp-watch": "^4.1.1",
+    "lodash": "^3.2.0"
   }
 }

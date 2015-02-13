@@ -1,0 +1,172 @@
+// Responsive Table
+//
+// A majority of buttons in the site are built from the same base class.
+// 
+// Markup:
+//<table class="table y-responsive-table">
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//</table>
+// 
+// Styleguide 2.3
+
+
+table.y-responsive-table{
+
+	//border-collapse: collapse;
+
+	th,
+	td {
+		margin: 0;
+		padding: @table-cell-padding!important;
+		vertical-align: top; 
+	}
+
+	th{
+		text-align: left;
+		background: #fff2b2; 
+	}
+
+
+	@media only screen and (max-width: @screen-xs) {
+		// REMOVE MULTI SELECT FOR MOBILE
+		&.table-multi-select{
+			tbody > tr > td:first-child, thead > tr > th:first-child{
+	        		padding-left: 0;
+	        		display: block;
+	        		&:before{
+	        			display: none;
+	        		}
+			}
+		}
+
+		display: block; 
+		position: relative; width: 100%; 
+		
+		thead{
+			display: block;
+			float: left; 
+			background: @dark-blue;
+		}
+		tbody{
+			display: block;
+			width: auto;
+			position: relative;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;  
+			white-space: nowrap; 
+			background: #fff;
+		}
+		thead tr{
+			display: block; 
+		}
+		th{
+			display: block;
+		}
+		tbody tr{
+			display: inline-block;
+			vertical-align: top; 
+		}
+		td{
+			display: block;
+			min-height: 1.25em;
+		}
+
+		/* sort out borders */
+		td,th { border-left: 0!important; border-right: 0; border-bottom: 0; padding: @table-cell-padding-mobile!important;
+			&:first-child{
+				border-top: 0!important;
+			}
+		}
+		tbody tr { border-right: 1px solid @table-border-color; }
+		thead tr { border-top: 1px solid @dark-blue;}
+	}
+
+/* BREAK ALL INTO ONE LINE 
+
+	tr{
+		display: block;
+		
+		overflow: hidden;
+
+	}
+
+	tbody{
+		tr{
+			margin-bottom: 10px;
+		}
+	}
+
+	td{
+		border: none!important;
+    	display: block;
+    	float: left;
+    	width: 100%;
+    	padding-top: 5px!important;
+    	padding-bottom: 5px!important;
+		
+
+		&:first-child{
+			border-bottom: 1px solid #EDF1F5 !important;
+			padding-top: 8px!important;
+    		padding-bottom: 8px!important;
+		
+		}
+
+		&:last-child{
+			border-bottom: 1px solid #EDF1F5 !important;
+			border-top: 1px solid #EDF1F5 !important;
+			padding-top: 8px!important;
+    		padding-bottom: 8px!important;
+		}
+	}
+
+	th{
+		display: none;
+		&:first-child,
+		&:last-child{
+			display: table-cell;
+			width: 100%;
+		}
+
+	}
+
+
+	// BIGGER THAN MOBILE
+	@media (min-width: 0) and (min-width: @screen-xs) {
+		tr{
+			display: table-row;
+			margin-bottom: 0px;
+		}
+
+		td{
+			float: none;
+			display: table-cell;
+			width: auto;
+			border-top: 1px solid #EDF1F5 !important;
+			padding-top: 8px!important;
+    		padding-bottom: 8px!important;
+
+		}
+
+		th{
+			display: table-cell;
+			width: auto;
+
+			&:first-child,
+			&:last-child{
+				width: auto;
+			}
+		}
+
+	}#
+
+	*/
+}
