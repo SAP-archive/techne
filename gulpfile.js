@@ -87,6 +87,9 @@ gulp.task('styleguide', function () {
     .pipe(concat('style.css'))
     .pipe(gulp.dest('docs/kss/public'));
 
+    gulp.src('./dist/fonts/**/*')
+   .pipe(gulp.dest('./docs/kss/public/fonts'));
+
 
 });
 
