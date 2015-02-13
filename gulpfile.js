@@ -7,15 +7,19 @@ var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
 
-var connect = require('gulp-connect-multi')();
+var iconfont = require('gulp-iconfont');
+var consolidate = require('gulp-consolidate');
 
+
+var connect = require('gulp-connect-multi')();
 
 
 var paths = {
   scripts: 'src/js/**/*',
   less: ['src/less/**/*.less','!src/less/**/_*.less'],
+  doc_less: 'src/less/**/*.less',
   doc_markdown: 'docs/markdown/**/*',
-  doc_templates: '/docs/templates/*.hbs',
+  doc_template: '/docs/template/**/*',
   html: ['src/html/**/*.html', 'docs/demo/**/*'],
   environment: 'dist'
 };
@@ -36,6 +40,29 @@ gulp.task('less', function () {
         .pipe(gulp.dest(paths.environment+'/css/'));
 });
 
+
+// Create Iconfont
+gulp.task('iconfont', function(){
+  gulp.src(['src/icons/*.svg'])
+    .pipe(iconfont({
+      fontName: 'hyicon',
+      normalize: true,
+      centerHorizontally: true,
+      fontHeight: 100 // IMPORTANT
+    }))
+    .on('codepoints', function(codepoints, options) {
+      gulp.src('src/less/templates/_icons.less')
+        .pipe(consolidate('lodash', {
+          glyphs: codepoints,
+          fontName: 'hyicon',
+          fontPath: 'fonts/',
+          className: 'hyicon'
+        }))
+        .pipe(gulp.dest('src/less/components'));
+    })
+    .pipe(gulp.dest('dist/fonts/'));
+});
+
 // Complile general Less Files
 gulp.task('html', function () {
     return gulp.src(paths.html)
@@ -44,37 +71,43 @@ gulp.task('html', function () {
 });
 
 
-// Complile general Less Files
+// Generate Docs
 gulp.task('styleguide', function () {
-    gulp.src(paths.less)
+
+
+    gulp.src(paths.doc_less)
     .pipe(gulpkss({
-        overview: __dirname + 'docs/markdown/index.md'
+        overview: __dirname + '/docs/markdown/index.md',
+        templateDirectory: __dirname + '/docs/template'
     }))
     .pipe(gulp.dest('docs/kss'));
- 
-// Concat and compile all your styles for correct rendering of the styleguide. 
-    gulp.src('paths.less')
+
+    gulp.src(paths.less)
     .pipe(less())
-    .pipe(concat('public/style.css'))
-    .pipe(gulp.dest('styleguide/'));
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('docs/kss/public'));
+
+
 });
+
 
 gulp.task('connect', connect.server({
   root: [__dirname],
   port: 1341,
   livereload: true,
-  open: {
-    browser: 'Google Chrome' // if not working OS X browser: 'Google Chrome'
-  }
+  //open: {
+  //  browser: 'Google Chrome' // if not working OS X browser: 'Google Chrome'
+  //}
 }));
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  //gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.less, ['less']);
   //gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.doc_template, ['styleguide']);
 });
 
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', [ 'less' , 'connect', 'watch']);
+gulp.task('default', [ 'less' , 'connect', 'watch', 'styleguide']);

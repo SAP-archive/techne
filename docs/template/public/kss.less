@@ -1,0 +1,271 @@
+@import 'markdown';
+
+
+body{
+  margin-top: 116px!important;
+}
+
+#kss-wrapper{
+   background-color: #fff;
+}
+
+#kss-top-nav{
+  background: #2877cb;
+  color: #fff;
+  overflow: hidden;
+
+  ul{
+    list-style: outside none none;
+    margin: 0;
+    padding: 0 20px;
+
+    li{
+      float: left;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+      }
+    }
+  }
+
+}
+
+#kss-nav{
+   width: 20%;
+
+   background-color: #fff;
+   nav > ul{
+      margin: 2em;
+      margin-top: 2.5em;
+      padding: 0;
+
+      list-style-type: none;
+   }
+}
+
+#kss-header h1{
+   font-size: 1.5em;
+
+   margin-top: 5/3em;
+   margin-left: 4/3em;
+}
+
+#kss-main,
+#kss-nav{
+  
+}
+
+#kss-main{
+
+}
+
+.kss-mod-list{
+   width: 100%;
+}
+
+.kss-mod-name{
+   font-size: .75em;
+
+   width: 20%;
+
+   text-align: right;
+}
+
+.kss-mod-example{
+   display: block;
+
+   padding-bottom: 20px;
+   & > td{
+      display: block;
+   }
+}
+
+.kss-markup{
+   margin-bottom: 40px;
+}
+
+.kss-depth-1 > h1{
+   font-size: 2.5em * .950;
+}
+.kss-depth-2 > h1{
+   font-size: 2.5em * .900;
+}
+.kss-depth-3 > h1{
+   font-size: 2.5em * .850;
+}
+.kss-depth-4 > h1{
+   font-size: 2.5em * .800;
+}
+.kss-depth-5 > h1{
+   font-size: 2.5em * .750;
+}
+.kss-depth-6 > h1{
+   font-size: 2.5em * .700;
+}
+
+// ------------------------------------------------------------------------------
+//   @group prettyprint.js styling
+// ------------------------------------------------------------------------------
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln{
+   color: #000;
+}  /* plain text */
+
+@media screen{
+   .str{
+      color: #080;
+   }  /* string content */
+   .kwd{
+      color: #008;
+   }  /* a keyword */
+   .com{
+      color: #800;
+   }  /* a comment */
+   .typ{
+      color: #606;
+   }  /* a type name */
+   .lit{
+      color: #066;
+   }  /* a literal value */
+   /* punctuation, lisp open bracket, lisp close bracket */
+   .pun,
+   .opn,
+   .clo{
+      color: #660;
+   }
+   .tag{
+      color: #008;
+   }  /* a markup tag name */
+   .atn{
+      color: #606;
+   }  /* a markup attribute name */
+   .atv{
+      color: #080;
+   }  /* a markup attribute value */
+   .dec,
+   .var{
+      color: #606;
+   }  /* a declaration; a variable name */
+   .fun{
+      color: red;
+   }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection{
+   .str{
+      color: #060;
+   }
+   .kwd{
+      font-weight: bold; 
+
+      color: #006;
+   }
+   .com{
+      font-style: italic; 
+
+      color: #600;
+   }
+   .typ{
+      font-weight: bold; 
+
+      color: #404;
+   }
+   .lit{
+      color: #044;
+   }
+   .pun,
+   .opn,
+   .clo{
+      color: #440;
+   }
+   .tag{
+      font-weight: bold; 
+
+      color: #006;
+   }
+   .atn{
+      color: #404;
+   }
+   .atv{
+      color: #060;
+   }
+}
+
+/* Put a border around prettyprinted code snippets. */
+/*pre.prettyprint { padding: 2px; border: 1px solid #888 }*/
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums{
+   margin-top: 0;
+   margin-bottom: 0;
+} /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8{
+   list-style-type: none;
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9{
+   background: #eee;
+}
+
+// ------------------------------------------------------------------------------
+//   @group Mobile/Tablet Styling
+// ------------------------------------------------------------------------------
+@media screen and (max-width: 768px){
+   #kss-main{
+      position: static;
+
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 0;
+   }
+
+   #kss-nav{
+      position: static;
+
+      display: block;
+
+      width: auto;
+      margin: 0;
+
+      border-bottom: 1px solid #ddd;
+      background: 0;
+      box-shadow: none;
+      nav > ul{
+         margin-top: .5em;
+         margin-bottom: .5em;
+         & > li{
+            display: inline-block;
+
+            padding-right: 1.5em;
+         }
+      }
+   }
+
+   #kss-header > hgroup > h1{
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+}
+
+@media screen and (max-width: 640px){
+   #kss-github{
+      display: none;
+   }
+}
+// @end
