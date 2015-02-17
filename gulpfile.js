@@ -19,7 +19,7 @@ var paths = {
   less: ['src/less/**/*.less','!src/less/**/_*.less'],
   doc_less: 'src/less/**/*.less',
   doc_markdown: 'docs/markdown/**/*',
-  doc_template: '/docs/template/**/*',
+  doc_template: 'docs/template/**/*',
   html: ['src/html/**/*.html', 'docs/demo/**/*'],
   environment: 'dist'
 };
