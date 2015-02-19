@@ -1,0 +1,75 @@
+// Multiselect Table
+//
+// A majority of buttons in the site are built from the same base class.
+// 
+// Markup:
+//<table class="table table-multi-select">
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//	<tr>
+//		<td>Content</td>
+//	</tr>
+//</table>
+// 
+// Styleguide 2.2
+
+.table-multi-select{
+
+
+	// DEFAULT
+	> thead,
+	> tbody,
+	> tfoot {
+	    > tr {
+	      > th,
+	      > td {
+	      	&:first-child{
+	      		 
+	      		 position: relative;
+
+
+	      		/* CHECKMARK ICON PSEUDO ELEMENT */
+	        	&:before{
+	        		border-right: 1px solid #EEEEEE;
+				    color: #EDF3FA;
+				    content: "";
+				    font-family: 'Glyphicons Halflings';
+				    font-style: normal;
+				    font-weight: normal;
+				    margin-right: 10px;
+				    padding-left: 5px;
+				    padding-right: 10px;
+				    cursor: pointer;
+	        	}
+	      	}
+	      }
+	    }
+  	}
+
+  	// HOVER
+  	&.table-hover{
+		> tbody > tr:hover{
+			> td:first-child{
+				&:before{
+					color: @table-cell-select-color-hover;
+				}
+			}
+		}
+	}
+
+	// HEADER SKINNING
+	> thead > tr{
+		> th:first-child{
+			&:before{
+				color: @table-cell-select-color-active;
+				cursor: default;
+			}
+		}
+	}
+}
+
+

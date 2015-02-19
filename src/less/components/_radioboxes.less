@@ -1,0 +1,50 @@
+@radio-size: 24px;
+@radio-border-width: 5px;
+
+
+.radio{
+	position: relative;
+	padding-left: @radio-size + 5;
+	line-height: @radio-size;
+    margin-bottom: 14px;
+    min-height: @radio-size;
+
+	input{
+		display: none;
+		&:checked + label{
+
+			&:before{
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				display: block;
+				width: @radio-size;
+				height: @radio-size ;
+				background: @default-blue;
+				border-radius: @radio-size/2;
+				border: @radio-border-width solid @light-blue;
+				.box-shadow(0 2px 0 fade(@light-blue-600, 100%));
+			}
+				
+		}
+	}
+
+	label{
+		&:before{
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				display: block;
+				width: @radio-size;
+				height: @radio-size ;
+				background: #fff;
+				border-radius: @radio-size/2;
+				border: @radio-border-width solid @light-blue;
+				.box-shadow(0 2px 0 fade(@light-blue-600, 100%));
+
+		}
+	}
+}
+

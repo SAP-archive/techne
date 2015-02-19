@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Techne: Hybris Living Styleguid</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+
+</head>
+<body>
+
+  <div class="main-content" id="kss-wrapper">
+    <section id="content" class="row-offcanvas row-offcanvas-left">
+
+  <!-- / SUPER HEADER -->
+    <header class="navbar-super-holder">
+      <div class="navbar-super" role="navigation">
+          <a href="/" class="domain">
+              <img class="domain-logo" src="https://www.yaas.io/globalressources/img/techne.svg" alt="techne">
+          </a>
+          <ul class="nav-super">
+              <li><a href="https://www.yaas.io">YaaS Home</a></li>
+              <li><a href="https://builder.yaas.io">Builder</a></li>
+              <li class="active"><a href="https://devportal.yaas.io">Dev Portal</a></li>
+              <li><a href="https://appexchange.yaas.io">App Exchange</a></li>
+          </ul>
+          <a href="http://www.hybris.com" target="_blank" class="brand">
+              <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company">
+          </a>
+          <a href="#" class="nav-super-toggle">
+              <span class="nav-super-triangle"></span>
+          </a>
+      </div>
+      <div id="kss-top-nav">
+
+          <button data-toggle="offcanvas" class="btn btn-xs navbar-toggle navbar-btn visible-xs" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+
+
+          <ul class="hidden-xs">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="guidelines.html">Guidelines</a></li>
+              <li><a href="controls.html">Controls</a></li>
+              <li><a href="patterns.html">Patterns</a></li>
+              <!-- <li><a href="layouts.html">Layouts</a></li> -->
+          </ul>
+
+
+      </div>
+  </header>
+  <!-- / SUPER HEADER -->
+
+  <div id="kss-nav" class="sidebar-offcanvas" role="navigation">
+    <header id="kss-header">
+      <hgroup><h1>kss-node Styleguide</h1></hgroup>
+    </header>
+    <aside>
+      <nav><ul>
+        <li><a href="index.html">0.0: Overview</a></li>
+          <li><a href="section-1.html">1.0: Components</a></li>
+          <li><a href="section-2.html">2.0: Tables </a></li>
+      </ul></nav>
+    </aside>
+  </div>
+  <div role="main" id="kss-main">
+    <article id="kss-content">
+
+            <h1 class="kss-title"><span class="kss-ref">1.0</span> - Components</h1>
+                  <p>Reusable elements that can be used across the site.
+So far this just includes buttons. </p>
+
+                      <section class="kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.1</span> - Buttons</h1>
+                <div class="kss-box"><p>A majority of buttons in the site are built from the same base class.</p>
+</div>
+                <table class="kss-mod-list">
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg {$modifiers}">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Indicate that the button is the primary feature of this form.</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-primary</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-primary">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Indicate that the button will remove a feature, or other negative connotations.</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-default</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-default">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-info</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-info">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Make the button change appearance to reflect it being disabled.</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-warning</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-warning">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>&quot;Press&quot; the button down when clicked.</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-danger</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-danger">
+	This is a Button
+</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Hmhmhm</p>
+</td>
+                    <td class="kss-mod-name"><p>.btn-success</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="btn btn-lg btn-success">
+	This is a Button
+</button></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
+	This is a Button
+&lt;/button&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.2</span> - Toggle Buttons</h1>
+                <div class="kss-box"><p>A majority of buttons in the site are built from the same base class.</p>
+</div>
+                <table class="kss-mod-list">
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div data-toggle="buttons" class="btn-group">
+	<label class="btn btn-toggle btn-lg active {$modifiers} ">
+		<input type="radio" id="option1" name="options"> On
+	</label>
+	<label class="btn btn-toggle btn-lg {$modifiers} ">
+		<input type="radio" id="option2" name="options"> Off
+	</label>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"></td>
+                    <td class="kss-mod-name"><p>:hover</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div data-toggle="buttons" class="btn-group">
+	<label class="btn btn-toggle btn-lg active pseudo-class-hover ">
+		<input type="radio" id="option1" name="options"> On
+	</label>
+	<label class="btn btn-toggle btn-lg pseudo-class-hover ">
+		<input type="radio" id="option2" name="options"> Off
+	</label>
+</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div data-toggle=&quot;buttons&quot; class=&quot;btn-group&quot;&gt;
+	&lt;label class=&quot;btn btn-toggle btn-lg active {$modifiers} &quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;option1&quot; name=&quot;options&quot;&gt; On
+	&lt;/label&gt;
+	&lt;label class=&quot;btn btn-toggle btn-lg {$modifiers} &quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;option2&quot; name=&quot;options&quot;&gt; Off
+	&lt;/label&gt;
+&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.3</span> - File Upload Buttons</h1>
+                <div class="kss-box"><p>A majority of buttons in the site are built from the same base class.</p>
+</div>
+                <table class="kss-mod-list">
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg {$modifiers}">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Indicate that the button is the primary feature of this form.</p>
+</td>
+                    <td class="kss-mod-name"><p>.primary</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg primary">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Indicate that the button will remove a feature, or other negative connotations.</p>
+</td>
+                    <td class="kss-mod-name"><p>.remove</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg remove">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
+</td>
+                    <td class="kss-mod-name"><p>:hover</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg pseudo-class-hover">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Make the button change appearance to reflect it being disabled.</p>
+</td>
+                    <td class="kss-mod-name"><p>:disabled</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg pseudo-class-disabled">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>&quot;Press&quot; the button down when clicked.</p>
+</td>
+                    <td class="kss-mod-name"><p>:active</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="file-selector">
+	<span class="btn btn-default btn-lg pseudo-class-active">
+		<i class="glyphicon glyphicon-plus"></i>
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;file-selector&quot;&gt;
+	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
+		&lt;i class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/i&gt;
+		&lt;span&gt;Upload File Button&lt;/span&gt;
+		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
+	&lt;/span&gt;
+&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.4</span> - Icons</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon {$modifiers}"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e001</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-add</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-add"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e002</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-alert</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-alert"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e003</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-back</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-back"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e004</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-checked</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-checked"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e005</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-chevron</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-chevron"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e006</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-close</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-close"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e007</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-dragdrop</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-dragdrop"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e008</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-expand</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-expand"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e009</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-help</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-help"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00a</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-localization</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-localization"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00b</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-locked</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-locked"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00c</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-logo</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-logo"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00d</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-more</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-more"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00e</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-remove</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-remove"></span></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>e00f</p>
+</td>
+                    <td class="kss-mod-name"><p>.hyicon-search</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><span class="hyicon hyicon-search"></span></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;span class=&quot;hyicon {$modifiers}&quot;&gt;&lt;/span&gt;</pre>
+                </div>
+          
+            </section>
+    </article>
+  </div>
+
+</section>
+<footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
+</div>
+<!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
+</html>
