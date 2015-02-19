@@ -73,9 +73,9 @@
     <aside>
       <nav>
           <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
-        <li><a href="index.html">0.0: Overview</a></li>
+        <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
         {{#eachRoot}}
-          <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+          <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
         {{/eachRoot}}
       </ul></nav>
     </aside>
@@ -84,56 +84,50 @@
     <article id="kss-content">
       {{#if overview}}
         {{html overview}}
-      {{else}}
-
-        {{!
-          Find each section, in order.
-          If there's no markup or modifiers supplied, use a Markdown-only
-          layout instead.
-
-          The "root" element comes first in this loop, and can be detected using
-          the "#whenDepth 1" block as seen below.
-        }}
+        {{else}}
         {{#eachSection rootNumber}}
-          {{#whenDepth 1}}
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h1>
-          {{else}}
-           <section class="kss-depth-{{ refDepth }}">
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h1>
-          {{/whenDepth}}
-            {{#ifAny markup modifiers}}
-                <div class="kss-box">{{html description}}</div>
-                <table class="kss-mod-list">
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2">{{modifierMarkup}}</td>
-                  </tr>
-                {{#eachModifier}}
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc">{{html description}}</td>
-                    <td class="kss-mod-name"><p>{{name}}</p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2">{{modifierMarkup}}</td>
-                  </tr>
-                {{/eachModifier}}
-                </table>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">{{markup}}</pre>
+        <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
+            <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
+            {{#if markup}}
+            {{#if description}}
+            <div class="kss-description">
+                {{{description}}}
+            </div>
+            {{/if}}
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        {{modifierMarkup}}
+                    </div>
                 </div>
+                {{#eachModifier}}
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            {{{description}}}
+                        </div>
+                        <div class="kss-mod-name">{{name}}</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        {{modifierMarkup}}
+                    </div>
+                </div>
+                {{/eachModifier}}
+                <div class="kss-markup">
+                    <pre><code data-language="html">{{markup}}</code></pre>
+                </div>
+            </div>
             {{else}}
-                {{#if description}}
-                  {{html description}}
-                {{/if}}
-            {{/ifAny}}
-          {{#whenDepth 1}} {{else}}
-            </section>
-          {{/whenDepth}}
+            {{#if description}}
+            <div class="kss-description">
+                {{{description}}}
+            </div>
+            {{/if}}
+            {{/if}}
+        </section>
         {{/eachSection}}
-      {{/if}}
+        {{/if}}
     </article>
   </div>
 
@@ -143,6 +137,7 @@
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
+  <script src="public/jquery.js"></script>
   <script src="public/main.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
