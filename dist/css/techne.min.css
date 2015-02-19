@@ -252,8 +252,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
-  src: url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../js/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6573,6 +6573,10 @@ fieldset[disabled] .btn-toggle.active,
   font-weight: normal;
   font-style: normal;
 }
+[class^="hyicon-"],
+[class*=" hyicon-"] {
+  font-family: 'hyicon';
+}
 .hyicon:before {
   display: inline-block;
   vertical-align: middle;
@@ -7056,7 +7060,6 @@ table.y-responsive-table td {
 }
 table.y-responsive-table th {
   text-align: left;
-  background: #fff2b2;
 }
 @media only screen and (max-width: 480px) {
   table.y-responsive-table {

@@ -3,17 +3,136 @@
 // A majority of buttons in the site are built from the same base class.
 // 
 // Markup:
-//<table class="table y-responsive-table">
-//	<tr>
-//		<td>Content</td>
-//	</tr>
-//	<tr>
-//		<td>Content</td>
-//	</tr>
-//	<tr>
-//		<td>Content</td>
-//	</tr>
-//</table>
+// <div class=" y-h-table clearfix">
+//     <div class="y-h-tablehead">
+//         <div class="col-md-4">Category Name</div>
+//         <div class="col-md-3">Child Categories</div>
+//         <div class="col-md-5">Linked Products</div>
+//     </div>
+//         <div ng-repeat="category in categories"
+//             class="y-h-table-row clearfix">
+//             <!--- LEVEL 1 -->
+//             <div class="col-md-4">
+//                 <div class="first table-behavoir">
+//                     <span class="table-behavoir-cell toggle-cell seperator">
+//                         <a href class="btn btn-link toggle pull-right">
+//                             <span class="glyphicon glyphicon-minus">
+//                             </span>
+//                         </a>
+//                     </span>
+//                     <span class="table-behavoir-cell row-image-cell">
+//                         <a href="#">
+//                             <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+//                         </a>
+//                     </span>
+//                     <span class="table-behavoir-cell name-cell">
+//                         <strong>
+//                             <a href="#">{{category.name | localized}}</a>
+//                         </strong>
+//                     </span>
+//                 </div>
+//             </div>
+//             <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+//             <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+//             <div class="col-md-2 sticky-right">
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+//                     <span class="hyicon-more"></span></a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a href ng-click="delete(category)">Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//             <!-- LEVEL 2 -->
+//             <div class="subcategories-cnt">
+//                 <div class=" clearfix subcategories-list" style="clear:both;">
+//                     <div class="y-h-table-row clearfix">
+//                         <div class="col-md-4">
+//                             <div class="first table-behavoir">
+//                                 <span class="table-behavoir-cell toggle-cell seperator">
+//                                     <a href class="btn btn-link toggle pull-right">
+//                                         <span class="glyphicon glyphicon-minus">
+//                                         </span>
+//                                     </a>
+//                                 </span>
+//                                 <span class="table-behavoir-cell row-image-cell">
+//                                     <a href="#">
+//                                         <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+//                                     </a>
+//                                 </span>
+//                                 <span class="table-behavoir-cell name-cell">
+//                                     <strong>
+//                                         <a href="#">{{category.name | localized}}</a>
+//                                     </strong>
+//                                 </span>
+//                             </div>
+//                         </div>
+//                         <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+//                         <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+//                         <div class="col-md-2 sticky-right">
+//                             <div class="dropdown pull-right">
+//                                 <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+//                                 <span class="hyicon-more"></span></a>
+//                                 <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                     <li><a href="#">Edit Category Details</a></li>
+//                                     <li><a href="">Add Child Category</a></li>
+//                                     <li class="divider"></li>
+//                                     <li><a href ng-click="delete(category)">Delete Category</a></li>
+//                                 </ul>
+//                             </div>
+//                         </div>
+//                         <!-- LEVEL 3 -->
+//                         <div class="subcategories-cnt">
+//                             <div class=" clearfix subcategories-list" style="clear:both;">
+//                                 <div class="y-h-table-row clearfix">
+//                                     <div class="col-md-4">
+//                                         <div class="first table-behavoir">
+//                                             <span class="table-behavoir-cell toggle-cell seperator">
+//                                                 <a href class="btn btn-link toggle pull-right">
+//                                                     <span class="glyphicon glyphicon-plus">
+//                                                     </span>
+//                                                 </a>
+//                                             </span>
+//                                             <span class="table-behavoir-cell row-image-cell">
+//                                                 <a href="#">
+//                                                     <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+//                                                 </a>
+//                                             </span>
+//                                             <span class="table-behavoir-cell name-cell">
+//                                                 <strong>
+//                                                     <a href="#">{{category.name | localized}}</a>
+//                                                 </strong>
+//                                             </span>
+//                                         </div>
+//                                     </div>
+//                                     <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+//                                     <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+//                                     <div class="col-md-2 sticky-right">
+//                                         <div class="dropdown pull-right">
+//                                             <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+//                                             <span class="hyicon-more"></span></a>
+//                                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                                 <li><a href="#">Edit Category Details</a></li>
+//                                                 <li><a href="">Add Child Category</a></li>
+//                                                 <li class="divider"></li>
+//                                                 <li><a href ng-click="delete(category)">Delete Category</a></li>
+//                                             </ul>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <!-- // LEVEL 3 -->
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- // LEVEL 2 -->
+//         </div>
+//         <!-- // LEVEL 1 -->
+// </div>
 // 
 // Styleguide 2.1
 
