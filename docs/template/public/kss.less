@@ -1,18 +1,25 @@
 @import 'markdown';
-
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
   margin-top: 116px!important;
+  background: #ffffff !important;
+  overflow: visible !important;
+  font-size: 15px !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 #kss-wrapper{
    background-color: #fff;
+  height: auto;
 }
 
 #kss-top-nav{
-  background: #2877cb;
+  background: #0486e0;
   color: #fff;
   overflow: hidden;
+  height: 60px;
 
   ul{
     list-style: outside none none;
@@ -23,9 +30,10 @@ body{
       float: left;
 
       a{
-        color: #fff;
-        text-decoration: none;
-        padding: 10px;
+        color: #a4c8f0;
+        display: inline-block;
+        padding: 18px;
+
       }
     }
   }
@@ -33,15 +41,35 @@ body{
 }
 
 #kss-nav{
-   width: 20%;
-
+   width: 30%;
    background-color: #fff;
+  font-family: "Dosis", sans-serif !important;
    nav > ul{
-      margin: 2em;
-      margin-top: 2.5em;
+     margin: 0;;
       padding: 0;
-
       list-style-type: none;
+
+     li {
+       a {
+         border-left: 4px solid #fff;
+         color: #808fa1;
+         display: block;
+         padding: 10px 15px 10px 31px;
+         text-decoration: none;
+         font-size: 15px;
+
+         &:hover {
+           color: #2877cb;
+         }
+       }
+
+       &.active a {
+         background: none repeat scroll 0 0 #edf1f5;
+         border-left-color: #2877cb;
+         color: #2877cb;
+         text-decoration: none;
+       }
+     }
    }
 }
 
@@ -52,13 +80,22 @@ body{
    margin-left: 4/3em;
 }
 
+h1.kss-title {
+  color: #369ad6;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: 'Dosis', sans-serif;
+}
+
 #kss-main,
 #kss-nav{
-  
+  float: left;
 }
 
 #kss-main{
-
+  width: 70%;
+  border-left: 1px solid #e2e6e9;
+  padding-left: 15px;
 }
 
 .kss-mod-list{

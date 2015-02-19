@@ -71,7 +71,8 @@
       <hgroup><h1>kss-node Styleguide</h1></hgroup>
     </header>
     <aside>
-      <nav><ul>
+      <nav>
+          <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
         <li><a href="index.html">0.0: Overview</a></li>
         {{#eachRoot}}
           <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
@@ -142,6 +143,7 @@
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
+  <script src="public/main.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
   {{! This won't be included in the demo page }}
