@@ -53,11 +53,13 @@
 
 
           <ul class="hidden-xs">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="guidelines.html">Guidelines</a></li>
-              <li><a href="controls.html">Controls</a></li>
-              <li><a href="patterns.html">Patterns</a></li>
-              <!-- <li><a href="layouts.html">Layouts</a></li> -->
+              <!--<li><a href="index.html" class="active">Home</a></li>-->
+              <!--<li><a href="guidelines.html">Guidelines</a></li>-->
+              <!--<li><a href="controls.html">Controls</a></li>-->
+              <!--<li><a href="patterns.html">Patterns</a></li>-->
+              {{#each htmlPagesFromMD}}
+                <li><a href="{{url}}">{{displayText}}</a></li>
+              {{/each}}
           </ul>
 
 
