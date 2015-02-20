@@ -6654,6 +6654,10 @@ fieldset[disabled] .btn-toggle.active,
   font-weight: normal;
   font-style: normal;
 }
+[class^="hyicon-"],
+[class*=" hyicon-"] {
+  font-family: 'hyicon';
+}
 .hyicon:before {
   display: inline-block;
   vertical-align: middle;

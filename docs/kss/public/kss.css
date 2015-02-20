@@ -272,16 +272,15 @@ body.kss-body {
   padding: 18px;
 }
 #kss-nav {
-  width: 15%;
   background-color: #fff;
   font-family: "Dosis", sans-serif !important;
 }
-#kss-nav nav > ul {
+#kss-nav nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-#kss-nav nav > ul li a {
+#kss-nav nav ul li a {
   border-left: 4px solid #fff;
   color: #808fa1;
   display: block;
@@ -289,14 +288,18 @@ body.kss-body {
   text-decoration: none;
   font-size: 15px;
 }
-#kss-nav nav > ul li a:hover {
+#kss-nav nav ul li a:hover {
   color: #2877cb;
 }
-#kss-nav nav > ul li.kss-active a {
+#kss-nav nav ul li.kss-active a {
   background: none repeat scroll 0 0 #edf1f5;
   border-left-color: #2877cb;
   color: #2877cb;
   text-decoration: none;
+}
+.kss-navbar.navbar {
+  border: 0 none;
+  margin-top: 50px;
 }
 #kss-header h1 {
   font-size: 1.5em;
@@ -314,7 +317,6 @@ h1.kss-title {
   float: left;
 }
 #kss-main {
-  width: 70%;
   border-left: 1px solid #e2e6e9;
   padding-left: 15px;
 }
@@ -497,16 +499,8 @@ li.L9 {
   background: #eee;
 }
 @media screen and (max-width: 768px) {
-  #kss-main {
-    position: static;
-    width: 90%;
-    margin: 0 auto;
-    padding-left: 0;
-  }
   #kss-nav {
-    position: static;
     display: block;
-    width: auto;
     margin: 0;
     border-bottom: 1px solid #ddd;
     background: 0;
