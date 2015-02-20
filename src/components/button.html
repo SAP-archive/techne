@@ -1,0 +1,14 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="techne-Button">
+	<template>
+        <button type="button" class="btn btn-{{size}} btn-default">
+            <content>Techne Button</content>
+        </button>
+	</template>
+	<script type="text/javascript">
+		Polymer('techne-Button',{
+            size: 'lg'
+        });
+	</script>
+</polymer-element>
