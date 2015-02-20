@@ -12,14 +12,13 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" href="public/style.css">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
 
 </head>
-<body>
+<body class="kss-body">
 
   <div class="main-content" id="kss-wrapper">
     <section id="content" class="row-offcanvas row-offcanvas-left">
@@ -66,21 +65,35 @@
   </header>
   <!-- / SUPER HEADER -->
 
-  <div id="kss-nav" class="sidebar-offcanvas" role="navigation">
-    <header id="kss-header">
-      <hgroup><h1>kss-node Styleguide</h1></hgroup>
-    </header>
+  <div id="kss-nav" class="sidebar-offcanvas col-md-2 col-sm-4 col-xs-12" role="navigation">
+
     <aside>
-      <nav>
-          <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
-        <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
-        {{#eachRoot}}
-          <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-        {{/eachRoot}}
-      </ul></nav>
+        <nav class="navbar kss-navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse collapse navbar-collapse" id="header-navbar-collapse">
+
+                <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
+                    <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
+                    {{#eachRoot}}
+                    <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+                    {{/eachRoot}}
+                </ul>
+
+            </div><!-- /navbar-collapse -->
+        </nav>
+
+
     </aside>
   </div>
-  <div role="main" id="kss-main">
+  <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
     <article id="kss-content">
       {{#if overview}}
         {{html overview}}
@@ -139,7 +152,7 @@
   <script src="public/prettify.js"></script>
   <script src="public/jquery.js"></script>
   <script src="public/main.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="public/bootstrap.min.js"></script>
 
   {{! This won't be included in the demo page }}
   {{#if argv.xdemo}}

@@ -4,11 +4,14 @@
 
 body{
   margin-top: 116px!important;
-  background: #ffffff !important;
-  overflow: visible !important;
-  font-size: 15px !important;
-  font-family: 'Open Sans', sans-serif !important;
-  padding: 0 !important;
+}
+
+body.kss-body {
+  background: #ffffff;
+  overflow: visible;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
   max-width: 100%;
 }
 
@@ -43,10 +46,9 @@ body{
 }
 
 #kss-nav{
-   width: 15%;
    background-color: #fff;
   font-family: "Dosis", sans-serif !important;
-   nav > ul{
+   nav  ul{
      margin: 0;;
       padding: 0;
       list-style-type: none;
@@ -75,6 +77,12 @@ body{
    }
 }
 
+
+.kss-navbar.navbar {
+  border: 0 none;
+  margin-top: 50px;
+}
+
 #kss-header h1{
    font-size: 1.5em;
 
@@ -95,9 +103,9 @@ h1.kss-title {
 }
 
 #kss-main{
-  width: 70%;
   border-left: 1px solid #e2e6e9;
   padding-left: 15px;
+
 }
 
 .kss-mod-list{
@@ -294,20 +302,10 @@ li.L9{
 //   @group Mobile/Tablet Styling
 // ------------------------------------------------------------------------------
 @media screen and (max-width: 768px){
-   #kss-main{
-      position: static;
-
-      width: 90%;
-      margin: 0 auto;
-      padding-left: 0;
-   }
 
    #kss-nav{
-      position: static;
 
       display: block;
-
-      width: auto;
       margin: 0;
 
       border-bottom: 1px solid #ddd;
@@ -336,3 +334,7 @@ li.L9{
    }
 }
 // @end
+
+.footer a:visited {
+  color: white;
+}
