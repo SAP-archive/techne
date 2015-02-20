@@ -90,6 +90,9 @@ gulp.task('styleguide', function () {
     gulp.src('./dist/fonts/**/*')
    .pipe(gulp.dest('./docs/kss/public/fonts'));
 
+    gulp.src('./bower_components/bootstrap/fonts/**/*')
+   .pipe(gulp.dest('./docs/kss/public/fonts'));
+
 
 });
 

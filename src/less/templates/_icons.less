@@ -23,6 +23,11 @@
   font-style: normal;
 }
 
+[class^="<%= className %>-"], [class*=" <%= className %>-"] {
+  font-family: '<%= className %>';
+}
+
+
 
 .<%= className %>:before {
   display: inline-block;
