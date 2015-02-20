@@ -2,7 +2,8 @@
 bower_components/
 
 ## NODE MODULES
-node_modules/
+node_modules/*
+!node_modules/gulp-kss/index.js
 
 ## IDE Specfici folders
 .idea/
