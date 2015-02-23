@@ -77,7 +77,8 @@ gulp.task('styleguide', function () {
 
     gulp.src(paths.doc_less)
     .pipe(gulpkss({
-        overview: __dirname + '/docs/markdown/index.md',
+//        overview: __dirname + '/docs/markdown/index.md',
+        markDownDirectory: __dirname + '/docs/markdown/',
         templateDirectory: __dirname + '/docs/template'
     }))
     .pipe(gulp.dest('docs/kss'));

@@ -7060,6 +7060,7 @@ table.y-responsive-table td {
 }
 table.y-responsive-table th {
   text-align: left;
+  background: #fff2b2;
 }
 @media only screen and (max-width: 480px) {
   table.y-responsive-table {

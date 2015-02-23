@@ -1,0 +1,18 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="techne-DismissableAlert">
+    <template>
+        <div class="alert alert-{{type}} alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">{{closebtn}}</button>
+            <content>
+                <strong>Data missing!</strong> Data hasn't be provided for the alert
+            </content>
+        </div>
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-DismissableAlert',{
+            type: 'primary',
+            closebtn: 'x'
+        });
+    </script>
+</polymer-element>
