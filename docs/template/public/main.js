@@ -5,4 +5,12 @@
     ref = $menu.data('kss-ref');
  jQuery(document).ready(function() {
      $menuItem.eq(ref).addClass('kss-active');
+     $('[data-toggle="offcanvas"]').click(function () {
+         $('.row-offcanvas').toggleClass('active')
+     });
+ });
+
+ $("#menu-toggle").click(function(e) {
+     e.preventDefault();
+     $("#kss-wrapper").toggleClass("toggled");
  });
