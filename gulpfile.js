@@ -102,9 +102,9 @@ gulp.task('connect', connect.server({
   root: [__dirname],
   port: 1341,
   livereload: true,
-  //open: {
-  //  browser: 'Google Chrome' // if not working OS X browser: 'Google Chrome'
-  //}
+  open: {
+    browser: 'none' // if not working OS X browser: 'Google Chrome'
+  }
 }));
 
 // Rerun the task when a file changes
