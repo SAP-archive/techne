@@ -2,3 +2,4 @@
 
 <techne-DismissableAlert></techne-DismissableAlert>
 <techne-Button></techne-Button>
+<techne-Panel>new data</techne-Panel>

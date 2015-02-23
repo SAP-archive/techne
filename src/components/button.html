@@ -2,13 +2,14 @@
 
 <polymer-element name="techne-Button">
 	<template>
-        <button type="button" class="btn btn-{{size}} btn-default">
+        <button type="button" class="btn btn-{{size}} btn-{{default}}">
             <content>Techne Button</content>
         </button>
 	</template>
 	<script type="text/javascript">
 		Polymer('techne-Button',{
-            size: 'lg'
+            size: 'lg',
+            type: 'default'
         });
 	</script>
 </polymer-element>

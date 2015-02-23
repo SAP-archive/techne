@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="techne-Panel">
+    <template>
+        <div class="panel panel-{{type}}">
+            <div class="panel-heading">
+                <h2>{{titleText}}</h2>
+            </div>
+            <div class="panel-body">
+                <content>
+                    You have not provide any panel body content
+                </content>
+            </div>
+            <div class="panel-footer"><strong>Warning:</strong> The markup differs from the default boostrap! Don't forget to set the <strong>"for=" + "id"</strong> to get it working.</div>
+        </div>
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-Panel',{
+            type: 'default',
+            titleText: 'N/A'
+        });
+    </script>
+</polymer-element>
