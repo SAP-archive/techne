@@ -1,7 +1,6 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-
-<polymer-element name="techne-Button">
+<polymer-element name="techne-Button" attributes="size type">
 	<template>
+        <apply-author-styles></apply-author-styles>
         <button type="button" class="btn btn-{{size}} btn-{{default}}">
             <content>Techne Button</content>
         </button>

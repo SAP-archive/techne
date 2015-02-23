@@ -14,6 +14,7 @@
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
     "polymer": "Polymer/polymer#~0.5.4",
-    "webcomponentsjs": "~0.5.4"
+    "webcomponentsjs": "~0.5.4",
+    "apply-author-styles": "eee-c/apply-author-styles"
   }
 }
