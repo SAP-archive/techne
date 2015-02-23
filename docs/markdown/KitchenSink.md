@@ -24,3 +24,5 @@
 	</panel-body>
 	
 </techne-Panel>
+
+<techne-Toggle></techne-Toggle>
