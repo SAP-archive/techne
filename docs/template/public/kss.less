@@ -43,6 +43,27 @@ body.kss-body {
     }
   }
 
+  #menu-toggle {
+    margin: 15px 20px 0;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: inline-block;
+    }
+  }
+  .icon-bar {
+    background: none repeat scroll 0 0 #233243;
+    height: 2px;
+    transform: none;
+    transition: none 0s ease 0s ;
+    width: 23px;
+    border-radius: 1px;
+    display: block;
+    margin-top: 4px;
+  }
+
 }
 
 #kss-nav{
@@ -81,6 +102,8 @@ body.kss-body {
 .kss-navbar.navbar {
   border: 0 none;
   margin-top: 50px;
+
+
 }
 
 #kss-header h1{
@@ -317,7 +340,7 @@ li.L9{
          & > li{
             display: inline-block;
 
-            padding-right: 1.5em;
+           width: 100%;
          }
       }
    }
@@ -337,4 +360,93 @@ li.L9{
 
 .footer a:visited {
   color: white;
+}
+
+.kss-body .footer {
+  display: block !important;
+  height: 41px;
+}
+
+/* Sidebar */
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#kss-wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#kss-wrapper.toggled {
+  padding-left: 250px;
+}
+
+#kss-nav {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 80%;
+  margin-left: -250px;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0;
+}
+
+#kss-wrapper.toggled #kss-nav {
+  width: 250px;
+}
+
+#kss-main {
+  width: auto;
+  padding: 15px;
+}
+
+#kss-wrapper.toggled #kss-main {
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
+@media(min-width:768px) {
+  #kss-wrapper {
+    padding-left: 250px;
+  }
+
+  #kss-nav {
+    width: 250px;
+    padding: 0;
+  }
+
+  #kss-main {
+    padding: 20px;
+    position: relative;
+  }
+
+  #kss-wrapper.toggled #kss-main {
+    position: relative;
+    margin-right: 0;
+  }
 }

@@ -12,8 +12,8 @@
 
   <meta name="viewport" content="width=device-width">
 
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="public/jasny-bootstrap.css">
   <link rel="stylesheet" href="public/style.css">
   <link rel="import" href="../../../bower_components/polymer/polymer.html">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
@@ -45,12 +45,13 @@
       </div>
       <div id="kss-top-nav">
 
-          <button data-toggle="offcanvas" class="btn btn-xs navbar-toggle navbar-btn visible-xs" type="button">
+          <a href="#menu-toggle" id="menu-toggle">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-          </button>
+
+          </a>
 
 
           <ul class="hidden-xs">
@@ -68,35 +69,26 @@
   </header>
   <!-- / SUPER HEADER -->
 
-  <div id="kss-nav" class="sidebar-offcanvas col-md-2 col-sm-4 col-xs-12" role="navigation">
+  <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
 
     <aside>
-        <nav class="navbar kss-navbar navbar-default">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+        <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
 
-            </div>
-            <div class="collapse collapse navbar-collapse" id="header-navbar-collapse">
 
-                <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
+
+                <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
                     <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
                     {{#eachRoot}}
                     <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
                     {{/eachRoot}}
                 </ul>
-
-            </div><!-- /navbar-collapse -->
         </nav>
 
 
     </aside>
   </div>
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
+
     <article id="kss-content">
       {{#if overview}}
         {{html overview}}
@@ -148,14 +140,16 @@
   </div>
 
 </section>
-<footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
+
 </div>
+  <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
   <script src="public/jquery.js"></script>
   <script src="public/main.js"></script>
   <script src="public/bootstrap.min.js"></script>
+  <script src="public/jasny-bootstrap.min.js"></script>
 
   {{! This won't be included in the demo page }}
   {{#if argv.xdemo}}
