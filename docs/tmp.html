@@ -6,27 +6,58 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <script src="/bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <link rel="import" href="../../src/html/button/button-s.html">
-       	<link rel="import" href="../../src/html/button/button.html">
+        <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+        <link rel="stylesheet" href="../kss/public/style.css">
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="import" href="../../src/components/techne_components.html">
         
     </head>
     <body>
-    	<h1>polymer POC</h1>
-	<!-- 	<y-button>
-           <span id="cheese">demo</span>
-        </y-button>
- -->
-        <y-buttons name="johannes">
-            <div class="sel">
-                joking
-            </div>
 
-            <p>abspa</p>
+        <div class="container">
+        	<h1> Kitchen Sink Stuff</h1>
 
-        </y-buttons>
+            <techne-DismissableAlert></techne-DismissableAlert>
+            <techne-Button></techne-Button> 
+            <techne-Button>Default Techné Button</techne-Button> 
+            <techne-Button type="warning">Warning Techné Button</techne-Button> 
+            <techne-Button type="danger">Danger Techné Button</techne-Button> 
+            <techne-Button type="link">Link Techné Button</techne-Button> 
+            <techne-Panel title="Techné Panel">
+            <panel-body>body text</panel-body>
+            <panel-footer>footer text</panel-footer>
+            </techne-Panel>
+
+            <techne-Panel title="Techné Icons">
+                <panel-body>
+                    <techne-Icon type="alert"></techne-Icon>
+                    <techne-Icon type="back"></techne-Icon>
+                    <techne-Icon type="checked"></techne-Icon>
+                    <techne-Icon type="chevron"></techne-Icon>
+                    <techne-Icon type="close"></techne-Icon>
+                    <techne-Icon type="dragdrop"></techne-Icon>
+                    <techne-Icon type="expand"></techne-Icon>
+                    <techne-Icon type="help"></techne-Icon>
+                    <techne-Icon type="locked"></techne-Icon>
+                    <techne-Icon type="more"></techne-Icon>
+                    <techne-Icon type="remove"></techne-Icon>
+                    <techne-Icon type="search"></techne-Icon>
+                </panel-body>
+            </techne-Panel>
 
 
+            <techne-Panel title="Form Elements">
+                <panel-body>
+                    <techne-Toggle></techne-Toggle>
+                    <br/>
+                    <br/>
+                    <techne-Input></techne-Input>
+                </panel-body>
+                <panel-footer></panel-footer>
+            </techne-Panel>
+
+            <techne-table></techne-table>
+            <techne-table multiSelect="true"></techne-table>
+        </div>
     </body>
 </html>

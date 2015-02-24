@@ -61,9 +61,8 @@
               <!--<li><a href="guidelines.html">Guidelines</a></li>-->
               <!--<li><a href="controls.html">Controls</a></li>-->
               <!--<li><a href="patterns.html">Patterns</a></li>-->
-              {{#each htmlPagesFromMD}}
-                <li><a href="{{url}}">{{displayText}}</a></li>
-              {{/each}}
+                <li><a href="components.html">COMPONENTS</a></li>
+                <li><a href="index.html">INDEX</a></li>
           </ul>
 
 
@@ -78,11 +77,10 @@
 
 
 
-                <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
+                <ul class="kss-menu sidebar-nav" data-kss-ref="0">
                     <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
-                    {{#eachRoot}}
-                    <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-                    {{/eachRoot}}
+                    <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
+                    <li class="kss-menu-item"><a href="section-2.html">2.0: Tables </a></li>
                 </ul>
         </nav>
 
@@ -92,52 +90,44 @@
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
 
     <article id="kss-content">
-      {{#if overview}}
-        {{html overview}}
-        {{else}}
-        {{#eachSection rootNumber}}
-        <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
-            <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
-            {{#if markup}}
-            {{#if description}}
-            <div class="kss-description">
-                {{{description}}}
-            </div>
-            {{/if}}
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        {{modifierMarkup}}
-                    </div>
-                </div>
-                {{#eachModifier}}
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
+        <h1> Kitchen Sink Stuff</h1>
 
-                        <div class="kss-mod-desc">
-                            {{{description}}}
-                        </div>
-                        <div class="kss-mod-name">{{name}}</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        {{modifierMarkup}}
-                    </div>
-                </div>
-                {{/eachModifier}}
-                <div class="kss-markup">
-                    <pre><code data-language="html">{{markup}}</code></pre>
-                </div>
-            </div>
-            {{else}}
-            {{#if description}}
-            <div class="kss-description">
-                {{{description}}}
-            </div>
-            {{/if}}
-            {{/if}}
-        </section>
-        {{/eachSection}}
-        {{/if}}
+<p><techne-DismissableAlert></techne-DismissableAlert></p>
+<p><techne-Button></techne-Button> </p>
+<p><techne-Button>Default Techné Button</techne-Button> </p>
+<p><techne-Button type="warning">Warning Techné Button</techne-Button> </p>
+<p><techne-Button type="danger">Danger Techné Button</techne-Button> </p>
+<p><techne-Button type="link">Link Techné Button</techne-Button> </p>
+<p><techne-Panel title="Techné Panel"></p>
+<p><panel-body>body text</panel-body></p>
+<p><panel-footer>footer text</panel-footer>
+</techne-Panel></p>
+<p><techne-Panel title="Techné Icons">
+    <panel-body>
+        <techne-Icon type="alert"></techne-Icon>
+        <techne-Icon type="back"></techne-Icon>
+        <techne-Icon type="checked"></techne-Icon>
+        <techne-Icon type="chevron"></techne-Icon>
+        <techne-Icon type="close"></techne-Icon>
+        <techne-Icon type="dragdrop"></techne-Icon>
+        <techne-Icon type="expand"></techne-Icon>
+        <techne-Icon type="help"></techne-Icon>
+        <techne-Icon type="locked"></techne-Icon>
+        <techne-Icon type="more"></techne-Icon>
+        <techne-Icon type="remove"></techne-Icon>
+        <techne-Icon type="search"></techne-Icon>
+    </panel-body>
+</techne-Panel></p>
+<p><techne-Panel title="Form Elements">
+    <panel-body>
+        <techne-Toggle></techne-Toggle>
+        <br/>
+        <br/>
+        <techne-Input></techne-Input>
+    </panel-body>
+    <panel-footer></panel-footer>
+</techne-Panel></p>
+
     </article>
   </div>
 
@@ -152,12 +142,5 @@
   <script src="public/main.js"></script>
  <!--  <script src="public/jasny-bootstrap.min.js"></script> -->
 
-  {{! This won't be included in the demo page }}
-  {{#if argv.xdemo}}
-    <script type="text/javascript">
-    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
-    </script>
-  {{/if}}
     <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
 </html>
