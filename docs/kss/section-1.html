@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="public/kss.css">
   <!-- <link rel="stylesheet" href="public/jasny-bootstrap.css"> -->
   <link rel="stylesheet" href="public/style.css">
-  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 
   <link rel="import" href="../../src/components/techne_components.html">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
@@ -61,6 +61,7 @@
               <!--<li><a href="guidelines.html">Guidelines</a></li>-->
               <!--<li><a href="controls.html">Controls</a></li>-->
               <!--<li><a href="patterns.html">Patterns</a></li>-->
+                <li><a href="KitchenSink.html">KITCHENSINK</a></li>
                 <li><a href="components.html">COMPONENTS</a></li>
                 <li><a href="index.html">INDEX</a></li>
           </ul>
@@ -81,6 +82,7 @@
                     <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
                     <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
                     <li class="kss-menu-item"><a href="section-2.html">2.0: Tables </a></li>
+                    <li class="kss-menu-item"><a href="section-3.html">3.0: Overwrites</a></li>
                 </ul>
         </nav>
 
@@ -206,6 +208,117 @@ So far this just includes buttons. </p>
                     <pre><code data-language="html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
 	This is a Button
 &lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.1.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.1.1</span> Colors</h1>
+            <div class="kss-description">
+                <p>Default Colors</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: {$modifiers}">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Indicate that the button is the primary feature of this form.</p>
+
+                        </div>
+                        <div class="kss-mod-name">#fad712</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: #fad712">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Indicate that the button will remove a feature, or other negative connotations.</p>
+
+                        </div>
+                        <div class="kss-mod-name">#bba754</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: #bba754">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Highlight the button when hovered.</p>
+
+                        </div>
+                        <div class="kss-mod-name">#f99b06</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: #f99b06">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Make the button change appearance to reflect it being disabled.</p>
+
+                        </div>
+                        <div class="kss-mod-name">#18bc33</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: #18bc33">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>&quot;Press&quot; the button down when clicked.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: btn-danger">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Hmhmhm</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="color-panel" style="background: btn-success">
+	This is a Button
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;color-panel&quot; style=&quot;background: {$modifiers}&quot;&gt;
+	This is a Button
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
         </section>

@@ -1,0 +1,40 @@
+// Badges
+//
+// Extend badges to be used width states
+// 
+// Markup:
+//<span class="badge {$modifiers}">Badge</span>
+// 
+// .badge-primary             - Indicate that the button is the primary feature of this form.
+// .badge-default               - Indicate that the button will remove a feature, or other negative connotations.
+// .badge-info                - Highlight the button when hovered.
+// .badge-warning            - Make the button change appearance to reflect it being disabled.
+// .badge-danger              - "Press" the button down when clicked.
+// .badge-success - Hmhmhm
+//
+// Styleguide 3.1
+
+.badge{
+
+	&.badge-default{
+		.label-variant(@label-default-bg);
+	}
+	&.badge-primary{
+		  .label-variant(@label-primary-bg);
+	}
+
+	&.badge-info{
+		.label-variant(@label-info-bg);
+	}
+
+	&.badge-success{
+		.label-variant(@label-success-bg);
+	}
+	&.badge-warning{
+		.label-variant(@state-warning-bg);
+	}
+
+	&.badge-danger{
+		.label-variant(@label-danger-bg);
+	}
+}

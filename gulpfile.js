@@ -9,6 +9,8 @@ var concat = require('gulp-concat');
 
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
+var LessPluginCleanCSS = require('less-plugin-clean-css'),
+    cleancss = new LessPluginCleanCSS({ advanced: true });
 
 
 var connect = require('gulp-connect-multi')();
@@ -29,7 +31,7 @@ var paths = {
 // Complile general Less Files
 gulp.task('less', function () {
     return gulp.src(paths.less)
-        .pipe(less({errLogToConsole: true, outputStyle: "minified"}))
+        .pipe(less({errLogToConsole: true, plugins: [cleancss]}))
         .on('error', function(err){ console.log(err.message); })
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
