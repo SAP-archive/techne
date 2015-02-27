@@ -1,8 +1,22 @@
+
+@import (less) "../../bower_components/select2/select2.css";
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
 @import "../../bower_components/bootstrap/less/bootstrap";
+
+
+
 
 // Globals
 @import "./globals/_variables.less";
-@import "./globals/_overwrites.less";
+
+
+// Extended
+//
+// Various kinds of extened bootstrap components
+// many new states and validation styles
+//
+// Styleguide 3.
+@import "./overwrites/__overwrites.less";
 
 // Components
 // 
@@ -23,6 +37,13 @@
 @import "./components/_table-hierachical";
 @import "./components/_table-multiselect";
 @import "./components/_table-responsive";
+
+
+// Vendor 
+@import "./vendor/_select2";
+
+
+
 
 
 

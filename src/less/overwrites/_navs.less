@@ -1,0 +1,178 @@
+// Navigation stylings
+.nav {
+	a {
+		color: @navigation-links-color;
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+.navbar{
+	border: none;
+	margin-bottom: 0;
+	border-radius: 0;
+
+	.navbar-text{
+		h1,h2,h3,h4,h5,h6{
+			margin: 0px 15px;
+		}
+	}
+
+}
+
+.navbar-default{
+	.box-shadow(0 1px 0 @default-grey-600);
+}
+
+.navbar-right{
+	float: right!important;
+	display: block;
+}
+
+.navbar-left{
+	float: left!important;
+	display: block;
+}
+
+
+
+// CUSTOMIZING SKINNING FOR TABS 
+.nav-tabs {
+  > li {
+    > a {
+
+    		&:hover,
+    		&:active{
+    			color: @default-blue;
+    			border-color: @default-blue
+    		}
+
+    	}
+    }
+}
+
+
+// CALL MIXINS
+// ==================================================================
+
+
+// Tabs
+//
+// Extend tabs to show validation states
+// 
+// Markup:
+//<ul class="nav nav-tabs">
+//  <li role="presentation" class="active {$modifiers}"><a href="#">Home</a></li>
+//  <li role="presentation" class="{$modifiers}"><a href="#">Profile</a></li>
+//</ul>
+// 
+// .has-success             - Indicate that the button is the primary feature of this form.
+// .has-info               - Indicate that the button will remove a feature, or other negative connotations.
+// .has-warning             - Highlight the button when hovered.
+// .has-error            - Make the button change appearance to reflect it being disabled.
+//
+// Styleguide 3.3
+
+.nav-tabs-variant(has-success; transparent; @state-success-bg; @state-success-bg;);
+.nav-tabs-variant(has-info; transparent; @state-info-bg; @state-info-bg);
+.nav-tabs-variant(has-warning; transparent; @state-warning-bg; @state-warning-bg;);
+.nav-tabs-variant(has-error; transparent; @state-danger-bg; @state-danger-bg;);
+
+
+// Standalone Pills
+//
+// Extend Pills to show validation states
+//
+// Experimental: Only use states standalone with for static text right now!
+// 
+// Markup:
+//   <div class="nav-pill {$modifiers}">Text</div>
+// 
+// .has-success             - Indicate that the button is the primary feature of this form.
+// .has-info               - Indicate that the button will remove a feature, or other negative connotations.
+// .has-warning             - Highlight the button when hovered.
+// .has-error            - Make the button change appearance to reflect it being disabled.
+//
+// Styleguide 3.4
+
+.nav-pill-variant(default; transparent; @dark-grey; @dark-grey-800;);
+.nav-pill-variant(has-success; transparent; @state-success-bg; @state-success-bg;);
+.nav-pill-variant(has-info; transparent; @state-info-bg; @state-info-bg);
+.nav-pill-variant(has-warning; transparent; @state-warning-bg; @state-warning-bg;);
+.nav-pill-variant(has-error; transparent; @state-danger-bg; @state-danger-bg;);
+
+
+// MIXINS
+// ==================================================================
+
+// Standalone Pills with States
+
+.nav-pill-variant(@state; @background; @border; @color) {
+  .nav-pill-style(){
+     display: block;
+      padding: 10px 15px;
+      position: relative;
+      border-radius: @nav-pills-border-radius;
+      margin-left: 2px;
+      background: @background;
+      color: @color;
+      float: left;
+      border: 1px solid @border;
+
+    &.active,
+    & a:hover,
+    & a:focus{
+            background: lighten(@border, 30%);
+            color: darken(@color, 5%)
+    }
+
+  }
+
+    .nav-pill{
+      .nav-pill-state() when (@state = default) {
+        .nav-pill-style;
+      }
+      .nav-pill-state(){
+        &.@{state}{
+          .nav-pill-style;
+        }
+      }
+      .nav-pill-state;
+    }
+
+}
+
+
+
+// States for Tabs
+
+.nav-tabs-variant(@state; @background; @border; @color; ) {
+
+  .nav-tabs {
+      //border-bottom: @border;
+    > li.@{state} {
+
+      // Actual tabs (as links)
+      > a {
+        background: @background;
+        color: @color;
+        &:hover {
+          border-color: @border @border @border;
+        }
+      }
+
+      // Active state, and its :hover to override normal :hover
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @color;
+          background-color: #fff;
+          border: 1px solid @border;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+}

@@ -73,7 +73,7 @@
 
 
 
-                <ul class="kss-menu sidebar-nav" data-kss-ref="1">
+                <ul class="kss-menu sidebar-nav" data-kss-ref="3">
                     <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
                     <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
                     <li class="kss-menu-item"><a href="section-2.html">2.0: Tables </a></li>
@@ -87,26 +87,239 @@
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
 
     <article id="kss-content">
-        <section id="section-1" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">1</span> Components</h1>
+        <section id="section-3" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">3</span> Extended</h1>
             <div class="kss-description">
-                <p>Reusable elements that can be used across the site.
-So far this just includes buttons. </p>
+                <p>Various kinds of extened bootstrap components
+many new states and validation styles</p>
 
             </div>
         </section>
-        <section id="section-1.1.1" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">1.1.1</span> Buttons</h1>
+        <section id="section-3.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.1</span> Badges</h1>
             <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
+                <p>Extend badges to be used width states</p>
 
             </div>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <button class="btn btn-lg {$modifiers}">
-	This is a Button
-</button>
+                        <span class="badge {$modifiers}">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>primary</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-primary</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-primary">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>default</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-default</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-default">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>info</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-info</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-info">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>warning</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-warning</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-warning">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>danger</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-danger">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>success</p>
+
+                        </div>
+                        <div class="kss-mod-name">.badge-success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="badge badge-success">Badge</span>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;span class=&quot;badge {$modifiers}&quot;&gt;Badge&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-3.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.2</span> Panels</h1>
+            <div class="kss-description">
+                <p>Panel States</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="panel {$modifiers}">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>primary</p>
+
+                        </div>
+                        <div class="kss-mod-name">.panel-primary</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="panel panel-primary">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>info</p>
+
+                        </div>
+                        <div class="kss-mod-name">.panel-info</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="panel panel-info">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>warning</p>
+
+                        </div>
+                        <div class="kss-mod-name">.panel-warning</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="panel panel-warning">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>danger</p>
+
+                        </div>
+                        <div class="kss-mod-name">.panel-danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="panel panel-danger">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>success</p>
+
+                        </div>
+                        <div class="kss-mod-name">.panel-success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="panel panel-success">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">
+		Panel content
+	</div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;panel {$modifiers}&quot;&gt;
+	&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
+	&lt;div class=&quot;panel-body&quot;&gt;
+		Panel content
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-3.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.3</span> Tabs</h1>
+            <div class="kss-description">
+                <p>Extend tabs to show validation states</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <ul class="nav nav-tabs">
+ <li role="presentation" class="active {$modifiers}"><a href="#">Home</a></li>
+ <li role="presentation" class="{$modifiers}"><a href="#">Profile</a></li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -116,12 +329,13 @@ So far this just includes buttons. </p>
                             <p>Indicate that the button is the primary feature of this form.</p>
 
                         </div>
-                        <div class="kss-mod-name">.btn-primary</div>
+                        <div class="kss-mod-name">.has-success</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-primary">
-	This is a Button
-</button>
+                        <ul class="nav nav-tabs">
+ <li role="presentation" class="active has-success"><a href="#">Home</a></li>
+ <li role="presentation" class="has-success"><a href="#">Profile</a></li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -131,12 +345,13 @@ So far this just includes buttons. </p>
                             <p>Indicate that the button will remove a feature, or other negative connotations.</p>
 
                         </div>
-                        <div class="kss-mod-name">.btn-default</div>
+                        <div class="kss-mod-name">.has-info</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-default">
-	This is a Button
-</button>
+                        <ul class="nav nav-tabs">
+ <li role="presentation" class="active has-info"><a href="#">Home</a></li>
+ <li role="presentation" class="has-info"><a href="#">Profile</a></li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -146,12 +361,13 @@ So far this just includes buttons. </p>
                             <p>Highlight the button when hovered.</p>
 
                         </div>
-                        <div class="kss-mod-name">.btn-info</div>
+                        <div class="kss-mod-name">.has-warning</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-info">
-	This is a Button
-</button>
+                        <ul class="nav nav-tabs">
+ <li role="presentation" class="active has-warning"><a href="#">Home</a></li>
+ <li role="presentation" class="has-warning"><a href="#">Profile</a></li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -161,62 +377,349 @@ So far this just includes buttons. </p>
                             <p>Make the button change appearance to reflect it being disabled.</p>
 
                         </div>
-                        <div class="kss-mod-name">.btn-warning</div>
+                        <div class="kss-mod-name">.has-error</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-warning">
-	This is a Button
-</button>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-danger</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-danger">
-	This is a Button
-</button>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Hmhmhm</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-success</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-success">
-	This is a Button
-</button>
+                        <ul class="nav nav-tabs">
+ <li role="presentation" class="active has-error"><a href="#">Home</a></li>
+ <li role="presentation" class="has-error"><a href="#">Profile</a></li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
-	This is a Button
-&lt;/button&gt;</code></pre>
+                    <pre><code data-language="html">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+ &lt;li role=&quot;presentation&quot; class=&quot;active {$modifiers}&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li role=&quot;presentation&quot; class=&quot;{$modifiers}&quot;&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
             </div>
         </section>
-        <section id="section-1.1.1" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">1.1.1</span> Colors</h1>
+        <section id="section-3.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.4</span> Standalone Pills</h1>
             <div class="kss-description">
-                <p>Default Colors</p>
+                <p>Extend Pills to show validation states
+
+</p>
+<p>Experimental: Only use states standalone with for static text right now!</p>
 
             </div>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: {$modifiers}">
-	This is a Button
+                          <div class="nav-pill {$modifiers}">Text</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Indicate that the button is the primary feature of this form.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                          <div class="nav-pill has-success">Text</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Indicate that the button will remove a feature, or other negative connotations.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-info</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                          <div class="nav-pill has-info">Text</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Highlight the button when hovered.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-warning</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                          <div class="nav-pill has-warning">Text</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Make the button change appearance to reflect it being disabled.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-error</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                          <div class="nav-pill has-error">Text</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">  &lt;div class=&quot;nav-pill {$modifiers}&quot;&gt;Text&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-3.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.5</span> Listgroup</h1>
+            <div class="kss-description">
+                <p>Listgroup Item States</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <ul class="list-group">
+  <li class="list-group-item {$modifiers}">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ul>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>info</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-info</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <ul class="list-group">
+  <li class="list-group-item has-info">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ul>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>success</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <ul class="list-group">
+  <li class="list-group-item has-success">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ul>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>danger</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <ul class="list-group">
+  <li class="list-group-item has-danger">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ul>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>warning</p>
+
+                        </div>
+                        <div class="kss-mod-name">.has-warning</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <ul class="list-group">
+  <li class="list-group-item has-warning">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ul>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item {$modifiers}&quot;&gt;Cras justo odio&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Cras justo odio&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-3.6" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.6</span> Tables</h1>
+            <div class="kss-description">
+                <p>Tablerow States</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="{$modifiers}">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>success state</p>
+
+                        </div>
+                        <div class="kss-mod-name">.success</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="success">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>info success</p>
+
+                        </div>
+                        <div class="kss-mod-name">.info</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="info">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>warning state</p>
+
+                        </div>
+                        <div class="kss-mod-name">.warning</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="warning">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>danger state</p>
+
+                        </div>
+                        <div class="kss-mod-name">.danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="danger">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>active state</p>
+
+                        </div>
+                        <div class="kss-mod-name">.active</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <table class="table table-striped">
+	<tr>
+		<th>Table Head</th>
+	</tr>
+	<tr class="active">
+		<td>Table Row</td>
+	</tr>
+	<tr>
+		<td>Table Row</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-striped&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table Head&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr class=&quot;{$modifiers}&quot;&gt;
+		&lt;td&gt;Table Row&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table Row&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-3.7" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.7</span> Popover</h1>
+            <div class="kss-description">
+                <p>Popover States</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="popover bottom {$modifiers}">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                     </div>
                 </div>
@@ -227,11 +730,15 @@ So far this just includes buttons. </p>
                             <p>Indicate that the button is the primary feature of this form.</p>
 
                         </div>
-                        <div class="kss-mod-name">#fad712</div>
+                        <div class="kss-mod-name">.has-success</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: #fad712">
-	This is a Button
+                        <div class="popover bottom has-success">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                     </div>
                 </div>
@@ -242,11 +749,15 @@ So far this just includes buttons. </p>
                             <p>Indicate that the button will remove a feature, or other negative connotations.</p>
 
                         </div>
-                        <div class="kss-mod-name">#bba754</div>
+                        <div class="kss-mod-name">.has-info</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: #bba754">
-	This is a Button
+                        <div class="popover bottom has-info">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                     </div>
                 </div>
@@ -257,11 +768,15 @@ So far this just includes buttons. </p>
                             <p>Highlight the button when hovered.</p>
 
                         </div>
-                        <div class="kss-mod-name">#f99b06</div>
+                        <div class="kss-mod-name">.has-warning</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: #f99b06">
-	This is a Button
+                        <div class="popover bottom has-warning">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                     </div>
                 </div>
@@ -272,430 +787,26 @@ So far this just includes buttons. </p>
                             <p>Make the button change appearance to reflect it being disabled.</p>
 
                         </div>
-                        <div class="kss-mod-name">#18bc33</div>
+                        <div class="kss-mod-name">.has-error</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: #18bc33">
-	This is a Button
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-danger</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: btn-danger">
-	This is a Button
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Hmhmhm</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-success</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="color-panel" style="background: btn-success">
-	This is a Button
+                        <div class="popover bottom has-error">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;div class=&quot;color-panel&quot; style=&quot;background: {$modifiers}&quot;&gt;
-	This is a Button
+                    <pre><code data-language="html">&lt;div class=&quot;popover bottom {$modifiers}&quot;&gt;
+	&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+	&lt;h3 class=&quot;popover-title&quot;&gt;Popover&lt;/h3&gt;
+	&lt;div class=&quot;popover-content&quot;&gt;
+		&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                </div>
-            </div>
-        </section>
-        <section id="section-1.1.2" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">1.1.2</span> Toggle Buttons</h1>
-            <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
-
-            </div>
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        <div data-toggle="buttons" class="btn-group">
-	<label class="btn btn-toggle btn-lg active {$modifiers} ">
-		<input type="radio" id="option1" name="options"> On
-	</label>
-	<label class="btn btn-toggle btn-lg {$modifiers} ">
-		<input type="radio" id="option2" name="options"> Off
-	</label>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            
-                        </div>
-                        <div class="kss-mod-name">:hover</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div data-toggle="buttons" class="btn-group">
-	<label class="btn btn-toggle btn-lg active pseudo-class-hover ">
-		<input type="radio" id="option1" name="options"> On
-	</label>
-	<label class="btn btn-toggle btn-lg pseudo-class-hover ">
-		<input type="radio" id="option2" name="options"> Off
-	</label>
-</div>
-                    </div>
-                </div>
-                <div class="kss-markup">
-                    <pre><code data-language="html">&lt;div data-toggle=&quot;buttons&quot; class=&quot;btn-group&quot;&gt;
-	&lt;label class=&quot;btn btn-toggle btn-lg active {$modifiers} &quot;&gt;
-		&lt;input type=&quot;radio&quot; id=&quot;option1&quot; name=&quot;options&quot;&gt; On
-	&lt;/label&gt;
-	&lt;label class=&quot;btn btn-toggle btn-lg {$modifiers} &quot;&gt;
-		&lt;input type=&quot;radio&quot; id=&quot;option2&quot; name=&quot;options&quot;&gt; Off
-	&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-            </div>
-        </section>
-        <section id="section-1.1.3" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">1.1.3</span> File Upload Buttons</h1>
-            <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
-
-            </div>
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg {$modifiers}">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button is the primary feature of this form.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.primary</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg primary">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button will remove a feature, or other negative connotations.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.remove</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg remove">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Highlight the button when hovered.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:hover</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-hover">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Make the button change appearance to reflect it being disabled.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:disabled</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-disabled">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:active</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-active">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-markup">
-                    <pre><code data-language="html">&lt;div class=&quot;file-selector&quot;&gt;
-	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
-		&lt;i class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/i&gt;
-		&lt;span&gt;Upload File Button&lt;/span&gt;
-		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
-	&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-            </div>
-        </section>
-        <section id="section-1.1.4" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">1.1.4</span> Icons</h1>
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        <span class="hyicon {$modifiers}"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e001</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-add</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-add"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e002</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-alert</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-alert"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e003</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-back</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-back"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e004</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-checked</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-checked"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e005</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-chevron</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-chevron"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e006</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-close</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-close"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e007</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-dragdrop</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-dragdrop"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e008</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-expand</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-expand"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e009</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-help</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-help"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00a</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-localization</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-localization"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00b</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-locked</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-locked"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00c</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-logo</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-logo"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00d</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-more</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-more"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00e</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-remove</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-remove"></span>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Codepoint: U+e00f</p>
-
-                        </div>
-                        <div class="kss-mod-name">.hyicon-search</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-search"></span>
-                    </div>
-                </div>
-                <div class="kss-markup">
-                    <pre><code data-language="html">&lt;span class=&quot;hyicon {$modifiers}&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>

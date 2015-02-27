@@ -1,0 +1,125 @@
+
+.table{
+	border-collapse: separate;
+
+		> thead,
+		> tbody,
+		> tfoot {
+			> tr {
+				> th,
+				> td {
+					.box-shadow(0 1px 0 @default-grey-600);
+					//border-bottom: 1px solid @default-grey-600;
+					//border-top: 4px solid @default-grey;	
+
+					&.sticky-right{
+
+						text-align: right;
+					}			
+			  	}
+
+			  	> th{
+			  		background: @dark-blue;
+					color: #fff;
+
+					a{
+						color: #fff;
+					}
+		  		}
+
+		  		> td:first-child {
+            		padding-left: @table-cell-padding + 5;
+          		}
+
+
+		  		&:last-child{
+			  		> th,
+					> td {
+						border-bottom: none;
+					}
+		  		}
+
+		  		&.active{
+		  			a {
+		  				color: #fff;
+		  			}
+		  		}
+			}
+  		}
+	}
+
+
+.table-responsive{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+// Tables
+//
+// Tablerow States
+// 
+// Markup:
+// <table class="table table-striped">
+// 	<tr>
+// 		<th>Table Head</th>
+// 	</tr>
+// 	<tr class="{$modifiers}">
+// 		<td>Table Row</td>
+// 	</tr>
+// 	<tr>
+// 		<td>Table Row</td>
+// 	</tr>
+// </table>
+// 
+// .success - success state
+// .info - info success
+// .warning - warning state
+// .danger - danger state
+// .active - active state
+//
+// Styleguide 3.6
+
+
+
+// Important States are important for keeping the active state from overwriting the borders and padding 
+.table-row-variant-custom(success; @gray-dark;#fff; 5px solid @state-success-bg ~'!important'; @table-cell-padding~'!important');
+.table-row-variant-custom(info; @gray-dark;#fff; 5px solid @state-info-bg~'!important'; @table-cell-padding~'!important');
+.table-row-variant-custom(warning; @gray-dark;#fff; 5px solid @state-warning-bg~'!important'; @table-cell-padding~'!important');
+.table-row-variant-custom(danger; @gray-dark; #fff; 5px solid @state-danger-bg~'!important'; @table-cell-padding~'!important');
+.table-row-variant-custom(active; #fff; @table-row-active-color; none; (@table-cell-padding + 5));
+
+
+/* EXTENDED THE DEFAULT TABLEROW MIXIN TO APPLY CUSTOM BORDER */
+.table-row-variant-custom(@state; @color; @background; @border; @first-table-cell-padding) {
+
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+
+    > td.@{state},
+    > th.@{state},
+    &.@{state} > td,
+    &.@{state} > th {
+    	background-color: @background;
+      color: @color;
+    }
+    > td.@{state}:first-child,
+    > th.@{state}:first-child,
+    &.@{state} > td:first-child,
+    &.@{state} > th:first-child{
+    	border-left: @border;
+      padding-left: @first-table-cell-padding;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.@{state}:hover,
+    > th.@{state}:hover,
+    &.@{state}:hover > td,
+    &.@{state}:hover > th {
+      background-color: darken(@background, 5%);
+    }
+  }
+}

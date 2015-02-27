@@ -1,0 +1,40 @@
+// Badges
+//
+// Extend badges to be used width states
+// 
+// Markup:
+// <span class="badge {$modifiers}">Badge</span>
+// 
+// .badge-primary - primary
+// .badge-default - default
+// .badge-info - info
+// .badge-warning - warning
+// .badge-danger - danger
+// .badge-success - success
+//
+// Styleguide 3.1
+
+.badge{
+
+	&.badge-default{
+		.label-variant(@label-default-bg);
+	}
+	&.badge-primary{
+		.label-variant(@label-primary-bg);
+	}
+
+	&.badge-info{
+		.label-variant(@label-info-bg);
+	}
+
+	&.badge-success{
+		.label-variant(@label-success-bg);
+	}
+	&.badge-warning{
+		.label-variant(@state-warning-bg);
+	}
+
+	&.badge-danger{
+		.label-variant(@label-danger-bg);
+	}
+}

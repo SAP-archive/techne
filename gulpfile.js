@@ -9,6 +9,8 @@ var concat = require('gulp-concat');
 
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
+var LessPluginCleanCSS = require('less-plugin-clean-css'),
+    cleancss = new LessPluginCleanCSS({ advanced: true });
 
 
 var connect = require('gulp-connect-multi')();
@@ -17,6 +19,7 @@ var connect = require('gulp-connect-multi')();
 var paths = {
   scripts: 'src/js/**/*',
   less: ['src/less/**/*.less','!src/less/**/_*.less'],
+  less_watch: 'src/less/**/*.less',
   doc_less: 'src/less/**/*.less',
   doc_markdown: 'docs/markdown/**/*',
   doc_template: 'docs/template/**/*',
@@ -29,7 +32,7 @@ var paths = {
 // Complile general Less Files
 gulp.task('less', function () {
     return gulp.src(paths.less)
-        .pipe(less({errLogToConsole: true, outputStyle: "minified"}))
+        .pipe(less({errLogToConsole: true, plugins: [cleancss]}))
         .on('error', function(err){ console.log(err.message); })
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -109,7 +112,7 @@ gulp.task('connect', connect.server({
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.less_watch, ['less']);
   //gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.doc_template, ['styleguide']);
