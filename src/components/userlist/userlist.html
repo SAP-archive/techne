@@ -1,0 +1,166 @@
+
+<polymer-element name="techne-userlist" attributes="users">
+    <template>
+        <style>
+            .fl{
+                float: left;
+            }
+
+            .fr{
+                float: right;
+            }
+
+            .clr{
+                clear: both;
+            }
+
+            .userListContainer{
+                width: 100%;
+                border: 1px solid #dce1e8;
+            }
+
+            .userContainer{
+                padding: 14px 10px 10px 10px;
+            }
+
+            .userContainer + .userContainer{
+                border-top: 1px solid #dce1e8;
+            }
+
+            .col1{ 
+                width: 50px;
+            }
+
+            .col2{
+                min-width: 220px;
+                margin-left: 16px;
+            }
+
+            .col3{
+                padding-top: 11px; 
+            }
+
+            .username{
+                font-weight: bold;
+                font-size: 18px;
+                margin:0;
+            }
+
+            .email{
+                margin: 0;
+                color: #7c848f;
+            }
+
+            .role{
+                color: #7c848f;
+            }
+
+            .role:before, .role:after{
+                content: " -- ";
+            }
+
+            .userStatus{
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                color: #fff;
+            }
+
+            .userStatus.active{
+                background-color: #18bc33;
+            }
+
+            .userStatus.declined{
+                background-color: #f1291e;
+            }
+
+            .seperator{
+                display: inline-block;
+                position: relative;
+                margin: 0 10px;
+                border-right: 1px solid #dce1e8;
+                height: 32px;
+                bottom: -10px;
+
+            }
+
+              @media (max-width: 600px)
+            {
+              .userStatus{
+                display: none;
+              }  
+
+              .seperator{
+                border-right: none;
+              }
+            }
+
+            .imgContainer.active{
+                border-bottom: 4px solid #18bc33;
+            }
+
+            .imgContainer.declined{
+                border-bottom: 4px solid #f1291e;
+            }
+
+            .imgContainer img{
+                width: 100%;
+                padding: 15px 0 8px;
+            }
+
+            .hyicon-remove{
+                font-size:16px;
+                color: #f1291e;
+                height: 32px;
+            }
+
+
+        </style>
+        <apply-author-styles></apply-author-styles>
+        <div class="userListContainer">
+            <template repeat="{{user, index in users}}">
+                <div class="userContainer" data-id="{{user.id}}">
+                    <div class="col1 fl">
+                        <div class="imgContainer {{user.status}}">
+                            <img class="" src="user.png" alt="Avatar">   
+                        </div>
+                    </div>
+                    <div class="col2 fl">
+                        <p class="username">{{user.firstname}} {{user.lastname}}</p> 
+                        <p class="email">{{user.email}}</p>  
+                        <template bind if="{{user.role}}">
+                            <p class="role">{{user.role}}</p>
+                        </template>
+                    </div>
+                    <div class="col3 fr">
+                        <span class="userStatus {{user.status}}">{{user.status}}</span>
+                        <span class="seperator"></span>
+                        <span class="hyicon-remove"></span> 
+                    </div>
+                    <div class="clr"><!-- --></div>
+                </div>
+            </template>
+        </div>
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-userlist',{
+            users: [
+                {
+                    id: 1,
+                    firstname: 'Jeremy',
+                    lastname: 'Rawls',
+                    email: 'Jeremy.Rawls@hybris.com',
+                    status: 'active',
+                    role: 'asdf'
+                },
+                {
+                    id: 2,
+                    firstname: 'Simeon',
+                    lastname: 'Rawls',
+                    email: 'Simeon.Rawls@hybris.com',
+                    status: 'declined'
+                }
+            ]
+        });
+    </script>
+</polymer-element>

@@ -1,0 +1,86 @@
+<polymer-element name="techne-addtolist" attributes="label">
+	<template>
+        <apply-author-styles></apply-author-styles>
+        <style>
+            .addToListContainer{
+                border: 1px solid #dce1e8;
+            }
+
+            .addRow a{
+                display: block;
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                padding: 14px 12px;
+                background-color: #f7f9fa;
+            }
+
+            .addRow a:visited{
+                /*color: #000;*/
+            }
+
+            .addRow a:hover{
+                text-decoration: none;
+            }
+
+            .addIcon{
+                margin-right: 14px;
+            }
+
+            .addToListContent{
+                -webkit-transition: max-height 500ms ease-out; 
+                -moz-transition: max-height 500ms ease-out; 
+                -ms-transition: max-height 500ms ease-out; 
+                -o-transition: max-height 500ms ease-out; 
+                transition: max-height 500ms ease-out;  
+
+                margin: 0;
+                box-sizing: border-box;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+
+            .addToListContent.active{
+                margin: 14px 12px;
+                max-height: 320px;
+                overflow: auto;
+            }
+
+        </style>
+        <div class="addToListContainer">
+            <div class="addRow">
+                <a href="#" id="js-selectorHandle">
+                    <img class="addIcon" src="add-btn_03.png"/>
+                    {{label}}
+                </a>
+            </div>
+            <div class="addToListContent" id="js-content">
+                <div class="listContent">
+                    <content></content>
+                </div>
+            </div>
+        </div>
+	</template>
+	<script type="text/javascript">
+		Polymer('techne-addtolist',{
+            label: 'n/a',
+            ready: function(){
+
+                var _ref = this;
+
+                this.$['js-selectorHandle'].addEventListener('click', 
+                    function(e)
+                    {
+                        e.preventDefault();
+
+                        _ref.$['js-content'].classList.toggle('active');
+
+                        console.log('i have been clicked')
+                    }
+                )
+            }
+
+        });
+	</script>
+</polymer-element>
