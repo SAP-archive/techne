@@ -4,7 +4,7 @@
 // Markup:
 //<span class="<%= className %> {$modifiers}"></span>
 // 
-<% _.each(glyphs, function(glyph) { %>// .<%= className %>-<%= glyph.name %> - <%= glyph.codepoint.toString(16) %>
+<% _.each(glyphs, function(glyph) { %>// .<%= className %>-<%= glyph.name %> - Codepoint: U+<%= glyph.codepoint.toString(16) %>
 <% }); %>//
 // Styleguide 1.1.4
 

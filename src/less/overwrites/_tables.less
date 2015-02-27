@@ -1,6 +1,6 @@
 
 .table{
-		border-collapse: separate;
+	border-collapse: separate;
 
 		> thead,
 		> tbody,
@@ -25,13 +25,6 @@
 					a{
 						color: #fff;
 					}
-
-			  		&:first-child{
-			  			border-top-left-radius: @border-radius-base;
-			  		}
-			  		&:last-child{
-			  			border-top-right-radius: @border-radius-base;
-			  		}
 		  		}
 
 		  		> td:first-child {
@@ -56,11 +49,35 @@
 	}
 
 
-
-
 .table-responsive{
 	-webkit-overflow-scrolling: touch;
 }
+
+
+// Tables
+//
+// Tablerow States
+// 
+// Markup:
+// <table class="table table-striped">
+// 	<tr>
+// 		<th>Table Head</th>
+// 	</tr>
+// 	<tr class="{$modifiers}">
+// 		<td>Table Row</td>
+// 	</tr>
+// 	<tr>
+// 		<td>Table Row</td>
+// 	</tr>
+// </table>
+// 
+// .success - success state
+// .info - info success
+// .warning - warning state
+// .danger - danger state
+// .active - active state
+//
+// Styleguide 3.6
 
 
 

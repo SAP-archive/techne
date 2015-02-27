@@ -64,8 +64,7 @@
 // Markup:
 //<ul class="nav nav-tabs">
 //  <li role="presentation" class="active {$modifiers}"><a href="#">Home</a></li>
-//  <li role="presentation"><a href="#">Profile</a></li>
-//  <li role="presentation"><a href="#">Messages</a></li>
+//  <li role="presentation" class="{$modifiers}"><a href="#">Profile</a></li>
 //</ul>
 // 
 // .has-success             - Indicate that the button is the primary feature of this form.
@@ -79,6 +78,23 @@
 .nav-tabs-variant(has-info; transparent; @state-info-bg; @state-info-bg);
 .nav-tabs-variant(has-warning; transparent; @state-warning-bg; @state-warning-bg;);
 .nav-tabs-variant(has-error; transparent; @state-danger-bg; @state-danger-bg;);
+
+
+// Standalone Pills
+//
+// Extend Pills to show validation states
+//
+// Experimental: Only use states standalone with for static text right now!
+// 
+// Markup:
+//   <div class="nav-pill {$modifiers}">Text</div>
+// 
+// .has-success             - Indicate that the button is the primary feature of this form.
+// .has-info               - Indicate that the button will remove a feature, or other negative connotations.
+// .has-warning             - Highlight the button when hovered.
+// .has-error            - Make the button change appearance to reflect it being disabled.
+//
+// Styleguide 3.4
 
 .nav-pill-variant(default; transparent; @dark-grey; @dark-grey-800;);
 .nav-pill-variant(has-success; transparent; @state-success-bg; @state-success-bg;);

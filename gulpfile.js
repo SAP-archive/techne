@@ -19,6 +19,7 @@ var connect = require('gulp-connect-multi')();
 var paths = {
   scripts: 'src/js/**/*',
   less: ['src/less/**/*.less','!src/less/**/_*.less'],
+  less_watch: 'src/less/**/*.less',
   doc_less: 'src/less/**/*.less',
   doc_markdown: 'docs/markdown/**/*',
   doc_template: 'docs/template/**/*',
@@ -111,7 +112,7 @@ gulp.task('connect', connect.server({
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.less_watch, ['less']);
   //gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.doc_template, ['styleguide']);

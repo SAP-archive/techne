@@ -2,6 +2,8 @@
 
 
 @import "_badge.less";
+@import "_grid.less";
+@import "_listgroup.less";
 @import "_navs.less";
 @import "_panels.less";
 @import "_popover.less";
@@ -35,37 +37,13 @@
 	}
 }
 
-
-
-.list-group-item{
-	overflow: hidden;
-	// If you can remove items from the list
-	&.deleteable{
-		// Icon skinning
-		.list-group-item-delete{
-			position: absolute;
-			right: 15px;
-			top: 45%;
-			color: @default-red;
-			font-size: 1.4em;
-			cursor: pointer;
-		}
-		padding-right: 44px;
-		position: relative;
-	}
-}
-
-
 /* pagination */
-
 .pagination{
 	margin-top: 0px;
 }
 
 /* custom pre theming */
-
 pre{
-
 	&.pre-lg{
 		.input-lg();
 	}
@@ -73,8 +51,6 @@ pre{
 		.input-sm();
 	}
 }
-
-
 
 
 .caret{
@@ -109,7 +85,6 @@ pre{
 
 
 // Overwrite of backgroundcolor for input-group-addons 
-
 .has-success,
 .has-warning,
 .has-error {
@@ -119,15 +94,6 @@ pre{
   
 }
 
-// Set fallback border to avoid jumping content when other state is applied 
-.list-group{
-	> .list-group-item{
-		border-left: 5px solid @list-group-bg;
-	}
-}
-.list-group .list-group-item {
-    vertical-align: middle;
-}
 
 h1,h2,h3,h4,h5,h6{
 	&.list-group-item-heading{
@@ -165,11 +131,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-// List Group Items States
-.list-group-item-variant(has-info; @state-info-bg; );
-.list-group-item-variant(has-success; @state-success-bg; );
-.list-group-item-variant(has-danger; @state-danger-bg; );
-.list-group-item-variant(has-warning; @state-warning-bg; );
+
 
 
 
@@ -203,22 +165,6 @@ h1,h2,h3,h4,h5,h6{
  	}
 }
 
-// Alignment of feedback for inputsizes - Fixed in Boostrap 3.2.0 
-
-.input-lg + .form-control-feedback {
-	width: @input-height-large;
-	height: @input-height-large;
-	line-height: @input-height-large;
-}
-.input-sm + .form-control-feedback {
-	width: @input-height-small;
-	height: @input-height-small;
-	line-height: @input-height-small;
-}
-
-
-
-
 
 // Button input groups fixes
 // -------------------------
@@ -233,26 +179,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-// MIXINS
 
-/* CUSTOM MIXINS */
-
-
-
-
-
-
-
-// States for List Group Items
-.list-group-item-variant(@state; @border-left;) {
-  .list-group{
-  > .list-group-item{
-    &.@{state}{
-        border-left: 5px solid @border-left;
-    }
-  }
-  }
-}
 
 
 
