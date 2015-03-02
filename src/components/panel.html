@@ -1,10 +1,11 @@
 
-<polymer-element name="techne-Panel" attributes="type title">
+<polymer-element name="techne-Panel" attributes="type titleText">
     <template>
         <apply-author-styles></apply-author-styles>
         <div class="panel panel-{{type}}">
             <div class="panel-heading">
-                <h2>{{title}}</h2>
+                <h2>{{titleText}}</h2>
+                <content select="panel-head"></content>
             </div>
             <div class="panel-body">
                 <content select="panel-body"></content>
@@ -17,7 +18,7 @@
     <script type="text/javascript">
         Polymer('techne-Panel',{
             type: 'default',
-            title: 'N/A'
+            titleText: 'N/A'
         });
     </script>
 </polymer-element>
