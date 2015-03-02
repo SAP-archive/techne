@@ -1,0 +1,37 @@
+.usercard{
+	display: table;
+}
+
+
+.usercard-info,
+.usercard-avatar{
+	display: table-cell;
+	padding: 0 10px;
+	vertical-align: top;
+
+	h1, h2, h3{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+.usercard-info{
+	.usercard-title{
+		color: @dark-grey-600;
+		font-size: 1em;
+	}
+	.usercard-primary-info{
+		color: #000;
+	}
+	p{
+		color: @dark-grey-600;
+	}
+}
+
+.usercard-avatar{
+	padding: 0px;
+	max-width: 60px;
+	img{
+		.img-responsive();
+	}
+}

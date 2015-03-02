@@ -1,0 +1,45 @@
+.scrollable-tabs-container{
+  .scrollable-tabs{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+    padding:5px;
+    height:50px;
+    .nav-tabs{
+      position:absolute;
+      left:0px;
+      top:0px;
+      min-width:3000px;
+      margin-top:0px;
+
+      > li{
+          display:table-cell;
+          position:relative;
+          text-align:center;
+          cursor:grab;
+          cursor:-webkit-grab;
+          color:#efefef;
+          vertical-align:middle;
+      }
+    }
+  } 
+}
+
+.scroller {
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:7px;
+  padding-top:11px;
+  white-space:no-wrap;
+  vertical-align:middle;
+  background-color:#fff;
+}
+
+.scroller-right{
+  float:right;
+}
+
+.scroller-left {
+  float:left;
+}

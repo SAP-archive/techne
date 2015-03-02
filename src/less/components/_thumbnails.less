@@ -1,0 +1,71 @@
+.thumbnail {
+
+	position: relative;
+	background: #fff;
+
+	&.active{
+		border-width: 3px;
+	}
+
+	.alert{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		text-align: center;
+		padding: 5px;
+		border-radius: 0 0 0;
+		border: 0;
+		border-bottom: none;
+	}
+
+	.show-onhover{
+		height: 100%;
+	    left: 0;
+	    position: absolute;
+	    text-align: center;
+	    top: 0;
+	    width: 100%;
+	    background: fade(@dark-blue, 61%);
+		display: none;
+
+	    /* The ghost, nudged to maintain perfect centering */
+	    &:before{
+	    	content: '';
+	    	display: inline-block;
+	    	height: 100%;
+	    	vertical-align: middle;
+	    	margin-right: -0.25em; /* Adjusts for spacing */
+	    }
+
+	    /* The element to be centered, can also be of any width and height */ 
+		.centered {
+			display: inline-block;
+  			vertical-align: middle;
+		}
+	}
+
+	&:hover{
+		.show-onhover{
+			display: block;
+		}
+	}
+
+
+
+	
+	.product-image-delete-btn {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		color: #bc0000;
+		background-color: #FFF;
+		padding: 5px;
+		display: none;
+	}
+	&:hover {
+		.product-image-delete-btn {
+			display: block;
+		}
+	}
+}
