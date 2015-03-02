@@ -622,8 +622,8 @@ li.L9 {
   z-index: 1!important;
   display: block!important;
 }
-.kss-modifier-example [class^="hyicon-"],
-.kss-modifier-example [class*=" hyicon-"] {
+.kss-modifier-example > [class^="hyicon-"],
+.kss-modifier-example > [class*=" hyicon-"] {
   font-size: 35px;
 }
 .kss-modifier-example > .nav-pill {
