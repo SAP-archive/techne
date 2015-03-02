@@ -1,85 +1,88 @@
 /* GENERAL BOOTSTRAP THEME SPECIFIC OVERWRITES - REQURIES CLEANUP & SPLIT IN FILES! */
 
 
-@import "_badge.less";
-@import "_grid.less";
-@import "_listgroup.less";
-@import "_navs.less";
-@import "_panels.less";
-@import "_popover.less";
-@import "_tables.less";
-@import "_type.less";
+@import '_badge.less';
+@import '_grid.less';
+@import '_listgroup.less';
+@import '_modal.less';
+@import '_navs.less';
+@import '_panels.less';
+@import '_popover.less';
+@import '_tables.less';
+@import '_type.less';
 
 
 .label{
-	font-weight: normal;
+   font-weight: normal;
 }
 
 
-.alert-primary {
-  .alert-variant(@brand-primary; @brand-primary; @alert-success-text);
+.alert-primary{
+   .alert-variant(@brand-primary; @brand-primary; @alert-success-text);
 }
 
-.alert-processing {
-  .alert-variant(@dark-blue; @dark-blue; @alert-success-text);
+.alert-processing{
+   .alert-variant(@dark-blue; @dark-blue; @alert-success-text);
 }
 
 
-.close {
-	.opacity(1);
-	text-shadow: none;
+.close{
+   text-shadow: none;
+
+   .opacity(1);
 }
 
-.dropdown-menu {
-	min-width: 300px;
-	form&{
-		padding: 15px;
-	}
+.dropdown-menu{
+   min-width: 300px;
+   form&{
+      padding: 15px;
+   }
 }
 
 /* pagination */
 .pagination{
-	margin-top: 0px;
+   margin-top: 0;
 }
 
 /* custom pre theming */
 pre{
-	&.pre-lg{
-		.input-lg();
-	}
-	&.pre-sm{
-		.input-sm();
-	}
+   &.pre-lg{
+      .input-lg();
+   }
+   &.pre-sm{
+      .input-sm();
+   }
 }
 
 
 .caret{
-	display: inline-block;
-	width: 0;
-	height: 0;
-	margin-left: 2px;
-	vertical-align: middle;
+   display: inline-block;
 
-	&.left {
-		border-right:   @caret-width-base solid;
-		border-top: @caret-width-base solid transparent;
-		border-bottom:  @caret-width-base solid transparent;
-		border-left: 0;
-	}
-	&.right {
-		border-left:   @caret-width-base solid;
-		border-top: @caret-width-base solid transparent;
-		border-bottom:  @caret-width-base solid transparent;
-		border-right: 0;
-	}
+   width: 0;
+   height: 0;
+   margin-left: 2px;
+
+   vertical-align: middle;
+   &.left{
+      border-top: @caret-width-base solid transparent;
+      border-right: @caret-width-base solid;
+      border-bottom: @caret-width-base solid transparent;
+      border-left: 0;
+   }
+   &.right{
+      border-top: @caret-width-base solid transparent;
+      border-right: 0;
+      border-bottom: @caret-width-base solid transparent;
+      border-left: @caret-width-base solid;
+   }
 }
 
 .color-danger{
-	color: @default-red;
+   color: @default-red;
 }
 
 .light-text{
-	color: @light-blue-700;
+   color: @light-blue-700;
 }
 
 
@@ -87,21 +90,26 @@ pre{
 // Overwrite of backgroundcolor for input-group-addons 
 .has-success,
 .has-warning,
-.has-error {
-	.input-group-addon{
-		background: @alert-success-text;
-	}
-  
+.has-error{
+   .input-group-addon{
+      background: @alert-success-text;
+   }
 }
 
 
-h1,h2,h3,h4,h5,h6{
-	&.list-group-item-heading{
-		small{
-			display: block;
-			margin-bottom: 10px;
-		}
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+   &.list-group-item-heading{
+      small{
+         display: block;
+
+         margin-bottom: 10px;
+      }
+   }
 }
 
 
@@ -109,77 +117,51 @@ h1,h2,h3,h4,h5,h6{
 // Icon within the modal title
 
 .modal-title{
-	.glyphicon{
-		margin-right: 6px;
-	}
+   .glyphicon{
+      margin-right: 6px;
+   }
 }
 
 .modal-content{
-	> .list-group{
-		 > .list-group-item{
-		 	border-radius: 0;
-		 	border-left: 0px;
-		 	border-right: 0px;
-
-		 	&:last-child{
-		 		border-bottom: 0px;
-		 	}
-		 }
-	}
+   > .list-group{
+      > .list-group-item{
+         border-right: 0;
+         border-left: 0;
+         border-radius: 0;
+         &:last-child{
+            border-bottom: 0;
+         }
+      }
+   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // Input Icons left hand side
-
-
-.has-feedback {
-	&.has-feedback-left{
-
-	  // Ensure icons don't overlap text
-	  .form-control {
-	    padding-left: (@input-height-base * 1.25);
-	    padding-right: 0;
-	  }
-
-	  // Feedback icon (requires .glyphicon classes)
-	  .form-control-feedback {
-	    right: auto;
-	    left: 0;
-	    top: (@line-height-computed + 5); // Height of the `label` and its margin
-	  }
-	}
-
-	// Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0 
-	label.sr-only ~ .form-control-feedback {
- 		top: 0;
- 	}
+.has-feedback{
+   &.has-feedback-left{
+      // Ensure icons don't overlap text
+      .form-control{
+         padding-right: 0;
+         padding-left: (@input-height-base * 1.25);
+      }
+      // Feedback icon (requires .glyphicon classes)
+      .form-control-feedback{
+         top: (@line-height-computed + 5); // Height of the `label` and its margin
+         right: auto;
+         left: 0;
+      }
+   }
+   // Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0 
+   label.sr-only ~ .form-control-feedback{
+      top: 0;
+   }
 }
 
 
 // Button input groups fixes
 // -------------------------
-.input-group-btn {
-
-    > .btn,
-    > .btn-group {
+.input-group-btn{
+   > .btn, > .btn-group{
       margin-top: -2px;
-  }
-
+   }
 }
-
-
-
-
-
-
-

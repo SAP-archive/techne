@@ -1,0 +1,80 @@
+.locals-editor{
+	.input-group-addon{
+		min-width: 49px;
+	}
+}
+
+.locals-header{
+  min-height: 26px;
+    .control-label{
+    margin-top: 7px;
+  }
+}
+
+.y-locale-label {
+  display: none;
+  margin: 15px 0 3px;
+}
+
+.baas-editor-expanded {
+  .y-locale-label {
+    display: block;
+  }
+  .tab-pane {
+    display: block;
+    opacity: 1;
+  }
+  .scrollable-tabs-container {
+    display: none;
+  }
+}
+
+.validation-status{
+	font-size: 16px;
+  padding: 6px 0;
+  line-height: @line-height-base;
+  display: inline-block;
+  color: @dark-grey;
+  vertical-align: middle;
+
+	&.has-success {
+    color: @state-success-bg;
+  }
+  &.has-warning {
+    color:  @state-warning-bg;
+  }
+  &.has-error {
+    color:  @state-danger-bg;
+  }
+}
+
+
+// Special Skinning for the navpills within
+// the panes when the multi version is expanded 
+
+.tab-pane{
+  &.has-warning{
+    .y-locale-label{
+      .nav-pill{
+        .nav-pill.has-warning();
+      }
+    }
+  }
+  &.has-error{
+    .y-locale-label{
+      .nav-pill{
+        .nav-pill.has-error();
+      }
+    }
+    
+  }
+  &.has-success{
+    .y-locale-label{
+      .nav-pill{
+        .nav-pill.has-success();
+      }
+    }
+    
+  }
+
+}
