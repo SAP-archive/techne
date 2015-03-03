@@ -110,6 +110,49 @@ gulp.task('connect', connect.server({
   }
 }));
 
+gulp.task('deploy', function(){
+    
+    
+    /*
+    JS
+     */
+    gulp.src(
+        [
+            './bower_components/jquery/dist/jquery.min.js',
+            './bower_components/bootstrap/dist/js/bootstrap.min.js', 
+            './bower_components/webcomponentsjs/webcomponents.js',
+            './src/append-sources.js'
+        ]
+    )
+    .pipe(concat('techne.js'))
+    .pipe(gulp.dest(paths.environment+'/js/'));
+    
+    /*
+    HTML
+     */
+    
+    gulp.src(
+        [
+            './bower_components/polymer/polymer.html',
+            './src/components/techne_components.html'
+        ]
+    )
+    .pipe(concat('techne.html'))
+    .pipe(gulp.dest(paths.environment+'/html/'))
+    
+    /*
+    CSS
+     */
+    gulp.src(
+        [
+            './bower_components/polymer/polymer.html',
+            './src/components/techne_components.html'
+        ]
+    )
+    .pipe(concat('techne.html'))
+    .pipe(gulp.dest(paths.environment+'/html/'))
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(paths.less_watch, ['less']);

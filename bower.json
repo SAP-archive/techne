@@ -5,6 +5,9 @@
   "authors": [
     "Hybris Software"
   ],
+  "keywords":[
+    "hybris", "techen", "SAP", "[y]"
+  ],
   "ignore": [
     "docs",
     "node_modules",
