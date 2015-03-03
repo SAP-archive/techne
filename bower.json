@@ -6,7 +6,13 @@
     "Hybris Software"
   ],
   "ignore": [
-    "docs"
+    "docs",
+    "node_modules",
+    ".gitignore",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
   ],
   "license": "MIT",
   "private": true,
@@ -15,6 +21,7 @@
     "select2": "~3.5.2",
     "polymer": "Polymer/polymer#~0.5.4",
     "webcomponentsjs": "~0.5.4",
-    "apply-author-styles": "eee-c/apply-author-styles"
+    "apply-author-styles": "eee-c/apply-author-styles",
+    "jquery": "~2.1.3"
   }
 }

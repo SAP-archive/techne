@@ -6,11 +6,9 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
-        <link rel="stylesheet" href="../kss/public/style.css">
-        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="import" href="../../src/components/techne_components.html">
         
+        <!-- <link rel="stylesheet" href="../kss/public/style.css"> -->
+        <script type="text/javascript" src="../../src/techne.js" id="techneScript"></script>
     </head>
     <body>
 
@@ -28,7 +26,7 @@
             <panel-footer>footer text</panel-footer>
             </techne-Panel>
 
-            <techne-Panel title="Techné Icons">
+            <techne-Panel titleText="Techné Icons">
                 <panel-body>
                     <techne-Icon type="alert"></techne-Icon>
                     <techne-Icon type="back"></techne-Icon>
@@ -46,7 +44,15 @@
             </techne-Panel>
 
 
-            <techne-Panel title="Add To List Component">
+            <techne-Panel>
+                <panel-head>
+                    <techne-addtolist label="Add a member">
+                        <techne-Input></techne-Input>  
+                        <techne-Input></techne-Input>
+                        <techne-Input></techne-Input>   
+                         <techne-Button type="warning">Warning Techné Button</techne-Button>  
+                    </techne-addtolist>
+                </panel-head>
                 <panel-body>
                     <techne-addtolist label="Add a member">
                         <techne-Input></techne-Input>  
@@ -57,21 +63,25 @@
                 </panel-body>
             </techne-Panel>
 
-            <techne-Panel title="User List">
+            <techne-Panel titleText="User List">
                 <panel-body>
                     <techne-userlist></techne-userlist>
                 </panel-body>
             </techne-Panel>
 
-            <techne-Panel title="Data List">
-                <panel-body>
+<!--             <techne-Panel title="Data List">
+                <panel-body> -->
+                <br/>
+                <br/>
                     <techne-datalist></techne-datalist>
-                </panel-body>
-            </techne-Panel>
+                    <br/>
+                    <br/>
+            <!--     </panel-body>
+            </techne-Panel> -->
 
 
 
-            <techne-Panel title="Form Elements">
+            <techne-Panel titleText="Form Elements">
                 <panel-body>
                     <techne-Toggle></techne-Toggle>
                     <br/>
