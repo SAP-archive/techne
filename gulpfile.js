@@ -116,6 +116,7 @@ gulp.task('watch', function() {
   //gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.doc_template, ['styleguide']);
+    gulp.watch(paths.less_watch, ['styleguide']);
 });
 
 

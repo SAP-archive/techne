@@ -1,3 +1,23 @@
+// Thumbnails
+//
+// Thumbnail with Status Indicator and centered hover content
+// 
+// Markup:
+// <a class="thumbnail {$modifiers}">
+// 	<div class="alert alert-primary">Status</div>
+// 	<img src="http://placehold.it/440x350" alt="alttext">
+// 	<div class="show-onhover">
+// 		<div class="centered"> 			
+// 			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+// 			<button class="btn btn-default">Some Button</button>
+// 		</div>
+// 	</div>
+// </a>
+//
+// .active - selected state
+//
+// Styleguide 3.8
+
 .thumbnail {
 
 	position: relative;
@@ -27,7 +47,9 @@
 	    top: 0;
 	    width: 100%;
 	    background: fade(@dark-blue, 61%);
-		display: none;
+		opacity: 0;
+
+		 transition: opacity .25s ease-in-out;
 
 	    /* The ghost, nudged to maintain perfect centering */
 	    &:before{
@@ -42,12 +64,18 @@
 		.centered {
 			display: inline-block;
   			vertical-align: middle;
+  			margin-top: 20px;
+  			 transition: margin .25s ease-in-out;
 		}
 	}
 
 	&:hover{
 		.show-onhover{
 			display: block;
+			opacity: 1;
+		}
+		.centered {
+			margin-top:0px; 
 		}
 	}
 
