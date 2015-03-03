@@ -58,7 +58,7 @@ gulp.task('iconfont', function(){
         .pipe(consolidate('lodash', {
           glyphs: codepoints,
           fontName: 'hyicon',
-          fontPath: 'fonts/',
+          fontPath: '../fonts/',
           className: 'hyicon'
         }))
         .pipe(gulp.dest('src/less/components'));
@@ -88,8 +88,8 @@ gulp.task('styleguide', function () {
 
     gulp.src(paths.less)
     .pipe(less())
-    .pipe(concat('style.css'))
-    .pipe(gulp.dest('docs/kss/public'));
+    .pipe(concat('techne.css'))
+    .pipe(gulp.dest('docs/kss/public/css/'));
 
     gulp.src('./dist/fonts/**/*')
    .pipe(gulp.dest('./docs/kss/public/fonts'));

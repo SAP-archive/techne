@@ -8726,8 +8726,8 @@ table.y-responsive-table th {
 }
 @font-face {
   font-family: "hyicon";
-  src: url('fonts/hyicon.eot?vaoee8');
-  src: url('fonts/hyicon.eot?#iefixvaoee8') format('embedded-opentype'), url('fonts/hyicon.woff?vaoee8') format('woff'), url('fonts/hyicon.ttf?vaoee8') format('truetype'), url('fonts/hyicon.svg?vaoee8#hyicon') format('svg');
+  src: url('../fonts/hyicon.eot?vaoee8');
+  src: url('../fonts/hyicon.eot?#iefixvaoee8') format('embedded-opentype'), url('../fonts/hyicon.woff?vaoee8') format('woff'), url('../fonts/hyicon.ttf?vaoee8') format('truetype'), url('../fonts/hyicon.svg?vaoee8#hyicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8950,7 +8950,8 @@ table.y-responsive-table th {
   top: 0;
   width: 100%;
   background: rgba(39, 57, 79, 0.61);
-  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
   /* The ghost, nudged to maintain perfect centering */
   /* The element to be centered, can also be of any width and height */
 }
@@ -8965,9 +8966,15 @@ table.y-responsive-table th {
 .thumbnail .show-onhover .centered {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 20px;
+  transition: margin 0.25s ease-in-out;
 }
 .thumbnail:hover .show-onhover {
   display: block;
+  opacity: 1;
+}
+.thumbnail:hover .centered {
+  margin-top: 0px;
 }
 .thumbnail .product-image-delete-btn {
   position: absolute;
