@@ -7,7 +7,7 @@ var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
 var insert = require('gulp-insert');
-
+var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
@@ -24,7 +24,7 @@ var paths = {
   doc_less: 'src/less/**/*.less',
   doc_markdown: 'docs/markdown/**/*',
   doc_template: 'docs/template/**/*',
-  html: ['src/html/**/*.html', 'docs/demo/**/*'],
+  html: ['src/html/**/*.html'],
   environment: 'dist'
 };
 
@@ -128,7 +128,6 @@ gulp.task('deploy', function(){
     .pipe(concat('techne.js'))
         
     .pipe(insert.append(function(){
-        var config = require('./config.json');
         var headTagAppendScript = ['\n'];
 
         
@@ -160,15 +159,21 @@ gulp.task('deploy', function(){
     /*
     HTML
      */
-    
-    gulp.src(
-        [
-            './bower_components/polymer/polymer.html',
-            './src/components/techne_components.html'
-        ]
-    )
+
+//    gulp.src(paths.html).pipe(gulp.dest(paths.environment+'/html/components'));
+    gulp.src(paths.html)
     .pipe(concat('techne.html'))
+    .pipe(insert.prepend(function(){
+        var componentHTML = [];
+        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/hyTechne/bower_components/polymer/layout.html'>" );
+        componentHTML.push( "<script src='" + config.bower_path + "/hyTechne/bower_components/polymer/polymer.js'></script>" );
+        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/apply-author-styles/apply-author-styles.html'>" );
+
+        return componentHTML.join('\n');
+    }))
     .pipe(gulp.dest(paths.environment+'/html/'))
+    
+    
     
 
 });
