@@ -145,12 +145,12 @@ gulp.task('deploy', function(){
      */
     gulp.src(
         [
-            './bower_components/polymer/polymer.html',
-            './src/components/techne_components.html'
+            './docs/kss/public/style.css',
+            './dist/css/techne.min.css'
         ]
     )
-    .pipe(concat('techne.html'))
-    .pipe(gulp.dest(paths.environment+'/html/'))
+    .pipe(concat('techne.css'))
+    .pipe(gulp.dest(paths.environment+'/css/'))
 });
 
 // Rerun the task when a file changes
