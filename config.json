@@ -1,0 +1,5 @@
+{
+    "bower_path": "./bower_components",
+    "appendComponentLess": true,
+    "appendComponentHTML": true
+}
