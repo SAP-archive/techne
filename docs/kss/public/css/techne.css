@@ -7127,20 +7127,6 @@ button.close {
     display: none !important;
   }
 }
-/* 
-
-Syntax for sets:
----------------------------------------
-@type-colour-200: #; // Lightest value
-@type-colour-300: #;
-@type-colour-400: #;
-@type-colour: #;     // Normal value (500)
-@type-colour-600: #;
-@type-colour-700: #;
-@type-colour-800: #; // Darkest value
-----------------------------------------
-
-*/
 /* BTN SETS */
 /* GENERAL BOOTSTRAP THEME SPECIFIC OVERWRITES - REQURIES CLEANUP & SPLIT IN FILES! */
 .badge.badge-default {
