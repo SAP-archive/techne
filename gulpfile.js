@@ -167,7 +167,7 @@ gulp.task('deploy', function(){
         var componentHTML = [];
         componentHTML.push( "<link rel='import' href='" + config.bower_path + "/hyTechne/bower_components/polymer/layout.html'>" );
         componentHTML.push( "<script src='" + config.bower_path + "/hyTechne/bower_components/polymer/polymer.js'></script>" );
-        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/apply-author-styles/apply-author-styles.html'>" );
+        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/apply-author-styles/apply-author-styles.html'>\n" );
 
         return componentHTML.join('\n');
     }))
