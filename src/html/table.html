@@ -1,73 +1,6 @@
 <polymer-element name="techne-table" attributes="multiselect">
     <template>
         <style>
-            
-            @media (max-width: 600px)
-            {
-
-                thead{
-                    display: none;
-                }
-                
-                padding: .25em .5em;
-                  
-                :first-child {
-                    padding-left: 0;    
-                }
-                  
-                :last-child {
-                    padding-right: 0;
-                }   
-            }
-        </style>
-        <apply-author-styles></apply-author-styles>
-        <table class="table techne-table">
-            <content select="head-content"></content>
-            <content select="body-content"></content>
-        </table>
-    </template>
-    <script type="text/javascript">
-        Polymer('techne-table',{});
-    </script>
-</polymer-element>
-
-
-<polymer-element name="techne-table-head">
-    <template>
-        <style>
-            @media (max-width: 600px)
-            {
-
-                thead{
-                    display: none;
-                }
-                
-                tr{
-                    display: block;
-                    border: 1px solid #000 !important;
-                }
-
-            }
-        </style>
-        <apply-author-styles></apply-author-styles>
-        <thead>
-            <tr>
-                <content></content>
-            </tr>
-        </thead>
-            
-    </template>
-    <script type="text/javascript">
-        Polymer('techne-table-head',{});
-    </script>
-</polymer-element>
-
-
-
-<polymer-element name="techne-table-body" attributes="rowClassName">
-    <template>
-        <style>
-
             td{
                 display:table-cell;
             }
@@ -80,9 +13,15 @@
                 background-color: #fff;
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: 600px)
+            {
 
-                td {
+                thead{
+                    display: none;
+                }
+
+
+                td{
                     display: block;
                     -webkit-box-shadow: none !important;
                     box-shadow: none !important;
@@ -90,9 +29,7 @@
 
                 }
 
-                td > span {
-                    display: none;
-                }
+                td > span{display: none;}
 
                 td:before {
                     content: attr(data-th) " ";
@@ -108,29 +45,69 @@
                     display: inline-block;
                 }
 
-                tr + tr{
-                    border-top: none !important;
-                }
-
                 tr{
                     display: block;
                     border: 1px solid #000 !important;
                 }
-            }
 
+                tr + tr{
+                    border-top: none !important;
+                }
+
+
+
+                padding: .25em .5em;
+
+                :first-child {
+                    padding-left: 0;
+                }
+
+                :last-child {
+                    padding-right: 0;
+                }
+            }
         </style>
         <apply-author-styles></apply-author-styles>
-        <tbody>
-            <tr class="{{ rowClassName }}">
+        <table class="table techne-table">
+            <content select="head-content"></content>
+            <tbody>
+                <content select="body-content"></content>
+            </tbody>
+        </table>
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-table',{});
+    </script>
+</polymer-element>
+
+
+<polymer-element name="techne-table-head">
+    <template>
+        <apply-author-styles></apply-author-styles>
+        <thead>
+            <tr>
                 <content></content>
             </tr>
-        </tbody>
+        </thead>
+            
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-table-head',{});
+    </script>
+</polymer-element>
 
+
+
+<polymer-element name="techne-table-row" attributes="rowClassName">
+    <template>
+        <apply-author-styles></apply-author-styles>
+        <tr class="{{ rowClassName }}">
+            <content></content>
+        </tr>
     </template>
     <script type="text/javascript">
         Polymer('techne-table-body',{
             rowClassName: 'noSkunkStripe'
-            
         });
     </script>
 </polymer-element>
