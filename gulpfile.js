@@ -122,8 +122,7 @@ gulp.task('deploy', function(){
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js', 
             './bower_components/select2/select2.js',
-            './bower_components/webcomponentsjs/webcomponents.js',
-            './bower_components/polymer/polymer.js'
+            './bower_components/webcomponentsjs/webcomponents.js'
         ]
     )
     .pipe(concat('techne.js'))
@@ -166,8 +165,8 @@ gulp.task('deploy', function(){
     .pipe(concat('techne.html'))
     .pipe(insert.prepend(function(){
         var componentHTML = [];
-        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/hyTechne/bower_components/polymer/layout.html'>" );
-        componentHTML.push( "<script src='" + config.bower_path + "/hyTechne/bower_components/polymer/polymer.js'></script>" );
+        componentHTML.push( "<link rel='import' href='" + config.bower_path + "/polymer/layout.html'>" );
+        componentHTML.push( "<script src='" + config.bower_path + "/polymer/polymer.js'></script>" );
         componentHTML.push( "<link rel='import' href='" + config.bower_path + "/apply-author-styles/apply-author-styles.html'>\n" );
 
         return componentHTML.join('\n');
