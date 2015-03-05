@@ -165,7 +165,6 @@ gulp.task('deploy', function(){
     .pipe(concat('techne.html'))
     .pipe(insert.prepend(function(){
         var componentHTML = [];
-//        componentHTML.push( "<link rel='import' href='../../../polymer/polymer.html'>" );
         componentHTML.push( "<link rel='import' href='../../../apply-author-styles/apply-author-styles.html'>\n" );
 
         return componentHTML.join('\n');
