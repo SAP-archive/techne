@@ -260,73 +260,7 @@
         });
     </script>
 </polymer-element>
-<polymer-element name="techne-table" attributes="multiselect">
-    <template>
-        <style>
-            
-            @media (max-width: 600px)
-            {
-
-                thead{
-                    display: none;
-                }
-                
-                padding: .25em .5em;
-                  
-                :first-child {
-                    padding-left: 0;    
-                }
-                  
-                :last-child {
-                    padding-right: 0;
-                }   
-            }
-        </style>
-        <apply-author-styles></apply-author-styles>
-        <table class="table techne-table">
-            <content select="head-content"></content>
-            <content select="body-content"></content>
-        </table>
-    </template>
-    <script type="text/javascript">
-        Polymer('techne-table',{});
-    </script>
-</polymer-element>
-
-
-<polymer-element name="techne-table-head">
-    <template>
-        <style>
-            @media (max-width: 600px)
-            {
-
-                thead{
-                    display: none;
-                }
-                
-                tr{
-                    display: block;
-                    border: 1px solid #000 !important;
-                }
-
-            }
-        </style>
-        <apply-author-styles></apply-author-styles>
-        <thead>
-            <tr>
-                <content></content>
-            </tr>
-        </thead>
-            
-    </template>
-    <script type="text/javascript">
-        Polymer('techne-table-head',{});
-    </script>
-</polymer-element>
-
-
-
-<polymer-element name="techne-table-body" attributes="rowClassName">
+<polymer-element name="techne-table" attributes="multiselect headerData bodyData">
     <template>
         <style>
 
@@ -342,9 +276,15 @@
                 background-color: #fff;
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: 600px)
+            {
 
-                td {
+                thead{
+                    display: none;
+                }
+
+
+                td{
                     display: block;
                     -webkit-box-shadow: none !important;
                     box-shadow: none !important;
@@ -352,9 +292,7 @@
 
                 }
 
-                td > span {
-                    display: none;
-                }
+                td > span{display: none;}
 
                 td:before {
                     content: attr(data-th) " ";
@@ -370,35 +308,66 @@
                     display: inline-block;
                 }
 
-                tr + tr{
-                    border-top: none !important;
-                }
-
                 tr{
                     display: block;
                     border: 1px solid #000 !important;
                 }
-            }
 
+                tr + tr{
+                    border-top: none !important;
+                }
+
+
+
+                padding: .25em .5em;
+
+                :first-child {
+                    padding-left: 0;
+                }
+
+                :last-child {
+                    padding-right: 0;
+                }
+            }
         </style>
         <apply-author-styles></apply-author-styles>
-        <tbody>
-            <tr class="{{ rowClassName }}">
-                <content></content>
+        <table class="table techne-table">
+            <thead>
+            <tr>
+                <template bind if="{{ multiselect }}">
+                    <th>checked</th>
+                </template>
+                <template repeat="{{th in headerData}}">
+                    <th>{{th}}</th>
+                </template>
             </tr>
-        </tbody>
-
+            </thead>
+            <tbody>
+            <template repeat="{{tb, index in bodyData}}">
+                <tr class="{{ (index % 2) == 0? 'odd' : 'even' }}">
+                    <template bind if="{{ multiselect }}">
+                        <td>checked</td>
+                    </template>
+                    <template repeat="{{attr, index in tb}}">
+                        <!-- <template repeat -->
+                        <td data-th="{{headerData[index]}}" data-tb="{{attr}}"><span>{{attr}}<span></td>
+                    </template>
+                </tr>
+            </template>
+            </tbody>
+        </table>
     </template>
     <script type="text/javascript">
-        Polymer('techne-table-body',{
-            rowClassName: 'noSkunkStripe'
-            
+        Polymer('techne-table',{
+            multiselect: false,
+            headerData:['Title 1', 'Title 2', 'Title 3', 'Title 4', 'Title 5'],
+            bodyData:[
+                ['Col 1', 'Col 2', 'Col 3', 'Col 4', 'Col 5'],
+                ['Col 11', 'Col 22', 'Col 33', 'Col 44', 'Col 55']
+            ]
         });
     </script>
 </polymer-element>
-        
-        
-
 <polymer-element name="techne-Toggle" attributes="ontext offtext size name">
     <template>
         <div class="btn-group" data-toggle="buttons">
