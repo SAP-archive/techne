@@ -122,7 +122,8 @@ gulp.task('deploy', function(){
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js', 
             './bower_components/select2/select2.js',
-            './bower_components/webcomponentsjs/webcomponents.js'
+            './bower_components/webcomponentsjs/webcomponents.js',
+            './bower_components/polymer/polymer.js'
         ]
     )
     .pipe(concat('techne.js'))
@@ -160,7 +161,7 @@ gulp.task('deploy', function(){
     HTML
      */
 
-//    gulp.src(paths.html).pipe(gulp.dest(paths.environment+'/html/components'));
+
     gulp.src(paths.html)
     .pipe(concat('techne.html'))
     .pipe(insert.prepend(function(){
