@@ -14,7 +14,6 @@
     ".idea/",
     "node_modules/",
     ".gitignore",
-    "!bower_components/",
     "config.json",
     "tmp.html",
     "bower.json",
