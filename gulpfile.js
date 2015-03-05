@@ -164,7 +164,6 @@ gulp.task('deploy', function(){
     gulp.src(paths.html)
     .pipe(concat('techne.html'))
     .pipe(insert.prepend(function(){
-        console.log(config.bower_path + "/polymer/layout.html'>");
         var componentHTML = [];
         componentHTML.push( "<link rel='import' href='../../polymer/layout.html'>" );
         componentHTML.push( "<script src='../../polymer/polymer.js'></script>" );

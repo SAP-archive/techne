@@ -9941,10 +9941,10 @@ CustomElements.addModule(function(scope) {
 var headTag = document.getElementsByTagName('head')[0];
 var css = document.createElement('link');
 css.rel = 'stylesheet';
-css.href = './bower_components/hyTechne/dist/css/techne.min.css';
+css.href = '.bower_components/hyTechne/dist/css/techne.min.css';
 headTag.appendChild(css);
 var html = document.createElement('link');
 html.rel = 'import';
-html.href = './bower_components/hyTechne/dist/html/techne.html';
+html.href = '.bower_components/hyTechne/dist/html/techne.html';
 headTag.appendChild(html);
 })();
