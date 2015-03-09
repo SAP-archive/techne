@@ -1,0 +1,65 @@
+.techne-table {
+  td {
+    display: table-cell;
+  }
+
+  tr.even {
+    background-color: #f5f5f5;
+  }
+
+  tr.odd {
+    background-color: #fff;
+  }
+
+  @media (max-width: 600px) {
+
+    thead {
+      display: none;
+    }
+
+    td {
+      display: block;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      border-top: none !important;
+
+    }
+
+    td > span {
+      display: none;
+    }
+
+    td:before {
+      content: attr(data-th) " ";
+      font-weight: bold;
+      width: 40%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    td:after {
+      content: attr(data-tb) " ";
+      width: 60%;
+      display: inline-block;
+    }
+
+    tr {
+      display: block;
+      border: 1px solid #000 !important;
+    }
+
+    tr + tr {
+      border-top: none !important;
+    }
+
+    padding: .25em .5em;
+
+    :first-child {
+      padding-left: 0;
+    }
+
+    :last-child {
+      padding-right: 0;
+    }
+  }
+}

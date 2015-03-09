@@ -6,16 +6,19 @@
     "Hybris Software"
   ],
   "keywords":[
-    "hybris", "techen", "SAP", "[y]"
+    "hybris", "techne", "SAP", "[y]"
   ],
   "ignore": [
-    "docs",
-    "node_modules",
+    "docs/",
+    "src/",
+    ".idea/",
+    "node_modules/",
     ".gitignore",
+    "config.json",
+    "tmp.html",
     "bower.json",
     "gulpfile.js",
-    "package.json",
-    "README.md"
+    "package.json"
   ],
   "license": "MIT",
   "private": true,

@@ -1,6 +1,4 @@
-<link rel='import' href='./bower_components/hyTechne/bower_components/polymer/layout.html'>
-<script src='./bower_components/hyTechne/bower_components/polymer/polymer.js'></script>
-<link rel='import' href='./bower_components/apply-author-styles/apply-author-styles.html'>
+<link rel='import' href='../../../apply-author-styles/apply-author-styles.html'>
 <polymer-element name="techne-addtolist" attributes="label">
 	<template>
         <apply-author-styles></apply-author-styles>
@@ -264,98 +262,30 @@
 </polymer-element>
 <polymer-element name="techne-table" attributes="multiselect headerData bodyData">
     <template>
-        <style>
-
-            td{
-                display:table-cell;
-            }
-
-            tr.even{
-                background-color: #f5f5f5;
-            }
-
-            tr.odd{
-                background-color: #fff;
-            }
-
-            @media (max-width: 600px)
-            {
-
-                thead{
-                    display: none;
-                }
-
-
-                td{
-                    display: block;
-                    -webkit-box-shadow: none !important;
-                    box-shadow: none !important;
-                    border-top: none !important;
-                    
-                }
-
-                td > span{display: none;}
-
-                td:before {
-                  content: attr(data-th) " ";
-                  font-weight: bold;
-                  width: 40%;
-                  display: inline-block;
-                  vertical-align: top;
-                }
-
-                td:after {
-                    content: attr(data-tb) " ";
-                    width: 60%; 
-                    display: inline-block;
-                }
-
-                tr{
-                    display: block;
-                    border: 1px solid #000 !important;
-                }
-
-                tr + tr{
-                    border-top: none !important;
-                }
-
-                
-                
-                padding: .25em .5em;
-                  
-                :first-child {
-                    padding-left: 0;    
-                }
-                  
-                :last-child {
-                    padding-right: 0;
-                }   
-            }
-        </style>
         <apply-author-styles></apply-author-styles>
         <table class="table techne-table">
             <thead>
-                <tr>
-                    <template bind if="{{ multiselect }}">
-                        <th>checked</th>
-                    </template>
-                    <template repeat="{{th in headerData}}">
-                        <th>{{th}}</th>
-                    </template>
-                </tr>
+            <tr>
+                <template bind if="{{ multiselect }}">
+                    <th>checked</th>
+                </template>
+                <template repeat="{{th in headerData}}">
+                    <th>{{th}}</th>
+                </template>
+            </tr>
             </thead>
             <tbody>
-                <template repeat="{{tb, index in bodyData}}">
-                    <tr class="{{ (index % 2) == 0? 'odd' : 'even' }}">
-                        <template bind if="{{ multiselect }}">
-                            <td>checked</td>
-                        </template>
-                        <template repeat="{{attr, index in tb}}">
+            <template repeat="{{tb, index in bodyData}}">
+                <tr class="{{ (index % 2) == 0? 'odd' : 'even' }}">
+                    <template bind if="{{ multiselect }}">
+                        <td>checked</td>
+                    </template>
+                    <template repeat="{{attr, index in tb}}">
                         <!-- <template repeat -->
-                            <td data-th="{{headerData[index]}}" data-tb="{{attr}}"><span>{{attr}}<span></td>
-                        </template>
-                    </tr>
-                </template>
+                        <td data-th="{{headerData[index]}}" data-tb="{{attr}}"><span>{{attr}}<span></td>
+                    </template>
+                </tr>
+            </template>
             </tbody>
         </table>
     </template>
