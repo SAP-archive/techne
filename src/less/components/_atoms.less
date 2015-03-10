@@ -1,0 +1,33 @@
+// File with super small css snippets, need to split up in folder structure
+
+.hint-text{
+	color: @dark-grey-600;
+	font-size: 21px;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+
+.light-text{
+	color: @dark-grey-600;
+}
+
+
+section{
+	&.white{
+		background: #fff;
+
+	}
+
+	&.light-grey{
+		background: #fcfcfc;
+	}
+
+	&.section{
+		padding-bottom: 40px;
+		padding-top: 40px;
+		margin-left:  (@grid-gutter-width / -2);
+		margin-right: (@grid-gutter-width / -2);
+		padding-left: (@grid-gutter-width / 2);
+		padding-right: (@grid-gutter-width / 2);
+	}
+}

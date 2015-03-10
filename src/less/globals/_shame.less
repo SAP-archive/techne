@@ -4,3 +4,35 @@
 // and describe bug + browser 
 // PS: Hope you never need this file :P
 // ------------------------------------------ 
+
+
+
+body, html, .wrapper {
+	height: 100%;
+
+	@media (min-width: 0) and (max-width: @screen-sm) {
+		overflow-x: hidden;
+	}
+}
+
+
+
+
+
+body { 
+	padding-top: 50px; 
+	overflow: auto;
+	background-color: @default-grey;
+}
+
+.wrapper{
+	height: 100%!important;
+	overflow: auto;
+	@media (min-width: 0) and (max-width: @screen-sm) {
+		// Prevent narrow devices from vertical scrollbar
+		// when offcanvas is open
+		overflow-x: hidden;
+		position: relative;
+		min-height: 100%;
+	}
+}
