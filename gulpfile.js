@@ -32,7 +32,13 @@ var paths = {
 
 // Complile general Less Files
 gulp.task('less', function () {
-    return gulp.src(paths.less)
+        gulp.src('src/less/templates/_paths.less')
+        .pipe(consolidate('lodash', {
+          bootstrap_path: config.bootstrap_path ,
+        }))
+        .pipe(gulp.dest('src/less/globals'));
+
+        gulp.src(paths.less)
         .pipe(less({errLogToConsole: true, plugins: [cleancss]}))
         .on('error', function(err){ console.log(err.message); })
         .pipe(autoprefixer({
