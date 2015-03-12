@@ -12,3 +12,15 @@ node_modules/*
 ## Local config file
 config.json
 src/less/_paths.less
+
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
