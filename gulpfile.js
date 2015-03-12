@@ -131,11 +131,11 @@ gulp.task('deploy', function(){
         var headTagAppendScript = ['\n'];
 
         
-        if(config.appendComponentLess || config.appendComponentHTML)
+        if(config.appendComponentCss || config.appendComponentHTML)
         {
             headTagAppendScript.push(";(function() {");
                 headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
-                if(config.appendComponentLess)
+                if(config.appendComponentCss)
                 {
                     headTagAppendScript.push("var css = document.createElement('link');");
                     headTagAppendScript.push("css.rel = 'stylesheet';");

@@ -21,8 +21,8 @@
     "package.json"
   ],
   "license": "MIT",
-  "private": true,
-  "dependencies": {
+//  "private": true,
+  "devDependencies": {
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
     "polymer": "Polymer/polymer#~0.5.4",
