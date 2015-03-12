@@ -1,9 +1,4 @@
-<body class="techne" data-spy="scroll" data-target="#sidebar">
 
-  <div class="main-content">
-
-
-<!-- /SUPER NAVBAR -->
   <div class="container">
   
     <div class="row row-offcanvas row-offcanvas-left">
@@ -521,10 +516,3 @@
        </div><!--/row-->
   
   </div><!--/.container-->
-
-
-
-
-</div>
-
-</body>

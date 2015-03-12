@@ -11,3 +11,4 @@ node_modules/*
 
 ## Local config file
 config.json
+src/less/_paths.less
