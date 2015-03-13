@@ -10,6 +10,7 @@ var insert = require('gulp-insert');
 var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
+var zip = require('gulp-zip');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
     cleancss = new LessPluginCleanCSS({ advanced: true });
 
@@ -33,7 +34,7 @@ var paths = {
 gulp.task('setup', function () {
         gulp.src('src/less/templates/_paths.less')
         .pipe(consolidate('lodash', {
-          bootstrap_path: config.bootstrap_path ,
+          bootstrap_path: config.bootstrap_path
         }))
         .pipe(gulp.dest('src/less/globals'));
 });
@@ -43,7 +44,7 @@ gulp.task('setup', function () {
 gulp.task('less', function () {
         gulp.src('src/less/templates/_paths.less')
         .pipe(consolidate('lodash', {
-          bootstrap_path: config.bootstrap_path ,
+          bootstrap_path: config.bootstrap_path
         }))
         .pipe(gulp.dest('src/less/globals'));
 
@@ -184,11 +185,23 @@ gulp.task('deploy', function(){
 
         return componentHTML.join('\n');
     }))
-    .pipe(gulp.dest(paths.environment+'/html/'))
-    
-    
-    
+    .pipe(gulp.dest(paths.environment+'/html/'));
 
+    /*
+    Create the distribution zip file
+     */
+
+
+});
+
+gulp.task('zip', function(){
+    gulp.src([
+        'dist/**/*'
+    ])
+    .pipe(zip('techne'+require('./bower.json').version+ '.zip'))
+    .pipe(gulp.dest('release-archive/'));
+//    .pipe(gulp.dest(paths.environment+'/release-archive/'));
+    
 });
 
 // Rerun the task when a file changes

@@ -21,7 +21,6 @@
     "package.json"
   ],
   "license": "MIT",
-//  "private": true,
   "devDependencies": {
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
