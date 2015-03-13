@@ -70,7 +70,6 @@ table.y-responsive-table{
 
 	th{
 		text-align: left;
-		background: #fff2b2; 
 	}
 
 
@@ -92,7 +91,6 @@ table.y-responsive-table{
 		thead{
 			display: block;
 			float: left; 
-			background: @dark-blue;
 		}
 		tbody{
 			display: block;
@@ -119,13 +117,22 @@ table.y-responsive-table{
 		}
 
 		/* sort out borders */
-		td,th { border-left: 0!important; border-right: 0; border-bottom: 0; padding: @table-cell-padding-mobile!important;
+		td,th { 
+			border-left: 0!important; 
+			border-right: 0; 
+			border-bottom: 0; 
+			padding: @table-cell-padding-mobile!important;
+
 			&:first-child{
 				border-top: 0!important;
 			}
 		}
-		tbody tr { border-right: 1px solid @table-border-color; }
-		thead tr { border-top: 1px solid @dark-blue;}
+		tbody tr {
+			border-right: 1px solid @table-border-color; 
+		}
+		> thead > tr > th {
+			border-top: 1px solid #fff!important; 
+		}
 	}
 
 /* BREAK ALL INTO ONE LINE 

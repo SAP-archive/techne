@@ -2,15 +2,13 @@
 .table{
 	border-collapse: separate;
 
+
 		> thead,
 		> tbody,
 		> tfoot {
 			> tr {
 				> th,
 				> td {
-					.box-shadow(0 1px 0 @default-grey-600);
-					//border-bottom: 1px solid @default-grey-600;
-					//border-top: 4px solid @default-grey;	
 
 					&.sticky-right{
 
@@ -19,8 +17,8 @@
 			  	}
 
 			  	> th{
-			  		background: @dark-blue;
-					color: #fff;
+			  		background: @table-head-color;
+					  color: #fff;
 
 					a{
 						color: #fff;

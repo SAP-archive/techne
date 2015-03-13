@@ -42,12 +42,6 @@ gulp.task('setup', function () {
 
 // Complile general Less Files
 gulp.task('less', function () {
-        gulp.src('src/less/templates/_paths.less')
-        .pipe(consolidate('lodash', {
-          bootstrap_path: config.bootstrap_path
-        }))
-        .pipe(gulp.dest('src/less/globals'));
-
         gulp.src(paths.less)
         .pipe(less({errLogToConsole: true, plugins: [cleancss]}))
         .on('error', function(err){ console.log(err.message); })
@@ -209,7 +203,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.less_watch, ['less']);
   //gulp.watch(paths.css, ['css']);
   gulp.watch(paths.html, ['html']);
-  //gulp.watch(paths.less_watch, ['styleguide']);
+  gulp.watch(paths.less_watch, ['styleguide']);
 });
 
 
