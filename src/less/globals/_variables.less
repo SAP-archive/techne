@@ -60,9 +60,14 @@
 @dark-blue-200: #415165;
 @dark-blue-300: #273F5C;
 @dark-blue: #27394f;
-@dark-blue-600: #24364C;
+@dark-blue-600: #2b415b;
 @dark-blue-700: #0d4076;
 @dark-blue-800: #1e2c3b;
+
+// Grey Blue
+@default-greyblue-100: #f9fafc;
+@default-greyblue-300: #dce1e8;
+@default-greyblue: #7f90a4;
 
 
 /* BTN SETS */
@@ -119,6 +124,7 @@
 
 @table-cell-padding-mobile:     15px;
 @table-row-active-color: @default-blue;
+@table-head-color: @default-greyblue;
 
 
 
@@ -796,7 +802,7 @@
 //** Background color on `.list-group-item`
 @list-group-bg:                 #fff;
 //** `.list-group-item` border color
-@list-group-border:             #ddd;
+@list-group-border:             @default-greyblue-300;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
@@ -824,7 +830,7 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          @default-grey;
-@panel-footer-bg:             #fff;
+@panel-footer-bg:             @default-greyblue-100;
 
 @panel-default-text:          @gray-dark;
 @panel-default-border:        @default-grey;

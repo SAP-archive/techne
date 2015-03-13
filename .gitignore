@@ -9,12 +9,6 @@ node_modules/*
 ## IDE Specfici folders
 .idea/
 
-## Local config file
-config.json
-src/less/_paths.less
-
-
-
 # OS generated files #
 ######################
 .DS_Store
