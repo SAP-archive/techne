@@ -9,6 +9,7 @@ var insert = require('gulp-insert');
 var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
+var zip = require('gulp-zip');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
     LessPluginAutoPrefix = require('less-plugin-autoprefix'),
     cleancss = new LessPluginCleanCSS({ advanced: true }),
@@ -34,7 +35,7 @@ var paths = {
 gulp.task('setup', function () {
         gulp.src('src/less/templates/_paths.less')
         .pipe(consolidate('lodash', {
-          bootstrap_path: config.bootstrap_path ,
+          bootstrap_path: config.bootstrap_path
         }))
         .pipe(gulp.dest('src/less/globals'));
 });
@@ -142,11 +143,11 @@ gulp.task('deploy', function(){
         var headTagAppendScript = ['\n'];
 
         
-        if(config.appendComponentLess || config.appendComponentHTML)
+        if(config.appendComponentCss || config.appendComponentHTML)
         {
             headTagAppendScript.push(";(function() {");
                 headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
-                if(config.appendComponentLess)
+                if(config.appendComponentCss)
                 {
                     headTagAppendScript.push("var css = document.createElement('link');");
                     headTagAppendScript.push("css.rel = 'stylesheet';");
@@ -180,11 +181,23 @@ gulp.task('deploy', function(){
 
         return componentHTML.join('\n');
     }))
-    .pipe(gulp.dest(paths.environment+'/html/'))
-    
-    
-    
+    .pipe(gulp.dest(paths.environment+'/html/'));
 
+    /*
+    Create the distribution zip file
+     */
+
+
+});
+
+gulp.task('zip', function(){
+    gulp.src([
+        'dist/**/*'
+    ])
+    .pipe(zip('techne'+require('./bower.json').version+ '.zip'))
+    .pipe(gulp.dest('release-archive/'));
+//    .pipe(gulp.dest(paths.environment+'/release-archive/'));
+    
 });
 
 // Rerun the task when a file changes

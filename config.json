@@ -1,6 +1,6 @@
 {
     "bower_path": "./bower_components",
     "bootstrap_path": "/bower_components/bootstrap",
-    "appendComponentLess": true,
-    "appendComponentHTML": true
+    "appendComponentCss": true,
+    "appendComponentHTML": false
 }

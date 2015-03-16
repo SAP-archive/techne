@@ -28,6 +28,7 @@
     "gulp-less": "2.0.1",
     "gulp-sourcemaps": "^1.5.0",
     "gulp-watch": "^4.1.1",
+    "gulp-zip": "^2.0.3",
     "less-plugin-autoprefix": "^1.4.0",
     "less-plugin-clean-css": "^1.5.0",
     "lodash": "^3.2.0"
