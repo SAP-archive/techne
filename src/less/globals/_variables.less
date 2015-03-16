@@ -34,7 +34,7 @@
 @default-red-600: #bc0000;
 
 // Default Grey
-@default-grey: #edf1f5;
+@default-grey: @default-greyblue-300;
 @default-grey-600: #e1e5e9;
 @default-grey-700: #d4d7dc;
 
@@ -66,6 +66,7 @@
 
 // Grey Blue
 @default-greyblue-100: #f9fafc;
+@default-greyblue-200: #d2dbe6;
 @default-greyblue-300: #dce1e8;
 @default-greyblue: #7f90a4;
 
@@ -117,7 +118,7 @@
 
 @off-canvas-pt: 12px;
 
-@font-family-dosis: 'Dosis', sans-serif;
+@font-family-dosis: 'Open Sans', sans-serif;
 
 @header-height: 59px;
 
@@ -142,7 +143,7 @@
 // == TABLE MULTI SELECT 
 
 @table-cell-select-color-default: @light-blue;
-@table-cell-select-color-active: @default-blue;
+@table-cell-select-color-active: #fff;
 @table-cell-select-color-hover: @default-blue;
 
 // == PRELOADER
@@ -284,9 +285,9 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #f9f9f9;
+@table-bg-accent:               @default-greyblue-100;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #f5f5f5;
+@table-bg-hover:                @default-greyblue-200;
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
@@ -319,8 +320,8 @@
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
 
-@btn-danger-color:               #fff;
-@btn-danger-bg:                  @brand-danger;
+@btn-danger-color:               @brand-danger;
+@btn-danger-bg:                  transparent;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
 @btn-link-disabled-color:        @gray-light;
@@ -807,7 +808,7 @@
 @list-group-border-radius:      @border-radius-base;
 
 //** Background color of single list elements on hover
-@list-group-hover-bg:           #f5f5f5;
+@list-group-hover-bg:           @default-greyblue-200;
 //** Text color of active list elements
 @list-group-active-color:       @component-active-color;
 //** Background color of active list elements
@@ -826,7 +827,7 @@
 
 @panel-bg:                    #fff;
 @panel-body-padding:          15px;
-@panel-border-radius:         @border-radius-base;
+@panel-border-radius:         0px; //@border-radius-base
 
 //** Border color for elements within panels
 @panel-inner-border:          @default-grey;
@@ -834,27 +835,27 @@
 
 @panel-default-text:          @gray-dark;
 @panel-default-border:        @default-grey;
-@panel-default-heading-bg:    #fff;
+@panel-default-heading-bg:    @default-greyblue-100;
 
 @panel-primary-text:          @panel-default-text;
 @panel-primary-border:        @panel-default-border;
-@panel-primary-heading-bg:    #fff;
+@panel-primary-heading-bg:    @default-greyblue-100;
 
 @panel-success-text:          @panel-default-text;
 @panel-success-border:        @panel-default-border;
-@panel-success-heading-bg:    #fff;
+@panel-success-heading-bg:    @default-greyblue-100;
 
 @panel-info-text:             @panel-default-text;
 @panel-info-border:           @panel-default-border;
-@panel-info-heading-bg:       #fff;
+@panel-info-heading-bg:       @default-greyblue-100;
 
 @panel-warning-text:          @panel-default-text;
 @panel-warning-border:        @panel-default-border;
-@panel-warning-heading-bg:    #fff;
+@panel-warning-heading-bg:    @default-greyblue-100;
 
 @panel-danger-text:           @panel-default-text;
 @panel-danger-border:         @panel-default-border;
-@panel-danger-heading-bg:     #fff;
+@panel-danger-heading-bg:     @default-greyblue-100;
 
 
 //== Thumbnails

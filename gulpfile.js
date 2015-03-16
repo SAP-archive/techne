@@ -2,7 +2,6 @@ var gulp = require('gulp');
 
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
 var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
@@ -11,7 +10,9 @@ var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
-    cleancss = new LessPluginCleanCSS({ advanced: true });
+    LessPluginAutoPrefix = require('less-plugin-autoprefix'),
+    cleancss = new LessPluginCleanCSS({ advanced: true }),
+    autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
 
 
 var connect = require('gulp-connect-multi')();
@@ -42,14 +43,12 @@ gulp.task('setup', function () {
 // Complile general Less Files
 gulp.task('less', function () {
         gulp.src(paths.less)
-        .pipe(less({errLogToConsole: true, plugins: [cleancss]}))
+        .pipe(sourcemaps.init())
+        .pipe(less({errLogToConsole: true, plugins: [autoprefix, cleancss]}))
         .on('error', function(err){ console.log(err.message); })
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-          }))
+        //.pipe(connect.reload())
+        .pipe(sourcemaps.write())
         .pipe(concat('techne.min.css'))
-        .pipe(connect.reload())
         .pipe(gulp.dest(paths.environment+'/css/'));
 });
 
@@ -103,6 +102,9 @@ gulp.task('styleguide', function () {
 
     gulp.src('./dist/fonts/**/*')
    .pipe(gulp.dest('./docs/kss/public/css/fonts'));
+
+    gulp.src('./dist/css/**/*.css')
+   .pipe(gulp.dest('./docs/kss/public/css/'));
 
     gulp.src('./bower_components/bootstrap/fonts/**/*')
    .pipe(gulp.dest('./docs/kss/public/css/fonts'));
