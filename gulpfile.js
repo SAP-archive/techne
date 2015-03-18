@@ -12,7 +12,7 @@ var consolidate = require('gulp-consolidate');
 var zip = require('gulp-zip');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
     LessPluginAutoPrefix = require('less-plugin-autoprefix'),
-    cleancss = new LessPluginCleanCSS({ advanced: true }),
+    cleancss = new LessPluginCleanCSS({ advanced: false, aggressiveMerging:true }),
     autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
 
 
@@ -44,11 +44,11 @@ gulp.task('setup', function () {
 // Complile general Less Files
 gulp.task('less', function () {
         gulp.src(paths.less)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(less({errLogToConsole: true, plugins: [autoprefix, cleancss]}))
         .on('error', function(err){ console.log(err.message); })
         //.pipe(connect.reload())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(concat('techne.min.css'))
         .pipe(gulp.dest(paths.environment+'/css/'));
 });
