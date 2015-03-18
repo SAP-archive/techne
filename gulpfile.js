@@ -184,19 +184,15 @@ gulp.task('deploy', function(){
     /*
     Create the distribution zip file
      */
-
-
-});
-
-gulp.task('zip', function(){
     gulp.src([
         'dist/**/*'
     ])
     .pipe(zip('techne'+require('./bower.json').version+ '.zip'))
     .pipe(gulp.dest('release-archive/'));
-//    .pipe(gulp.dest(paths.environment+'/release-archive/'));
-    
+
+
 });
+
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
