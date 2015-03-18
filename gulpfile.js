@@ -68,7 +68,7 @@ gulp.task('iconfont', function(){
         .pipe(consolidate('lodash', {
           glyphs: codepoints,
           fontName: 'hyicon',
-          fontPath: 'fonts/',
+          fontPath: '../fonts/',
           className: 'hyicon'
         }))
         .pipe(gulp.dest('src/less/components'));
