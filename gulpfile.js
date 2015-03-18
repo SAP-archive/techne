@@ -33,11 +33,12 @@ var paths = {
 
 // Apply Config file
 gulp.task('setup', function () {
-        gulp.src('src/less/templates/_paths.less')
-        .pipe(consolidate('lodash', {
-          bootstrap_path: config.bootstrap_path
-        }))
-        .pipe(gulp.dest('src/less/globals'));
+    gulp.src('src/less/templates/_paths.less')
+    .pipe(consolidate('lodash', {
+      bootstrap_path: config.bootstrap_path,
+      font_path: config.font_path
+    }))
+    .pipe(gulp.dest('src/less/globals'));
 });
 
 
@@ -124,8 +125,7 @@ gulp.task('connect', connect.server({
 }));
 
 gulp.task('deploy', function(){
-    
-    
+
     /*
     JS
      */
@@ -203,6 +203,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.html, ['html']);
   gulp.watch(paths.less_watch, ['styleguide']);
 });
+
+gulp.task('dist', [ 'setup', 'iconfont', 'less', 'styleguide', 'deploy']);
 
 
 // The default task (called when you run `gulp` from cli)

@@ -44,5 +44,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16) %>" }
+<% _.each(glyphs, function(glyph) { %>
+.<%= className %>-<%= glyph.name %>:before {
+  content: "\<%= glyph.codepoint.toString(16) %>"
+}
 <% }); %>
