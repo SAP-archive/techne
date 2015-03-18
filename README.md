@@ -10,7 +10,7 @@ Four quick step to get started:
 - Run [npm](https://www.npmjs.org): `npm install`.
 - Run [npm](https://www.npmjs.org): `npm start` or run [gulp](http://gulpjs.com/): `gulp`
 - If you have a differnt folder setup than the default bower, you can modify the config.json
-and run `git update-index --skip-worktree config.json && git update-index --skip-worktree /src/less/templates/_paths.less`
+and run `git update-index --skip-worktree config.json && git update-index --skip-worktree src/less/globals/_paths.less`
 
 
 ### What's the structure? 
