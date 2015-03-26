@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
@@ -138,7 +139,7 @@ gulp.task('deploy', function(){
             './src/js/**/*.js'
         ]
     )
-    .pipe(concat('techne.js'))
+    .pipe(concat('techne.min.js'))
         
     .pipe(insert.append(function(){
         var headTagAppendScript = ['\n'];
@@ -167,6 +168,7 @@ gulp.task('deploy', function(){
         }
         return headTagAppendScript.join('\n');
     }))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.environment+'/js/'))
     .pipe(gulp.dest('docs/kss/public/js/'));
     
