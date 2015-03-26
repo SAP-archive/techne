@@ -9136,6 +9136,66 @@ table.y-responsive-table th {
     padding-right: 0;
   }
 }
+.addToListContainer {
+  border: 1px solid #dce1e8;
+}
+.addRow a {
+  display: block;
+  text-decoration: none !important;
+  color: #000;
+  font-weight: bold;
+  padding: 14px 12px;
+  background-color: #f7f9fa;
+  -webkit-transition: background-color 500ms;
+  -moz-transition: background-color 500ms;
+  -ms-transition: background-color 500ms;
+  -o-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+.addRow a.active {
+  background-color: #fff;
+}
+.addRow a.active {
+  color: #000;
+}
+.addRow a:hover {
+  text-decoration: none !important;
+}
+.addRow .addIcon {
+  opacity: 1;
+  -webkit-transition: opacity 500ms, transform 500ms ease-in-out;
+  -moz-transition: opacity 500ms, transform 500ms ease-in-out;
+  -ms-transition: opacity 500ms, transform 500ms ease-in-out;
+  -o-transition: opacity 500ms, transform 500ms ease-in-out;
+  transition: opacity 500ms, transform 500ms ease-in-out;
+}
+.addRow a.active .addIcon {
+  opacity: .4;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.addIcon {
+  margin-right: 14px;
+}
+.listContent {
+  padding: 14px 12px;
+}
+.addToListContent {
+  -webkit-transition: max-height 500ms ease-out;
+  -moz-transition: max-height 500ms ease-out;
+  -ms-transition: max-height 500ms ease-out;
+  -o-transition: max-height 500ms ease-out;
+  transition: max-height 500ms ease-out;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 0;
+}
+.addToListContent.active {
+  max-height: 340px;
+  overflow: auto;
+}
 .hint-text {
   color: #abb2bb;
   font-size: 21px;

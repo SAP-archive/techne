@@ -134,7 +134,8 @@ gulp.task('deploy', function(){
 //            './bower_components/webcomponentsjs/webcomponents.js',
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js', 
-            './bower_components/select2/select2.js'
+            './bower_components/select2/select2.js',
+            './src/js/**/*.js'
         ]
     )
     .pipe(concat('techne.js'))
@@ -166,7 +167,8 @@ gulp.task('deploy', function(){
         }
         return headTagAppendScript.join('\n');
     }))
-    .pipe(gulp.dest(paths.environment+'/js/'));
+    .pipe(gulp.dest(paths.environment+'/js/'))
+    .pipe(gulp.dest('docs/kss/public/js/'));
     
     /*
     HTML
