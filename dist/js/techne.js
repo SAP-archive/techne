@@ -3563,3 +3563,11 @@ $(document).ready(function(){
     });
 });
 
+
+;(function() {
+var headTag = document.getElementsByTagName('head')[0];
+var css = document.createElement('link');
+css.rel = 'stylesheet';
+css.href = './bower_components/hyTechne/dist/css/techne.min.css';
+headTag.appendChild(css);
+})();

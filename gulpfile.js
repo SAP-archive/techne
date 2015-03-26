@@ -69,7 +69,7 @@ gulp.task('iconfont', function(){
         .pipe(consolidate('lodash', {
           glyphs: codepoints,
           fontName: 'hyicon',
-          fontPath: '../fonts/',
+          fontPath: '/public/vendor/techne0.0.2/fonts/',
           className: 'hyicon'
         }))
         .pipe(gulp.dest('src/less/components'));
@@ -169,6 +169,11 @@ gulp.task('deploy', function(){
     }))
     .pipe(gulp.dest(paths.environment+'/js/'))
     .pipe(gulp.dest('docs/kss/public/js/'));
+    
+    gulp.src([
+        'bower_components/bootstrap/fonts/**/*'
+    ])
+    .pipe(gulp.dest('dist/fonts/'));
     
     /*
     HTML

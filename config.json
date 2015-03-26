@@ -1,7 +1,7 @@
 {
     "bower_path": "./bower_components",
     "bootstrap_path": "/bower_components/bootstrap",
-    "font_path": "../fonts",
-    "appendComponentCss": false,
+    "font_path": "/public/vendor/techne0.0.2",
+    "appendComponentCss": true,
     "appendComponentHTML": false
 }
