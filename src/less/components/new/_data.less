@@ -1,0 +1,80 @@
+// User Avatar
+//
+// Markup:
+//<div class="userAvatar">
+//  <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
+//</div>
+//
+// Styleguide 5.1
+
+.userAvatar{
+  background-color: @card-grey;
+  border-radius:2em;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  overflow: hidden;
+  margin-right: 16px;
+
+  //center all children
+  img{
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+// Primary Value
+//
+// Markup:
+//<p class="primaryDataValue">
+//  &lt;Primary Value&gt;
+//</p>
+//
+// Styleguide 5.2
+
+.primaryData{
+  color: @gray-base;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+
+// Secondary Value
+//
+// Markup:
+//<p class="secondaryDataValue">
+//  &lt;Secondary Value goes here&gt;
+//</p>
+//
+// Styleguide 5.3
+
+.secondaryData{
+  color: @secondary-text;
+  margin-bottom: 3px;
+}
+
+// Status Value Label
+//
+// Markup:
+//<p class="statusDataValue">
+//  <span class="">
+//    Active
+//  </span>
+//</p>
+//
+// Styleguide 5.4
+
+.statusDataValue{
+  text-transform: uppercase;
+  margin-bottom: 0;
+  
+  > .active{
+    color: @default-green;
+    font-weight: bold;
+    font-size: 11px;
+    
+  }
+}

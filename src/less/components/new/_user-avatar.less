@@ -1,0 +1,23 @@
+// User Avatar
+//
+// Markup:
+//<div class="userAvatar">
+//  <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
+//</div>
+//
+// Styleguide 4.1
+
+.userAvatar{
+  background-color: @card-grey;
+  border-radius:2em;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  overflow: hidden;
+  
+  //center all children
+  img{
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+}

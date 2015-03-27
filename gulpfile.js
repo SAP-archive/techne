@@ -153,14 +153,14 @@ gulp.task('deploy', function(){
                 {
                     headTagAppendScript.push("var css = document.createElement('link');");
                     headTagAppendScript.push("css.rel = 'stylesheet';");
-                    headTagAppendScript.push("css.href = '"+ config.bower_path +"/hyTechne/dist/css/techne.min.css';");
+                    headTagAppendScript.push("css.href = '"+ config.font_path +"/css/techne.min.css';");
                     headTagAppendScript.push("headTag.appendChild(css);");
                 }
 
                 if(config.appendComponentHTML) {
                     headTagAppendScript.push("var html = document.createElement('link');");
                     headTagAppendScript.push("html.rel = 'import';");
-                    headTagAppendScript.push("html.href = '" + config.bower_path + "/hyTechne/dist/html/techne.html';");
+                    headTagAppendScript.push("html.href = '" + config.font_path + "/html/techne.html';");
                     headTagAppendScript.push("headTag.appendChild(html);");
                 }
 
