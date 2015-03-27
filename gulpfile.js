@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
@@ -69,7 +70,7 @@ gulp.task('iconfont', function(){
         .pipe(consolidate('lodash', {
           glyphs: codepoints,
           fontName: 'hyicon',
-          fontPath: '../fonts/',
+          fontPath: '/public/vendor/techne0.0.2/fonts/',
           className: 'hyicon'
         }))
         .pipe(gulp.dest('src/less/components'));
@@ -134,10 +135,11 @@ gulp.task('deploy', function(){
 //            './bower_components/webcomponentsjs/webcomponents.js',
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js', 
-            './bower_components/select2/select2.js'
+            './bower_components/select2/select2.js',
+            './src/js/**/*.js'
         ]
     )
-    .pipe(concat('techne.js'))
+    .pipe(concat('techne.min.js'))
         
     .pipe(insert.append(function(){
         var headTagAppendScript = ['\n'];
@@ -166,7 +168,14 @@ gulp.task('deploy', function(){
         }
         return headTagAppendScript.join('\n');
     }))
-    .pipe(gulp.dest(paths.environment+'/js/'));
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.environment+'/js/'))
+    .pipe(gulp.dest('docs/kss/public/js/'));
+    
+    gulp.src([
+        'bower_components/bootstrap/fonts/**/*'
+    ])
+    .pipe(gulp.dest('dist/fonts/'));
     
     /*
     HTML
