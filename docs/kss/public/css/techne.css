@@ -8251,9 +8251,19 @@ h6.list-group-item-heading small {
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
 }
+.checkbox {
+  padding-left: 0;
+  line-height: 14px;
+}
+.checkbox input[type=checkbox] {
+  margin-left: 0;
+  position: relative;
+  width: 10%;
+}
 .checkbox label {
   display: inline-block;
   padding-left: 0;
+  width: 90%;
 }
 .checkbox .note {
   font-size: 10px;
@@ -9669,7 +9679,6 @@ body {
   height: 42px;
   line-height: 42px;
   overflow: hidden;
-  margin-right: 16px;
 }
 .userAvatar img {
   margin: 0 auto;
@@ -9694,27 +9703,34 @@ body {
   color: #18bc33;
 }
 .dataCard {
-  display: table;
+  width: 100%;
   padding: 13px;
   background-color: #fff;
   border: 1px solid #dce1e8;
 }
-.dataCard .col1,
-.dataCard .col2,
-.dataCard .col3 {
-  display: table-cell;
+.dataCard .cardRow {
+  overflow: hidden;
 }
-.dataCard .col1 label > span {
-  display: none;
+.dataCard .col1 {
+  margin-right: 16px;
+}
+.dataCard .col1,
+.dataCard .col3 {
+  max-width: 20%;
 }
 .dataCard .col2 {
   padding-top: 6px;
   line-height: 1.2em;
-  margin-right: 40px;
+  padding-rightt: 25px;
+  max-width: 58%;
+  min-width: 58%;
 }
-.dataCard .col3 {
-  max-width: 20px;
-  overflow: hidden;
+.dataCard .cardRow label {
+  float: left;
+  width: 78%;
+}
+.dataCard .cardRow label .col2 {
+  width: 80%;
 }
 .dataCard .actions .hyicon {
   font-size: 33px;

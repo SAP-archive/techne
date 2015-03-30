@@ -2,78 +2,11 @@
 //
 // Markup:
 //<div class="dataCard">
-//  <div class="col1 pull-left">
-//    <div class="userAvatar">
-//      <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
-//    </div>
-//  </div>
-//  <div class="col2 pull-left">
-//    <p class="primaryData">
-//      &lt;Primary Value&gt;
-//    </p>
-//    <p class="secondaryData">
-//      &lt;Secondary Value goes here&gt;
-//    </p>
-//    <p class="statusDataValue">
-//      <span class="active">
-//        Active
-//      </span>
-//    </p>
-//  </div>
-//  <div class="col3 pull-right">
-//    <div class="actions">
-//      <span class="hyicon hyicon-plus"></span>
-//    </div>
-//  </div>
-//</div>
-//
-// Styleguide 6.1
-
-.dataCard{
-  display: table;
-  padding: 13px;
-  background-color: #fff;
-  border: 1px solid @default-greyblue-300;
-  
-  .col1,
-  .col2,
-  .col3{
-    display: table-cell
-  }
-  
-  .col1{
-    label > span{
-      display: none;
-      
-    }
-    
-  }
-
-  .col2{
-    padding-top: 6px;
-    line-height: 1.2em;
-    margin-right: 40px;
-  }
-  
-  .col3{
-    max-width: 20px;
-    overflow:hidden;
-  }
-  
-  .actions .hyicon{
-      font-size: 33px;
-      color: @secondary-text;
-  }
-  
-}
-
-// DataCard Check Selection
-//
-// Markup:
-//<div class="dataCard">
-//  <label>
+//  <div class="cardRow">
 //    <div class="col1 pull-left">
-//      <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      <div class="userAvatar">
+//        <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
+//      </div>
 //    </div>
 //    <div class="col2 pull-left">
 //      <p class="primaryData">
@@ -88,10 +21,99 @@
 //        </span>
 //      </p>
 //    </div>
-//  </label>
-//  <div class="col3 pull-right">
-//    <div class="actions">
-//      <span class="hyicon hyicon-plus"></span>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 6.1
+
+.dataCard{
+//  display: table;
+  
+  width: 100%;
+  padding: 13px;
+  background-color: #fff;
+  border: 1px solid @default-greyblue-300;
+
+  .cardRow{
+//    display:table-row;
+    overflow:hidden;
+  }
+
+  .col1,
+  .col2,
+  .col3{
+//    display: table-cell
+  }
+  
+  .col1{
+    margin-right: 16px;
+  }
+
+  .col1, 
+  .col3{
+    max-width: 20%;
+
+  }
+
+  .col2{
+    padding-top: 6px;
+    line-height: 1.2em;
+    padding-rightt: 25px;
+    max-width: 58%;
+    min-width: 58%;
+  }
+
+  .cardRow label{
+    float: left;
+    width: 78%;
+    
+    .col2{
+      width: 80%;
+      
+      
+    }
+
+  }
+
+  .actions .hyicon{
+      font-size: 33px;
+      color: @secondary-text;
+  }
+
+}
+
+// DataCard Check Selection
+//
+// Markup:
+//<div class="dataCard">
+//  <div class="cardRow">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
 //    </div>
 //  </div>
 //</div>
@@ -100,10 +122,10 @@
 
 .dataCard{
   .col1 input[type=checkbox]{
-    margin-right: 10px; 
+    margin-right: 10px;
     margin-top: 14px;
   }
-  
+
 }
 
 // Floating Data Cards
@@ -111,6 +133,7 @@
 // Markup:
 //<div class="floatingCards">
 //  <div class="dataCard">
+//    <div class="cardRow">
 //    <label>
 //      <div class="col1 pull-left">
 //        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
@@ -134,8 +157,10 @@
 //        <span class="hyicon hyicon-plus"></span>
 //      </div>
 //    </div>
+//    </div>
 //  </div>
 //  <div class="dataCard">
+//    <div class="cardRow">
 //    <label>
 //      <div class="col1 pull-left">
 //        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
@@ -159,8 +184,10 @@
 //        <span class="hyicon hyicon-plus"></span>
 //      </div>
 //    </div>
+//    </div>
 //  </div>
 //  <div class="dataCard">
+//    <div class="cardRow">
 //    <label>
 //      <div class="col1 pull-left">
 //        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
@@ -184,8 +211,10 @@
 //        <span class="hyicon hyicon-plus"></span>
 //      </div>
 //    </div>
+//    </div>
 //  </div>
 //  <div class="dataCard">
+//    <div class="cardRow">
 //    <label>
 //      <div class="col1 pull-left">
 //        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
@@ -209,8 +238,10 @@
 //        <span class="hyicon hyicon-plus"></span>
 //      </div>
 //    </div>
+//    </div>
 //  </div>
 //  <div class="dataCard">
+//    <div class="cardRow">
 //    <label>
 //      <div class="col1 pull-left">
 //        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
@@ -233,6 +264,7 @@
 //      <div class="actions">
 //        <span class="hyicon hyicon-plus"></span>
 //      </div>
+//    </div>
 //    </div>
 //  </div>
 //</div>
