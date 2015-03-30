@@ -8151,7 +8151,7 @@ fieldset[disabled] .btn-toggle.active,
 .dropdown-menu {
   min-width: 300px;
 }
-form.dropdown-menu {
+.dropdown-menu form {
   padding: 15px;
 }
 /* pagination */
@@ -8250,6 +8250,15 @@ h6.list-group-item-heading small {
 }
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
+}
+.checkbox label {
+  display: inline-block;
+  padding-left: 0;
+}
+.checkbox .note {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #c9c9c9;
 }
 .input-group-btn > .btn,
 .input-group-btn > .btn-group {
@@ -9709,21 +9718,25 @@ body {
 .statusDataValue {
   text-transform: uppercase;
   margin-bottom: 0;
+  font-weight: bold;
+  font-size: 11px;
 }
 .statusDataValue > .active {
   color: #18bc33;
-  font-weight: bold;
-  font-size: 11px;
 }
 .dataCard {
   display: table;
   padding: 13px;
+  background-color: #fff;
   border: 1px solid #dce1e8;
 }
 .dataCard .col1,
 .dataCard .col2,
 .dataCard .col3 {
   display: table-cell;
+}
+.dataCard .col1 label > span {
+  display: none;
 }
 .dataCard .col2 {
   padding-top: 6px;
@@ -9734,7 +9747,37 @@ body {
   max-width: 20px;
   overflow: hidden;
 }
-.dataCard .actions .glyphicon {
+.dataCard .actions .hyicon {
   font-size: 33px;
   color: #7f90a4;
+}
+.dataCard .col1 input[type=checkbox] {
+  margin-right: 10px;
+  margin-top: 24px;
+}
+.floatingCards {
+  overflow: hidden;
+}
+.floatingCards .dataCard {
+  float: left;
+}
+@media (max-width: 767px) {
+  .floatingCards .dataCard {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .floatingCards .dataCard {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .floatingCards .dataCard {
+    width: 33.333%;
+  }
+}
+@media (min-width: 1200px) {
+  .floatingCards .dataCard {
+    width: 33.333%;
+  }
 }

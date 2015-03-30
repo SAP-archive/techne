@@ -22,22 +22,31 @@
 //  </div>
 //  <div class="col3 pull-right">
 //    <div class="actions">
-//      <span class="glyphicon glyphicon-plus"></span>
+//      <span class="hyicon hyicon-plus"></span>
 //    </div>
 //  </div>
 //</div>
 //
-// Styleguide 4.1
+// Styleguide 6.1
 
 .dataCard{
   display: table;
   padding: 13px;
+  background-color: #fff;
   border: 1px solid @default-greyblue-300;
   
   .col1,
   .col2,
   .col3{
     display: table-cell
+  }
+  
+  .col1{
+    label > span{
+      display: none;
+      
+    }
+    
   }
 
   .col2{
@@ -51,9 +60,212 @@
     overflow:hidden;
   }
   
-  .actions .glyphicon{
+  .actions .hyicon{
       font-size: 33px;
       color: @secondary-text;
   }
   
 }
+
+// DataCard Check Selection
+//
+// Markup:
+//<div class="dataCard">
+//  <label>
+//    <div class="col1 pull-left">
+//      <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//    </div>
+//    <div class="col2 pull-left">
+//      <p class="primaryData">
+//        &lt;Primary Value&gt;
+//      </p>
+//      <p class="secondaryData">
+//        &lt;Secondary Value goes here&gt;
+//      </p>
+//      <p class="statusDataValue">
+//        <span class="active">
+//          Active
+//        </span>
+//      </p>
+//    </div>
+//  </label>
+//  <div class="col3 pull-right">
+//    <div class="actions">
+//      <span class="hyicon hyicon-plus"></span>
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 6.2
+
+.dataCard{
+  .col1 input[type=checkbox]{
+    margin-right: 10px; 
+    margin-top: 24px;
+  }
+  
+}
+
+// Floating Data Cards
+//
+// Markup:
+//<div class="floatingCards">
+//  <div class="dataCard">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//  <div class="dataCard">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//  <div class="dataCard">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//  <div class="dataCard">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//  <div class="dataCard">
+//    <label>
+//      <div class="col1 pull-left">
+//        <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+//      </div>
+//      <div class="col2 pull-left">
+//        <p class="primaryData">
+//          &lt;Primary Value&gt;
+//        </p>
+//        <p class="secondaryData">
+//          &lt;Secondary Value goes here&gt;
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//      </div>
+//    </label>
+//    <div class="col3 pull-right">
+//      <div class="actions">
+//        <span class="hyicon hyicon-plus"></span>
+//      </div>
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 6.2
+
+.floatingCards{
+  overflow: hidden;
+  .dataCard{
+    float: left;
+
+    //xs display
+    @media (max-width: @screen-xs-max) {
+      width: 100%;
+    }
+
+    //sm display
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      width: 50%;
+    }
+
+    //md display
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      width: 33.333%;
+    }
+
+    //lg display
+    @media (min-width: @screen-lg-min) {
+      width: 33.333%;
+    }
+  }
+  
+}
+
+
+

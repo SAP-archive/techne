@@ -29,7 +29,7 @@
 // Primary Value
 //
 // Markup:
-//<p class="primaryDataValue">
+//<p class="primaryData">
 //  &lt;Primary Value&gt;
 //</p>
 //
@@ -45,7 +45,7 @@
 // Secondary Value
 //
 // Markup:
-//<p class="secondaryDataValue">
+//<p class="secondaryData">
 //  &lt;Secondary Value goes here&gt;
 //</p>
 //
@@ -60,7 +60,7 @@
 //
 // Markup:
 //<p class="statusDataValue">
-//  <span class="">
+//  <span class="active">
 //    Active
 //  </span>
 //</p>
@@ -70,11 +70,10 @@
 .statusDataValue{
   text-transform: uppercase;
   margin-bottom: 0;
+  font-weight: bold;
+  font-size: 11px;
   
   > .active{
     color: @default-green;
-    font-weight: bold;
-    font-size: 11px;
-    
   }
 }
