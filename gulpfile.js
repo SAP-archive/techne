@@ -70,7 +70,7 @@ gulp.task('iconfont', function(){
         .pipe(consolidate('lodash', {
           glyphs: codepoints,
           fontName: 'hyicon',
-          fontPath: '/public/vendor/techne0.0.2/fonts/',
+          fontPath: '../fonts/',
           className: 'hyicon'
         }))
         .pipe(gulp.dest('src/less/components'));
