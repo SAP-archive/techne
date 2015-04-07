@@ -8,26 +8,26 @@
   "keywords":[
     "Hybris", "techne", "SAP", "[y]"
   ],
-  "ignore": [
+  "ignore":[
+    ".idea/",
     "docs/",
     "src/",
-    ".idea/",
+    "release-archive/",
     "node_modules/",
     ".gitignore",
     "config.json",
-    "tmp.html",
-    "bower.json",
     "gulpfile.js",
     "package.json"
   ],
+  "main":[
+    "dist/*"
+  ],
   "license": "MIT",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
-    "polymer": "Polymer/polymer#~0.5.4",
-    "webcomponentsjs": "~0.5.4",
-    "apply-author-styles": "eee-c/apply-author-styles",
     "jquery": "~2.1.3"
   }
 }
+

@@ -1,0 +1,16 @@
+{
+"name": "hyTechneDocumentation",
+"version": "0.0.2",
+"description": "Hybris Techne style guide",
+"authors": [
+"Hybris Software"
+],
+"keywords":[
+"Hybris", "techne", "SAP", "[y]"
+],
+"license": "MIT",
+"private": false,
+"devDependencies": {
+"hyTechne": "https://stash.hybris.com/projects/CX/repos/techne-components/browse?at=v0.0.2"
+}
+}
