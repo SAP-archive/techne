@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/css/techne.css">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+  <link rel="stylesheet" href="public/dist/css/techne.min.css">
 
 </head>
 <body class="kss-body">
@@ -166,24 +166,12 @@ So far this just includes buttons. </p>
                 </div>
             </div>
         </section>
-        <section id="section-1.1" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.1</span> Forms</h1>
-            <div class="kss-description">
-                <p>Various Kinds of tables</p>
-
-            </div>
-        </section>
-        <section id="section-1.2" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.2</span> Tables </h1>
-            <div class="kss-description">
-                <p>Various Kinds of tables</p>
-
-            </div>
-        </section>
         <section id="section-1.2" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.2</span> Toggle Buttons</h1>
             <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
+                <p>A majority of buttons in the site are built from the same base class.
+Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -230,10 +218,18 @@ So far this just includes buttons. </p>
                 </div>
             </div>
         </section>
+        <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Tables </h1>
+            <div class="kss-description">
+                <p>Various Kinds of tables</p>
+
+            </div>
+        </section>
         <section id="section-1.3" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.3</span> File Upload Buttons</h1>
             <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
+                <p>Input Type File needs special markup to get skinned in a proper way. 
+You can use this with all available btn modifier classes</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -241,102 +237,6 @@ So far this just includes buttons. </p>
                     <div class="kss-modifier-example">
                         <div class="file-selector">
 	<span class="btn btn-default btn-lg {$modifiers}">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button is the primary feature of this form.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.primary</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg primary">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button will remove a feature, or other negative connotations.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.remove</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg remove">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Highlight the button when hovered.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:hover</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-hover">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Make the button change appearance to reflect it being disabled.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:disabled</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-disabled">
-		<i class="glyphicon glyphicon-plus"></i>
-		<span>Upload File Button</span>
-		<input type="file" multiple="" ng-file-select="">
-	</span>
-</div>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
-
-                        </div>
-                        <div class="kss-mod-name">:active</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <div class="file-selector">
-	<span class="btn btn-default btn-lg pseudo-class-active">
-		<i class="glyphicon glyphicon-plus"></i>
 		<span>Upload File Button</span>
 		<input type="file" multiple="" ng-file-select="">
 	</span>
@@ -346,7 +246,6 @@ So far this just includes buttons. </p>
                 <div class="kss-markup">
                     <pre><code data-language="html">&lt;div class=&quot;file-selector&quot;&gt;
 	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
-		&lt;i class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/i&gt;
 		&lt;span&gt;Upload File Button&lt;/span&gt;
 		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
 	&lt;/span&gt;
@@ -378,9 +277,44 @@ So far this just includes buttons. </p>
             </div>
         </section>
         <section id="section-1.5" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.5</span> Custom Checkboxes</h1>
+            <h1 class="kss-title"><span class="kss-ref">1.5</span> Custom Radioboxes</h1>
             <div class="kss-description">
-                <p>Deprecated</p>
+                <p>Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
+</div>
+<div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
+	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
+	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.5</span> Scrollable Tabs</h1>
+            <div class="kss-description">
+                <p>Component for arrows left and right for scrolling tabs
+
+</p>
+<p>Deprecated</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -428,39 +362,15 @@ So far this just includes buttons. </p>
                 </div>
             </div>
         </section>
-        <section id="section-1.5" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.5</span> Custom Radioboxes</h1>
-            <div class="kss-description">
-                <p>Deprecated</p>
-
-            </div>
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        <div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
-</div>
-<div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
-</div>
-                    </div>
-                </div>
-                <div class="kss-markup">
-                    <pre><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-            </div>
-        </section>
         <section id="section-1.6" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.6</span> Read Only Form Elements</h1>
+            <div class="kss-description">
+                <p>Read Only Form Elements share the same styling as
+the well know input-lg, input-sm size modifier classes. 
+Use them if you want to provide inline text with a label
+within a form.</p>
+
+            </div>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
@@ -794,16 +704,41 @@ So far this just includes buttons. </p>
             </div>
         </section>
         <section id="section-1.8" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.8</span> Small Toggle</h1>
+            <div class="kss-description">
+                <p>Small toggle button that is used for small inline indication of a status
+in combination with a link </p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <span class="y-toggle">
+  <input type="checkbox" id="toggleid"/>
+  <label for="toggleid">Labeltext (optional)</label>
+</span>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;span class=&quot;y-toggle&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;toggleid&quot;/&gt;
+  &lt;label for=&quot;toggleid&quot;&gt;Labeltext (optional)&lt;/label&gt;
+&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.8" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.8</span> Multiselect Table</h1>
             <div class="kss-description">
-                <p>A majority of buttons in the site are built from the same base class.</p>
+                <p>The multiselct table modifier class provides 
+select states on a tablerow level without any further markup</p>
 
             </div>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
                         <table class="table table-multi-select">
-	<tr>
+	<tr class="active">
 		<td>Content</td>
 	</tr>
 	<tr>
@@ -817,7 +752,7 @@ So far this just includes buttons. </p>
                 </div>
                 <div class="kss-markup">
                     <pre><code data-language="html">&lt;table class=&quot;table table-multi-select&quot;&gt;
-	&lt;tr&gt;
+	&lt;tr class=&quot;active&quot;&gt;
 		&lt;td&gt;Content&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -1003,6 +938,11 @@ So far this just includes buttons. </p>
         </section>
         <section id="section-1.12" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.12</span> Locals Editor</h1>
+            <div class="kss-description">
+                <p>Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore.</p>
+
+            </div>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
@@ -1270,15 +1210,14 @@ So far this just includes buttons. </p>
 </div>
   <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
 <!-- SCRIPTS -->
+  <script src="public/dist/js/techne.min.js"></script>
   <script src="public/kss.js"></script>
-  <script src="public/js/techne.js"></script>
+  
   <script src="public/prettify.js"></script>
   <!--<script src="public/jquery.js"></script>-->
   <script src="public/main.js"></script>
-  <script src="public/bootstrap.min.js"></script>
 
   <script src="public/jquery-ui.js"></script>
-  <script src="public/select2.min.js"></script>
   <script src="public/script.js"></script>
   <script src="public/super-nav.js"></script>
   

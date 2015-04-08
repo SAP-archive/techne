@@ -1,6 +1,5 @@
 {
     "bootstrap_path": "/bower_components/bootstrap",
-    "font_path": "fonts/",
     "appendComponentCss": false,
     "appendComponentHTML": false
 }

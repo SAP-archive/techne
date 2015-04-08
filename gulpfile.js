@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 
 var less = require('gulp-less');
+var env = require('gulp-env');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
@@ -16,11 +17,15 @@ var LessPluginCleanCSS = require('less-plugin-clean-css'),
     cleancss = new LessPluginCleanCSS({ advanced: false, aggressiveMerging:true }),
     autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
 
-
 var connect = require('gulp-connect-multi')();
 
 
+env({file: "config.json"});
+
+
 var paths = {
+  icons_path: 'src/icons/*.svg',
+  bootstrap_icons: 'bower_components/bootstrap/fonts/**/*',
   scripts: 'src/js/**/*',
   less: ['src/less/**/*.less','!src/less/**/_*.less'],
   less_watch: 'src/less/**/*.less',
@@ -31,58 +36,113 @@ var paths = {
   environment: 'dist'
 };
 
+gulp.task('copy_src', 
+    function()
+    {
 
-// Apply Config file
-gulp.task('setup', function () {
-    gulp.src('src/less/templates/_paths.less')
-    .pipe(consolidate('lodash', {
-      bootstrap_path: config.bootstrap_path,
-      font_path: config.font_path
-    }))
-    .pipe(gulp.dest('src/less/globals'));
-});
-
-
-// Complile general Less Files
-gulp.task('less', function () {
-        gulp.src(paths.less)
-        //.pipe(sourcemaps.init())
-        .pipe(less({errLogToConsole: true, plugins: [autoprefix, cleancss]}))
-        .on('error', function(err){ console.log(err.message); })
-        //.pipe(connect.reload())
-        //.pipe(sourcemaps.write())
-        .pipe(concat('techne.min.css'))
-        .pipe(gulp.dest(paths.environment+'/css/'));
-});
+        gulp.src(['bower_components/bootstrap/**/*'])
+            .pipe(
+                gulp.dest('docs/kss/bower_components/bootstrap')
+            );
+    }
+);
 
 
 // Create Iconfont
-gulp.task('iconfont', function(){
-  gulp.src(['src/icons/*.svg'])
-    .pipe(iconfont({
-      fontName: 'hyicon',
-      normalize: true,
-      centerHorizontally: true,
-      fontHeight: 100 // IMPORTANT
-    }))
-    .on('codepoints', function(codepoints, options) {
-      gulp.src('src/less/templates/_icons.less')
-        .pipe(consolidate('lodash', {
-          glyphs: codepoints,
-          fontName: 'hyicon',
-          fontPath: config.font_path,
-          className: 'hyicon'
-        }))
-        .pipe(gulp.dest('src/less/components'));
-    })
-    .pipe(gulp.dest('dist/fonts/'));
-});
+gulp.task('iconfont', 
+    function()
+    {
+        gulp.src(paths.icons_path)
+            .pipe(
+                iconfont(
+                    {
+                        fontName: 'hyicon',
+                        normalize: true,
+                        centerHorizontally: true,
+                        fontHeight: 100 // IMPORTANT
+                    }
+                )
+            )
+            .on('codepoints', 
+                function(codepoints, options) 
+                {
+                    gulp.src('src/less/templates/_icons.less')
+                        .pipe(
+                            consolidate('lodash', 
+                                {
+                                    glyphs: codepoints,
+                                    fontName: 'hyicon',
+                                    fontPath: "fonts/",
+                                    className: 'hyicon'
+                                }
+                            )
+                        )
+                        .pipe(gulp.dest('src/less/components'));
+                }
+            )
+            .pipe(
+                gulp.dest('dist/css/fonts/')
+            )
+            .pipe(
+                gulp.dest('docs/kss/public/css/fonts/')
+            );
+    }
+);
+
+
+// Complile general Less Files
+gulp.task('less', 
+    function() 
+    {
+        gulp.src('src/less/templates/_paths.less')
+            .pipe(
+                consolidate('lodash',
+                    {
+                        bootstrap_path: config.bootstrap_path
+                    }
+                )
+            )
+            .pipe(
+                gulp.dest('src/less/globals')
+            );
+        
+        gulp.src(paths.less)
+            //.pipe(sourcemaps.init())
+            .pipe(
+                less(
+                    {
+                        errLogToConsole: true, 
+                        plugins: [autoprefix, cleancss]
+                    }
+                )
+            )
+            .on('error', 
+                function(err)
+                { 
+                    console.log(err.message); 
+                }
+            )
+            //.pipe(connect.reload())
+            //.pipe(sourcemaps.write())
+            .pipe(
+                concat('techne.min.css')
+            )
+            .pipe(
+                gulp.dest( paths.environment+'/css/' )
+            );
+    }
+);
+
+
+
+//----ABOVE COMPLETE----
+
 
 // Complile general Less Files
 gulp.task('html', function () {
     return gulp.src(paths.html)
       .pipe(gulp.dest('docs/'))
-      .pipe(connect.reload());
+//      .pipe(connect.reload());
 });
 
 
@@ -117,11 +177,11 @@ gulp.task('styleguide', function () {
 
 
 gulp.task('connect', connect.server({
-  root: [__dirname],
-  port: 1341,
+  root: [__dirname + '/docs/kss'],
+  port: 8080,
   livereload: true,
   open: {
-    browser: 'none' // if not working OS X browser: 'Google Chrome'
+    browser: 'Google Chrome' // if not working OS X browser: 'Google Chrome'
   }
 }));
 
@@ -153,14 +213,14 @@ gulp.task('deploy', function(){
                 {
                     headTagAppendScript.push("var css = document.createElement('link');");
                     headTagAppendScript.push("css.rel = 'stylesheet';");
-                    headTagAppendScript.push("css.href = '"+ config.font_path +"/css/techne.min.css';");
+                    headTagAppendScript.push("css.href = 'dist/css/techne.min.css';");
                     headTagAppendScript.push("headTag.appendChild(css);");
                 }
 
                 if(config.appendComponentHTML) {
                     headTagAppendScript.push("var html = document.createElement('link');");
                     headTagAppendScript.push("html.rel = 'import';");
-                    headTagAppendScript.push("html.href = '" + config.font_path + "/html/techne.html';");
+                    headTagAppendScript.push("html.href = 'dist/html/techne.html';");
                     headTagAppendScript.push("headTag.appendChild(html);");
                 }
 
@@ -199,7 +259,12 @@ gulp.task('deploy', function(){
         'dist/**/*'
     ])
     .pipe(zip('techne'+require('./bower.json').version+ '.zip'))
-    .pipe(gulp.dest('release-archive/'));
+    .pipe(gulp.dest('docs/kss/public/release-archive/'));
+    
+    gulp.src('dist/**/*')
+        .pipe(
+            gulp.dest('docs/kss/public/dist')
+        )
 
 
 });
@@ -212,6 +277,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.html, ['html']);
   gulp.watch(paths.less_watch, ['styleguide']);
 });
+
+// iconfont, less, kss_bootrap_src
 
 gulp.task('dist', [ 'setup', 'iconfont', 'less', 'styleguide', 'deploy']);
 

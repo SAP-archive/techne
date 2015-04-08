@@ -1,0 +1,20 @@
+<polymer-element name="techne-Toggle" attributes="ontext offtext size name">
+    <template>
+        <div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-toggle btn-{{size}} active">
+				<input type="radio" name="{{name}}" id="option1"> {{ontext}}
+			</label>
+			<label class="btn btn-toggle btn-{{size}}">
+				<input type="radio" name="{{name}}" id="option2"> {{offtext}}
+			</label>
+		</div>
+    </template>
+    <script type="text/javascript">
+        Polymer('techne-Toggle',{
+            ontext: 'On',
+            offtext: 'Off',
+            size: 'lg',
+            name: 'options'
+        });
+    </script>
+</polymer-element>
