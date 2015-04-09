@@ -12,7 +12,7 @@
     ".idea/",
     "docs/",
     "src/",
-    "release-archive/",
+    "bower_components",
     "node_modules/",
     ".gitignore",
     "config.json",
@@ -20,7 +20,8 @@
     "package.json"
   ],
   "main":[
-    "dist/*"
+    "dist/js/techne.min.js",
+    "dist/css/"
   ],
   "license": "MIT",
   "private": false,
