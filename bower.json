@@ -14,6 +14,7 @@
     "src/",
     "bower_components",
     "node_modules/",
+    "src/less/templates/",
     ".gitignore",
     "config.json",
     "gulpfile.js",
