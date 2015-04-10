@@ -257,8 +257,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../../bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -9749,99 +9749,5 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100%;
-  }
-}
-.userAvatar {
-  background-color: red;
-  border-radius: 2em;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  overflow: hidden;
-}
-.userAvatar img {
-  margin: 0 auto;
-  vertical-align: middle;
-}
-.primaryData {
-  color: #000000;
-  margin-bottom: 0px;
-  font-weight: bold;
-}
-.secondaryData {
-  color: red;
-  margin-bottom: 3px;
-}
-.statusDataValue {
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-weight: bold;
-  font-size: 11px;
-}
-.statusDataValue > .active {
-  color: #18bc33;
-}
-.dataCard {
-  width: 100%;
-  padding: 13px;
-  background-color: #fff;
-  border: 1px solid #dce1e8;
-}
-.dataCard .cardRow {
-  overflow: hidden;
-}
-.dataCard .col1 {
-  margin-right: 16px;
-}
-.dataCard .col1,
-.dataCard .col3 {
-  max-width: 20%;
-}
-.dataCard .col2 {
-  padding-top: 6px;
-  line-height: 1.2em;
-  padding-rightt: 25px;
-  max-width: 58%;
-  min-width: 58%;
-}
-.dataCard .cardRow label {
-  float: left;
-  width: 78%;
-}
-.dataCard .cardRow label .col2 {
-  width: 80%;
-}
-.dataCard .actions .hyicon {
-  font-size: 33px;
-  color: red;
-}
-.dataCard .col1 input[type=checkbox] {
-  margin-right: 10px;
-  margin-top: 14px;
-}
-.floatingCards {
-  overflow: hidden;
-}
-.floatingCards .dataCard {
-  float: left;
-}
-@media (max-width: 767px) {
-  .floatingCards .dataCard {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .floatingCards .dataCard {
-    width: 50%;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .floatingCards .dataCard {
-    width: 33.333%;
-  }
-}
-@media (min-width: 1200px) {
-  .floatingCards .dataCard {
-    width: 33.333%;
   }
 }

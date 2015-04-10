@@ -234,13 +234,7 @@ gulp.task('deploy', function(){
     )
     .pipe( gulp.dest('docs/kss/public/js/') );
     
-    gulp.src(
-        [
-            'bower_components/bootstrap/fonts/**/*'
-        ]
-    )
-    .pipe( gulp.dest('dist/fonts/') );
-    
+
     /*
     HTML
      */
