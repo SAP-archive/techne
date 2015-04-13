@@ -28,7 +28,10 @@ var paths = {
         'src/less/**/*.less',
         '!src/less/**/_*.less'
     ],
-    less_watch: 'src/less/**/*.less',
+    less_watch: [
+        'src/less/**/*.less',
+        '!src/less/globals/_resource-paths.less'
+    ],
     doc_less: 'src/less/**/*.less',
     doc_markdown: 'docs/markdown/**/*',
     doc_template: 'docs/template/**/*',
@@ -75,22 +78,27 @@ gulp.task('iconfont',
     }
 );
 
-
-// Complile general Less Files
-gulp.task('less', 
-    function() 
-    {
-        gulp.src('src/less/templates/_paths.less')
+gulp.task('setpath', function(cb) {
+    gulp.src('src/less/templates/_resource-paths.less')
         .pipe(
             consolidate('lodash',
                 {
-                    bootstrap_path: config.bootstrap_path
+                    bootstrap_path: config.bootstrap_path,
+                    bower_path: config.bower_path
                 }
             )
         )
         .pipe(
             gulp.dest('src/less/globals')
-        );
+        ); 
+    cb(); // Callback to less task
+});
+
+// Complile general Less Files
+gulp.task('less', ['setpath'] ,
+    function() 
+    {
+         
         
         gulp.src(paths.less)
         //.pipe(sourcemaps.init())
@@ -151,19 +159,11 @@ gulp.task('styleguide', function () {
     )
     .pipe( gulp.dest('docs/kss') );
 
-    gulp.src(paths.less)
-    .pipe( less() )
-    .pipe( concat('techne.css') )
-    .pipe( gulp.dest('docs/kss/public/css/') );
-
-    gulp.src('./dist/fonts/**/*')
-    .pipe( gulp.dest('./docs/kss/public/css/fonts') );
-
-    gulp.src('./dist/css/**/*.css')
-    .pipe( gulp.dest('./docs/kss/public/css/') );
+    gulp.src('./dist/**/*')
+    .pipe( gulp.dest('./docs/kss/public/y-techne/dist/') );
 
     gulp.src('./bower_components/bootstrap/fonts/**/*')
-    .pipe( gulp.dest('./docs/kss/public/css/fonts') );
+    .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
 });
 
 
