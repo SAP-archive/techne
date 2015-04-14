@@ -73,8 +73,7 @@ gulp.task('iconfont',
                 .pipe(gulp.dest('src/less/components'));
             }
         )
-        .pipe( gulp.dest('dist/css/fonts/') )
-        .pipe( gulp.dest('docs/kss/public/css/fonts/') );
+        .pipe( gulp.dest('dist/fonts/') );
     }
 );
 
