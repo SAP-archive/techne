@@ -1,15 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic);
 
+@bower-path: '../../..'; // Default bower_components path - Don't change here
 
-@import "../../bower_components/bootstrap/less/bootstrap";
-@import (less) "../../bower_components/select2/select2.css";
+@import "@{bower-path}/bootstrap/less/bootstrap";
+@import (less) "@{bower-path}/select2/select2.css";
 
 
 
 // Globals
 @import "./globals/_variables";
-@import "./globals/_resource-paths";
+@import (optional) "./globals/_resource-paths";
 @import "./globals/_utils";
 
 
@@ -20,6 +21,7 @@
 //
 // Styleguide 3.
 @import "./overwrites/__overwrites.less";
+@import "./components/_addToList.less";
 
 // Components
 // 
@@ -44,6 +46,7 @@
 @import "./components/_table-multiselect";
 @import "./components/_table-responsive";
 
+@hytech-path: "../";
 @import "./components/_icons";
 @import "./components/_locals-editor";
 @import "./components/_tabs-scrollable";
@@ -53,10 +56,22 @@
 @import "./components/_table.less";
 
 
-// CUSTOM
+// New Components
 //
+// Various kinds of extened bootstrap components
+// many new states and validation styles
 //
-@import "./components/_addToList.less";
+// Styleguide 4.
+
+@import "./components/new/_data.less";
+
+// Techné Patterns
+//
+// Component patterns
+//
+// Styleguide 5.
+
+@import "./components/new/patterns/_data-card.less";
 
 
 // Atoms
@@ -74,22 +89,9 @@
 @import "./globals/_shame";
 
 
-// New Components
-//
-// Various kinds of extened bootstrap components
-// many new states and validation styles
-//
-// Styleguide 5.
 
-//@import "./components/new/_data.less";
 
-// Techné Patterns
-//
-// Comopnent patterns for stronger user expereinces
-//
-// Styleguide 6.
 
-//@import "./components/new/patterns/_data-card.less";
 
 
 

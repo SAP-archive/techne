@@ -17,7 +17,7 @@ and run `git update-index --skip-worktree config.json && git update-index --skip
 
 Within the repo you'll find the following directories and files:
 
-
+```
 ├── src/
 │   ├── less
 │   ├── icons
@@ -29,3 +29,25 @@ Within the repo you'll find the following directories and files:
 │   ├── fonts
 │   └── templates
 ├── docs
+```
+
+### So you want to build the less on your own? 
+
+Nothing easier than that! Simply include our styes.less files like: 
+`@import "bower_components/hyTechne/src/less/styles";`.
+
+Remember to fix the paths for fonts by overwriting the path variables 
+in a less include after the style.less include like: 
+
+`@import "_resource-paths";`
+
+and add in the file something like: 
+
+```
+// Use this file to point to the right folders
+// for correct paths for icon-fonts etc 
+
+@bootstrap-path: '../../bower_components/bootstrap'; // Path to bootstrap folder
+@bower-path: '../../bower_components';  // Path to bower_components folder
+@hytech-path: '../../bower_components/hyTechne'; // Path to hytech folder
+```

@@ -17,6 +17,10 @@
 @checkbox-size: 24px;
 @checkbox-border-width: 5px;
 
+input[type="checkbox"] {
+  width:@checkbox-size;
+  height: @checkbox-size;
+}
 
 .checkbox{
 //	position: relative;
@@ -25,7 +29,7 @@
 //    margin-bottom: 14px;
 //    min-height: @checkbox-size;
 
-	input{
+	input[type="checkbox"]{
 		display: inline-block;
 		&:checked + label{
 

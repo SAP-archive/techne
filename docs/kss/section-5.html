@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
-  <link rel="stylesheet" href="public/dist/css/techne.min.css">
+  <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
 <body class="kss-body">
@@ -79,9 +79,8 @@
                     <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
                     <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
                     <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
-                    <li class="kss-menu-item"><a href="section-4.html">4.0: AddToList</a></li>
-                    <li class="kss-menu-item"><a href="section-5.html">5.0: New Components</a></li>
-                    <li class="kss-menu-item"><a href="section-6.html">6.0: Techné Patterns</a></li>
+                    <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
+                    <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
                 </ul>
         </nav>
 
@@ -92,82 +91,432 @@
 
     <article id="kss-content">
         <section id="section-5" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">5</span> New Components</h1>
+            <h1 class="kss-title"><span class="kss-ref">5</span> Techné Patterns</h1>
             <div class="kss-description">
-                <p>Various kinds of extened bootstrap components
-many new states and validation styles</p>
+                <p>Component patterns</p>
 
             </div>
         </section>
         <section id="section-5.1" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">5.1</span> User Avatar</h1>
+            <h1 class="kss-title"><span class="kss-ref">5.1</span> DataCard(s)</h1>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <div class="userAvatar">
- <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg"/>
-</div>
+                        <ul class="list-group">
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <div class="col1 pull-left">
+       <div class="userAvatar">
+         <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
+       </div>
+     </div>
+     <div class="col2 pull-left">
+       <p class="primaryData">
+         &lt;Primary Value&gt;
+       </p>
+       <p class="secondaryData">
+         &lt;Secondary Value goes here&gt;
+       </p>
+       <p class="statusDataValue">
+         <span class="active">
+           Active
+         </span>
+       </p>
+     </div>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+ </div>
+ </li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;div class=&quot;userAvatar&quot;&gt;
- &lt;img src=&quot;https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg&quot;/&gt;
-&lt;/div&gt;</code></pre>
+                    <pre><code data-language="html">&lt;ul class=&quot;list-group&quot;&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;div class=&quot;col1 pull-left&quot;&gt;
+       &lt;div class=&quot;userAvatar&quot;&gt;
+         &lt;img src=&quot;http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg&quot;/&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;col2 pull-left&quot;&gt;
+       &lt;p class=&quot;primaryData&quot;&gt;
+         &amp;lt;Primary Value&amp;gt;
+       &lt;/p&gt;
+       &lt;p class=&quot;secondaryData&quot;&gt;
+         &amp;lt;Secondary Value goes here&amp;gt;
+       &lt;/p&gt;
+       &lt;p class=&quot;statusDataValue&quot;&gt;
+         &lt;span class=&quot;active&quot;&gt;
+           Active
+         &lt;/span&gt;
+       &lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
             </div>
         </section>
         <section id="section-5.2" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">5.2</span> Primary Value</h1>
+            <h1 class="kss-title"><span class="kss-ref">5.2</span> DataCard Check Selection</h1>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <p class="primaryData">
- &lt;Primary Value&gt;
-</p>
+                        <ul class="list-group">
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;p class=&quot;primaryData&quot;&gt;
- &amp;lt;Primary Value&amp;gt;
-&lt;/p&gt;</code></pre>
+                    <pre><code data-language="html">&lt;ul class=&quot;list-group&quot;&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
             </div>
         </section>
         <section id="section-5.3" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">5.3</span> Secondary Value</h1>
+            <h1 class="kss-title"><span class="kss-ref">5.3</span> Floating Data Cards</h1>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <p class="secondaryData">
- &lt;Secondary Value goes here&gt;
-</p>
+                        <ul class="list-group floatingCards">
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+     <label>
+       <div class="col1 pull-left">
+         <input name="defaultRegionalSite" type="checkbox" id="defaultRegionalSite" >
+       </div>
+       <div class="col2 pull-left">
+         <p class="primaryData">
+           &lt;Primary Value&gt;
+         </p>
+         <p class="secondaryData">
+           &lt;Secondary Value goes here&gt;
+         </p>
+         <p class="statusDataValue">
+           <span class="active">
+             Active
+           </span>
+         </p>
+       </div>
+     </label>
+     <div class="col3 pull-right">
+       <div class="actions">
+         <span class="hyicon hyicon-plus"></span>
+       </div>
+     </div>
+   </div>
+ </li>
+</ul>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;p class=&quot;secondaryData&quot;&gt;
- &amp;lt;Secondary Value goes here&amp;gt;
-&lt;/p&gt;</code></pre>
-                </div>
-            </div>
-        </section>
-        <section id="section-5.4" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">5.4</span> Status Value Label</h1>
-            <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                    <div class="kss-modifier-example">
-                        <p class="statusDataValue">
- <span class="active">
-   Active
- </span>
-</p>
-                    </div>
-                </div>
-                <div class="kss-markup">
-                    <pre><code data-language="html">&lt;p class=&quot;statusDataValue&quot;&gt;
- &lt;span class=&quot;active&quot;&gt;
-   Active
- &lt;/span&gt;
-&lt;/p&gt;</code></pre>
+                    <pre><code data-language="html">&lt;ul class=&quot;list-group floatingCards&quot;&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+     &lt;label&gt;
+       &lt;div class=&quot;col1 pull-left&quot;&gt;
+         &lt;input name=&quot;defaultRegionalSite&quot; type=&quot;checkbox&quot; id=&quot;defaultRegionalSite&quot; &gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;col2 pull-left&quot;&gt;
+         &lt;p class=&quot;primaryData&quot;&gt;
+           &amp;lt;Primary Value&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;secondaryData&quot;&gt;
+           &amp;lt;Secondary Value goes here&amp;gt;
+         &lt;/p&gt;
+         &lt;p class=&quot;statusDataValue&quot;&gt;
+           &lt;span class=&quot;active&quot;&gt;
+             Active
+           &lt;/span&gt;
+         &lt;/p&gt;
+       &lt;/div&gt;
+     &lt;/label&gt;
+     &lt;div class=&quot;col3 pull-right&quot;&gt;
+       &lt;div class=&quot;actions&quot;&gt;
+         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
             </div>
         </section>
