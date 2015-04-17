@@ -1,49 +1,52 @@
 // AddToList
 //
 // Markup:
-// <div class="addToListContainer y_addToListContainer">
-//   <div class="addRow">
-//     <a href="#" class="y_addTolistHandle">
-//       <span class="glyphicon glyphicon-plus addIcon" aria-hidden="true"></span>
-//       Add Attribute To List
-//     </a>
-//   </div><!-- /.addRow -->
-//   <div class="addToListContent y_content">
-//     <div class="listContent">
-//         LIST CONTENT GOES HERE
-//     </div><!-- /.listContent -->
-//   </div><!-- /.addToListContent -->
-// </div><!-- /.addToListContainer -->
+//  <div class="panel panel-default addToListContainer y_addToListContainer">
+//    <div class="panel-heading addRow" role="tab" id="headingOne">
+//      <h4 class="panel-title">
+//        <a class="y_addTolistHandle" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+//          <span class="glyphicon glyphicon-plus addIcon" aria-hidden="true"></span>
+//          Add To &lt; type &gt;
+//        </a>
+//      </h4>
+//    </div>
+//    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+//      <div class="panel-body">
+//        &lt; data here &gt;
+//      </div>
+//    </div>
+//  </div>
 //
-// Styleguide 4.0
+// Styleguide 3.8
 
 
 .addToListContainer{
-  border: 1px solid #dce1e8;
+  border: 1px solid @default-greyblue-300;
+  
+  >.panel-heading{
+    background-color: @default-greyblue-200;
+    -webkit-transition: background-color 500ms;
+    -moz-transition: background-color 500ms;
+    -ms-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
+    transition: background-color 500ms;
+  }
 }
 
 .addRow a{
   display: block;
   text-decoration: none !important;
-  color: #000;
+  color: @btn-warning-color;
   font-weight: bold;
-  padding: 14px 12px;
-  background-color: #f7f9fa;
 
-  -webkit-transition: background-color 500ms;
-  -moz-transition: background-color 500ms;
-  -ms-transition: background-color 500ms;
-  -o-transition: background-color 500ms;
-  transition: background-color 500ms;
+  
 }
 
-.addRow a.active{
-  background-color: #fff;
+.addRow.active{
+  background-color: @component-active-color;
+  color: @btn-warning-color;
 }
 
-.addRow a.active{
-  color: #000;
-}
 
 .addRow a:hover{
   text-decoration: none !important;
@@ -51,7 +54,7 @@
 
 .addRow .addIcon{
   opacity: 1;
-
+  margin-right: 14px;
   -webkit-transition: opacity 500ms, transform 500ms ease-in-out;
   -moz-transition: opacity 500ms, transform 500ms ease-in-out;
   -ms-transition: opacity 500ms, transform 500ms ease-in-out;
@@ -61,36 +64,9 @@
 
 
 
-.addRow a.active .addIcon{
+.addRow.active .addIcon{
   opacity: .4;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.addIcon{
-  margin-right: 14px;
-}
-
-.listContent{
-  padding: 14px 12px;
-}
-
-.addToListContent{
-  -webkit-transition: max-height 500ms ease-out;
-  -moz-transition: max-height 500ms ease-out;
-  -ms-transition: max-height 500ms ease-out;
-  -o-transition: max-height 500ms ease-out;
-  transition: max-height 500ms ease-out;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-  max-height: 0;
-}
-
-
-.addToListContent.active{
-
-  max-height: 340px;
-  overflow: auto;
 }
