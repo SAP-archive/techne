@@ -52,7 +52,7 @@
 
 // Default Blue
 @default-blue-200:#edf3fa;
-@default-blue: #2877cb;
+@default-blue: #0486e0;
 @default-blue-600:#0054ae;
 
 // Dark Blue
@@ -70,6 +70,9 @@
 @default-greyblue-300: #dce1e8;
 @default-greyblue: #7f90a4;
 @default-greyblue-500: #bdc6d2;
+
+// New Techne Basecolors
+@techne-status-inactive: #b7c1cd;
 
 
 /* BTN SETS */
@@ -119,7 +122,8 @@
 
 @off-canvas-pt: 12px;
 
-@font-family-dosis: 'Open Sans', sans-serif;
+@font-family-dosis: 'Dosis', sans-serif;
+@font-family-opensans: 'Open Sans', sans-serif;
 
 @header-height: 59px;
 
@@ -206,15 +210,15 @@
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-dosis;
+@font-family-base:        @font-family-opensans;
 
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h1:            floor((@font-size-base * 2.1)); // ~29px
+@font-size-h2:            floor((@font-size-base * 1.86)); // ~26px
+@font-size-h3:            ceil((@font-size-base * 1.5)); // ~21px
 @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
@@ -225,7 +229,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    @font-family-dosis;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -700,22 +704,22 @@
 //##
 
 //** Default label background color
-@label-default-bg:            @gray-light;
+@label-default-bg:            #fff;
 //** Primary label background color
-@label-primary-bg:            @brand-primary;
+@label-primary-bg:            #fff;
 //** Success label background color
-@label-success-bg:            @brand-success;
+@label-success-bg:            #fff;
 //** Info label background color
-@label-info-bg:               @brand-info;
+@label-info-bg:               #fff;
 //** Warning label background color
-@label-warning-bg:            @brand-warning;
+@label-warning-bg:            #fff;
 //** Danger label background color
-@label-danger-bg:             @brand-danger;
+@label-danger-bg:             #fff;
 
 //** Default label text color
-@label-color:                 #fff;
+@label-color:                 @techne-status-inactive;
 //** Default text color of a linked label
-@label-link-hover-color:      #fff;
+@label-link-hover-color:      @default-blue;
 
 
 //== Modals

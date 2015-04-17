@@ -2,8 +2,8 @@
 // 
 // Markup:
 // <div class="checkbox">
-// 	<input type="checkbox" id="optionsCheck1" value="optionc1" checked>
-// 	<label for="optionsCheck1">Check me out</label>
+//  <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
+//  <label for="optionsCheck1">Check me out</label>
 // </div>
 //
 // Deprecated
@@ -11,48 +11,75 @@
 // Styleguide 1.4
 
 
-
-
-
 @checkbox-size: 24px;
 @checkbox-border-width: 5px;
 
-input[type="checkbox"] {
-  width:@checkbox-size;
-  height: @checkbox-size;
-}
 
 .checkbox{
-//	position: relative;
-//	padding-left: @checkbox-size + 10;
-//	line-height: @checkbox-size;
-//    margin-bottom: 14px;
-//    min-height: @checkbox-size;
+  position: relative;
+  padding-left: @checkbox-size + 10;
+  line-height: @checkbox-size;
+    margin-bottom: 14px;
+    min-height: @checkbox-size;
 
-	input[type="checkbox"]{
-		display: inline-block;
-		&:checked + label{
+  input{
+    opacity: 0;
+    position: absolute!important;
 
-			&:before{
-				display: none;
-			}
+    &:checked + label{
 
-		}
+      &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: @checkbox-size;
+        height: @checkbox-size ;
+        background:  @light-blue;
+        border-radius: 4px;
 
-		&:disabled + label{
+        content: "";
+        display: inline-block;
+          font-family: 'Glyphicons Halflings';
+          color: @default-blue;
+          line-height: 14px;
 
-               &:before{
-                 opacity: 0.3;
-               }
+      }
+        
+    }
 
-             }
-	}
+    &:disabled + label{
 
-	label{
-		&:before{
-		  display: none;
+      &:before{
+        opacity: 0.3;
+      }
+      
+    }
 
-		}
-	}
+  &:focus + label{
+
+      &:before{
+        box-shadow: 0 0 0 2px #0486e0;
+      }
+      
+    }
+  }
+
+  label{
+    &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: @checkbox-size;
+        height: @checkbox-size ;
+        background: #fff;
+        border-radius: 4px;
+        border: @checkbox-border-width solid @light-blue;
+        .box-shadow(0 2px 0 fade(@light-blue-600, 100%));
+
+    }
+  }
 }
-
