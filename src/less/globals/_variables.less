@@ -34,6 +34,7 @@
 @default-red-600: #bc0000;
 
 // Default Grey
+@default-grey-300: #edf1f5;
 @default-grey: @default-greyblue-300;
 @default-grey-600: #e1e5e9;
 @default-grey-700: #d4d7dc;
@@ -192,7 +193,7 @@
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               @default-grey;
+@body-bg:               #EDF1F5;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -213,7 +214,7 @@
 @font-family-base:        @font-family-opensans;
 
 @font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-large:         ceil((@font-size-base * 1.14)); // ~16px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
 @font-size-h1:            floor((@font-size-base * 2.1)); // ~29px
@@ -339,7 +340,7 @@
 //** `<input>` background color
 @input-bg:                       #fff;
 //** `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @default-grey-300;
 
 //** Text color for `<input>`s
 @input-color:                    @gray;
