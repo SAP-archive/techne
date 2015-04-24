@@ -252,10 +252,13 @@ gulp.task('watch',
     }
 );
 
-// iconfont, less, kss_bootrap_src
 
-gulp.task('dist', [ 'less', 'styleguide', 'deploy']);
+gulp.task('build', ['less', 'styleguide', 'deploy']);
+
+// iconfont, less, kss_bootrap_src
+gulp.task('dist', ['iconfont', 'build']);
+
 
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', [ 'dist' , 'connect', 'watch']);
+gulp.task('default', [ 'build' , 'connect', 'watch']);
