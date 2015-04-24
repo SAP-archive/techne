@@ -186,52 +186,16 @@ gulp.task('deploy', function(){
      */
     gulp.src(
         [
-//            './bower_components/webcomponentsjs/webcomponents.js',
-            './bower_components/jquery/dist/jquery.min.js',
-            './bower_components/bootstrap/dist/js/bootstrap.min.js', 
-            './bower_components/select2/select2.js',
             './src/js/**/*.js'
         ]
     )
     .pipe( concat('techne.min.js') )
-    .pipe(
-        insert.append(
-            function()
-            {
-                var headTagAppendScript = ['\n'];
-
-                if(config.appendComponentCss || config.appendComponentHTML)
-                {
-                    headTagAppendScript.push(";(function() {");
-                        headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
-                        if(config.appendComponentCss)
-                        {
-                            headTagAppendScript.push("var css = document.createElement('link');");
-                            headTagAppendScript.push("css.rel = 'stylesheet';");
-                            headTagAppendScript.push("css.href = 'dist/css/techne.min.css';");
-                            headTagAppendScript.push("headTag.appendChild(css);");
-                        }
-
-                        if(config.appendComponentHTML) {
-                            headTagAppendScript.push("var html = document.createElement('link');");
-                            headTagAppendScript.push("html.rel = 'import';");
-                            headTagAppendScript.push("html.href = 'dist/html/techne.html';");
-                            headTagAppendScript.push("headTag.appendChild(html);");
-                        }
-
-                    headTagAppendScript.push("})();");
-                }
-                return headTagAppendScript.join('\n');
-            }
-        )
-    )
     .pipe( uglify() )
     .pipe(
         gulp.dest(
                 paths.environment+'/js/'
         )
-    )
-    .pipe( gulp.dest('docs/kss/public/js/') );
+    );
     
 
     /*
@@ -290,7 +254,7 @@ gulp.task('watch',
 
 // iconfont, less, kss_bootrap_src
 
-gulp.task('dist', [ 'iconfont', 'less', 'styleguide', 'deploy']);
+gulp.task('dist', [ 'less', 'styleguide', 'deploy']);
 
 
 // The default task (called when you run `gulp` from cli)
