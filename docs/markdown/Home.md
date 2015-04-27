@@ -1,26 +1,27 @@
 
   <div class="container">
+
   
     <div class="row row-offcanvas row-offcanvas-left">
-  
+
       <div class="col-sm-9 page-content">
-        
+
           <br><br>
           <p class="text-center"><b>“techne”</b> is a term derived from the Greek word <b>τέχνη</b> that is often translated as “craftmanship”, “craft”, or “art”. The hybris guideline for modern, user-centric, mobile-first user experience design that still affords UX designers the freedom and creativity to design experiences that work for their target audiences.</p>
           <br><br>
-          
+
           <p class="text-center">
             <img src="images/home-header.png" alt="" class="img-responsive hidden-xs">
             <img src="images/home-header-mobile.png" alt="" class="img-responsive visible-xs">
           </p>
-          
+
           <!-- persona interaction -->
-          
+
 
 <div id="persona-interaction" class="carousel slide persona-interaction hidden-xs page" data-ride="carousel" data-interval="false">
-  
+
   <h2 class="text-center">Our Personas</h2>
-  
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#persona-interaction" data-slide-to="0" class="active"></li>
@@ -31,10 +32,10 @@
     <li data-target="#persona-interaction" data-slide-to="5"></li>
     <li data-target="#persona-interaction" data-slide-to="6"></li>
   </ol>
-  
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-  
+
     <!-- product manager slide  -->
     <div class="item active text-center">
       <h3>Product Manager</h3>
@@ -113,7 +114,7 @@
           </ul>
         </div>
       </div>
- 
+
       <div class="row text-center">
         <a  type="button"
             class="btn btn-default ui-tooling-btn"
@@ -135,7 +136,7 @@
           <div class="row more-less-visual">
             <div class="col-md-12 dk-grey">
               More Visual, More Collaborative, Longer Task Duration
-              
+
             </div>
           </div>
         </div>
@@ -193,7 +194,7 @@
           More Visual, More Collaborative, Longer Task Duration
         </div>
       </div>
-    
+
     </div>
 
     <!-- CRS slide  -->
@@ -269,7 +270,7 @@
         </div>
         <div class="col-md-4">
           <h4>USER CONTEXT</h4>
-          <ul> 
+          <ul>
             <li>mostly independent worker</li>
             <li>works at work</li>
             <li>reactive task completion</li>
@@ -299,7 +300,7 @@
 
           <div class="row more-less-visual">
             <div class="col-md-12 lt-grey">
-              Less Visual, Less Collaborative, Shorter Task Duration             
+              Less Visual, Less Collaborative, Shorter Task Duration
             </div>
           </div>
 
@@ -310,7 +311,7 @@
       <h3>IT/OPS</h3>
       <div class="row">
         <div class="col-md-4">
-          <h4>ENVIRONMENTAL  CONTEXT</h4> 
+          <h4>ENVIRONMENTAL  CONTEXT</h4>
           <ul>
             <li>high demand on throughput</li>
             <li>high demand on time and effort</li>
@@ -325,7 +326,7 @@
         <div class="col-md-4">
           <h4>USER CONTEXT</h4>
 
-          <ul> 
+          <ul>
             <li>mostly independent worker</li>
             <li>works at work</li>
             <li>reactive task completion</li>
@@ -355,10 +356,10 @@
 
           <div class="row more-less-visual">
             <div class="col-md-12 lt-grey">
-              Less Visual, Less Collaborative, Shorter Task Duration             
+              Less Visual, Less Collaborative, Shorter Task Duration
             </div>
           </div>
-          
+
         </div>
 
       <!-- consumer slide  -->
@@ -366,7 +367,7 @@
       <h3>Consumer</h3>
       <div class="row">
         <div class="col-md-4">
-          <h4>ENVIRONMENTAL  CONTEXT</h4> 
+          <h4>ENVIRONMENTAL  CONTEXT</h4>
             <ul>
               <li>at home, at work, on the go</li>
               <li>low bandwidth and high bandwidth </li>
@@ -391,29 +392,29 @@
 
           <div class="row more-less-visual">
             <div class="col-md-12 lt-grey">
-              Very visual, social, collaborative. Expect a unified experience across channels and devices; how they want it, where they want it, when they want it.             
+              Very visual, social, collaborative. Expect a unified experience across channels and devices; how they want it, where they want it, when they want it.
             </div>
           </div>
-          
+
         </div>
 
       </div>
 </div>
             <section id="spirit-vision" class="page text-center">
-              
-              
+
+
                   <h2>Spirit & Vision</h2>
-              
+
                   <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
-              
+
                   <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs">
-                  
+
                   <div class="hybris-guy-bg">
                   <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6">
-              
+
                       <h3>Expectations</h3>
-              
+
                       <ul>
                         <li>Convenience</li>
                         <li>Consistency</li>
@@ -424,13 +425,13 @@
                         <li>Error avoidance</li>
                         <li>Device-optimized</li>
                         <li>SoLoMo</li>
-                      </ul> 
-              
+                      </ul>
+
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
-              
+
                       <h3>Motivations</h3>
-              
+
                       <ul>
                         <li>Fun/Entertainment</li>
                         <li>Self Expression</li>
@@ -441,14 +442,14 @@
                         <li>Socializing</li>
                         <li>Context</li>
                       </ul>
-              
+
                       <span class="visible-xs"><br><br></span>
-              
+
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
-              
+
                       <h3>Values</h3>
-              
+
                       <ul>
                         <li>Comfort</li>
                         <li>Freedom of movement</li>
@@ -457,12 +458,12 @@
                         <li>Error Recovery</li>
                         <li>Efficiency</li>
                       </ul>
-              
+
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
-              
+
                       <h3>Deal Breakers</h3>
-              
+
                       <ul>
                         <li>Confusion</li>
                         <li>Slowness</li>
@@ -470,49 +471,49 @@
                         <li>Insecurity</li>
                         <li>Complexity</li>
                       </ul>
-              
+
                     </div>
                   </div>
-              
+
                 </div>
-              
+
               </section>
-              
+
               <section id="design-principles" class="page design-principles">
-              
+
                 <h2>Design Principles</h2>
-              
+
                 <div class="row text-left">
-              
+
                   <div class="col-md-6">
-              
+
                     <p><strong>Mobile First:</strong>  allows people to complete a task when they want, where they want, how they want; surfacing the most important actions, tasks, and information first. It also can mean an adaptive experience based on the persona an task at-hand.  It’s important to remember that ‘mobile first’ as a design principle doesn’t automatically mean responsive, but in most cases for web applications a responsive approach is recommended.</p>
-              
+
                     <p><strong>Personalized:</strong> allows people to configure and personalize the experience in relevant way, intuitive to them.  They are given a house and the means to furnish it as they like rather than a ‘furnished apartment’ they were handed without any say or opportunity to make it their own.</p>
-              
-                    <p><strong>Flexible:</strong> allow people to work within the system they way they want.  Allow for frequent and infrequent task completion paths; linear and nonlinear ways of working.</p> 
-                    
+
+                    <p><strong>Flexible:</strong> allow people to work within the system they way they want.  Allow for frequent and infrequent task completion paths; linear and nonlinear ways of working.</p>
+
                   </div>
-              
+
                   <div class="col-md-6">
                     <p><strong>Predictive & Automated:</strong>  as people spend more time in the system, the system should respond by surfacing frequent tasks, workspaces and information most used without explicit ask or action.  As many tasks should be automated as reasonably possible to make people’s working lives easier.</p>
-              
-                    <p><strong>Simple:</strong> A single piece of information or task should be no more than three clicks away from any other piece of information or task. Period.  If a flow isn’t allowing for this criteria, the flow needs re-designing.</p> 
-              
-              
+
+                    <p><strong>Simple:</strong> A single piece of information or task should be no more than three clicks away from any other piece of information or task. Period.  If a flow isn’t allowing for this criteria, the flow needs re-designing.</p>
+
+
                     <p><strong>Fun:</strong> “Wow that was easy.”  “I may not like the task but I love this interface”</p>
-              
+
                     <p><strong>Above All, User-Centric:</strong> follow user-centered design processes. Demand design principles are in place as part of any MVP criteria.</p>
-              
+
                   </div>
-                  
-              
+
+
                 </div>
-              
-              
+
+
               </section>
             </div><!--/.col-xs-12.col-sm-9-->  
-  
+
        </div><!--/row-->
-  
+
   </div><!--/.container-->
