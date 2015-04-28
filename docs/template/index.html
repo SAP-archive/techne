@@ -66,7 +66,7 @@
       </div>
   </header>
   <!-- / SUPER HEADER -->
-
+  {{#if showLeftNav}}
   <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
 
     <aside>
@@ -85,7 +85,14 @@
 
     </aside>
   </div>
+
+  {{/if}}
+
+  {{#if showLeftNav}}
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
+  {{else}}
+  <div role="main" id="kss-main" class="kss-main col-xs-12">
+  {{/if}}
 
     <article id="kss-content">
       {{#if overview}}
@@ -144,7 +151,7 @@
 <!-- SCRIPTS -->
   <script src="public/dist/js/techne.min.js"></script>
   <script src="public/kss.js"></script>
-  
+
   <script src="public/prettify.js"></script>
   <!--<script src="public/jquery.js"></script>-->
   <script src="public/main.js"></script>
@@ -152,7 +159,7 @@
   <script src="public/jquery-ui.js"></script>
   <script src="public/script.js"></script>
   <script src="public/super-nav.js"></script>
-  
+
 
   {{! This won't be included in the demo page }}
   {{#if argv.xdemo}}

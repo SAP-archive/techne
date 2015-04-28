@@ -259,17 +259,17 @@ h1.kss-title {
       color: #060;
    }
    .kwd{
-      font-weight: bold; 
+      font-weight: bold;
 
       color: #006;
    }
    .com{
-      font-style: italic; 
+      font-style: italic;
 
       color: #600;
    }
    .typ{
-      font-weight: bold; 
+      font-weight: bold;
 
       color: #404;
    }
@@ -282,7 +282,7 @@ h1.kss-title {
       color: #440;
    }
    .tag{
-      font-weight: bold; 
+      font-weight: bold;
 
       color: #006;
    }
@@ -484,9 +484,9 @@ li.L9{
 @waring_gd: #f99b06;
 @try-again_gd: #ff3b30;
 
-#patterns-localization .btn-link.collapsed .glyphicon-chevron-right:before {  content: ""; } 
+#patterns-localization .btn-link.collapsed .glyphicon-chevron-right:before {  content: ""; }
 #patterns-localization .btn-link .glyphicon-chevron-right:before {        content: ""; }
-#patterns-trees .btn-link .glyphicon-plus:before {                content: "−"; } 
+#patterns-trees .btn-link .glyphicon-plus:before {                content: "−"; }
 #patterns-trees .btn-link.collapsed .glyphicon-plus:before {          content: "+"; }
 
 #patterns-forms,
@@ -498,22 +498,22 @@ li.L9{
 #patterns-accordions,
 #patterns-trees{
 
- 
-    .table-behavoir-cell .seperator {                       margin: 0 50px 0 0; } 
+
+    .table-behavoir-cell .seperator {                       margin: 0 50px 0 0; }
 
     /* patterns */
     .row.visual-code {
         margin: 0;
-    } 
+    }
     h3.popover-title {
         margin-bottom: 0;
-    } 
+    }
     .usercard-info p {
         margin-bottom: 0;
-    } 
+    }
     .list-group-item.deleteable .list-group-item-delete {
-        top: 18%; 
-    } 
+        top: 18%;
+    }
 
     .row{
         margin-right: -8px;
@@ -539,7 +539,7 @@ li.L9{
         display: inline-block;
         margin-top: -35%;
     }
-    
+
   .seperator {
     margin: 40px 0 60px 0;
     position: relative;
@@ -744,3 +744,155 @@ li.L9{
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
+/* We are using IDs in order to avoid breaking the standard styling */
+
+/*Styling for the new home page*/
+.container.hyHomePage{
+    /*overwriting the kss nav styling since we are not displaying it for home page*/
+    padding-left:0;
+    padding-right:0;
+    margin-top: -26px;
+    margin-right: -15px;
+    margin-left: -16px;
+    width: auto;
+    @media (min-width: 768px){
+        margin-left:-271px;
+        margin-right: -20px;
+    }
+    /*overwriting the kss nav styling since we are not displaying it for home page*/
+
+    font-family: Dosis, sans-serif; /*temporary until the style guide is impletemented*/
+
+    @media (max-width: 768px){
+        img.hyConsumUpImg{
+            display: none;
+        }
+    }
+
+    .container{
+        width: auto;
+    }
+
+    .hyHomeHeader{
+        background-image: url("/images/home/banner_bg.png");
+        color: white;
+        padding-bottom: 50px;
+        margin-bottom:0;
+        padding-top: 30px;
+        @media (min-width: 768px){
+            p{
+                padding:30px 100px;
+            }
+        }
+    }
+
+    .hyHomeHeader2 p{
+        height: 40px;
+        line-height: 40px;
+        @media (max-width: 768px){
+            line-height: 20px;
+        }
+        background-color: #f2f3f5;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .hyHomeHeader3,
+    .personaIcons{
+        background-color: #ffffff;
+    }
+
+    @media (min-width: 768px){
+        .hyHomeHeader3{
+            p{
+                padding-left:100px;
+                padding-right:100px;
+            }
+        }
+    }
+
+    .personasCarousel{
+        background-color: #ffffff;
+
+        #hyPersonasCarouselID{
+            height:250px;
+        }
+        .carousel-control{
+            padding-top:50px;
+        }
+        .carousel-control:hover{
+            opacity: 1;
+        }
+        .carousel-control.left,
+        .carousel-control.right{
+            background: white;
+            opacity: 1;
+            :hover{
+                opacity: 1;
+            }
+        }
+        .carousel-inner{
+            padding-left: 15%;
+            padding-right: 15%;
+            .item h4{
+                text-transform: uppercase;
+                color: #369ad6;
+            }
+        }
+    }
+
+    .consumerCarousel:nth-of-type(even){
+        background-color: #f7f7f7;
+    }
+    .consumerCarousel:nth-of-type(odd){
+        background-color: #ffffff;
+    }
+
+    .consumerCarousel{
+        padding-top: 100px;
+        padding-left:20px;
+        padding-right:20px;
+        .hyHomeSlider{
+            padding-top:70px;
+        }
+        .carousel-indicators{
+            bottom: -30px;
+            li.active{
+                border: 3px solid #369ad6;
+                background-color: transparent;
+            }
+            li{
+                background-color: black;
+                border: none;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+        .hyPersonaTabs .container{
+            max-width: 500px;
+            .hyPersonaTab{
+                ul{
+                    border-bottom: none;
+                    li a{
+                        text-transform: uppercase;
+                        background-color: transparent;
+                        border-bottom: 1px solid #0486e0;
+                    }
+                    li.active a{
+                        border: 1px solid transparent;
+                    }
+                }
+                @media (min-width: 768px){
+                    ul.w5_list{
+                        columns: 2;
+                        -webkit-columns: 2;
+                        -moz-columns: 2;
+                        list-style-position: inside;
+                    }
+                }
+            }
+        }
+    }
+
+}
+/*Styling for the new home page*/
