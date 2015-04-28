@@ -1,25 +1,12 @@
-<body class="techne" data-spy="scroll" data-target="#sidebar" data-offset="120">
-
-  <div class="main-content">
-
-  <div class="container">
-
-    <div class="row row-offcanvas row-offcanvas-left">
-
-      <div class="col-sm-9 page-content">
-
-
-              <section id="patterns-first-contact" class="page">
+<section id="patterns-first-contact" class="page">
   <h2>First Contact</h2>
   <p>The First Contact pattern is used when someone lands on a page for the first time.  A brief, concise, friendly message should display to queue somone on what the next steps on that page could be.</p>
   <img src="images/first-contact.png" alt="" class="img-responsive">
   <hr>
-
 </section>
-              <section id="patterns-forms" class="page">
+<section id="patterns-forms" class="page">
   <h2>Forms</h2>
   <p>Forms are used any time someone has to input structured information into the application. They leverage primary and secondary button, tertiary action, and input field controls. Forms should always allow for Save and Cancel.</p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div class="row">
@@ -94,14 +81,12 @@
       </div>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
@@ -179,10 +164,9 @@
     </pre>
   </div>
 </section>
-              <section id="patterns-infopopups" class="page">
+<section id="patterns-infopopups" class="page">
   <h2>Info PopUps</h2>
   <p> </p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div style=" display: block; float: left; margin: 20px; position: relative; width: 260px;" class="popover top warning">
@@ -192,7 +176,6 @@
           <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
-
       <div style=" display: block; float: left; margin: 20px; position: relative; width: 260px;" class="popover right danger">
         <div class="arrow"></div>
         <h3 class="popover-title">Popover right</h3>
@@ -200,16 +183,13 @@
           <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
-
       <div style=" display: block; float: left; margin: 20px; position: relative; width: 260px;" class="popover bottom success">
         <div class="arrow"></div>
         <h3 class="popover-title">Popover bottom</h3>
-
         <div class="popover-content">
           <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
-
       <div style=" display: block; float: left; margin: 20px; position: relative; width: 260px;" class="popover left info">
         <div class="arrow"></div>
         <h3 class="popover-title">Popover left</h3>
@@ -219,10 +199,8 @@
       </div>
     <!-- snippet end -->
   </div>
-
   <div class="seperator">
     <pre class="code-snippet">
-
 &lt;div style=&quot; display: block; float: left; margin: 20px; position: relative; width: 260px;&quot; class=&quot;popover top warning&quot;&gt;
   &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
   &lt;h3 class=&quot;popover-title&quot;&gt;Popover top&lt;/h3&gt;
@@ -230,7 +208,6 @@
     &lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div style=&quot; display: block; float: left; margin: 20px; position: relative; width: 260px;&quot; class=&quot;popover right danger&quot;&gt;
   &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
   &lt;h3 class=&quot;popover-title&quot;&gt;Popover right&lt;/h3&gt;
@@ -238,7 +215,6 @@
     &lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div style=&quot; display: block; float: left; margin: 20px; position: relative; width: 260px;&quot; class=&quot;popover bottom success&quot;&gt;
   &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
   &lt;h3 class=&quot;popover-title&quot;&gt;Popover bottom&lt;/h3&gt;
@@ -247,7 +223,6 @@
     &lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div style=&quot; display: block; float: left; margin: 20px; position: relative; width: 260px;&quot; class=&quot;popover left info&quot;&gt;
   &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
   &lt;h3 class=&quot;popover-title&quot;&gt;Popover left&lt;/h3&gt;
@@ -255,15 +230,12 @@
     &lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
     </pre>
   </div>
-
 </section>
-              <section id="patterns-labels" class="page">
+<section id="patterns-labels" class="page">
   <h2>Labels</h2>
   <p> </p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <span class="label label-success">Success</span>
@@ -273,22 +245,17 @@
       <span class="label label-danger">Oh, no</span>
     <!-- snippet end -->
   </div>
-
   <div class="seperator">
     <pre class="code-snippet">
-
 &lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
 &lt;span class=&quot;label label-warning&quot;&gt;Be careful&lt;/span&gt;
 &lt;span class=&quot;label label-danger&quot;&gt;Oh, no&lt;/span&gt;
-
     </pre>
   </div>
-
 </section>
-              <section id="patterns-tables" class="page">
+<section id="patterns-tables" class="page">
   <h2>Tables</h2>
   <p>Tables are used to present information in a structured, scannable way.</p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div class="panel panel-default">
@@ -364,18 +331,15 @@
        </div>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
-
 &lt;div class=&quot;panel panel-default&quot;&gt;
   &lt;table class=&quot;table table-hover table-multi-select y-responsive-table&quot;&gt;
     &lt;thead&gt;
@@ -447,15 +411,13 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
  &lt;/div&gt;
-
       <!-- snippet end -->
     </pre>
   </div>
 </section>
-              <section id="patterns-lists" class="page">
+<section id="patterns-lists" class="page">
   <h2>Lists</h2>
   <p>Lists are used to present records within the system that can be sorted or filtered to quickly find a record needing action.  <br> Rows within lists typically contain only text; no informational icons and no avatars. <em>(Really? What about a list of users, categories, products…)</em></p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div class="panel panel-default">
@@ -522,18 +484,15 @@
        </div>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
-
 &lt;div class=&quot;panel panel-default&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-xs-8 col-sm-6 col-md-6&quot;&gt;
@@ -596,15 +555,13 @@
       &lt;/a&gt;
     &lt;/div&gt;
  &lt;/div&gt;
-
       <!-- snippet end -->
     </pre>
   </div>
 </section>
-              <section id="patterns-modaldialog" class="page">
+<section id="patterns-modaldialog" class="page">
   <h2>Modal Dialog</h2>
   <p>Modal Dialogs are best used when data is being added or  manipulated relative to an object, and  leaving the page to do so would be disruptive or confusing.  Popovers are especially good for contextual data creation or editing.</p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div class="modal-dialog">
@@ -615,7 +572,6 @@
           </div>
           <div class="modal-body">
             <p>If you choose to cancel, you cannot make any further changes to these orders.</p>
-
           </div>
             <ul class="list-group">
               <li class="list-group-item deleteable">
@@ -655,18 +611,15 @@
       </div>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
-
 &lt;div class=&quot;modal-dialog&quot;&gt;
   &lt;div class=&quot;modal-content&quot;&gt;
     &lt;div class=&quot;modal-header&quot;&gt;
@@ -675,7 +628,6 @@
     &lt;/div&gt;
     &lt;div class=&quot;modal-body&quot;&gt;
       &lt;p&gt;If you choose to cancel, you cannot make any further changes to these orders.&lt;/p&gt;
-
     &lt;/div&gt;
       &lt;ul class=&quot;list-group&quot;&gt;
         &lt;li class=&quot;list-group-item deleteable&quot;&gt;
@@ -713,17 +665,14 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
       <!-- snippet end -->
     </pre>
   </div>
 </section>
               <!-- ?php include("inc/patterns/localization.htm"); ? -->
-
-              <section id="patterns-accordions" class="page">
+<section id="patterns-accordions" class="page">
   <h2>Accordions</h2>
   <p>Accordions are a pattern best used in the cases where information or content is lengthy, and/or hierarchical, or stepped in nature (i.e. Step 1, Step 2, etc.).  For example, on the storefront templates checkout is handled via an accordion to allow for the perception of a short and efficient process, and in the example below category management is handled via an accordion pattern. Accordions are especially helpful at the mobile inflection point and can ‘expand’ at larger inflection points by default. .</p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <div class="panel-group" id="accordion">
@@ -772,18 +721,15 @@
       </div>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
-
 &lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;
   &lt;div class=&quot;panel panel-default&quot;&gt;
     &lt;div class=&quot;panel-heading&quot;&gt;
@@ -828,15 +774,13 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
       <!-- snippet end -->
     </pre>
   </div>
 </section>
-              <section id="patterns-trees" class="page">
+<section id="patterns-trees" class="page">
   <h2>Trees</h2>
   <p></p>
-
   <div class="row visual-code">
     <!-- snippet start -->
       <table class="y-hierarchy-table table">
@@ -883,7 +827,6 @@
                       </div>
                   </td>
                 </tr>
-
                 <tr class="y-hierarchy-table-level-1 collapse" id="toggle-category-01">
                     <td>
                         <div class="table-behavoir">
@@ -916,7 +859,6 @@
                     </div>
                   </td>
                 </tr>
-
                 <tr>
                     <td>
                         <div class="table-behavoir">
@@ -951,7 +893,6 @@
                             </div>
                         </td>
                     </tr>
-
                     <tr class="y-hierarchy-table-level-1 collapse" id="toggle-category-02">
                     <td>
                         <div class="table-behavoir">
@@ -988,18 +929,15 @@
             </table>
     <!-- snippet end -->
   </div>
-
   <!--
   <div class="row visual-code">
     <h3 class="sub-headline">Form with Notification</h3>
     content goes here
   </div>
   -->
-
   <div class="seperator">
     <pre class="code-snippet">
       <!-- snippet start -->
-
 &lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;
   &lt;div class=&quot;panel panel-default&quot;&gt;
     &lt;div class=&quot;panel-heading&quot;&gt;
@@ -1044,21 +982,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
       <!-- snippet end -->
     </pre>
   </div>
 </section>
-      </div><!--/.col-xs-12.col-sm-9-->
-
-
-
-    </div><!--/row-->
-
-  </div><!--/.container-->
-
-</div>
-
-</body>
-
-
