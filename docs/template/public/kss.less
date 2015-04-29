@@ -744,12 +744,12 @@ li.L9{
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
-/* We are using IDs in order to avoid breaking the standard styling */
 
-/*Styling for the new home page*/
+/*remove the lef nav for all the pages(except index) - maybe we can do it better*/
 .container.hyHomePage,
-.container.hyDownloadPage{
-        /*overwriting the kss nav styling since we are not displaying it for home/download page*/
+.container.hyDownloadPage,
+.hyPatternsPage,
+.hyGuidelinesPage{
         padding-left:0;
         padding-right:0;
         margin-top: -26px;
@@ -760,11 +760,14 @@ li.L9{
             margin-left:-271px;
             margin-right: -20px;
         }
-        /*overwriting the kss nav styling since we are not displaying it for home/download page*/
+        background-color: white;
 }
+/*Styling for the new home page - maybe we can do it better*/
+
+/*Styling for the new home page*/
 .container.hyHomePage{
 
-    font-family: Dosis, sans-serif; /*temporary until the style guide is impletemented*/
+    /*font-family: Dosis, sans-serif;*/
 
     @media (max-width: 768px){
         img.hyConsumUpImg{

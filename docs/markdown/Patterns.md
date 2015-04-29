@@ -1,3 +1,4 @@
+<div class="hyPatternsPage">
 <section id="patterns-first-contact" class="page">
   <h2>First Contact</h2>
   <p>The First Contact pattern is used when someone lands on a page for the first time.  A brief, concise, friendly message should display to queue somone on what the next steps on that page could be.</p>
@@ -986,3 +987,4 @@
     </pre>
   </div>
 </section>
+</div>

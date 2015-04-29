@@ -2,41 +2,41 @@
     <div class="page-header hyHomeHeader">
         <h1 class="text-center">hybris techne*</h1>
         <p class="text-center">techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
-        <div class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-5"><a class="text-center">Download now>></a></div>
+        <div class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-5"><a class="text-center" href="/Download.html">Download now>></a></div>
     </div> <!-- header -->
     <div class="row hyHomeHeader2 row">
-        <p class="text-center">“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</p>
+        <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
     </div>
     <div class="row hyHomeHeader3" row>
-        <h2 class="text-center">Why is techne different?</h2>
+        <h3 class="text-center">Why is techne different?</h3>
         <p class="text-center">techne design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. <a>Watch the video >></a></p>
     </div><!-- row why techne -->
     <div class="row personaIcons">
-        <h2 class="text-center">Who are the techne personas?</h2>
+        <h3 class="text-center">Who are the techne personas?</h3>
         <div class="col-md-3 text-center">
             <a data-slide-to="0" data-target="#hyPersonasCarouselID" >
-                <p class="text-center text-uppercase">the consumer</p>
+                <p class="text-center">The Consumer</p>
                 <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
                 <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>
             </a>
         </div>
         <div class="col-md-3 text-center">
             <a data-slide-to="1" data-target="#hyPersonasCarouselID">
-                <p class="text-center text-uppercase">high-touch business users</p>
+                <p class="text-center">High-touch Business Users</p>
                 <img id="hyHighTUpImg" src="images/home/high_touch_up.png"/>
                 <img id="hyHighTOverImg" class="hidden" src="images/home/high_touch_over.png"/>
             </a>
         </div>
         <div class="col-md-3 text-center">
             <a data-slide-to="2" data-target="#hyPersonasCarouselID">
-                <p class="text-center text-uppercase">low-touch business users</p>
+                <p class="text-center">Low-touch Business Users</p>
                 <img id="hyLowTUpImg" src="images/home/low_touch_up.png"/>
                 <img id="hyLowTOverImg" class="hidden" src="images/home/low_touch_over.png"/>
             </a>
         </div>
         <div class="col-md-3 text-center">
             <a data-slide-to="3" data-target="#hyPersonasCarouselID">
-                <p class="text-center text-uppercase">software developers</p>
+                <p class="text-center">Software Developers</p>
                 <img id="hyDevUpImg" src="images/home/developers_up.png"/>
                 <img id="hyDevOverImg" class="hidden" src="images/home/developers_over.png"/>
             </a>
@@ -47,7 +47,7 @@
             <div class="carousel-inner">
                 <div class="item active text-center" data-img-up="#hyConsumUpImg" data-img-over="#hyConsumOverImg">
                     <h4>the consumer</h4>
-                    <p>We are all consumers with high expectations.  With this in mind it’s important to remember everything we experience across digital touchpoints, good AND bad, sets the bar for any new digital experience we encounter. Consumer-facing experiences try to be engaging, informative, effecient and fun. techne starts with the premise for all our interactions and patterns because everyone deserves a great experience. <a href="#hyHomeConsumerC">Learn more »</a> </p>
+                    <p><small>We are all consumers with high expectations.  With this in mind it’s important to remember everything we experience across digital touchpoints, good AND bad, sets the bar for any new digital experience we encounter. Consumer-facing experiences try to be engaging, informative, effecient and fun. techne starts with the premise for all our interactions and patterns because everyone deserves a great experience. <a href="#hyHomeConsumerC">Learn more »</a> </small></p>
                 </div>
                 <div class="item text-center" data-img-up="#hyHighTUpImg" data-img-over="#hyHighTOverImg">
                     <h4>high-touch business users</h4>
@@ -135,7 +135,7 @@
                         <p>Less Collaborative,</p>
                         <p>Shorter Task Duration</p>
                     </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-3">
+                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
                         <p>More Visual,</p>
                         <p>More Collaborative,</p>
                         <p>Lonter Task Duration</p>
