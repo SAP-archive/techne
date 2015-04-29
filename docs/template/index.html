@@ -53,13 +53,17 @@
 
 
           <ul class="hidden-xs">
-              <!--<li><a href="index.html" class="active">Home</a></li>-->
-              <!--<li><a href="guidelines.html">Guidelines</a></li>-->
-              <!--<li><a href="controls.html">Controls</a></li>-->
-              <!--<li><a href="patterns.html">Patterns</a></li>-->
-              {{#each htmlPagesFromMD}}
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="guidelines.html">Guidelines</a></li>
+              <li><a href="kitchensink.html">Kitchen Sink</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="patterns.html">Patterns</a></li>
+              <li><a href="layouts.html">Layouts</a></li>
+
+              <!-- comment the generic file listing as we have specific order of the pages-->
+              <!--{{#each htmlPagesFromMD}}
                 <li><a href="{{url}}">{{displayText}}</a></li>
-              {{/each}}
+              {{/each}}-->
           </ul>
 
 
@@ -75,7 +79,7 @@
 
 
                 <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
-                    <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
+                    <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
                     {{#eachRoot}}
                     <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
                     {{/eachRoot}}

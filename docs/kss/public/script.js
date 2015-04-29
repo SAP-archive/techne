@@ -203,6 +203,9 @@ $(function(){
         }
     });
 
+    //add tabs in the nav bar for Guidelines page
+    
+
     $(window).on('resize', fUpdatePersonaImgs);
     //---------------------
     //new Home Page

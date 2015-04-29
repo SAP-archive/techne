@@ -1043,22 +1043,18 @@ li.L9 {
 /* We are using IDs in order to avoid breaking the standard styling */
 /*remove the lef nav for all the pages(except index) - maybe we can do it better*/
 .container.hyHomePage,
-.container.hyDownloadPage,
-.hyPatternsPage,
-.hyGuidelinesPage {
+.container.hyDownloadPage {
   padding-left: 0;
   padding-right: 0;
   margin-top: -26px;
   margin-right: -15px;
-  margin-left: -16px;
   width: auto;
   background-color: white;
+  margin-left: -16px;
 }
 @media (min-width: 768px) {
   .container.hyHomePage,
-  .container.hyDownloadPage,
-  .hyPatternsPage,
-  .hyGuidelinesPage {
+  .container.hyDownloadPage {
     margin-left: -271px;
     margin-right: -20px;
   }
