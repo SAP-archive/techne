@@ -51,15 +51,15 @@
                 </div>
                 <div class="item text-center" data-img-up="#hyHighTUpImg" data-img-over="#hyHighTOverImg">
                     <h4>high-touch business users</h4>
-                    <p>These are the people who give consumers the visual experience they expect.  These are the marketing professionals, the merchandisers, the creative directors and product managers, among others. They strategize, plan ahead, collaborate, pass concepts and content back and forth and are anxious to see the results of their work. <a href="#hyHomeHighTC">Learn more »</a> </p>
+                    <p><small>These are the people who give consumers the visual experience they expect.  These are the marketing professionals, the merchandisers, the creative directors and product managers, among others. They strategize, plan ahead, collaborate, pass concepts and content back and forth and are anxious to see the results of their work. <a href="#hyHomeHighTC">Learn more »</a> </small></p>
                 </div>
                 <div class="item text-center" data-img-up="#hyLowTUpImg" data-img-over="#hyLowTOverImg">
                     <h4>low-touch business users</h4>
-                    <p>Low-touch doesn’t mean low-engagement.  On the contrary, these are the people who make things happen, and happen fast. They just don’t need visual aids or teams of people to get their job done.   These are the customer service reps, order managers, IT professionals, and operations people, among others. They react to whatever is thrown at them, be it a frustrated customer, a rush order, a locked database or a software update.  The need information in an instant, and need to be able to act on that information just as fast. <a href="#hyHomeLowTC">Learn more »</a> </p>
+                    <p><small>Low-touch doesn’t mean low-engagement.  On the contrary, these are the people who make things happen, and happen fast. They just don’t need visual aids or teams of people to get their job done.   These are the customer service reps, order managers, IT professionals, and operations people, among others. They react to whatever is thrown at them, be it a frustrated customer, a rush order, a locked database or a software update.  The need information in an instant, and need to be able to act on that information just as fast. <a href="#hyHomeLowTC">Learn more »</a> </small></p>
                 </div>
                 <div class="item text-center" data-img-up="#hyDevUpImg" data-img-over="#hyDevOverImg">
                     <h4>software developers</h4>
-                    <p>These are the women and men of YaaS; the people who make it possible for all other personas to get stuff done.  Whether working independently, as a team or even in-house for a brand, these developers need tools to get s#&% done fast. There is no tolerance for confusing interfaces, slowness or barriers to getting that next release out; tooling is really just a means to an end. <a href="#hyHomeSoftDevC">Learn more »</a> </p>
+                    <p><small>These are the women and men of YaaS; the people who make it possible for all other personas to get stuff done.  Whether working independently, as a team or even in-house for a brand, these developers need tools to get s#&% done fast. There is no tolerance for confusing interfaces, slowness or barriers to getting that next release out; tooling is really just a means to an end. <a href="#hyHomeSoftDevC">Learn more »</a> </small></p>
                 </div>
             </div> <!-- carousel inner-->
             <a href="#hyPersonasCarouselID" class="left carousel-control" role="button" data-slide="prev">
@@ -125,26 +125,24 @@
             </div>
         </div><!--consumer data-->
         <div class="col-sm-12 hyHomeSlider">
-            <div class="container">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
                 </div>
-                <div class="row">
-                    <div class="col-xs-4 col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Lonter Task Duration</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-md-pull-3">
-                        <img src="images/home/consumer_slider.png"></img>
-                    </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
                 </div>
-            </div> <!-- container-->
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/consumer_slider.png"></img>
+                </div>
+            </div>
         </div><!-- consumerization slider-->
     </div><!-- the consumer carousel-->
     <!-- High-touch User Section-->
@@ -222,26 +220,24 @@
             </div>
         </div><!--consumer data-->
         <div class="col-sm-12 hyHomeSlider">
-            <div class="container">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/home/hight_slider.png"></img>
-                    </div>
-                    <div class="col-sm-3">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Lonter Task Duration</p>
-                    </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
                 </div>
-            </div> <!-- container-->
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/hight_slider.png"></img>
+                </div>
+            </div>
         </div><!-- consumerization slider-->
     </div><!-- the consumer carousel-->
     <!-- -->
@@ -318,26 +314,24 @@
             </div>
         </div><!--consumer data-->
         <div class="col-sm-12 hyHomeSlider">
-            <div class="container">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/home/lowt_slider.png"></img>
-                    </div>
-                    <div class="col-sm-3">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Lonter Task Duration</p>
-                    </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
                 </div>
-            </div> <!-- container-->
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/lowt_slider.png"></img>
+                </div>
+            </div>
         </div><!-- consumerization slider-->
     </div><!-- the consumer carousel-->
     <!-- -->
@@ -415,26 +409,24 @@
             </div>
         </div><!--consumer data-->
         <div class="col-sm-12 hyHomeSlider">
-            <div class="container">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/home/developer_slider.png"></img>
-                    </div>
-                    <div class="col-sm-3">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Lonter Task Duration</p>
-                    </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
                 </div>
-            </div> <!-- container-->
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/developer_slider.png"></img>
+                </div>
+            </div>
         </div><!-- consumerization slider-->
     </div><!-- the consumer carousel-->
 </div><!--/.container-->
