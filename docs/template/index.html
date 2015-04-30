@@ -79,10 +79,16 @@
 
 
                 <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
-                    <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
-                    {{#eachRoot}}
-                    <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-                    {{/eachRoot}}
+                    {{#if sectionData}}
+                        {{#each sectionData}}
+                            <li class="kss-menu-item"><a href="{{id}}">{{text}}</a></li>
+                        {{/each}}
+                    {{else}}
+                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
+                        {{#eachRoot}}
+                        <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+                        {{/eachRoot}}
+                    {{/if}}
                 </ul>
         </nav>
 
