@@ -310,9 +310,7 @@ please don&apos;t use it anymore</p>
             <h1 class="kss-title"><span class="kss-ref">1.5</span> Scrollable Tabs</h1>
             <div class="kss-description">
                 <p>Component for arrows left and right for scrolling tabs
-
-</p>
-<p>Deprecated</p>
+Deprecated</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -327,11 +325,17 @@ please don&apos;t use it anymore</p>
     </a>
     <div class="scrollable-tabs">
         <ul class="nav nav-tabs" role="tablist">
-            <!--<li class="property" ng-class="{active: $index == 0}" ng-repeat="iso in keys" baas-field-validate-->
-                <!--ng-model="iso">-->
-            <li class="property" ng-class="{active: $index == 0}" ng-repeat="iso in keys"
-                ng-model="iso">
-                <a role="tab" data-toggle="tab" ng-click="setTab($index, $event)">{{iso}}</a>
+            <li class="active">
+                <a role="tab" data-toggle="tab" >Tab 1</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 2</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 3</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 4</a>
             </li>
         </ul>
     </div>
@@ -348,11 +352,17 @@ please don&apos;t use it anymore</p>
     &lt;/a&gt;
     &lt;div class=&quot;scrollable-tabs&quot;&gt;
         &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
-            &lt;!--&lt;li class=&quot;property&quot; ng-class=&quot;{active: $index == 0}&quot; ng-repeat=&quot;iso in keys&quot; baas-field-validate--&gt;
-                &lt;!--ng-model=&quot;iso&quot;&gt;--&gt;
-            &lt;li class=&quot;property&quot; ng-class=&quot;{active: $index == 0}&quot; ng-repeat=&quot;iso in keys&quot;
-                ng-model=&quot;iso&quot;&gt;
-                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; ng-click=&quot;setTab($index, $event)&quot;&gt;{{iso}}&lt;/a&gt;
+            &lt;li class=&quot;active&quot;&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 4&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
@@ -735,7 +745,7 @@ select states on a tablerow level without any further markup</p>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <table class="table table-multi-select">
+                        <table class="table table-multi-select table-striped">
 	<tr class="active">
 		<td>Content</td>
 	</tr>
@@ -749,7 +759,7 @@ select states on a tablerow level without any further markup</p>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;table class=&quot;table table-multi-select&quot;&gt;
+                    <pre><code data-language="html">&lt;table class=&quot;table table-multi-select table-striped&quot;&gt;
 	&lt;tr class=&quot;active&quot;&gt;
 		&lt;td&gt;Content&lt;/td&gt;
 	&lt;/tr&gt;
@@ -775,7 +785,7 @@ select states on a tablerow level without any further markup</p>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <table class="table table-hover table-multi-select y-responsive-table">
+                        <table class="table table-hover table-multi-select y-responsive-table table-striped">
 	<thead>
 		<tr>
 			<th>#</th>
@@ -826,7 +836,7 @@ select states on a tablerow level without any further markup</p>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table&quot;&gt;
+                    <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table table-striped&quot;&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;#&lt;/th&gt;
