@@ -53,20 +53,24 @@
 
 
           <ul class="hidden-xs">
-              <!--<li><a href="index.html" class="active">Home</a></li>-->
-              <!--<li><a href="guidelines.html">Guidelines</a></li>-->
-              <!--<li><a href="controls.html">Controls</a></li>-->
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="guidelines.html">Guidelines</a></li>
+              <li><a href="kitchensink.html">Kitchen Sink</a></li>
+              <li><a href="download.html">Download</a></li>
               <!--<li><a href="patterns.html">Patterns</a></li>-->
-              {{#each htmlPagesFromMD}}
+              <!--<li><a href="layouts.html">Layouts</a></li>-->
+
+              <!-- comment the generic file listing as we have specific order of the pages-->
+              <!--{{#each htmlPagesFromMD}}
                 <li><a href="{{url}}">{{displayText}}</a></li>
-              {{/each}}
+              {{/each}}-->
           </ul>
 
 
       </div>
   </header>
   <!-- / SUPER HEADER -->
-
+  {{#if showLeftNav}}
   <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
 
     <aside>
@@ -75,17 +79,30 @@
 
 
                 <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
-                    <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
-                    {{#eachRoot}}
-                    <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-                    {{/eachRoot}}
+                    {{#if sectionData}}
+                        {{#each sectionData}}
+                            <li class="kss-menu-item"><a href="{{id}}">{{text}}</a></li>
+                        {{/each}}
+                    {{else}}
+                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
+                        {{#eachRoot}}
+                        <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+                        {{/eachRoot}}
+                    {{/if}}
                 </ul>
         </nav>
 
 
     </aside>
   </div>
+
+  {{/if}}
+
+  {{#if showLeftNav}}
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
+  {{else}}
+  <div role="main" id="kss-main" class="kss-main col-xs-12">
+  {{/if}}
 
     <article id="kss-content">
       {{#if overview}}
@@ -142,17 +159,19 @@
 </div>
   <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
 <!-- SCRIPTS -->
-  <script src="public/dist/js/techne.min.js"></script>
   <script src="public/kss.js"></script>
-  
+
   <script src="public/prettify.js"></script>
-  <!--<script src="public/jquery.js"></script>-->
+  <script src="public/js/jquery.min.js"></script>
   <script src="public/main.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/select2.js"></script>
+  <script src="public/js/techne.min.js"></script>
 
   <script src="public/jquery-ui.js"></script>
   <script src="public/script.js"></script>
   <script src="public/super-nav.js"></script>
-  
+
 
   {{! This won't be included in the demo page }}
   {{#if argv.xdemo}}
