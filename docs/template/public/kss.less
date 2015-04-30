@@ -746,8 +746,7 @@ li.L9{
 /* We are using IDs in order to avoid breaking the standard styling */
 
 /*remove the lef nav for all the pages(except index) - maybe we can do it better*/
-.container.hyHomePage,
-.container.hyDownloadPage{
+.container.hyHomePage{
         padding-left:0;
         padding-right:0;
         margin-top: -26px;
@@ -898,5 +897,33 @@ li.L9{
         }
     }
 
+}
+
+.hyGuidelinesPage{
+    section{
+        padding-top: 40px;
+        margin-bottom: -10px;
+    }
+}
+
+.container.hyDownloadPage{
+    background-color: white;
+    @media (min-width: 768px){
+        margin-left:-271px;
+        margin-right: -20px;
+    }
+    .hyDwnlBtns a{
+        width: 100%;
+    }
+    @media (max-width: 990px){
+        .hyDwnlBtns{
+            padding-bottom: 15px;
+        }
+    }
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 /*Styling for the new home page*/

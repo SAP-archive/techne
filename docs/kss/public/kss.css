@@ -1042,8 +1042,7 @@ li.L9 {
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
 /*remove the lef nav for all the pages(except index) - maybe we can do it better*/
-.container.hyHomePage,
-.container.hyDownloadPage {
+.container.hyHomePage {
   padding-left: 0;
   padding-right: 0;
   margin-top: -26px;
@@ -1053,8 +1052,7 @@ li.L9 {
   margin-left: -16px;
 }
 @media (min-width: 768px) {
-  .container.hyHomePage,
-  .container.hyDownloadPage {
+  .container.hyHomePage {
     margin-left: -271px;
     margin-right: -20px;
   }
@@ -1183,5 +1181,31 @@ li.L9 {
     -moz-columns: 2;
     list-style-position: inside;
   }
+}
+.hyGuidelinesPage section {
+  padding-top: 40px;
+  margin-bottom: -10px;
+}
+.container.hyDownloadPage {
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .container.hyDownloadPage {
+    margin-left: -271px;
+    margin-right: -20px;
+  }
+}
+.container.hyDownloadPage .hyDwnlBtns a {
+  width: 100%;
+}
+@media (max-width: 990px) {
+  .container.hyDownloadPage .hyDwnlBtns {
+    padding-bottom: 15px;
+  }
+}
+.container.hyDownloadPage .row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 /*Styling for the new home page*/
