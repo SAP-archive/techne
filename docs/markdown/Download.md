@@ -1,4 +1,4 @@
-<div class="container hyDownloadPage">
+<div class="container hyDownloadPage" >
     <div class="page-header row text-center">
         <h1 class="text-center">Download hybris techne</h1>
         <p class="text-uppercase">current version></p>

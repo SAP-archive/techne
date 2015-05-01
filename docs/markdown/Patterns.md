@@ -1,4 +1,4 @@
-<div class="hyPatternsPage">
+<div class="hyPatternsPage" >
 
 <section id="patterns-first-contact" class="page">
   <h2>First Contact</h2>
