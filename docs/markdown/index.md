@@ -1,4 +1,4 @@
-<div class="container hyHomePage">
+<div class="container hyHomePage" >
     <div class="page-header hyHomeHeader">
         <h1 class="text-center">hybris techne*</h1>
         <p class="text-center">techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
