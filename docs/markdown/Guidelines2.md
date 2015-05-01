@@ -1,116 +1,6 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-
-  <title>Techne: Yaas Styleguide</title>
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node" />
-
-  <meta name="viewport" content="width=device-width">
-
-  <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
-  <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
-
-</head>
-<body class="kss-body">
-
-  <div class="main-content" id="kss-wrapper">
-    <section id="content" class="row-offcanvas row-offcanvas-left">
-
-  <!-- / SUPER HEADER -->
-    <header class="navbar-super-holder">
-      <div class="navbar-super" role="navigation">
-          <a href="/" class="domain">
-              <img class="domain-logo" src="https://www.yaas.io/globalressources/img/techne.svg" alt="techne">
-          </a>
-          <ul class="nav-super">
-              <li><a href="https://www.yaas.io">YaaS Home</a></li>
-              <li><a href="https://builder.yaas.io">Builder</a></li>
-              <li class="active"><a href="https://devportal.yaas.io">Dev Portal</a></li>
-              <li><a href="https://appexchange.yaas.io">App Exchange</a></li>
-          </ul>
-          <a href="http://www.hybris.com" target="_blank" class="brand">
-              <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company">
-          </a>
-          <a href="#" class="nav-super-toggle">
-              <span class="nav-super-triangle"></span>
-          </a>
-      </div>
-      <div id="kss-top-nav">
-
-          <a href="#menu-toggle" id="menu-toggle">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-
-          </a>
-
-
-          <ul class="hidden-xs">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="Guidelines2.html">Guidelines</a></li>
-              <li><a href="kitchensink.html">Kitchen Sink</a></li>
-              <li><a href="Download2.html">Download</a></li>
-              <!--<li><a href="patterns.html">Patterns</a></li>-->
-              <!--<li><a href="layouts.html">Layouts</a></li>-->
-
-              <!-- comment the generic file listing as we have specific order of the pages-->
-              <!--
-                <li><a href="Download.html">DOWNLOAD</a></li>
-              
-                <li><a href="Download2.html">DOWNLOAD2</a></li>
-              
-                <li><a href="Guidelines.html">GUIDELINES</a></li>
-              
-                <li><a href="Guidelines2.html">GUIDELINES2</a></li>
-              
-                <li><a href="Patterns.html">PATTERNS</a></li>
-              
-                <li><a href="index.html">INDEX</a></li>
-              
-                <li><a href="kitchensink.html">KITCHENSINK</a></li>
-              
-                <li><a href="layouts.html">LAYOUTS</a></li>
-              -->
-          </ul>
-
-
-      </div>
-  </header>
-  <!-- / SUPER HEADER -->
-  <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
-
-    <aside>
-        <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
-
-
-
-                <ul class="kss-menu sidebar-nav" data-kss-ref="0">
-                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
-                        <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
-                        <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
-                        <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
-                        <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
-                </ul>
-        </nav>
-
-
-    </aside>
-  </div>
-
-
-  <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
-
-    <article id="kss-content">
-        <div class="hyGuidelinesPage" >
+<div class="hyGuidelinesPage" >
     <section id="spirit-vision" class="page">
-        <h2>Spirit &amp; Vision</h2>
+        <h2>Spirit & Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs"/>
         <div class="hybris-guy-bg">
@@ -176,7 +66,7 @@
                 <p><strong>Flexible:</strong> allow people to work within the system they way they want.  Allow for frequent and infrequent task completion paths; linear and nonlinear ways of working.</p>
             </div>
             <div class="col-md-6">
-                <p><strong>Predictive &amp; Automated:</strong>  as people spend more time in the system, the system should respond by surfacing frequent tasks, workspaces and information most used without explicit ask or action.  As many tasks should be automated as reasonably possible to make people’s working lives easier.</p>
+                <p><strong>Predictive & Automated:</strong>  as people spend more time in the system, the system should respond by surfacing frequent tasks, workspaces and information most used without explicit ask or action.  As many tasks should be automated as reasonably possible to make people’s working lives easier.</p>
                 <p><strong>Simple:</strong> A single piece of information or task should be no more than three clicks away from any other piece of information or task. Period.  If a flow isn’t allowing for this criteria, the flow needs re-designing.</p>
                 <p><strong>Fun:</strong> “Wow that was easy.”  “I may not like the task but I love this interface”</p>
                 <p><strong>Above All, User-Centric:</strong> follow user-centered design processes. Demand design principles are in place as part of any MVP criteria.</p>
@@ -257,7 +147,7 @@
               <p><b>Text Link:</b> use app-wide for links in any context.</p>
             </div>
             <hr>
-            <h3>Alerts, Errors &amp; Notifications</h3>
+            <h3>Alerts, Errors & Notifications</h3>
             <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
             <p>These colors are desaturated to work better with the primary application colors.</p>
             <div class="row text-center">
@@ -306,7 +196,7 @@
               <p><b>Well Done! Success!:</b> use background color app-wide for success messaging only.</p>
               <p><b>Warning! Not looking good:</b> use background color app-wide for warning messaging only.</p>
               <p><b>Oh Snap! Try again:</b> use background color app-wide for error messaging only.</p>
-              <p><em> See <a href="#"><b>&quot;Errors and Notifications&quot;</b></a> for treatment and messaging examples. </p>
+              <p>* See <a href="#"><b>"Errors and Notifications"</b></a> for treatment and messaging examples. </p>
             </div>
             <hr>
             <h3>Typography</h3>
@@ -342,25 +232,25 @@
                 <h4 class="dosis-semibold">Dosis Light</h4>
                 <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
-                <p class="dosis-light size-26">1234567890!@£$%^&amp;</em>()<em>+</p>
+                <p class="dosis-light size-26">1234567890!@£$%^&*()_+</p>
               </div>
               <div class="col-md-offset-2 col-md-4 usage">
                 <h4 class="dosis-semibold">Dosis Book</h4>
                 <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
-                <p class="dosis-book size-26">1234567890!@£$%^&amp;*()</em>+</p>
+                <p class="dosis-book size-26">1234567890!@£$%^&*()_+</p>
               </div>
               <div class="col-md-6 usage">
                 <h4 class="dosis-semibold">Dosis Medium</h4>
                 <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
-                <p class="dosis-medium size-26">1234567890!@£$%^&amp;<em>()_+</p>
+                <p class="dosis-medium size-26">1234567890!@£$%^&*()_+</p>
               </div>
               <div class="col-md-6 usage">
                 <h4 class="dosis-semibold">Dosis SemiBold</h4>
                 <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
-                <p class="dosis-semibold size-26">1234567890!@£$%^&amp;</em>()_+</p>
+                <p class="dosis-semibold size-26">1234567890!@£$%^&*()_+</p>
               </div>
             </div>
             <hr>
@@ -451,7 +341,7 @@
     </section>
     <!-- load tone/voice -->
     <section id="tone-voice" class="page">
-        <h2>Tone &amp; Voice</h2>
+        <h2>Tone & Voice</h2>
         <h3>Guiding Principles for Tone and Voice</h3>
         <ul>
             <li>Mobile first</li>
@@ -464,10 +354,10 @@
             <li>NO PASSIVE VOICE.  Only active voice.</li>
             <li>Present tense</li>
             <li>Avoid redundant words; redundant to themselves and to the context.</li>
-            <li>Avoid including information the user doesn&#39;t need to know or care about</li>
-            <li>Lead with the most important information and focus on the user&#39;s task</li>
+            <li>Avoid including information the user doesn't need to know or care about</li>
+            <li>Lead with the most important information and focus on the user's task</li>
             <li>Use contractions</li>
-            <li>Don&#39;t &#39;second guess&#39; the user&#39;s intentions. Only ask for confirmation of action if action will cause root-level or irretrievable changes.</li>
+            <li>Don't 'second guess' the user's intentions. Only ask for confirmation of action if action will cause root-level or irretrievable changes.</li>
         </ul>
         <!-- Table -->
         <table class="table techne-table">
@@ -489,7 +379,7 @@
             </tr>
             <tr>
               <td>You are. Is not. Will not. Did not.</td>
-              <td>You&#39;re. Isn&#39;t. Won&#39;t. Didn&#39;t.</td>
+              <td>You're. Isn't. Won't. Didn't.</td>
             </tr>
             <tr>
               <td>Do you really want to delete this file? Warning!</td>
@@ -497,7 +387,7 @@
             </tr>
         </table>
         <hr>
-        <h3>Punctuation &amp; Capitalization</h3>
+        <h3>Punctuation & Capitalization</h3>
         <ul>
             <li>Do not use a period for single sentences</li>
             <li>Use periods for messaging with multiple sentences, or when the sentence has other punctuation. Like this one.</li>
@@ -507,7 +397,7 @@
         </ul>
         <table class="table techne-table">
             <tr>
-              <th>Don&#39;t</th>
+              <th>Don't</th>
               <th>Do</th>
             </tr>
             <tr>
@@ -523,16 +413,16 @@
               <td>Use common abbreviations <br> i.e. app</td>
             </tr>
             <tr>
-              <td>Use words like &#39;please&#39; or &#39;sorry&#39; <br> i.e. &quot;Sorry, that file cannot be deleted.&quot; <br> i.e. &quot;Please contact your administrator if you forgot your password&quot;</td>
-              <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. &quot;File can&#39;t be deleted.&quot; <br> i.e. &quot;Forgot your password? Contact your admin.&quot;</td>
+              <td>Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
+              <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
             </tr>
         </table>
         <hr>
-        <h3>Messaging; Errors &amp; Notifications</h3>
+        <h3>Messaging; Errors & Notifications</h3>
         <ul>
-            <li>For confirmation/success messages, use the action as the key word i.e. &#39;saved,&#39; &#39;added,&#39; &#39;sent,&#39; etc.  If not direct action is available, use &#39;successful&#39; as the key word. </li>
-            <li>For errors, use &#39;unsuccessful&#39; as the key word. </li>
-            <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add &quot;Try Again.&quot; to the message so as not to leave the user at a dead end. </li>
+            <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
+            <li>For errors, use 'unsuccessful' as the key word. </li>
+            <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end. </li>
             <li>Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. </li>
         </ul>
         <table class="table techne-table">
@@ -546,10 +436,10 @@
             </tr>
             <tr>
               <td>Shipping Cost <Shipping Cost> saved successfully. Shipping costs saved</td>
-              <td>Package <Package Name> couldn&#39;t be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.</td>
+              <td>Package <Package Name> couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.</td>
             </tr>
             <tr>
-              <td>Image upload wasn&#39;t successful. Try again</td>
+              <td>Image upload wasn't successful. Try again</td>
               <td>Image upload unsuccessful. Try again.</td>
             </tr>
             <tr>
@@ -571,28 +461,3 @@
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
     </section>
 </div>
-
-    </article>
-  </div>
-
-</section>
-
-</div>
-  <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
-<!-- SCRIPTS -->
-  <script src="public/kss.js"></script>
-
-  <script src="public/prettify.js"></script>
-  <script src="public/js/jquery.min.js"></script>
-  <script src="public/main.js"></script>
-  <script src="public/js/bootstrap.min.js"></script>
-  <script src="public/js/select2.js"></script>
-  <script src="public/js/techne.min.js"></script>
-
-  <script src="public/jquery-ui.js"></script>
-  <script src="public/script.js"></script>
-  <script src="public/super-nav.js"></script>
-
-
-    <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
-</html>

@@ -1059,10 +1059,7 @@ li.L9 {
 }
 /*Styling for the new home page - maybe we can do it better*/
 /*Styling for the new home page*/
-.container.hyHomePage {
-  /*font-family: Dosis, sans-serif;*/
-}
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container.hyHomePage img.hyConsumUpImg {
     display: none;
   }
@@ -1098,11 +1095,9 @@ li.L9 {
 .container.hyHomePage .personaIcons {
   background-color: #ffffff;
 }
-@media (min-width: 768px) {
-  .container.hyHomePage .hyHomeHeader3 p {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+.container.hyHomePage .hyHomeHeader3 p {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .container.hyHomePage .personasCarousel {
   background-color: #ffffff;
