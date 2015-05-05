@@ -1041,7 +1041,8 @@ li.L9 {
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
-/*remove the lef nav for all the pages(except index) - maybe we can do it better*/
+/* remove the lef nav styling for the pages(home and download)*/
+/* overwrite kss styling - maybe can be done better */
 .container.hyHomePage {
   padding-left: 0;
   padding-right: 0;
@@ -1057,8 +1058,48 @@ li.L9 {
     margin-right: -20px;
   }
 }
-/*Styling for the new home page - maybe we can do it better*/
+/* remove the lef nav styling for the pages(home and download)*/
+/* overwrite kss styling - maybe can be done better */
 /*Styling for the new home page*/
+.container.hyHomePage {
+  /*font sizes per psd-not following the styleguide*/
+  /*font sizes per psd-not following the styleguide*/
+}
+.container.hyHomePage h1 {
+  font-size: 57px;
+}
+.container.hyHomePage h3 {
+  font-size: 42px;
+}
+.container.hyHomePage .hyHomeHeader p,
+.container.hyHomePage .hyHomeHeader a {
+  font-size: 27px;
+}
+.container.hyHomePage .hyHomeHeader2 p small {
+  font-size: 14px;
+}
+.container.hyHomePage .hyHomeContentCentered p {
+  font-size: 19px;
+}
+.container.hyHomePage p.hyPersonaTitle {
+  font-size: 27px;
+  text-transform: uppercase;
+  color: #369ad6;
+}
+.container.hyHomePage .hyPersonaTab li {
+  font-size: 15px;
+}
+.container.hyHomePage .hyHomeSlider .hySliderText p {
+  font-size: 15px;
+}
+.container.hyHomePage .hyHomeContentCentered .row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container.hyHomePage .hyHomeContentCentered .row .carousel {
+  margin-top: 20px;
+  /*align with te text on aside*/
+}
 @media (max-width: 992px) {
   .container.hyHomePage img.hyConsumUpImg {
     display: none;
@@ -1070,7 +1111,7 @@ li.L9 {
 .container.hyHomePage .hyHomeHeader {
   background-image: url("/images/home/banner_bg.png");
   color: white;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   margin-bottom: 0;
   padding-top: 30px;
 }
@@ -1103,7 +1144,7 @@ li.L9 {
   background-color: #ffffff;
 }
 .container.hyHomePage .personasCarousel #hyPersonasCarouselID {
-  height: 250px;
+  height: 200px;
 }
 .container.hyHomePage .personasCarousel .carousel-control {
   padding-top: 50px;
@@ -1124,10 +1165,6 @@ li.L9 {
   padding-left: 15%;
   padding-right: 15%;
 }
-.container.hyHomePage .personasCarousel .carousel-inner .item h4 {
-  text-transform: uppercase;
-  color: #369ad6;
-}
 .container.hyHomePage .consumerCarousel:nth-of-type(even) {
   background-color: #f7f7f7;
 }
@@ -1140,7 +1177,7 @@ li.L9 {
   padding-right: 20px;
 }
 .container.hyHomePage .consumerCarousel .hyHomeSlider {
-  padding-top: 70px;
+  padding-top: 2x0px;
 }
 .container.hyHomePage .consumerCarousel .carousel-indicators {
   bottom: -30px;
@@ -1158,16 +1195,25 @@ li.L9 {
 .container.hyHomePage .consumerCarousel .hyPersonaTabs .container {
   max-width: 500px;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul {
+.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab .w5_list li {
+  line-height: 200%;
+}
+.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs {
   border-bottom: none;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul li a {
+.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li {
+  max-width: 50%;
+}
+.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li a {
   text-transform: uppercase;
   background-color: transparent;
   border-bottom: 1px solid #0486e0;
+  color: #313440;
+  word-break: break-word;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul li.active a {
+.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li.active a {
   border: 1px solid transparent;
+  color: #8a8fa1;
 }
 @media (min-width: 768px) {
   .container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.w5_list {

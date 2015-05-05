@@ -745,7 +745,8 @@ li.L9{
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
 
-/*remove the lef nav for all the pages(except index) - maybe we can do it better*/
+/* remove the lef nav styling for the pages(home and download)*/
+/* overwrite kss styling - maybe can be done better */
 .container.hyHomePage{
         padding-left:0;
         padding-right:0;
@@ -759,13 +760,50 @@ li.L9{
             margin-right: -20px;
         }
 }
-/*Styling for the new home page - maybe we can do it better*/
+/* remove the lef nav styling for the pages(home and download)*/
+/* overwrite kss styling - maybe can be done better */
 
 /*Styling for the new home page*/
 .container.hyHomePage{
 
-    .hyHomeContentCentered{
+    /*font sizes per psd-not following the styleguide*/
+    h1{
+        font-size: 57px;
+    }
+    h3{
+        font-size: 42px;
+    }
+    .hyHomeHeader p,
+    .hyHomeHeader a{
+        font-size: 27px;
+    }
+    .hyHomeHeader2 p small{
+        font-size: 14px;
+    }
+    .hyHomeContentCentered p{
+        font-size: 19px;
+    }
+    p.hyPersonaTitle{
+        font-size: 27px;
+        text-transform: uppercase;
+        color: #369ad6;
+    }
 
+    .hyPersonaTab li{
+        font-size: 15px;
+    }
+
+    .hyHomeSlider .hySliderText p{
+        font-size: 15px;
+    }
+    /*font sizes per psd-not following the styleguide*/
+
+    .hyHomeContentCentered .row{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .carousel{
+            margin-top: 20px;/*align with te text on aside*/
+        }
     }
 
     @media (max-width: 992px){
@@ -781,7 +819,7 @@ li.L9{
     .hyHomeHeader{
         background-image: url("/images/home/banner_bg.png");
         color: white;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
         margin-bottom:0;
         padding-top: 30px;
         @media (min-width: 768px){
@@ -820,7 +858,7 @@ li.L9{
         background-color: #ffffff;
 
         #hyPersonasCarouselID{
-            height:250px;
+            height:200px;
         }
         .carousel-control{
             padding-top:50px;
@@ -839,10 +877,6 @@ li.L9{
         .carousel-inner{
             padding-left: 15%;
             padding-right: 15%;
-            .item h4{
-                text-transform: uppercase;
-                color: #369ad6;
-            }
         }
     }
 
@@ -858,7 +892,7 @@ li.L9{
         padding-left:20px;
         padding-right:20px;
         .hyHomeSlider{
-            padding-top:70px;
+            padding-top:2x0px;
         }
         .carousel-indicators{
             bottom: -30px;
@@ -876,15 +910,25 @@ li.L9{
         .hyPersonaTabs .container{
             max-width: 500px;
             .hyPersonaTab{
-                ul{
+                .w5_list li{
+                    line-height: 200%;
+                }
+                ul.nav-tabs{
                     border-bottom: none;
-                    li a{
-                        text-transform: uppercase;
-                        background-color: transparent;
-                        border-bottom: 1px solid #0486e0;
+
+                    li{
+                        max-width: 50%;
+                        a{
+                            text-transform: uppercase;
+                            background-color: transparent;
+                            border-bottom: 1px solid #0486e0;
+                            color: #313440;
+                            word-break: break-word;
+                        }
                     }
                     li.active a{
                         border: 1px solid transparent;
+                        color: #8a8fa1;
                     }
                 }
                 @media (min-width: 768px){
