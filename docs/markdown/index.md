@@ -1,214 +1,432 @@
-<h1 class="kss-title kss-title-main"> Overview </h1>
-
-This is a demo of [kss-node](http://github.com/hughsk/kss-node)'s built-in styleguide generator. The module is essentially a reimplementation of the [KSS](http://github.com/kneath/kss) Ruby parser, in Node:
-
-> Inspired by TomDoc, KSS attempts to provide a methodology for writing maintainable, documented CSS within a team.
-> Specifically, KSS is a documentation specification and styleguide format.
-> It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
->
-> KSS is a set of guidelines to help you produce an HTML styleguide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine.
-
-The upshot of this is that KSS can be used for generating CSS documentation pages. This site is generated with the `kss-node` command-line tool used on this [demo project](https://github.com/hughsk/kss-node/tree/master/demo).
-
-Check out the [project on Github](https://github.com/hughsk/kss-node) for more information, or read on for details on how to document your stylesheets for KSS.
-
-# Specification
-
-The text from here on is mostly taken from the [KSS specification](https://github.com/kneath/kss/blob/master/SPEC.md).
-
-Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the styleguide. Each element should have one documentation block describing that particular UI element's various states.
-
-KSS documentation is hierarchical in nature — any documentation blocks at any point within the styleguide hierarchy apply to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
-
-## Format
-
-The basic format for KSS documentation can be best explained in an example:
-
-```css
-/*
-A button suitable for giving stars to someone.
-
-:hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
-
-Styleguide 2.1.3.
-*/
-a.button.star{
-  ...
-}
-a.button.star.stars-given{
-  ...
-}
-a.button.star.disabled{
-  ...
-}
-```
-
-When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (SCSS example):
-
-```less
-// A button suitable for giving stars to someone.
-//
-// :hover             - Subtle hover highlight.
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
-//
-// Styleguide 2.1.3.
-a.button.star{
-  ...
-  &.star-given{
-    ...
-  }
-  &.disabled{
-    ...
-  }
-}
-```
-
-Each KSS documentation block consists of three parts: a description of what the element does or looks like, a list of modifier classes or pseudo-classes and how they modify the element, and a reference to the element's position in the styleguide.
-
-## Style Documentation
-
-The description should be plain sentences of what the CSS rule or hierarchy does and looks like. A good description gives guidance toward the application of elements the CSS rules style.
-
-CSS rules that depend on specific HTML structures should describe those structures using `<element#id.class:pseudo>` notation. For example:
-
-```less
-// A feed of activity items. Within each <section.feed>, there should be many
-// <article>s which are the  feed items.
-```
-
-To describe the status of a set of rules, you should prefix the description with **Experimental** or **Deprecated**.
-
-**Experimental** indicates CSS rules that apply to experimental styling. This can be useful when testing out new designs before they launch (staff only), alternative layouts in A/B tests, or beta features.
-
-```less
-// Experimental: An alternative signup button styling used in AB Test #195.
-```
-
-**Deprecated** indicates that the rule is slated for removal. Rules that are deprecated should not be used in future development. This description should explain what developers should do when encountering this style.
-
-```less
-// Deprecated: Styling for legacy wikis. We'll drop support for these wikis on
-// July 13, 2007.
-```
-
-## The modifiers section
-
-If the UI element you are documenting has multiple states or styles depending on added classes or pseudo-classes, you should document them in the modifiers section.
-
-```less
-// :hover             - Subtle hover highlight.
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
-```
-
-## The styleguide section
-
-If the UI element you are documenting has an example in the styleguide, you should reference it using the "Styleguide [ref]" syntax.
-
-```less
-// Styleguide 2.1.3.
-```
-
-References should be integer sections separated by periods. Each period denotes a hierarchy of the styleguide. Styleguide references can point to entire sections, a portion of the section, or a specific example.
-
-If there is no example, then you must note that there is no reference.
-
-```less
-// No styleguide reference.
-```
-
-## The markup section
-
-*Note: This section is unofficial, and only implemented in `kss-node`.*
-
-If you wish to include example HTML for the UI element you are documenting, you should include an additional paragraph with sample markup and prefix it with `Markup:`. You should also note the placement of modifier classes with `{$modifiers}`, like so:
-
-```less
-// Buttons
-//
-// :hover - Highlight the button when hovering.
-//
-// Markup:
-// <a href="#" class="button {$modifiers}">Link</a>
-// <button class="button {$modifiers}">Button</button>
-//
-// Styleguide 2.1.3.
-```
-
-If you're using the `kss-node` module or CLI, make sure not to include any double line-breaks, as only the first paragraph prefixed with `Markup:` will be included.
-
-# Preprocessor Helper Documentation
-
-If you use a CSS preprocessor like SCSS or LESS, you should document all helper functions (sometimes called mixins).
-
-```less
-// Creates a linear gradient background, from top to bottom.
-//
-// $start - The color hex at the top.
-// $end   - The color hex at the bottom.
-//
-// Compatible in IE6+, Firefox 2+, Safari 4+.
-@mixin gradient($start, $end){
-  ...
-}
-```
-
-Each documentation block should have a description section, parameters section, and compatibility section.  The description section follows the same guidelines as style documentation.
-
-## The parameters section
-
-If the mixin takes parameters, you should document each parameter and describe what sort of input it expects (hex, number, etc).
-
-```less
-// $start - The color hex at the top.
-// $end   - The color hex at the bottom.
-```
-
-## The compatibility section
-
-You must list out what browsers this helper method is compatible in.
-
-```less
-// Compatible in IE6+, Firefox 2+, Safari 4+.
-```
-
-If you do not know the compatibility, you should state as such.
-
-```less
-// Compatibility untested.
-```
-
-# Styleguide
-
-In order to fully take advantage of KSS, you should create a living styleguide. A living styleguide is a *part of your application* and should include all of the CSS, Javascript, and layout the rest of your application does.
-
-To get started quickly use the CLI tool, which supports custom templates too. If you're feeling game you can (and should) build it up from scratch using the module's API.
-
-Overall, keep in mind that styleguides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
-
-## Organization
-
-The styleguide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to. For example:
-
-    1. Buttons
-      1.1 Form Buttons
-        1.1.1 Generic form button
-        1.1.2 Special form button
-      1.2 Social buttons
-      1.3 Miscelaneous buttons
-    2. Form elements
-      2.1 Text fields
-      2.2 Radio and checkboxes
-    3. Text styling
-    4. Tables
-      4.1 Number tables
-      4.2 Diagram tables
-
-The goal here is to create an organizational structure that is flexible, but  rigid enough to be machine processed and referenced inside of documentation.
-
+<div class="container hyHomePage" >
+    <div class="page-header hyHomeHeader">
+        <h1 class="text-center">hybris techne*</h1>
+        <p class="text-center">techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
+        <div class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-5"><a class="text-center" href="/Download.html">Download now>></a></div>
+    </div> <!-- header -->
+    <div class="row hyHomeHeader2 row">
+        <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
+    </div>
+    <div class="row hyHomeHeader3" row>
+        <h3 class="text-center">Why is techne different?</h3>
+        <p class="text-center">techne design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. <a>Watch the video >></a></p>
+    </div><!-- row why techne -->
+    <div class="row personaIcons">
+        <h3 class="text-center">Who are the techne personas?</h3>
+        <div class="col-md-3 text-center">
+            <a data-slide-to="0" data-target="#hyPersonasCarouselID" >
+                <p class="text-center">The Consumer</p>
+                <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
+                <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a data-slide-to="1" data-target="#hyPersonasCarouselID">
+                <p class="text-center">High-touch Business Users</p>
+                <img id="hyHighTUpImg" src="images/home/high_touch_up.png"/>
+                <img id="hyHighTOverImg" class="hidden" src="images/home/high_touch_over.png"/>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a data-slide-to="2" data-target="#hyPersonasCarouselID">
+                <p class="text-center">Low-touch Business Users</p>
+                <img id="hyLowTUpImg" src="images/home/low_touch_up.png"/>
+                <img id="hyLowTOverImg" class="hidden" src="images/home/low_touch_over.png"/>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a data-slide-to="3" data-target="#hyPersonasCarouselID">
+                <p class="text-center">Software Developers</p>
+                <img id="hyDevUpImg" src="images/home/developers_up.png"/>
+                <img id="hyDevOverImg" class="hidden" src="images/home/developers_over.png"/>
+            </a>
+        </div>
+    </div> <!-- row - personas -->
+    <div class="row personasCarousel">
+        <div id="hyPersonasCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+                <div class="item active text-center" data-img-up="#hyConsumUpImg" data-img-over="#hyConsumOverImg">
+                    <h4>the consumer</h4>
+                    <p><small>We are all consumers with high expectations.  With this in mind it’s important to remember everything we experience across digital touchpoints, good AND bad, sets the bar for any new digital experience we encounter. Consumer-facing experiences try to be engaging, informative, effecient and fun. techne starts with the premise for all our interactions and patterns because everyone deserves a great experience. <a href="#hyHomeConsumerC">Learn more »</a> </small></p>
+                </div>
+                <div class="item text-center" data-img-up="#hyHighTUpImg" data-img-over="#hyHighTOverImg">
+                    <h4>high-touch business users</h4>
+                    <p><small>These are the people who give consumers the visual experience they expect.  These are the marketing professionals, the merchandisers, the creative directors and product managers, among others. They strategize, plan ahead, collaborate, pass concepts and content back and forth and are anxious to see the results of their work. <a href="#hyHomeHighTC">Learn more »</a> </small></p>
+                </div>
+                <div class="item text-center" data-img-up="#hyLowTUpImg" data-img-over="#hyLowTOverImg">
+                    <h4>low-touch business users</h4>
+                    <p><small>Low-touch doesn’t mean low-engagement.  On the contrary, these are the people who make things happen, and happen fast. They just don’t need visual aids or teams of people to get their job done.   These are the customer service reps, order managers, IT professionals, and operations people, among others. They react to whatever is thrown at them, be it a frustrated customer, a rush order, a locked database or a software update.  The need information in an instant, and need to be able to act on that information just as fast. <a href="#hyHomeLowTC">Learn more »</a> </small></p>
+                </div>
+                <div class="item text-center" data-img-up="#hyDevUpImg" data-img-over="#hyDevOverImg">
+                    <h4>software developers</h4>
+                    <p><small>These are the women and men of YaaS; the people who make it possible for all other personas to get stuff done.  Whether working independently, as a team or even in-house for a brand, these developers need tools to get s#&% done fast. There is no tolerance for confusing interfaces, slowness or barriers to getting that next release out; tooling is really just a means to an end. <a href="#hyHomeSoftDevC">Learn more »</a> </small></p>
+                </div>
+            </div> <!-- carousel inner-->
+            <a href="#hyPersonasCarouselID" class="left carousel-control" role="button" data-slide="prev">
+                <img src="images/home/arrow_left.png">
+            </a>
+            <a href="#hyPersonasCarouselID" class="right carousel-control" role="button" data-slide="next">
+                <img src="images/home/arrow_right.png">
+            </a>
+        </div><!-- carousel #hyPersonasCarouselID -->
+    </div><!-- row carousel -->
+    <!-- Consumer Section-->
+    <div class="row consumerCarousel" id="hyHomeConsumerC">
+        <div class="col-sm-6">
+            <div id="hyConsumerCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/home/consumer_1.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/consumer_2.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/consumer_3.png"></img>
+                    </div>
+                </div> <!-- carousel inner -->
+            </div> <!-- carousel hyConsumerCarouselID -->
+        </div><!--consumer carousel-->
+        <div class="col-sm-6 hyPersonaTabs">
+            <h2>The Consumer</h2>
+            <h4>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</h4>
+            <div class="container">
+                <div class="row hyPersonaTab">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#cons_wwwwh">who/what/where/when/how</a></li>
+                        <li><a data-toggle="tab" href="#cons_interface">interfaces must be</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="cons_wwwwh">
+                            <ul class="w5_list">
+                                <li>at home, at work, on the go</li>
+                                <li>low and high bandwidth environments</li>
+                                <li>browser and searcher, depending on the need</li>
+                                <li>mobile/social/local</li>
+                                <li>laptop/tablet/mobile phone</li>
+                                <li>task-driven at times; relaxed researcher at others</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="cons_interface">
+                            <ul class="w5_list">
+                                <li>convenient</li>
+                                <li>consistent</li>
+                                <li>easy</li>
+                                <li>flexible</li>
+                                <li>efficient</li>
+                                <li>helpful</li>
+                                <li>secure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--consumer data-->
+        <div class="col-sm-12 hyHomeSlider">
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/consumer_slider.png"></img>
+                </div>
+            </div>
+        </div><!-- consumerization slider-->
+    </div><!-- the consumer carousel-->
+    <!-- High-touch User Section-->
+    <div class="row consumerCarousel" id="hyHomeHighTC">
+        <div class="col-sm-6 col-sm-push-6">
+            <div id="hyHightCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/home/hight_user_1.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/hight_user_2.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/hight_user_3.png"></img>
+                    </div>
+                </div> <!-- carousel inner -->
+            </div> <!-- carousel hyConsumerCarouselID -->
+        </div><!--consumer carousel-->
+        <div class="col-sm-6 col-sm-pull-6 hyPersonaTabs">
+            <h2>High-touch Business User</h2>
+            <h4>Our Marketers, Merchandisers, Product Managers and other Designer people</h4>
+            <div class="container">
+                <div class="row hyPersonaTab">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#hight_wwwwh">who/what/where/when/how</a></li>
+                        <li><a data-toggle="tab" href="#hight_interface">interfaces must be</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="hight_wwwwh">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>at home, at work, on the go</li>
+                                            <li>high demand on time and effort; multi-tasker</li>
+                                            <li>collaborative</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>typically high bandwidth environments</li>
+                                            <li>laptop/tablet/mobile phone</li>
+                                            <li>performance-driven</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="hight_interface">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>collaboration</li>
+                                            <li>scale regardless of device</li>
+                                            <li>multi-tasking</li>
+                                            <li>nonlinear task flows</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>preview of consumer experience</li>
+                                            <li>easy info comparison</li>
+                                            <li>scalable information density</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--consumer data-->
+        <div class="col-sm-12 hyHomeSlider">
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/hight_slider.png"></img>
+                </div>
+            </div>
+        </div><!-- consumerization slider-->
+    </div><!-- the consumer carousel-->
+    <!-- -->
+    <div class="row consumerCarousel" id="hyHomeLowTC">
+        <div class="col-sm-6">
+            <div id="hyLowtCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/home/lowt_user_1.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/lowt_user_2.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/lowt_user_3.png"></img>
+                    </div>
+                </div> <!-- carousel inner -->
+            </div> <!-- carousel hyLowtCarouselID -->
+        </div><!--consumer carousel-->
+        <div class="col-sm-6 hyPersonaTabs">
+            <h2>The Low-touch Business User</h2>
+            <h4>Our  IT, Operations, Customer Service, Order Management people</h4>
+            <div class="container">
+                <div class="row hyPersonaTab">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">who/what/where/when/how</a></li>
+                        <li><a data-toggle="tab" href="#lowt_interface">interfaces must be</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="lowt_wwwwh">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>works at work (generally)</li>
+                                            <li>high demand on time and effort; serial tasker</li>
+                                            <li>independent</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>low and high bandwidth environments</li>
+                                            <li>laptop (mostly)</li>
+                                            <li>efficiency-driven</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="lowt_interface">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>data-at-a-glance</li>
+                                            <li>tabular manipulation</li>
+                                            <li>keyboard shortcuts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>one-click actions</li>
+                                            <li>linear and nonlinear flows</li>
+                                            <li>consumer interface emulation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--consumer data-->
+        <div class="col-sm-12 hyHomeSlider">
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/lowt_slider.png"></img>
+                </div>
+            </div>
+        </div><!-- consumerization slider-->
+    </div><!-- the consumer carousel-->
+    <!-- -->
+    <div class="row consumerCarousel" id="hyHomeSoftDevC">
+        <div class="col-sm-6 col-sm-push-6">
+            <div id="hyDevCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/home/developer_1.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/developer_2.png"></img>
+                    </div>
+                    <div class="item">
+                        <img src="images/home/developer_3.png"></img>
+                    </div>
+                </div> <!-- carousel inner -->
+            </div> <!-- carousel hyDevCarouselID -->
+        </div><!--consumer carousel-->
+        <div class="col-sm-6 col-sm-pull-6 hyPersonaTabs">
+            <h2>and of course, Software Developers</h2>
+            <h4>The heart of YaaS. They need stability, community and tools that don’t get in their way</h4>
+            <div class="container">
+                <div class="row hyPersonaTab">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#dev_wwwwh">who/what/where/when/how</a></li>
+                        <li><a data-toggle="tab" href="#dev_interface">interfaces must be</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="dev_wwwwh">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>works everywhere</li>
+                                            <li>works with remote teams</li>
+                                            <li>high bandwidth and low bandwidth</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>typically under tight deadlines</li>
+                                            <li>task-driven</li>
+                                            <li>performance-driven</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="dev_interface">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>quick and easy setup</li>
+                                            <li>instant feedback</li>
+                                            <li>error avoidance</li>
+                                            <li>one-click access to documentation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>speed</li>
+                                            <li>access to developer community</li>
+                                            <li>preview of final experience where applicable</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--consumer data-->
+        <div class="col-sm-12 hyHomeSlider">
+            <div class="row">
+                <p class="text-center">The "consumerization continuum"</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 text-right">
+                    <p>Less Visual,</p>
+                    <p>Less Collaborative,</p>
+                    <p>Shorter Task Duration</p>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
+                    <p>More Visual,</p>
+                    <p>More Collaborative,</p>
+                    <p>Lonter Task Duration</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-md-pull-3">
+                    <img src="images/home/developer_slider.png"></img>
+                </div>
+            </div>
+        </div><!-- consumerization slider-->
+    </div><!-- the consumer carousel-->
+</div><!--/.container-->

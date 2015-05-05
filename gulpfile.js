@@ -42,7 +42,7 @@ var paths = {
 };
 
 // Create Iconfont
-gulp.task('iconfont', 
+gulp.task('iconfont',
     function()
     {
         gulp.src(paths.icons_path)
@@ -89,16 +89,16 @@ gulp.task('setpath', function(cb) {
         )
         .pipe(
             gulp.dest('src/less/globals')
-        ); 
+        );
     cb(); // Callback to less task
 });
 
 // Complile general Less Files
 gulp.task('less', ['setpath'] ,
-    function() 
+    function()
     {
-         
-        
+
+
         gulp.src(paths.less)
         //.pipe(sourcemaps.init())
         .pipe(
@@ -132,7 +132,7 @@ gulp.task('less', ['setpath'] ,
 
 
 // Complile general Less Files
-gulp.task('html', 
+gulp.task('html',
     function ()
     {
         gulp.src(paths.html)
@@ -166,7 +166,7 @@ gulp.task('styleguide', function () {
 });
 
 
-gulp.task('connect', 
+gulp.task('connect',
     connect.server(
         {
             root: [__dirname + '/docs/kss'],
@@ -186,17 +186,53 @@ gulp.task('deploy', function(){
      */
     gulp.src(
         [
+            './bower_components/jquery/dist/jquery.min.js',
+            './bower_components/bootstrap/dist/js/bootstrap.min.js',
+            './bower_components/select2/select2.js',
+            './src/js/**/*.js'
+        ]
+    ).pipe(gulp.dest(paths.environment+'/js/'))
+    .pipe(gulp.dest('docs/kss/public/js/'));
+
+
+    gulp.src(
+        [
             './src/js/**/*.js'
         ]
     )
-    .pipe( concat('techne.min.js') )
-    .pipe( uglify() )
-    .pipe(
-        gulp.dest(
-                paths.environment+'/js/'
-        )
-    );
-    
+    .pipe(concat('techne.min.js'))
+    .pipe(uglify())
+
+    .pipe(insert.append(function(){
+        var headTagAppendScript = ['\n'];
+
+
+        if(config.appendComponentCss || config.appendComponentHTML)
+        {
+            headTagAppendScript.push(";(function() {");
+                headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
+                if(config.appendComponentCss)
+                {
+                    headTagAppendScript.push("var css = document.createElement('link');");
+                    headTagAppendScript.push("css.rel = 'stylesheet';");
+                    headTagAppendScript.push("css.href = '"+ config.bower_path +"/hyTechne/dist/css/techne.min.css';");
+                    headTagAppendScript.push("headTag.appendChild(css);");
+                }
+
+                if(config.appendComponentHTML) {
+                    headTagAppendScript.push("var html = document.createElement('link');");
+                    headTagAppendScript.push("html.rel = 'import';");
+                    headTagAppendScript.push("html.href = '" + config.bower_path + "/hyTechne/dist/html/techne.html';");
+                    headTagAppendScript.push("headTag.appendChild(html);");
+                }
+
+            headTagAppendScript.push("})();");
+        }
+        return headTagAppendScript.join('\n');
+    }))
+    .pipe(gulp.dest(paths.environment+'/js/'))
+    .pipe(gulp.dest('docs/kss/public/js/'));
+
 
     /*
     HTML
@@ -205,7 +241,7 @@ gulp.task('deploy', function(){
 
     gulp.src(paths.html)
     .pipe( concat('techne.html') )
-    .pipe( 
+    .pipe(
         insert.prepend(
             function()
             {
@@ -230,7 +266,7 @@ gulp.task('deploy', function(){
     )
     .pipe( zip('techne'+require('./bower.json').version+ '.zip') )
     .pipe( gulp.dest('docs/kss/public/release-archive/') );
-    
+
     gulp.src('dist/**/*')
     .pipe( gulp.dest('docs/kss/public/dist') );
 
@@ -242,8 +278,8 @@ gulp.task('deploy', function(){
 
 
 // Rerun the task when a file changes
-gulp.task('watch', 
-    function() 
+gulp.task('watch',
+    function()
     {
         gulp.watch(paths.less_watch, ['less']);
         //gulp.watch(paths.css, ['css']);
