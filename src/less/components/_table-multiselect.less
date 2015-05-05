@@ -73,4 +73,21 @@
 	}
 }
 
+.table-row-select{
+	width: 15px;
+	cursor: pointer;
+	.glyphicon{
+		color: #EDF3FA;
+
+	}
+	&:hover{
+		.glyphicon{
+			color: @table-cell-select-color-hover;
+
+			.active &{
+				color: fade(#fff, 50%);
+			}
+		}
+	}
+}
 
