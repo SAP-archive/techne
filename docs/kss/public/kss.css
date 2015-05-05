@@ -1075,6 +1075,9 @@ li.L9 {
 .container.hyHomePage .hyHomeHeader a {
   font-size: 27px;
 }
+.container.hyHomePage .hyHomeHeader {
+  text-weight: lighter;
+}
 .container.hyHomePage .hyHomeHeader2 p small {
   font-size: 14px;
 }
@@ -1091,6 +1094,9 @@ li.L9 {
 }
 .container.hyHomePage .hyHomeSlider .hySliderText p {
   font-size: 15px;
+}
+.container.hyHomePage a {
+  color: #0486e0;
 }
 .container.hyHomePage .hyHomeContentCentered .row {
   padding-top: 10px;
@@ -1136,6 +1142,14 @@ li.L9 {
 .container.hyHomePage .personaIcons {
   background-color: #ffffff;
 }
+.container.hyHomePage .hyHomeHeader3 a.hyPersonaText:hover,
+.container.hyHomePage .personaIcons a.hyPersonaText:hover {
+  text-decoration: none;
+}
+.container.hyHomePage .hyHomeHeader3 a.hyPersonaText p,
+.container.hyHomePage .personaIcons a.hyPersonaText p {
+  color: black;
+}
 .container.hyHomePage .hyHomeHeader3 p {
   padding-left: 100px;
   padding-right: 100px;
@@ -1177,7 +1191,7 @@ li.L9 {
   padding-right: 20px;
 }
 .container.hyHomePage .consumerCarousel .hyHomeSlider {
-  padding-top: 2x0px;
+  padding-top: 20px;
 }
 .container.hyHomePage .consumerCarousel .carousel-indicators {
   bottom: -30px;
@@ -1193,7 +1207,7 @@ li.L9 {
   margin-right: 5px;
 }
 .container.hyHomePage .consumerCarousel .hyPersonaTabs .container {
-  max-width: 500px;
+  max-width: 600px;
 }
 .container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab .w5_list li {
   line-height: 200%;

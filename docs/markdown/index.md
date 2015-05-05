@@ -15,7 +15,7 @@
         <div class="row personaIcons">
             <h3 class="text-center">Who are the techne personas?</h3>
             <div class="col-md-3 text-center">
-                <a data-slide-to="0" data-target="#hyPersonasCarouselID" >
+                <a data-slide-to="0" data-target="#hyPersonasCarouselID" class="hyPersonaText">
                     <p class="text-center">The Consumer</p>
                     <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
                     <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>

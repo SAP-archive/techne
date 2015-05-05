@@ -766,6 +766,7 @@ li.L9{
 /*Styling for the new home page*/
 .container.hyHomePage{
 
+
     /*font sizes per psd-not following the styleguide*/
     h1{
         font-size: 57px;
@@ -776,6 +777,10 @@ li.L9{
     .hyHomeHeader p,
     .hyHomeHeader a{
         font-size: 27px;
+    }
+
+    .hyHomeHeader{
+        text-weight: lighter;
     }
     .hyHomeHeader2 p small{
         font-size: 14px;
@@ -795,6 +800,9 @@ li.L9{
 
     .hyHomeSlider .hySliderText p{
         font-size: 15px;
+    }
+    a{
+        color: #0486e0;
     }
     /*font sizes per psd-not following the styleguide*/
 
@@ -843,6 +851,12 @@ li.L9{
     .hyHomeHeader3,
     .personaIcons{
         background-color: #ffffff;
+        a.hyPersonaText:hover{
+                text-decoration: none;
+        }
+        a.hyPersonaText p{
+            color: black;
+        }
     }
 
     //@media (min-width: 992px){
@@ -892,7 +906,7 @@ li.L9{
         padding-left:20px;
         padding-right:20px;
         .hyHomeSlider{
-            padding-top:2x0px;
+            padding-top:20px;
         }
         .carousel-indicators{
             bottom: -30px;
@@ -908,7 +922,7 @@ li.L9{
             }
         }
         .hyPersonaTabs .container{
-            max-width: 500px;
+            max-width: 600px;
             .hyPersonaTab{
                 .w5_list li{
                     line-height: 200%;
