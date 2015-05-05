@@ -116,7 +116,22 @@ So far this just includes buttons. </p>
                     <div class="kss-mod-head">
 
                         <div class="kss-mod-desc">
-                            <p>Indicate that the button is the primary feature of this form.</p>
+                            <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-default</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg btn-default">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.</p>
 
                         </div>
                         <div class="kss-mod-name">.btn-primary</div>
@@ -131,22 +146,7 @@ So far this just includes buttons. </p>
                     <div class="kss-mod-head">
 
                         <div class="kss-mod-desc">
-                            <p>Make the button change appearance to reflect it being disabled.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-warning</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-warning">
-	This is a Button
-</button>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
+                            <p>The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
 
                         </div>
                         <div class="kss-mod-name">.btn-danger</div>
@@ -254,7 +254,8 @@ You can use this with all available btn modifier classes</p>
         <section id="section-1.4" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.4</span> Custom Checkboxes</h1>
             <div class="kss-description">
-                <p>Deprecated</p>
+                <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).
+Deprecated</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -310,7 +311,7 @@ please don&apos;t use it anymore</p>
             <h1 class="kss-title"><span class="kss-ref">1.5</span> Scrollable Tabs</h1>
             <div class="kss-description">
                 <p>Component for arrows left and right for scrolling tabs
-Deprecated</p>
+Experimental</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -941,6 +942,89 @@ select states on a tablerow level without any further markup</p>
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/a&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.11" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.11</span> Table Drop</h1>
+            <div class="kss-description">
+                <p>Modifier Class for responsive behavoir </p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-drop table-hover table-striped">
+  <thead>
+    <tr>
+       <th><span class="glyphicon glyphicon-ok"></span></th>
+      <th>#</th>
+      <th><a href="#">First Name</a></th>
+      <th>Last Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">1</td>
+      <td data-label="First Name"><a href="#">Mark</a></td>
+      <td data-label="Last Name">Otto</td>
+      <td data-label="State"><span class="label label-danger">Error</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">2</td>
+      <td data-label="First Name">Jacob</td>
+      <td data-label="Last Name">Thornton</td>
+      <td data-label="State"><span class="label label-default">Default</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">3</td>
+      <td data-label="First Name">Larry</td>
+      <td data-label="Last Name">the Bird</td>
+      <td data-label="State"><span class="label label-success">Success</span></td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-drop table-hover table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+       &lt;th&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class=&quot;active&quot;&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;1&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Otto&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;Error&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;2&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Jacob&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Thornton&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;3&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Larry&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;the Bird&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
                 </div>
             </div>
         </section>
