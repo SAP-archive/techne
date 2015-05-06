@@ -190,6 +190,7 @@ $(function(){
         } else {
 
             //inactivate the previous image
+			$(aActivePersonasID[0]).parent().removeClass("hyPersonaText");
             $(aActivePersonasID[0]).removeClass('hidden');
             $(aActivePersonasID[1]).addClass('hidden');
 
@@ -200,6 +201,7 @@ $(function(){
             //make it active
             $(aActivePersonasID[1]).removeClass('hidden');
             $(aActivePersonasID[0]).addClass('hidden');
+			$(aActivePersonasID[0]).parent().addClass("hyPersonaText");
         }
     });
 
