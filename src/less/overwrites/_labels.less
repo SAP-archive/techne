@@ -17,7 +17,7 @@
 @label-primary-color: @default-blue;
 @label-success-color: @default-green;
 @label-info-color: @dark-grey;
-@label-warning-color: @default-yellow-600; 
+@label-warning-color: darken(@default-yellow, 5%); 
 @label-danger-color: @default-red; 
 
 
@@ -26,6 +26,11 @@
   text-transform: uppercase;
 }
 
+.active {
+  .label{
+    background: #fff;
+  }
+}
 
 // Labels
 

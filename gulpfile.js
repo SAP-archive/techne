@@ -64,6 +64,7 @@ gulp.task('iconfont',
                     consolidate('lodash',
                         {
                             glyphs: codepoints,
+                            appendCodepoints: true,
                             fontName: 'hyicon',
                             fontPath: "fonts/",
                             className: 'hyicon'
