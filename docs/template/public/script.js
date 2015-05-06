@@ -157,7 +157,7 @@ $(function(){
     var aActivePersonasID = ['#hyConsumUpImg', '#hyConsumOverImg'];
     var aInactivePersonasID = ['#hyConsumUpImg','#hyHighTUpImg','#hyLowTUpImg','#hyDevUpImg'];
     var fUpdatePersonaImgs = function() {
-        if($(window).width() <= 768) {
+        if($(window).width() <= 992) {
             for (var i = 0; i <= aInactivePersonasID.length; i++){
                 $(aInactivePersonasID[i]).addClass('hidden').prev().addClass('hidden');
             }
@@ -176,7 +176,7 @@ $(function(){
 
     $('#hyPersonasCarouselID').on('slide.bs.carousel', function(oEvent){
 
-        if($(window).width() <= 768){
+        if($(window).width() <= 992){
             //inactivate the previous image
             $(aActivePersonasID[1]).addClass('hidden');
 
@@ -190,6 +190,7 @@ $(function(){
         } else {
 
             //inactivate the previous image
+			$(aActivePersonasID[0]).parent().removeClass("hyPersonaText");
             $(aActivePersonasID[0]).removeClass('hidden');
             $(aActivePersonasID[1]).addClass('hidden');
 
@@ -200,11 +201,12 @@ $(function(){
             //make it active
             $(aActivePersonasID[1]).removeClass('hidden');
             $(aActivePersonasID[0]).addClass('hidden');
+			$(aActivePersonasID[0]).parent().addClass("hyPersonaText");
         }
     });
 
     //add tabs in the nav bar for Guidelines page
-    
+
 
     $(window).on('resize', fUpdatePersonaImgs);
     //---------------------
