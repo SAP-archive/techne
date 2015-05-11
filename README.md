@@ -2,15 +2,18 @@
 
 List of Components
 
-## Quick start
+## Use Techne
+You can easily  install Techne using [Bower](http://bower.io/):
+`bower install hyTechne`
+
+## Contribute to Techne
 
 Four quick step to get started:
 
 - Clone the repo.
 - Run [npm](https://www.npmjs.org): `npm install`.
 - Run [npm](https://www.npmjs.org): `npm start` or run [gulp](http://gulpjs.com/): `gulp`
-- If you have a differnt folder setup than the default bower, you can modify the config.json
-and run `git update-index --skip-worktree config.json && git update-index --skip-worktree src/less/globals/_paths.less`
+- If you have a different folder setup than the default bower, you should modify the config.json to fit your needs.
 
 
 ### What's the structure? 
@@ -27,7 +30,6 @@ Within the repo you'll find the following directories and files:
 │   ├── css
 │   ├── js
 │   ├── fonts
-│   └── templates
 ├── docs
 ```
 
@@ -51,3 +53,5 @@ and add in the file something like:
 @bower-path: '../../bower_components';  // Path to bower_components folder
 @hytech-path: '../../bower_components/hyTechne'; // Path to hytech folder
 ```
+
+Note: In order to build the less the minimum required version of less is 2.3.0. 
