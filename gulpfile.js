@@ -66,7 +66,7 @@ gulp.task('iconfont',
                             glyphs: codepoints,
                             appendCodepoints: true,
                             fontName: 'hyicon',
-                            fontPath: "fonts/",
+                            fontPath: "/fonts/",
                             className: 'hyicon'
                         }
                     )
