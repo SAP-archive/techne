@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Techne: Yaas Styleguide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+  <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
+
+</head>
+<body class="kss-body">
+
+  <div class="main-content" id="kss-wrapper">
+    <section id="content" class="row-offcanvas row-offcanvas-left">
+
+  <!-- / SUPER HEADER -->
+    <header class="navbar-super-holder">
+      <div class="navbar-super" role="navigation">
+          <a href="/" class="domain">
+              <img class="domain-logo" src="https://www.yaas.io/globalressources/img/techne.svg" alt="techne">
+          </a>
+          <ul class="nav-super">
+              <li><a href="https://www.yaas.io">YaaS Home</a></li>
+              <li><a href="https://builder.yaas.io">Builder</a></li>
+              <li class="active"><a href="https://devportal.yaas.io">Dev Portal</a></li>
+              <li><a href="https://appexchange.yaas.io">App Exchange</a></li>
+          </ul>
+          <a href="http://www.hybris.com" target="_blank" class="brand">
+              <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company">
+          </a>
+          <a href="#" class="nav-super-toggle">
+              <span class="nav-super-triangle"></span>
+          </a>
+      </div>
+      <div id="kss-top-nav">
+
+          <a href="#menu-toggle" id="menu-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+
+          </a>
+
+
+          <ul class="hidden-xs">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="Guidelines.html">Guidelines</a></li>
+              <li><a href="kitchensink.html">Kitchen Sink</a></li>
+              <li><a href="Download.html">Download</a></li>
+              <!--<li><a href="patterns.html">Patterns</a></li>-->
+              <!--<li><a href="layouts.html">Layouts</a></li>-->
+
+              <!-- comment the generic file listing as we have specific order of the pages-->
+              <!--
+                <li><a href="Download.html">DOWNLOAD</a></li>
+              
+                <li><a href="Guidelines.html">GUIDELINES</a></li>
+              
+                <li><a href="Patterns.html">PATTERNS</a></li>
+              
+                <li><a href="index.html">INDEX</a></li>
+              
+                <li><a href="kitchensink.html">KITCHENSINK</a></li>
+              
+                <li><a href="layouts.html">LAYOUTS</a></li>
+              -->
+          </ul>
+
+
+      </div>
+  </header>
+  <!-- / SUPER HEADER -->
+  <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
+
+    <aside>
+        <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
+
+
+
+                <ul class="kss-menu sidebar-nav" data-kss-ref="1">
+                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
+                        <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
+                        <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
+                        <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
+                        <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
+                </ul>
+        </nav>
+
+
+    </aside>
+  </div>
+
+
+  <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
+
+    <article id="kss-content">
+        <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Components</h1>
+            <div class="kss-description">
+                <p>Reusable elements that can be used across the site.
+So far this just includes buttons. </p>
+
+            </div>
+        </section>
+        <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Buttons</h1>
+            <div class="kss-description">
+                <p>A majority of buttons in the site are built from the same base class.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg {$modifiers}">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-default</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg btn-default">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-primary</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg btn-primary">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-danger</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg btn-danger">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
+	This is a Button
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Toggle Buttons</h1>
+            <div class="kss-description">
+                <p>A majority of buttons in the site are built from the same base class.
+Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div data-toggle="buttons" class="btn-group">
+	<label class="btn btn-toggle btn-lg active {$modifiers} ">
+		<input type="radio" id="option1" name="options"> On
+	</label>
+	<label class="btn btn-toggle btn-lg {$modifiers} ">
+		<input type="radio" id="option2" name="options"> Off
+	</label>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            
+                        </div>
+                        <div class="kss-mod-name">:hover</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div data-toggle="buttons" class="btn-group">
+	<label class="btn btn-toggle btn-lg active pseudo-class-hover ">
+		<input type="radio" id="option1" name="options"> On
+	</label>
+	<label class="btn btn-toggle btn-lg pseudo-class-hover ">
+		<input type="radio" id="option2" name="options"> Off
+	</label>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div data-toggle=&quot;buttons&quot; class=&quot;btn-group&quot;&gt;
+	&lt;label class=&quot;btn btn-toggle btn-lg active {$modifiers} &quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;option1&quot; name=&quot;options&quot;&gt; On
+	&lt;/label&gt;
+	&lt;label class=&quot;btn btn-toggle btn-lg {$modifiers} &quot;&gt;
+		&lt;input type=&quot;radio&quot; id=&quot;option2&quot; name=&quot;options&quot;&gt; Off
+	&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Tables </h1>
+            <div class="kss-description">
+                <p>Various Kinds of tables</p>
+
+            </div>
+        </section>
+        <section id="section-1.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.3</span> File Upload Buttons</h1>
+            <div class="kss-description">
+                <p>Input Type File needs special markup to get skinned in a proper way. 
+You can use this with all available btn modifier classes</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="file-selector">
+	<span class="btn btn-default btn-lg {$modifiers}">
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;file-selector&quot;&gt;
+	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
+		&lt;span&gt;Upload File Button&lt;/span&gt;
+		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
+	&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.4</span> Custom Checkboxes</h1>
+            <div class="kss-description">
+                <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).
+Deprecated</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="checkbox">
+ <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
+ <label for="optionsCheck1">Check me out</label>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;checkbox&quot;&gt;
+ &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
+ &lt;label for=&quot;optionsCheck1&quot;&gt;Check me out&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.5</span> Custom Radioboxes</h1>
+            <div class="kss-description">
+                <p>Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
+</div>
+<div class="radio">
+	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
+	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
+	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.5</span> Scrollable Tabs</h1>
+            <div class="kss-description">
+                <p>Component for arrows left and right for scrolling tabs
+Experimental</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="scrollable-tabs-container">
+    <a class="scroller scroller-left">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+    </a>
+    <a class="scroller scroller-right">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+    <div class="scrollable-tabs">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active">
+                <a role="tab" data-toggle="tab" >Tab 1</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 2</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 3</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 4</a>
+            </li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;scrollable-tabs-container&quot;&gt;
+    &lt;a class=&quot;scroller scroller-left&quot;&gt;
+        &lt;i class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class=&quot;scroller scroller-right&quot;&gt;
+        &lt;i class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;scrollable-tabs&quot;&gt;
+        &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+            &lt;li class=&quot;active&quot;&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 4&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.6" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.6</span> Read Only Form Elements</h1>
+            <div class="kss-description">
+                <p>Read Only Form Elements share the same styling as
+the well know input-lg, input-sm size modifier classes. 
+Use them if you want to provide inline text with a label
+within a form.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="form-group">
+	<label class="control-label">Service name</label>
+	<p class="form-readonly-text {$modifiers}">
+	Content
+	</p>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>input large styling</p>
+
+                        </div>
+                        <div class="kss-mod-name">.form-readonly-text-lg</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="form-group">
+	<label class="control-label">Service name</label>
+	<p class="form-readonly-text form-readonly-text-lg">
+	Content
+	</p>
+</div>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>input small styling</p>
+
+                        </div>
+                        <div class="kss-mod-name">.form-readonly-text-sm</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <div class="form-group">
+	<label class="control-label">Service name</label>
+	<p class="form-readonly-text form-readonly-text-sm">
+	Content
+	</p>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+	&lt;label class=&quot;control-label&quot;&gt;Service name&lt;/label&gt;
+	&lt;p class=&quot;form-readonly-text {$modifiers}&quot;&gt;
+	Content
+	&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.7" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.7</span> Hierachical Table</h1>
+            <div class="kss-description">
+                <p>A majority of buttons in the site are built from the same base class.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class=" y-h-table clearfix">
+    <div class="y-h-tablehead">
+        <div class="col-md-4">Category Name</div>
+        <div class="col-md-3">Child Categories</div>
+        <div class="col-md-5">Linked Products</div>
+    </div>
+        <div ng-repeat="category in categories"
+            class="y-h-table-row clearfix">
+            <!--- LEVEL 1 -->
+            <div class="col-md-4">
+                <div class="first table-behavoir">
+                    <span class="table-behavoir-cell toggle-cell seperator">
+                        <a href class="btn btn-link toggle pull-right">
+                            <span class="glyphicon glyphicon-minus">
+                            </span>
+                        </a>
+                    </span>
+                    <span class="table-behavoir-cell row-image-cell">
+                        <a href="#">
+                            <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+                        </a>
+                    </span>
+                    <span class="table-behavoir-cell name-cell">
+                        <strong>
+                            <a href="#">{{category.name | localized}}</a>
+                        </strong>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+            <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+            <div class="col-md-2 sticky-right">
+                <div class="dropdown pull-right">
+                    <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+                    <span class="hyicon-more"></span></a>
+                    <ul class="dropdown-menu pull-right text-left" role="menu">
+                        <li><a href="#">Edit Category Details</a></li>
+                        <li><a href="">Add Child Category</a></li>
+                        <li class="divider"></li>
+                        <li><a href ng-click="delete(category)">Delete Category</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- LEVEL 2 -->
+            <div class="subcategories-cnt">
+                <div class=" clearfix subcategories-list" style="clear:both;">
+                    <div class="y-h-table-row clearfix">
+                        <div class="col-md-4">
+                            <div class="first table-behavoir">
+                                <span class="table-behavoir-cell toggle-cell seperator">
+                                    <a href class="btn btn-link toggle pull-right">
+                                        <span class="glyphicon glyphicon-minus">
+                                        </span>
+                                    </a>
+                                </span>
+                                <span class="table-behavoir-cell row-image-cell">
+                                    <a href="#">
+                                        <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+                                    </a>
+                                </span>
+                                <span class="table-behavoir-cell name-cell">
+                                    <strong>
+                                        <a href="#">{{category.name | localized}}</a>
+                                    </strong>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+                        <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+                        <div class="col-md-2 sticky-right">
+                            <div class="dropdown pull-right">
+                                <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+                                <span class="hyicon-more"></span></a>
+                                <ul class="dropdown-menu pull-right text-left" role="menu">
+                                    <li><a href="#">Edit Category Details</a></li>
+                                    <li><a href="">Add Child Category</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href ng-click="delete(category)">Delete Category</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- LEVEL 3 -->
+                        <div class="subcategories-cnt">
+                            <div class=" clearfix subcategories-list" style="clear:both;">
+                                <div class="y-h-table-row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="first table-behavoir">
+                                            <span class="table-behavoir-cell toggle-cell seperator">
+                                                <a href class="btn btn-link toggle pull-right">
+                                                    <span class="glyphicon glyphicon-plus">
+                                                    </span>
+                                                </a>
+                                            </span>
+                                            <span class="table-behavoir-cell row-image-cell">
+                                                <a href="#">
+                                                    <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
+                                                </a>
+                                            </span>
+                                            <span class="table-behavoir-cell name-cell">
+                                                <strong>
+                                                    <a href="#">{{category.name | localized}}</a>
+                                                </strong>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
+                                    <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
+                                    <div class="col-md-2 sticky-right">
+                                        <div class="dropdown pull-right">
+                                            <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
+                                            <span class="hyicon-more"></span></a>
+                                            <ul class="dropdown-menu pull-right text-left" role="menu">
+                                                <li><a href="#">Edit Category Details</a></li>
+                                                <li><a href="">Add Child Category</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href ng-click="delete(category)">Delete Category</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // LEVEL 3 -->
+                    </div>
+                </div>
+            </div>
+            <!-- // LEVEL 2 -->
+        </div>
+        <!-- // LEVEL 1 -->
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot; y-h-table clearfix&quot;&gt;
+    &lt;div class=&quot;y-h-tablehead&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;Category Name&lt;/div&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;Child Categories&lt;/div&gt;
+        &lt;div class=&quot;col-md-5&quot;&gt;Linked Products&lt;/div&gt;
+    &lt;/div&gt;
+        &lt;div ng-repeat=&quot;category in categories&quot;
+            class=&quot;y-h-table-row clearfix&quot;&gt;
+            &lt;!--- LEVEL 1 --&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;div class=&quot;first table-behavoir&quot;&gt;
+                    &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
+                        &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
+                            &lt;span class=&quot;glyphicon glyphicon-minus&quot;&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
+                        &lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
+                        &lt;strong&gt;
+                            &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
+                        &lt;/strong&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
+            &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
+            &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
+                &lt;div class=&quot;dropdown pull-right&quot;&gt;
+                    &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
+                    &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- LEVEL 2 --&gt;
+            &lt;div class=&quot;subcategories-cnt&quot;&gt;
+                &lt;div class=&quot; clearfix subcategories-list&quot; style=&quot;clear:both;&quot;&gt;
+                    &lt;div class=&quot;y-h-table-row clearfix&quot;&gt;
+                        &lt;div class=&quot;col-md-4&quot;&gt;
+                            &lt;div class=&quot;first table-behavoir&quot;&gt;
+                                &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
+                                    &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
+                                        &lt;span class=&quot;glyphicon glyphicon-minus&quot;&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/span&gt;
+                                &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
+                                    &lt;a href=&quot;#&quot;&gt;
+                                        &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
+                                    &lt;/a&gt;
+                                &lt;/span&gt;
+                                &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
+                                    &lt;strong&gt;
+                                        &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
+                                    &lt;/strong&gt;
+                                &lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
+                        &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
+                        &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
+                            &lt;div class=&quot;dropdown pull-right&quot;&gt;
+                                &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
+                                &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                                &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
+                                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- LEVEL 3 --&gt;
+                        &lt;div class=&quot;subcategories-cnt&quot;&gt;
+                            &lt;div class=&quot; clearfix subcategories-list&quot; style=&quot;clear:both;&quot;&gt;
+                                &lt;div class=&quot;y-h-table-row clearfix&quot;&gt;
+                                    &lt;div class=&quot;col-md-4&quot;&gt;
+                                        &lt;div class=&quot;first table-behavoir&quot;&gt;
+                                            &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
+                                                &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
+                                                    &lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;
+                                                    &lt;/span&gt;
+                                                &lt;/a&gt;
+                                            &lt;/span&gt;
+                                            &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
+                                                &lt;a href=&quot;#&quot;&gt;
+                                                    &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
+                                                &lt;/a&gt;
+                                            &lt;/span&gt;
+                                            &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
+                                                &lt;strong&gt;
+                                                    &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
+                                                &lt;/strong&gt;
+                                            &lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
+                                    &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
+                                    &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
+                                        &lt;div class=&quot;dropdown pull-right&quot;&gt;
+                                            &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
+                                            &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                                            &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
+                                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- // LEVEL 3 --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- // LEVEL 2 --&gt;
+        &lt;/div&gt;
+        &lt;!-- // LEVEL 1 --&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.8" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.8</span> Small Toggle</h1>
+            <div class="kss-description">
+                <p>Small toggle button that is used for small inline indication of a status
+in combination with a link </p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <span class="y-toggle">
+  <input type="checkbox" id="toggleid"/>
+  <label for="toggleid">Labeltext (optional)</label>
+</span>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;span class=&quot;y-toggle&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;toggleid&quot;/&gt;
+  &lt;label for=&quot;toggleid&quot;&gt;Labeltext (optional)&lt;/label&gt;
+&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.8" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.8</span> Multiselect Table</h1>
+            <div class="kss-description">
+                <p>The multiselct table modifier class provides 
+select states on a tablerow level without any further markup</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-multi-select table-striped">
+	<tr class="active">
+		<td>Content</td>
+	</tr>
+	<tr>
+		<td>Content</td>
+	</tr>
+	<tr>
+		<td>Content</td>
+	</tr>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-multi-select table-striped&quot;&gt;
+	&lt;tr class=&quot;active&quot;&gt;
+		&lt;td&gt;Content&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Content&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Content&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.9" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.9</span> Responsive Table</h1>
+            <div class="kss-description">
+                <p>A majority of buttons in the site are built from the same base class.
+
+</p>
+<p>Experimental: Needs to have further crossbrowsertesting!</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-hover table-multi-select y-responsive-table table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th><a href="#">First Name</a></th>
+			<th>Last Name</th>
+			<th>State</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="active">
+			<td>1</td>
+			<td><a href="#">Mark</a></td>
+			<td>Otto</td>
+			<td><span class="label label-danger">Default</span></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Jacob</td>
+			<td>Thornton</td>
+			<td><span class="label label-warning">Primary</span></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Larry</td>
+			<td>the Bird</td>
+			<td><span class="label label-success">Success</span></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Mark</td>
+			<td>Otto</td>
+			<td><span class="label label-danger">Default</span></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Jacob</td>
+			<td>Thornton</td>
+			<td><span class="label label-warning">Primary</span></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Larry</td>
+			<td>the Bird</td>
+			<td><span class="label label-success">Success</span></td>
+		</tr>
+	</tbody>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table table-striped&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
+			&lt;th&gt;Last Name&lt;/th&gt;
+			&lt;th&gt;State&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr class=&quot;active&quot;&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
+			&lt;td&gt;Otto&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-danger&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;Jacob&lt;/td&gt;
+			&lt;td&gt;Thornton&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-warning&quot;&gt;Primary&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;Larry&lt;/td&gt;
+			&lt;td&gt;the Bird&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;Mark&lt;/td&gt;
+			&lt;td&gt;Otto&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-danger&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;Jacob&lt;/td&gt;
+			&lt;td&gt;Thornton&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-warning&quot;&gt;Primary&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;Larry&lt;/td&gt;
+			&lt;td&gt;the Bird&lt;/td&gt;
+			&lt;td&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.10" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.10</span> Thumbnails</h1>
+            <div class="kss-description">
+                <p>Thumbnail with Status Indicator and centered hover content</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <a class="thumbnail {$modifiers}">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>selected state</p>
+
+                        </div>
+                        <div class="kss-mod-name">.active</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <a class="thumbnail active">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;a class=&quot;thumbnail {$modifiers}&quot;&gt;
+	&lt;div class=&quot;alert alert-primary&quot;&gt;Status&lt;/div&gt;
+	&lt;img src=&quot;http://placehold.it/440x350&quot; alt=&quot;alttext&quot;&gt;
+	&lt;div class=&quot;show-onhover&quot;&gt;
+		&lt;div class=&quot;centered&quot;&gt; 			
+			&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Some Button&lt;/button&gt;&lt;br/&gt; &lt;br/&gt;
+			&lt;button class=&quot;btn btn-default&quot;&gt;Some Button&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.11" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.11</span> Table Drop</h1>
+            <div class="kss-description">
+                <p>Modifier Class for responsive behavoir </p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-drop table-hover table-striped">
+  <thead>
+    <tr>
+       <th><span class="glyphicon glyphicon-ok"></span></th>
+      <th>#</th>
+      <th><a href="#">First Name</a></th>
+      <th>Last Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">1</td>
+      <td data-label="First Name"><a href="#">Mark</a></td>
+      <td data-label="Last Name">Otto</td>
+      <td data-label="State"><span class="label label-danger">Error</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">2</td>
+      <td data-label="First Name">Jacob</td>
+      <td data-label="Last Name">Thornton</td>
+      <td data-label="State"><span class="label label-default">Default</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">3</td>
+      <td data-label="First Name">Larry</td>
+      <td data-label="Last Name">the Bird</td>
+      <td data-label="State"><span class="label label-success">Success</span></td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-drop table-hover table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+       &lt;th&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class=&quot;active&quot;&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;1&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Otto&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;Error&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;2&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Jacob&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Thornton&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;3&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Larry&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;the Bird&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.12" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.12</span> Locals Editor</h1>
+            <div class="kss-description">
+                <p>Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <div class="form-group locals-editor">
+    <div class="locals-header clearfix">
+        <div class="pull-right">
+            <div class="validation-status">
+            <span class="glyphicon glyphicon-globe">
+                </span>
+            </div>
+            <a href="" class="btn-link btn">
+              <span class="glyphicon glyphicon-chevron-down">
+              </span>
+            </a>
+        </div>
+        <label class="control-label">Label</label>
+    </div>
+    <div class="form-group">
+        <div class="input-group property" baas-form-name ng-form="innerForm">
+              <input name="lastName" type="text" class="form-control input-lg">
+               <span class="input-group-addon">EN</span>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;div class=&quot;form-group locals-editor&quot;&gt;
+    &lt;div class=&quot;locals-header clearfix&quot;&gt;
+        &lt;div class=&quot;pull-right&quot;&gt;
+            &lt;div class=&quot;validation-status&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-globe&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn-link btn&quot;&gt;
+              &lt;span class=&quot;glyphicon glyphicon-chevron-down&quot;&gt;
+              &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
+              &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+               &lt;span class=&quot;input-group-addon&quot;&gt;EN&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="section-1.13" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.13</span> Icons</h1>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <span class="hyicon {$modifiers}"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e001</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-add</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-add"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e002</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-arrow</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-arrow"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e003</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-back</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-back"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e004</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-checked</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-checked"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e005</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-chevron</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-chevron"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e006</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-close</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-close"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e007</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-dragdrop</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-dragdrop"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e008</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-expand</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-expand"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e009</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-collapse</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-collapse"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00a</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-localization</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-localization"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00b</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-grid</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-grid"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00c</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-list</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-list"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00d</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-more</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-more"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00e</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-remove</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-remove"></span>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>Codepoint: U+e00f</p>
+
+                        </div>
+                        <div class="kss-mod-name">.hyicon-search</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <span class="hyicon hyicon-search"></span>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;span class=&quot;hyicon {$modifiers}&quot;&gt;&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </article>
+  </div>
+
+</section>
+
+</div>
+  <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
+<!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+
+  <script src="public/prettify.js"></script>
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/main.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/select2.js"></script>
+  <script src="public/js/techne.min.js"></script>
+
+  <!--<script src="public/jquery-ui.js"></script>-->
+  <script src="public/script.js"></script>
+  <!--<script src="public/super-nav.js"></script>-->
+
+
+    <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
+</html>
