@@ -4,7 +4,7 @@
 // select states on a tablerow level without any further markup
 // 
 // Markup:
-//<table class="table table-multi-select">
+//<table class="table table-multi-select table-striped">
 //	<tr class="active">
 //		<td>Content</td>
 //	</tr>
@@ -73,4 +73,21 @@
 	}
 }
 
+.table-row-select{
+	width: 15px;
+	cursor: pointer;
+	.glyphicon{
+		color: #EDF3FA;
+
+	}
+	&:hover{
+		.glyphicon{
+			color: @table-cell-select-color-hover;
+
+			.active &{
+				color: fade(#fff, 50%);
+			}
+		}
+	}
+}
 

@@ -53,21 +53,33 @@
 
 
           <ul class="hidden-xs">
-              <!--<li><a href="index.html" class="active">Home</a></li>-->
-              <!--<li><a href="guidelines.html">Guidelines</a></li>-->
-              <!--<li><a href="controls.html">Controls</a></li>-->
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="Guidelines.html">Guidelines</a></li>
+              <li><a href="kitchensink.html">Kitchen Sink</a></li>
+              <li><a href="Download.html">Download</a></li>
               <!--<li><a href="patterns.html">Patterns</a></li>-->
+              <!--<li><a href="layouts.html">Layouts</a></li>-->
+
+              <!-- comment the generic file listing as we have specific order of the pages-->
+              <!--
+                <li><a href="Download.html">DOWNLOAD</a></li>
+              
                 <li><a href="Guidelines.html">GUIDELINES</a></li>
-                <li><a href="Home.html">HOME</a></li>
+              
                 <li><a href="Patterns.html">PATTERNS</a></li>
+              
                 <li><a href="index.html">INDEX</a></li>
+              
+                <li><a href="kitchensink.html">KITCHENSINK</a></li>
+              
+                <li><a href="layouts.html">LAYOUTS</a></li>
+              -->
           </ul>
 
 
       </div>
   </header>
   <!-- / SUPER HEADER -->
-
   <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
 
     <aside>
@@ -76,17 +88,19 @@
 
 
                 <ul class="kss-menu sidebar-nav" data-kss-ref="1">
-                    <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
-                    <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
-                    <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
-                    <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
-                    <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
+                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
+                        <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
+                        <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
+                        <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
+                        <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
                 </ul>
         </nav>
 
 
     </aside>
   </div>
+
+
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
 
     <article id="kss-content">
@@ -116,7 +130,22 @@ So far this just includes buttons. </p>
                     <div class="kss-mod-head">
 
                         <div class="kss-mod-desc">
-                            <p>Indicate that the button is the primary feature of this form.</p>
+                            <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
+
+                        </div>
+                        <div class="kss-mod-name">.btn-default</div>
+                    </div>
+                    <div class="kss-modifier-example">
+                        <button class="btn btn-lg btn-default">
+	This is a Button
+</button>
+                    </div>
+                </div>
+                <div class="kss-modifier">
+                    <div class="kss-mod-head">
+
+                        <div class="kss-mod-desc">
+                            <p>The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.</p>
 
                         </div>
                         <div class="kss-mod-name">.btn-primary</div>
@@ -131,22 +160,7 @@ So far this just includes buttons. </p>
                     <div class="kss-mod-head">
 
                         <div class="kss-mod-desc">
-                            <p>Make the button change appearance to reflect it being disabled.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.btn-warning</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <button class="btn btn-lg btn-warning">
-	This is a Button
-</button>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>&quot;Press&quot; the button down when clicked.</p>
+                            <p>The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
 
                         </div>
                         <div class="kss-mod-name">.btn-danger</div>
@@ -254,7 +268,8 @@ You can use this with all available btn modifier classes</p>
         <section id="section-1.4" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.4</span> Custom Checkboxes</h1>
             <div class="kss-description">
-                <p>Deprecated</p>
+                <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).
+Deprecated</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -310,9 +325,7 @@ please don&apos;t use it anymore</p>
             <h1 class="kss-title"><span class="kss-ref">1.5</span> Scrollable Tabs</h1>
             <div class="kss-description">
                 <p>Component for arrows left and right for scrolling tabs
-
-</p>
-<p>Deprecated</p>
+Experimental</p>
 
             </div>
             <div class="kss-modifier-block">
@@ -327,11 +340,17 @@ please don&apos;t use it anymore</p>
     </a>
     <div class="scrollable-tabs">
         <ul class="nav nav-tabs" role="tablist">
-            <!--<li class="property" ng-class="{active: $index == 0}" ng-repeat="iso in keys" baas-field-validate-->
-                <!--ng-model="iso">-->
-            <li class="property" ng-class="{active: $index == 0}" ng-repeat="iso in keys"
-                ng-model="iso">
-                <a role="tab" data-toggle="tab" ng-click="setTab($index, $event)">{{iso}}</a>
+            <li class="active">
+                <a role="tab" data-toggle="tab" >Tab 1</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 2</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 3</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 4</a>
             </li>
         </ul>
     </div>
@@ -348,11 +367,17 @@ please don&apos;t use it anymore</p>
     &lt;/a&gt;
     &lt;div class=&quot;scrollable-tabs&quot;&gt;
         &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
-            &lt;!--&lt;li class=&quot;property&quot; ng-class=&quot;{active: $index == 0}&quot; ng-repeat=&quot;iso in keys&quot; baas-field-validate--&gt;
-                &lt;!--ng-model=&quot;iso&quot;&gt;--&gt;
-            &lt;li class=&quot;property&quot; ng-class=&quot;{active: $index == 0}&quot; ng-repeat=&quot;iso in keys&quot;
-                ng-model=&quot;iso&quot;&gt;
-                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; ng-click=&quot;setTab($index, $event)&quot;&gt;{{iso}}&lt;/a&gt;
+            &lt;li class=&quot;active&quot;&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 4&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
@@ -735,7 +760,7 @@ select states on a tablerow level without any further markup</p>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <table class="table table-multi-select">
+                        <table class="table table-multi-select table-striped">
 	<tr class="active">
 		<td>Content</td>
 	</tr>
@@ -749,7 +774,7 @@ select states on a tablerow level without any further markup</p>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;table class=&quot;table table-multi-select&quot;&gt;
+                    <pre><code data-language="html">&lt;table class=&quot;table table-multi-select table-striped&quot;&gt;
 	&lt;tr class=&quot;active&quot;&gt;
 		&lt;td&gt;Content&lt;/td&gt;
 	&lt;/tr&gt;
@@ -775,7 +800,7 @@ select states on a tablerow level without any further markup</p>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
-                        <table class="table table-hover table-multi-select y-responsive-table">
+                        <table class="table table-hover table-multi-select y-responsive-table table-striped">
 	<thead>
 		<tr>
 			<th>#</th>
@@ -826,7 +851,7 @@ select states on a tablerow level without any further markup</p>
                     </div>
                 </div>
                 <div class="kss-markup">
-                    <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table&quot;&gt;
+                    <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table table-striped&quot;&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th&gt;#&lt;/th&gt;
@@ -934,6 +959,89 @@ select states on a tablerow level without any further markup</p>
                 </div>
             </div>
         </section>
+        <section id="section-1.11" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.11</span> Table Drop</h1>
+            <div class="kss-description">
+                <p>Modifier Class for responsive behavoir </p>
+
+            </div>
+            <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                    <div class="kss-modifier-example">
+                        <table class="table table-drop table-hover table-striped">
+  <thead>
+    <tr>
+       <th><span class="glyphicon glyphicon-ok"></span></th>
+      <th>#</th>
+      <th><a href="#">First Name</a></th>
+      <th>Last Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">1</td>
+      <td data-label="First Name"><a href="#">Mark</a></td>
+      <td data-label="Last Name">Otto</td>
+      <td data-label="State"><span class="label label-danger">Error</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">2</td>
+      <td data-label="First Name">Jacob</td>
+      <td data-label="Last Name">Thornton</td>
+      <td data-label="State"><span class="label label-default">Default</span></td>
+    </tr>
+    <tr>
+      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
+      <td data-label="#">3</td>
+      <td data-label="First Name">Larry</td>
+      <td data-label="Last Name">the Bird</td>
+      <td data-label="State"><span class="label label-success">Success</span></td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+                <div class="kss-markup">
+                    <pre><code data-language="html">&lt;table class=&quot;table table-drop table-hover table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+       &lt;th&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class=&quot;active&quot;&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;1&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Otto&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;Error&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;2&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Jacob&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;Thornton&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+      &lt;td data-label=&quot;#&quot;&gt;3&lt;/td&gt;
+      &lt;td data-label=&quot;First Name&quot;&gt;Larry&lt;/td&gt;
+      &lt;td data-label=&quot;Last Name&quot;&gt;the Bird&lt;/td&gt;
+      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </section>
         <section id="section-1.12" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">1.12</span> Locals Editor</h1>
             <div class="kss-description">
@@ -1020,10 +1128,10 @@ please don&apos;t use it anymore.</p>
                             <p>Codepoint: U+e002</p>
 
                         </div>
-                        <div class="kss-mod-name">.hyicon-alert</div>
+                        <div class="kss-mod-name">.hyicon-arrow</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-alert"></span>
+                        <span class="hyicon hyicon-arrow"></span>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -1111,10 +1219,10 @@ please don&apos;t use it anymore.</p>
                             <p>Codepoint: U+e009</p>
 
                         </div>
-                        <div class="kss-mod-name">.hyicon-help</div>
+                        <div class="kss-mod-name">.hyicon-collapse</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-help"></span>
+                        <span class="hyicon hyicon-collapse"></span>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -1137,10 +1245,10 @@ please don&apos;t use it anymore.</p>
                             <p>Codepoint: U+e00b</p>
 
                         </div>
-                        <div class="kss-mod-name">.hyicon-locked</div>
+                        <div class="kss-mod-name">.hyicon-grid</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-locked"></span>
+                        <span class="hyicon hyicon-grid"></span>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -1150,10 +1258,10 @@ please don&apos;t use it anymore.</p>
                             <p>Codepoint: U+e00c</p>
 
                         </div>
-                        <div class="kss-mod-name">.hyicon-logo</div>
+                        <div class="kss-mod-name">.hyicon-list</div>
                     </div>
                     <div class="kss-modifier-example">
-                        <span class="hyicon hyicon-logo"></span>
+                        <span class="hyicon hyicon-list"></span>
                     </div>
                 </div>
                 <div class="kss-modifier">
@@ -1208,17 +1316,19 @@ please don&apos;t use it anymore.</p>
 </div>
   <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
 <!-- SCRIPTS -->
-  <script src="public/dist/js/techne.min.js"></script>
   <script src="public/kss.js"></script>
-  
-  <script src="public/prettify.js"></script>
-  <!--<script src="public/jquery.js"></script>-->
-  <script src="public/main.js"></script>
 
-  <script src="public/jquery-ui.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/main.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/select2.js"></script>
+  <script src="public/js/techne.min.js"></script>
+
+  <!--<script src="public/jquery-ui.js"></script>-->
   <script src="public/script.js"></script>
-  <script src="public/super-nav.js"></script>
-  
+  <!--<script src="public/super-nav.js"></script>-->
+
 
     <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
 </html>

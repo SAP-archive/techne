@@ -53,21 +53,33 @@
 
 
           <ul class="hidden-xs">
-              <!--<li><a href="index.html" class="active">Home</a></li>-->
-              <!--<li><a href="guidelines.html">Guidelines</a></li>-->
-              <!--<li><a href="controls.html">Controls</a></li>-->
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="Guidelines.html">Guidelines</a></li>
+              <li><a href="kitchensink.html">Kitchen Sink</a></li>
+              <li><a href="Download.html">Download</a></li>
               <!--<li><a href="patterns.html">Patterns</a></li>-->
+              <!--<li><a href="layouts.html">Layouts</a></li>-->
+
+              <!-- comment the generic file listing as we have specific order of the pages-->
+              <!--
+                <li><a href="Download.html">DOWNLOAD</a></li>
+              
                 <li><a href="Guidelines.html">GUIDELINES</a></li>
-                <li><a href="Home.html">HOME</a></li>
+              
                 <li><a href="Patterns.html">PATTERNS</a></li>
+              
                 <li><a href="index.html">INDEX</a></li>
+              
+                <li><a href="kitchensink.html">KITCHENSINK</a></li>
+              
+                <li><a href="layouts.html">LAYOUTS</a></li>
+              -->
           </ul>
 
 
       </div>
   </header>
   <!-- / SUPER HEADER -->
-
   <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
 
     <aside>
@@ -76,17 +88,19 @@
 
 
                 <ul class="kss-menu sidebar-nav" data-kss-ref="3">
-                    <li class="kss-menu-item"><a href="index.html">0.0: Overview</a></li>
-                    <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
-                    <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
-                    <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
-                    <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
+                        <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
+                        <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
+                        <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
+                        <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
+                        <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
                 </ul>
         </nav>
 
 
     </aside>
   </div>
+
+
   <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
 
     <article id="kss-content">
@@ -315,83 +329,13 @@ please don&apos;t use it anymore</p>
             </div>
         </section>
         <section id="section-3.3" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">3.3</span> Tabs</h1>
-            <div class="kss-description">
-                <p>Extend tabs to show validation states
-Deprecated - The states will be removed in the future 
-please don&apos;t use it anymore</p>
-
-            </div>
+            <h1 class="kss-title"><span class="kss-ref">3.3</span> .has-success             - Indicate that the button is the primary feature of this form. .has-info               - Indicate that the button will remove a feature, or other negative connotations. .has-warning             - Highlight the button when hovered. .has-error            - Make the button change appearance to reflect it being disabled.</h1>
             <div class="kss-modifier-block">
                 <div class="kss-modifier kss-modifier-original">
                     <div class="kss-modifier-example">
                         <ul class="nav nav-tabs">
  <li role="presentation" class="active {$modifiers}"><a href="#">Home</a></li>
  <li role="presentation" class="{$modifiers}"><a href="#">Profile</a></li>
-</ul>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button is the primary feature of this form.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.has-success</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <ul class="nav nav-tabs">
- <li role="presentation" class="active has-success"><a href="#">Home</a></li>
- <li role="presentation" class="has-success"><a href="#">Profile</a></li>
-</ul>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Indicate that the button will remove a feature, or other negative connotations.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.has-info</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <ul class="nav nav-tabs">
- <li role="presentation" class="active has-info"><a href="#">Home</a></li>
- <li role="presentation" class="has-info"><a href="#">Profile</a></li>
-</ul>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Highlight the button when hovered.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.has-warning</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <ul class="nav nav-tabs">
- <li role="presentation" class="active has-warning"><a href="#">Home</a></li>
- <li role="presentation" class="has-warning"><a href="#">Profile</a></li>
-</ul>
-                    </div>
-                </div>
-                <div class="kss-modifier">
-                    <div class="kss-mod-head">
-
-                        <div class="kss-mod-desc">
-                            <p>Make the button change appearance to reflect it being disabled.</p>
-
-                        </div>
-                        <div class="kss-mod-name">.has-error</div>
-                    </div>
-                    <div class="kss-modifier-example">
-                        <ul class="nav nav-tabs">
- <li role="presentation" class="active has-error"><a href="#">Home</a></li>
- <li role="presentation" class="has-error"><a href="#">Profile</a></li>
 </ul>
                     </div>
                 </div>
@@ -931,17 +875,19 @@ select states on a tablerow level without any further markup</p>
 </div>
   <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
 <!-- SCRIPTS -->
-  <script src="public/dist/js/techne.min.js"></script>
   <script src="public/kss.js"></script>
-  
-  <script src="public/prettify.js"></script>
-  <!--<script src="public/jquery.js"></script>-->
-  <script src="public/main.js"></script>
 
-  <script src="public/jquery-ui.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/main.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/select2.js"></script>
+  <script src="public/js/techne.min.js"></script>
+
+  <!--<script src="public/jquery-ui.js"></script>-->
   <script src="public/script.js"></script>
-  <script src="public/super-nav.js"></script>
-  
+  <!--<script src="public/super-nav.js"></script>-->
+
 
     <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
 </html>

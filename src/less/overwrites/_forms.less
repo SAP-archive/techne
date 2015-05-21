@@ -1,0 +1,30 @@
+@form-label-color: @light-blue-700;
+
+label{
+  color: @form-label-color;
+}
+
+
+.has-success,
+.has-warning,
+.has-error {
+
+  // Keep label textcolor default
+  label,
+  label.control-label,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: @form-label-color;
+  }
+}
+
+
+.has-error{
+    // Color error form element value
+  .form-control {
+    color: @state-danger-text;
+  }
+}
+

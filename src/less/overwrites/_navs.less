@@ -40,13 +40,40 @@
 // CUSTOMIZING SKINNING FOR TABS 
 .nav-tabs {
   > li {
+    &.active{
+      > a{
+        border-width: 0 0 5px;
+        border-color: @nav-tabs-active-link-hover-border-color;
+        background-color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active{
+          border-width: 0 0 5px;
+          border-color: @nav-tabs-active-link-hover-border-color;
+          background:   @nav-tabs-active-link-hover-border-color;
+          color: #fff;
+        }
+      }
+    }
     > a {
+      
+      transition: background 0.1s ease-out, border 0.1s ease-out;
+      text-transform: uppercase;
+      border-radius: 0;
+      border-width: 0 0 5px;
 
     		&:hover,
     		&:active{
     			color: @default-blue;
-    			border-color: @default-blue
+          border-width: 0 0 5px;
+          background: #fff;
     		}
+        &:focus,
+        &:active{
+          background: #fff;
+          border-color: @nav-tabs-link-active-border-color;
+        }
 
     	}
     }
@@ -59,10 +86,10 @@
 
 // Tabs
 //
-// Extend tabs to show validation states
-// Deprecated - The states will be removed in the future 
-// please don't use it anymore
-// 
+// Tabs are a good way to organize and group information on page while reducing information density. 
+// Warning: Tab States are getting depricated pretty soon
+//
+
 // Markup:
 //<ul class="nav nav-tabs">
 //  <li role="presentation" class="active {$modifiers}"><a href="#">Home</a></li>
@@ -173,8 +200,7 @@
         &:focus {
           color: @color;
           background-color: #fff;
-          border: 1px solid @border;
-          border-bottom-color: transparent;
+          border-color: @border;
         }
       }
     }
