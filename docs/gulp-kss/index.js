@@ -29,7 +29,7 @@ module.exports = function(opt) {
     var buffer = [];
     var firstFile = null;
 
-    / Is called for each file and writes all files to buffer /
+//    / Is called for each file and writes all files to buffer /
     function bufferContents(file){
         if (file.isNull()) return; // ignore
         if (file.isStream()) return this.emit('error', new PluginError('gulp-kss',  'Streaming not supported'));
@@ -39,7 +39,7 @@ module.exports = function(opt) {
         buffer.push(file.contents.toString('utf8'));
     }
 
-    / Is called when all files were added to buffer /
+//    / Is called when all files were added to buffer /
     function endStream(){
         var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
         template = handlebars.compile(template);
