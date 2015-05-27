@@ -35,7 +35,7 @@
 
 .dataCard{
 //  display: table;
-  
+  cursor: pointer;
   width: 100%;
   padding: 13px;
   background-color: #fff;
@@ -44,6 +44,13 @@
   .cardRow{
     overflow:hidden;
   }
+
+  .cardRow .radio{
+    margin-top: 3px;
+
+  }
+
+
 
   .col1{
     margin-right: 16px;
@@ -76,10 +83,46 @@
   }
 
   .actions .hyicon{
-      font-size: 33px;
-      color: @btn-warning-color;
+    font-size: 33px;
+    color: @btn-warning-color;
+    vertical-align: top;
   }
 
+  .dataCard .col3 .hyicon-remove {
+    color: @default-red;
+  }
+
+}
+
+.dataCard.settingsGroup{
+
+  .col1{
+    width: 80%;
+    max-width: 80%;
+    margin-right: 0;
+  }
+
+  .col2{
+    text-align: right;
+    min-width: 20%;
+    max-width: 20%;
+    padding-top: 0;
+  }
+
+}
+
+.dataCard .actions{
+  padding-top: 6px;
+}
+
+.list-group > .list-group-item.dataCard {
+  border: 1px solid #dce1e8;
+}
+
+.cardCalloutHeader{
+  color: #fff;
+  padding: 13px;
+  background-color: #7f90a4;
 }
 
 // DataCard Check Selection
