@@ -1236,12 +1236,6 @@ body.has-left-nav .sidebar-nav {
 .container.hyDownloadPage {
   background-color: white;
 }
-@media (min-width: 768px) {
-  .container.hyDownloadPage {
-    margin-left: -271px;
-    margin-right: -20px;
-  }
-}
 .container.hyDownloadPage .hyDwnlBtns a {
   width: 100%;
 }

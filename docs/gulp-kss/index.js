@@ -11,13 +11,6 @@ var handlebars = require('handlebars');
 var PluginError = gutil.PluginError;
 var File = gutil.File;
 
-var oSections = {"Guidelines": [{"text": "Spirit & Vision", "id": "#spirit-vision"},
-                                {'text': "Design Principles", 'id': '#design-principles'},
-                                {'text': "Navigation", 'id': '#navigation'},
-                                {'text': "Visual System", 'id': '#visual-system'},
-                                {'text': "Tone & Voice", 'id': '#tone-voice'},
-                                {'text': "Accessibility", 'id': '#accessibility'}]};
-
 var handlebarHelpers = require('./handlebarHelpers');
 
 module.exports = function(opt) {
@@ -78,21 +71,6 @@ module.exports = function(opt) {
             {
 
                 var mdFiles = fs.readdirSync(opt.markDownDirectory);
-                //create an array of all generate file names
-                var fNamesArr = [];
-                for( i = 0; i < mdFiles.length; i++)
-                {
-                    var txt = mdFiles[i].split('.')[0];
-                    fNamesArr.push(
-                        {
-                            displayText: txt.toUpperCase(),
-                            url: txt + '.html'
-                        }
-                    );
-                }
-
-//                console.log('fNamesArr', fNamesArr);
-//
 
                 for( i = 0; i < mdFiles.length; i++)
                 {
@@ -102,12 +80,13 @@ module.exports = function(opt) {
                     gulp.src(markDownFile)
                         .pipe(through(function (file) {
 
-                            var fName =  file.path.split('/').pop().split('.')[0]
-
+                            var fName =  file.path.split('/').pop().split('.')[0];
+                            
+                            var mdNavConfig = kss.getMarkdownNav(file);
+                            mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
                             var content = template({
-                                showLeftNav: (fName === 'index' || fName === 'Download' ? false: true),
-                                htmlPagesFromMD: fNamesArr,
-                                sectionData: oSections[fName],
+                                showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
+                                sectionData: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
                                 styleguide: styleguide,
                                 sectionRoots: sectionRoots,
                                 sections: jsonSections(childSections),
@@ -139,7 +118,6 @@ module.exports = function(opt) {
                 childSections = styleguide.section(sectionRoots[i]+'.*');
 
                 var content = template({
-                    htmlPagesFromMD: fNamesArr,
                     showLeftNav: true, //show the nav bar for all sections
                     styleguide: styleguide,
                     sections: jsonSections(childSections),
