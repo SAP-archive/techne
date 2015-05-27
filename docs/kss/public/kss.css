@@ -581,7 +581,6 @@ body.has-left-nav #kss-wrapper.toggled #kss-nav {
   width: 250px;
 }
 #kss-main {
-  width: auto;
   padding: 15px;
 }
 body.has-left-nav #kss-wrapper.toggled #kss-main {

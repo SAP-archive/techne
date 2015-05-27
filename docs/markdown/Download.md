@@ -1,35 +1,4 @@
-<!--SIDENAVCONFIG
-	{
-		"showLeftNav": true,
-		"navigation": [
-			{
-				"text": "Spirit & Vision", 
-				"id": "#spirit-vision"
-			},
-      {
-        "text": "Design Principles", 
-        "id": "#design-principles"
-      },
-      {
-        "text": "Navigation", 
-        "id": "#navigation"
-      },
-      {
-        "text": "Visual System", 
-        "id": "#visual-system"
-      },
-      {
-        "text": "Tone & Voice",
-        "id": "#tone-voice"
-      },
-      {
-        "text": "Accessibility",
-        "id": "#accessibility"
-      }
-    ]
-	}
--->
-<div class="container hyDownloadPage" >
+<div class="hyDownloadPage container-fluid" >
     <div class="page-header row text-center">
         <h1 class="text-center">Download hybris techne</h1>
         <p class="text-uppercase">current version 0.1.6</p>
