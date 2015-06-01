@@ -1,41 +1,41 @@
 <div class="container hyHomePage" >
-    <div class="page-header hyHomeHeader">
-        <h1 class="text-center">hybris techne*</h1>
-        <p class="text-center">techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
-        <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-5"><a class="text-center" href="/Download.html">Download now>></a></div>
+    <div class="page-header hyHomeHeader text-center">
+        <h1>hybris techne*</h1>
+        <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
+        <div><a href="/Download.html">Download now>></a></div>
     </div> <!-- header -->
-    <div class="row hyHomeHeader2 row">
-        <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
+    <div class="row hyHomeHeader2 text-center">
+        <p><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
     </div>
     <div class="hyHomeContentCentered">
-        <div class="row hyHomeHeader3" row>
-            <h3 class="text-center">Why is techne different?</h3>
-            <p class="text-center">techne design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. <a>Watch the video >></a></p>
+        <div class="row hyHomeHeader3 text-center">
+            <h3>Why is techne different?</h3>
+            <p>techne design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. <a>Watch the video >></a></p>
         </div><!-- row why techne -->
-        <div class="row personaIcons">
-            <h3 class="text-center">Who are the techne personas?</h3>
-            <div class="col-md-3 text-center">
+        <div class="row personaIcons text-center">
+            <h3>Who are the techne personas?</h3>
+            <div class="col-md-3">
                 <a data-slide-to="0" data-target="#hyPersonasCarouselID" class="hyPersonaText">
                     <p class="text-center">The Consumer</p>
                     <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
                     <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3">
                 <a data-slide-to="1" data-target="#hyPersonasCarouselID">
                     <p class="text-center">High-touch Business Users</p>
                     <img id="hyHighTUpImg" src="images/home/high_touch_up.png"/>
                     <img id="hyHighTOverImg" class="hidden" src="images/home/high_touch_over.png"/>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3">
                 <a data-slide-to="2" data-target="#hyPersonasCarouselID">
                     <p class="text-center">Low-touch Business Users</p>
                     <img id="hyLowTUpImg" src="images/home/low_touch_up.png"/>
                     <img id="hyLowTOverImg" class="hidden" src="images/home/low_touch_over.png"/>
                 </a>
-            </div>
-            <div class="col-md-3 text-center">
+            </div>x
+            <div class="col-md-3">
                 <a data-slide-to="3" data-target="#hyPersonasCarouselID">
                     <p class="text-center">Software Developers</p>
                     <img id="hyDevUpImg" src="images/home/developers_up.png"/>

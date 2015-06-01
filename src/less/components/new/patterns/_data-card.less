@@ -33,53 +33,130 @@
 //
 // Styleguide 5.1
 
+.dataCards {
+  display: flex;
+  align-items: strech;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  flow-direction: row;
+
+  // IE 10 Fix
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-align: stretch;
+  -ms-flex-wrap: wrap;
+
+  @media (max-width:@screen-xs-max) {
+    flex-direction: column;
+  }
+}
+
+
+
+/*****/
+a.dataCard{
+  transition: background 0.05s ease-in-out;
+}
+
 .dataCard{
 //  display: table;
-  
+  cursor: pointer;
   width: 100%;
-  padding: 13px;
+  padding: 0;
+  margin-bottom: 0px;
   background-color: #fff;
   border: 1px solid @default-greyblue-300;
 
+  //sm display
+  @media (min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
+    width: 50%;
+  }
+  //md display
+  @media (min-width:@screen-md-min) {
+    width: 33.333%;
+  }
+
+  
+  
+  a&:hover *,
+  a&:focus *{
+    color: #000!important;
+  }
+
+  .panel > .list-group .list-group-item&{
+    border-width: 1px;
+  }
+
+  .checkbox input,
+  .checkbox label{
+    width: auto;
+  }
+
   .cardRow{
     overflow:hidden;
+    height: 100%;
+    padding: 13px;
+
+    transition: background 0.05s ease-in-out;
+
+    .hyicon-remove{
+      color: @default-red;
+    }
+
+    &.cardRowClickable{
+      cursor: pointer;
+      display: block;
+      // Hover state
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @list-group-link-hover-color;
+        background-color: @list-group-hover-bg;
+
+        & *{
+          color: @list-group-link-hover-color;
+        }
+      }
+    }
   }
 
-  .col1{
-    margin-right: 16px;
+  .statusDataValue > .label{
+    padding-left: 0px;
+    background: transparent;
   }
 
-  .col1, 
-  .col3{
-    max-width: 20%;
+  .cardRow .radio{
+    margin-top: 3px;
 
   }
 
-  .col2{
+
+  .actions{
     padding-top: 6px;
-    line-height: 1.2em;
-    padding-rightt: 25px;
-    max-width: 58%;
-    min-width: 58%;
   }
 
   .cardRow label{
     float: left;
     width: 78%;
-    
-    .col2{
-      width: 80%;
-      
-      
-    }
 
   }
 
   .actions .hyicon{
-      font-size: 33px;
-      color: @btn-warning-color;
+    font-size: 33px;
+    color: @btn-warning-color;
+    vertical-align: top;
   }
 
+  .dataCard .hyicon-remove {
+    color: @default-red;
+  }
+
+}
+
+.cardCalloutHeader{
+  color: #fff;
+  padding: 13px;
+  background-color: #7f90a4;
 }
 
 // DataCard Check Selection

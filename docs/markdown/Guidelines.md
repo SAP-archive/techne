@@ -1,4 +1,36 @@
-<div class="hyGuidelinesPage" >
+<!--SIDENAVCONFIG
+	{
+		"showLeftNav": true,
+		"navigation": [
+			{
+				"text": "Spirit & Vision", 
+				"id": "#spirit-vision"
+			},
+      {
+        "text": "Design Principles", 
+        "id": "#design-principles"
+      },
+      {
+        "text": "Navigation", 
+        "id": "#navigation"
+      },
+      {
+        "text": "Visual System", 
+        "id": "#visual-system"
+      },
+      {
+        "text": "Tone & Voice",
+        "id": "#tone-voice"
+      },
+      {
+        "text": "Accessibility",
+        "id": "#accessibility"
+      }
+    ]
+	}
+-->
+
+<div class="hyGuidelinesPage container-fluid" >
     <section id="spirit-vision" class="page">
         <h2>Spirit & Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>

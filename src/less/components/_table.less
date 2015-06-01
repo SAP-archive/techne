@@ -1,6 +1,8 @@
 .techne-table {
   td {
     display: table-cell;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 
   tr.even {
@@ -10,6 +12,25 @@
   tr.odd {
     background-color: #fff;
   }
+
+
+  tr:hover {
+    background-color: @default-greyblue-200;
+    cursor: pointer;
+    .status{
+      &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED{
+        color: #fff;
+      }
+    }
+  }
+
+  .nested-body{
+    background-color: @nested-body-backgroundcolor;
+    margin: 0 -15px 30px -15px;
+    padding: 15px;
+    border: 1px solid @nested-body-bordercolor;
+  }
+
 
   @media (max-width: @screen-xs-max) {
 
@@ -48,6 +69,15 @@
       border: 1px solid #000 !important;
     }
 
+    tr:hover{
+      cursor: pointer;
+      .status{
+        &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED{
+          color: #fff;
+        }
+      }
+    }
+    
     tr + tr {
       border-top: none !important;
     }
@@ -62,4 +92,53 @@
       padding-right: 0;
     }
   }
+
+  .techne-table tr:first-child {
+    padding-left: 5px !important;
+  }
+
+
+  table.techne-table{
+    padding: 0;
+
+
+
+    tr{
+      border: none !important;
+      padding: 20px 5px;
+    }
+
+    tr.even{
+      background-color: transparent;
+
+    }
+
+    td:before{
+      font-weight: normal !important;
+      display: block !important;
+    }
+
+    td{
+      padding: 3px 10px !important;
+      display: block !important;
+      font-weight: bold !important;
+    }
+
+    td span{
+      display: block !important;
+
+    }
+
+    td + td{
+      padding-top: 12px !important;
+      padding-top: 12px !important;
+    }
+
+    td:after{
+      display: none !imporant;
+    }
+
+
+  }
+  
 }

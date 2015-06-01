@@ -175,7 +175,7 @@ h6{
   label{
     display:inline-block;
     padding-left: 0;
-    width: 90%;
+    width: auto;
     
     
   }
@@ -196,4 +196,87 @@ h6{
    > .btn, > .btn-group{
       margin-top: -2px;
    }
+}
+
+.header-edit{
+  margin-top: 12px;
+
+}
+
+.categoryTable{
+
+  .tablehead{
+    background-color:#7f90a4;
+    font-size: 12px;
+    color: #fff;
+    padding: 15px;
+  }
+
+  .subcategories-list{
+    margin-left: 40px;
+  }
+
+  .category-toggle, .dropdown-toggle{
+    padding: 0;
+  }
+
+
+
+  .categoryRow{
+    background-color: #edf1f5;
+    border: 1px solid #dce1e8;
+    border-top: none;
+    .categoryRow{
+      background-color: #f4f7f9;
+      border: none !important;
+      .categoryRow{
+        background-color: #fafbfc;
+
+        .categoryRow{
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .mobileLayout, .desktopLayout{
+    padding: 15px;
+  }
+
+  .hasNoChildCategories{
+    background-color: #fff !important;
+  }
+
+}
+
+/*CATEGORY TABLE */
+
+@media (max-width: @screen-xs-max) {
+  .categoryTable {
+    .dropdown-menu{
+      min-width: 223px !important;
+    }
+
+    .subcategories-list{
+      margin-left: 0;
+    }
+
+  }
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.techne-table td{
+  padding-top: 23px !important;
+  padding-bottom: 23px !important;
+}
+
+.input-group-addon{
+  background-color: #fff;
+
 }

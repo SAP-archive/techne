@@ -37,7 +37,8 @@
 
 .primaryData{
   color: @gray-base;
-  margin-bottom: 0px;
+  font-size: 15px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -52,7 +53,8 @@
 // Styleguide 4.4
 
 .secondaryData{
-  color: @gray-lighter;
+  color: #7f90a4;
+  font-weight: normal;
   margin-bottom: 3px;
 }
 
@@ -76,4 +78,23 @@
   > .active{
     color: @default-green;
   }
+
+  .inactive{
+    color: @default-red;
+  }
+}
+
+.status{
+  text-transform: uppercase;
+  font-weight: bold;
+
+
+  &.info, &.CREATED, &.CONFIRMED{
+    color: #5bc0de;
+  }
+
+  &.success, &.SHIPPED{
+    color: @default-green;
+  }
+
 }
