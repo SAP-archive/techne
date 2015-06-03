@@ -1046,17 +1046,11 @@ li.L9 {
 .container.hyHomePage {
   padding-left: 0;
   padding-right: 0;
-  margin-top: -26px;
-  margin-right: -15px;
+  margin-top: -30px;
+  margin-right: auto;
+  margin-left: auto;
   width: auto;
   background-color: white;
-  margin-left: -16px;
-}
-@media (min-width: 768px) {
-  .container.hyHomePage {
-    margin-left: -271px;
-    margin-right: -20px;
-  }
 }
 /* remove the lef nav styling for the pages(home and download)*/
 /* overwrite kss styling - maybe can be done better */
@@ -1243,12 +1237,6 @@ li.L9 {
 }
 .container.hyDownloadPage {
   background-color: white;
-}
-@media (min-width: 768px) {
-  .container.hyDownloadPage {
-    margin-left: -271px;
-    margin-right: -20px;
-  }
 }
 .container.hyDownloadPage .hyDwnlBtns a {
   width: 100%;
