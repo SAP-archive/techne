@@ -1,7 +1,7 @@
 <div class="hyDownloadPage container-fluid" >
     <div class="page-header row text-center">
         <h1 class="text-center">Download hybris techne</h1>
-        <p class="text-uppercase">current version 0.1.6</p>
+        <p class="text-uppercase">current version 0.2.0</p>
         <p class="">We have a few options for you to start designing and building with hybris techne fast</p>
     </div>
     <div class="row">
