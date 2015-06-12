@@ -331,10 +331,6 @@ h1.kss-title {
   font-weight: 500;
   font-family: 'Dosis', sans-serif;
 }
-#kss-main,
-#kss-nav {
-  float: left;
-}
 #kss-main {
   border-left: 1px solid #e2e6e9;
   padding-left: 15px;
@@ -564,10 +560,10 @@ li.L9 {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#kss-wrapper.toggled {
+body.has-left-nav #kss-wrapper.toggled {
   padding-left: 250px;
 }
-#kss-nav {
+body.has-left-nav #kss-nav {
   z-index: 1000;
   position: fixed;
   left: 250px;
@@ -581,18 +577,17 @@ li.L9 {
   transition: all 0.5s ease;
   padding: 0;
 }
-#kss-wrapper.toggled #kss-nav {
+body.has-left-nav #kss-wrapper.toggled #kss-nav {
   width: 250px;
 }
 #kss-main {
-  width: auto;
   padding: 15px;
 }
-#kss-wrapper.toggled #kss-main {
+body.has-left-nav #kss-wrapper.toggled #kss-main {
   margin-right: -250px;
 }
 /* Sidebar Styles */
-.sidebar-nav {
+body.has-left-nav .sidebar-nav {
   position: absolute;
   top: 0;
   width: 250px;
@@ -601,15 +596,14 @@ li.L9 {
   list-style: none;
 }
 @media (min-width: 768px) {
-  #kss-wrapper {
+  body.has-left-nav #kss-wrapper {
     padding-left: 250px;
   }
-  #kss-nav {
+  body.has-left-nav #kss-nav {
     width: 250px;
     padding: 0;
   }
   #kss-main {
-    padding: 20px;
     position: relative;
   }
   #kss-wrapper.toggled #kss-main {
@@ -1046,9 +1040,7 @@ li.L9 {
 .container.hyHomePage {
   padding-left: 0;
   padding-right: 0;
-  margin-top: -30px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-top: -26px;
   width: auto;
   background-color: white;
 }
@@ -1058,6 +1050,9 @@ li.L9 {
 .container.hyHomePage {
   /*font sizes per psd-not following the styleguide*/
   /*font sizes per psd-not following the styleguide*/
+}
+.container.hyHomePage .carousel-inner > .item > img {
+  width: 100%;
 }
 .container.hyHomePage h1 {
   font-size: 57px;
@@ -1114,6 +1109,8 @@ li.L9 {
   padding-bottom: 80px;
   margin-bottom: 0;
   padding-top: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 @media (min-width: 768px) {
   .container.hyHomePage .hyHomeHeader p {
@@ -1152,7 +1149,7 @@ li.L9 {
   background-color: #ffffff;
 }
 .container.hyHomePage .personasCarousel #hyPersonasCarouselID {
-  height: 200px;
+  min-height: 200px;
 }
 .container.hyHomePage .personasCarousel .carousel-control {
   padding-top: 50px;
