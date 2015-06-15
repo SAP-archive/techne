@@ -69,7 +69,7 @@
 
 
 
-                        <ul class="kss-menu sidebar-nav" data-kss-ref="4">
+                        <ul class="kss-menu sidebar-nav" data-kss-ref="2">
                                 <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
                                 <li class="kss-menu-item"><a href="section-1.html">1.0: Layout</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html">2.0: Buttons </a></li>
@@ -90,132 +90,104 @@
           </div>
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
-                <section id="section-4" class="kss-section kss-depth-1">
-                    <h1 class="kss-title"><span class="kss-ref">4</span> Forms </h1>
+                <section id="section-2" class="kss-section kss-depth-1">
+                    <h1 class="kss-title"><span class="kss-ref">2</span> Buttons </h1>
                     <div class="kss-description">
                         <p>Reusable elements that can be used across the site.
-So far this just includes form elements. </p>
+So far this just includes buttons. </p>
 
                     </div>
                 </section>
-                <section id="section-4.1" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.1</span> Custom Checkboxes</h1>
+                <section id="section-2.1" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">2.1</span> Buttons</h1>
                     <div class="kss-description">
-                        <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).
-Deprecated</p>
+                        <p>A majority of buttons in the site are built from the same base class.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="checkbox">
- <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
- <label for="optionsCheck1">Check me out</label>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;checkbox&quot;&gt;
- &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
- &lt;label for=&quot;optionsCheck1&quot;&gt;Check me out&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-4.2" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.2</span> Custom Radioboxes</h1>
-                    <div class="kss-description">
-                        <p>Deprecated - This component will be replaced in the future 
-please don&apos;t use it anymore</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
-</div>
-<div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-4.3" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.3</span> Read Only Form Elements</h1>
-                    <div class="kss-description">
-                        <p>Read Only Form Elements share the same styling as
-the well know input-lg, input-sm size modifier classes. 
-Use them if you want to provide inline text with a label
-within a form.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text {$modifiers}">
-	Content
-	</p>
-</div>
+                                <button class="btn btn-lg {$modifiers}">
+	This is a Button
+</button>
                             </div>
                         </div>
                         <div class="kss-modifier">
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>input large styling</p>
+                                    <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
 
                                 </div>
-                                <div class="kss-mod-name">.form-readonly-text-lg</div>
+                                <div class="kss-mod-name">.btn-default</div>
                             </div>
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-lg">
-	Content
-	</p>
-</div>
+                                <button class="btn btn-lg btn-default">
+	This is a Button
+</button>
                             </div>
                         </div>
                         <div class="kss-modifier">
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>input small styling</p>
+                                    <p>The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.</p>
 
                                 </div>
-                                <div class="kss-mod-name">.form-readonly-text-sm</div>
+                                <div class="kss-mod-name">.btn-primary</div>
                             </div>
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-sm">
-	Content
-	</p>
+                                <button class="btn btn-lg btn-primary">
+	This is a Button
+</button>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+
+                                </div>
+                                <div class="kss-mod-name">.btn-danger</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <button class="btn btn-lg btn-danger">
+	This is a Button
+</button>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <pre><code data-language="html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
+	This is a Button
+&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-2.2" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">2.2</span> Buttons (Input Type)</h1>
+                    <div class="kss-description">
+                        <p>Input Type File needs special markup to get skinned in a proper way. 
+You can use this with all available btn modifier classes</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="file-selector">
+	<span class="btn btn-default btn-lg {$modifiers}">
+		<span>Upload File Button</span>
+		<input type="file" multiple="" ng-file-select="">
+	</span>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-	&lt;label class=&quot;control-label&quot;&gt;Service name&lt;/label&gt;
-	&lt;p class=&quot;form-readonly-text {$modifiers}&quot;&gt;
-	Content
-	&lt;/p&gt;
+                            <pre><code data-language="html">&lt;div class=&quot;file-selector&quot;&gt;
+	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
+		&lt;span&gt;Upload File Button&lt;/span&gt;
+		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
+	&lt;/span&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
