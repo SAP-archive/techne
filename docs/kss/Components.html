@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}}">
+<body class="kss-body has-no-left-nav">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
         <div class="navbar-super" role="navigation">
@@ -63,82 +63,10 @@
   <div class="main-content" id="kss-wrapper">
     <section id="content" class="row">
       <!-- / SUPER HEADER -->
-      {{#if showLeftNav}}
-        <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
-
-            <aside>
-                <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
-
-
-
-                        <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
-                            {{#if sectionData}}
-                                {{#each sectionData}}
-                                    <li class="kss-menu-item"><a href="{{id}}">{{text}}</a></li>
-                                {{/each}}
-                            {{else}}
-                                <li class="kss-menu-item"><a href="kitchensink.html">0.0: Overview</a></li>
-                                {{#eachRoot}}
-                                <li class="kss-menu-item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-                                {{/eachRoot}}
-                            {{/if}}
-                        </ul>
-                </nav>
-
-
-            </aside>
-          </div>
-        <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
-      {{else}}
         <div role="main" id="kss-main" class="kss-main col-xs-12">
-      {{/if}}
             <article id="kss-content">
-              {{#if overview}}
-                {{html overview}}
-                {{else}}
-                {{#eachSection rootNumber}}
-                <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
-                    <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
-                    {{#if markup}}
-                    {{#if description}}
-                    <div class="kss-description">
-                        {{{description}}}
-                    </div>
-                    {{/if}}
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                {{modifierMarkup}}
-                            </div>
-                        </div>
-                        {{#eachModifier}}
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
+                <p>asd</p>
 
-                                <div class="kss-mod-desc">
-                                    {{{description}}}
-                                </div>
-                                <div class="kss-mod-name">{{name}}</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                {{modifierMarkup}}
-                            </div>
-                        </div>
-                        {{/eachModifier}}
-                        <div class="kss-markup">
-                            <pre><code data-language="html">{{markup}}</code></pre>
-                        </div>
-                    </div>
-                    {{else}}
-                    {{#if description}}
-                    <div class="kss-description">
-                        {{{description}}}
-                    </div>
-                    {{/if}}
-                    {{/if}}
-                </section>
-                {{/eachSection}}
-                {{/if}}
             </article>
         </div>
 
@@ -160,12 +88,5 @@
   <!--<script src="public/super-nav.js"></script>-->
 
 
-  {{! This won't be included in the demo page }}
-  {{#if argv.xdemo}}
-    <script type="text/javascript">
-    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
-    </script>
-  {{/if}}
     <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
 </html>
