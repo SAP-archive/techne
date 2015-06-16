@@ -1,7 +1,6 @@
 <div class="hyGettingStartedPage container-fluid" >
     <div class="page-header">
         <h1 class="">Getting Started</h1>
-        <p class="">v0.2.0</p>
         <p class="">We have a few options for you to start designing and building with hybris techne fast</p>
     </div>
     <div class="row">

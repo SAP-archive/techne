@@ -121,10 +121,17 @@
 
 
                         <ul class="kss-menu sidebar-nav" data-kss-ref="5">
-                                <li class="kss-menu-item"><a href="section-1.html">1.0: Components</a></li>
-                                <li class="kss-menu-item"><a href="section-3.html">3.0: Extended</a></li>
-                                <li class="kss-menu-item"><a href="section-4.html">4.0: New Components</a></li>
-                                <li class="kss-menu-item"><a href="section-5.html">5.0: Techné Patterns</a></li>
+                                <li class="kss-menu-item"><a href="section-1.html"> Labels</a></li>
+                                <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
+                                <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -134,78 +141,101 @@
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
                 <section id="section-5" class="kss-section kss-depth-1">
-                    <h1 class="kss-title"><span class="kss-ref">5</span> Techné Patterns</h1>
+                    <h1 class="kss-title"><span class="kss-ref">5</span> Tabs </h1>
                     <div class="kss-description">
-                        <p>Component patterns</p>
+                        <p>Reusable elements that can be used across the site.
+So far this just includes tabs. </p>
 
                     </div>
                 </section>
                 <section id="section-5.1" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">5.1</span> DataCard(s)</h1>
+                    <h1 class="kss-title"><span class="kss-ref">5.1</span> Tabs</h1>
+                    <div class="kss-description">
+                        <p>Tabs are a good way to organize and group information on page while reducing information density. 
+Warning: Tab States are getting depricated pretty soon
+
+</p>
+<p>.nav-tabs</p>
+
+                    </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <ul class="list-group">
- <li class="list-group-item dataCard">
-   <div class="cardRow">
-     <div class="col1 pull-left">
-       <div class="userAvatar">
-         <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
-       </div>
-     </div>
-     <div class="col2 pull-left">
-       <p class="primaryData">
-         &lt;Primary Value&gt;
-       </p>
-       <p class="secondaryData">
-         &lt;Secondary Value goes here&gt;
-       </p>
-       <p class="statusDataValue">
-         <span class="active">
-           Active
-         </span>
-       </p>
-     </div>
-     <div class="col3 pull-right">
-       <div class="actions">
-         <span class="hyicon hyicon-plus"></span>
-       </div>
-     </div>
- </div>
- </li>
+                                <ul class="nav nav-tabs">
+ <li role="presentation" class="active"><a href="#">Home</a></li>
+ <li role="presentation" ><a href="#">Profile</a></li>
 </ul>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;ul class=&quot;list-group&quot;&gt;
- &lt;li class=&quot;list-group-item dataCard&quot;&gt;
-   &lt;div class=&quot;cardRow&quot;&gt;
-     &lt;div class=&quot;col1 pull-left&quot;&gt;
-       &lt;div class=&quot;userAvatar&quot;&gt;
-         &lt;img src=&quot;http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg&quot;/&gt;
-       &lt;/div&gt;
-     &lt;/div&gt;
-     &lt;div class=&quot;col2 pull-left&quot;&gt;
-       &lt;p class=&quot;primaryData&quot;&gt;
-         &amp;lt;Primary Value&amp;gt;
-       &lt;/p&gt;
-       &lt;p class=&quot;secondaryData&quot;&gt;
-         &amp;lt;Secondary Value goes here&amp;gt;
-       &lt;/p&gt;
-       &lt;p class=&quot;statusDataValue&quot;&gt;
-         &lt;span class=&quot;active&quot;&gt;
-           Active
-         &lt;/span&gt;
-       &lt;/p&gt;
-     &lt;/div&gt;
-     &lt;div class=&quot;col3 pull-right&quot;&gt;
-       &lt;div class=&quot;actions&quot;&gt;
-         &lt;span class=&quot;hyicon hyicon-plus&quot;&gt;&lt;/span&gt;
-       &lt;/div&gt;
-     &lt;/div&gt;
- &lt;/div&gt;
- &lt;/li&gt;
+                            <pre><code data-language="html">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+ &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li role=&quot;presentation&quot; &gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-5.2" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">5.2</span> Scrollable Tabs</h1>
+                    <div class="kss-description">
+                        <p>Component for arrows left and right for scrolling tabs
+Experimental</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="scrollable-tabs-container">
+    <a class="scroller scroller-left">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+    </a>
+    <a class="scroller scroller-right">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+    <div class="scrollable-tabs">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active">
+                <a role="tab" data-toggle="tab" >Tab 1</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 2</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 3</a>
+            </li>
+            <li>
+                <a role="tab" data-toggle="tab" >Tab 4</a>
+            </li>
+        </ul>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <pre><code data-language="html">&lt;div class=&quot;scrollable-tabs-container&quot;&gt;
+    &lt;a class=&quot;scroller scroller-left&quot;&gt;
+        &lt;i class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class=&quot;scroller scroller-right&quot;&gt;
+        &lt;i class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;scrollable-tabs&quot;&gt;
+        &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+            &lt;li class=&quot;active&quot;&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a role=&quot;tab&quot; data-toggle=&quot;tab&quot; &gt;Tab 4&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>

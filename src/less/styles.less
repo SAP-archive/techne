@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600);
 
 @bower-path: '../../..'; // Default bower_components path - Don't change here
+@hytech-path: "../";
 
 @import "@{bower-path}/bootstrap/less/bootstrap";
 @import (less) "@{bower-path}/select2/select2.css";
@@ -13,68 +14,108 @@
 @import (optional) "./globals/_resource-paths";
 @import "./globals/_utils";
 
-
-// Extended
-//
-// Various kinds of extened bootstrap components
-// many new states and validation styles
-//
-// Styleguide 3.
 @import "./overwrites/__overwrites.less";
-@import "./components/_addToList.less";
 
-// Components
+// Labels
 // 
+// Identifiers for line level status visualization
+// 
+// Styleguide 1
+
+
+
+// Buttons 
+//
 // Reusable elements that can be used across the site.
 // So far this just includes buttons. 
-// 
-// Styleguide 1.
+//
+// Styleguide 2
 
+// Toggles 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes toggles. 
+//
+// Styleguide 3
+
+// Forms 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes form elements. 
+//
+// Styleguide 4
+@import "./components/_forms-toggle";
 @import "./components/_forms-checkboxes";
 @import "./components/_forms-radioboxes";
 @import "./components/_forms-readonly";
 @import "./components/_forms-hint-text";
-@import "./components/_forms-toggle";
 
+// Tabs 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes tabs. 
+//
+// Styleguide 5
+
+@import "./components/_tabs-scrollable";
+
+// Panels 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes panels. 
+//
+// Styleguide 6
 
 // Tables 
 //
-// Various Kinds of tables
+// Reusable elements that can be used across the site.
+// So far this just includes tables. 
 //
-// Styleguide 1.2
-@import "./components/_table-hierachical";
-@import "./components/_table-multiselect";
-@import "./components/_table-responsive";
-@import "./components/_table-drop";
-
-@hytech-path: "../";
-@import "./components/_icons";
-@import "./components/_locals-editor";
-@import "./components/_tabs-scrollable";
-@import "./components/_thumbnails";
-@import "./components/_usercards";
-
+// Styleguide 7
 @import "./components/_table.less";
+
+// Cards 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes cards. 
+//
+// Styleguide 8
+@import "./components/_usercards";
+@import "./components/new/_data.less";
+@import "./components/new/patterns/_data-card.less";
+
+// Listgroups 
+//
+// Reusable elements that can be used across the site.
+// So far this just includes listgroups. 
+//
+// Styleguide 9
+@import "./components/_addToList.less";
+
+// Icons 
+//
+// Reusable icons that can be used across the site.
+//
+// Styleguide 10
+@import "./components/_icons";
+
+// Miscellaneous 
+//
+// Reusable elements that can be used across the site.
+//
+// Styleguide 11
+@import "./components/_locals-editor";
+@import "./components/_thumbnails";
 
 @import "./components/_sticky_navbar.less";
 
 
-// New Components
-//
-// Various kinds of extened bootstrap components
-// many new states and validation styles
-//
-// Styleguide 4.
 
-@import "./components/new/_data.less";
 
-// Techné Patterns
-//
-// Component patterns
-//
-// Styleguide 5.
 
-@import "./components/new/patterns/_data-card.less";
+
+
+
 
 
 // Atoms
