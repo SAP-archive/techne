@@ -1,23 +1,17 @@
-// Labels
+// Status 
 //
-// The multiselct table modifier class provides 
-// select states on a tablerow level without any further markup
+// A type of label used to show the status of a line level element
 // 
 // Markup:
 // <span class="label {$modifiers}" >Status</span>
-// 
-// .label-default - Default Status
+//
 // .label-success - Successfull Status
 // .label-danger - Blocked Status
 //
-// Styleguide 3.9
-
+// Styleguide 1.10
 
 @label-default-color: @label-color;
-@label-primary-color: @default-blue;
 @label-success-color: @default-green;
-@label-info-color: @dark-grey;
-@label-warning-color: darken(@default-yellow, 5%); 
 @label-danger-color: @default-red; 
 
 
@@ -25,44 +19,39 @@
   font-size: 12px;
   text-transform: uppercase;
 }
-
-.active {
-  .label{
-    background: #fff;
-  }
-}
-
 // Labels
-
 .label-variant-custom(@bg-color, @color) {
   color: @color;
   background-color: @bg-color;
 }
 
-
 .label-default {
   .label-variant-custom(@label-default-bg, @label-default-color);
 }
 
-.label-primary {
-  .label-variant-custom(@label-primary-bg, @label-primary-color);
-}
 
 .label-success {
   .label-variant-custom(@label-success-bg, @label-success-color);
-}
-
-.label-info {
-  .label-variant-custom(@label-info-bg, @label-info-color);
-}
-
-.label-warning {
-  .label-variant-custom(@label-warning-bg, @label-warning-color);
 }
 
 .label-danger {
   .label-variant-custom(@label-danger-bg, @label-danger-color);
 }
 
+// Active Status
+//
+// Markup:
+// <div class="active demo-container">
+//  <span class="label {$modifiers}" >Status</span>
+// </div>
+//
+// .label-success - Successfull Status
+// .label-danger - Blocked Status
+//
+// Styleguide 1.20
 
-
+.active {
+  .label{
+    background: #fff;
+  }
+}

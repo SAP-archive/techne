@@ -120,7 +120,7 @@
 
 
 
-                        <ul class="kss-menu sidebar-nav" data-kss-ref="4">
+                        <ul class="kss-menu sidebar-nav" data-kss-ref="11">
                                 <li class="kss-menu-item"><a href="section-1.html"> Labels</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
@@ -140,133 +140,125 @@
           </div>
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
-                <section id="section-4" class="kss-section kss-depth-1">
-                    <h1 class="kss-title"><span class="kss-ref">4</span> Forms </h1>
+                <section id="section-11" class="kss-section kss-depth-1">
+                    <h1 class="kss-title"><span class="kss-ref">11</span> Miscellaneous </h1>
                     <div class="kss-description">
-                        <p>Reusable elements that can be used across the site.
-So far this just includes form elements. </p>
+                        <p>Reusable elements that can be used across the site.</p>
 
                     </div>
                 </section>
-                <section id="section-4.1" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.1</span> Custom Checkboxes</h1>
-                    <div class="kss-description">
-                        <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).
-Deprecated</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="checkbox">
- <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
- <label for="optionsCheck1">Check me out</label>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;checkbox&quot;&gt;
- &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
- &lt;label for=&quot;optionsCheck1&quot;&gt;Check me out&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-4.2" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.2</span> Custom Radioboxes</h1>
+                <section id="section-11.1" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">11.1</span> Locals Editor</h1>
                     <div class="kss-description">
                         <p>Deprecated - This component will be replaced in the future 
-please don&apos;t use it anymore</p>
+please don&apos;t use it anymore.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
-</div>
-<div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
+                                <div class="form-group locals-editor">
+    <div class="locals-header clearfix">
+        <div class="pull-right">
+            <div class="validation-status">
+            <span class="glyphicon glyphicon-globe">
+                </span>
+            </div>
+            <a href="" class="btn-link btn">
+              <span class="glyphicon glyphicon-chevron-down">
+              </span>
+            </a>
+        </div>
+        <label class="control-label">Label</label>
+    </div>
+    <div class="form-group">
+        <div class="input-group property" baas-form-name ng-form="innerForm">
+              <input name="lastName" type="text" class="form-control input-lg">
+               <span class="input-group-addon">EN</span>
+        </div>
+    </div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
+                            <pre><code data-language="html">&lt;div class=&quot;form-group locals-editor&quot;&gt;
+    &lt;div class=&quot;locals-header clearfix&quot;&gt;
+        &lt;div class=&quot;pull-right&quot;&gt;
+            &lt;div class=&quot;validation-status&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-globe&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn-link btn&quot;&gt;
+              &lt;span class=&quot;glyphicon glyphicon-chevron-down&quot;&gt;
+              &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
+              &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+               &lt;span class=&quot;input-group-addon&quot;&gt;EN&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
-                <section id="section-4.3" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">4.3</span> Read Only Form Elements</h1>
+                <section id="section-11.2" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">11.2</span> Thumbnails</h1>
                     <div class="kss-description">
-                        <p>Read Only Form Elements share the same styling as
-the well know input-lg, input-sm size modifier classes. 
-Use them if you want to provide inline text with a label
-within a form.</p>
+                        <p>Thumbnail with Status Indicator and centered hover content</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text {$modifiers}">
-	Content
-	</p>
-</div>
+                                <a class="thumbnail {$modifiers}">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
                             </div>
                         </div>
                         <div class="kss-modifier">
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>input large styling</p>
+                                    <p>selected state</p>
 
                                 </div>
-                                <div class="kss-mod-name">.form-readonly-text-lg</div>
+                                <div class="kss-mod-name">.active</div>
                             </div>
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-lg">
-	Content
-	</p>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>input small styling</p>
-
-                                </div>
-                                <div class="kss-mod-name">.form-readonly-text-sm</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-sm">
-	Content
-	</p>
-</div>
+                                <a class="thumbnail active">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-	&lt;label class=&quot;control-label&quot;&gt;Service name&lt;/label&gt;
-	&lt;p class=&quot;form-readonly-text {$modifiers}&quot;&gt;
-	Content
-	&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+                            <pre><code data-language="html">&lt;a class=&quot;thumbnail {$modifiers}&quot;&gt;
+	&lt;div class=&quot;alert alert-primary&quot;&gt;Status&lt;/div&gt;
+	&lt;img src=&quot;http://placehold.it/440x350&quot; alt=&quot;alttext&quot;&gt;
+	&lt;div class=&quot;show-onhover&quot;&gt;
+		&lt;div class=&quot;centered&quot;&gt; 			
+			&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Some Button&lt;/button&gt;&lt;br/&gt; &lt;br/&gt;
+			&lt;button class=&quot;btn btn-default&quot;&gt;Some Button&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
                         </div>
                     </div>
                 </section>
