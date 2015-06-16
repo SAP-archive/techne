@@ -13,30 +13,81 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v2/css/global.min.css">
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
 <body class="kss-body has-no-left-nav">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
-        <div class="navbar-super" role="navigation">
-            <a href="/" class="domain">
-                <img class="domain-logo" src="https://www.yaas.io/globalressources/img/techne.svg" alt="techne">
-            </a>
-            <ul class="nav-super">
-                <li><a href="https://www.yaas.io">YaaS Home</a></li>
-                <li><a href="https://builder.yaas.io">Builder</a></li>
-                <li class="active"><a href="https://devportal.yaas.io">Dev Portal</a></li>
-                <li><a href="https://appexchange.yaas.io">App Exchange</a></li>
-            </ul>
-            <a href="http://www.hybris.com" target="_blank" class="brand">
-                <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company">
-            </a>
-            <a href="#" class="nav-super-toggle">
-                <span class="nav-super-triangle"></span>
-            </a>
-        </div>
+            <div class="navbar-super" role="navigation">
+        <a href="/" class="domain">
+            <img class="domain-logo" src="https://www.yaas.io/globalresources/v2/img/techne_logo.svg" alt="builder"/>
+            <span class="logo-text">YAAS</span>
+        </a>
+        <ul class="nav-super">
+            <li><a href="https://www.yaas.io/">Home</a></li>
+            <li><a href="https://market.yaas.io">YaaS Market</a></li>
+            <li><a href="https://devportal.yaas.io" class="active">Dev Portal</a></li>
+            <li><a href="https://builder.yaas.io">Builder</a></li>
+            <li><a href="https://experts.hybris.com/spaces/102/index.html">Community</a></li>
+            <li class="account">
+                <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Account</a>
+                <div class="nav-super-submenu-toggle">
+                    <span class="nav-super-triangle"></span>
+                </div>
+
+                <ul class="account-overlay">
+                    <li class="account-overlay-logged-in" style="display:none;">
+                        <div>
+                            <ul>
+                                <li class="profile-head">
+                                <img class="profile-img" src="/img/profile-image.jpg" alt=""/>
+                                <div class="profile-details">
+                                    <div class="profile-email">
+                                        johannes.wohlhaupter@snk-interactive.de
+                                    </div>
+                                    <div class="profile-link">
+                                        <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Profile</a>
+                                    </div>
+                                </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li class="sign-out">
+                                    <a href="#">Sign Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="account-overlay-login" >
+                        <!-- <div class="login-form">
+                            <p>Please sign In with your Yaas credentials:</p>
+                            <input class="form-field" placeholder="Email" name="email" id="email" />
+                            <input class="form-field" type="password" placeholder="Password" id="password" name="password" />
+                            <div class="action-buttons">
+                                <a class="forgot-pwd" href="#">Forgot your password?</a>
+                                <button class="btn-submit">Sign In</button>
+                                <div class="clr"></div>
+                            </div>
+                        </div>-->
+                        <div class="menu-link">
+                            <a href="https://builder.yaas.io/">Sign In</a>
+                        </div>
+                        <div class="register-link menu-link">
+                            <a href="https://appexchange.yaas.io/#/register/">Register</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="http://www.hybris.com" target="_blank" class="brand">
+            <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company"/>
+        </a>
+        <a href="#" class="nav-super-toggle">
+            <span class="nav-super-triangle"></span>
+        </a>
+    </div>
         <div id="kss-top-nav">
 
             <a href="#menu-toggle" id="menu-toggle">
@@ -51,35 +102,92 @@
             <ul class="hidden-xs">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Guidelines.html">Guidelines</a></li>
-                <li><a href="kitchensink.html">Kitchen Sink</a></li>
+                <li><a href="kitchensink.html">Components</a></li>
                 <li><a href="Download.html">Download</a></li>
+                <li><a href="GettingStarted.html">Getting Started</a></li>
 
             </ul>
 
 
         </div>
     </header>
-  <div class="main-content" id="kss-wrapper">
+  <div class="main-content container-fluid" id="kss-wrapper">
     <section id="content" class="row">
       <!-- / SUPER HEADER -->
         <div role="main" id="kss-main" class="kss-main col-xs-12">
             <article id="kss-content">
-                <div class="hyDownloadPage container-fluid" >
-    <div class="page-header row text-center">
-        <h1 class="text-center">Download hybris techne</h1>
-        <p class="text-uppercase">current version 0.1.6</p>
-        <p class="">We have a few options for you to start designing and building with hybris techne fast</p>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-md-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="https://github.com/hybris/techne">Download from GitHub</a></div>
-        <div class="col-md-3 col-md-offset-1 col-lg-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="/public/release-archive">Download.zip</a></div>
-        <div class="col-md-3 col-md-offset-1 col-lg-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="https://libraries.io/bower/hyTechne">Install with Bower</a></div>
-    </div>
-    <br />
-    <div class="row">
-        <h3>Licensing Info</h3>
-    </div>
+                <h1 id="getting-started">Getting Started</h1>
+<h2 id="install-with-bower">Install with Bower</h2>
+<p>The recommended way to integrate techne into your project is by installing all resources with bower. Bower is a package manager for the web, which makes it easy for you to keep track of your project dependencies. If you have bower already installed simply run:  </p>
+<p>bower install hyTechne</p>
+<p>This will provide you source files ansd precompiled resources at the same time, fitting for each skill level. </p>
+<p>If not, bower requires you first to install nodejs which includes the node package modules (NPM) package manager. After successful installation run:</p>
+<p>npm install -g bower</p>
+<p>and run </p>
+<p>bower install hyTechne </p>
+<p>afterwards, to get techne. </p>
+<h2 id="download">Download</h2>
+<p>You can also download a pre bundled version of techne here</p>
+<div class="page-header row text-center">
+    <h1 class="text-center">Download hybris techne</h1>
+    <p class="text-uppercase">current version 0.2.0</p>
+    <p class="">We have a few options for you to start designing and building with hybris techne fast</p>
 </div>
+<div class="row">
+    <div class="col-md-3 col-md-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="https://github.com/hybris/techne">Download from GitHub</a></div>
+    <div class="col-md-3 col-md-offset-1 col-lg-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="/public/release-archive">Download.zip</a></div>
+    <div class="col-md-3 col-md-offset-1 col-lg-offset-1 hyDwnlBtns"><a class="btn btn-warning" href="https://libraries.io/bower/hyTechne">Install with Bower</a></div>
+</div>
+<br />
+<div class="row">
+    <h3>Licensing Info</h3>
+</div>
+
+
+
+<h3 id="default">Default</h3>
+<p>Precompiled and minified version of techne ready to grab and use. </p>
+<p>Download Link</p>
+<h3 id="source-code">Source Code</h3>
+<p>Bundle including Default files and all the source files (LESS/JS) not yet compiled.Ideal for people who love to dig deeper. 
+This requires you to use a less compiler.</p>
+<p>Download Link</p>
+<h2 id="how-to-contribute">How to contribute</h2>
+<p>So you wrote a new component or fixed a bug in techne? You want to contribute? That’s actually super easy. Just pull our repository from github, make your changes in a feature-branch, push it to origin and create a pull-request to our develop brach. </p>
+<p><a href="https://github.com/hybris/techne">https://github.com/hybris/techne</a></p>
+<h2 id="how-to-build-techne-localy">How to build techne localy</h2>
+<p>Techne is using Gulp as build system. </p>
+<h3 id="installing-gulp">Installing Gulp</h3>
+<p>Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager. </p>
+<p>Then you can simply run 
+npm install --global gulp</p>
+<p>(Note the —global, otherwise you would not be able to run gulp systemwide) </p>
+<h3 id="available-commands">Available Commands</h3>
+<ul>
+<li><p>gulp
+Default task that builds all resources (js/less/..) and starts a local server with running watch-task</p>
+</li>
+<li><p>gulp dist
+Create a prebuilt bundle including zip file for distribution</p>
+</li>
+<li><p>gulp build
+Build all resources including documentation</p>
+</li>
+<li><p>gulp watch
+Listen for file changes in src folder for compilation</p>
+</li>
+<li><p>gulp styleguide
+Build docs</p>
+</li>
+<li><p>gulp connect
+start server</p>
+</li>
+<li><p>gulp setpath
+Generate _resource-paths.less file based on settings in config.json to handle file paths correctly. </p>
+</li>
+</ul>
+<p>Troubleshooting</p>
+<p>Should you encounter problems with installing dependencies or running Grunt commands, first delete the /node_modules/ directory generated by npm. Then, rerun npm install.</p>
 
             </article>
         </div>
@@ -96,11 +204,17 @@
   <script src="public/js/bootstrap.min.js"></script>
   <script src="public/js/select2.js"></script>
   <script src="public/js/techne.min.js"></script>
+  <script src="public/js/yaas.sso.js"></script>
+  <script>
+    $(document).ready(function() {
+      sso('https://builder.yaas.io');
+    });
+  </script>
 
   <!--<script src="public/jquery-ui.js"></script>-->
   <script src="public/script.js"></script>
   <!--<script src="public/super-nav.js"></script>-->
 
 
-    <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
+    <script src="https://www.yaas.io/globalresources/v2/js/global.novendor.min.js"></script></body>
 </html>
