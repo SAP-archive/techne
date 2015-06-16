@@ -738,25 +738,19 @@ body.has-left-nav .sidebar-nav {
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
 
-/* remove the lef nav styling for the pages(home and download)*/
-/* overwrite kss styling - maybe can be done better */
-.container.hyHomePage{
-  padding-left:0;
-  padding-right:0;
-  margin-top: -26px;
-  width: auto;
-  background-color: white;
-}
-/* remove the lef nav styling for the pages(home and download)*/
-/* overwrite kss styling - maybe can be done better */
-
 /*Styling for the new home page*/
-.container.hyHomePage{
+header.hyHomeHeaderMain{
+    /*font sizes per psd-not following the styleguide*/
+    background-image: url("/images/home/banner_bg.png");
+    margin-top: -20px;
+    margin-left: -1px;
+}
 
-    .carousel-inner>.item>img{
-      width: 100%;
-    }
+header.hyHomeHeaderMinor{
+    background-color: #f2f3f5;
+}
 
+.hyHomePage{
 
     /*font sizes per psd-not following the styleguide*/
     h1{
@@ -765,19 +759,53 @@ body.has-left-nav .sidebar-nav {
     h3{
         font-size: 42px;
     }
+
     .hyHomeHeader p,
     .hyHomeHeader a{
-        font-size: 27px;
+        font-size: 22px;
     }
 
     .hyHomeHeader{
         text-weight: lighter;
     }
-    .hyHomeHeader2 p small{
-        font-size: 14px;
+    .hyHomeHeader2 p {
+        margin-bottom: 0;
+        small{
+            font-size: 14px;
+        }
     }
+    .hyHomeHeader{
+        color: white;
+        padding-bottom: 100px;
+        padding-top: 30px;
+        @media (min-width: 768px){
+            p{
+                padding:30px 0;
+            }
+        }
+    }
+
+    .hyHomeHeader2 p{
+        height: 40px;
+        line-height: 40px;
+        @media (max-width: 768px){
+            line-height: 20px;
+        }
+    }
+
+    .hyHomeHeader3,
+    .personaIcons{
+        background-color: #ffffff;
+        a.hyPersonaText:hover{
+                text-decoration: none;
+        }
+        a.hyPersonaText p{
+            color: black;
+        }
+    }
+
     .hyHomeContentCentered p{
-        font-size: 19px;
+        font-size: 16px;
     }
     p.hyPersonaTitle{
         font-size: 27px;
@@ -792,10 +820,6 @@ body.has-left-nav .sidebar-nav {
     .hyHomeSlider .hySliderText p{
         font-size: 15px;
     }
-    a{
-        color: #0486e0;
-    }
-    /*font sizes per psd-not following the styleguide*/
 
     .hyHomeContentCentered .row{
         padding-top: 10px;
@@ -809,38 +833,12 @@ body.has-left-nav .sidebar-nav {
         img.hyConsumUpImg{
             display: none;
         }
-    }
-
-    .container{
-        width: auto;
-    }
-
-    .hyHomeHeader{
-      background-image: url("/images/home/banner_bg.png");
-      color: white;
-      padding-bottom: 80px;
-      margin-bottom:0;
-      padding-top: 30px;
-      margin-left: -15px;
-      margin-right: -15px;
-      
-      @media (min-width: 768px){
-            p{
-                padding:30px 100px;
-            }
+        .row{
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
-    .hyHomeHeader2 p{
-        height: 40px;
-        line-height: 40px;
-        @media (max-width: 768px){
-            line-height: 20px;
-        }
-        background-color: #f2f3f5;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
 
     .hyHomeHeader3,
     .personaIcons{
@@ -853,20 +851,11 @@ body.has-left-nav .sidebar-nav {
         }
     }
 
-    //@media (min-width: 992px){
-        .hyHomeHeader3{
-            p{
-                padding-left:100px;
-                padding-right:100px;
-            }
-        }
-    //}
-
     .personasCarousel{
         background-color: #ffffff;
 
         #hyPersonasCarouselID{
-            min-height:200px;
+            height:200px;
         }
         .carousel-control{
             padding-top:50px;
@@ -888,11 +877,14 @@ body.has-left-nav .sidebar-nav {
         }
     }
 
-    .consumerCarousel:nth-of-type(even){
+    .hyHomePageSection:nth-of-type(even){
         background-color: #f7f7f7;
     }
-    .consumerCarousel:nth-of-type(odd){
+    .hyHomePageSection:nth-of-type(odd){
         background-color: #ffffff;
+    }
+    .hyHomePageSection:not(:first-of-type) {
+        padding-bottom: 30px;
     }
 
     .consumerCarousel{
@@ -960,10 +952,7 @@ body.has-left-nav .sidebar-nav {
     }
 }
 
-.container.hyDownloadPage{
-    background-color: white;
-    @media (min-width: 768px){
-    }
+.container-fluid.hyDownloadPage{
     .hyDwnlBtns a{
         width: 100%;
     }
@@ -971,11 +960,6 @@ body.has-left-nav .sidebar-nav {
         .hyDwnlBtns{
             padding-bottom: 15px;
         }
-    }
-    .row{
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
     }
 }
 
