@@ -121,17 +121,17 @@
 
 
                         <ul class="kss-menu sidebar-nav" data-kss-ref="1">
-                                <li class="kss-menu-item"><a href="section-1.html">1.0: Layout</a></li>
-                                <li class="kss-menu-item"><a href="section-2.html">2.0: Buttons </a></li>
-                                <li class="kss-menu-item"><a href="section-3.html">3.0: Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html">4.0: Forms </a></li>
-                                <li class="kss-menu-item"><a href="section-5.html">5.0: Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html">6.0: Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html">7.0: Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html">8.0: Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html">9.0: Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-20.html">20.0: Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-21.html">21.0: Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-1.html"> Labels</a></li>
+                                <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
+                                <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -141,36 +141,22 @@
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
                 <section id="section-1" class="kss-section kss-depth-1">
-                    <h1 class="kss-title"><span class="kss-ref">1</span> Layout</h1>
+                    <h1 class="kss-title"><span class="kss-ref">1</span> Labels</h1>
                     <div class="kss-description">
-                        <p>Layouts of how to use the different Styles in Combination</p>
+                        <p>Identifiers for line level status visualization</p>
 
                     </div>
                 </section>
                 <section id="section-1.10" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">1.10</span> Labels</h1>
+                    <h1 class="kss-title"><span class="kss-ref">1.10</span> Status </h1>
                     <div class="kss-description">
-                        <p>The multiselct table modifier class provides 
-select states on a tablerow level without any further markup</p>
+                        <p>A type of label used to show the status of a line level element</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
                                 <span class="label {$modifiers}" >Status</span>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>Default Status</p>
-
-                                </div>
-                                <div class="kss-mod-name">.label-default</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <span class="label label-default" >Status</span>
                             </div>
                         </div>
                         <div class="kss-modifier">
@@ -201,6 +187,53 @@ select states on a tablerow level without any further markup</p>
                         </div>
                         <div class="kss-markup">
                             <pre><code data-language="html">&lt;span class=&quot;label {$modifiers}&quot; &gt;Status&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-1.20" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">1.20</span> Active Status</h1>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="active demo-container">
+ <span class="label {$modifiers}" >Status</span>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>Successfull Status</p>
+
+                                </div>
+                                <div class="kss-mod-name">.label-success</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <div class="active demo-container">
+ <span class="label label-success" >Status</span>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>Blocked Status</p>
+
+                                </div>
+                                <div class="kss-mod-name">.label-danger</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <div class="active demo-container">
+ <span class="label label-danger" >Status</span>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <pre><code data-language="html">&lt;div class=&quot;active demo-container&quot;&gt;
+ &lt;span class=&quot;label {$modifiers}&quot; &gt;Status&lt;/span&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>

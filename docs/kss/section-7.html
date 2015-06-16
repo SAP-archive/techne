@@ -121,17 +121,17 @@
 
 
                         <ul class="kss-menu sidebar-nav" data-kss-ref="7">
-                                <li class="kss-menu-item"><a href="section-1.html">1.0: Layout</a></li>
-                                <li class="kss-menu-item"><a href="section-2.html">2.0: Buttons </a></li>
-                                <li class="kss-menu-item"><a href="section-3.html">3.0: Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html">4.0: Forms </a></li>
-                                <li class="kss-menu-item"><a href="section-5.html">5.0: Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html">6.0: Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html">7.0: Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html">8.0: Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html">9.0: Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-20.html">20.0: Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-21.html">21.0: Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-1.html"> Labels</a></li>
+                                <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
+                                <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -149,552 +149,77 @@ So far this just includes tables. </p>
                     </div>
                 </section>
                 <section id="section-7.1" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">7.1</span> Tables</h1>
+                    <h1 class="kss-title"><span class="kss-ref">7.1</span> Table With Mobile Drop</h1>
                     <div class="kss-description">
-                        <p>Tablerow States
-
-</p>
-<p>.table</p>
+                        <p>Modifier Class for responsive behavoir</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <table class="table table-striped">
-	<tr>
-		<th>Table Head</th>
-	</tr>
-	<tr>
-		<td>Table Row</td>
-	</tr>
-	<tr>
-		<td>Table Row</td>
-	</tr>
+                                <table ng-if="orders.length" class="table table-striped techne-table">
+ <thead>
+   <tr>
+     <th>Order #</th>
+     <th>Placed At</th>
+     <th>Placed By</th>
+     <th>Customer Email</th>
+     <th># Of Items</th>
+     <th>Order Total</th>
+  </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td data-th="Order #" ><a>1</a></td>
+     <td data-th="Placed At" >5/22/32</td>
+     <td data-th="Placed By" >Test Data</td>
+     <td data-th="Customer Email" >Test Data</td>
+     <td data-th="# Of Items" > Test Data </td>
+     <td data-th="Or dder Total" >Test Data</td>
+   </tr>
+   <tr>
+     <td data-th="Order #" ><a>1</a></td>
+     <td data-th="Placed At" >5/22/32</td>
+     <td data-th="Placed By" >Test Data</td>
+     <td data-th="Customer Email" >Test Data</td>
+     <td data-th="# Of Items" > Test Data </td>
+     <td data-th="Or dder Total" >Test Data</td>
+   </tr>
+ </tbody>
 </table>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;table class=&quot;table table-striped&quot;&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Table Head&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Row&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Row&lt;/td&gt;
-	&lt;/tr&gt;
+                            <pre><code data-language="html">&lt;table ng-if=&quot;orders.length&quot; class=&quot;table table-striped techne-table&quot;&gt;
+ &lt;thead&gt;
+   &lt;tr&gt;
+     &lt;th&gt;Order #&lt;/th&gt;
+     &lt;th&gt;Placed At&lt;/th&gt;
+     &lt;th&gt;Placed By&lt;/th&gt;
+     &lt;th&gt;Customer Email&lt;/th&gt;
+     &lt;th&gt;# Of Items&lt;/th&gt;
+     &lt;th&gt;Order Total&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+   &lt;tr&gt;
+     &lt;td data-th=&quot;Order #&quot; &gt;&lt;a&gt;1&lt;/a&gt;&lt;/td&gt;
+     &lt;td data-th=&quot;Placed At&quot; &gt;5/22/32&lt;/td&gt;
+     &lt;td data-th=&quot;Placed By&quot; &gt;Test Data&lt;/td&gt;
+     &lt;td data-th=&quot;Customer Email&quot; &gt;Test Data&lt;/td&gt;
+     &lt;td data-th=&quot;# Of Items&quot; &gt; Test Data &lt;/td&gt;
+     &lt;td data-th=&quot;Or dder Total&quot; &gt;Test Data&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td data-th=&quot;Order #&quot; &gt;&lt;a&gt;1&lt;/a&gt;&lt;/td&gt;
+     &lt;td data-th=&quot;Placed At&quot; &gt;5/22/32&lt;/td&gt;
+     &lt;td data-th=&quot;Placed By&quot; &gt;Test Data&lt;/td&gt;
+     &lt;td data-th=&quot;Customer Email&quot; &gt;Test Data&lt;/td&gt;
+     &lt;td data-th=&quot;# Of Items&quot; &gt; Test Data &lt;/td&gt;
+     &lt;td data-th=&quot;Or dder Total&quot; &gt;Test Data&lt;/td&gt;
+   &lt;/tr&gt;
+ &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-7.2" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">7.2</span> Multiselect Table</h1>
-                    <div class="kss-description">
-                        <p>The multiselct table modifier class provides 
-select states on a tablerow level without any further markup</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <table class="table table-multi-select table-striped">
-	<tr class="active">
-		<td>Content</td>
-	</tr>
-	<tr>
-		<td>Content</td>
-	</tr>
-	<tr>
-		<td>Content</td>
-	</tr>
-</table>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;table class=&quot;table table-multi-select table-striped&quot;&gt;
-	&lt;tr class=&quot;active&quot;&gt;
-		&lt;td&gt;Content&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Content&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Content&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-7.3" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">7.3</span> Table Drop</h1>
-                    <div class="kss-description">
-                        <p>Modifier Class for responsive behavoir </p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <table class="table table-drop table-hover table-striped">
-  <thead>
-    <tr>
-       <th><span class="glyphicon glyphicon-ok"></span></th>
-      <th>#</th>
-      <th><a href="#">First Name</a></th>
-      <th>Last Name</th>
-      <th>State</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="active">
-      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
-      <td data-label="#">1</td>
-      <td data-label="First Name"><a href="#">Mark</a></td>
-      <td data-label="Last Name">Otto</td>
-      <td data-label="State"><span class="label label-danger">Error</span></td>
-    </tr>
-    <tr>
-      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
-      <td data-label="#">2</td>
-      <td data-label="First Name">Jacob</td>
-      <td data-label="Last Name">Thornton</td>
-      <td data-label="State"><span class="label label-default">Default</span></td>
-    </tr>
-    <tr>
-      <td class="table-row-select"><span class="glyphicon glyphicon-ok"></span></td>
-      <td data-label="#">3</td>
-      <td data-label="First Name">Larry</td>
-      <td data-label="Last Name">the Bird</td>
-      <td data-label="State"><span class="label label-success">Success</span></td>
-    </tr>
-  </tbody>
-</table>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;table class=&quot;table table-drop table-hover table-striped&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-       &lt;th&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-      &lt;th&gt;#&lt;/th&gt;
-      &lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
-      &lt;th&gt;Last Name&lt;/th&gt;
-      &lt;th&gt;State&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class=&quot;active&quot;&gt;
-      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
-      &lt;td data-label=&quot;#&quot;&gt;1&lt;/td&gt;
-      &lt;td data-label=&quot;First Name&quot;&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
-      &lt;td data-label=&quot;Last Name&quot;&gt;Otto&lt;/td&gt;
-      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-danger&quot;&gt;Error&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
-      &lt;td data-label=&quot;#&quot;&gt;2&lt;/td&gt;
-      &lt;td data-label=&quot;First Name&quot;&gt;Jacob&lt;/td&gt;
-      &lt;td data-label=&quot;Last Name&quot;&gt;Thornton&lt;/td&gt;
-      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;table-row-select&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;&lt;/td&gt;
-      &lt;td data-label=&quot;#&quot;&gt;3&lt;/td&gt;
-      &lt;td data-label=&quot;First Name&quot;&gt;Larry&lt;/td&gt;
-      &lt;td data-label=&quot;Last Name&quot;&gt;the Bird&lt;/td&gt;
-      &lt;td data-label=&quot;State&quot;&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-7.4" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">7.4</span> Responsive Table</h1>
-                    <div class="kss-description">
-                        <p>A majority of buttons in the site are built from the same base class.
-
-</p>
-<p>Experimental: Needs to have further crossbrowsertesting!</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <table class="table table-hover table-multi-select y-responsive-table table-striped">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th><a href="#">First Name</a></th>
-			<th>Last Name</th>
-			<th>State</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="active">
-			<td>1</td>
-			<td><a href="#">Mark</a></td>
-			<td>Otto</td>
-			<td><span class="label label-danger">Default</span></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Jacob</td>
-			<td>Thornton</td>
-			<td><span class="label label-warning">Primary</span></td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Larry</td>
-			<td>the Bird</td>
-			<td><span class="label label-success">Success</span></td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Mark</td>
-			<td>Otto</td>
-			<td><span class="label label-danger">Default</span></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Jacob</td>
-			<td>Thornton</td>
-			<td><span class="label label-warning">Primary</span></td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Larry</td>
-			<td>the Bird</td>
-			<td><span class="label label-success">Success</span></td>
-		</tr>
-	</tbody>
-</table>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;table class=&quot;table table-hover table-multi-select y-responsive-table table-striped&quot;&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;&lt;a href=&quot;#&quot;&gt;First Name&lt;/a&gt;&lt;/th&gt;
-			&lt;th&gt;Last Name&lt;/th&gt;
-			&lt;th&gt;State&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr class=&quot;active&quot;&gt;
-			&lt;td&gt;1&lt;/td&gt;
-			&lt;td&gt;&lt;a href=&quot;#&quot;&gt;Mark&lt;/a&gt;&lt;/td&gt;
-			&lt;td&gt;Otto&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-danger&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;2&lt;/td&gt;
-			&lt;td&gt;Jacob&lt;/td&gt;
-			&lt;td&gt;Thornton&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-warning&quot;&gt;Primary&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;3&lt;/td&gt;
-			&lt;td&gt;Larry&lt;/td&gt;
-			&lt;td&gt;the Bird&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;4&lt;/td&gt;
-			&lt;td&gt;Mark&lt;/td&gt;
-			&lt;td&gt;Otto&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-danger&quot;&gt;Default&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;5&lt;/td&gt;
-			&lt;td&gt;Jacob&lt;/td&gt;
-			&lt;td&gt;Thornton&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-warning&quot;&gt;Primary&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;6&lt;/td&gt;
-			&lt;td&gt;Larry&lt;/td&gt;
-			&lt;td&gt;the Bird&lt;/td&gt;
-			&lt;td&gt;&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-7.6" class="kss-section kss-depth-2">
-                    <h1 class="kss-title"><span class="kss-ref">7.6</span> Hierachical Table</h1>
-                    <div class="kss-description">
-                        <p>A majority of buttons in the site are built from the same base class.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class=" y-h-table clearfix">
-    <div class="y-h-tablehead">
-        <div class="col-md-4">Category Name</div>
-        <div class="col-md-3">Child Categories</div>
-        <div class="col-md-5">Linked Products</div>
-    </div>
-        <div ng-repeat="category in categories"
-            class="y-h-table-row clearfix">
-            <!--- LEVEL 1 -->
-            <div class="col-md-4">
-                <div class="first table-behavoir">
-                    <span class="table-behavoir-cell toggle-cell seperator">
-                        <a href class="btn btn-link toggle pull-right">
-                            <span class="glyphicon glyphicon-minus">
-                            </span>
-                        </a>
-                    </span>
-                    <span class="table-behavoir-cell row-image-cell">
-                        <a href="#">
-                            <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
-                        </a>
-                    </span>
-                    <span class="table-behavoir-cell name-cell">
-                        <strong>
-                            <a href="#">{{category.name | localized}}</a>
-                        </strong>
-                    </span>
-                </div>
-            </div>
-            <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
-            <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
-            <div class="col-md-2 sticky-right">
-                <div class="dropdown pull-right">
-                    <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
-                    <span class="hyicon-more"></span></a>
-                    <ul class="dropdown-menu pull-right text-left" role="menu">
-                        <li><a href="#">Edit Category Details</a></li>
-                        <li><a href="">Add Child Category</a></li>
-                        <li class="divider"></li>
-                        <li><a href ng-click="delete(category)">Delete Category</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- LEVEL 2 -->
-            <div class="subcategories-cnt">
-                <div class=" clearfix subcategories-list" style="clear:both;">
-                    <div class="y-h-table-row clearfix">
-                        <div class="col-md-4">
-                            <div class="first table-behavoir">
-                                <span class="table-behavoir-cell toggle-cell seperator">
-                                    <a href class="btn btn-link toggle pull-right">
-                                        <span class="glyphicon glyphicon-minus">
-                                        </span>
-                                    </a>
-                                </span>
-                                <span class="table-behavoir-cell row-image-cell">
-                                    <a href="#">
-                                        <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
-                                    </a>
-                                </span>
-                                <span class="table-behavoir-cell name-cell">
-                                    <strong>
-                                        <a href="#">{{category.name | localized}}</a>
-                                    </strong>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
-                        <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
-                        <div class="col-md-2 sticky-right">
-                            <div class="dropdown pull-right">
-                                <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
-                                <span class="hyicon-more"></span></a>
-                                <ul class="dropdown-menu pull-right text-left" role="menu">
-                                    <li><a href="#">Edit Category Details</a></li>
-                                    <li><a href="">Add Child Category</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href ng-click="delete(category)">Delete Category</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- LEVEL 3 -->
-                        <div class="subcategories-cnt">
-                            <div class=" clearfix subcategories-list" style="clear:both;">
-                                <div class="y-h-table-row clearfix">
-                                    <div class="col-md-4">
-                                        <div class="first table-behavoir">
-                                            <span class="table-behavoir-cell toggle-cell seperator">
-                                                <a href class="btn btn-link toggle pull-right">
-                                                    <span class="glyphicon glyphicon-plus">
-                                                    </span>
-                                                </a>
-                                            </span>
-                                            <span class="table-behavoir-cell row-image-cell">
-                                                <a href="#">
-                                                    <img src="http://placehold.it/40x40" class="img-responsive row-image"/>
-                                                </a>
-                                            </span>
-                                            <span class="table-behavoir-cell name-cell">
-                                                <strong>
-                                                    <a href="#">{{category.name | localized}}</a>
-                                                </strong>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 value-cell">{{category.subcategories.length || 0}} Child Categories</div>
-                                    <div class="col-md-3 value-cell">{{getAllProductsCount(category)}} Products</div>
-                                    <div class="col-md-2 sticky-right">
-                                        <div class="dropdown pull-right">
-                                            <a href="" class="btn btn-link btn-lg dropdown-toggle " data-toggle="dropdown" role="button" >
-                                            <span class="hyicon-more"></span></a>
-                                            <ul class="dropdown-menu pull-right text-left" role="menu">
-                                                <li><a href="#">Edit Category Details</a></li>
-                                                <li><a href="">Add Child Category</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href ng-click="delete(category)">Delete Category</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- // LEVEL 3 -->
-                    </div>
-                </div>
-            </div>
-            <!-- // LEVEL 2 -->
-        </div>
-        <!-- // LEVEL 1 -->
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot; y-h-table clearfix&quot;&gt;
-    &lt;div class=&quot;y-h-tablehead&quot;&gt;
-        &lt;div class=&quot;col-md-4&quot;&gt;Category Name&lt;/div&gt;
-        &lt;div class=&quot;col-md-3&quot;&gt;Child Categories&lt;/div&gt;
-        &lt;div class=&quot;col-md-5&quot;&gt;Linked Products&lt;/div&gt;
-    &lt;/div&gt;
-        &lt;div ng-repeat=&quot;category in categories&quot;
-            class=&quot;y-h-table-row clearfix&quot;&gt;
-            &lt;!--- LEVEL 1 --&gt;
-            &lt;div class=&quot;col-md-4&quot;&gt;
-                &lt;div class=&quot;first table-behavoir&quot;&gt;
-                    &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
-                        &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
-                            &lt;span class=&quot;glyphicon glyphicon-minus&quot;&gt;
-                            &lt;/span&gt;
-                        &lt;/a&gt;
-                    &lt;/span&gt;
-                    &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
-                        &lt;a href=&quot;#&quot;&gt;
-                            &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
-                        &lt;/a&gt;
-                    &lt;/span&gt;
-                    &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
-                        &lt;strong&gt;
-                            &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
-                        &lt;/strong&gt;
-                    &lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
-            &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
-            &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
-                &lt;div class=&quot;dropdown pull-right&quot;&gt;
-                    &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
-                    &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                    &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
-                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;!-- LEVEL 2 --&gt;
-            &lt;div class=&quot;subcategories-cnt&quot;&gt;
-                &lt;div class=&quot; clearfix subcategories-list&quot; style=&quot;clear:both;&quot;&gt;
-                    &lt;div class=&quot;y-h-table-row clearfix&quot;&gt;
-                        &lt;div class=&quot;col-md-4&quot;&gt;
-                            &lt;div class=&quot;first table-behavoir&quot;&gt;
-                                &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
-                                    &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
-                                        &lt;span class=&quot;glyphicon glyphicon-minus&quot;&gt;
-                                        &lt;/span&gt;
-                                    &lt;/a&gt;
-                                &lt;/span&gt;
-                                &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
-                                    &lt;a href=&quot;#&quot;&gt;
-                                        &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
-                                    &lt;/a&gt;
-                                &lt;/span&gt;
-                                &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
-                                    &lt;strong&gt;
-                                        &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
-                                    &lt;/strong&gt;
-                                &lt;/span&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
-                        &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
-                        &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
-                            &lt;div class=&quot;dropdown pull-right&quot;&gt;
-                                &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
-                                &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                                &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
-                                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
-                                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
-                                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                                    &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
-                                &lt;/ul&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- LEVEL 3 --&gt;
-                        &lt;div class=&quot;subcategories-cnt&quot;&gt;
-                            &lt;div class=&quot; clearfix subcategories-list&quot; style=&quot;clear:both;&quot;&gt;
-                                &lt;div class=&quot;y-h-table-row clearfix&quot;&gt;
-                                    &lt;div class=&quot;col-md-4&quot;&gt;
-                                        &lt;div class=&quot;first table-behavoir&quot;&gt;
-                                            &lt;span class=&quot;table-behavoir-cell toggle-cell seperator&quot;&gt;
-                                                &lt;a href class=&quot;btn btn-link toggle pull-right&quot;&gt;
-                                                    &lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;
-                                                    &lt;/span&gt;
-                                                &lt;/a&gt;
-                                            &lt;/span&gt;
-                                            &lt;span class=&quot;table-behavoir-cell row-image-cell&quot;&gt;
-                                                &lt;a href=&quot;#&quot;&gt;
-                                                    &lt;img src=&quot;http://placehold.it/40x40&quot; class=&quot;img-responsive row-image&quot;/&gt;
-                                                &lt;/a&gt;
-                                            &lt;/span&gt;
-                                            &lt;span class=&quot;table-behavoir-cell name-cell&quot;&gt;
-                                                &lt;strong&gt;
-                                                    &lt;a href=&quot;#&quot;&gt;{{category.name | localized}}&lt;/a&gt;
-                                                &lt;/strong&gt;
-                                            &lt;/span&gt;
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{category.subcategories.length || 0}} Child Categories&lt;/div&gt;
-                                    &lt;div class=&quot;col-md-3 value-cell&quot;&gt;{{getAllProductsCount(category)}} Products&lt;/div&gt;
-                                    &lt;div class=&quot;col-md-2 sticky-right&quot;&gt;
-                                        &lt;div class=&quot;dropdown pull-right&quot;&gt;
-                                            &lt;a href=&quot;&quot; class=&quot;btn btn-link btn-lg dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; &gt;
-                                            &lt;span class=&quot;hyicon-more&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                                            &lt;ul class=&quot;dropdown-menu pull-right text-left&quot; role=&quot;menu&quot;&gt;
-                                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit Category Details&lt;/a&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Add Child Category&lt;/a&gt;&lt;/li&gt;
-                                                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;a href ng-click=&quot;delete(category)&quot;&gt;Delete Category&lt;/a&gt;&lt;/li&gt;
-                                            &lt;/ul&gt;
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- // LEVEL 3 --&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;!-- // LEVEL 2 --&gt;
-        &lt;/div&gt;
-        &lt;!-- // LEVEL 1 --&gt;
-&lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </section>
