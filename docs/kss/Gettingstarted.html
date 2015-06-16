@@ -51,8 +51,8 @@
             <ul class="hidden-xs">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Guidelines.html">Guidelines</a></li>
-                <li><a href="kitchensink.html">Kitchen Sink</a></li>
-                <li><a href="Download.html">Download</a></li>
+                <li><a href="Components.html">Components</a></li>
+                <li><a href="GettingStarted.html">Getting Started</a></li>
 
             </ul>
 
@@ -64,10 +64,93 @@
       <!-- / SUPER HEADER -->
         <div role="main" id="kss-main" class="kss-main col-xs-12">
             <article id="kss-content">
-                <p>All overview info goes into here</p>
-<h3>Download</h3>
+                <div class="hyGettingStartedPage container-fluid" >
+    <div class="page-header">
+        <h1 class="">Getting Started</h1>
+        <p class="">v0.2.0</p>
+        <p class="">We have a few options for you to start designing and building with hybris techne fast</p>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6"></div>
+    </div>
+    <div class="row column definitions">
+        <div class="col-xs-12 col-md-4">
+          <h2>Bower</h2>
+          <p>Compiled and minified CSS, Source LESS,  JavaScript, and fonts, but no documentation.</p>
+            <a class="btn btn-warning" href="https://libraries.io/bower/hyTechne">Install with Bower</a>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <h2>Pre-Bundled Download</h2>
+          <p>Precompiled and minified version of Techné ready to grab and use.</p>
+          <a class="btn btn-warning" href="/public/release-archive">Download.zip</a>
+        </div>
+        <div class="col-xs-12 col-md-4">
+        <h2>Source Code</h2>
+            <p>Bundle including Default files and all the source files (LESS/JS) not yet compiled.Ideal for people who love to dig deeper. 
+            This requires you to use a less compiler.</p>
+            <a class="btn btn-warning" href="https://github.com/hybris/techne">View Source on GitHub</a>
+        </div>
+        <div class="col-xs-12">
+          <h2 class="">Installing with bower</h2>
+          <p>
+            The recommended way to integrate techne into your project is by installing all resources with bower. Bower is a package manager for the web, which makes it easy for you to keep track of your project dependencies. If you have bower already installed simply run:
+          </p>
+          <code>bower install hyTechne</code>
+          <p><br>            This will provide you source files ansd precompiled resources at the same time, fitting for each skill level.
+            If not, bower requires you first to install nodejs which includes the node package modules (NPM) package manager. After successful installation run:
+          </p><br>          <code>npm install -g bower</code>
+          <p>and run</p> 
+          <code>bower install hyTechne</code> 
+          <p>afterwards, to get techne.</p>
+        </div>
+        <div class="col-xs-12">
+          <h2 class="">How to build Techné localy</h2>
+          <p>
+            Techne is using Gulp as build system. 
+          </p>
+          <h3>Installing Gulp</h3>
+          <p>
+            Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager.Then you can simply run 
+          </p>
+          <code>npm install --global gulp</code>
+          <p>(Note the —global, otherwise you would not be able to run gulp systemwide)</p>
+          <h3>Available Commands</h3>
+          <dl>
+              <dt><code>gulp</code></dt>
+              <dd>Default task that builds all resources (js/less/..) and starts a local server with running watch-task</dd>
 
-<h3>Contribute</h3>
+              <dt><code>gulp dist</code></dt>
+              <dd>Create a prebuilt bundle including zip file for distribution</dd>
+
+              <dt><code>gulp build</code></dt>
+              <dd>Build all resources including documentation</dd>
+
+              <dt><code>gulp watch</code></dt>
+              <dd>Listen for file changes in src folder for compilation</dd>
+
+              <dt><code>gulp styleguide</code></dt>
+              <dd>Build docs</dd>
+
+              <dt><code>gulp connect</code></dt>
+              <dd>start server</dd>
+
+              <dt><code>gulp setpath</code></dt>
+              <dd>Generate _resource-paths.less file based on settings in config.json to handle file paths correctly.</dd>
+          </dl>
+        </div>
+        <div class="col-xs-12">
+          <h2>How to contribute</h2>
+          <p>So you wrote a new component or fixed a bug in techne? You want to contribute? That’s actually super easy. Just pull our repository from github, make your changes in a feature-branch, push it to origin and create a pull-request to our develop brach.</p>
+          <a href="https://github.com/hybris/techne">Techné on Github</a>
+        </div>
+        <div class="col-xs-12">
+          <h2>Troubleshooting</h2>
+          <p>Should you encounter problems with installing dependencies or running Grunt commands, first delete the /node_modules/ directory generated by npm. Then, rerun npm install.</p>
+        </div>
+    </div>
+
+<p></div></p>
+
             </article>
         </div>
 
