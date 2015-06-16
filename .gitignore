@@ -7,7 +7,7 @@ node_modules/*
 !node_modules/gulp-kss/handlebarsHelpers.js
 
 ## CONFIG FILES 
-
+src/less/globals/_resource-paths.less
 
 ## IDE Specfici folders
 .idea/
