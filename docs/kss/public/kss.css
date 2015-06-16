@@ -238,7 +238,7 @@ td {
   }
 }
 body {
-  margin-top: 116px!important;
+  margin-top: 110px!important;
 }
 body.kss-body {
   background: #ffffff;
@@ -318,7 +318,8 @@ body.kss-body {
 }
 .kss-navbar.navbar {
   border: 0 none;
-  margin-top: 50px;
+  margin-top: 10px;
+  box-shadow: none;
 }
 #kss-header h1 {
   font-size: 1.5em;
@@ -554,14 +555,16 @@ li.L9 {
  */
 /* Toggle Styles */
 #kss-wrapper {
-  padding-left: 0;
+  padding-left: 15px;
+  /* container - fluid ! */
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 body.has-left-nav #kss-wrapper.toggled {
-  padding-left: 250px;
+  padding-left: 265px;
+  /* 250 + 15px container padding */
 }
 body.has-left-nav #kss-nav {
   z-index: 1000;
@@ -578,7 +581,7 @@ body.has-left-nav #kss-nav {
   padding: 0;
 }
 body.has-left-nav #kss-wrapper.toggled #kss-nav {
-  width: 250px;
+  width: 265px;
 }
 #kss-main {
   padding: 15px;
@@ -597,7 +600,7 @@ body.has-left-nav .sidebar-nav {
 }
 @media (min-width: 768px) {
   body.has-left-nav #kss-wrapper {
-    padding-left: 250px;
+    padding-left: 265px;
   }
   body.has-left-nav #kss-nav {
     width: 250px;
@@ -1035,193 +1038,192 @@ body.has-left-nav .sidebar-nav {
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
-/* remove the lef nav styling for the pages(home and download)*/
-/* overwrite kss styling - maybe can be done better */
-.container.hyHomePage {
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: -26px;
-  width: auto;
-  background-color: white;
-}
-/* remove the lef nav styling for the pages(home and download)*/
-/* overwrite kss styling - maybe can be done better */
 /*Styling for the new home page*/
-.container.hyHomePage {
+header.hyHomeHeaderMain {
   /*font sizes per psd-not following the styleguide*/
+  background-image: url("/images/home/banner_bg.png");
+  margin-top: -20px;
+  margin-left: -1px;
+}
+header.hyHomeHeaderMinor {
+  background-color: #f2f3f5;
+}
+.hyHomePage {
   /*font sizes per psd-not following the styleguide*/
 }
-.container.hyHomePage .carousel-inner > .item > img {
-  width: 100%;
-}
-.container.hyHomePage h1 {
+.hyHomePage h1 {
   font-size: 57px;
 }
-.container.hyHomePage h3 {
+.hyHomePage h3 {
   font-size: 42px;
 }
-.container.hyHomePage .hyHomeHeader p,
-.container.hyHomePage .hyHomeHeader a {
-  font-size: 27px;
+.hyHomePage .hyHomeHeader p,
+.hyHomePage .hyHomeHeader a {
+  font-size: 22px;
 }
-.container.hyHomePage .hyHomeHeader {
+.hyHomePage .hyHomeHeader {
   text-weight: lighter;
 }
-.container.hyHomePage .hyHomeHeader2 p small {
+.hyHomePage .hyHomeHeader2 p {
+  margin-bottom: 0;
+}
+.hyHomePage .hyHomeHeader2 p small {
   font-size: 14px;
 }
-.container.hyHomePage .hyHomeContentCentered p {
-  font-size: 19px;
+.hyHomePage .hyHomeHeader {
+  color: white;
+  padding-bottom: 100px;
+  padding-top: 30px;
 }
-.container.hyHomePage p.hyPersonaTitle {
+@media (min-width: 768px) {
+  .hyHomePage .hyHomeHeader p {
+    padding: 30px 0;
+  }
+}
+.hyHomePage .hyHomeHeader2 p {
+  height: 40px;
+  line-height: 40px;
+}
+@media (max-width: 768px) {
+  .hyHomePage .hyHomeHeader2 p {
+    line-height: 20px;
+  }
+}
+.hyHomePage .hyHomeHeader3,
+.hyHomePage .personaIcons {
+  background-color: #ffffff;
+}
+.hyHomePage .hyHomeHeader3 a.hyPersonaText:hover,
+.hyHomePage .personaIcons a.hyPersonaText:hover {
+  text-decoration: none;
+}
+.hyHomePage .hyHomeHeader3 a.hyPersonaText p,
+.hyHomePage .personaIcons a.hyPersonaText p {
+  color: black;
+}
+.hyHomePage .hyHomeContentCentered p {
+  font-size: 16px;
+}
+.hyHomePage p.hyPersonaTitle {
   font-size: 27px;
   text-transform: uppercase;
   color: #369ad6;
 }
-.container.hyHomePage .hyPersonaTab li {
+.hyHomePage .hyPersonaTab li {
   font-size: 15px;
 }
-.container.hyHomePage .hyHomeSlider .hySliderText p {
+.hyHomePage .hyHomeSlider .hySliderText p {
   font-size: 15px;
 }
-.container.hyHomePage a {
-  color: #0486e0;
-}
-.container.hyHomePage .hyHomeContentCentered .row {
+.hyHomePage .hyHomeContentCentered .row {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.container.hyHomePage .hyHomeContentCentered .row .carousel {
+.hyHomePage .hyHomeContentCentered .row .carousel {
   margin-top: 20px;
   /*align with te text on aside*/
 }
 @media (max-width: 992px) {
-  .container.hyHomePage img.hyConsumUpImg {
+  .hyHomePage img.hyConsumUpImg {
     display: none;
   }
-}
-.container.hyHomePage .container {
-  width: auto;
-}
-.container.hyHomePage .hyHomeHeader {
-  background-image: url("/images/home/banner_bg.png");
-  color: white;
-  padding-bottom: 80px;
-  margin-bottom: 0;
-  padding-top: 30px;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-@media (min-width: 768px) {
-  .container.hyHomePage .hyHomeHeader p {
-    padding: 30px 100px;
+  .hyHomePage .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
-.container.hyHomePage .hyHomeHeader2 p {
-  height: 40px;
-  line-height: 40px;
-  background-color: #f2f3f5;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-@media (max-width: 768px) {
-  .container.hyHomePage .hyHomeHeader2 p {
-    line-height: 20px;
-  }
-}
-.container.hyHomePage .hyHomeHeader3,
-.container.hyHomePage .personaIcons {
+.hyHomePage .hyHomeHeader3,
+.hyHomePage .personaIcons {
   background-color: #ffffff;
 }
-.container.hyHomePage .hyHomeHeader3 a.hyPersonaText:hover,
-.container.hyHomePage .personaIcons a.hyPersonaText:hover {
+.hyHomePage .hyHomeHeader3 a.hyPersonaText:hover,
+.hyHomePage .personaIcons a.hyPersonaText:hover {
   text-decoration: none;
 }
-.container.hyHomePage .hyHomeHeader3 a.hyPersonaText p,
-.container.hyHomePage .personaIcons a.hyPersonaText p {
+.hyHomePage .hyHomeHeader3 a.hyPersonaText p,
+.hyHomePage .personaIcons a.hyPersonaText p {
   color: black;
 }
-.container.hyHomePage .hyHomeHeader3 p {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-.container.hyHomePage .personasCarousel {
+.hyHomePage .personasCarousel {
   background-color: #ffffff;
 }
-.container.hyHomePage .personasCarousel #hyPersonasCarouselID {
-  min-height: 200px;
+.hyHomePage .personasCarousel #hyPersonasCarouselID {
+  height: 200px;
 }
-.container.hyHomePage .personasCarousel .carousel-control {
+.hyHomePage .personasCarousel .carousel-control {
   padding-top: 50px;
 }
-.container.hyHomePage .personasCarousel .carousel-control:hover {
+.hyHomePage .personasCarousel .carousel-control:hover {
   opacity: 1;
 }
-.container.hyHomePage .personasCarousel .carousel-control.left,
-.container.hyHomePage .personasCarousel .carousel-control.right {
+.hyHomePage .personasCarousel .carousel-control.left,
+.hyHomePage .personasCarousel .carousel-control.right {
   background: white;
   opacity: 1;
 }
-.container.hyHomePage .personasCarousel .carousel-control.left :hover,
-.container.hyHomePage .personasCarousel .carousel-control.right :hover {
+.hyHomePage .personasCarousel .carousel-control.left :hover,
+.hyHomePage .personasCarousel .carousel-control.right :hover {
   opacity: 1;
 }
-.container.hyHomePage .personasCarousel .carousel-inner {
+.hyHomePage .personasCarousel .carousel-inner {
   padding-left: 15%;
   padding-right: 15%;
 }
-.container.hyHomePage .consumerCarousel:nth-of-type(even) {
+.hyHomePage .hyHomePageSection:nth-of-type(even) {
   background-color: #f7f7f7;
 }
-.container.hyHomePage .consumerCarousel:nth-of-type(odd) {
+.hyHomePage .hyHomePageSection:nth-of-type(odd) {
   background-color: #ffffff;
 }
-.container.hyHomePage .consumerCarousel {
+.hyHomePage .hyHomePageSection:not(:first-of-type) {
+  padding-bottom: 30px;
+}
+.hyHomePage .consumerCarousel {
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;
 }
-.container.hyHomePage .consumerCarousel .hyHomeSlider {
+.hyHomePage .consumerCarousel .hyHomeSlider {
   padding-top: 20px;
 }
-.container.hyHomePage .consumerCarousel .carousel-indicators {
+.hyHomePage .consumerCarousel .carousel-indicators {
   bottom: -30px;
 }
-.container.hyHomePage .consumerCarousel .carousel-indicators li.active {
+.hyHomePage .consumerCarousel .carousel-indicators li.active {
   border: 3px solid #369ad6;
   background-color: transparent;
 }
-.container.hyHomePage .consumerCarousel .carousel-indicators li {
+.hyHomePage .consumerCarousel .carousel-indicators li {
   background-color: black;
   border: none;
   margin-left: 5px;
   margin-right: 5px;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container {
   max-width: 600px;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab .w5_list li {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab .w5_list li {
   line-height: 200%;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs {
   border-bottom: none;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li {
   max-width: 50%;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li a {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li a {
   text-transform: uppercase;
   background-color: transparent;
   border-bottom: 1px solid #0486e0;
   color: #313440;
   word-break: break-word;
 }
-.container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li.active a {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li.active a {
   border: 1px solid transparent;
   color: #8a8fa1;
 }
 @media (min-width: 768px) {
-  .container.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.w5_list {
+  .hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.w5_list {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -1232,21 +1234,13 @@ body.has-left-nav .sidebar-nav {
   padding-top: 40px;
   margin-bottom: -10px;
 }
-.container.hyDownloadPage {
-  background-color: white;
-}
-.container.hyDownloadPage .hyDwnlBtns a {
+.container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;
 }
 @media (max-width: 990px) {
-  .container.hyDownloadPage .hyDwnlBtns {
+  .container-fluid.hyDownloadPage .hyDwnlBtns {
     padding-bottom: 15px;
   }
-}
-.container.hyDownloadPage .row {
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
 }
 .hyGettingStartedPage dl {
   margin-left: 25px;

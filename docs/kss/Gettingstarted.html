@@ -13,30 +13,81 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalressources/css/global.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v2/css/global.min.css">
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
 <body class="kss-body has-no-left-nav">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
-        <div class="navbar-super" role="navigation">
-            <a href="/" class="domain">
-                <img class="domain-logo" src="https://www.yaas.io/globalressources/img/techne.svg" alt="techne">
-            </a>
-            <ul class="nav-super">
-                <li><a href="https://www.yaas.io">YaaS Home</a></li>
-                <li><a href="https://builder.yaas.io">Builder</a></li>
-                <li class="active"><a href="https://devportal.yaas.io">Dev Portal</a></li>
-                <li><a href="https://appexchange.yaas.io">App Exchange</a></li>
-            </ul>
-            <a href="http://www.hybris.com" target="_blank" class="brand">
-                <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company">
-            </a>
-            <a href="#" class="nav-super-toggle">
-                <span class="nav-super-triangle"></span>
-            </a>
-        </div>
+            <div class="navbar-super" role="navigation">
+        <a href="/" class="domain">
+            <img class="domain-logo" src="https://www.yaas.io/globalresources/v2/img/techne_logo.svg" alt="builder"/>
+            <span class="logo-text">YAAS</span>
+        </a>
+        <ul class="nav-super">
+            <li><a href="https://www.yaas.io/">Home</a></li>
+            <li><a href="https://market.yaas.io">YaaS Market</a></li>
+            <li><a href="https://devportal.yaas.io" class="active">Dev Portal</a></li>
+            <li><a href="https://builder.yaas.io">Builder</a></li>
+            <li><a href="https://experts.hybris.com/spaces/102/index.html">Community</a></li>
+            <li class="account">
+                <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Account</a>
+                <div class="nav-super-submenu-toggle">
+                    <span class="nav-super-triangle"></span>
+                </div>
+
+                <ul class="account-overlay">
+                    <li class="account-overlay-logged-in" style="display:none;">
+                        <div>
+                            <ul>
+                                <li class="profile-head">
+                                <img class="profile-img" src="/img/profile-image.jpg" alt=""/>
+                                <div class="profile-details">
+                                    <div class="profile-email">
+                                        johannes.wohlhaupter@snk-interactive.de
+                                    </div>
+                                    <div class="profile-link">
+                                        <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Profile</a>
+                                    </div>
+                                </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li class="sign-out">
+                                    <a href="#">Sign Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="account-overlay-login" >
+                        <!-- <div class="login-form">
+                            <p>Please sign In with your Yaas credentials:</p>
+                            <input class="form-field" placeholder="Email" name="email" id="email" />
+                            <input class="form-field" type="password" placeholder="Password" id="password" name="password" />
+                            <div class="action-buttons">
+                                <a class="forgot-pwd" href="#">Forgot your password?</a>
+                                <button class="btn-submit">Sign In</button>
+                                <div class="clr"></div>
+                            </div>
+                        </div>-->
+                        <div class="menu-link">
+                            <a href="https://builder.yaas.io/">Sign In</a>
+                        </div>
+                        <div class="register-link menu-link">
+                            <a href="https://appexchange.yaas.io/#/register/">Register</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="http://www.hybris.com" target="_blank" class="brand">
+            <img class="brand-logo" src="https://www.yaas.io/globalressources/img/hybris.svg" alt="hybris - an SAP Company"/>
+        </a>
+        <a href="#" class="nav-super-toggle">
+            <span class="nav-super-triangle"></span>
+        </a>
+    </div>
         <div id="kss-top-nav">
 
             <a href="#menu-toggle" id="menu-toggle">
@@ -59,7 +110,7 @@
 
         </div>
     </header>
-  <div class="main-content" id="kss-wrapper">
+  <div class="main-content container-fluid" id="kss-wrapper">
     <section id="content" class="row">
       <!-- / SUPER HEADER -->
         <div role="main" id="kss-main" class="kss-main col-xs-12">
@@ -166,11 +217,17 @@
   <script src="public/js/bootstrap.min.js"></script>
   <script src="public/js/select2.js"></script>
   <script src="public/js/techne.min.js"></script>
+  <script src="public/js/yaas.sso.js"></script>
+  <script>
+    $(document).ready(function() {
+      sso('https://builder.yaas.io');
+    });
+  </script>
 
   <!--<script src="public/jquery-ui.js"></script>-->
   <script src="public/script.js"></script>
   <!--<script src="public/super-nav.js"></script>-->
 
 
-    <script src="https://www.yaas.io/globalressources/js/global.min.js"></script></body>
+    <script src="https://www.yaas.io/globalresources/v2/js/global.novendor.min.js"></script></body>
 </html>
