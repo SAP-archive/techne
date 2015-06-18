@@ -86,7 +86,7 @@
     <div class="container hyHomeContentCentered">
         <!-- Consumer Section-->
         <div class="row consumerCarousel" id="hyHomeConsumerC">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div id="hyConsumerCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                     </ol>
@@ -103,7 +103,7 @@
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
-            <div class="col-sm-6 hyPersonaTabs">
+            <div class="col-md-6 hyPersonaTabs">
                 <h3>The Consumer</h3>
                 <p>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</p>
                 <div class="container">
@@ -165,7 +165,7 @@
     <div class="container hyHomeContentCentered">
         <!-- High-touch User Section-->
         <div class="row consumerCarousel" id="hyHomeHighTC">
-            <div class="col-sm-6 col-sm-push-6">
+            <div class="col-md-6 col-md-push-6">
                 <div id="hyHightCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                     </ol>
@@ -182,7 +182,7 @@
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
-            <div class="col-sm-6 col-sm-pull-6 hyPersonaTabs">
+            <div class="col-md-6 col-md-pull-6 hyPersonaTabs">
                 <h3>High-touch Business User</h3>
                 <p>Our Marketers, Merchandisers, Product Managers and other Designer people</p>
                 <div class="container">
@@ -244,7 +244,7 @@
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
         <div class="row consumerCarousel" id="hyHomeLowTC">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div id="hyLowtCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                     </ol>
@@ -261,7 +261,7 @@
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyLowtCarouselID -->
             </div><!--consumer carousel-->
-            <div class="col-sm-6 hyPersonaTabs">
+            <div class="col-md-6 hyPersonaTabs">
                 <h3>The Low-touch Business User</h3>
                 <p>Our  IT, Operations, Customer Service, Order Management people</p>
                 <div class="container">
@@ -322,7 +322,7 @@
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
         <div class="row consumerCarousel" id="hyHomeSoftDevC">
-            <div class="col-sm-6 col-sm-push-6">
+            <div class="col-md-6 col-md-push-6">
                 <div id="hyDevCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                     </ol>
@@ -339,7 +339,7 @@
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyDevCarouselID -->
             </div><!--consumer carousel-->
-            <div class="col-sm-6 col-sm-pull-6 hyPersonaTabs">
+            <div class="col-md-6 col-md-pull-6 hyPersonaTabs">
                 <h3>and of course, Software Developers</h3>
                 <p>The heart of YaaS. They need stability, community and tools that don’t get in their way</p>
                 <div class="container">
