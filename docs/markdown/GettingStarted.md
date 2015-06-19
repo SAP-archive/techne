@@ -39,7 +39,7 @@
           <p>afterwards, to get techne.</p>
         </div>
         <div class="col-xs-12">
-          <h2 class="">How to build Techné localy</h2>
+          <h2 class="">How to build Techne locally</h2>
           <p>
             Techne is using Gulp as build system. 
           </p>
