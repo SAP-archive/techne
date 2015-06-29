@@ -955,6 +955,37 @@ header.hyHomeHeaderMinor {
     a {
         vertical-align: middle;
     }
+    @media (min-width: 1567px) {
+        #hyInstallContainer {
+            padding-right: 600px;
+        }
+    }
+    //Keep text readable within the hyInstall container. Padding decreases as window width decreases - L.M.
+    @media only screen and (min-width: 1461px) and (max-width: 1566px) {
+        #hyInstallContainer {
+            padding-right: 500px;
+        }
+    }
+    @media only screen and (min-width: 1360px) and (max-width: 1460px) {
+        #hyInstallContainer {
+            padding-right: 400px;
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1359px) {
+        #hyInstallContainer {
+            padding-right: 300px;
+        }
+    }
+    @media only screen and (min-width: 1160px) and (max-width: 1259px) {
+        #hyInstallContainer {
+            padding-right: 200px;
+        }
+    }
+    @media only screen and (min-width: 1060px) and (max-width: 1159px) {
+        #hyInstallContainer {
+            padding-right: 100px;
+        }
+    }
     .customFonts {
         h2 {
             color: #233243;
@@ -982,7 +1013,7 @@ header.hyHomeHeaderMinor {
         code {
             color: #0486e0;
             background-color: #f1f5f8;
-        }
+        }   
     }
     .downloadOptions {
         div {
@@ -1003,6 +1034,7 @@ header.hyHomeHeaderMinor {
         h2 {
             height: 54px;
         }
+        
         @media only screen and (max-width: 977px) and (min-width: 890px) {
             a {
                 font-size: 20px;
