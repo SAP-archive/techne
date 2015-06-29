@@ -1250,11 +1250,13 @@ header.hyHomeHeaderMinor {
   }
 }
 .hyGettingStartedPage {
+  margin-top: -15px;
+}
+.hyGettingStartedPage .hyDownloads {
   background-color: #e0e9f0;
   padding-top: 63px;
   margin-left: -15px;
   margin-right: -15px;
-  margin-top: -15px;
   margin-bottom: 21px;
 }
 .hyGettingStartedPage h2 {
@@ -1274,36 +1276,6 @@ header.hyHomeHeaderMinor {
 }
 .hyGettingStartedPage a {
   vertical-align: middle;
-}
-@media (min-width: 1567px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 600px;
-  }
-}
-@media only screen and (min-width: 1461px) and (max-width: 1566px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 500px;
-  }
-}
-@media only screen and (min-width: 1360px) and (max-width: 1460px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 400px;
-  }
-}
-@media only screen and (min-width: 1260px) and (max-width: 1359px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 300px;
-  }
-}
-@media only screen and (min-width: 1160px) and (max-width: 1259px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 200px;
-  }
-}
-@media only screen and (min-width: 1060px) and (max-width: 1159px) {
-  .hyGettingStartedPage #hyInstallContainer {
-    padding-right: 100px;
-  }
 }
 .hyGettingStartedPage .customFonts h2 {
   color: #233243;
