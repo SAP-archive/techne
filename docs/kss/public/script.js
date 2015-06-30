@@ -157,7 +157,7 @@ $( document ).ready(function(){
     var aActivePersonasID = ['#hyConsumUpImg', '#hyConsumOverImg'];
     var aInactivePersonasID = ['#hyConsumUpImg','#hyHighTUpImg','#hyLowTUpImg','#hyDevUpImg'];
     var fUpdatePersonaImgs = function() {
-        if($(".kss-body").width() <= 976) {
+        if($(".kss-body").width() <= 992) {
             for (var i = 0; i <= aInactivePersonasID.length; i++){
                 $(aInactivePersonasID[i]).addClass('hidden').prev().addClass('hidden');
             }
@@ -176,7 +176,7 @@ $( document ).ready(function(){
 
     $('#hyPersonasCarouselID').on('slide.bs.carousel', function(oEvent){
 
-        if($(".kss-body").width() <= 976){
+        if($(".kss-body").width() <= 992){
             //inactivate the previous image
             $(aActivePersonasID[1]).addClass('hidden');
 
