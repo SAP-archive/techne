@@ -12,7 +12,7 @@ var activateNav = function(navLink){
 
 };
 
-$(function(){
+$( document ).ready(function(){
 
     // initiate scroll spy
     $('body').scrollspy({ target: '.left-nav' });
@@ -157,7 +157,7 @@ $(function(){
     var aActivePersonasID = ['#hyConsumUpImg', '#hyConsumOverImg'];
     var aInactivePersonasID = ['#hyConsumUpImg','#hyHighTUpImg','#hyLowTUpImg','#hyDevUpImg'];
     var fUpdatePersonaImgs = function() {
-        if($(window).width() <= 992) {
+        if($(".kss-body").width() <= 992) {
             for (var i = 0; i <= aInactivePersonasID.length; i++){
                 $(aInactivePersonasID[i]).addClass('hidden').prev().addClass('hidden');
             }
@@ -176,7 +176,7 @@ $(function(){
 
     $('#hyPersonasCarouselID').on('slide.bs.carousel', function(oEvent){
 
-        if($(window).width() <= 992){
+        if($(".kss-body").width() <= 992){
             //inactivate the previous image
             $(aActivePersonasID[1]).addClass('hidden');
 
