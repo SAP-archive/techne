@@ -1,9 +1,11 @@
 @import 'markdown';
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-body {
-    margin-top: 110px!important;
+
+body{
+  margin-top: 110px!important;
 }
+
 body.kss-body {
     background: #ffffff;
     overflow: visible;
@@ -58,8 +60,9 @@ body.kss-body {
         margin-top: 4px;
     }
 }
-.kss-ref {
-    display: none;
+
+.kss-ref{
+  display: none;
 }
 #kss-nav {
     background-color: #fff;
@@ -187,28 +190,28 @@ h1.kss-title {
         color: #080;
     }
     /* string content */
-    
+
     .kwd {
         color: #008;
     }
     /* a keyword */
-    
+
     .com {
         color: #800;
     }
     /* a comment */
-    
+
     .typ {
         color: #606;
     }
     /* a type name */
-    
+
     .lit {
         color: #066;
     }
     /* a literal value */
     /* punctuation, lisp open bracket, lisp close bracket */
-    
+
     .pun,
     .opn,
     .clo {
@@ -218,23 +221,23 @@ h1.kss-title {
         color: #008;
     }
     /* a markup tag name */
-    
+
     .atn {
         color: #606;
     }
     /* a markup attribute name */
-    
+
     .atv {
         color: #080;
     }
     /* a markup attribute value */
-    
+
     .dec,
     .var {
         color: #606;
     }
     /* a declaration; a variable name */
-    
+
     .fun {
         color: red;
     }
@@ -355,7 +358,7 @@ li.L9 {
 #kss-wrapper {
     padding-left: 15px;
     /* container - fluid ! */
-    
+
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -466,7 +469,7 @@ body.has-left-nav .sidebar-nav {
         margin: 0 50px 0 0;
     }
     /* patterns */
-    
+
     .row.visual-code {
         margin: 0;
     }
@@ -569,7 +572,7 @@ body.has-left-nav .sidebar-nav {
 }
 #visual-system {
     /* font-size */
-    
+
     .size-26 {
         font-size: 26px;
     }
@@ -591,7 +594,7 @@ body.has-left-nav .sidebar-nav {
         margin-top: -35%;
     }
     /* 5 column layout */
-    
+
     .col-xs-5ths,
     .col-sm-5ths,
     .col-md-5ths,
@@ -639,7 +642,7 @@ body.has-left-nav .sidebar-nav {
         background: @blue_gd;
     }
     /* alert colors */
-    
+
     .help-info {
         background: @help-info_gd;
     }
@@ -656,7 +659,7 @@ body.has-left-nav .sidebar-nav {
         background: @try-again_gd;
     }
     /* typography */
-    
+
     .dosis-light {
         font-weight: 300;
         font-family: 'Dosis';
@@ -728,17 +731,20 @@ body.has-left-nav .sidebar-nav {
 
 header.hyHomeHeaderMain {
     /*font sizes per psd-not following the styleguide*/
-    
+
     background-image: url("/images/home/banner_bg.png");
     margin-top: -20px;
-    margin-left: -1px;
+    margin-left: -16px;
+    margin-right: -15px;
 }
 header.hyHomeHeaderMinor {
     background-color: #f2f3f5;
+    margin-left: -16px;
+    margin-right: -15px;
 }
 .hyHomePage {
     /*font sizes per psd-not following the styleguide*/
-    
+
     h1 {
         font-size: 57px;
     }
@@ -828,11 +834,14 @@ header.hyHomeHeaderMinor {
     }
     .personasCarousel {
         background-color: #ffffff;
-        #hyPersonasCarouselID {
-            height: 200px;
-        }
-        .carousel-control {
-            padding-top: 50px;
+
+        .carousel-control{
+            padding-top:50px;
+
+        //#hyPersonasCarouselID {
+        //    height: 200px;
+        //}
+
         }
         .carousel-control:hover {
             opacity: 1;
@@ -852,9 +861,12 @@ header.hyHomeHeaderMinor {
     }
     .hyHomePageSection:nth-of-type(even) {
         background-color: #f7f7f7;
+        margin-left: -15px;
+        margin-right: -15px;
     }
-    .hyHomePageSection:nth-of-type(odd) {
-        background-color: #ffffff;
+
+    .hyHomePageSection:nth-of-type(odd){
+        /*background-color: #ffffff;*/
     }
     .hyHomePageSection:not(:first-of-type) {
         padding-bottom: 30px;
@@ -866,7 +878,12 @@ header.hyHomeHeaderMinor {
         .hyHomeSlider {
             padding-top: 20px;
         }
-        .carousel-indicators {
+        .carousel-inner .item img{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .carousel-indicators{
+
             bottom: -30px;
             li.active {
                 border: 3px solid #369ad6;
@@ -879,10 +896,12 @@ header.hyHomeHeaderMinor {
                 margin-right: 5px;
             }
         }
-        .hyPersonaTabs .container {
-            max-width: 600px;
-            .hyPersonaTab {
-                .w5_list li {
+        .hyPersonaTabs .container{
+            max-width: 555px;
+            padding-left:0;
+            .hyPersonaTab{
+                .w5_list li{
+
                     line-height: 200%;
                 }
                 ul.nav-tabs {
@@ -902,8 +921,9 @@ header.hyHomeHeaderMinor {
                         color: #8a8fa1;
                     }
                 }
-                @media (min-width: 768px) {
-                    ul.w5_list {
+                @media (min-width: 992px){
+                    ul.w5_list{
+
                         columns: 2;
                         -webkit-columns: 2;
                         -moz-columns: 2;
@@ -930,6 +950,7 @@ header.hyHomeHeaderMinor {
         }
     }
 }
+
 .hyGettingStartedPage {
     margin-top: -15px;
     .hyDownloads {
@@ -1033,7 +1054,7 @@ header.hyHomeHeaderMinor {
                 padding-left: 45px;
                 padding-right: 45px;
             }
-            
+
             a {
                 font-size: 20px;
             }
