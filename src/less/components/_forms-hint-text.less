@@ -1,7 +1,34 @@
+// Inline Help
+//
+// <p>
+// Use inline help to guide the user through formular fields.
+// Focus on the action required and make it relevant to the user’s current situation.
+// </p>
+// Do explain:
+// <ul>
+//    <li>unfamiliar concepts</li>
+//    <li>what format the information should be given in</li>
+//    <li>where to find further information</li>
+// </ul>
+// 
+// The inline help should be placed below the input field. Keep it short and clear. Avoid more then two lines. 
+//
+// Markup:
+//  <form>
+//    <label>Title</label>
+//    <input type="text" class="form-control">
+//    <span class="inline-hint-text">This line is reserved for help text.</span>
+//  </form>
+//
+// Styleguide 4.4
+
+
+
+
 .inline-hint-text{
-    background:   fade(@body-bg, 50%);
+  background:   fade(@body-bg, 50%);
   // Include the help-block styling but avoid 
-  //the styling of has-error etc when validation fails.
+  // the styling of has-error etc when validation fails.  
   .help-block();
   display: inline-block;
 }

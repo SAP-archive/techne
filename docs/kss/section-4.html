@@ -21,7 +21,7 @@
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
-        <a href="/" class="domain">
+        <a href="https://www.yaas.io/home/" class="domain">
             <img class="domain-logo" src="https://www.yaas.io/globalresources/v2/img/techne_logo.svg" alt="builder"/>
             <span class="logo-text">YAAS</span>
         </a>
@@ -270,6 +270,43 @@ within a form.</p>
                         </div>
                     </div>
                 </section>
+                <section id="section-4.4" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">4.4</span> Inline Help</h1>
+                    <div class="kss-description">
+                        <p><p>
+Use inline help to guide the user through formular fields.
+Focus on the action required and make it relevant to the user’s current situation.
+</p>
+Do explain:
+</p>
+<ul>
+   <li>unfamiliar concepts</li>
+   <li>what format the information should be given in</li>
+   <li>where to find further information</li>
+</ul>
+
+<p>The inline help should be placed below the input field. Keep it short and clear. Avoid more then two lines. </p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                 <form>
+   <label>Title</label>
+   <input type="text" class="form-control">
+   <span class="inline-hint-text">This line is reserved for help text.</span>
+ </form>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <pre><code data-language="html"> &lt;form&gt;
+   &lt;label&gt;Title&lt;/label&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+   &lt;span class=&quot;inline-hint-text&quot;&gt;This line is reserved for help text.&lt;/span&gt;
+ &lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
             </article>
         </div>
 
@@ -299,7 +336,21 @@ within a form.</p>
     });
   </script>
 
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56768310-7', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
 
 
+  <!---->
+  <!---->
     <script src="https://www.yaas.io/globalresources/v2/js/global.novendor.min.js"></script></body>
 </html>
