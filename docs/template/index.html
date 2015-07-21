@@ -18,6 +18,7 @@
 
 </head>
 <body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}}">
+    {{pagename}}
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
@@ -100,10 +101,10 @@
 
 
             <ul class="hidden-xs">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="Guidelines.html">Guidelines</a></li>
-                <li><a href="section-1.html">Components</a></li>
-                <li><a href="GettingStarted.html">Download &amp; Get Started</a></li>
+                <li><a href="index.html" class="{{#if pageName === 'index'}}active{{/if}}">Home</a></li>
+                <li><a href="Guidelines.html" class="{{#if pageName === 'Guidelines'}}active{{/if}}">Guidelines</a></li>
+                <li><a href="section-1.html" class="{{#if pageName === 'components'}}active{{/if}}">Components</a></li>
+                <li><a href="GettingStarted.html" class="{{#if pageName === 'GettingStarted'}}active{{/if}}">Download &amp; Get Started</a></li>
 
             </ul>
 
