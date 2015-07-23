@@ -32,7 +32,7 @@
 
 <div class="hyGuidelinesPage container-fluid" >
     <section id="spirit-vision" class="page">
-        <h2>Spirit & Vision</h2>
+        <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs"/>
         <div class="hybris-guy-bg">
@@ -98,7 +98,7 @@
                 <p><strong>Flexible:</strong> allow people to work within the system they way they want.  Allow for frequent and infrequent task completion paths; linear and nonlinear ways of working.</p>
             </div>
             <div class="col-md-6">
-                <p><strong>Predictive & Automated:</strong>  as people spend more time in the system, the system should respond by surfacing frequent tasks, workspaces and information most used without explicit ask or action.  As many tasks should be automated as reasonably possible to make people’s working lives easier.</p>
+                <p><strong>Predictive &amp; Automated:</strong>  as people spend more time in the system, the system should respond by surfacing frequent tasks, workspaces and information most used without explicit ask or action.  As many tasks should be automated as reasonably possible to make people’s working lives easier.</p>
                 <p><strong>Simple:</strong> A single piece of information or task should be no more than three clicks away from any other piece of information or task. Period.  If a flow isn’t allowing for this criteria, the flow needs re-designing.</p>
                 <p><strong>Fun:</strong> “Wow that was easy.”  “I may not like the task but I love this interface”</p>
                 <p><strong>Above All, User-Centric:</strong> follow user-centered design processes. Demand design principles are in place as part of any MVP criteria.</p>
@@ -179,18 +179,13 @@
               <p><b>Text Link:</b> use app-wide for links in any context.</p>
             </div>
             <hr>
-            <h3>Alerts, Errors & Notifications</h3>
+            <h3>Alerts, Errors &amp; Notifications</h3>
             <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
             <p>These colors are desaturated to work better with the primary application colors.</p>
             <div class="row text-center">
               <div class="col-md-5ths col-xs-4">
                 <div class="circle help-info"></div>
                 <p class="no-bottom-margin">Help information</p>
-                <h4>#d3dbe6</h4>
-              </div>
-              <div class="col-md-5ths col-xs-4">
-                <div class="circle attention"></div>
-                <p class="no-bottom-margin">Heads Up! Attention</p>
                 <h4>#d3dbe6</h4>
               </div>
               <div class="col-md-5ths col-xs-4">
@@ -224,11 +219,9 @@
             <div class="usage">
               <h4>Usage Guidelines</h4>
               <p><b>Helpful Information:</b> use background color app-wide for notification field-level help modals.</p>
-              <p><b>Theads Up! Attention:</b> use background color app-wide for notification messaging only.</p>
               <p><b>Well Done! Success!:</b> use background color app-wide for success messaging only.</p>
               <p><b>Warning! Not looking good:</b> use background color app-wide for warning messaging only.</p>
               <p><b>Oh Snap! Try again:</b> use background color app-wide for error messaging only.</p>
-              <p>* See <a href="#"><b>"Errors and Notifications"</b></a> for treatment and messaging examples. </p>
             </div>
             <hr>
             <h3>Typography</h3>
@@ -373,7 +366,7 @@
     </section>
     <!-- load tone/voice -->
     <section id="tone-voice" class="page">
-        <h2>Tone & Voice</h2>
+        <h2>Tone &amp; Voice</h2>
         <h3>Guiding Principles for Tone and Voice</h3>
         <ul>
             <li>Mobile first</li>
@@ -419,7 +412,7 @@
             </tr>
         </table>
         <hr>
-        <h3>Punctuation & Capitalization</h3>
+        <h3>Punctuation &amp; Capitalization</h3>
         <ul>
             <li>Do not use a period for single sentences</li>
             <li>Use periods for messaging with multiple sentences, or when the sentence has other punctuation. Like this one.</li>
@@ -450,7 +443,7 @@
             </tr>
         </table>
         <hr>
-        <h3>Messaging; Errors & Notifications</h3>
+        <h3>Messaging; Errors &amp; Notifications</h3>
         <ul>
             <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
             <li>For errors, use 'unsuccessful' as the key word. </li>
