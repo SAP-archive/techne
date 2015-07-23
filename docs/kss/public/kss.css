@@ -914,7 +914,7 @@ body.has-left-nav .sidebar-nav {
   border-radius: 50%;
 }
 #visual-system .circle-type {
-  font-size: 74px;
+  font-size: 50px;
   display: inline-block;
   margin-top: -35%;
 }
@@ -1042,6 +1042,13 @@ body.has-left-nav .sidebar-nav {
 #visual-system .header-example-carousel .carousel-indicators .active {
   color: #fff;
   background-color: #369ad6;
+}
+#visual-system .typographySpacing {
+  padding-bottom: 20px;
+}
+#visual-system .typographyExampleSpacing {
+  padding-left: 15px;
+  padding-bottom: 25px;
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
@@ -1247,6 +1254,9 @@ header.hyHomeHeaderMinor {
 .hyGuidelinesPage section {
   padding-top: 40px;
   margin-bottom: -10px;
+}
+.hyGuidelinesPage #hyGuidelinesContianer {
+  padding-bottom: 20px;
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;
