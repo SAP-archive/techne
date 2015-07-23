@@ -257,7 +257,7 @@ body.kss-body {
   padding: 15px;
 }
 #kss-top-nav {
-  background: #0486e0;
+  background: #2877CB;
   color: #fff;
   overflow: hidden;
   height: 60px;
@@ -1228,7 +1228,7 @@ header.hyHomeHeaderMinor {
 .hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li a {
   text-transform: uppercase;
   background-color: transparent;
-  border-bottom: 1px solid #0486e0;
+  border-bottom: 1px solid #2877CB;
   color: #313440;
   word-break: break-word;
 }
@@ -1307,7 +1307,7 @@ header.hyHomeHeaderMinor {
   margin-bottom: 18px;
 }
 .hyGettingStartedPage .hyInstall code {
-  color: #0486e0;
+  color: #2877CB;
   background-color: #f1f5f8;
 }
 .hyGettingStartedPage .downloadOptions div {
