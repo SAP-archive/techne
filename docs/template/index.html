@@ -18,7 +18,6 @@
 
 </head>
 <body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}}">
-    {{pagename}}
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
@@ -101,11 +100,33 @@
 
 
             <ul class="hidden-xs">
-                <li><a href="index.html" class="{{#if pageName === 'index'}}active{{/if}}">Home</a></li>
-                <li><a href="Guidelines.html" class="{{#if pageName === 'Guidelines'}}active{{/if}}">Guidelines</a></li>
-                <li><a href="section-1.html" class="{{#if pageName === 'components'}}active{{/if}}">Components</a></li>
-                <li><a href="GettingStarted.html" class="{{#if pageName === 'GettingStarted'}}active{{/if}}">Download &amp; Get Started</a></li>
-
+                <li>
+                    {{#chk_pageName pageName 'index'}}
+                        <span class="active">Home</span>
+                    {{else}} 
+                        <a href="index.html" class="inactive">Home</a>
+                    {{/chk_pageName}}      
+                </li>
+                <li>
+                    {{#chk_pageName pageName 'Guidelines'}}
+                        <span class="active">Guidelines</span>
+                    {{else}} 
+                        <a href="Guidelines.html" class="inactive">Guidelines</a>
+                    {{/chk_pageName}}     
+                </li>
+                <li>
+                    {{#chk_pageName pageName 'components'}}
+                        <span class="active">Components</span>
+                    {{else}} 
+                        <a href="section-1.html" class="inactive">Components</a>
+                    {{/chk_pageName}}     
+                <li>
+                    {{#chk_pageName pageName 'GettingStarted'}}
+                        <span class="active">GettingStarted</span>
+                    {{else}} 
+                        <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
+                    {{/chk_pageName}}     
+                </li>
             </ul>
 
 

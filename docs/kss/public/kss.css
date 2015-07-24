@@ -270,6 +270,12 @@ body.kss-body {
 #kss-top-nav ul li {
   float: left;
 }
+#kss-top-nav ul li span.active {
+  border-bottom: 3px solid #fff;
+  font-weight: bold;
+  padding: 18px;
+  display: inline-block;
+}
 #kss-top-nav ul li a {
   color: #a4c8f0;
   display: inline-block;
