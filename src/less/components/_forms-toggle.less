@@ -27,7 +27,8 @@
 
     padding-left: @toggle-size * 2 + 7px ;
     font-weight: normal;
-          cursor: pointer;
+    cursor: pointer;
+    vertical-align: middle;
 
     &:before{
       position: absolute;
@@ -76,6 +77,70 @@
       &:after {
         left: @toggle-size + @toggle-border-size;
         background: @toggle-switch-color-primary;
+      }
+    }
+  }
+
+
+// Large Toggle
+//
+// Large toggle button that is used for small inline indication of a status
+// in combination with a link 
+// 
+// Markup:
+// <span class="y-toggle y-toggle-lg">
+//   <input type="checkbox" id="toggleidlg"/>
+//   <label for="toggleidlg">Labeltext (optional)</label>
+// </span>
+//
+// Styleguide 3.3
+
+
+  &.y-toggle-lg{
+    // overwrite size
+    @toggle-size: 36px;
+
+    label {
+      padding-left: @toggle-size * 2.1 + 10px ;
+      line-height: @toggle-size + 6;
+      vertical-align: top;
+
+      // For empty labels
+      height: @toggle-size;
+
+      &:before{
+        content: 'OFF';
+        font-size: 14px;
+        text-align: right;
+        padding-right:  @toggle-size / 4;
+        border-radius: @toggle-size/2;
+        height: @toggle-size;
+        width: @toggle-size*2.1;
+        display: inline-block;
+        border: @toggle-border-size solid @default-grey;
+        line-height: @toggle-size;
+      }
+
+      &:after {
+        top: @toggle-border-size + 3px;
+        border-radius: @toggle-size;
+        width: @toggle-size - (@toggle-border-size*2);
+        height: @toggle-size - (@toggle-border-size*2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+      }
+    }
+    input[type="checkbox"] {
+      &:checked + label {
+        &:before{
+          content: 'ON';
+          text-align: left;
+          padding-left:  @toggle-size / 4;
+          padding-right: 0;
+          color: #fff;
+        }
+        &:after {
+          left: @toggle-size * 1.1 + @toggle-border-size;
+        }
       }
     }
   }
