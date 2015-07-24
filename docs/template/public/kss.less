@@ -33,10 +33,17 @@ body.kss-body {
         padding: 0 20px;
         li {
             float: left;
+            span.active {
+                border-bottom: 3px solid #fff;
+                font-weight: bold;
+                padding: 18px;
+                display: inline-block
+            }
             a {
                 color: #a4c8f0;
                 display: inline-block;
                 padding: 18px;
+                
             }
         }
     }
@@ -457,6 +464,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-trees .btn-link.collapsed .glyphicon-plus:before {
     content: "+";
 }
+
 #patterns-forms,
 #patterns-infopopups,
 #patterns-labels,
@@ -466,6 +474,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-accordions,
 #kss-content,
 #patterns-trees {
+  
     .table-behavoir-cell .seperator {
         margin: 0 50px 0 0;
     }

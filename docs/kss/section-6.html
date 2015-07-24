@@ -100,10 +100,23 @@
 
 
             <ul class="hidden-xs">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="Guidelines.html">Guidelines</a></li>
-                <li><a href="section-1.html">Components</a></li>
-                <li><a href="GettingStarted.html">Download &amp; Get Started</a></li>
+                <li>
+                        <a href="index.html" class="inactive">Home</a>
+                </li>
+                <li>
+                        <a href="Guidelines.html" class="inactive">Guidelines</a>
+                </li>
+                <li>
+                        <span class="active">Components</span>
+                </li>
+                <li>
+                        <a href="Patterns.html" class="inactive">Patterns &amp; Layouts</a></li>
+                    <li>
+                    
+                </li>
+                <li>
+                        <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
+                </li>
 
             </ul>
 
@@ -151,9 +164,7 @@ So far this just includes panels. </p>
                 <section id="section-6.1" class="kss-section kss-depth-2">
                     <h1 class="kss-title"><span class="kss-ref">6.1</span> Panels</h1>
                     <div class="kss-description">
-                        <p>Panel States
-Deprecated - The states will be removed in the future 
-Please don&apos;t use it anymore
+                        <p>Use panels to display content in the builder
 
 </p>
 <p>.panel</p>
@@ -162,17 +173,19 @@ Please don&apos;t use it anymore
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="panel">
+                                <div class="panel panel-default">
 	<div class="panel-heading">Panel heading without title</div>
 	<div class="panel-body">Panel content</div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;panel&quot;&gt;
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;panel panel-default&quot;&gt;
 	&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
 	&lt;div class=&quot;panel-body&quot;&gt;Panel content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -576,7 +589,8 @@ Please don&apos;t use it anymore
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div class=&quot;panel panel-default&quot;&gt;
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;panel panel-default&quot;&gt;
 	&lt;div class=&quot;panel-heading clearfix&quot;&gt;
    &lt;div class=&quot;pull-left&quot;&gt;
 				Panel heading
@@ -644,6 +658,7 @@ Please don&apos;t use it anymore
 	&lt;div class=&quot;pull-right&quot;&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -87,6 +87,7 @@ module.exports = function(opt) {
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
                                 sectionData: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
+                                pagename: fName,
                                 styleguide: styleguide,
                                 sectionRoots: sectionRoots,
                                 sections: jsonSections(childSections),
@@ -124,6 +125,7 @@ module.exports = function(opt) {
                     rootNumber: sectionRoots[i],
                     sectionRoots: sectionRoots,
                     overview: false,
+                    pagename: "components",
                     argv: {}
                 });
 
