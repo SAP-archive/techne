@@ -100,7 +100,6 @@
 
 
             <ul class="hidden-xs">
-<<<<<<< HEAD
                 <li>
                     {{#chk_pageName pageName 'index'}}
                         <span class="active">Home</span>
@@ -120,22 +119,25 @@
                         <span class="active">Components</span>
                     {{else}} 
                         <a href="section-1.html" class="inactive">Components</a>
-                    {{/chk_pageName}}     
+                    {{/chk_pageName}}
+                </li>
+                <li>
+                    {{#chk_pageName pageName 'Patterns'}}
+                        <span class="active">Patterns &amp; Layouts</span>
+                    {{else}}
+                        <a href="Patterns.html" class="inactive">Patterns &amp; Layouts</a></li>
+                    {{/chk_pageName}}
+                    <li>
+                    
+                </li>
                 <li>
                     {{#chk_pageName pageName 'GettingStarted'}}
-                        <span class="active">GettingStarted</span>
+                        <span class="active">Download &amp; Get Started</span>
                     {{else}} 
                         <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
                     {{/chk_pageName}}     
                 </li>
-=======
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="Guidelines.html">Guidelines</a></li>
-                <li><a href="section-1.html">Components</a></li>
-                <li><a href="Patterns.html">Patterns &amp; Layouts</a></li>
-                <li><a href="GettingStarted.html">Download &amp; Get Started</a></li>
 
->>>>>>> develop
             </ul>
 
 
@@ -206,7 +208,9 @@
                         </div>
                         {{/eachModifier}}
                         <div class="kss-markup">
-                            <pre><code data-language="html">{{markup}}</code></pre>
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">{{markup}}</code></pre>
+                            </div>
                         </div>
                     </div>
                     {{else}}
