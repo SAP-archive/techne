@@ -1043,42 +1043,59 @@ body.has-left-nav .sidebar-nav {
   color: #fff;
   background-color: #369ad6;
 }
-#visual-system .typographyExampleSpacing {
+#visual-system .carouselSpacing {
+  padding-bottom: 15px;
+}
+@media only screen and (max-width: 1212px) and (min-width: 992px) {
+  #visual-system .carouselSpacing {
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 874px) and (min-width: 768px) {
+  #visual-system .carouselSpacing {
+    padding-bottom: 50px;
+  }
+}
+#visual-system .typographySpacing {
   padding-bottom: 25px;
 }
+#visual-system .typographyAlignment {
+  padding-left: 15px;
+}
 @media only screen and (max-width: 1376px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 25px;
   }
 }
 @media only screen and (max-width: 1337px) and (min-width: 1330px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 24px;
   }
 }
 @media only screen and (max-width: 1329px) and (min-width: 1264px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 23px;
   }
 }
 @media only screen and (max-width: 1263px) and (min-width: 1225px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 22px;
   }
 }
 @media only screen and (max-width: 1224px) and (min-width: 1187px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 21px;
   }
 }
 @media only screen and (max-width: 1186px) and (min-width: 992px) {
-  #visual-system .typographyExampleSpacing p {
+  #visual-system .exampleSpacing p {
     font-size: 20px;
   }
 }
-#visual-system .typographySpacing {
-  padding-left: 15px;
-  padding-bottom: 25px;
+@media only screen and (max-width: 850px) and (min-width: 768px) {
+  #visual-system .circleTextSize span {
+    font-size: 41px;
+  }
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
@@ -1287,6 +1304,9 @@ header.hyHomeHeaderMinor {
 }
 .hyGuidelinesPage #hyGuidelinesContianer {
   padding-bottom: 20px;
+}
+.hyGuidelinesPage .carousel-inner > .item > img {
+  margin: 0 auto;
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;

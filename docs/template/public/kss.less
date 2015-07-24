@@ -724,8 +724,22 @@ body.has-left-nav .sidebar-nav {
             }
         }
     }
-    .typographyExampleSpacing {
+    .carouselSpacing {
+       padding-bottom: 15px;
+        @media only screen and (max-width: 1212px) and (min-width: 992px) {
+            padding-bottom: 50px;
+        }
+        @media only screen and (max-width: 874px) and (min-width: 768px) {
+            padding-bottom: 50px;
+        }
+    }
+    .typographySpacing {      
         padding-bottom: 25px;
+    }
+    .typographyAlignment {
+        padding-left: 15px;
+    }
+    .exampleSpacing {
          @media only screen and (max-width: 1376px) {
             p {
                 font-size: 25px;
@@ -758,9 +772,12 @@ body.has-left-nav .sidebar-nav {
             }
         }
     }
-    .typographySpacing {
-        padding-left: 15px;
-        padding-bottom: 25px;
+    .circleTextSize {
+        @media only screen and (max-width: 850px) and (min-width: 768px) {
+            span {
+                font-size: 41px;
+            }
+        }
     }
     
 }
@@ -980,6 +997,9 @@ header.hyHomeHeaderMinor {
     }
     #hyGuidelinesContianer {
         padding-bottom: 20px;
+    }
+    .carousel-inner > .item > img {
+        margin: 0 auto;
     }
 }
 .container-fluid.hyDownloadPage {

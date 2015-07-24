@@ -226,13 +226,13 @@
             <hr>
             </hr>
         </div>
-        <div class="row typographyExampleSpacing">
+        <div class="row typographySpacing">
             <div class="col-xs-12 col-md-12">
                 <h3>Typography</h3>
                 <p>Good typography adds personality to an application, and can help set tone in the absence of visual elements. hybris and YaaS IO uses <strong><a href="https://www.google.com/fonts/specimen/Dosis" target="_blank">Dosis</a></strong> to create a friendly and inviting environment.</p>
             </div>
         </div>
-        <div class="row typographySpacing">
+        <div class="row typographySpacing typographyAlignment circleTextSize">
             <div class="row text-center type-face">
                 <div class="col-md-5ths col-xs-4">
                     <div class="circle">
@@ -260,7 +260,7 @@
                 </div>
             </div>
         </div>
-        <div class="row typographySpacing">
+        <div class="row typographySpacing typographyAlignment">
             <div class="usage">
                 <h4 class="dosis-semibold">Usage Guidelines</h4>
                 <p><b>Light:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -269,71 +269,75 @@
                 <p><b>Semibold:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
             </div>
         </div>
-        <div class="row typographyExampleSpacing">
-            <div class="col-md-4 usage">
+        <div class="row exampleSpacing">
+            <div class="col-md-4 usage typographySpacing">
                 <h4 class="dosis-semibold">Dosis Light</h4>
                 <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-light size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
                 <p class="dosis-light size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
             </div>
-            <div class="col-md-offset-3 col-md-4 usage">
+            <div class="col-md-offset-3 col-md-4 usage typographySpacing">
                 <h4 class="dosis-semibold">Dosis Book</h4>
                 <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-book size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
                 <p class="dosis-book size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
             </div>
         </div>
-        <div class="row typographyExampleSpacing">
-            <div class="col-md-4 usage">
+        <div class="row exampleSpacing">
+            <div class="col-md-4 usage typographySpacing">
                 <h4 class="dosis-semibold">Dosis Medium</h4>
                 <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-medium size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
                 <p class="dosis-medium size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
             </div>
-            <div class="col-md-offset-3 col-md-4 usage">
+            <div class="col-md-offset-3 col-md-4 usage typographySpacing">
                 <h4 class="dosis-semibold">Dosis SemiBold</h4>
                 <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
                 <p class="dosis-semibold size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
                 <p class="dosis-semibold size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
             </div>
         </div>
-        <div class="row typographySpacing">
+        <div class="row typographySpacing typographyAlignment">
             <hr>
             </hr>
         </div>
-            
-        <h3>Header Styles</h3>
-        <br>
-        <div class="row text-center">
-            <div class="col-md-5ths col-xs-4">
-                <div class="circle">
-                    <span class="circle-type dosis-light">H1</span>
-                </div>
-                <p class="dosis-light">Dosis Light <br> 30pt</p>
+        <div class="row typographySpacing">
+            <div class="col-xs-12 col-md-12">    
+                <h3>Header Styles</h3>
             </div>
-            <div class="col-md-5ths col-xs-4">
-                <div class="circle">
-                    <span class="circle-type dosis-semibold">H2</span>
+        </div>  
+        <div class="row typographySpacing typographyAlignment circleTextSize">
+            <div class="row text-center">
+                <div class="col-md-5ths col-xs-4">
+                    <div class="circle">
+                        <span class="circle-type dosis-light">H1</span>
+                    </div>
+                    <p class="dosis-light">Dosis Light <br> 30pt</p>
                 </div>
-                <p class="dosis-semibold">Dosis SemiBold <br> 22pt</p>
-            </div>
-            <div class="col-md-5ths col-xs-4">
-                <div class="circle">
-                    <span class="circle-type dosis-semibold">H3</span>
+                <div class="col-md-5ths col-xs-4">
+                    <div class="circle">
+                        <span class="circle-type dosis-semibold">H2</span>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 22pt</p>
                 </div>
-                <p class="dosis-semibold">Dosis SemiBold <br> 19pt </p>
-            </div>
-            <div class="col-md-5ths col-xs-4">
-                <div class="circle">
-                    <span class="circle-type dosis-medium">H4</span>
+                <div class="col-md-5ths col-xs-4">
+                    <div class="circle">
+                        <span class="circle-type dosis-semibold">H3</span>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 19pt </p>
                 </div>
-                <p class="dosis-medium">Dosis Medium <br> 19pt</p>
-            </div>
-            <div class="col-md-5ths col-xs-4">
-                <div class="circle">
-                    <span class="circle-type dosis-semibold">H5</span>
+                <div class="col-md-5ths col-xs-4">
+                    <div class="circle">
+                        <span class="circle-type dosis-medium">H4</span>
+                    </div>
+                    <p class="dosis-medium">Dosis Medium <br> 19pt</p>
                 </div>
-                <p class="dosis-semibold">Dosis SemiBold <br> 14pt</p>
+                <div class="col-md-5ths col-xs-4">
+                    <div class="circle">
+                        <span class="circle-type dosis-semibold">H5</span>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 14pt</p>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -348,7 +352,7 @@
                         <li data-target="#header-example-carousel" data-slide-to="4">H5</li>
                     </ol>
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
+                    <div class="carousel-inner carouselSpacing">
                         <div class="item active">
                             <img src="images/h1-example.png" alt="..." >
                             <div class="carousel-caption">
