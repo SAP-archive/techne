@@ -153,8 +153,8 @@ So far this just includes toggles. </p>
                     <h1 class="kss-title"><span class="kss-ref">3.1</span> Toggle Buttons</h1>
                     <div class="kss-description">
                         <p>A majority of buttons in the site are built from the same base class.
-Deprecated - This component will be replaced in the future 
-please don&apos;t use it anymore</p>
+Deprecated - This component will be replaced by a larger version (html markup) of small toggle.
+If you used - prepare for updating with a new techne release</p>
 
                     </div>
                     <div class="kss-modifier-block">
@@ -190,7 +190,8 @@ please don&apos;t use it anymore</p>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;div data-toggle=&quot;buttons&quot; class=&quot;btn-group&quot;&gt;
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div data-toggle=&quot;buttons&quot; class=&quot;btn-group&quot;&gt;
 	&lt;label class=&quot;btn btn-toggle btn-lg active {$modifiers} &quot;&gt;
 		&lt;input type=&quot;radio&quot; id=&quot;option1&quot; name=&quot;options&quot;&gt; On
 	&lt;/label&gt;
@@ -198,6 +199,7 @@ please don&apos;t use it anymore</p>
 		&lt;input type=&quot;radio&quot; id=&quot;option2&quot; name=&quot;options&quot;&gt; Off
 	&lt;/label&gt;
 &lt;/div&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -218,10 +220,38 @@ in combination with a link </p>
                             </div>
                         </div>
                         <div class="kss-markup">
-                            <pre><code data-language="html">&lt;span class=&quot;y-toggle&quot;&gt;
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;span class=&quot;y-toggle&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;toggleid&quot;/&gt;
   &lt;label for=&quot;toggleid&quot;&gt;Labeltext (optional)&lt;/label&gt;
 &lt;/span&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-3.3" class="kss-section kss-depth-2">
+                    <h1 class="kss-title"><span class="kss-ref">3.3</span> Large Toggle</h1>
+                    <div class="kss-description">
+                        <p>Large toggle button that is used for small inline indication of a status
+in combination with a link </p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <span class="y-toggle y-toggle-lg">
+  <input type="checkbox" id="toggleidlg"/>
+  <label for="toggleidlg">Labeltext (optional)</label>
+</span>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;span class=&quot;y-toggle y-toggle-lg&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;toggleidlg&quot;/&gt;
+  &lt;label for=&quot;toggleidlg&quot;&gt;Labeltext (optional)&lt;/label&gt;
+&lt;/span&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
