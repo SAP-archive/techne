@@ -38,18 +38,20 @@
 
 
 // CUSTOMIZING SKINNING FOR TABS 
+@nav-tabs-border-width-bottom: 2px;
+
 .nav-tabs {
   > li {
     &.active{
       > a{
-        border-width: 0 0 5px;
+        border-width: 0 0 @nav-tabs-border-width-bottom;
         border-color: @nav-tabs-active-link-hover-border-color;
         background-color: #fff;
 
         &:hover,
         &:focus,
         &:active{
-          border-width: 0 0 5px;
+          border-width: 0 0 @nav-tabs-border-width-bottom;
           border-color: @nav-tabs-active-link-hover-border-color;
           background:   @nav-tabs-active-link-hover-border-color;
           color: #fff;
@@ -61,12 +63,12 @@
       transition: background 0.1s ease-out, border 0.1s ease-out;
       text-transform: uppercase;
       border-radius: 0;
-      border-width: 0 0 5px;
+      border-width: 0 0 @nav-tabs-border-width-bottom;
 
     		&:hover,
     		&:active{
     			color: @default-blue;
-          border-width: 0 0 5px;
+          border-width: 0 0 @nav-tabs-border-width-bottom;
           background: #fff;
     		}
         &:focus,
@@ -76,6 +78,16 @@
         }
 
     	}
+    }
+
+    // modifier class
+
+    &.nav-tabs-center{
+      display: table;
+      > li {
+        text-align: center;
+      }
+      margin: 0 auto;
     }
 }
 
@@ -94,8 +106,16 @@
 //  <li role="presentation" class="active"><a href="#">Home</a></li>
 //  <li role="presentation" ><a href="#">Profile</a></li>
 //</ul>
-// 
-// .nav-tabs
+//
+// Styleguide 5.1
+
+// Centered Tabs
+//
+// Markup:
+//<ul class="nav nav-tabs nav-tabs-center">
+//  <li role="presentation" class="active"><a href="#">Home</a></li>
+//  <li role="presentation" ><a href="#">Profile</a></li>
+//</ul>
 //
 // Styleguide 5.1
 
@@ -192,11 +212,14 @@
 
       // Active state, and its :hover to override normal :hover
       &.active > a {
-        &,
+        color: @color;
+        background-color: transparent;
+        border-color: @border;
+
         &:hover,
         &:focus {
           color: @color;
-          background-color: #fff;
+          background-color: transparent;
           border-color: @border;
         }
       }
