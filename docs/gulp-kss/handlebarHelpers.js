@@ -176,6 +176,19 @@ module.exports = function (handlebars, styleguide) {
         console.log('{{whenDepth expression}} is deprecated; use {{ifDepth expression}} instead.');
         return handlebars.helpers.ifDepth.call(this, depth, options);
     });
+    /**
+     * Check equality of two values".
+     */
+    handlebars.registerHelper('chk_pageName', function(a, b, opts) {
+        a = this.pagename;
+        if(a == b) { // Or === depending on your needs
+            return opts.fn(this);
+        }
+        else {
+            return opts.inverse(this);
+        }
+    });
+    
 
     return handlebars;
 };

@@ -270,6 +270,12 @@ body.kss-body {
 #kss-top-nav ul li {
   float: left;
 }
+#kss-top-nav ul li span.active {
+  border-bottom: 3px solid #fff;
+  font-weight: bold;
+  padding: 18px;
+  display: inline-block;
+}
 #kss-top-nav ul li a {
   color: #a4c8f0;
   display: inline-block;
@@ -654,6 +660,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists,
 #patterns-modaldialog,
 #patterns-accordions,
+#kss-content,
 #patterns-trees {
   /* patterns */
 }
@@ -664,6 +671,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .table-behavoir-cell .seperator,
 #patterns-modaldialog .table-behavoir-cell .seperator,
 #patterns-accordions .table-behavoir-cell .seperator,
+#kss-content .table-behavoir-cell .seperator,
 #patterns-trees .table-behavoir-cell .seperator {
   margin: 0 50px 0 0;
 }
@@ -674,6 +682,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .row.visual-code,
 #patterns-modaldialog .row.visual-code,
 #patterns-accordions .row.visual-code,
+#kss-content .row.visual-code,
 #patterns-trees .row.visual-code {
   margin: 0;
 }
@@ -684,6 +693,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists h3.popover-title,
 #patterns-modaldialog h3.popover-title,
 #patterns-accordions h3.popover-title,
+#kss-content h3.popover-title,
 #patterns-trees h3.popover-title {
   margin-bottom: 0;
 }
@@ -694,6 +704,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .usercard-info p,
 #patterns-modaldialog .usercard-info p,
 #patterns-accordions .usercard-info p,
+#kss-content .usercard-info p,
 #patterns-trees .usercard-info p {
   margin-bottom: 0;
 }
@@ -704,6 +715,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .list-group-item.deleteable .list-group-item-delete,
 #patterns-modaldialog .list-group-item.deleteable .list-group-item-delete,
 #patterns-accordions .list-group-item.deleteable .list-group-item-delete,
+#kss-content .list-group-item.deleteable .list-group-item-delete,
 #patterns-trees .list-group-item.deleteable .list-group-item-delete {
   top: 18%;
 }
@@ -714,6 +726,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .row,
 #patterns-modaldialog .row,
 #patterns-accordions .row,
+#kss-content .row,
 #patterns-trees .row {
   margin-right: -8px;
   margin-left: -8px;
@@ -725,6 +738,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .modal-dialog,
 #patterns-modaldialog .modal-dialog,
 #patterns-accordions .modal-dialog,
+#kss-content .modal-dialog,
 #patterns-trees .modal-dialog,
 #patterns-forms .popover,
 #patterns-infopopups .popover,
@@ -733,6 +747,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .popover,
 #patterns-modaldialog .popover,
 #patterns-accordions .popover,
+#kss-content .popover,
 #patterns-trees .popover {
   z-index: 0;
 }
@@ -743,6 +758,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .circle,
 #patterns-modaldialog .circle,
 #patterns-accordions .circle,
+#kss-content .circle,
 #patterns-trees .circle {
   border: 1px solid #cfd8e3;
   box-shadow: 0px 1px 1px #fff;
@@ -759,6 +775,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .circle-type,
 #patterns-modaldialog .circle-type,
 #patterns-accordions .circle-type,
+#kss-content .circle-type,
 #patterns-trees .circle-type {
   font-size: 74px;
   display: inline-block;
@@ -771,6 +788,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator,
 #patterns-modaldialog .seperator,
 #patterns-accordions .seperator,
+#kss-content .seperator,
 #patterns-trees .seperator {
   margin: 40px 0 60px 0;
   position: relative;
@@ -782,6 +800,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .circle,
 #patterns-modaldialog .seperator .circle,
 #patterns-accordions .seperator .circle,
+#kss-content .seperator .circle,
 #patterns-trees .seperator .circle {
   position: relative;
   z-index: 2;
@@ -800,6 +819,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .circle .glyphicon,
 #patterns-modaldialog .seperator .circle .glyphicon,
 #patterns-accordions .seperator .circle .glyphicon,
+#kss-content .seperator .circle .glyphicon,
 #patterns-trees .seperator .circle .glyphicon {
   font-size: 20px;
   position: absolute;
@@ -814,6 +834,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .circle .code-open,
 #patterns-modaldialog .seperator .circle .code-open,
 #patterns-accordions .seperator .circle .code-open,
+#kss-content .seperator .circle .code-open,
 #patterns-trees .seperator .circle .code-open {
   font-size: 12px;
   position: absolute;
@@ -829,6 +850,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .circle .code-close,
 #patterns-modaldialog .seperator .circle .code-close,
 #patterns-accordions .seperator .circle .code-close,
+#kss-content .seperator .circle .code-close,
 #patterns-trees .seperator .circle .code-close {
   font-size: 20px;
   position: absolute;
@@ -845,6 +867,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .open-circle,
 #patterns-modaldialog .seperator .open-circle,
 #patterns-accordions .seperator .open-circle,
+#kss-content .seperator .open-circle,
 #patterns-trees .seperator .open-circle {
   background: #7e858d;
 }
@@ -855,6 +878,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .code-snippet,
 #patterns-modaldialog .seperator .code-snippet,
 #patterns-accordions .seperator .code-snippet,
+#kss-content .seperator .code-snippet,
 #patterns-trees .seperator .code-snippet {
   display: none;
   background: #cfd8e3;
@@ -871,6 +895,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator hr,
 #patterns-modaldialog .seperator hr,
 #patterns-accordions .seperator hr,
+#kss-content .seperator hr,
 #patterns-trees .seperator hr {
   margin-top: 20px;
   margin-bottom: 0;
@@ -882,6 +907,7 @@ body.has-left-nav .sidebar-nav {
 #patterns-lists .seperator .caption,
 #patterns-modaldialog .seperator .caption,
 #patterns-accordions .seperator .caption,
+#kss-content .seperator .caption,
 #patterns-trees .seperator .caption {
   text-align: center;
   margin-top: 25px;
