@@ -16,7 +16,7 @@
                 <img src="images/techne_Zip.png"></img>
                 <h2 class="dosis-semibold">Pre-Bundled Download</h2>
                 <p class="dosis-book">Precompiled and minified version of Techné ready to grab and use.</p>
-                <a class="btn btn-warning dosis-book" href="/public/release-archive">DOWNLOAD.ZIP</a>
+                <a class="btn btn-warning dosis-book" href="/public/release-archive/">DOWNLOAD.ZIP</a>
             </div>
             <!--.col-xs-12 col-sm-4 text-center-->
             <div class="col-xs-12 col-sm-4 text-center">
