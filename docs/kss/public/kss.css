@@ -976,7 +976,7 @@ body.has-left-nav .sidebar-nav {
   }
 }
 #visual-system .screen-bg {
-  background: #edf1f5;
+  background: #e0e9f0;
 }
 #visual-system .content-bg {
   background: #ffffff;
@@ -985,13 +985,13 @@ body.has-left-nav .sidebar-nav {
   background: #29374f;
 }
 #visual-system .typography {
-  background: #7f90a4;
-}
-#visual-system .typographyPrimary {
   background: #313440;
 }
+#visual-system .typographySecondValue {
+  background: #8a8fa1;
+}
 #visual-system .blue {
-  background: #2877cb;
+  background: #0486e0;
 }
 #visual-system .help-info {
   background: #d3dbe6;
@@ -1041,7 +1041,7 @@ body.has-left-nav .sidebar-nav {
   margin: 0 10px;
 }
 #visual-system .carousel-indicators .active {
-  background-color: #2877cb;
+  background-color: #0486e0;
   color: #fff;
   height: 10px;
   width: 10px;
@@ -1070,7 +1070,7 @@ body.has-left-nav .sidebar-nav {
 }
 #visual-system .header-example-carousel .carousel-indicators .active {
   color: #fff;
-  background-color: #2877cb;
+  background-color: #0486e0;
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
@@ -1276,6 +1276,10 @@ header.hyHomeHeaderMinor {
 .hyGuidelinesPage section {
   padding-top: 40px;
   margin-bottom: -10px;
+}
+.hyGuidelinesPage .visualSystemSpacing {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;

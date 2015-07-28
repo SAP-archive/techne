@@ -292,39 +292,34 @@
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
-        <div class="row text-center">
-            <div class="col-sm-4 col-md-2">
+        <div class="row text-center visualSystemSpacing">
+            <div class="col-md-5ths col-xs-4">
                 <div class="circle screen-bg"></div>
                 <p class="no-bottom-margin">Screen Background</p>
-                <h4>#C7D0DA</h4>
+                <h4>#E0E9F0</h4>
             </div>
-            <div class="col-sm-4 col-md-2">
+            <div class="col-md-5ths col-xs-4">
                 <div class="circle content-bg"></div>
                 <p class="no-bottom-margin">Content Background</p>
                 <h4>#FFFFFF</h4>
             </div>
-            <div class="col-sm-4 col-md-2">
-                <div class="circle content-bg-2"></div>
-                <p class="no-bottom-margin">Menu Background</p>
-                <h4>#29374f</h4>
-            </div>
-            <div class="col-sm-4 col-md-2">
-                <div class="circle typographyPrimary"></div>
-                <p class="no-bottom-margin">Titles &amp; Primary Values</p>
-                <h4>#313440</h4>
-            </div>
-            <div class="col-sm-4 col-md-2">
+            <div class="col-md-5ths col-xs-4">
                 <div class="circle typography"></div>
                 <p class="no-bottom-margin">Typography</p>
-                <h4>#7F90A4</h4>
+                <h4>#313440</h4>
             </div>
-            <div class="col-sm-4 col-md-2">
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle typographySecondValue"></div>
+                <p class="no-bottom-margin">Typography (Second Value)</p>
+                <h4>#8A8FA1</h4>
+            </div>
+            <div class="col-md-5ths col-xs-4">
                 <div class="circle blue"></div>
-                <p class="no-bottom-margin">Text Link</p>
+                <p class="no-bottom-margin">Text Link Color</p>
                 <h4>#0486E0</h4>
             </div>
         </div>
-        <div class="usage">
+        <div class="usage visualSystemSpacing">
             <h3>Usage Guidelines</h3>
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
@@ -333,11 +328,10 @@
             <p><b>Typography: Titles &amp; Primary Value</b> use app-wide for Primary headings/values.</p>
             <p><b>Text Link:</b> use app-wide for links in any context.</p>
         </div>
-        <hr>
         <h3>Alerts, Errors &amp; Notifications</h3>
         <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
         <p>These colors are desaturated to work better with the primary application colors.</p>
-        <div class="row text-center">
+        <div class="row text-center visualSystemSpacing">
             <div class="col-md-5ths col-xs-4">
                 <div class="circle help-info"></div>
                 <p class="no-bottom-margin">Help information</p>
@@ -359,19 +353,21 @@
                 <h4>#ff3b30</h4>
             </div>
         </div>
-        <div class="alert alert-danger alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <strong>Error! </strong>Correct issue / Warning notification message goes here...
+        <div class="row visualSystemSpacing">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Error! </strong>Correct issue / Warning notification message goes here...
+            </div>
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Warning!</strong> Proceed with caution / Notification message goes here...  (disappears in 3 seconds)
+            </div>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Success!</strong> Text in Positive notification message goes here... (disappears in 3 seconds)
+            </div>
         </div>
-        <div class="alert alert-warning alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <strong>Warning!</strong> Proceed with caution / Notification message goes here...  (disappears in 3 seconds)
-        </div>
-        <div class="alert alert-success alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <strong>Success!</strong> Text in Positive notification message goes here... (disappears in 3 seconds)
-        </div>
-        <div class="usage">
+        <div class="usage visualSystemSpacing">
             <h4>Usage Guidelines</h4>
             <p><b>Helpful Information:</b> use background color app-wide for notification field-level help modals.</p>
             <p><b>Well Done! Success!:</b> use background color app-wide for success messaging only.</p>
