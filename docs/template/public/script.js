@@ -45,7 +45,7 @@ $( document ).ready(function(){
 
     // off canvas menu
     $('[data-toggle="offcanvas"]').click(function () {
-        $('.row-offcanvas').toggleClass('active')
+        $('.row-offcanvas').toggleClass('active');
     });
 
     // Initialize bootstrap tooltip and popover
@@ -76,12 +76,10 @@ $( document ).ready(function(){
 
     $(".code-snippet").each(function(){
 
-        var preMarkup = "<a href='#' class='circle code-toggle'><span class='code-open'>&lt; / &gt;</span> <span class='code-close hyicon-remove'></span></a><hr><span class='caption'>code snippet</span>";
-
-        // var postMarkup = "</div>"
+        var preMarkup = "<a href='#' class='circle code-toggle open-circle'><span class='code-open'>&lt; / &gt;</span> <span class='code-close hyicon-remove'></span></a><hr><span class='caption'>code snippet</span>";
 
         $(this).parent().prepend(preMarkup);
-        // $(this).parent().append(postMarkup);
+		$(this).parent().find('.code-snippet').slideToggle();
 
     });
 
