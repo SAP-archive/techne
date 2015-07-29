@@ -271,7 +271,6 @@ body.kss-body {
   float: left;
 }
 #kss-top-nav ul li span.active {
-  border-bottom: 3px solid #fff;
   font-weight: bold;
   padding: 18px;
   display: inline-block;
@@ -280,6 +279,10 @@ body.kss-body {
   color: #a4c8f0;
   display: inline-block;
   padding: 18px;
+}
+#kss-top-nav ul li a:hover {
+  text-decoration: none;
+  background-color: #0376C6!important;
 }
 #kss-top-nav #menu-toggle {
   margin: 15px 20px 0;
@@ -842,6 +845,7 @@ body.has-left-nav .sidebar-nav {
   left: 8px;
   font-weight: 900;
   color: #7e858d;
+  display: none;
 }
 #patterns-forms .seperator .circle .code-close,
 #patterns-infopopups .seperator .circle .code-close,
@@ -858,7 +862,6 @@ body.has-left-nav .sidebar-nav {
   left: 10px;
   font-weight: 500;
   color: #fff;
-  display: none;
 }
 #patterns-forms .seperator .open-circle,
 #patterns-infopopups .seperator .open-circle,
