@@ -1,3 +1,48 @@
+<!--SIDENAVCONFIG
+	{
+		"showLeftNav": true,
+		"navigation": [
+			{
+				"text": "First Contact", 
+				"id": "#patterns-first-contact"
+			},
+      {
+        "text": "Forms", 
+        "id": "#patterns-forms"
+      },
+      {
+        "text": "Info Popups", 
+        "id": "#patterns-infopopups"
+      },
+      {
+        "text": "Labels", 
+        "id": "#patterns-labels"
+      },
+      {
+        "text": "Tables",
+        "id": "#patterns-tables"
+      },
+      {
+        "text": "Lists",
+        "id": "#patterns-lists"
+      },
+      {
+        "text": "Modal Dialog",
+        "id": "#patterns-modaldialog"
+      },
+      {
+        "text": "Accordions",
+        "id": "#patterns-accordions"
+      },
+      {
+        "text": "Trees",
+        "id": "#patterns-trees"
+      }
+    ]
+	}
+-->
+
+
 <div class="hyPatternsPage container-fluid" >
 
 <section id="patterns-first-contact" class="page">
