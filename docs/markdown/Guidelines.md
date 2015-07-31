@@ -29,7 +29,7 @@
        ]
     }
     -->
-<div class="hyGuidelinesPage container-fluid" >
+<div class="hyGuidelinesPage container-fluid">
     <section id="spirit-vision" class="page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
@@ -302,10 +302,10 @@
             </hr>
         </div>
         <div class="row typographySpacing">
-            <div class="col-xs-12 col-md-12">    
+            <div class="col-xs-12 col-md-12">
                 <h3>Header Styles</h3>
             </div>
-        </div>  
+        </div>
         <div class="row typographySpacing typographyAlignment circleTextSize">
             <div class="row text-center">
                 <div class="col-md-5ths col-xs-4">
@@ -341,51 +341,88 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div id="header-example-carousel" class="carousel slide header-example-carousel" data-ride="carousel" >
+            <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2">
+                <div id="header-example-carousel" class="carousel slide header-example-carousel" data-ride="carousel">
                     <!-- Indicators -->
+                    <div class="carousel-inner">
                     <ol class="carousel-indicators">
                         <li data-target="#header-example-carousel" data-slide-to="0" class="active">H1</li>
                         <li data-target="#header-example-carousel" data-slide-to="1">H2</li>
                         <li data-target="#header-example-carousel" data-slide-to="2">H3</li>
-                        <li data-target="#header-example-carousel" data-slide-to="3">H4</li>
-                        <li data-target="#header-example-carousel" data-slide-to="4">H5</li>
                     </ol>
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner carouselSpacing">
                         <div class="item active">
-                            <img src="images/h1-example.png" alt="..." >
+                            <img src="images/H1.png" alt="..." >
+                            <!-- Hidden For Now 
                             <div class="carousel-caption">
-                                h1
+                                <h2>H1 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
+                            -->
                         </div>
                         <div class="item">
-                            <img src="images/h2-example.png" alt="..." >
+                            <img src="images/H2.png" alt="..." >
+                            <!-- Hidden For Now 
                             <div class="carousel-caption">
-                                h2
+                                <h2>H2 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
+                            -->
                         </div>
                         <div class="item">
-                            <img src="images/h1-example.png" alt="...">
+                            <img src="images/H3.png" alt="...">
+                            <!-- Hidden For Now 
                             <div class="carousel-caption">
-                                h3
+                                <h2>H3 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="images/h1-example.png" alt="...">
-                            <div class="carousel-caption">
-                                h4
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="images/h1-example.png" alt="...">
-                            <div class="carousel-caption">
-                                h5
-                            </div>
+                            -->
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="seperator">
+            <pre class="code-snippet">
+                <!-- snippet start -->
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2&quot;&gt;
+        &lt;div id=&quot;header-example-carousel&quot; class=&quot;carousel slide header-example-carousel&quot; data-ride=&quot;carousel&quot;&gt;
+        &lt;!-- Indicators --&gt;
+            &lt;ol class=&quot;carousel-indicators&quot;&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;H1&lt;/li&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;1&quot;&gt;H2&lt;/li&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;2&quot;&gt;H3&lt;/li&gt;
+            &lt;/ol&gt;
+         &lt;!-- Wrapper for slides --&gt;
+            &lt;div class=&quot;carousel-inner carouselSpacing&quot;&gt;
+                &lt;div class=&quot;item active&quot;&gt;
+                    &lt;img src=&quot;images/h1-example.png&quot; alt=&quot;...&quot; &gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H1 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                    &lt;img src=&quot;images/h2-example.png&quot; alt=&quot;...&quot; &gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H2 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                    &lt;img src=&quot;images/h1-example.png&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H3 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt; 
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;    
+                <!-- snippet end -->
+            </pre>
         </div>
         <h2>Processing Icon/Treatment</h2>
         <img src="images/visual-system-processing-position.png" alt="" class="img-responsive"> <br><br>

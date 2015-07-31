@@ -687,7 +687,7 @@ body.has-left-nav .sidebar-nav {
         font-family: 'Dosis';
     }
     .carousel-indicators {
-        margin-bottom: -60px;
+        position: absolute;
         background: #fff;
         li {
             background: #d8dfe8;
@@ -708,10 +708,30 @@ body.has-left-nav .sidebar-nav {
             width: 10px;
         }
     }
+    .carousel-caption {
+        position: absolute;
+        left: auto;
+        right: auto;
+        padding-top: 95px;
+        @media only screen and (max-width: 1012px) and (min-width: 992px) {
+            padding-top: 120px;
+        }
+        @media only screen and (max-width: 910px) and (min-width: 768px) {
+            padding-top: 120px;
+        }
+        @media only screen and (max-width: 445px) {
+            padding-top: 120px;
+        }
+        color: #313440;
+        text-shadow: none;
+    }
     .header-example-carousel {
-        margin-bottom: 60px;
+        .carousel-inner {
+            margin-bottom:20px;
+            padding-bottom: 70px;
+        }
         .carousel-indicators {
-            margin-bottom: -60px;
+            bottom:-10px;
             width: 100%;
             margin-left: -50%;
             li {
@@ -735,16 +755,10 @@ body.has-left-nav .sidebar-nav {
         }
     }
     .carouselSpacing {
-       padding-bottom: 15px;
-        @media only screen and (max-width: 1212px) and (min-width: 992px) {
-            padding-bottom: 50px;
-        }
-        @media only screen and (max-width: 874px) and (min-width: 768px) {
-            padding-bottom: 50px;
-        }
+       padding-bottom: 70px;
     }
     .typographySpacing {      
-        padding-bottom: 25px;
+        padding-bottom: 40px;
     }
     .typographyAlignment {
         padding-left: 15px;
