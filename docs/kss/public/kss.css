@@ -271,7 +271,6 @@ body.kss-body {
   float: left;
 }
 #kss-top-nav ul li span.active {
-  border-bottom: 3px solid #fff;
   font-weight: bold;
   padding: 18px;
   display: inline-block;
@@ -280,6 +279,10 @@ body.kss-body {
   color: #a4c8f0;
   display: inline-block;
   padding: 18px;
+}
+#kss-top-nav ul li a:hover {
+  text-decoration: none;
+  background-color: #0376C6!important;
 }
 #kss-top-nav #menu-toggle {
   margin: 15px 20px 0;
@@ -976,7 +979,7 @@ body.has-left-nav .sidebar-nav {
   }
 }
 #visual-system .screen-bg {
-  background: #edf1f5;
+  background: #e0e9f0;
 }
 #visual-system .content-bg {
   background: #ffffff;
@@ -985,10 +988,13 @@ body.has-left-nav .sidebar-nav {
   background: #29374f;
 }
 #visual-system .typography {
-  background: #000000;
+  background: #313440;
+}
+#visual-system .typographySecondValue {
+  background: #8a8fa1;
 }
 #visual-system .blue {
-  background: #369ad6;
+  background: #0486e0;
 }
 #visual-system .help-info {
   background: #d3dbe6;
@@ -1038,7 +1044,7 @@ body.has-left-nav .sidebar-nav {
   margin: 0 10px;
 }
 #visual-system .carousel-indicators .active {
-  background-color: #369ad6;
+  background-color: #0486e0;
   color: #fff;
   height: 10px;
   width: 10px;
@@ -1091,7 +1097,7 @@ body.has-left-nav .sidebar-nav {
 }
 #visual-system .header-example-carousel .carousel-indicators .active {
   color: #fff;
-  background-color: #369ad6;
+  background-color: #0486e0;
 }
 #visual-system .carouselSpacing {
   padding-bottom: 70px;
@@ -1342,11 +1348,17 @@ header.hyHomeHeaderMinor {
   padding-top: 40px;
   margin-bottom: -10px;
 }
+<<<<<<< HEAD
 .hyGuidelinesPage #hyGuidelinesContianer {
   padding-bottom: 20px;
 }
 .hyGuidelinesPage .carousel-inner > .item > img {
   margin: 0 auto;
+=======
+.hyGuidelinesPage .visualSystemSpacing {
+  padding-top: 15px;
+  padding-bottom: 15px;
+>>>>>>> develop
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;

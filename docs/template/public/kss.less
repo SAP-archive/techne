@@ -34,7 +34,6 @@ body.kss-body {
         li {
             float: left;
             span.active {
-                border-bottom: 3px solid #fff;
                 font-weight: bold;
                 padding: 18px;
                 display: inline-block
@@ -43,6 +42,12 @@ body.kss-body {
                 color: #a4c8f0;
                 display: inline-block;
                 padding: 18px;
+              
+              &:hover{
+                text-decoration: none;
+                background-color: #0376C6!important;
+                
+              }
                 
             }
         }
@@ -442,11 +447,12 @@ body.has-left-nav .sidebar-nav {
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
 
-@screen-bg_gd: #EDF1F5;
+@screen-bg_gd: #E0E9F0;
 @content-bg_gd: #ffffff;
 @screen-bg-2_gd: #29374f;
-@typography_gd: #000000;
-@blue_gd: #369ad6;
+@typographySecondValue_gd: #8A8FA1;
+@typography_gd: #313440;
+@blue_gd: #0486E0;
 @help-info_gd: #d3dbe6;
 @attention_gd: #5bc0de;
 @success_gd: #18bc33;
@@ -648,6 +654,10 @@ body.has-left-nav .sidebar-nav {
     .typography {
         background: @typography_gd;
     }
+     .typographySecondValue {
+        background: @typographySecondValue_gd;
+    }
+    
     .blue {
         background: @blue_gd;
     }
@@ -1019,11 +1029,17 @@ header.hyHomeHeaderMinor {
         padding-top: 40px;
         margin-bottom: -10px;
     }
+<<<<<<< HEAD
     #hyGuidelinesContianer {
         padding-bottom: 20px;
     }
     .carousel-inner > .item > img {
         margin: 0 auto;
+=======
+    .visualSystemSpacing {
+        padding-top: 15px;
+        padding-bottom: 15px;
+>>>>>>> develop
     }
 }
 .container-fluid.hyDownloadPage {

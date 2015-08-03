@@ -29,7 +29,11 @@
        ]
     }
     -->
+<<<<<<< HEAD
 <div class="hyGuidelinesPage container-fluid">
+=======
+<div class="hyGuidelinesPage container-fluid" >
+>>>>>>> develop
     <section id="spirit-vision" class="page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
@@ -142,18 +146,27 @@
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
+<<<<<<< HEAD
         <div class="row text-center">
             <div class="col-md-5ths col-xs-4">
                 <div class="circle screen-bg"></div>
                 <p class="no-bottom-margin">Screen background</p>
                 <h4>#EDF1F5</h4>
+=======
+        <div class="row text-center visualSystemSpacing">
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle screen-bg"></div>
+                <p class="no-bottom-margin">Screen Background</p>
+                <h4>#E0E9F0</h4>
+>>>>>>> develop
             </div>
             <div class="col-md-5ths col-xs-4">
                 <div class="circle content-bg"></div>
-                <p class="no-bottom-margin">Content background</p>
+                <p class="no-bottom-margin">Content Background</p>
                 <h4>#FFFFFF</h4>
             </div>
             <div class="col-md-5ths col-xs-4">
+<<<<<<< HEAD
                 <div class="circle content-bg-2"></div>
                 <p class="no-bottom-margin">Screen background</p>
                 <h4>#29374f</h4>
@@ -171,10 +184,30 @@
         </div>
         <div class="usage">
             <h4 class="dosis-semibold">Usage Guidelines</h4>
+=======
+                <div class="circle typography"></div>
+                <p class="no-bottom-margin">Typography</p>
+                <h4>#313440</h4>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle typographySecondValue"></div>
+                <p class="no-bottom-margin">Typography (Second Value)</p>
+                <h4>#8A8FA1</h4>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle blue"></div>
+                <p class="no-bottom-margin">Text Links</p>
+                <h4>#0486E0</h4>
+            </div>
+        </div>
+        <div class="usage visualSystemSpacing">
+            <h3>Usage Guidelines</h3>
+>>>>>>> develop
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
             <p><b>Menu Background:</b> use app-wide as navigation elements background</p>
             <p><b>Typography:</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
+<<<<<<< HEAD
             <p><b>Text Link:</b> use app-wide for links in any context.</p>
         </div>
         <hr>
@@ -182,6 +215,15 @@
         <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
         <p>These colors are desaturated to work better with the primary application colors.</p>
         <div class="row text-center">
+=======
+            <p><b>Typography: Titles &amp; Primary Value</b> use app-wide for Primary headings/values.</p>
+            <p><b>Text Link:</b> use app-wide for links in any context.</p>
+        </div>
+        <h3>Alerts, Errors &amp; Notifications</h3>
+        <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
+        <p>These colors are desaturated to work better with the primary application colors.</p>
+        <div class="row text-center visualSystemSpacing">
+>>>>>>> develop
             <div class="col-md-5ths col-xs-4">
                 <div class="circle help-info"></div>
                 <p class="no-bottom-margin">Help information</p>
@@ -203,6 +245,7 @@
                 <h4>#ff3b30</h4>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <strong>Error! </strong>Correct issue / Warning notification message goes here...
@@ -217,11 +260,30 @@
         </div>
         <div class="usage">
             <h4 class="dosis-semibold">Usage Guidelines</h4>
+=======
+        <div class="row visualSystemSpacing">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Error! </strong>Correct issue / Warning notification message goes here...
+            </div>
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Warning!</strong> Proceed with caution / Notification message goes here...  (disappears in 3 seconds)
+            </div>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Success!</strong> Text in Positive notification message goes here... (disappears in 3 seconds)
+            </div>
+        </div>
+        <div class="usage visualSystemSpacing">
+            <h4>Usage Guidelines</h4>
+>>>>>>> develop
             <p><b>Helpful Information:</b> use background color app-wide for notification field-level help modals.</p>
             <p><b>Well Done! Success!:</b> use background color app-wide for success messaging only.</p>
             <p><b>Warning! Not looking good:</b> use background color app-wide for warning messaging only.</p>
             <p><b>Oh Snap! Try again:</b> use background color app-wide for error messaging only.</p>
         </div>
+<<<<<<< HEAD
         <div class="row">
             <hr>
             </hr>
@@ -345,10 +407,106 @@
                 <div id="header-example-carousel" class="carousel slide header-example-carousel" data-ride="carousel">
                     <!-- Indicators -->
                     <div class="carousel-inner">
+=======
+        <hr>
+        <h3>Typography</h3>
+        <p>Good typography adds personality to an application, and can help set tone in the absence of visual elements. hybris and YaaS IO uses <strong><a href="https://www.google.com/fonts/specimen/Dosis" target="_blank">Dosis</a></strong> to create a friendly and inviting environment.</p>
+        <div class="row text-center type-face">
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-light">Aa</span>
+                </div>
+                <p>Light</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-book">Aa</span>
+                </div>
+                <p>Book</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-medium">Aa</span>
+                </div>
+                <p>Medium</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-semibold">Aa</span>
+                </div>
+                <p>SemiBold</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 usage">
+                <h4 class="dosis-semibold">Dosis Light</h4>
+                <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-light size-26">1234567890!@£$%^&*()_+</p>
+            </div>
+            <div class="col-md-offset-2 col-md-4 usage">
+                <h4 class="dosis-semibold">Dosis Book</h4>
+                <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-book size-26">1234567890!@£$%^&*()_+</p>
+            </div>
+            <div class="col-md-6 usage">
+                <h4 class="dosis-semibold">Dosis Medium</h4>
+                <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-medium size-26">1234567890!@£$%^&*()_+</p>
+            </div>
+            <div class="col-md-6 usage">
+                <h4 class="dosis-semibold">Dosis SemiBold</h4>
+                <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-semibold size-26">1234567890!@£$%^&*()_+</p>
+            </div>
+        </div>
+        <hr>
+        <h3>Page Header Styles</h3>
+        <div class="row text-center">
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-light">H1</span>
+                </div>
+                <p class="dosis-light">Dosis Light <br> 24px</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-semibold">H2</span>
+                </div>
+                <p class="dosis-semibold">Dosis SemiBold <br> 22px</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-semibold">H3</span>
+                </div>
+                <p class="dosis-semibold">Dosis SemiBold <br> 19px </p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-medium">H4</span>
+                </div>
+                <p class="dosis-medium">Dosis Medium <br> 19px</p>
+            </div>
+            <div class="col-md-5ths col-xs-4">
+                <div class="circle help-info">
+                    <span class="circle-type dosis-semibold">H5</span>
+                </div>
+                <p class="dosis-semibold">Dosis SemiBold <br> 16px</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="header-example-carousel" class="carousel slide header-example-carousel" data-ride="carousel" >
+                    <!-- Indicators -->
+>>>>>>> develop
                     <ol class="carousel-indicators">
                         <li data-target="#header-example-carousel" data-slide-to="0" class="active">H1</li>
                         <li data-target="#header-example-carousel" data-slide-to="1">H2</li>
                         <li data-target="#header-example-carousel" data-slide-to="2">H3</li>
+<<<<<<< HEAD
                     </ol>
                     <!-- Wrapper for slides -->
                         <div class="item active">
@@ -377,11 +535,48 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                             -->
+=======
+                        <li data-target="#header-example-carousel" data-slide-to="3">H4</li>
+                        <li data-target="#header-example-carousel" data-slide-to="4">H5</li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/h1-example.png" alt="..." >
+                            <div class="carousel-caption">
+                                h1
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/h2-example.png" alt="..." >
+                            <div class="carousel-caption">
+                                h2
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/h1-example.png" alt="...">
+                            <div class="carousel-caption">
+                                h3
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/h1-example.png" alt="...">
+                            <div class="carousel-caption">
+                                h4
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/h1-example.png" alt="...">
+                            <div class="carousel-caption">
+                                h5
+                            </div>
+>>>>>>> develop
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="seperator">
             <pre class="code-snippet">
                 <!-- snippet start -->
@@ -424,6 +619,8 @@
                 <!-- snippet end -->
             </pre>
         </div>
+=======
+>>>>>>> develop
         <h2>Processing Icon/Treatment</h2>
         <img src="images/visual-system-processing-position.png" alt="" class="img-responsive"> <br><br>
         <p>It’s important to notify users when the system is processing.  hybris Techne uses the above treatment to indicate the system is processing</p>
