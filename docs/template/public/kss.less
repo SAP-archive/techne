@@ -523,16 +523,16 @@ body.has-left-nav .sidebar-nav {
     .seperator {
         margin: 40px 0 60px 0;
         position: relative;
-        .circle {
+        .hexagon {
+            top: 31px;
+            left: 0;
             position: relative;
-            z-index: 2;
-            width: 40px;
-            height: 40px;
-            border: none;
-            margin: 0 auto -40px auto;
-            padding: 0;
-            background: #d8dfe8;
+            width: 36px; 
+            height: 20.78px;
+            background-color: #d8dfe8;
+            margin: auto;
             display: block;
+            z-index: 2;
             .glyphicon {
                 font-size: 20px;
                 position: absolute;
@@ -543,8 +543,8 @@ body.has-left-nav .sidebar-nav {
             .code-open {
                 font-size: 12px;
                 position: absolute;
-                top: 11px;
-                left: 8px;
+                top: 1px;
+                left: 6px;
                 font-weight: 900;
                 color: #7e858d;
                 display: none;
@@ -552,15 +552,45 @@ body.has-left-nav .sidebar-nav {
             .code-close {
                 font-size: 20px;
                 position: absolute;
-                top: 7px;
-                left: 10px;
+                top: -4.5px;
+                left: 8px;
                 font-weight: 500;
                 color: #fff;
             }
         }
-        .open-circle {
+        .hexagon:before,
+        .hexagon:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        }
+    
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 10.39px solid #d8dfe8;
+        }
+    
+        .hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 10.39px solid #d8dfe8;
+        }
+        .open-hexagon {
             background: #7e858d;
         }
+        .open-hexagon:before {
+            bottom: 100%;
+            border-bottom: 10.39px solid #7e858d;
+        }
+        .open-hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 10.39px solid #7e858d;
+        }
+        
+        
         .code-snippet {
             display: none;
             background: #cfd8e3;
@@ -576,7 +606,7 @@ body.has-left-nav .sidebar-nav {
         }
         .caption {
             text-align: center;
-            margin-top: 25px;
+            margin-top: 45px;
             display: block;
             font-weight: 200;
             text-transform: uppercase;

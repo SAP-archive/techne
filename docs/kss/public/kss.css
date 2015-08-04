@@ -796,83 +796,157 @@ body.has-left-nav .sidebar-nav {
   margin: 40px 0 60px 0;
   position: relative;
 }
-#patterns-forms .seperator .circle,
-#patterns-infopopups .seperator .circle,
-#patterns-labels .seperator .circle,
-#patterns-tables .seperator .circle,
-#patterns-lists .seperator .circle,
-#patterns-modaldialog .seperator .circle,
-#patterns-accordions .seperator .circle,
-#kss-content .seperator .circle,
-#patterns-trees .seperator .circle {
+#patterns-forms .seperator .hexagon,
+#patterns-infopopups .seperator .hexagon,
+#patterns-labels .seperator .hexagon,
+#patterns-tables .seperator .hexagon,
+#patterns-lists .seperator .hexagon,
+#patterns-modaldialog .seperator .hexagon,
+#patterns-accordions .seperator .hexagon,
+#kss-content .seperator .hexagon,
+#patterns-trees .seperator .hexagon {
+  top: 31px;
+  left: 0;
   position: relative;
-  z-index: 2;
-  width: 40px;
-  height: 40px;
-  border: none;
-  margin: 0 auto -40px auto;
-  padding: 0;
-  background: #d8dfe8;
+  width: 36px;
+  height: 20.78px;
+  background-color: #d8dfe8;
+  margin: auto;
   display: block;
+  z-index: 2;
 }
-#patterns-forms .seperator .circle .glyphicon,
-#patterns-infopopups .seperator .circle .glyphicon,
-#patterns-labels .seperator .circle .glyphicon,
-#patterns-tables .seperator .circle .glyphicon,
-#patterns-lists .seperator .circle .glyphicon,
-#patterns-modaldialog .seperator .circle .glyphicon,
-#patterns-accordions .seperator .circle .glyphicon,
-#kss-content .seperator .circle .glyphicon,
-#patterns-trees .seperator .circle .glyphicon {
+#patterns-forms .seperator .hexagon .glyphicon,
+#patterns-infopopups .seperator .hexagon .glyphicon,
+#patterns-labels .seperator .hexagon .glyphicon,
+#patterns-tables .seperator .hexagon .glyphicon,
+#patterns-lists .seperator .hexagon .glyphicon,
+#patterns-modaldialog .seperator .hexagon .glyphicon,
+#patterns-accordions .seperator .hexagon .glyphicon,
+#kss-content .seperator .hexagon .glyphicon,
+#patterns-trees .seperator .hexagon .glyphicon {
   font-size: 20px;
   position: absolute;
   top: 10px;
   left: 10px;
   color: #7e858d;
 }
-#patterns-forms .seperator .circle .code-open,
-#patterns-infopopups .seperator .circle .code-open,
-#patterns-labels .seperator .circle .code-open,
-#patterns-tables .seperator .circle .code-open,
-#patterns-lists .seperator .circle .code-open,
-#patterns-modaldialog .seperator .circle .code-open,
-#patterns-accordions .seperator .circle .code-open,
-#kss-content .seperator .circle .code-open,
-#patterns-trees .seperator .circle .code-open {
+#patterns-forms .seperator .hexagon .code-open,
+#patterns-infopopups .seperator .hexagon .code-open,
+#patterns-labels .seperator .hexagon .code-open,
+#patterns-tables .seperator .hexagon .code-open,
+#patterns-lists .seperator .hexagon .code-open,
+#patterns-modaldialog .seperator .hexagon .code-open,
+#patterns-accordions .seperator .hexagon .code-open,
+#kss-content .seperator .hexagon .code-open,
+#patterns-trees .seperator .hexagon .code-open {
   font-size: 12px;
   position: absolute;
-  top: 11px;
-  left: 8px;
+  top: 1px;
+  left: 6px;
   font-weight: 900;
   color: #7e858d;
   display: none;
 }
-#patterns-forms .seperator .circle .code-close,
-#patterns-infopopups .seperator .circle .code-close,
-#patterns-labels .seperator .circle .code-close,
-#patterns-tables .seperator .circle .code-close,
-#patterns-lists .seperator .circle .code-close,
-#patterns-modaldialog .seperator .circle .code-close,
-#patterns-accordions .seperator .circle .code-close,
-#kss-content .seperator .circle .code-close,
-#patterns-trees .seperator .circle .code-close {
+#patterns-forms .seperator .hexagon .code-close,
+#patterns-infopopups .seperator .hexagon .code-close,
+#patterns-labels .seperator .hexagon .code-close,
+#patterns-tables .seperator .hexagon .code-close,
+#patterns-lists .seperator .hexagon .code-close,
+#patterns-modaldialog .seperator .hexagon .code-close,
+#patterns-accordions .seperator .hexagon .code-close,
+#kss-content .seperator .hexagon .code-close,
+#patterns-trees .seperator .hexagon .code-close {
   font-size: 20px;
   position: absolute;
-  top: 7px;
-  left: 10px;
+  top: -4.5px;
+  left: 8px;
   font-weight: 500;
   color: #fff;
 }
-#patterns-forms .seperator .open-circle,
-#patterns-infopopups .seperator .open-circle,
-#patterns-labels .seperator .open-circle,
-#patterns-tables .seperator .open-circle,
-#patterns-lists .seperator .open-circle,
-#patterns-modaldialog .seperator .open-circle,
-#patterns-accordions .seperator .open-circle,
-#kss-content .seperator .open-circle,
-#patterns-trees .seperator .open-circle {
+#patterns-forms .seperator .hexagon:before,
+#patterns-infopopups .seperator .hexagon:before,
+#patterns-labels .seperator .hexagon:before,
+#patterns-tables .seperator .hexagon:before,
+#patterns-lists .seperator .hexagon:before,
+#patterns-modaldialog .seperator .hexagon:before,
+#patterns-accordions .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before,
+#patterns-trees .seperator .hexagon:before,
+#patterns-forms .seperator .hexagon:after,
+#patterns-infopopups .seperator .hexagon:after,
+#patterns-labels .seperator .hexagon:after,
+#patterns-tables .seperator .hexagon:after,
+#patterns-lists .seperator .hexagon:after,
+#patterns-modaldialog .seperator .hexagon:after,
+#patterns-accordions .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+}
+#patterns-forms .seperator .hexagon:before,
+#patterns-infopopups .seperator .hexagon:before,
+#patterns-labels .seperator .hexagon:before,
+#patterns-tables .seperator .hexagon:before,
+#patterns-lists .seperator .hexagon:before,
+#patterns-modaldialog .seperator .hexagon:before,
+#patterns-accordions .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before,
+#patterns-trees .seperator .hexagon:before {
+  bottom: 100%;
+  border-bottom: 10.39px solid #d8dfe8;
+}
+#patterns-forms .seperator .hexagon:after,
+#patterns-infopopups .seperator .hexagon:after,
+#patterns-labels .seperator .hexagon:after,
+#patterns-tables .seperator .hexagon:after,
+#patterns-lists .seperator .hexagon:after,
+#patterns-modaldialog .seperator .hexagon:after,
+#patterns-accordions .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 10.39px solid #d8dfe8;
+}
+#patterns-forms .seperator .open-hexagon,
+#patterns-infopopups .seperator .open-hexagon,
+#patterns-labels .seperator .open-hexagon,
+#patterns-tables .seperator .open-hexagon,
+#patterns-lists .seperator .open-hexagon,
+#patterns-modaldialog .seperator .open-hexagon,
+#patterns-accordions .seperator .open-hexagon,
+#kss-content .seperator .open-hexagon,
+#patterns-trees .seperator .open-hexagon {
   background: #7e858d;
+}
+#patterns-forms .seperator .open-hexagon:before,
+#patterns-infopopups .seperator .open-hexagon:before,
+#patterns-labels .seperator .open-hexagon:before,
+#patterns-tables .seperator .open-hexagon:before,
+#patterns-lists .seperator .open-hexagon:before,
+#patterns-modaldialog .seperator .open-hexagon:before,
+#patterns-accordions .seperator .open-hexagon:before,
+#kss-content .seperator .open-hexagon:before,
+#patterns-trees .seperator .open-hexagon:before {
+  bottom: 100%;
+  border-bottom: 10.39px solid #7e858d;
+}
+#patterns-forms .seperator .open-hexagon:after,
+#patterns-infopopups .seperator .open-hexagon:after,
+#patterns-labels .seperator .open-hexagon:after,
+#patterns-tables .seperator .open-hexagon:after,
+#patterns-lists .seperator .open-hexagon:after,
+#patterns-modaldialog .seperator .open-hexagon:after,
+#patterns-accordions .seperator .open-hexagon:after,
+#kss-content .seperator .open-hexagon:after,
+#patterns-trees .seperator .open-hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 10.39px solid #7e858d;
 }
 #patterns-forms .seperator .code-snippet,
 #patterns-infopopups .seperator .code-snippet,
@@ -913,7 +987,7 @@ body.has-left-nav .sidebar-nav {
 #kss-content .seperator .caption,
 #patterns-trees .seperator .caption {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 45px;
   display: block;
   font-weight: 200;
   text-transform: uppercase;
@@ -1034,7 +1108,7 @@ body.has-left-nav .sidebar-nav {
 #visual-system .carousel-indicators li {
   background: #d8dfe8;
   text-indent: 0;
-  border-radius: 50%;
+  border-radius: 0%;
   height: 10px;
   width: 10px;
   padding-top: 7px;
