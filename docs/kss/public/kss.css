@@ -1102,9 +1102,6 @@ body.has-left-nav .sidebar-nav {
 #visual-system .carouselSpacing {
   padding-bottom: 70px;
 }
-#visual-system .typographySpacing {
-  padding-bottom: 40px;
-}
 #visual-system .typographyAlignment {
   padding-left: 15px;
 }
@@ -1136,6 +1133,11 @@ body.has-left-nav .sidebar-nav {
 @media only screen and (max-width: 1186px) and (min-width: 992px) {
   #visual-system .exampleSpacing p {
     font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 992px) {
+  #visual-system .circleTextSize span {
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 850px) and (min-width: 768px) {
@@ -1348,17 +1350,25 @@ header.hyHomeHeaderMinor {
   padding-top: 40px;
   margin-bottom: -10px;
 }
-<<<<<<< HEAD
+.hyGuidelinesPage .imageCenter {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: -45px;
+}
+.hyGuidelinesPage a img,
+.hyGuidelinesPage a span {
+  vertical-align: middle;
+}
 .hyGuidelinesPage #hyGuidelinesContianer {
   padding-bottom: 20px;
 }
 .hyGuidelinesPage .carousel-inner > .item > img {
   margin: 0 auto;
-=======
+}
 .hyGuidelinesPage .visualSystemSpacing {
-  padding-top: 15px;
-  padding-bottom: 15px;
->>>>>>> develop
+  padding-top: 40px;
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;

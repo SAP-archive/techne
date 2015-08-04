@@ -767,9 +767,6 @@ body.has-left-nav .sidebar-nav {
     .carouselSpacing {
        padding-bottom: 70px;
     }
-    .typographySpacing {      
-        padding-bottom: 40px;
-    }
     .typographyAlignment {
         padding-left: 15px;
     }
@@ -807,6 +804,11 @@ body.has-left-nav .sidebar-nav {
         }
     }
     .circleTextSize {
+        @media only screen and (max-width: 1080px) and (min-width: 992px) {
+            span {
+                font-size: 40px;
+            }
+        }
         @media only screen and (max-width: 850px) and (min-width: 768px) {
             span {
                 font-size: 41px;
@@ -1029,17 +1031,26 @@ header.hyHomeHeaderMinor {
         padding-top: 40px;
         margin-bottom: -10px;
     }
-<<<<<<< HEAD
+    .imageCenter {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: -45px;
+    }
+    
+    a img, a span { 
+        vertical-align: middle; 
+        }
+
     #hyGuidelinesContianer {
         padding-bottom: 20px;
     }
     .carousel-inner > .item > img {
         margin: 0 auto;
-=======
+    }
     .visualSystemSpacing {
-        padding-top: 15px;
-        padding-bottom: 15px;
->>>>>>> develop
+        padding-top: 40px;
     }
 }
 .container-fluid.hyDownloadPage {
