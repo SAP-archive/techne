@@ -626,6 +626,7 @@ body.has-left-nav .sidebar-nav {
         font-size: 20px;
     }
     .hexagonVector {
+        position: relative;
         span {
             text-shadow:
             -1px -1px 0 #cfd8e3,  
@@ -633,13 +634,18 @@ body.has-left-nav .sidebar-nav {
             -1px 1px 0 #cfd8e3,
             1px 1px 0 #cfd8e3;
         }
+        p {
+            position: absolute;
+            left: 0;
+            width: 100%;        
+        }
         @media (min-width: 1400px) {
             span {
                 font-size: 160px;
             }
             p {
                font-size: 60px;
-               margin-top: -135px; 
+               top: 90px;
             }
         }
         @media (min-width: 1200px) and (max-width: 1399px) {
@@ -648,7 +654,7 @@ body.has-left-nav .sidebar-nav {
             }
             p {
                font-size: 50px;
-               margin-top: -115px; 
+               top: 77px; 
             }
         }
         @media (min-width: 1140px) and (max-width: 1199px) {
@@ -657,18 +663,16 @@ body.has-left-nav .sidebar-nav {
             }
              p {
                font-size: 45px;
-               margin-top: -102px; 
-               margin-bottom: 40px;
+               top: 69px;
             }
         }
         @media (min-width: 1071px) and (max-width: 1139px) {
             span {
                 font-size: 110px;
             }
-            p {
-                margin-top: -96px;
-                margin-bottom: 35px;
+            p {       
                 font-size: 45px;
+                top: 60px;
             }
         }
         @media (min-width: 992px) and (max-width: 1070px) {
@@ -676,39 +680,35 @@ body.has-left-nav .sidebar-nav {
                 font-size: 95px;
             }
             p {
-                margin-top: -85px;
-                margin-bottom: 30px;
                 font-size: 40px;
+                top: 50px;
             }
         }
         @media (min-width: 890px) and (max-width: 991px) {
             span {
                 font-size: 110px;
             }
-            p {
-                margin-top: -96px;
-                margin-bottom: 35px;
+            p {             
                 font-size: 45px;
+                top: 60px;
             }
         }
         @media (min-width: 810px) and (max-width: 889px) {
             span {
                 font-size: 95px;
             }
-            p {
-                margin-top: -85px;
-                margin-bottom: 30px;
+            p {               
                 font-size: 40px;
+                top: 50px;
             }
         }
         @media (min-width: 768px) and (max-width: 809px) {
             span {
                 font-size: 85px;
             }
-            p {
-                margin-top: -76px;
-                margin-bottom: 27px;
+            p {                
                 font-size: 35px; 
+                top: 45px;
             }
             
         }
@@ -716,21 +716,18 @@ body.has-left-nav .sidebar-nav {
             span {
                 font-size: 105px;
             }
-            p {
-                margin-top: -95px;
-                margin-bottom: 30px;
+            p {                
                 font-size: 45px;
+                top: 55px;
             }
         }
         @media (max-width: 399px) {
             span {
                 font-size: 85px;
             }
-            p {
-               margin-top: -75px;
-                margin-bottom: 25px;
-                margin-left: 12px;
+            p {               
                 font-size: 35px;
+                top: 45px;
             }
         }
     }
@@ -832,11 +829,6 @@ body.has-left-nav .sidebar-nav {
         font-weight: 600;
         font-family: 'Dosis';
     }
-    .typographyHexagonSpacing {
-        margin-top: -100px;
-        margin-bottom: 50px;
-        font-size: 40px;
-    }
     .carousel-indicators {
         position: absolute;
         background: #fff;
@@ -882,6 +874,9 @@ body.has-left-nav .sidebar-nav {
             padding-bottom: 70px;
             ol, ul {
                 margin-bottom: -10px;
+                @media (max-width: 767px) {
+                    margin-bottom: 0px;
+                }
             }
         }
         .carousel-indicators {

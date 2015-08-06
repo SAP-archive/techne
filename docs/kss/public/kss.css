@@ -1007,8 +1007,16 @@ body.has-left-nav .sidebar-nav {
 #visual-system .size-20 {
   font-size: 20px;
 }
+#visual-system .hexagonVector {
+  position: relative;
+}
 #visual-system .hexagonVector span {
   text-shadow: -1px -1px 0 #cfd8e3, 1px -1px 0 #cfd8e3, -1px 1px 0 #cfd8e3, 1px 1px 0 #cfd8e3;
+}
+#visual-system .hexagonVector p {
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
 @media (min-width: 1400px) {
   #visual-system .hexagonVector span {
@@ -1016,7 +1024,7 @@ body.has-left-nav .sidebar-nav {
   }
   #visual-system .hexagonVector p {
     font-size: 60px;
-    margin-top: -135px;
+    top: 90px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -1025,7 +1033,7 @@ body.has-left-nav .sidebar-nav {
   }
   #visual-system .hexagonVector p {
     font-size: 50px;
-    margin-top: -115px;
+    top: 77px;
   }
 }
 @media (min-width: 1140px) and (max-width: 1199px) {
@@ -1034,8 +1042,7 @@ body.has-left-nav .sidebar-nav {
   }
   #visual-system .hexagonVector p {
     font-size: 45px;
-    margin-top: -102px;
-    margin-bottom: 40px;
+    top: 69px;
   }
 }
 @media (min-width: 1071px) and (max-width: 1139px) {
@@ -1043,9 +1050,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 110px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -96px;
-    margin-bottom: 35px;
     font-size: 45px;
+    top: 60px;
   }
 }
 @media (min-width: 992px) and (max-width: 1070px) {
@@ -1053,9 +1059,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 95px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -85px;
-    margin-bottom: 30px;
     font-size: 40px;
+    top: 50px;
   }
 }
 @media (min-width: 890px) and (max-width: 991px) {
@@ -1063,9 +1068,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 110px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -96px;
-    margin-bottom: 35px;
     font-size: 45px;
+    top: 60px;
   }
 }
 @media (min-width: 810px) and (max-width: 889px) {
@@ -1073,9 +1077,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 95px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -85px;
-    margin-bottom: 30px;
     font-size: 40px;
+    top: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 809px) {
@@ -1083,9 +1086,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 85px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -76px;
-    margin-bottom: 27px;
     font-size: 35px;
+    top: 45px;
   }
 }
 @media (min-width: 400px) and (max-width: 767px) {
@@ -1093,9 +1095,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 105px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -95px;
-    margin-bottom: 30px;
     font-size: 45px;
+    top: 55px;
   }
 }
 @media (max-width: 399px) {
@@ -1103,10 +1104,8 @@ body.has-left-nav .sidebar-nav {
     font-size: 85px;
   }
   #visual-system .hexagonVector p {
-    margin-top: -75px;
-    margin-bottom: 25px;
-    margin-left: 12px;
     font-size: 35px;
+    top: 45px;
   }
 }
 #visual-system .col-xs-5ths,
@@ -1198,11 +1197,6 @@ body.has-left-nav .sidebar-nav {
   font-weight: 600;
   font-family: 'Dosis';
 }
-#visual-system .typographyHexagonSpacing {
-  margin-top: -100px;
-  margin-bottom: 50px;
-  font-size: 40px;
-}
 #visual-system .carousel-indicators {
   position: absolute;
   background: #fff;
@@ -1255,6 +1249,12 @@ body.has-left-nav .sidebar-nav {
 #visual-system .header-example-carousel .carousel-inner ol,
 #visual-system .header-example-carousel .carousel-inner ul {
   margin-bottom: -10px;
+}
+@media (max-width: 767px) {
+  #visual-system .header-example-carousel .carousel-inner ol,
+  #visual-system .header-example-carousel .carousel-inner ul {
+    margin-bottom: 0px;
+  }
 }
 #visual-system .header-example-carousel .carousel-indicators {
   width: 100%;
