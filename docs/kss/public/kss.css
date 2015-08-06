@@ -271,12 +271,9 @@ body.kss-body {
   float: left;
 }
 #kss-top-nav ul li span.active {
-<<<<<<< HEAD
   padding: 14px;
-=======
   font-weight: bold;
   padding: 18px;
->>>>>>> develop
   display: inline-block;
 }
 #kss-top-nav ul li a {
@@ -285,6 +282,7 @@ body.kss-body {
   padding: 14px;
   transition: all 0.25s ease-out;
   -webkit-transition: all 0.25s ease-out;
+  padding: 18px;
 }
 #kss-top-nav ul li a:hover {
   text-decoration: none;
