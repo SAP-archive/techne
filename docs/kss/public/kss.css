@@ -1007,19 +1007,107 @@ body.has-left-nav .sidebar-nav {
 #visual-system .size-20 {
   font-size: 20px;
 }
-#visual-system .circle {
-  border: 1px solid #cfd8e3;
-  box-shadow: 0px 1px 1px #fff;
-  margin: 0 auto 20px auto;
-  width: 100%;
-  height: 0;
-  padding: 50% 0;
-  border-radius: 50%;
+#visual-system .hexagonVector span {
+  text-shadow: -1px -1px 0 #cfd8e3, 1px -1px 0 #cfd8e3, -1px 1px 0 #cfd8e3, 1px 1px 0 #cfd8e3;
 }
-#visual-system .circle-type {
-  font-size: 50px;
-  display: inline-block;
-  margin-top: -35%;
+@media (min-width: 1400px) {
+  #visual-system .hexagonVector span {
+    font-size: 160px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 60px;
+    margin-top: -135px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #visual-system .hexagonVector span {
+    font-size: 135px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 50px;
+    margin-top: -115px;
+  }
+}
+@media (min-width: 1140px) and (max-width: 1199px) {
+  #visual-system .hexagonVector span {
+    font-size: 120px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 45px;
+    margin-top: -102px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1071px) and (max-width: 1139px) {
+  #visual-system .hexagonVector span {
+    font-size: 110px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -96px;
+    margin-bottom: 35px;
+    font-size: 45px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1070px) {
+  #visual-system .hexagonVector span {
+    font-size: 95px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -85px;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 890px) and (max-width: 991px) {
+  #visual-system .hexagonVector span {
+    font-size: 110px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -96px;
+    margin-bottom: 35px;
+    font-size: 45px;
+  }
+}
+@media (min-width: 810px) and (max-width: 889px) {
+  #visual-system .hexagonVector span {
+    font-size: 95px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -85px;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 809px) {
+  #visual-system .hexagonVector span {
+    font-size: 85px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -76px;
+    margin-bottom: 27px;
+    font-size: 35px;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  #visual-system .hexagonVector span {
+    font-size: 105px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -95px;
+    margin-bottom: 30px;
+    font-size: 45px;
+  }
+}
+@media (max-width: 399px) {
+  #visual-system .hexagonVector span {
+    font-size: 85px;
+  }
+  #visual-system .hexagonVector p {
+    margin-top: -75px;
+    margin-bottom: 25px;
+    margin-left: 12px;
+    font-size: 35px;
+  }
 }
 #visual-system .col-xs-5ths,
 #visual-system .col-sm-5ths,
@@ -1070,6 +1158,12 @@ body.has-left-nav .sidebar-nav {
 #visual-system .blue {
   background: #0486e0;
 }
+#visual-system .typographySecondValue {
+  background: #8a8fa1;
+}
+#visual-system .blue {
+  background: #0486e0;
+}
 #visual-system .help-info {
   background: #d3dbe6;
 }
@@ -1077,13 +1171,16 @@ body.has-left-nav .sidebar-nav {
   background: #5bc0de;
 }
 #visual-system .success {
-  background: #18bc33;
+  background: #233243;
 }
-#visual-system .waring {
-  background: #f99b06;
+#visual-system .warning {
+  background: #3cb1da;
 }
 #visual-system .try-again {
   background: #ff3b30;
+}
+#visual-system .alertSpacing {
+  padding-left: 23px;
 }
 #visual-system .dosis-light {
   font-weight: 300;
@@ -1101,6 +1198,11 @@ body.has-left-nav .sidebar-nav {
   font-weight: 600;
   font-family: 'Dosis';
 }
+#visual-system .typographyHexagonSpacing {
+  margin-top: -100px;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
 #visual-system .carousel-indicators {
   position: absolute;
   background: #fff;
@@ -1108,7 +1210,7 @@ body.has-left-nav .sidebar-nav {
 #visual-system .carousel-indicators li {
   background: #d8dfe8;
   text-indent: 0;
-  border-radius: 0%;
+  border-radius: 50%;
   height: 10px;
   width: 10px;
   padding-top: 7px;
@@ -1150,28 +1252,50 @@ body.has-left-nav .sidebar-nav {
   margin-bottom: 20px;
   padding-bottom: 70px;
 }
+#visual-system .header-example-carousel .carousel-inner ol,
+#visual-system .header-example-carousel .carousel-inner ul {
+  margin-bottom: -10px;
+}
 #visual-system .header-example-carousel .carousel-indicators {
-  bottom: -10px;
   width: 100%;
   margin-left: -50%;
 }
 #visual-system .header-example-carousel .carousel-indicators li {
-  background: #d8dfe8;
-  text-indent: 0;
-  height: 38px;
+  line-height: 60%;
+  position: relative;
   width: 38px;
-  border-radius: 50%;
-  font-size: 15px;
-  font-weight: 600;
-  padding-top: 7px;
-  text-align: center;
-  border: none;
-  box-shadow: 0px 2px 2px #fff;
-  margin: 0 15px;
+  height: 21.94px;
+  background-color: #d8dfe8;
+  border-radius: 0px;
 }
-#visual-system .header-example-carousel .carousel-indicators .active {
+#visual-system .header-example-carousel .carousel-indicators li:before,
+#visual-system .header-example-carousel .carousel-indicators li:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+}
+#visual-system .header-example-carousel .carousel-indicators li:before {
+  margin-left: -9px;
+  bottom: 100%;
+  border-bottom: 10.97px solid #d8dfe8;
+}
+#visual-system .header-example-carousel .carousel-indicators li:after {
+  margin-left: -29px;
+  top: 100%;
+  width: 0;
+  border-top: 10.97px solid #d8dfe8;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active {
   color: #fff;
   background-color: #0486e0;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active:before {
+  border-bottom: 10.97px solid #0486e0;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active:after {
+  border-top: 10.97px solid #0486e0;
 }
 #visual-system .carouselSpacing {
   padding-bottom: 70px;
@@ -1207,16 +1331,6 @@ body.has-left-nav .sidebar-nav {
 @media only screen and (max-width: 1186px) and (min-width: 992px) {
   #visual-system .exampleSpacing p {
     font-size: 20px;
-  }
-}
-@media only screen and (max-width: 1080px) and (min-width: 992px) {
-  #visual-system .circleTextSize span {
-    font-size: 40px;
-  }
-}
-@media only screen and (max-width: 850px) and (min-width: 768px) {
-  #visual-system .circleTextSize span {
-    font-size: 41px;
   }
 }
 /* Styling for the Guideline and Patterns pages */
@@ -1429,7 +1543,7 @@ header.hyHomeHeaderMinor {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: -45px;
+  margin-top: -40px;
 }
 .hyGuidelinesPage a img,
 .hyGuidelinesPage a span {
