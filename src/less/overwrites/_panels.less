@@ -3,7 +3,7 @@
 // Use panels to display content in the builder
 // 
 // Markup:
-//<div class="panel panel-default">
+//<div id="demo-page-background" class="panel panel-default">
 //	<div class="panel-heading">Panel heading without title</div>
 //	<div class="panel-body">Panel content</div>
 //</div>
@@ -14,19 +14,26 @@
 
 
 //Color States are deprecated, please remove them soon
-
+//Styling specifically for the component on the componenst page in techne
+#demo-page-background {
+		background-color: #e0e9f0;
+		padding: 40px;
+		.panel-body {
+			background-color: #fff;
+		}
+	}
+	
 .panel{
+	// For panel Component body
 	.box-shadow(0 0 0 @default-grey-600);
-
-
+	
 	&.panel-border{
-//		border: 1px solid @default-grey-600;
+		//		border: 1px solid @default-grey-600;
 		border-radius: 0;
 		.box-shadow(0 0 0 @default-grey-600);
 	}
 	.panel-heading{
-
-		// RESET FOR HEADING TO USE RIGHT MARKUP
+	// RESET FOR HEADING TO USE RIGHT MARKUP
 		h1,h2,h3,h4,h5,h6{
 			font-size: 18px;
 			margin-bottom: 10px;
@@ -36,13 +43,13 @@
 	.panel-footer{
 		color: @dark-blue-100;
 	}
-
-  .nested-body{
-    background-color: @nested-body-backgroundcolor;
-    margin: 0 -15px 30px -15px;
-    padding: 15px;
-    border: 1px solid @nested-body-bordercolor;
-  }
+	
+	.nested-body{
+		background-color: @nested-body-backgroundcolor;
+		margin: 0 -15px 30px -15px;
+		padding: 15px;
+		border: 1px solid @nested-body-bordercolor;
+	}
 }
 
 .panel, .panel-heading, .panel-footer{
