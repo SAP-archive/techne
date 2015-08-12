@@ -18,11 +18,15 @@
 }
 
 .btn-primary {
+  .button-variant-custom(@btn-primary-color; @btn-primary-bg; @btn-primary-border; @default-yellow-100; @dark-blue; @default-yellow-200; @default-yellow-100; @default-yellow-100; @default-yellow-100);
 	.box-shadow(0 3px 0 darken(@btn-primary-bg, 7%));
 }
 
 .btn-default {
+  font-weight: 900 !important;
+  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @dark-blue-600; #fff; @dark-blue-900; @dark-blue-400; @dark-blue-600; @dark-blue-500);
 	.box-shadow(0 3px 0 darken(@btn-default-bg, 10%));
+  
 }
 
 .btn-success {
@@ -64,20 +68,23 @@
 // Button variants 
 // -------------------------
 // with more parameter so you get full controll over hover etc states
-.button-variant-custom(@color-default; @background-default; @border-default; @boxshadow-default; @color-hover; @background-hover; @border-hover; @boxshadow-hover) {
+.button-variant-custom(@color-default; @background-default; @border-default; @boxshadow-default; @color-hover; @background-hover; @border-hover; @boxshadow-hover; @background-click) {
   color: @color-default;
   background-color: @background-default;
   border-color: @border-default;
   .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
-
-  &:hover,
   &:focus,
+  &:active:focus {
+      background-color: @background-click;
+      outline-color: @border-hover;
+  }
+  &:hover,
   &:active,
   &.active,
   .open .dropdown-toggle& {
     color: @color-hover;
     background-color: @background-hover;
-        border-color: @border-hover;
+    border-color: @border-hover;
     .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
   }
   &:active,
@@ -94,11 +101,10 @@
 
     &,
     &:hover,
-    &:focus,
     &:active,
     &.active {
       background-color: @background-default;
-          border-color: @border-default;
+      border-color: @border-default;
     }
     &:active,
     &.active,
