@@ -279,7 +279,10 @@ gulp.task('deploy', function(){
 
 gulp.task('patchgulpkss',
     function(){
-        gulp.src('./gulp-patch/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss'));
+        //patch the gulp-kss main branch
+        gulp.src('./gulp-patch/gulp-kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss'));
+        //patch the gulp-kss depednecy of kss
+        gulp.src('./gulp-patch/kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss/node_modules/kss/lib'));
     }
 );
 
