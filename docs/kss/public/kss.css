@@ -796,83 +796,157 @@ body.has-left-nav .sidebar-nav {
   margin: 40px 0 60px 0;
   position: relative;
 }
-#patterns-forms .seperator .circle,
-#patterns-infopopups .seperator .circle,
-#patterns-labels .seperator .circle,
-#patterns-tables .seperator .circle,
-#patterns-lists .seperator .circle,
-#patterns-modaldialog .seperator .circle,
-#patterns-accordions .seperator .circle,
-#kss-content .seperator .circle,
-#patterns-trees .seperator .circle {
+#patterns-forms .seperator .hexagon,
+#patterns-infopopups .seperator .hexagon,
+#patterns-labels .seperator .hexagon,
+#patterns-tables .seperator .hexagon,
+#patterns-lists .seperator .hexagon,
+#patterns-modaldialog .seperator .hexagon,
+#patterns-accordions .seperator .hexagon,
+#kss-content .seperator .hexagon,
+#patterns-trees .seperator .hexagon {
+  top: 31px;
+  left: 0;
   position: relative;
-  z-index: 2;
-  width: 40px;
-  height: 40px;
-  border: none;
-  margin: 0 auto -40px auto;
-  padding: 0;
-  background: #d8dfe8;
+  width: 36px;
+  height: 20.78px;
+  background-color: #d8dfe8;
+  margin: auto;
   display: block;
+  z-index: 2;
 }
-#patterns-forms .seperator .circle .glyphicon,
-#patterns-infopopups .seperator .circle .glyphicon,
-#patterns-labels .seperator .circle .glyphicon,
-#patterns-tables .seperator .circle .glyphicon,
-#patterns-lists .seperator .circle .glyphicon,
-#patterns-modaldialog .seperator .circle .glyphicon,
-#patterns-accordions .seperator .circle .glyphicon,
-#kss-content .seperator .circle .glyphicon,
-#patterns-trees .seperator .circle .glyphicon {
+#patterns-forms .seperator .hexagon .glyphicon,
+#patterns-infopopups .seperator .hexagon .glyphicon,
+#patterns-labels .seperator .hexagon .glyphicon,
+#patterns-tables .seperator .hexagon .glyphicon,
+#patterns-lists .seperator .hexagon .glyphicon,
+#patterns-modaldialog .seperator .hexagon .glyphicon,
+#patterns-accordions .seperator .hexagon .glyphicon,
+#kss-content .seperator .hexagon .glyphicon,
+#patterns-trees .seperator .hexagon .glyphicon {
   font-size: 20px;
   position: absolute;
   top: 10px;
   left: 10px;
   color: #7e858d;
 }
-#patterns-forms .seperator .circle .code-open,
-#patterns-infopopups .seperator .circle .code-open,
-#patterns-labels .seperator .circle .code-open,
-#patterns-tables .seperator .circle .code-open,
-#patterns-lists .seperator .circle .code-open,
-#patterns-modaldialog .seperator .circle .code-open,
-#patterns-accordions .seperator .circle .code-open,
-#kss-content .seperator .circle .code-open,
-#patterns-trees .seperator .circle .code-open {
+#patterns-forms .seperator .hexagon .code-open,
+#patterns-infopopups .seperator .hexagon .code-open,
+#patterns-labels .seperator .hexagon .code-open,
+#patterns-tables .seperator .hexagon .code-open,
+#patterns-lists .seperator .hexagon .code-open,
+#patterns-modaldialog .seperator .hexagon .code-open,
+#patterns-accordions .seperator .hexagon .code-open,
+#kss-content .seperator .hexagon .code-open,
+#patterns-trees .seperator .hexagon .code-open {
   font-size: 12px;
   position: absolute;
-  top: 11px;
-  left: 8px;
+  top: 1px;
+  left: 6px;
   font-weight: 900;
   color: #7e858d;
   display: none;
 }
-#patterns-forms .seperator .circle .code-close,
-#patterns-infopopups .seperator .circle .code-close,
-#patterns-labels .seperator .circle .code-close,
-#patterns-tables .seperator .circle .code-close,
-#patterns-lists .seperator .circle .code-close,
-#patterns-modaldialog .seperator .circle .code-close,
-#patterns-accordions .seperator .circle .code-close,
-#kss-content .seperator .circle .code-close,
-#patterns-trees .seperator .circle .code-close {
+#patterns-forms .seperator .hexagon .code-close,
+#patterns-infopopups .seperator .hexagon .code-close,
+#patterns-labels .seperator .hexagon .code-close,
+#patterns-tables .seperator .hexagon .code-close,
+#patterns-lists .seperator .hexagon .code-close,
+#patterns-modaldialog .seperator .hexagon .code-close,
+#patterns-accordions .seperator .hexagon .code-close,
+#kss-content .seperator .hexagon .code-close,
+#patterns-trees .seperator .hexagon .code-close {
   font-size: 20px;
   position: absolute;
-  top: 7px;
-  left: 10px;
+  top: -4.5px;
+  left: 8px;
   font-weight: 500;
   color: #fff;
 }
-#patterns-forms .seperator .open-circle,
-#patterns-infopopups .seperator .open-circle,
-#patterns-labels .seperator .open-circle,
-#patterns-tables .seperator .open-circle,
-#patterns-lists .seperator .open-circle,
-#patterns-modaldialog .seperator .open-circle,
-#patterns-accordions .seperator .open-circle,
-#kss-content .seperator .open-circle,
-#patterns-trees .seperator .open-circle {
+#patterns-forms .seperator .hexagon:before,
+#patterns-infopopups .seperator .hexagon:before,
+#patterns-labels .seperator .hexagon:before,
+#patterns-tables .seperator .hexagon:before,
+#patterns-lists .seperator .hexagon:before,
+#patterns-modaldialog .seperator .hexagon:before,
+#patterns-accordions .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before,
+#patterns-trees .seperator .hexagon:before,
+#patterns-forms .seperator .hexagon:after,
+#patterns-infopopups .seperator .hexagon:after,
+#patterns-labels .seperator .hexagon:after,
+#patterns-tables .seperator .hexagon:after,
+#patterns-lists .seperator .hexagon:after,
+#patterns-modaldialog .seperator .hexagon:after,
+#patterns-accordions .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+}
+#patterns-forms .seperator .hexagon:before,
+#patterns-infopopups .seperator .hexagon:before,
+#patterns-labels .seperator .hexagon:before,
+#patterns-tables .seperator .hexagon:before,
+#patterns-lists .seperator .hexagon:before,
+#patterns-modaldialog .seperator .hexagon:before,
+#patterns-accordions .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before,
+#patterns-trees .seperator .hexagon:before {
+  bottom: 100%;
+  border-bottom: 10.39px solid #d8dfe8;
+}
+#patterns-forms .seperator .hexagon:after,
+#patterns-infopopups .seperator .hexagon:after,
+#patterns-labels .seperator .hexagon:after,
+#patterns-tables .seperator .hexagon:after,
+#patterns-lists .seperator .hexagon:after,
+#patterns-modaldialog .seperator .hexagon:after,
+#patterns-accordions .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 10.39px solid #d8dfe8;
+}
+#patterns-forms .seperator .open-hexagon,
+#patterns-infopopups .seperator .open-hexagon,
+#patterns-labels .seperator .open-hexagon,
+#patterns-tables .seperator .open-hexagon,
+#patterns-lists .seperator .open-hexagon,
+#patterns-modaldialog .seperator .open-hexagon,
+#patterns-accordions .seperator .open-hexagon,
+#kss-content .seperator .open-hexagon,
+#patterns-trees .seperator .open-hexagon {
   background: #7e858d;
+}
+#patterns-forms .seperator .open-hexagon:before,
+#patterns-infopopups .seperator .open-hexagon:before,
+#patterns-labels .seperator .open-hexagon:before,
+#patterns-tables .seperator .open-hexagon:before,
+#patterns-lists .seperator .open-hexagon:before,
+#patterns-modaldialog .seperator .open-hexagon:before,
+#patterns-accordions .seperator .open-hexagon:before,
+#kss-content .seperator .open-hexagon:before,
+#patterns-trees .seperator .open-hexagon:before {
+  bottom: 100%;
+  border-bottom: 10.39px solid #7e858d;
+}
+#patterns-forms .seperator .open-hexagon:after,
+#patterns-infopopups .seperator .open-hexagon:after,
+#patterns-labels .seperator .open-hexagon:after,
+#patterns-tables .seperator .open-hexagon:after,
+#patterns-lists .seperator .open-hexagon:after,
+#patterns-modaldialog .seperator .open-hexagon:after,
+#patterns-accordions .seperator .open-hexagon:after,
+#kss-content .seperator .open-hexagon:after,
+#patterns-trees .seperator .open-hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 10.39px solid #7e858d;
 }
 #patterns-forms .seperator .code-snippet,
 #patterns-infopopups .seperator .code-snippet,
@@ -913,7 +987,7 @@ body.has-left-nav .sidebar-nav {
 #kss-content .seperator .caption,
 #patterns-trees .seperator .caption {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 45px;
   display: block;
   font-weight: 200;
   text-transform: uppercase;
@@ -933,19 +1007,106 @@ body.has-left-nav .sidebar-nav {
 #visual-system .size-20 {
   font-size: 20px;
 }
-#visual-system .circle {
-  border: 1px solid #cfd8e3;
-  box-shadow: 0px 1px 1px #fff;
-  margin: 0 auto 20px auto;
-  width: 100%;
-  height: 0;
-  padding: 50% 0;
-  border-radius: 50%;
+#visual-system .hexagonVector {
+  position: relative;
 }
-#visual-system .circle-type {
-  font-size: 74px;
-  display: inline-block;
-  margin-top: -35%;
+#visual-system .hexagonVector span {
+  text-shadow: -1px -1px 0 #cfd8e3, 1px -1px 0 #cfd8e3, -1px 1px 0 #cfd8e3, 1px 1px 0 #cfd8e3;
+}
+#visual-system .hexagonVector p {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+@media (min-width: 1400px) {
+  #visual-system .hexagonVector span {
+    font-size: 160px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 60px;
+    top: 90px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #visual-system .hexagonVector span {
+    font-size: 135px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 50px;
+    top: 77px;
+  }
+}
+@media (min-width: 1140px) and (max-width: 1199px) {
+  #visual-system .hexagonVector span {
+    font-size: 120px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 45px;
+    top: 69px;
+  }
+}
+@media (min-width: 1071px) and (max-width: 1139px) {
+  #visual-system .hexagonVector span {
+    font-size: 110px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 45px;
+    top: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1070px) {
+  #visual-system .hexagonVector span {
+    font-size: 95px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 40px;
+    top: 50px;
+  }
+}
+@media (min-width: 890px) and (max-width: 991px) {
+  #visual-system .hexagonVector span {
+    font-size: 110px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 45px;
+    top: 60px;
+  }
+}
+@media (min-width: 810px) and (max-width: 889px) {
+  #visual-system .hexagonVector span {
+    font-size: 95px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 40px;
+    top: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 809px) {
+  #visual-system .hexagonVector span {
+    font-size: 85px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 35px;
+    top: 45px;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  #visual-system .hexagonVector span {
+    font-size: 105px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 45px;
+    top: 55px;
+  }
+}
+@media (max-width: 399px) {
+  #visual-system .hexagonVector span {
+    font-size: 85px;
+  }
+  #visual-system .hexagonVector p {
+    font-size: 35px;
+    top: 45px;
+  }
 }
 #visual-system .col-xs-5ths,
 #visual-system .col-sm-5ths,
@@ -996,6 +1157,12 @@ body.has-left-nav .sidebar-nav {
 #visual-system .blue {
   background: #0486e0;
 }
+#visual-system .typographySecondValue {
+  background: #8a8fa1;
+}
+#visual-system .blue {
+  background: #0486e0;
+}
 #visual-system .help-info {
   background: #d3dbe6;
 }
@@ -1003,13 +1170,16 @@ body.has-left-nav .sidebar-nav {
   background: #5bc0de;
 }
 #visual-system .success {
-  background: #18bc33;
+  background: #233243;
 }
-#visual-system .waring {
-  background: #f99b06;
+#visual-system .warning {
+  background: #3cb1da;
 }
 #visual-system .try-again {
   background: #ff3b30;
+}
+#visual-system .alertSpacing {
+  padding-left: 23px;
 }
 #visual-system .dosis-light {
   font-weight: 300;
@@ -1028,7 +1198,7 @@ body.has-left-nav .sidebar-nav {
   font-family: 'Dosis';
 }
 #visual-system .carousel-indicators {
-  margin-bottom: -60px;
+  position: absolute;
   background: #fff;
 }
 #visual-system .carousel-indicators li {
@@ -1049,31 +1219,119 @@ body.has-left-nav .sidebar-nav {
   height: 10px;
   width: 10px;
 }
-#visual-system .header-example-carousel {
-  margin-bottom: 60px;
+#visual-system .carousel-caption {
+  position: absolute;
+  left: auto;
+  right: auto;
+  padding-top: 95px;
+  color: #313440;
+  text-shadow: none;
+}
+@media only screen and (max-width: 1012px) and (min-width: 992px) {
+  #visual-system .carousel-caption {
+    padding-top: 120px;
+  }
+}
+@media only screen and (max-width: 910px) and (min-width: 768px) {
+  #visual-system .carousel-caption {
+    padding-top: 120px;
+  }
+}
+@media only screen and (max-width: 445px) {
+  #visual-system .carousel-caption {
+    padding-top: 120px;
+  }
+}
+#visual-system .header-example-carousel .carousel-inner {
+  margin-bottom: 20px;
+  padding-bottom: 70px;
+}
+#visual-system .header-example-carousel .carousel-inner ol,
+#visual-system .header-example-carousel .carousel-inner ul {
+  margin-bottom: -10px;
+}
+@media (max-width: 767px) {
+  #visual-system .header-example-carousel .carousel-inner ol,
+  #visual-system .header-example-carousel .carousel-inner ul {
+    margin-bottom: 0px;
+  }
 }
 #visual-system .header-example-carousel .carousel-indicators {
-  margin-bottom: -60px;
   width: 100%;
   margin-left: -50%;
 }
 #visual-system .header-example-carousel .carousel-indicators li {
-  background: #d8dfe8;
-  text-indent: 0;
-  height: 38px;
+  line-height: 60%;
+  position: relative;
   width: 38px;
-  border-radius: 50%;
-  font-size: 15px;
-  font-weight: 600;
-  padding-top: 7px;
-  text-align: center;
-  border: none;
-  box-shadow: 0px 2px 2px #fff;
-  margin: 0 15px;
+  height: 21.94px;
+  background-color: #d8dfe8;
+  border-radius: 0px;
 }
-#visual-system .header-example-carousel .carousel-indicators .active {
+#visual-system .header-example-carousel .carousel-indicators li:before,
+#visual-system .header-example-carousel .carousel-indicators li:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+}
+#visual-system .header-example-carousel .carousel-indicators li:before {
+  margin-left: -9px;
+  bottom: 100%;
+  border-bottom: 10.97px solid #d8dfe8;
+}
+#visual-system .header-example-carousel .carousel-indicators li:after {
+  margin-left: -29px;
+  top: 100%;
+  width: 0;
+  border-top: 10.97px solid #d8dfe8;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active {
   color: #fff;
   background-color: #0486e0;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active:before {
+  border-bottom: 10.97px solid #0486e0;
+}
+#visual-system .header-example-carousel .carousel-indicators li.active:after {
+  border-top: 10.97px solid #0486e0;
+}
+#visual-system .carouselSpacing {
+  padding-bottom: 70px;
+}
+#visual-system .typographyAlignment {
+  padding-left: 15px;
+}
+@media only screen and (max-width: 1376px) {
+  #visual-system .exampleSpacing p {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1337px) and (min-width: 1330px) {
+  #visual-system .exampleSpacing p {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1329px) and (min-width: 1264px) {
+  #visual-system .exampleSpacing p {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 1263px) and (min-width: 1225px) {
+  #visual-system .exampleSpacing p {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1224px) and (min-width: 1187px) {
+  #visual-system .exampleSpacing p {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 1186px) and (min-width: 992px) {
+  #visual-system .exampleSpacing p {
+    font-size: 20px;
+  }
 }
 /* Styling for the Guideline and Patterns pages */
 /* We are using IDs in order to avoid breaking the standard styling */
@@ -1280,9 +1538,25 @@ header.hyHomeHeaderMinor {
   padding-top: 40px;
   margin-bottom: -10px;
 }
+.hyGuidelinesPage .imageCenter {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: -40px;
+}
+.hyGuidelinesPage a img,
+.hyGuidelinesPage a span {
+  vertical-align: middle;
+}
+.hyGuidelinesPage #hyGuidelinesContianer {
+  padding-bottom: 20px;
+}
+.hyGuidelinesPage .carousel-inner > .item > img {
+  margin: 0 auto;
+}
 .hyGuidelinesPage .visualSystemSpacing {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 40px;
 }
 .container-fluid.hyDownloadPage .hyDwnlBtns a {
   width: 100%;
