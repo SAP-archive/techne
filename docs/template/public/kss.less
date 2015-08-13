@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-  margin-top: 110px!important;
+  margin-top: 100px!important;
 }
 
 body.kss-body {
@@ -23,10 +23,10 @@ body.kss-body {
     padding: 15px;
 }
 #kss-top-nav {
-    background: #2877CB;
+    background: #0486E0;
     color: #fff;
     overflow: hidden;
-    height: 60px;
+    height: 50px;
     ul {
         list-style: outside none none;
         margin: 0;
@@ -34,21 +34,25 @@ body.kss-body {
         li {
             float: left;
             span.active {
+<<<<<<< HEAD
+                padding: 14px;
+=======
                 font-weight: bold;
                 padding: 18px;
+>>>>>>> develop
                 display: inline-block;
             }
             a {
                 color: #a4c8f0;
                 display: inline-block;
-                padding: 18px;
-              
-              &:hover{
-                text-decoration: none;
-                background-color: #0376C6!important;
+                padding: 14px;
+                transition: all 0.25s  ease-out;
+                -webkit-transition: all 0.25s ease-out;
                 
-              }
-                
+                &:hover {
+                    text-decoration: none;
+                    background-color: #0376C6!important;
+                }
             }
         }
     }
@@ -93,13 +97,13 @@ body.kss-body {
                 text-decoration: none;
                 font-size: 15px;
                 &:hover {
-                    color: #2877cb;
+                    color: #0486E0;
                 }
             }
             &.kss-active a {
                 background: none repeat scroll 0 0 #edf1f5;
-                border-left-color: #2877cb;
-                color: #2877cb;
+                border-left-color: #0486E0;
+                color: #0486E0;
                 text-decoration: none;
             }
         }
@@ -1151,7 +1155,7 @@ header.hyHomeHeaderMinor {
                         a {
                             text-transform: uppercase;
                             background-color: transparent;
-                            border-bottom: 1px solid #2877CB;
+                            border-bottom: 1px solid #0486E0;
                             color: #313440;
                             word-break: break-word;
                         }
@@ -1213,11 +1217,10 @@ header.hyHomeHeaderMinor {
 }
 
 .hyGettingStartedPage {
-    margin-top: -15px;
+    margin-top: -25px;
     .hyDownloads {
     background-color: #e0e9f0;
     padding-top: 63px;
-    margin-top: -25px;
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 21px;
@@ -1265,7 +1268,7 @@ header.hyHomeHeaderMinor {
             }
         }
         code {
-            color: #2877CB;
+            color: #0486E0;
             background-color: #f1f5f8;
         }   
     }
