@@ -6,7 +6,7 @@
   "scripts": {
     "test": "gulp",
     "start": "docs/index.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install && gulp patchgulpkss"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "gulp-env": "^0.2.0",
     "gulp-iconfont": "^1.0.0",
     "gulp-insert": "^0.4.0",
+    "gulp-kss": "0.0.2",
     "gulp-less": "2.0.1",
     "gulp-sourcemaps": "^1.5.0",
     "gulp-uglify": "^1.1.0",
