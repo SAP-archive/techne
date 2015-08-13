@@ -272,6 +272,7 @@ body.kss-body {
 }
 #kss-top-nav ul li span.active {
   padding: 14px;
+  font-weight: bold;
   display: inline-block;
 }
 #kss-top-nav ul li a {
