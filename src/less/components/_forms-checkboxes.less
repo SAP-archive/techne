@@ -12,8 +12,8 @@
 // Styleguide 4.1
 
 
-@checkbox-size: 24px;
-@checkbox-border-width: 5px;
+@checkbox-size: 23px;
+@checkbox-border-width: 3px;
 
 
 .checkbox{
@@ -42,14 +42,17 @@
         display: block;
         width: @checkbox-size;
         height: @checkbox-size ;
-        background:  @light-blue;
-        border-radius: 4px;
+        background:  @default-blue;
+;
+        border-radius: 0px;
 
         content: "";
         display: inline-block;
         font-family: 'Glyphicons Halflings';
-        color: @default-blue;
-        line-height: 14px;
+        color: #fff;
+        line-height: 18px;
+        
+        border: @checkbox-border-width solid @default-blue;
 
       }
         
@@ -62,16 +65,7 @@
       }
       
     }
-
-  &:focus + label{
-
-      &:before{
-        box-shadow: 0 0 0 2px #0486e0;
-      }
-      
-    }
   }
-
   label{
     &:before{
         position: absolute;
@@ -82,9 +76,8 @@
         width: @checkbox-size;
         height: @checkbox-size ;
         background: #fff;
-        border-radius: 4px;
-        border: @checkbox-border-width solid @light-blue;
-        .box-shadow(0 2px 0 fade(@light-blue-600, 100%));
+        border-radius: 0px;
+        border: @checkbox-border-width solid @dark-blue;
 
     }
   }
