@@ -5,7 +5,7 @@ var env = require('gulp-env');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
-var gulpkss = require('./docs/gulp-kss');
+var gulpkss = require('gulp-kss');
 var concat = require('gulp-concat');
 var insert = require('gulp-insert');
 var config = require('./config.json');
@@ -276,6 +276,15 @@ gulp.task('deploy', function(){
 
 
 });
+
+gulp.task('patchgulpkss',
+    function(){
+        //patch the gulp-kss main branch
+        gulp.src('./gulp-patch/gulp-kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss'));
+        //patch the gulp-kss depednecy of kss
+        gulp.src('./gulp-patch/kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss/node_modules/kss/lib'));
+    }
+);
 
 
 // Rerun the task when a file changes
