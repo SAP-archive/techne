@@ -101,41 +101,41 @@
 
             <ul class="hidden-xs">
                 <li>
-                    {{#chk_pageName pageName 'index'}}
+                    {{#if_eq pagename "index"}}
                         <span class="active">Home</span>
                     {{else}} 
                         <a href="index.html" class="inactive">Home</a>
-                    {{/chk_pageName}}      
+                    {{/if_eq}}      
                 </li>
                 <li>
-                    {{#chk_pageName pageName 'Guidelines'}}
+                    {{#if_eq pagename "Guidelines"}}
                         <span class="active">Guidelines</span>
                     {{else}} 
                         <a href="Guidelines.html" class="inactive">Guidelines</a>
-                    {{/chk_pageName}}     
+                    {{/if_eq}}     
                 </li>
                 <li>
-                    {{#chk_pageName pageName 'components'}}
+                    {{#if_eq pagename "components"}}
                         <span class="active">Components</span>
                     {{else}} 
                         <a href="section-1.html" class="inactive">Components</a>
-                    {{/chk_pageName}}
+                    {{/if_eq}}
                 </li>
                 <li>
-                    {{#chk_pageName pageName 'Patterns'}}
+                    {{#if_eq pagename "Patterns"}}
                         <span class="active">Patterns &amp; Layouts</span>
                     {{else}}
                         <a href="Patterns.html" class="inactive">Patterns &amp; Layouts</a></li>
-                    {{/chk_pageName}}
+                    {{/if_eq}}
                     <li>
                     
                 </li>
                 <li>
-                    {{#chk_pageName pageName 'GettingStarted'}}
+                    {{#if_eq pagename "GettingStarted"}}
                         <span class="active">Download &amp; Get Started</span>
                     {{else}} 
                         <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
-                    {{/chk_pageName}}     
+                    {{/if_eq}}     
                 </li>
 
             </ul>
@@ -179,8 +179,14 @@
                 {{html overview}}
                 {{else}}
                 {{#eachSection rootNumber}}
+                {{rootNumber}}
                 <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
-                    <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
+                    {{#if_eq refDepth 1}}
+                              <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
+                    {{else}} 
+                              <h2 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h2>
+                    {{/if_eq}}      
+              
                     {{#if markup}}
                     {{#if description}}
                     <div class="kss-description">
