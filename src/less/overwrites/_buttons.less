@@ -23,7 +23,6 @@
 }
 
 .btn-default {
-  font-weight: 900 !important;
   .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @dark-blue-600; #fff; @dark-blue-900; @dark-blue-400; @dark-blue-600; @dark-blue-500);
 	.box-shadow(0 3px 0 darken(@btn-default-bg, 10%));
   
@@ -64,10 +63,10 @@
 // :hover - 
 //
 // Styleguide 3.1
-
-.btn-toggle{
+/*
+.btn-toggle {
 	  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @light-blue-600; #fff; @default-blue-600; @default-blue-600; @default-blue-600);
-}
+}*/
 
 // Button variants 
 // -------------------------
@@ -79,8 +78,8 @@
   .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
   &:focus,
   &:active:focus {
-      background-color: @background-click;
-      outline-color: @border-hover;
+    background-color: @background-click;
+    outline-color: @border-hover;
   }
   &:hover,
   &:active,
@@ -96,13 +95,13 @@
   .open .dropdown-toggle& {
     background-image: none;
     background-color: lighten(@background-hover, 4%);
-        border-color: lighten(@border-hover, 4%);
+    border-color: lighten(@border-hover, 4%);
   }
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
     .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
-
+    
     &,
     &:hover,
     &:active,
@@ -113,13 +112,12 @@
     &:active,
     &.active,
     .open .dropdown-toggle& {
-    background-image: none;
-    background-color: lighten(@background-hover, 4%);
-        border-color: lighten(@border-hover, 4%);
-        .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+      background-image: none;
+      background-color: lighten(@background-hover, 4%);
+      border-color: lighten(@border-hover, 4%);
+      .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+    }
   }
-  }
-
   .badge {
     color: @background-default;
     background-color: @color-default;
@@ -144,28 +142,28 @@
 // Styleguide 2.2
 
 .file-selector {
-	display: inline-block;
-    line-height: 1.33;
-    overflow: hidden;
-    position: relative;
-    vertical-align: middle;
-
-    .btn{
-    	// BTN SHADOW
-    	margin-bottom: 2px;
-    	margin-left: 1px;
-    	margin-right: 1px;
-    }
-
-    input {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 0;
-		opacity: 0;
-		-ms-filter: 'alpha(opacity=0)';
-		font-size: 200px;
-		direction: ltr;
-		cursor: pointer;
-	}
+  display: inline-block;
+  line-height: 1.33;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  
+  .btn { 
+    // BTN SHADOW
+    margin-bottom: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+  }
 }
