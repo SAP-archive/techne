@@ -1,6 +1,128 @@
-// Fix for padding issue when not using repsonsive
-// collapse behavoir of bootstrap within navbar component
+// Page Header Navigation Bar
+//
+// Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.
+// 
+// Markup:
+// <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
+//         <div class="container-fluid">
+//             <div class="navbar-left">
+//                 <a href="#">
+//                     <button class="btn-subordinate btn navbar-btn">
+//                         <span class="caret left"></span> <span>Back</span></button>
+//                 </a>
+//             </div>
+//             <div class="y-navbar-center">
+//                 <div class="y-navbar-center-content">
+//                     <h1>Long Page Title</h1>
+//                 </div>
+//             </div>
+//             <div class="navbar-right">
+//                 <div class="y-toolbar">
+//                     <div class="y-toolbar-cell">
+//                         <button class="btn btn-subordinate navbar-btn">Cancel
+//                         </button>
+//                     </div>
+//                     <div class="y-toolbar-cell">
+//                         <button class="btn btn-warning navbar-btn">Save
+//                         </button>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//
+// Styleguide 11.5
 
-.navbar-right{
-  margin-right: 0;
+@navbar-height-large: 70px;
+
+.navbar {
+    > .container-fluid{
+
+        > .navbar-right,
+        > .navbar-left{
+          padding: 0;
+        }
+        
+        > .navbar-left{
+          margin-left: -@navbar-padding-horizontal;
+        }
+
+        > .navbar-right{
+          margin-right: -@navbar-padding-horizontal;
+        }
+  }
+
+  // Button modifcations
+  .navbar-btn {
+    border-radius: 0;
+    box-shadow: none !important;
+    height: @navbar-height;
+    margin: 0;
+  }
+  .btn-group{
+    height: 100%;
+  }
+
+  // large navbar modfier
+    &.y-navbar-lg{
+    min-height: @navbar-height-large;
+
+    .navbar-btn {
+      min-height: @navbar-height-large;
+    }
+  }
+
+  // centered element modifier
+  &.y-navbar-centered{
+    text-align: center;
+    .container-fluid{
+      width: 100%;
+      padding: 0;
+    }
+
+  .y-navbar-center{
+    position: relative;
+  }
+
+  .y-navbar-center-content{
+    width: 100%;
+
+        position: absolute;
+
+    h1{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      // fix strange vertical scroll
+      padding-bottom: 5px;
+
+        @media (max-width:@screen-xs-max) {
+          font-size: 20px;
+          line-height: 1.6;
+        }
+    }
+  }
+
+  .navbar-left,
+  .navbar-right,
+  .y-navbar-center{
+    display: table-cell;
+    vertical-align: top;
+  }
+  .navbar-left,
+  .navbar-right{
+    width: 1%;
+    float: none!important;
+  }
+  }
+}
+
+
+// helper classes to keep buttons in line in navbar
+.y-toolbar{
+  display: table;
+}
+
+.y-toolbar-cell{
+  display: table-cell;
 }
