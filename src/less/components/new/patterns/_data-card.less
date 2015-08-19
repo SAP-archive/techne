@@ -1,9 +1,9 @@
 // DataCard(s)
 //
 // Markup:
-//<ul class="list-group dataCards">
+//<ul class="list-group dataCards {modifiers}">
 //  <li class="list-group-item dataCard">
-//    <div class="cardRow">
+//    <div class="cardRow cardRowClickable">
 //      <div class="col1 pull-left">
 //        <div class="userAvatar">
 //          <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
@@ -85,6 +85,8 @@
 //  </li>
 //</ul>
 //
+// .dataCards-singleColumn - Keep all cards in one column for nested grids etc.
+//
 // Styleguide 8.1
 
 .dataCards {
@@ -102,6 +104,18 @@
 
   @media (max-width:@screen-xs-max) {
     flex-direction: column;
+  }
+
+  &.dataCards-singleColumn{
+    display: block;
+    
+    .cardRow,
+    .dataCard{
+      width: 100%;
+    }
+    .y-add{
+      margin-bottom: 10px;
+    }
   }
 }
 
