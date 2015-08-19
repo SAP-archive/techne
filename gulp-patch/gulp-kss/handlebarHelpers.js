@@ -180,8 +180,6 @@ module.exports = function (handlebars, styleguide) {
      * Check equality of two values".
      */
     handlebars.registerHelper('if_eq', function(a, b, opts) {
-        /*a = this.pagename;*/
-        console.log (a,b);
         if(a == b) { // Or === depending on your needs
             return opts.fn(this);
         }
