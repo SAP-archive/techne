@@ -169,11 +169,13 @@
 
 // Links
 //
-// The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. 
+// A majority of links in the site are built from the same base class.
 // 
 // Markup:
-//<button class="btn btn-lg btn-danger">
-//	Delete
+//<button class="btn btn-lg {$modifiers}">
+//	This is a Link
 //</button>
+// 
+// .btn-danger            - The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. 
 //
 // Styleguide 2.3

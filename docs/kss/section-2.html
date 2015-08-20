@@ -255,21 +255,36 @@ You can use this with all available btn modifier classes</p>
                               <h2 class="kss-title"><span class="kss-ref">2.3</span> Links</h2>
               
                     <div class="kss-description">
-                        <p>The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+                        <p>A majority of links in the site are built from the same base class.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
+                                <button class="btn btn-lg {$modifiers}">
+	This is a Link
+</button>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+
+                                </div>
+                                <div class="kss-mod-name">.btn-danger</div>
+                            </div>
+                            <div class="kss-modifier-example">
                                 <button class="btn btn-lg btn-danger">
-	Delete
+	This is a Link
 </button>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;button class=&quot;btn btn-lg btn-danger&quot;&gt;
-	Delete
+                                <pre class="code-snippet"><code data-language="html">&lt;button class=&quot;btn btn-lg {$modifiers}&quot;&gt;
+	This is a Link
 &lt;/button&gt;</code></pre>
                             </div>
                         </div>
