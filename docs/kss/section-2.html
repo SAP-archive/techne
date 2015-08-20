@@ -183,21 +183,6 @@ So far this just includes buttons. </p>
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
-
-                                </div>
-                                <div class="kss-mod-name">.btn-default</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <button class="btn btn-lg btn-default">
-	This is a Button
-</button>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
                                     <p>The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.</p>
 
                                 </div>
@@ -213,13 +198,13 @@ So far this just includes buttons. </p>
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+                                    <p>The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.</p>
 
                                 </div>
-                                <div class="kss-mod-name">.btn-danger</div>
+                                <div class="kss-mod-name">.btn-default</div>
                             </div>
                             <div class="kss-modifier-example">
-                                <button class="btn btn-lg btn-danger">
+                                <button class="btn btn-lg btn-default">
 	This is a Button
 </button>
                             </div>
@@ -246,7 +231,7 @@ You can use this with all available btn modifier classes</p>
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
                                 <div class="file-selector">
-	<span class="btn btn-default btn-lg {$modifiers}">
+	<span class="btn btn-default btn-lg">
 		<span>Upload File Button</span>
 		<input type="file" multiple="" ng-file-select="">
 	</span>
@@ -256,11 +241,36 @@ You can use this with all available btn modifier classes</p>
                         <div class="kss-markup">
                             <div class="seperator">
                                 <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;file-selector&quot;&gt;
-	&lt;span class=&quot;btn btn-default btn-lg {$modifiers}&quot;&gt;
+	&lt;span class=&quot;btn btn-default btn-lg&quot;&gt;
 		&lt;span&gt;Upload File Button&lt;/span&gt;
 		&lt;input type=&quot;file&quot; multiple=&quot;&quot; ng-file-select=&quot;&quot;&gt;
 	&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-2.3" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">2.3</span> Links</h2>
+              
+                    <div class="kss-description">
+                        <p>The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. </p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <button class="btn btn-lg btn-danger">
+	Delete
+</button>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;button class=&quot;btn btn-lg btn-danger&quot;&gt;
+	Delete
+&lt;/button&gt;</code></pre>
                             </div>
                         </div>
                     </div>
