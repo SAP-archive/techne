@@ -179,8 +179,7 @@ module.exports = function (handlebars, styleguide) {
     /**
      * Check equality of two values".
      */
-    handlebars.registerHelper('chk_pageName', function(a, b, opts) {
-        a = this.pagename;
+    handlebars.registerHelper('if_eq', function(a, b, opts) {
         if(a == b) { // Or === depending on your needs
             return opts.fn(this);
         }
