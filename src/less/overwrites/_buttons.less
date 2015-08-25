@@ -41,30 +41,6 @@
   .button-variant(@btn-subordinate-color; @btn-subordinate-bg; @btn-subordinate-border);
 }
 
-// Toggle Buttons
-//
-// A majority of buttons in the site are built from the same base class.
-// Deprecated - This component will be replaced by a larger version (html markup) of small toggle.
-// If you used - prepare for updating with a new techne release
-// 
-// Markup:
-//<div data-toggle="buttons" class="btn-group">
-//	<label class="btn btn-toggle btn-lg active {$modifiers} ">
-//		<input type="radio" id="option1" name="options"> On
-//	</label>
-//	<label class="btn btn-toggle btn-lg {$modifiers} ">
-//		<input type="radio" id="option2" name="options"> Off
-//	</label>
-//</div>
-// 
-// :hover - 
-//
-// Styleguide 3.1
-
-.btn-toggle{
-	  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @light-blue-600; #fff; @default-blue-600; @default-blue-600; @default-blue-600);
-}
-
 // Button variants 
 // -------------------------
 // with more parameter so you get full controll over hover etc states
@@ -162,4 +138,44 @@
 		direction: ltr;
 		cursor: pointer;
 	}
+}
+
+// Toggle Buttons
+//
+// A majority of buttons in the site are built from the same base class.
+// Deprecated - This component will be replaced by a larger version (html markup) of small toggle.
+// If you used - prepare for updating with a new techne release
+// 
+// Markup:
+//<div data-toggle="buttons" class="btn-group">
+//	<label class="btn btn-toggle btn-lg {$modifiers} ">
+//		<input type="radio" id="option1" name="options"> Action
+//	</label>
+//	<label class="btn btn-toggle btn-lg active {$modifiers} ">
+//		<input type="radio" id="option2" name="options"> Action
+//	</label>
+//  <label class="btn btn-toggle btn-lg {$modifiers} ">
+//		<input type="radio" id="option3" name="options"> Action
+//	</label>
+//</div>
+//
+// Styleguide 2.5
+.btn-group {
+  border-radius: 4px;
+  .box-shadow(1px 2px 1px fade(@default-greyblue-200, 100%));
+}
+.btn-toggle{
+  background-color: #fff;
+  color: @default-blue;
+  border-style: solid;
+  border-width: 1px;
+  border-color: @default-greyblue-200;
+  &.active,
+  &:active {
+    background-color: @default-blue;
+    color: #fff;
+  }
+  &:hover {
+    background-color: rgba(4,134,224,0.85);
+  }
 }
