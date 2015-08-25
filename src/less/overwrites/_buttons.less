@@ -140,21 +140,20 @@
 	}
 }
 
-// Toggle Buttons
+// Segmented Buttons
 //
-// A majority of buttons in the site are built from the same base class.
-// Deprecated - This component will be replaced by a larger version (html markup) of small toggle.
-// If you used - prepare for updating with a new techne release
-// 
+//  Segmented buttons are a horizontal control of multiple segments. 
+//  Each segment is a button, use them to indicate that they are related.
+//
 // Markup:
 //<div data-toggle="buttons" class="btn-group">
-//	<label class="btn btn-toggle btn-lg {$modifiers} ">
+//	<label class="btn btn-segmented btn-lg {$modifiers} ">
 //		<input type="radio" id="option1" name="options"> Action
 //	</label>
-//	<label class="btn btn-toggle btn-lg active {$modifiers} ">
+//	<label class="btn btn-segmented btn-lg active {$modifiers} ">
 //		<input type="radio" id="option2" name="options"> Action
 //	</label>
-//  <label class="btn btn-toggle btn-lg {$modifiers} ">
+//  <label class="btn btn-segmented btn-lg {$modifiers} ">
 //		<input type="radio" id="option3" name="options"> Action
 //	</label>
 //</div>
@@ -164,7 +163,7 @@
   border-radius: 4px;
   .box-shadow(1px 2px 1px fade(@default-greyblue-200, 100%));
 }
-.btn-toggle{
+.btn-segmented{
   background-color: #fff;
   color: @default-blue;
   border-style: solid;
