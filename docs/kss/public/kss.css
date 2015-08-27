@@ -657,113 +657,103 @@ body.has-left-nav .sidebar-nav {
 #patterns-trees .btn-link.collapsed .glyphicon-plus:before {
   content: "+";
 }
-#patterns-forms,
-#patterns-infopopups,
-#patterns-labels,
-#patterns-tables,
-#patterns-lists,
-#patterns-modaldialog,
-#patterns-accordions,
-#kss-content,
-#patterns-trees {
+#patterns-list-pages,
+#patterns-card-pages,
+#patterns-retail-product-pages,
+#patterns-trees,
+#patterns-mixed-pattern-pages,
+#patterns-overall-pattern-reference,
+#kss-content {
   /* patterns */
 }
-#patterns-forms .table-behavoir-cell .seperator,
-#patterns-infopopups .table-behavoir-cell .seperator,
-#patterns-labels .table-behavoir-cell .seperator,
-#patterns-tables .table-behavoir-cell .seperator,
-#patterns-lists .table-behavoir-cell .seperator,
-#patterns-modaldialog .table-behavoir-cell .seperator,
-#patterns-accordions .table-behavoir-cell .seperator,
-#kss-content .table-behavoir-cell .seperator,
-#patterns-trees .table-behavoir-cell .seperator {
+#patterns-list-pages .sectionSpacing,
+#patterns-card-pages .sectionSpacing,
+#patterns-retail-product-pages .sectionSpacing,
+#patterns-trees .sectionSpacing,
+#patterns-mixed-pattern-pages .sectionSpacing,
+#patterns-overall-pattern-reference .sectionSpacing,
+#kss-content .sectionSpacing {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+#patterns-list-pages .table-behavoir-cell .seperator,
+#patterns-card-pages .table-behavoir-cell .seperator,
+#patterns-retail-product-pages .table-behavoir-cell .seperator,
+#patterns-trees .table-behavoir-cell .seperator,
+#patterns-mixed-pattern-pages .table-behavoir-cell .seperator,
+#patterns-overall-pattern-reference .table-behavoir-cell .seperator,
+#kss-content .table-behavoir-cell .seperator {
   margin: 0 50px 0 0;
 }
-#patterns-forms .row.visual-code,
-#patterns-infopopups .row.visual-code,
-#patterns-labels .row.visual-code,
-#patterns-tables .row.visual-code,
-#patterns-lists .row.visual-code,
-#patterns-modaldialog .row.visual-code,
-#patterns-accordions .row.visual-code,
-#kss-content .row.visual-code,
-#patterns-trees .row.visual-code {
+#patterns-list-pages .row.visual-code,
+#patterns-card-pages .row.visual-code,
+#patterns-retail-product-pages .row.visual-code,
+#patterns-trees .row.visual-code,
+#patterns-mixed-pattern-pages .row.visual-code,
+#patterns-overall-pattern-reference .row.visual-code,
+#kss-content .row.visual-code {
   margin: 0;
 }
-#patterns-forms h3.popover-title,
-#patterns-infopopups h3.popover-title,
-#patterns-labels h3.popover-title,
-#patterns-tables h3.popover-title,
-#patterns-lists h3.popover-title,
-#patterns-modaldialog h3.popover-title,
-#patterns-accordions h3.popover-title,
-#kss-content h3.popover-title,
-#patterns-trees h3.popover-title {
+#patterns-list-pages h3.popover-title,
+#patterns-card-pages h3.popover-title,
+#patterns-retail-product-pages h3.popover-title,
+#patterns-trees h3.popover-title,
+#patterns-mixed-pattern-pages h3.popover-title,
+#patterns-overall-pattern-reference h3.popover-title,
+#kss-content h3.popover-title {
   margin-bottom: 0;
 }
-#patterns-forms .usercard-info p,
-#patterns-infopopups .usercard-info p,
-#patterns-labels .usercard-info p,
-#patterns-tables .usercard-info p,
-#patterns-lists .usercard-info p,
-#patterns-modaldialog .usercard-info p,
-#patterns-accordions .usercard-info p,
-#kss-content .usercard-info p,
-#patterns-trees .usercard-info p {
+#patterns-list-pages .usercard-info p,
+#patterns-card-pages .usercard-info p,
+#patterns-retail-product-pages .usercard-info p,
+#patterns-trees .usercard-info p,
+#patterns-mixed-pattern-pages .usercard-info p,
+#patterns-overall-pattern-reference .usercard-info p,
+#kss-content .usercard-info p {
   margin-bottom: 0;
 }
-#patterns-forms .list-group-item.deleteable .list-group-item-delete,
-#patterns-infopopups .list-group-item.deleteable .list-group-item-delete,
-#patterns-labels .list-group-item.deleteable .list-group-item-delete,
-#patterns-tables .list-group-item.deleteable .list-group-item-delete,
-#patterns-lists .list-group-item.deleteable .list-group-item-delete,
-#patterns-modaldialog .list-group-item.deleteable .list-group-item-delete,
-#patterns-accordions .list-group-item.deleteable .list-group-item-delete,
-#kss-content .list-group-item.deleteable .list-group-item-delete,
-#patterns-trees .list-group-item.deleteable .list-group-item-delete {
+#patterns-list-pages .list-group-item.deleteable .list-group-item-delete,
+#patterns-card-pages .list-group-item.deleteable .list-group-item-delete,
+#patterns-retail-product-pages .list-group-item.deleteable .list-group-item-delete,
+#patterns-trees .list-group-item.deleteable .list-group-item-delete,
+#patterns-mixed-pattern-pages .list-group-item.deleteable .list-group-item-delete,
+#patterns-overall-pattern-reference .list-group-item.deleteable .list-group-item-delete,
+#kss-content .list-group-item.deleteable .list-group-item-delete {
   top: 18%;
 }
-#patterns-forms .row,
-#patterns-infopopups .row,
-#patterns-labels .row,
-#patterns-tables .row,
-#patterns-lists .row,
-#patterns-modaldialog .row,
-#patterns-accordions .row,
-#kss-content .row,
-#patterns-trees .row {
+#patterns-list-pages .row,
+#patterns-card-pages .row,
+#patterns-retail-product-pages .row,
+#patterns-trees .row,
+#patterns-mixed-pattern-pages .row,
+#patterns-overall-pattern-reference .row,
+#kss-content .row {
   margin-right: -8px;
   margin-left: -8px;
 }
-#patterns-forms .modal-dialog,
-#patterns-infopopups .modal-dialog,
-#patterns-labels .modal-dialog,
-#patterns-tables .modal-dialog,
-#patterns-lists .modal-dialog,
-#patterns-modaldialog .modal-dialog,
-#patterns-accordions .modal-dialog,
-#kss-content .modal-dialog,
+#patterns-list-pages .modal-dialog,
+#patterns-card-pages .modal-dialog,
+#patterns-retail-product-pages .modal-dialog,
 #patterns-trees .modal-dialog,
-#patterns-forms .popover,
-#patterns-infopopups .popover,
-#patterns-labels .popover,
-#patterns-tables .popover,
-#patterns-lists .popover,
-#patterns-modaldialog .popover,
-#patterns-accordions .popover,
-#kss-content .popover,
-#patterns-trees .popover {
+#patterns-mixed-pattern-pages .modal-dialog,
+#patterns-overall-pattern-reference .modal-dialog,
+#kss-content .modal-dialog,
+#patterns-list-pages .popover,
+#patterns-card-pages .popover,
+#patterns-retail-product-pages .popover,
+#patterns-trees .popover,
+#patterns-mixed-pattern-pages .popover,
+#patterns-overall-pattern-reference .popover,
+#kss-content .popover {
   z-index: 0;
 }
-#patterns-forms .circle,
-#patterns-infopopups .circle,
-#patterns-labels .circle,
-#patterns-tables .circle,
-#patterns-lists .circle,
-#patterns-modaldialog .circle,
-#patterns-accordions .circle,
-#kss-content .circle,
-#patterns-trees .circle {
+#patterns-list-pages .circle,
+#patterns-card-pages .circle,
+#patterns-retail-product-pages .circle,
+#patterns-trees .circle,
+#patterns-mixed-pattern-pages .circle,
+#patterns-overall-pattern-reference .circle,
+#kss-content .circle {
   border: 1px solid #cfd8e3;
   box-shadow: 0px 1px 1px #fff;
   margin: 0 auto 20px auto;
@@ -772,40 +762,34 @@ body.has-left-nav .sidebar-nav {
   padding: 50% 0;
   border-radius: 50%;
 }
-#patterns-forms .circle-type,
-#patterns-infopopups .circle-type,
-#patterns-labels .circle-type,
-#patterns-tables .circle-type,
-#patterns-lists .circle-type,
-#patterns-modaldialog .circle-type,
-#patterns-accordions .circle-type,
-#kss-content .circle-type,
-#patterns-trees .circle-type {
+#patterns-list-pages .circle-type,
+#patterns-card-pages .circle-type,
+#patterns-retail-product-pages .circle-type,
+#patterns-trees .circle-type,
+#patterns-mixed-pattern-pages .circle-type,
+#patterns-overall-pattern-reference .circle-type,
+#kss-content .circle-type {
   font-size: 74px;
   display: inline-block;
   margin-top: -35%;
 }
-#patterns-forms .seperator,
-#patterns-infopopups .seperator,
-#patterns-labels .seperator,
-#patterns-tables .seperator,
-#patterns-lists .seperator,
-#patterns-modaldialog .seperator,
-#patterns-accordions .seperator,
-#kss-content .seperator,
-#patterns-trees .seperator {
+#patterns-list-pages .seperator,
+#patterns-card-pages .seperator,
+#patterns-retail-product-pages .seperator,
+#patterns-trees .seperator,
+#patterns-mixed-pattern-pages .seperator,
+#patterns-overall-pattern-reference .seperator,
+#kss-content .seperator {
   margin: 40px 0 60px 0;
   position: relative;
 }
-#patterns-forms .seperator .hexagon,
-#patterns-infopopups .seperator .hexagon,
-#patterns-labels .seperator .hexagon,
-#patterns-tables .seperator .hexagon,
-#patterns-lists .seperator .hexagon,
-#patterns-modaldialog .seperator .hexagon,
-#patterns-accordions .seperator .hexagon,
-#kss-content .seperator .hexagon,
-#patterns-trees .seperator .hexagon {
+#patterns-list-pages .seperator .hexagon,
+#patterns-card-pages .seperator .hexagon,
+#patterns-retail-product-pages .seperator .hexagon,
+#patterns-trees .seperator .hexagon,
+#patterns-mixed-pattern-pages .seperator .hexagon,
+#patterns-overall-pattern-reference .seperator .hexagon,
+#kss-content .seperator .hexagon {
   top: 31px;
   left: 0;
   position: relative;
@@ -816,30 +800,26 @@ body.has-left-nav .sidebar-nav {
   display: block;
   z-index: 2;
 }
-#patterns-forms .seperator .hexagon .glyphicon,
-#patterns-infopopups .seperator .hexagon .glyphicon,
-#patterns-labels .seperator .hexagon .glyphicon,
-#patterns-tables .seperator .hexagon .glyphicon,
-#patterns-lists .seperator .hexagon .glyphicon,
-#patterns-modaldialog .seperator .hexagon .glyphicon,
-#patterns-accordions .seperator .hexagon .glyphicon,
-#kss-content .seperator .hexagon .glyphicon,
-#patterns-trees .seperator .hexagon .glyphicon {
+#patterns-list-pages .seperator .hexagon .glyphicon,
+#patterns-card-pages .seperator .hexagon .glyphicon,
+#patterns-retail-product-pages .seperator .hexagon .glyphicon,
+#patterns-trees .seperator .hexagon .glyphicon,
+#patterns-mixed-pattern-pages .seperator .hexagon .glyphicon,
+#patterns-overall-pattern-reference .seperator .hexagon .glyphicon,
+#kss-content .seperator .hexagon .glyphicon {
   font-size: 20px;
   position: absolute;
   top: 10px;
   left: 10px;
   color: #7e858d;
 }
-#patterns-forms .seperator .hexagon .code-open,
-#patterns-infopopups .seperator .hexagon .code-open,
-#patterns-labels .seperator .hexagon .code-open,
-#patterns-tables .seperator .hexagon .code-open,
-#patterns-lists .seperator .hexagon .code-open,
-#patterns-modaldialog .seperator .hexagon .code-open,
-#patterns-accordions .seperator .hexagon .code-open,
-#kss-content .seperator .hexagon .code-open,
-#patterns-trees .seperator .hexagon .code-open {
+#patterns-list-pages .seperator .hexagon .code-open,
+#patterns-card-pages .seperator .hexagon .code-open,
+#patterns-retail-product-pages .seperator .hexagon .code-open,
+#patterns-trees .seperator .hexagon .code-open,
+#patterns-mixed-pattern-pages .seperator .hexagon .code-open,
+#patterns-overall-pattern-reference .seperator .hexagon .code-open,
+#kss-content .seperator .hexagon .code-open {
   font-size: 12px;
   position: absolute;
   top: 1px;
@@ -848,15 +828,13 @@ body.has-left-nav .sidebar-nav {
   color: #7e858d;
   display: none;
 }
-#patterns-forms .seperator .hexagon .code-close,
-#patterns-infopopups .seperator .hexagon .code-close,
-#patterns-labels .seperator .hexagon .code-close,
-#patterns-tables .seperator .hexagon .code-close,
-#patterns-lists .seperator .hexagon .code-close,
-#patterns-modaldialog .seperator .hexagon .code-close,
-#patterns-accordions .seperator .hexagon .code-close,
-#kss-content .seperator .hexagon .code-close,
-#patterns-trees .seperator .hexagon .code-close {
+#patterns-list-pages .seperator .hexagon .code-close,
+#patterns-card-pages .seperator .hexagon .code-close,
+#patterns-retail-product-pages .seperator .hexagon .code-close,
+#patterns-trees .seperator .hexagon .code-close,
+#patterns-mixed-pattern-pages .seperator .hexagon .code-close,
+#patterns-overall-pattern-reference .seperator .hexagon .code-close,
+#kss-content .seperator .hexagon .code-close {
   font-size: 20px;
   position: absolute;
   top: -4.5px;
@@ -864,100 +842,84 @@ body.has-left-nav .sidebar-nav {
   font-weight: 500;
   color: #fff;
 }
-#patterns-forms .seperator .hexagon:before,
-#patterns-infopopups .seperator .hexagon:before,
-#patterns-labels .seperator .hexagon:before,
-#patterns-tables .seperator .hexagon:before,
-#patterns-lists .seperator .hexagon:before,
-#patterns-modaldialog .seperator .hexagon:before,
-#patterns-accordions .seperator .hexagon:before,
-#kss-content .seperator .hexagon:before,
+#patterns-list-pages .seperator .hexagon:before,
+#patterns-card-pages .seperator .hexagon:before,
+#patterns-retail-product-pages .seperator .hexagon:before,
 #patterns-trees .seperator .hexagon:before,
-#patterns-forms .seperator .hexagon:after,
-#patterns-infopopups .seperator .hexagon:after,
-#patterns-labels .seperator .hexagon:after,
-#patterns-tables .seperator .hexagon:after,
-#patterns-lists .seperator .hexagon:after,
-#patterns-modaldialog .seperator .hexagon:after,
-#patterns-accordions .seperator .hexagon:after,
-#kss-content .seperator .hexagon:after,
-#patterns-trees .seperator .hexagon:after {
+#patterns-mixed-pattern-pages .seperator .hexagon:before,
+#patterns-overall-pattern-reference .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before,
+#patterns-list-pages .seperator .hexagon:after,
+#patterns-card-pages .seperator .hexagon:after,
+#patterns-retail-product-pages .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after,
+#patterns-mixed-pattern-pages .seperator .hexagon:after,
+#patterns-overall-pattern-reference .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after {
   content: "";
   position: absolute;
   width: 0;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
 }
-#patterns-forms .seperator .hexagon:before,
-#patterns-infopopups .seperator .hexagon:before,
-#patterns-labels .seperator .hexagon:before,
-#patterns-tables .seperator .hexagon:before,
-#patterns-lists .seperator .hexagon:before,
-#patterns-modaldialog .seperator .hexagon:before,
-#patterns-accordions .seperator .hexagon:before,
-#kss-content .seperator .hexagon:before,
-#patterns-trees .seperator .hexagon:before {
+#patterns-list-pages .seperator .hexagon:before,
+#patterns-card-pages .seperator .hexagon:before,
+#patterns-retail-product-pages .seperator .hexagon:before,
+#patterns-trees .seperator .hexagon:before,
+#patterns-mixed-pattern-pages .seperator .hexagon:before,
+#patterns-overall-pattern-reference .seperator .hexagon:before,
+#kss-content .seperator .hexagon:before {
   bottom: 100%;
   border-bottom: 10.39px solid #d8dfe8;
 }
-#patterns-forms .seperator .hexagon:after,
-#patterns-infopopups .seperator .hexagon:after,
-#patterns-labels .seperator .hexagon:after,
-#patterns-tables .seperator .hexagon:after,
-#patterns-lists .seperator .hexagon:after,
-#patterns-modaldialog .seperator .hexagon:after,
-#patterns-accordions .seperator .hexagon:after,
-#kss-content .seperator .hexagon:after,
-#patterns-trees .seperator .hexagon:after {
+#patterns-list-pages .seperator .hexagon:after,
+#patterns-card-pages .seperator .hexagon:after,
+#patterns-retail-product-pages .seperator .hexagon:after,
+#patterns-trees .seperator .hexagon:after,
+#patterns-mixed-pattern-pages .seperator .hexagon:after,
+#patterns-overall-pattern-reference .seperator .hexagon:after,
+#kss-content .seperator .hexagon:after {
   top: 100%;
   width: 0;
   border-top: 10.39px solid #d8dfe8;
 }
-#patterns-forms .seperator .open-hexagon,
-#patterns-infopopups .seperator .open-hexagon,
-#patterns-labels .seperator .open-hexagon,
-#patterns-tables .seperator .open-hexagon,
-#patterns-lists .seperator .open-hexagon,
-#patterns-modaldialog .seperator .open-hexagon,
-#patterns-accordions .seperator .open-hexagon,
-#kss-content .seperator .open-hexagon,
-#patterns-trees .seperator .open-hexagon {
+#patterns-list-pages .seperator .open-hexagon,
+#patterns-card-pages .seperator .open-hexagon,
+#patterns-retail-product-pages .seperator .open-hexagon,
+#patterns-trees .seperator .open-hexagon,
+#patterns-mixed-pattern-pages .seperator .open-hexagon,
+#patterns-overall-pattern-reference .seperator .open-hexagon,
+#kss-content .seperator .open-hexagon {
   background: #7e858d;
 }
-#patterns-forms .seperator .open-hexagon:before,
-#patterns-infopopups .seperator .open-hexagon:before,
-#patterns-labels .seperator .open-hexagon:before,
-#patterns-tables .seperator .open-hexagon:before,
-#patterns-lists .seperator .open-hexagon:before,
-#patterns-modaldialog .seperator .open-hexagon:before,
-#patterns-accordions .seperator .open-hexagon:before,
-#kss-content .seperator .open-hexagon:before,
-#patterns-trees .seperator .open-hexagon:before {
+#patterns-list-pages .seperator .open-hexagon:before,
+#patterns-card-pages .seperator .open-hexagon:before,
+#patterns-retail-product-pages .seperator .open-hexagon:before,
+#patterns-trees .seperator .open-hexagon:before,
+#patterns-mixed-pattern-pages .seperator .open-hexagon:before,
+#patterns-overall-pattern-reference .seperator .open-hexagon:before,
+#kss-content .seperator .open-hexagon:before {
   bottom: 100%;
   border-bottom: 10.39px solid #7e858d;
 }
-#patterns-forms .seperator .open-hexagon:after,
-#patterns-infopopups .seperator .open-hexagon:after,
-#patterns-labels .seperator .open-hexagon:after,
-#patterns-tables .seperator .open-hexagon:after,
-#patterns-lists .seperator .open-hexagon:after,
-#patterns-modaldialog .seperator .open-hexagon:after,
-#patterns-accordions .seperator .open-hexagon:after,
-#kss-content .seperator .open-hexagon:after,
-#patterns-trees .seperator .open-hexagon:after {
+#patterns-list-pages .seperator .open-hexagon:after,
+#patterns-card-pages .seperator .open-hexagon:after,
+#patterns-retail-product-pages .seperator .open-hexagon:after,
+#patterns-trees .seperator .open-hexagon:after,
+#patterns-mixed-pattern-pages .seperator .open-hexagon:after,
+#patterns-overall-pattern-reference .seperator .open-hexagon:after,
+#kss-content .seperator .open-hexagon:after {
   top: 100%;
   width: 0;
   border-top: 10.39px solid #7e858d;
 }
-#patterns-forms .seperator .code-snippet,
-#patterns-infopopups .seperator .code-snippet,
-#patterns-labels .seperator .code-snippet,
-#patterns-tables .seperator .code-snippet,
-#patterns-lists .seperator .code-snippet,
-#patterns-modaldialog .seperator .code-snippet,
-#patterns-accordions .seperator .code-snippet,
-#kss-content .seperator .code-snippet,
-#patterns-trees .seperator .code-snippet {
+#patterns-list-pages .seperator .code-snippet,
+#patterns-card-pages .seperator .code-snippet,
+#patterns-retail-product-pages .seperator .code-snippet,
+#patterns-trees .seperator .code-snippet,
+#patterns-mixed-pattern-pages .seperator .code-snippet,
+#patterns-overall-pattern-reference .seperator .code-snippet,
+#kss-content .seperator .code-snippet {
   display: none;
   background: #cfd8e3;
   position: relative;
@@ -966,27 +928,23 @@ body.has-left-nav .sidebar-nav {
   border-radius: 0;
   padding-top: 30px;
 }
-#patterns-forms .seperator hr,
-#patterns-infopopups .seperator hr,
-#patterns-labels .seperator hr,
-#patterns-tables .seperator hr,
-#patterns-lists .seperator hr,
-#patterns-modaldialog .seperator hr,
-#patterns-accordions .seperator hr,
-#kss-content .seperator hr,
-#patterns-trees .seperator hr {
+#patterns-list-pages .seperator hr,
+#patterns-card-pages .seperator hr,
+#patterns-retail-product-pages .seperator hr,
+#patterns-trees .seperator hr,
+#patterns-mixed-pattern-pages .seperator hr,
+#patterns-overall-pattern-reference .seperator hr,
+#kss-content .seperator hr {
   margin-top: 20px;
   margin-bottom: 0;
 }
-#patterns-forms .seperator .caption,
-#patterns-infopopups .seperator .caption,
-#patterns-labels .seperator .caption,
-#patterns-tables .seperator .caption,
-#patterns-lists .seperator .caption,
-#patterns-modaldialog .seperator .caption,
-#patterns-accordions .seperator .caption,
-#kss-content .seperator .caption,
-#patterns-trees .seperator .caption {
+#patterns-list-pages .seperator .caption,
+#patterns-card-pages .seperator .caption,
+#patterns-retail-product-pages .seperator .caption,
+#patterns-trees .seperator .caption,
+#patterns-mixed-pattern-pages .seperator .caption,
+#patterns-overall-pattern-reference .seperator .caption,
+#kss-content .seperator .caption {
   text-align: center;
   margin-top: 45px;
   display: block;
