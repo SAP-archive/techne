@@ -76,7 +76,14 @@
     text-align: center;
     .container-fluid{
       width: 100%;
-      padding: 0;
+      display: table;
+      
+      // overwrite boostrap clearfix 
+      // that breaks table layout
+      &:before,
+      &:after{
+        display: none;
+      }
     }
 
   .y-navbar-center{
