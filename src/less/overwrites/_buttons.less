@@ -7,9 +7,8 @@
 //	This is a Button
 //</button>
 // 
-// .btn-default           - The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
 // .btn-primary           - The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.
-// .btn-danger            - The Delete button is used to indicate removal of records from the system. Delete is represented by a red button, typically placed on the lower left quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. 
+// .btn-default           - The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
 //
 // Styleguide 2.1
 
@@ -18,11 +17,14 @@
 }
 
 .btn-primary {
+  .button-variant-custom(@btn-primary-color; @btn-primary-bg; @btn-primary-border; @default-yellow-100; @dark-blue; @default-yellow-200; @default-yellow-100; @default-yellow-100; @default-yellow-100);
 	.box-shadow(0 3px 0 darken(@btn-primary-bg, 7%));
 }
 
 .btn-default {
+  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @dark-blue-600; #fff; @dark-blue-900; @dark-blue-400; @dark-blue-600; @dark-blue-500);
 	.box-shadow(0 3px 0 darken(@btn-default-bg, 10%));
+  
 }
 
 .btn-success {
@@ -37,15 +39,20 @@
 	.box-shadow(0 3px 0 darken(@btn-warning-bg, 7%));
 }
 
-.btn-subordinate{
-  .button-variant(@btn-subordinate-color; @btn-subordinate-bg; @btn-subordinate-border);
+.btn-danger {
+  .box-shadow: none;
+  &:active,
+  &:focus {
+    color: #fff;
+    background: @btn-danger-color;
+  }
 }
 
 // Toggle Buttons
 //
 // A majority of buttons in the site are built from the same base class.
 // Deprecated - This component will be replaced by a larger version (html markup) of small toggle.
-// If you used - prepare for updating with a new techne release
+// If you used - prepare for updating with a new techné release
 // 
 // Markup:
 //<div data-toggle="buttons" class="btn-group">
@@ -68,20 +75,23 @@
 // Button variants 
 // -------------------------
 // with more parameter so you get full controll over hover etc states
-.button-variant-custom(@color-default; @background-default; @border-default; @boxshadow-default; @color-hover; @background-hover; @border-hover; @boxshadow-hover) {
+.button-variant-custom(@color-default; @background-default; @border-default; @boxshadow-default; @color-hover; @background-hover; @border-hover; @boxshadow-hover; @background-click) {
   color: @color-default;
   background-color: @background-default;
   border-color: @border-default;
   .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
-
-  &:hover,
   &:focus,
+  &:active:focus {
+    background-color: @background-click;
+    outline-color: @border-hover;
+  }
+  &:hover,
   &:active,
   &.active,
   .open .dropdown-toggle& {
     color: @color-hover;
     background-color: @background-hover;
-        border-color: @border-hover;
+    border-color: @border-hover;
     .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
   }
   &:active,
@@ -89,37 +99,45 @@
   .open .dropdown-toggle& {
     background-image: none;
     background-color: lighten(@background-hover, 4%);
-        border-color: lighten(@border-hover, 4%);
+    border-color: lighten(@border-hover, 4%);
   }
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
     .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
-
+    
     &,
     &:hover,
-    &:focus,
     &:active,
     &.active {
       background-color: @background-default;
-          border-color: @border-default;
+      border-color: @border-default;
     }
     &:active,
     &.active,
     .open .dropdown-toggle& {
-    background-image: none;
-    background-color: lighten(@background-hover, 4%);
-        border-color: lighten(@border-hover, 4%);
-        .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+      background-image: none;
+      background-color: lighten(@background-hover, 4%);
+      border-color: lighten(@border-hover, 4%);
+      .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
+    }
   }
-  }
-
   .badge {
     color: @background-default;
     background-color: @color-default;
   }
 }
 
+// Back Buttons
+//
+// A majority of buttons in the site are built from the same base class.
+// 
+// Markup:
+//<button class="btn btn-lg btn-subordinate">
+//  <span class="hyicon hyicon-back">BACK</span>
+//</button>
+//
+// Styleguide 2.2
 
 
 // Buttons (Input Type)
@@ -129,37 +147,95 @@
 // 
 // Markup:
 //<div class="file-selector">
-//	<span class="btn btn-default btn-lg {$modifiers}">
+//	<span class="btn btn-default btn-lg">
 //		<span>Upload File Button</span>
 //		<input type="file" multiple="" ng-file-select="">
 //	</span>
 //</div>
 //
-// Styleguide 2.2
+// Styleguide 2.3
 
 .file-selector {
-	display: inline-block;
-    line-height: 1.33;
-    overflow: hidden;
-    position: relative;
-    vertical-align: middle;
+  display: inline-block;
+  line-height: 1.33;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  
+  .btn { 
+    // BTN SHADOW
+    margin-bottom: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+  }
+}
 
-    .btn{
-    	// BTN SHADOW
-    	margin-bottom: 2px;
-    	margin-left: 1px;
-    	margin-right: 1px;
-    }
+// Links
+//
+// A majority of links in the site are built from the same base class.
+// 
+// Markup:
+//<button class="btn btn-lg {$modifiers}">
+//	THIS IS A LINK
+//</button>
+// 
+// .btn-danger            - The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style. 
+// .btn-subordinate       - Cancel is to be styled as a link as it's a tertiary action. Use Cancel to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current // page are discarded
+//
+// Styleguide 2.3
 
-    input {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 0;
-		opacity: 0;
-		-ms-filter: 'alpha(opacity=0)';
-		font-size: 200px;
-		direction: ltr;
-		cursor: pointer;
-	}
+.btn-subordinate{
+  .button-variant(@btn-subordinate-color; @btn-subordinate-bg; @btn-subordinate-border);
+}
+
+
+// Segmented Buttons
+//
+//  Segmented buttons are a horizontal control of multiple segments. 
+//  Each segment is a button, use them to indicate that they are related.
+//
+// Markup:
+//<div data-toggle="buttons" class="btn-group">
+//	<label class="btn btn-segmented btn-lg {$modifiers} ">
+//		<input type="radio" id="option1" name="options"> Action
+//	</label>
+//	<label class="btn btn-segmented btn-lg active {$modifiers} ">
+//		<input type="radio" id="option2" name="options"> Action
+//	</label>
+//  <label class="btn btn-segmented btn-lg {$modifiers} ">
+//		<input type="radio" id="option3" name="options"> Action
+//	</label>
+//</div>
+//
+// Styleguide 2.5
+.btn-group {
+  border-radius: 4px;
+  .box-shadow(1px 2px 1px fade(@default-greyblue-200, 100%));
+}
+.btn-segmented{
+  background-color: #fff;
+  color: @default-blue;
+  border-style: solid;
+  border-width: 1px;
+  border-color: @default-greyblue-200;
+  &.active,
+  &:active {
+    background-color: @default-blue;
+    color: #fff;
+  }
+  &:hover {
+    background-color: rgba(4,134,224,0.85);
+  }
 }

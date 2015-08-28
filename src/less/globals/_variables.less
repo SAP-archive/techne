@@ -20,7 +20,9 @@
 
 
 // Default Yellow
-@default-yellow: #fad712;
+@default-yellow: #FCDF2B;
+@default-yellow-100: #e2c713;
+@default-yellow-200: #ffe533;
 @default-yellow-600: #bba754;
 
 // Default Orange
@@ -61,10 +63,14 @@
 @dark-blue-100: #3f5875;
 @dark-blue-200: #415165;
 @dark-blue-300: #273F5C;
+@dark-blue-400: #4e566b;
+@dark-blue-500: #55667a;
 @dark-blue: #27394f;
 @dark-blue-600: #2b415b;
 @dark-blue-700: #0d4076;
 @dark-blue-800: #172535;
+@dark-blue-900: #62768d;
+
 
 // Grey Blue
 @default-greyblue-100: #f9fafc;
@@ -73,7 +79,7 @@
 @default-greyblue: #7f90a4;
 @default-greyblue-500: #bdc6d2;
 
-// New Techne Basecolors
+// New techné Basecolors
 @techne-status-inactive: #b7c1cd;
 @techne-typo-default: #313440;
 
@@ -94,7 +100,7 @@
 @lighter-blue-color: #2877cb;
 @border-blue-color: #3f5670;
 
-@yellow: #fad712;
+@yellow: #fadc12;
 @yellow-text-color: #392d00;
 
 @off-canvas-bgr: @dark-blue;
@@ -290,15 +296,15 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                600;
+@btn-font-weight:                500;
 
 @btn-default-color:              #fff;
 @btn-default-bg:                 @dark-blue-100;
-@btn-default-border:             #2877cb;
+@btn-default-border:             @dark-blue-600;
 
 @btn-primary-color:              @dark-blue;
 @btn-primary-bg:                 @default-yellow;
-@btn-primary-border:             darken(@dark-blue-100, 5%);
+@btn-primary-border:             @default-yellow-100;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
