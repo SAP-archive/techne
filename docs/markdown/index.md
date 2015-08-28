@@ -20,9 +20,6 @@
         <div class="row hyHomeHeader3">
             <h3 class="text-center">Why is techné different?</h3>
             <p class="text-center">techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. </p>
-            <p class="text-center">
-                <a>Watch the video>></a>
-            </p>
         </div><!-- row why techné -->
         <div class="row personaIcons">
             <h3 class="text-center">Who are the techné personas?</h3>
@@ -91,18 +88,18 @@
         <div class="row consumerCarousel" id="hyHomeConsumerC">
             <div class="col-md-6">
                 <div id="hyConsumerCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/consumer_1.png"></img>
                         </div>
-                        <div class="item">
+                       <!-- <div class="item">
                             <img src="images/home/consumer_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/consumer_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
@@ -170,18 +167,18 @@
         <div class="row consumerCarousel" id="hyHomeHighTC">
             <div class="col-md-6 col-md-push-6">
                 <div id="hyHightCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/hight_user_1.png"></img>
                         </div>
-                        <div class="item">
+                        <!--<div class="item">
                             <img src="images/home/hight_user_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/hight_user_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
@@ -249,18 +246,18 @@
         <div class="row consumerCarousel" id="hyHomeLowTC">
             <div class="col-md-6">
                 <div id="hyLowtCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/lowt_user_1.png"></img>
                         </div>
-                        <div class="item">
+                        <!--<div class="item">
                             <img src="images/home/lowt_user_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/lowt_user_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyLowtCarouselID -->
             </div><!--consumer carousel-->
@@ -327,18 +324,18 @@
         <div class="row consumerCarousel" id="hyHomeSoftDevC">
             <div class="col-md-6 col-md-push-6">
                 <div id="hyDevCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/developer_1.png"></img>
                         </div>
-                        <div class="item">
+                       <!-- <div class="item">
                             <img src="images/home/developer_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/developer_3.png"></img>
-                        </div>
+                        </div> -->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyDevCarouselID -->
             </div><!--consumer carousel-->
