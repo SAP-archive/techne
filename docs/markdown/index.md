@@ -20,9 +20,6 @@
         <div class="row hyHomeHeader3">
             <h3 class="text-center">Why is techné different?</h3>
             <p class="text-center">techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. </p>
-            <p class="text-center">
-                <a>Watch the video>></a>
-            </p>
         </div><!-- row why techné -->
         <div class="row personaIcons">
             <h3 class="text-center">Who are the techné personas?</h3>
