@@ -1,14 +1,15 @@
-# Techne Components
+hybris techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS 
+# hybris techne Components
+See this page for a list of UI Components included in hybris techne.
+https://techne.yaas.io/section-1.html
 
-List of Components
-
-## Use Techne
-You can easily  install Techne using [Bower](http://bower.io/):
+## Use techne
+You can easily  install techne using [Bower](http://bower.io/):
 `bower install hyTechne`
 
-## Contribute to Techne
+## Contribute to hybris techne
 
-Four quick step to get started:
+Four quick steps to get started:
 
 - Clone the repo.
 - Run [npm](https://www.npmjs.org): `npm install`.

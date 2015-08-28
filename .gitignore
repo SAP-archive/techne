@@ -3,8 +3,6 @@ bower_components/
 
 ## NODE MODULES
 node_modules/*
-!node_modules/gulp-kss/index.js
-!node_modules/gulp-kss/handlebarsHelpers.js
 
 ## CONFIG FILES 
 src/less/globals/_resource-paths.less

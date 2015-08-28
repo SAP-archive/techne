@@ -1,32 +1,43 @@
 // Example Card
 //
+// First Element is to create new Items of the same type, second is an item with a action. Only the third one 
+// is a static item which is only displaying values with no further functionality.
+//
 // Markup:
 //<ul class="list-group dataCards {modifiers}">
+//  <li class="y-add list-group-item dataCard ">
+//     <button  type="button" class="y-add-btn">
+//         <span class="hyicon hyicon-add"></span>
+//         New Button
+//     </button>
+// </li>
 //  <li class="list-group-item dataCard">
 //    <div class="cardRow cardRowClickable">
-//      <div class="col1 pull-left">
-//        <div class="userAvatar">
-//          <img src="http://cdn.screenrant.com/wp-content/uploads/Deadpool-Thumbs-Up.jpg"/>
-//        </div>
-//      </div>
-//      <div class="col2 pull-left">
 //        <p class="primaryData">
-//          &lt;Primary Value&gt;
+//          Primary Value
 //        </p>
 //        <p class="secondaryData">
-//          &lt;Secondary Value goes here&gt;
+//          You can clicke me!
 //        </p>
 //        <p class="statusDataValue">
 //          <span class="active">
 //            Active
 //          </span>
 //        </p>
-//      </div>
-//      <div class="col3 pull-right">
-//        <div class="actions">
-//          <span class="hyicon hyicon-plus"></span>
-//        </div>
-//      </div>
+//  </li>
+//  <li class="list-group-item dataCard">
+//    <div class="cardRow">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can't clicke me, I'm static!
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
 //  </li>
 //</ul>
 //
@@ -71,7 +82,6 @@ a.dataCard{
 
 .dataCard{
 //  display: table;
-  cursor: pointer;
   width: 100%;
   padding: 0;
   margin-bottom: 5px;
@@ -157,6 +167,9 @@ a.dataCard{
         & *{
           color: @list-group-link-hover-color;
         }
+      }
+      &:active{
+        background-color: @default-greyblue-500;
       }
     }
   }
@@ -413,5 +426,42 @@ a.dataCard{
   
 }
 
+
+
+
+// ADD COMPONENT
+// ----------------------------------
+
+.y-add{
+    border:none;
+}
+
+.y-add-btn{
+  border: none;
+  color: @default-blue;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  background: @body-bg;
+
+  &:hover{
+    background: @default-greyblue-200;
+  }
+
+  &:active{
+    background: @default-greyblue-500;
+  }
+
+  .hyicon{
+    &:before{
+      font-size: 22px;
+    }
+    
+  }
+}
 
 
