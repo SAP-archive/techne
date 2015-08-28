@@ -37,6 +37,15 @@
 	.box-shadow(0 3px 0 darken(@btn-warning-bg, 7%));
 }
 
+.btn-danger{
+  .box-shadow: none;
+  &:active,
+  &:focus{
+    color: #fff;
+    background: @btn-danger-color;
+  }
+}
+
 .btn-subordinate{
   .button-variant(@btn-subordinate-color; @btn-subordinate-bg; @btn-subordinate-border);
 }
