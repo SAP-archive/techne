@@ -234,29 +234,6 @@ gulp.task('deploy', function(){
     .pipe(gulp.dest(paths.environment+'/js/'))
     .pipe(gulp.dest('docs/kss/public/js/'));
 
-
-    /*
-    HTML
-     */
-
-
-    gulp.src(paths.html)
-    .pipe( concat('techne.html') )
-    .pipe(
-        insert.prepend(
-            function()
-            {
-                var componentHTML = [];
-                componentHTML.push( "<link rel='import' href='../../../apply-author-styles/apply-author-styles.html'>\n" );
-
-                return componentHTML.join('\n');
-            }
-        )
-    )
-    .pipe(
-        gulp.dest(paths.environment+'/html/')
-    );
-
     /*
     Create the distribution zip file
      */
@@ -292,7 +269,6 @@ gulp.task('watch',
     function()
     {
         gulp.watch(paths.less_watch, ['less']);
-        //gulp.watch(paths.css, ['css']);
         gulp.watch(paths.html, ['html']);
         gulp.watch(paths.less_watch, ['styleguide']);
     }
