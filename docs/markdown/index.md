@@ -91,18 +91,18 @@
         <div class="row consumerCarousel" id="hyHomeConsumerC">
             <div class="col-md-6">
                 <div id="hyConsumerCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/consumer_1.png"></img>
                         </div>
-                        <div class="item">
+                       <!-- <div class="item">
                             <img src="images/home/consumer_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/consumer_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
@@ -170,18 +170,18 @@
         <div class="row consumerCarousel" id="hyHomeHighTC">
             <div class="col-md-6 col-md-push-6">
                 <div id="hyHightCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/hight_user_1.png"></img>
                         </div>
-                        <div class="item">
+                        <!--<div class="item">
                             <img src="images/home/hight_user_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/hight_user_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyConsumerCarouselID -->
             </div><!--consumer carousel-->
@@ -249,18 +249,18 @@
         <div class="row consumerCarousel" id="hyHomeLowTC">
             <div class="col-md-6">
                 <div id="hyLowtCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/lowt_user_1.png"></img>
                         </div>
-                        <div class="item">
+                        <!--<div class="item">
                             <img src="images/home/lowt_user_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/lowt_user_3.png"></img>
-                        </div>
+                        </div>-->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyLowtCarouselID -->
             </div><!--consumer carousel-->
@@ -327,18 +327,18 @@
         <div class="row consumerCarousel" id="hyHomeSoftDevC">
             <div class="col-md-6 col-md-push-6">
                 <div id="hyDevCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                    </ol>
+                    <!--<ol class="carousel-indicators">
+                    </ol>-->
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="images/home/developer_1.png"></img>
                         </div>
-                        <div class="item">
+                       <!-- <div class="item">
                             <img src="images/home/developer_2.png"></img>
                         </div>
                         <div class="item">
                             <img src="images/home/developer_3.png"></img>
-                        </div>
+                        </div> -->
                     </div> <!-- carousel inner -->
                 </div> <!-- carousel hyDevCarouselID -->
             </div><!--consumer carousel-->
