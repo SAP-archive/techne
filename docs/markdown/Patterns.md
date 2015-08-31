@@ -51,7 +51,7 @@
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/mobile_list.png" title="View Full Image" href="#viewFullscreen">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/mobile_table.png" title="View Full Image" href="#viewFullscreen">
           <img src="images/thumbnails/mobile_table.png" alt="" class="img-thumbnail">
         </a>
       </div>
