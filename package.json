@@ -1,7 +1,7 @@
 {
   "name": "techne-components",
-  "version": "0.2.2",
-  "description": "Hybris Techne Style Guide",
+  "version": "0.2.3",
+  "description": "hybris Techne Style Guide",
   "main": "docs/index.js",
   "scripts": {
     "test": "gulp",
