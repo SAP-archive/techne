@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v2/css/global.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
@@ -22,7 +22,7 @@
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
         <a href="https://www.yaas.io/home/" class="domain">
-            <img class="domain-logo" src="https://www.yaas.io/globalresources/v2/img/techne_logo.svg" alt="builder"/>
+            <img class="domain-logo" src="https://www.yaas.io/globalresources/v3/img/techne_logo.svg" alt="builder"/>
             <span class="logo-text">YAAS</span>
         </a>
         <ul class="nav-super">
@@ -30,9 +30,22 @@
             <li><a href="https://market.yaas.io">YaaS Market</a></li>
             <li><a href="https://devportal.yaas.io" class="active">Dev Portal</a></li>
             <li><a href="https://builder.yaas.io">Builder</a></li>
-            <li><a href="https://experts.hybris.com/spaces/102/index.html">Community</a></li>
+            <li class="yg-dropdown-node js-yg-dropdown-node">
+                <a href="https://community.yaas.io">Community</a>
+                <div class="nav-super-submenu-toggle">
+                    <span class="nav-super-triangle"></span>
+                </div>
+                <ul class="yg-dropdown">
+                    <li class="yg-dropdown--menu-link">
+                        <a href="https://community.yaas.io">Co-Innovation Network</a>
+                    </li>
+                    <li class="yg-dropdown--menu-link">
+                        <a href="https://experts.hybris.com/spaces/102/index.html" target="_blank">hybris Experts</a>
+                    </li>
+                </ul>
+            </li>
             <li class="account">
-                <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Account</a>
+                <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Account</a>
                 <div class="nav-super-submenu-toggle">
                     <span class="nav-super-triangle"></span>
                 </div>
@@ -45,10 +58,10 @@
                                 <img class="profile-img" src="/img/profile-image.jpg" alt=""/>
                                 <div class="profile-details">
                                     <div class="profile-email">
-                                        johannes.wohlhaupter@snk-interactive.de
+                                        
                                     </div>
                                     <div class="profile-link">
-                                        <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FAccount%20Settings">My Profile</a>
+                                        <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Profile</a>
                                     </div>
                                 </div>
                                     <div class="clr"></div>
@@ -673,7 +686,31 @@ So far this just includes panels. </p>
 
     </section>
   </div>
-  <footer class="footer"><div class="footer-right"><a data-target="#feedbackModal" data-toggle="modal" class="feedback-affix" href="#">Feedback</a> <a class="footer-item" target="_blank" href="https://experts.hybris.com/spaces/102/index.html">hybris Experts</a> <a class="footer-item" target="_blank" href="https://jira.hybris.com/browse/CFB">Bug Report</a></div><div class="footer-left"><a class="footer-item" href="https://www.yaas.io/home/test-and-evaluation-agreement.html">Test and Evaluation Agreement</a> <a class="footer-item" href="https://www.yaas.io/home/imprint.html">Imprint</a> <span class="footer-item copyright">&copy; hybris AG</span></div><div id="feedbackModal" class="modal fade"><div class="modal-dialog feedback-modal"><div class="modal-content"><div class="modal-body"><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><iframe width="100%" height="584" frameborder="0" scrolling="no" src="https://cloud4.wufoo.eu/forms/feedback/"></iframe></div></div></div></div></footer>
+<footer class="footer">
+      <div class="footer-right">
+          <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal">Feedback</a>
+          <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
+          <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
+      </div>
+      <div class="footer-left">
+
+          <a href="http://www.sap.com/about/legal/copyright.html" target="_blank" class="footer-item">Copyright</a>
+          <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
+          <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
+          <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
+          <span class="footer-item copyright">© hybris AG</span>
+      </div>
+      <div class="modal fade" id="feedbackModal">
+          <div class="modal-dialog feedback-modal">
+              <div class="modal-content">     
+                  <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <iframe src="https://cloud4.wufoo.eu/forms/feedback/" width="100%" frameborder="0" scrolling="no"  height="584"></iframe>
+                  </div>
+              </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+</footer>
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
 
@@ -713,5 +750,5 @@ So far this just includes panels. </p>
 
   <!---->
   <!---->
-    <script src="https://www.yaas.io/globalresources/v2/js/global.novendor.min.js"></script></body>
+    <script src="https://www.yaas.io/globalresources/v3/js/global.novendor.min.js"></script></body>
 </html>
