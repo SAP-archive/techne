@@ -4,33 +4,33 @@
     	"navigation": [
     		{
     			"text": "Spirit & Vision", 
-    			"id": "#spirit-vision"
+    			"id": "#guidelines-spirit-vision"
     		},
          {
            "text": "Design Principles", 
-           "id": "#design-principles"
+           "id": "#guidelines-design-principles"
          },
          {
            "text": "Navigation", 
-           "id": "#navigation"
+           "id": "#guidelines-navigation"
          },
          {
            "text": "Visual System", 
-           "id": "#visual-system"
+           "id": "#guidelines-visual-system"
          },
          {
            "text": "Tone & Voice",
-           "id": "#tone-voice"
+           "id": "#guidelines-tone-voice"
          },
          {
            "text": "Accessibility",
-           "id": "#accessibility"
+           "id": "#guidelines-accessibility"
          }
        ]
     }
     -->
 <div class="hyGuidelinesPage container-fluid" >
-    <section id="spirit-vision" class="page">
+    <section id="guidelines-spirit-vision" class="page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs">
@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section id="design-principles" class="page">
+    <section id="guidelines-design-principles" class="page">
         <h2>Design Principles</h2>
         <div class="row text-left">
             <div class="col-md-6">
@@ -104,7 +104,7 @@
             </div>
         </div>
     </section>
-    <section id="navigation" class="page">
+    <section id="guidelines-navigation" class="page">
         <h2>Navigation and Parent/Child Panels</h2>
         <h3>YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.</h3>
         <p>A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.</p>
@@ -138,7 +138,7 @@
         <img src="images/navigation-desktop.png" alt="" class="img-responsive">
     </section>
     <!-- load visual system -->
-    <section id="visual-system" class="page">
+    <section id="guidelines-visual-system" class="page">
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
@@ -464,7 +464,7 @@
         <hr>
     </section>
     <!-- load tone/voice -->
-    <section id="tone-voice" class="page">
+    <section id="guidelines-tone-voice" class="page">
         <h2>Tone &amp; Voice</h2>
         <h3>Guiding Principles for Tone and Voice</h3>
         <ul>
@@ -607,7 +607,7 @@
         </ul>
     </section>
     <!-- load tone/voice -->
-    <section id="accessibility">
+    <section id="guidelines-accessibility">
         <h2>Accessibility</h2>
         <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
         <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
