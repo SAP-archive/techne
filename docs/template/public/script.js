@@ -11,6 +11,11 @@ var activateNav = function(navLink){
 
 
 };
+//Modal full screen image 
+$('.js_fullscreen').on('click', function () {
+    var src = $(this).data('id'); 
+    $('.showFullscreen').attr('src', src);
+});
 
 $( document ).ready(function(){
 
@@ -209,6 +214,6 @@ $( document ).ready(function(){
     $(window).on('resize', fUpdatePersonaImgs);
     //---------------------
     //new Home Page
-
-
 });
+
+
