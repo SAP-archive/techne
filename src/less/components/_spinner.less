@@ -1,30 +1,11 @@
 // Spinner
 //
-// spinner description
+// CSS based spinner to indicate to the user that some information is processing or loading.
 //
 // Markup:
-// <div class="spinner">
-//   <div class="spinner-container spinner-container1">
-//     <div class="spinner-circle1"></div>
-//     <div class="spinner-circle2"></div>
-//     <div class="spinner-circle3"></div>
-//     <div class="circle4"></div>
-//   </div>
-//   <div class="spinner-container spinner-container2">
-//     <div class="spinner-circle1"></div>
-//     <div class="spinner-circle2"></div>
-//     <div class="spinner-circle3"></div>
-//     <div class="circle4"></div>
-//   </div>
-//   <div class="spinner-container spinner-container3">
-//     <div class="spinner-circle1"></div>
-//     <div class="spinner-circle2"></div>
-//     <div class="spinner-circle3"></div>
-//     <div class="circle4"></div>
-//   </div>
-// </div>  
-// <div class="demo-wrapper">
-//   <div class="spinner-backdrop">
+// <div id="demo-page-background" class="panel panel-default">
+//   <div class="panel-heading">Inline Spinner</div>
+//   <div class="panel-body">
 //     <div class="spinner">
 //       <div class="spinner-container spinner-container1">
 //         <div class="spinner-circle1"></div>
@@ -46,7 +27,36 @@
 //       </div>
 //     </div>
 //   </div>
-// </div>                                       
+// </div> 
+// <div id="demo-page-background" class="panel panel-default">
+//   <div class="panel-heading">Spinner example where the background is overlayed with a backgrop.</div>
+//   <div class="panel-body">
+//     <div class="demo-wrapper">
+//       <div class="spinner-backdrop">
+//         <div class="spinner">
+//           <div class="spinner-container spinner-container1">
+//             <div class="spinner-circle1"></div>
+//             <div class="spinner-circle2"></div>
+//             <div class="spinner-circle3"></div>
+//             <div class="circle4"></div>
+//           </div>
+//           <div class="spinner-container spinner-container2">
+//             <div class="spinner-circle1"></div>
+//             <div class="spinner-circle2"></div>
+//             <div class="spinner-circle3"></div>
+//             <div class="circle4"></div>
+//           </div>
+//           <div class="spinner-container spinner-container3">
+//             <div class="spinner-circle1"></div>
+//             <div class="spinner-circle2"></div>
+//             <div class="spinner-circle3"></div>
+//             <div class="circle4"></div>
+//           </div>
+//         </div>
+//       </div>
+//     </div> 
+//   </div>
+// </div>                                      
 //
 // Styleguide 11.5
 
@@ -148,13 +158,10 @@
 }
 
 .demo-wrapper{        
-  border: 1px solid red; 
-  text-align: center; 
-  padding:20px; 
   position: relative; 
   height: 400px; 
-  width:400px; 
-  margin:0 auto;
+  width:100%; 
+
 }
 .spinner-backdrop{    
   background: #000; 
@@ -165,7 +172,12 @@
   width: 100%; 
   height: 100%;
   .spinner{
-    margin-top:45%;
+       position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom:0;
+        margin: auto;
   }
 
 }
