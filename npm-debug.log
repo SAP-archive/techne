@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.1.10
+3 info using node@v0.10.29
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart techne-components@0.2.3
+6 info start techne-components@0.2.3
+7 verbose unsafe-perm in lifecycle true
+8 info techne-components@0.2.3 Failed to exec start script
+9 verbose stack Error: techne-components@0.2.3 start: `docs/index.js`
+9 verbose stack Exit status 127
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
+9 verbose stack     at EventEmitter.emit (events.js:98:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+9 verbose stack     at ChildProcess.emit (events.js:98:17)
+9 verbose stack     at maybeClose (child_process.js:755:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:822:5)
+10 verbose pkgid techne-components@0.2.3
+11 verbose cwd /Users/i844456/Documents/Projects/techne-git
+12 error Darwin 14.4.0
+13 error argv "node" "/usr/local/bin/npm" "start"
+14 error node v0.10.29
+15 error npm  v2.1.10
+16 error code ELIFECYCLE
+17 error techne-components@0.2.3 start: `docs/index.js`
+17 error Exit status 127
+18 error Failed at the techne-components@0.2.3 start script 'docs/index.js'.
+18 error This is most likely a problem with the techne-components package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     docs/index.js
+18 error You can get their info via:
+18 error     npm owner ls techne-components
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
