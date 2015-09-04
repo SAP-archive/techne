@@ -648,25 +648,24 @@ body.has-left-nav #kss-nav {
   position: fixed;
   z-index: 901;
   left: 250px;
+  top: 0;
   width: 0;
   height: 100%;
   margin-left: -250px;
-  padding-top: 141px!important;
-  margin-top: -141px;
+  padding: 0;
+  padding-top: 100px;
   overflow-y: auto;
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
-  padding: 0;
+  background: transparent;
 }
 body.has-left-nav.navbar-super-up #kss-nav {
-  margin-top: -307px;
-  padding-top: 241px !important;
+  padding-top: 50px;
 }
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
   width: 250px;
-  border-right: 1px solid #e2e6e9;
   background: #fff;
 }
 #kss-main {
@@ -696,12 +695,10 @@ body.has-left-nav .sidebar-nav {
   }
   body.has-left-nav #kss-nav {
     width: 250px;
-    padding: 0;
-    border-right: none;
   }
   body.has-left-nav.navbar-super-up #kss-nav {
-    margin-top: -141px;
-    padding-top: 91px!important;
+    margin-top: -41px;
+    padding-top: 141px!important;
   }
   #kss-main {
     position: relative;
