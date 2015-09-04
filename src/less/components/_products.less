@@ -1,0 +1,126 @@
+// Products
+//
+// Description for some product
+//
+// Markup:
+// <div class="product {$modifiers}">
+//	<div class="productThumbnail">
+//		<img src="images/blue_square.png" alt="product" class="productImage">
+//		<img src="images/btn_more.png" alt="product" class="btnMore">	
+//		<p class="statusDataValue">
+//         <span class="active">
+//           Active
+//         </span>
+//      </p>
+//		<p class="primaryData">
+//  		Product Name
+//		</p>
+//		<p class="secondaryData">
+//  		SKU #1234567
+//		</p>
+//		<p class="primaryData priceSpace">
+//  		$00.00
+//		</p>
+//		<div class="show-onhover">
+// 			<div class="centered"> 			
+// 				<button class="btn btn-lg btn-subordinate">
+//					Publish Product
+//				</button>
+//				<button class="btn btn-lg btn-subordinate">
+//					Edit Product
+//				</button>
+//				<button class="btn btn-lg btn-subordinate danger">
+//					Remove Product
+//				</button>
+// 			</div>
+// 		</div>
+//	</div>
+// </div>
+//
+// Styleguide 8.2
+
+.product {
+	.productThumbnail {
+		position: relative;
+		width: 25%;
+		.productImage {
+			width: 100%;
+		}
+		.statusDataValue{
+			padding-top: 10px;
+			padding-left: 5px;
+			font-size: 60%;
+		}
+		.btnMore {
+			position: absolute;
+			top: 53%;
+			width: 20%;
+			right: 0%;
+		}
+		.primaryData {
+			padding-left: 5px;
+			padding-top: 5px;
+			font-size: 75%;
+			padding-bottom: 2px;
+			margin-bottom: 0px;
+		}
+		.secondaryData {
+			padding-left: 5px;
+			font-size: 60%;
+			margin-bottom: 0px;
+		}
+		.priceSpace {
+			padding-bottom: 25px;
+		}
+		.show-onhover{
+			height: 100%;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 100%;
+			background: fade(@default-greyblue-500, 77%);
+			opacity: 0;
+	
+			transition: opacity .25s ease-in-out;
+	
+			/* The ghost, nudged to maintain perfect centering */
+			&:before{
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				margin-right: -0.25em; /* Adjusts for spacing */
+			}
+	
+			/* The element to be centered, can also be of any width and height */ 
+			.centered {
+				padding-top: 15px;
+				position: absolute;
+				top: 0%;
+				transition: margin .25s ease-in-out;
+			}
+			.btn-subordinate {
+				padding-top: 0px;
+				padding-bottom: 20px;
+				color: @dark-blue-100;
+				position: relative;
+				font-weight: 600;
+				font-size: 14px;
+			}
+			.danger {
+				color: @default-red;
+				font-weight: 600;
+				font-size: 14px;
+			}
+		}
+	
+		&:hover{
+			.show-onhover{
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+
+}
