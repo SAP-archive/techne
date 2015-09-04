@@ -56,8 +56,13 @@ body.kss-body {
     @media (max-width: 768px) {
         #menu-toggle {
             display: inline-block;
-            min-height: 35px;
+            position: relative;
             cursor: pointer;
+
+            .toggled &{
+                min-height: 30px;
+                min-width: 30px;
+            }
         }
     }
     .icon-bar {
@@ -79,9 +84,11 @@ body.kss-body {
             position: absolute;
             margin-top: 8px;
             transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
 
             &:nth-child(2n+1){
                 transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
             }
         }
     }
@@ -102,7 +109,7 @@ body.kss-body {
     }
 
     @media(min-width:768px) {
-        display: none;
+        display: none!important;
     }
 }
 
@@ -498,6 +505,10 @@ body.has-left-nav .sidebar-nav {
         background-repeat: repeat-y;
         background-position: 250px;
     }
+    body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+        background: none;
+    }
+    
     body.has-left-nav #kss-nav {
         width: 250px;
         padding: 0;

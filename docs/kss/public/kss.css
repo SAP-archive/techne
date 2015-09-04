@@ -289,8 +289,12 @@ body.kss-body {
 @media (max-width: 768px) {
   #kss-top-nav #menu-toggle {
     display: inline-block;
-    min-height: 35px;
+    position: relative;
     cursor: pointer;
+  }
+  .toggled #kss-top-nav #menu-toggle {
+    min-height: 30px;
+    min-width: 30px;
   }
 }
 #kss-top-nav .icon-bar {
@@ -311,9 +315,11 @@ body.kss-body {
   position: absolute;
   margin-top: 8px;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 .toggled #kss-top-nav .icon-bar:nth-child(2n+1) {
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 .kss-sidebar-shadow {
   background: rgba(30, 44, 59, 0.8);
@@ -330,7 +336,7 @@ body.kss-body {
 }
 @media (min-width: 768px) {
   .kss-sidebar-shadow {
-    display: none;
+    display: none!important;
   }
 }
 .kss-ref {
@@ -684,6 +690,9 @@ body.has-left-nav .sidebar-nav {
     background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTY4RkM5ODM0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTY4RkM5ODQ0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NjhGQzk4MTRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NjhGQzk4MjRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAwBAwMDBQQFCQYGCQ0LCQsNDw4ODg4PDwwMDAwMDw8MDAwMDAwPDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAEAAQMBEQACEQEDEQH/xABKAAEAAAAAAAAAAAAAAAAAAAAJAQEAAAAAAAAAAAAAAAAAAAADEAEAAAAAAAAAAAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBlTBf/2Q==');
     background-repeat: repeat-y;
     background-position: 250px;
+  }
+  body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+    background: none;
   }
   body.has-left-nav #kss-nav {
     width: 250px;

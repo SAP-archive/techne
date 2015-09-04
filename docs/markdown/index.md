@@ -402,6 +402,7 @@
 <!--SIDENAVCONFIG
     {
         "showLeftNav": true,
+        "leftNavMobileOnly": true,
         "navigation": []
     }
 -->

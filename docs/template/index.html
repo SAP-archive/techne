@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if_eq pagename 'index'}}kss-sidebar-nav-mobile-only{{/if_eq}}">
+<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}}">
     <div class="main-content">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
@@ -162,11 +162,11 @@
       <!-- / SUPER HEADER -->
       {{#if showLeftNav}}
       <div class="kss-sidebar-shadow js-menu-toggle" ></div>
-        {{#if_eq pagename 'index'}}
+        {{#if leftNavMobileOnly}}
         <div id="kss-nav" class="visible-xs" role="navigation">
         {{else}}
         <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12 " role="navigation">
-        {{/if_eq}}
+        {{/if}}
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
 
@@ -198,11 +198,11 @@
             </aside>
           </div>
         
-        {{#if_eq pagename 'index'}}
+        {{#if leftNavMobileOnly}}
         <div role="main" id="kss-main" class="kss-main col-xs-12">
         {{else}}
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
-        {{/if_eq}}
+        {{/if}}
       {{else}}
         <div role="main" id="kss-main" class="kss-main col-xs-12">
       {{/if}}

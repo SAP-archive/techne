@@ -86,6 +86,7 @@ module.exports = function(opt) {
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
+                                leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
                                 sectionData: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
                                 pagename: fName,
                                 styleguide: styleguide,
