@@ -698,7 +698,7 @@ body.has-left-nav .sidebar-nav {
   }
   body.has-left-nav.navbar-super-up #kss-nav {
     margin-top: -41px;
-    padding-top: 141px!important;
+    padding-top: 100px!important;
   }
   #kss-main {
     position: relative;
