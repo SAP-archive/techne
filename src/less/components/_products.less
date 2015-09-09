@@ -65,7 +65,16 @@
 .product {
 	.productThumbnail {
 		position: relative;
-		width: 25%;
+		width: 50%;
+		@media (min-width: @screen-sm-min) {
+			width: 50%;
+		}
+		@media (min-width: @screen-md-min) {
+			width: 33%;
+		}
+		@media (min-width: @screen-lg-min) {
+			width: 25%;
+		 }
 		.thumnailContainer {
 			display: inline-block;
 			position: relative;		
