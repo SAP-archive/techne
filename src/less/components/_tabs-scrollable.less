@@ -1,0 +1,80 @@
+// Scrollable Tabs
+// 
+// Component for arrows left and right for scrolling tabs
+// Experimental
+//
+// Markup:
+// <div class="scrollable-tabs-container">
+//     <a class="scroller scroller-left">
+//         <i class="glyphicon glyphicon-chevron-left"></i>
+//     </a>
+//     <a class="scroller scroller-right">
+//         <i class="glyphicon glyphicon-chevron-right"></i>
+//     </a>
+//     <div class="scrollable-tabs">
+//         <ul class="nav nav-tabs" role="tablist">
+//             <li class="active">
+//                 <a role="tab" data-toggle="tab" >Tab 1</a>
+//             </li>
+//             <li>
+//                 <a role="tab" data-toggle="tab" >Tab 2</a>
+//             </li>
+//             <li>
+//                 <a role="tab" data-toggle="tab" >Tab 3</a>
+//             </li>
+//             <li>
+//                 <a role="tab" data-toggle="tab" >Tab 4</a>
+//             </li>
+//         </ul>
+//     </div>
+// </div>
+//
+// Styleguide 5.3
+
+
+
+.scrollable-tabs-container{
+  .scrollable-tabs{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+    padding:5px;
+    height:50px;
+    .nav-tabs{
+      position:absolute;
+      left:0px;
+      top:0px;
+      min-width:3000px;
+      margin-top:0px;
+
+      > li{
+          display:table-cell;
+          position:relative;
+          text-align:center;
+          cursor:grab;
+          cursor:-webkit-grab;
+          color:#efefef;
+          vertical-align:middle;
+      }
+    }
+  } 
+}
+
+.scroller {
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:7px;
+  padding-top:11px;
+  white-space:no-wrap;
+  vertical-align:middle;
+  background-color:#fff;
+}
+
+.scroller-right{
+  float:right;
+}
+
+.scroller-left {
+  float:left;
+}
