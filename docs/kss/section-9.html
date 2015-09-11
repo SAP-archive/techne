@@ -150,13 +150,13 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
                                 <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
                                 <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
@@ -167,60 +167,42 @@
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
                 
-                <section id="section-9" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">9</span> Listgroups </h1>
+                <section id="section-9.4" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">9.4</span> Inline Help</h2>
               
                     <div class="kss-description">
-                        <p>Reusable elements that can be used across the site.
-So far this just includes listgroups. </p>
+                        <p><p>
+Use inline help to guide the user through formular fields.
+Focus on the action required and make it relevant to the user’s current situation.
+</p>
+Do explain:
+</p>
+<ul>
+   <li>unfamiliar concepts</li>
+   <li>what format the information should be given in</li>
+   <li>where to find further information</li>
+</ul>
 
-                    </div>
-                </section>
-                
-                <section id="section-9.2" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">9.2</span> AddToList</h2>
-              
-                    <div class="kss-description">
-                        <p>Add to the top of a list and cards to allow users to quickly add a new record in the data set shown</p>
+<p>The inline help should be placed below the input field. Keep it short and clear. Avoid more then two lines. </p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                 <div class="panel panel-default addToListContainer y_addToListContainer">
-   <div class="panel-heading addRow" role="tab" id="headingOne">
-     <h4 class="panel-title">
-       <a class="y_addTolistHandle" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-         <span class="glyphicon glyphicon-plus addIcon" aria-hidden="true"></span>
-         Add To &lt; type &gt;
-       </a>
-     </h4>
-   </div>
-   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-     <div class="panel-body">
-       &lt; data here &gt;
-     </div>
-   </div>
- </div>
+                                 <form>
+   <label>Title</label>
+   <input type="text" class="form-control">
+   <span class="inline-hint-text">This line is reserved for help text.</span>
+ </form>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html"> &lt;div class=&quot;panel panel-default addToListContainer y_addToListContainer&quot;&gt;
-   &lt;div class=&quot;panel-heading addRow&quot; role=&quot;tab&quot; id=&quot;headingOne&quot;&gt;
-     &lt;h4 class=&quot;panel-title&quot;&gt;
-       &lt;a class=&quot;y_addTolistHandle&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseOne&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseOne&quot;&gt;
-         &lt;span class=&quot;glyphicon glyphicon-plus addIcon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-         Add To &amp;lt; type &amp;gt;
-       &lt;/a&gt;
-     &lt;/h4&gt;
-   &lt;/div&gt;
-   &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;headingOne&quot;&gt;
-     &lt;div class=&quot;panel-body&quot;&gt;
-       &amp;lt; data here &amp;gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
- &lt;/div&gt;</code></pre>
+                                <pre class="code-snippet"><code data-language="html"> &lt;form&gt;
+   &lt;label&gt;Title&lt;/label&gt;
+   &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+   &lt;span class=&quot;inline-hint-text&quot;&gt;This line is reserved for help text.&lt;/span&gt;
+ &lt;/form&gt;</code></pre>
                             </div>
                         </div>
                     </div>
