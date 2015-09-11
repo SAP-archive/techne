@@ -154,11 +154,11 @@
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
                                 <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
                                 <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Products </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Products </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Icons </a></li>
+                                <li class="kss-menu-item"><a href="section-13.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -169,11 +169,142 @@
             <article id="kss-content">
                 
                 <section id="section-9" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">9</span> Cards </h1>
+                              <h1 class="kss-title"><span class="kss-ref">9</span> Products </h1>
               
                     <div class="kss-description">
-                        <p>Cards are used to display information in a visual, scannable manner.</p>
+                        <p>Reusable elements that can be used across the site.</p>
 
+                    </div>
+                </section>
+                
+                <section id="section-9.1" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">9.1</span> Products</h2>
+              
+                    <div class="kss-description">
+                        <p>Description for some product</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="product {$modifiers}">
+	<div class="productThumbnail">
+		<div class="thumnailContainer">
+			<img src="images/blue_square.png" alt="product" class="productImage">
+			<img src="images/btn_more.png" alt="product" class="btnMore">	
+		</div>
+		<p class="statusDataValue">
+        <span class="active">
+          Active
+        </span>
+     </p>
+		<p class="primaryData">
+ 		Product Name
+		</p>
+		<p class="secondaryData">
+ 		SKU #1234567
+		</p>
+		<p class="primaryData priceSpace">
+ 		$00.00
+		</p>
+		<div class="show-onhover">
+			<div class="menubar">
+				<div class="menu">
+					<div class="buttonContainer"> 			
+						<button class="button mainColor">
+							Publish Product
+						</button>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="buttonContainer">
+						<button class="button mainColor">
+							Edit Product
+						</button>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="buttonContainer">
+						<button class="button dangerColor">
+							Remove Product
+						</button>
+					</div>
+				</div>
+				<div class="backgroundContainer">
+					<div class="menuClose">		
+						<div class="buttonContainer">
+							<button class="button closeColor">
+								X CLOSE
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;product {$modifiers}&quot;&gt;
+	&lt;div class=&quot;productThumbnail&quot;&gt;
+		&lt;div class=&quot;thumnailContainer&quot;&gt;
+			&lt;img src=&quot;images/blue_square.png&quot; alt=&quot;product&quot; class=&quot;productImage&quot;&gt;
+			&lt;img src=&quot;images/btn_more.png&quot; alt=&quot;product&quot; class=&quot;btnMore&quot;&gt;	
+		&lt;/div&gt;
+		&lt;p class=&quot;statusDataValue&quot;&gt;
+        &lt;span class=&quot;active&quot;&gt;
+          Active
+        &lt;/span&gt;
+     &lt;/p&gt;
+		&lt;p class=&quot;primaryData&quot;&gt;
+ 		Product Name
+		&lt;/p&gt;
+		&lt;p class=&quot;secondaryData&quot;&gt;
+ 		SKU #1234567
+		&lt;/p&gt;
+		&lt;p class=&quot;primaryData priceSpace&quot;&gt;
+ 		$00.00
+		&lt;/p&gt;
+		&lt;div class=&quot;show-onhover&quot;&gt;
+			&lt;div class=&quot;menubar&quot;&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt; 			
+						&lt;button class=&quot;button mainColor&quot;&gt;
+							Publish Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt;
+						&lt;button class=&quot;button mainColor&quot;&gt;
+							Edit Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt;
+						&lt;button class=&quot;button dangerColor&quot;&gt;
+							Remove Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;backgroundContainer&quot;&gt;
+					&lt;div class=&quot;menuClose&quot;&gt;		
+						&lt;div class=&quot;buttonContainer&quot;&gt;
+							&lt;button class=&quot;button closeColor&quot;&gt;
+								X CLOSE
+							&lt;/button&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 
@@ -264,94 +395,6 @@ is a static item which is only displaying values with no further functionality.<
        &lt;/p&gt;
  &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-9.2" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">9.2</span> User Avatar</h2>
-              
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="userAvatar">
- <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg"/>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;userAvatar&quot;&gt;
- &lt;img src=&quot;https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg&quot;/&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-9.3" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">9.3</span> Primary Value</h2>
-              
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <p class="primaryData">
- &lt;Primary Value&gt;
-</p>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;primaryData&quot;&gt;
- &amp;lt;Primary Value&amp;gt;
-&lt;/p&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-9.4" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">9.4</span> Secondary Value</h2>
-              
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <p class="secondaryData">
- &lt;Secondary Value goes here&gt;
-</p>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;secondaryData&quot;&gt;
- &amp;lt;Secondary Value goes here&amp;gt;
-&lt;/p&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-9.5" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">9.5</span> Status Value Label</h2>
-              
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <p class="statusDataValue">
- <span class="active">
-   Active
- </span>
-</p>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;statusDataValue&quot;&gt;
- &lt;span class=&quot;active&quot;&gt;
-   Active
- &lt;/span&gt;
-&lt;/p&gt;</code></pre>
                             </div>
                         </div>
                     </div>
