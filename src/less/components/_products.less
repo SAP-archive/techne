@@ -4,8 +4,8 @@
 //
 // Markup:
 // <div class="product {$modifiers}">
-//	<div class="productThumbnail">
-//		<div class="thumnailContainer">
+//	<div class="y-mouseout-view productThumbnail">
+//		<div class="y-thumbnailContainer thumbnailContainer">
 //			<img src="images/blue_square.png" alt="product" class="productImage">
 //			<img src="images/btn_more.png" alt="product" class="btnMore">	
 //		</div>
@@ -23,7 +23,7 @@
 //		<p class="primaryData priceSpace">
 //  		$00.00
 //		</p>
-//		<div class="show-onhover">
+//		<div class="y-on-click-show show-onhover">
 //			<div class="menubar">
 //				<div class="menu">
 // 					<div class="buttonContainer"> 			
@@ -49,7 +49,7 @@
 //				<div class="backgroundContainer">
 //					<div class="menuClose">		
 //						<div class="buttonContainer">
-//							<button class="button closeColor">
+//							<button class="button closeColor y-buttonClose">
 //								X CLOSE
 //							</button>
 //						</div>
@@ -75,7 +75,7 @@
 		@media (min-width: @screen-lg-min) {
 			width: 25%;
 		 }
-		.thumnailContainer {
+		.thumbnailContainer {
 			display: inline-block;
 			position: relative;		
 			.productImage {
@@ -178,7 +178,6 @@
 				}
 			}
 		}
-	
 		&:hover {
 			.show-onhover{
 				display: block;
