@@ -150,15 +150,15 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
                                 <li class="kss-menu-item"><a href="section-9.html"> Products </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-12.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-13.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -169,130 +169,40 @@
             <article id="kss-content">
                 
                 <section id="section-11" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">11</span> Listgroups </h1>
+                              <h1 class="kss-title"><span class="kss-ref">11</span> Panels </h1>
               
                     <div class="kss-description">
                         <p>Reusable elements that can be used across the site.
-So far this just includes listgroups. </p>
+So far this just includes panels. </p>
 
                     </div>
                 </section>
                 
-                <section id="section-11.2" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.2</span> AddToList</h2>
+                <section id="section-11.1" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">11.1</span> Panels</h2>
               
                     <div class="kss-description">
-                        <p>Add to the top of a list and cards to allow users to quickly add a new record in the data set shown</p>
+                        <p>Use panels to display content in the builder
+
+</p>
+<p>.panel</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                 <div class="panel panel-default addToListContainer y_addToListContainer">
-   <div class="panel-heading addRow" role="tab" id="headingOne">
-     <h4 class="panel-title">
-       <a class="y_addTolistHandle" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-         <span class="glyphicon glyphicon-plus addIcon" aria-hidden="true"></span>
-         Add To &lt; type &gt;
-       </a>
-     </h4>
-   </div>
-   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-     <div class="panel-body">
-       &lt; data here &gt;
-     </div>
-   </div>
- </div>
+                                <div id="demo-page-background" class="panel panel-default">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">Panel content</div>
+</div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html"> &lt;div class=&quot;panel panel-default addToListContainer y_addToListContainer&quot;&gt;
-   &lt;div class=&quot;panel-heading addRow&quot; role=&quot;tab&quot; id=&quot;headingOne&quot;&gt;
-     &lt;h4 class=&quot;panel-title&quot;&gt;
-       &lt;a class=&quot;y_addTolistHandle&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseOne&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseOne&quot;&gt;
-         &lt;span class=&quot;glyphicon glyphicon-plus addIcon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-         Add To &amp;lt; type &amp;gt;
-       &lt;/a&gt;
-     &lt;/h4&gt;
-   &lt;/div&gt;
-   &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;headingOne&quot;&gt;
-     &lt;div class=&quot;panel-body&quot;&gt;
-       &amp;lt; data here &amp;gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
- &lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-11.5" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.5</span> Page Header Navigation Bar</h2>
-              
-                    <div class="kss-description">
-                        <p>Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
-        <div class="container-fluid">
-            <div class="navbar-left">
-                <a href="#">
-                    <button class="btn-subordinate btn navbar-btn">
-                        <span class="caret left"></span> <span>Back</span></button>
-                </a>
-            </div>
-            <div class="y-navbar-center">
-                <div class="y-navbar-center-content">
-                    <h1>Long Page Title</h1>
-                </div>
-            </div>
-            <div class="navbar-right">
-                <div class="y-toolbar">
-                    <div class="y-toolbar-cell">
-                        <button class="btn btn-subordinate navbar-btn">Cancel
-                        </button>
-                    </div>
-                    <div class="y-toolbar-cell">
-                        <button class="btn btn-warning navbar-btn">Save
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;navbar navbar-default y-navbar-centered y-navbar-lg&quot;&gt;
-        &lt;div class=&quot;container-fluid&quot;&gt;
-            &lt;div class=&quot;navbar-left&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;button class=&quot;btn-subordinate btn navbar-btn&quot;&gt;
-                        &lt;span class=&quot;caret left&quot;&gt;&lt;/span&gt; &lt;span&gt;Back&lt;/span&gt;&lt;/button&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;y-navbar-center&quot;&gt;
-                &lt;div class=&quot;y-navbar-center-content&quot;&gt;
-                    &lt;h1&gt;Long Page Title&lt;/h1&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;navbar-right&quot;&gt;
-                &lt;div class=&quot;y-toolbar&quot;&gt;
-                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
-                        &lt;button class=&quot;btn btn-subordinate navbar-btn&quot;&gt;Cancel
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
-                        &lt;button class=&quot;btn btn-warning navbar-btn&quot;&gt;Save
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;</code></pre>
+                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+	&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
+	&lt;div class=&quot;panel-body&quot;&gt;Panel content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
