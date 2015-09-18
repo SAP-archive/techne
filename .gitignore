@@ -4,11 +4,13 @@ bower_components/
 ## NODE MODULES
 node_modules/*
 
-## CONFIG FILES 
+## CONFIG FILES
 src/less/globals/_resource-paths.less
 
 ## IDE Specfici folders
 .idea/
+
+docs/kss/public/*.html
 
 # OS generated files #
 ######################
@@ -18,4 +20,4 @@ src/less/globals/_resource-paths.less
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db 
+Thumbs.db

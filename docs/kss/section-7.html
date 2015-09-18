@@ -152,14 +152,14 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -171,185 +171,189 @@
             <article id="kss-content">
                 
                 <section id="section-7" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">7</span> Tables </h1>
+                              <h1 class="kss-title"><span class="kss-ref">7</span> Cards </h1>
               
                     <div class="kss-description">
-                        <p>Tables are used across UI modules to display data that is best viewed and manipulated in tabular format by users. 
-The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.</p>
+                        <p>Cards are used to display information in a visual, scannable manner.</p>
 
                     </div>
                 </section>
                 
                 <section id="section-7.1" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">7.1</span> Table With Mobile Drop</h2>
+                              <h2 class="kss-title"><span class="kss-ref">7.1</span> Example Card</h2>
               
                     <div class="kss-description">
-                        <p>Modifier Class for responsive behavoir</p>
+                        <p>First Element is to create new Items of the same type, second is an item with a action. Only the third one 
+is a static item which is only displaying values with no further functionality.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <table ng-if="orders.length" class="table table-striped techne-table">
- <thead>
-   <tr>
-     <th>Order #</th>
-     <th>Placed At</th>
-     <th>Placed By</th>
-     <th>Customer Email</th>
-     <th># Of Items</th>
-     <th>Order Total</th>
-  </tr>
- </thead>
- <tbody>
-   <tr>
-     <td data-th="Order #" >
-         <div class="cellcontent">
-             <a>1</a>
-         </div>
-     </td>
-     <td data-th="Placed At" >
-         <div class="cellcontent">
-             5/22/32
-         </div>
-     </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Customer Email" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="# Of Items" > 
-         <div class="cellcontent">
-             Test Data 
-         </div>
-     </td>
-     <td data-th="Order Total" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-   </tr>
-   <tr>
-     <td data-th="Order #" >
-         <div class="cellcontent">
-             <a>1</a>
-         </div>
-     </td>
-     <td data-th="Placed At" >
-         <div class="cellcontent">
-             5/22/32
-         </div>
-     </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Customer Email" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="# Of Items" > 
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Order Total" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-   </tr>
- </tbody>
-</table>
+                                <ul class="list-group dataCards {modifiers}">
+ <li class="y-add list-group-item dataCard ">
+    <button  type="button" class="y-add-btn">
+        <span class="hyicon hyicon-add"></span>
+        New Button
+    </button>
+</li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow cardRowClickable">
+       <p class="primaryData">
+         Primary Value
+       </p>
+       <p class="secondaryData">
+         You can clicke me!
+       </p>
+       <p class="statusDataValue">
+         <span class="active">
+           Active
+         </span>
+       </p>
+ </li>
+ <li class="list-group-item dataCard">
+   <div class="cardRow">
+       <p class="primaryData">
+         Primary Value
+       </p>
+       <p class="secondaryData">
+         You can't clicke me, I'm static!
+       </p>
+       <p class="statusDataValue">
+         <span class="active">
+           Active
+         </span>
+       </p>
+ </li>
+</ul>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;table ng-if=&quot;orders.length&quot; class=&quot;table table-striped techne-table&quot;&gt;
- &lt;thead&gt;
-   &lt;tr&gt;
-     &lt;th&gt;Order #&lt;/th&gt;
-     &lt;th&gt;Placed At&lt;/th&gt;
-     &lt;th&gt;Placed By&lt;/th&gt;
-     &lt;th&gt;Customer Email&lt;/th&gt;
-     &lt;th&gt;# Of Items&lt;/th&gt;
-     &lt;th&gt;Order Total&lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
-   &lt;tr&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed At&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             5/22/32
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Customer Email&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;# Of Items&quot; &gt; 
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data 
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Order Total&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed At&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             5/22/32
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Customer Email&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;# Of Items&quot; &gt; 
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Order Total&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-   &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+                                <pre class="code-snippet"><code data-language="html">&lt;ul class=&quot;list-group dataCards {modifiers}&quot;&gt;
+ &lt;li class=&quot;y-add list-group-item dataCard &quot;&gt;
+    &lt;button  type=&quot;button&quot; class=&quot;y-add-btn&quot;&gt;
+        &lt;span class=&quot;hyicon hyicon-add&quot;&gt;&lt;/span&gt;
+        New Button
+    &lt;/button&gt;
+&lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow cardRowClickable&quot;&gt;
+       &lt;p class=&quot;primaryData&quot;&gt;
+         Primary Value
+       &lt;/p&gt;
+       &lt;p class=&quot;secondaryData&quot;&gt;
+         You can clicke me!
+       &lt;/p&gt;
+       &lt;p class=&quot;statusDataValue&quot;&gt;
+         &lt;span class=&quot;active&quot;&gt;
+           Active
+         &lt;/span&gt;
+       &lt;/p&gt;
+ &lt;/li&gt;
+ &lt;li class=&quot;list-group-item dataCard&quot;&gt;
+   &lt;div class=&quot;cardRow&quot;&gt;
+       &lt;p class=&quot;primaryData&quot;&gt;
+         Primary Value
+       &lt;/p&gt;
+       &lt;p class=&quot;secondaryData&quot;&gt;
+         You can&#x27;t clicke me, I&#x27;m static!
+       &lt;/p&gt;
+       &lt;p class=&quot;statusDataValue&quot;&gt;
+         &lt;span class=&quot;active&quot;&gt;
+           Active
+         &lt;/span&gt;
+       &lt;/p&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-7.2" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">7.2</span> User Avatar</h2>
+              
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="userAvatar">
+ <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg"/>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;userAvatar&quot;&gt;
+ &lt;img src=&quot;https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg&quot;/&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-7.3" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">7.3</span> Primary Value</h2>
+              
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <p class="primaryData">
+ &lt;Primary Value&gt;
+</p>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;primaryData&quot;&gt;
+ &amp;lt;Primary Value&amp;gt;
+&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-7.4" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">7.4</span> Secondary Value</h2>
+              
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <p class="secondaryData">
+ &lt;Secondary Value goes here&gt;
+</p>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;secondaryData&quot;&gt;
+ &amp;lt;Secondary Value goes here&amp;gt;
+&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-7.5" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">7.5</span> Status Value Label</h2>
+              
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <p class="statusDataValue">
+ <span class="active">
+   Active
+ </span>
+</p>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;p class=&quot;statusDataValue&quot;&gt;
+ &lt;span class=&quot;active&quot;&gt;
+   Active
+ &lt;/span&gt;
+&lt;/p&gt;</code></pre>
                             </div>
                         </div>
                     </div>

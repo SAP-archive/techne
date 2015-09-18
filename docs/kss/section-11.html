@@ -152,14 +152,14 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -171,70 +171,39 @@
             <article id="kss-content">
                 
                 <section id="section-11" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">11</span> Miscellaneous </h1>
+                              <h1 class="kss-title"><span class="kss-ref">11</span> Panels </h1>
               
                     <div class="kss-description">
-                        <p>Reusable elements that can be used across the site.</p>
+                        <p>Reusable elements that can be used across the site.
+So far this just includes panels. </p>
 
                     </div>
                 </section>
                 
                 <section id="section-11.1" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.1</span> Locals Editor</h2>
+                              <h2 class="kss-title"><span class="kss-ref">11.1</span> Panels</h2>
               
                     <div class="kss-description">
-                        <p>Deprecated - This component will be replaced in the future 
-please don&apos;t use it anymore.</p>
+                        <p>Use panels to display content in the builder
+
+</p>
+<p>.panel</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="form-group locals-editor">
-    <div class="locals-header clearfix">
-        <div class="pull-right">
-            <div class="validation-status">
-            <span class="glyphicon glyphicon-globe">
-                </span>
-            </div>
-            <a href="" class="btn-link btn">
-              <span class="glyphicon glyphicon-chevron-down">
-              </span>
-            </a>
-        </div>
-        <label class="control-label">Label</label>
-    </div>
-    <div class="form-group">
-        <div class="input-group property" baas-form-name ng-form="innerForm">
-              <input name="lastName" type="text" class="form-control input-lg">
-               <span class="input-group-addon">EN</span>
-        </div>
-    </div>
+                                <div id="demo-page-background" class="panel panel-default">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">Panel content</div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group locals-editor&quot;&gt;
-    &lt;div class=&quot;locals-header clearfix&quot;&gt;
-        &lt;div class=&quot;pull-right&quot;&gt;
-            &lt;div class=&quot;validation-status&quot;&gt;
-            &lt;span class=&quot;glyphicon glyphicon-globe&quot;&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn-link btn&quot;&gt;
-              &lt;span class=&quot;glyphicon glyphicon-chevron-down&quot;&gt;
-              &lt;/span&gt;
-            &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
-              &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
-               &lt;span class=&quot;input-group-addon&quot;&gt;EN&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+	&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
+	&lt;div class=&quot;panel-body&quot;&gt;Panel content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
@@ -242,104 +211,475 @@ please don&apos;t use it anymore.</p>
                 </section>
                 
                 <section id="section-11.2" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.2</span> Thumbnails</h2>
+                              <h2 class="kss-title"><span class="kss-ref">11.2</span> Panels Test</h2>
               
                     <div class="kss-description">
-                        <p>Thumbnail with Status Indicator and centered hover content</p>
+                        <p>Panel States</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <a class="thumbnail {$modifiers}">
-	<div class="alert alert-primary">Status</div>
-	<img src="http://placehold.it/440x350" alt="alttext">
-	<div class="show-onhover">
-		<div class="centered"> 			
-			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
-			<button class="btn btn-default">Some Button</button>
+                                <div class="panel panel-default">
+	<div class="panel-heading clearfix">
+   <div class="pull-left">
+				Panel heading
 		</div>
-	</div>
-</a>
+<div class="pull-right">
+<nav>
+      <ul class="pagination">
+        <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+</div></div>
+<div class="list-group">
+  <a href="#" class="list-group-item {$modifiers}">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item {$modifiers} active">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+<a class="list-group-item deleteable">
+        <span  class="badge">date</span>
+        <div class="usercard">
+            <div class="usercard-info">
+                <h6>TeamID: Swinka</h6>
+                <h3>subscriptionproductname</h3>
+                <h4>subscriptionproductdescription</h4>
+            </div>
+        </div>
+        <div class="list-group-item-delete" data-toggle="modal" ng-click="unsubscribe(subscription.id)" ng-if="isTestProject">
+            <span class="hyicon-remove"></span>
+        </div>
+    </a>
+</div>
+<table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="panel-footer clearfix">
+	<div class="pull-left"><button class="btn btn-link">Cancel</button></div>
+	<div class="pull-right"><button class="btn btn-danger">Delete</button></div>
+</div>
+</div>
                             </div>
                         </div>
                         <div class="kss-modifier">
                             <div class="kss-mod-head">
 
                                 <div class="kss-mod-desc">
-                                    <p>selected state</p>
+                                    <p>info</p>
 
                                 </div>
-                                <div class="kss-mod-name">.active</div>
+                                <div class="kss-mod-name">.has-info</div>
                             </div>
                             <div class="kss-modifier-example">
-                                <a class="thumbnail active">
-	<div class="alert alert-primary">Status</div>
-	<img src="http://placehold.it/440x350" alt="alttext">
-	<div class="show-onhover">
-		<div class="centered"> 			
-			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
-			<button class="btn btn-default">Some Button</button>
+                                <div class="panel panel-default">
+	<div class="panel-heading clearfix">
+   <div class="pull-left">
+				Panel heading
 		</div>
-	</div>
-</a>
+<div class="pull-right">
+<nav>
+      <ul class="pagination">
+        <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+</div></div>
+<div class="list-group">
+  <a href="#" class="list-group-item has-info">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item has-info active">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+<a class="list-group-item deleteable">
+        <span  class="badge">date</span>
+        <div class="usercard">
+            <div class="usercard-info">
+                <h6>TeamID: Swinka</h6>
+                <h3>subscriptionproductname</h3>
+                <h4>subscriptionproductdescription</h4>
+            </div>
+        </div>
+        <div class="list-group-item-delete" data-toggle="modal" ng-click="unsubscribe(subscription.id)" ng-if="isTestProject">
+            <span class="hyicon-remove"></span>
+        </div>
+    </a>
+</div>
+<table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="panel-footer clearfix">
+	<div class="pull-left"><button class="btn btn-link">Cancel</button></div>
+	<div class="pull-right"><button class="btn btn-danger">Delete</button></div>
+</div>
+</div>
                             </div>
                         </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;a class=&quot;thumbnail {$modifiers}&quot;&gt;
-	&lt;div class=&quot;alert alert-primary&quot;&gt;Status&lt;/div&gt;
-	&lt;img src=&quot;http://placehold.it/440x350&quot; alt=&quot;alttext&quot;&gt;
-	&lt;div class=&quot;show-onhover&quot;&gt;
-		&lt;div class=&quot;centered&quot;&gt; 			
-			&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Some Button&lt;/button&gt;&lt;br/&gt; &lt;br/&gt;
-			&lt;button class=&quot;btn btn-default&quot;&gt;Some Button&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/a&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-11.3" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.3</span> Alerts</h2>
-              
-                    <div class="kss-description">
-                        <p>Provide the user with contextual and relevant feedback for typical user actions through the utilization of a handful of available and flexible alert messages</p>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
 
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-mod-desc">
+                                    <p>success</p>
+
+                                </div>
+                                <div class="kss-mod-name">.has-success</div>
+                            </div>
                             <div class="kss-modifier-example">
-                                <div class="alert alert-success alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Well done! You successfully read this important alert message.
+                                <div class="panel panel-default">
+	<div class="panel-heading clearfix">
+   <div class="pull-left">
+				Panel heading
+		</div>
+<div class="pull-right">
+<nav>
+      <ul class="pagination">
+        <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+</div></div>
+<div class="list-group">
+  <a href="#" class="list-group-item has-success">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item has-success active">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+<a class="list-group-item deleteable">
+        <span  class="badge">date</span>
+        <div class="usercard">
+            <div class="usercard-info">
+                <h6>TeamID: Swinka</h6>
+                <h3>subscriptionproductname</h3>
+                <h4>subscriptionproductdescription</h4>
+            </div>
+        </div>
+        <div class="list-group-item-delete" data-toggle="modal" ng-click="unsubscribe(subscription.id)" ng-if="isTestProject">
+            <span class="hyicon-remove"></span>
+        </div>
+    </a>
 </div>
-<div class="alert alert-info alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Heads Up! Are you sure you want to do that? 
+<table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="panel-footer clearfix">
+	<div class="pull-left"><button class="btn btn-link">Cancel</button></div>
+	<div class="pull-right"><button class="btn btn-danger">Delete</button></div>
 </div>
-<div class="alert alert-danger alert-dismissible" role="alert">                                        
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  Stop! This is all wrong.        
-</div>                                          
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>danger</p>
+
+                                </div>
+                                <div class="kss-mod-name">.has-danger</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <div class="panel panel-default">
+	<div class="panel-heading clearfix">
+   <div class="pull-left">
+				Panel heading
+		</div>
+<div class="pull-right">
+<nav>
+      <ul class="pagination">
+        <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+</div></div>
+<div class="list-group">
+  <a href="#" class="list-group-item has-danger">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item has-danger active">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+<a class="list-group-item deleteable">
+        <span  class="badge">date</span>
+        <div class="usercard">
+            <div class="usercard-info">
+                <h6>TeamID: Swinka</h6>
+                <h3>subscriptionproductname</h3>
+                <h4>subscriptionproductdescription</h4>
+            </div>
+        </div>
+        <div class="list-group-item-delete" data-toggle="modal" ng-click="unsubscribe(subscription.id)" ng-if="isTestProject">
+            <span class="hyicon-remove"></span>
+        </div>
+    </a>
+</div>
+<table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="panel-footer clearfix">
+	<div class="pull-left"><button class="btn btn-link">Cancel</button></div>
+	<div class="pull-right"><button class="btn btn-danger">Delete</button></div>
+</div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>warning</p>
+
+                                </div>
+                                <div class="kss-mod-name">.has-warning</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <div class="panel panel-default">
+	<div class="panel-heading clearfix">
+   <div class="pull-left">
+				Panel heading
+		</div>
+<div class="pull-right">
+<nav>
+      <ul class="pagination">
+        <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+</div></div>
+<div class="list-group">
+  <a href="#" class="list-group-item has-warning">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item has-warning active">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+<a class="list-group-item deleteable">
+        <span  class="badge">date</span>
+        <div class="usercard">
+            <div class="usercard-info">
+                <h6>TeamID: Swinka</h6>
+                <h3>subscriptionproductname</h3>
+                <h4>subscriptionproductdescription</h4>
+            </div>
+        </div>
+        <div class="list-group-item-delete" data-toggle="modal" ng-click="unsubscribe(subscription.id)" ng-if="isTestProject">
+            <span class="hyicon-remove"></span>
+        </div>
+    </a>
+</div>
+<table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="panel-footer clearfix">
+	<div class="pull-left"><button class="btn btn-link">Cancel</button></div>
+	<div class="pull-right"><button class="btn btn-danger">Delete</button></div>
+</div>
+</div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-   Well done! You successfully read this important alert message.
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;panel panel-default&quot;&gt;
+	&lt;div class=&quot;panel-heading clearfix&quot;&gt;
+   &lt;div class=&quot;pull-left&quot;&gt;
+				Panel heading
+		&lt;/div&gt;
+&lt;div class=&quot;pull-right&quot;&gt;
+&lt;nav&gt;
+      &lt;ul class=&quot;pagination&quot;&gt;
+        &lt;li class=&quot;disabled&quot;&gt;&lt;a aria-label=&quot;Previous&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;«&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a aria-label=&quot;Next&quot; href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;»&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/nav&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item {$modifiers}&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item {$modifiers} active&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Morbi leo risus&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
+&lt;a class=&quot;list-group-item deleteable&quot;&gt;
+        &lt;span  class=&quot;badge&quot;&gt;date&lt;/span&gt;
+        &lt;div class=&quot;usercard&quot;&gt;
+            &lt;div class=&quot;usercard-info&quot;&gt;
+                &lt;h6&gt;TeamID: Swinka&lt;/h6&gt;
+                &lt;h3&gt;subscriptionproductname&lt;/h3&gt;
+                &lt;h4&gt;subscriptionproductdescription&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-delete&quot; data-toggle=&quot;modal&quot; ng-click=&quot;unsubscribe(subscription.id)&quot; ng-if=&quot;isTestProject&quot;&gt;
+            &lt;span class=&quot;hyicon-remove&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
-&lt;div class=&quot;alert alert-info alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-   Heads Up! Are you sure you want to do that? 
+&lt;table class=&quot;table table-striped table-hover&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+&lt;div class=&quot;panel-footer clearfix&quot;&gt;
+	&lt;div class=&quot;pull-left&quot;&gt;&lt;button class=&quot;btn btn-link&quot;&gt;Cancel&lt;/button&gt;&lt;/div&gt;
+	&lt;div class=&quot;pull-right&quot;&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;                                        
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-  Stop! This is all wrong.        
-&lt;/div&gt;                                          </code></pre>
+&lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>

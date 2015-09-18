@@ -17,8 +17,7 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body has-left-nav ">
-    <div class="main-content">
+<body class="kss-body has-left-nav">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
@@ -45,7 +44,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="account js-yg-dropdown-node">
+            <li class="account">
                 <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Account</a>
                 <div class="nav-super-submenu-toggle">
                     <span class="nav-super-triangle"></span>
@@ -104,7 +103,7 @@
     </div>
         <div id="kss-top-nav">
 
-            <a href="#menu-toggle" id="menu-toggle" class="js-menu-toggle">
+            <a href="#menu-toggle" id="menu-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -137,18 +136,17 @@
 
         </div>
     </header>
-  <div class="container-fluid" id="kss-wrapper">
+  <div class="main-content container-fluid" id="kss-wrapper">
     <section id="content" class="row">
       <!-- / SUPER HEADER -->
-      <div class="kss-sidebar-shadow js-menu-toggle" ></div>
-        <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12 " role="navigation">
+        <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
+
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
 
 
 
-                        <ul class="kss-menu sidebar-nav" data-kss-ref="8">
-                            <li class="kss-menu-item kss-back"><a href="index.html">Back to Home</a></li>
+                        <ul class="kss-menu sidebar-nav" data-kss-ref="12">
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
@@ -166,194 +164,186 @@
 
             </aside>
           </div>
-        
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
                 
-                <section id="section-8" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">8</span> Tables </h1>
+                <section id="section-12" class="kss-section kss-depth-1">
+                              <h1 class="kss-title"><span class="kss-ref">12</span> Miscellaneous </h1>
               
                     <div class="kss-description">
-                        <p>Tables are used across UI modules to display data that is best viewed and manipulated in tabular format by users. 
-The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.</p>
+                        <p>Reusable elements that can be used across the site.</p>
 
                     </div>
                 </section>
+<<<<<<< HEAD
+=======
                 
-                <section id="section-8.1" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">8.1</span> Table With Mobile Drop</h2>
+                <section id="section-12.1" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.1</span> Locals Editor</h2>
               
                     <div class="kss-description">
-                        <p>Modifier Class for responsive behavoir</p>
+                        <p>Deprecated - This component will be replaced in the future 
+please don&apos;t use it anymore.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <table ng-if="orders.length" class="table table-striped techne-table">
- <thead>
-   <tr>
-     <th>Order #</th>
-     <th>Placed At</th>
-     <th>Placed By</th>
-     <th>Customer Email</th>
-     <th># Of Items</th>
-     <th>Order Total</th>
-  </tr>
- </thead>
- <tbody>
-   <tr>
-     <td data-th="Order #" >
-         <div class="cellcontent">
-             <a>1</a>
-         </div>
-     </td>
-     <td data-th="Placed At" >
-         <div class="cellcontent">
-             5/22/32
-         </div>
-     </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Customer Email" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="# Of Items" > 
-         <div class="cellcontent">
-             Test Data 
-         </div>
-     </td>
-     <td data-th="Order Total" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-   </tr>
-   <tr>
-     <td data-th="Order #" >
-         <div class="cellcontent">
-             <a>1</a>
-         </div>
-     </td>
-     <td data-th="Placed At" >
-         <div class="cellcontent">
-             5/22/32
-         </div>
-     </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Customer Email" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="# Of Items" > 
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-     <td data-th="Order Total" >
-         <div class="cellcontent">
-             Test Data
-         </div>
-     </td>
-   </tr>
- </tbody>
-</table>
+                                <div class="form-group locals-editor">
+    <div class="locals-header clearfix">
+        <div class="pull-right">
+            <div class="validation-status">
+            <span class="glyphicon glyphicon-globe">
+                </span>
+            </div>
+            <a href="" class="btn-link btn">
+              <span class="glyphicon glyphicon-chevron-down">
+              </span>
+            </a>
+        </div>
+        <label class="control-label">Label</label>
+    </div>
+    <div class="form-group">
+        <div class="input-group property" baas-form-name ng-form="innerForm">
+              <input name="lastName" type="text" class="form-control input-lg">
+               <span class="input-group-addon">EN</span>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;table ng-if=&quot;orders.length&quot; class=&quot;table table-striped techne-table&quot;&gt;
- &lt;thead&gt;
-   &lt;tr&gt;
-     &lt;th&gt;Order #&lt;/th&gt;
-     &lt;th&gt;Placed At&lt;/th&gt;
-     &lt;th&gt;Placed By&lt;/th&gt;
-     &lt;th&gt;Customer Email&lt;/th&gt;
-     &lt;th&gt;# Of Items&lt;/th&gt;
-     &lt;th&gt;Order Total&lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
-   &lt;tr&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed At&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             5/22/32
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Customer Email&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;# Of Items&quot; &gt; 
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data 
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Order Total&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed At&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             5/22/32
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Customer Email&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;# Of Items&quot; &gt; 
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-     &lt;td data-th=&quot;Order Total&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
-         &lt;/div&gt;
-     &lt;/td&gt;
-   &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group locals-editor&quot;&gt;
+    &lt;div class=&quot;locals-header clearfix&quot;&gt;
+        &lt;div class=&quot;pull-right&quot;&gt;
+            &lt;div class=&quot;validation-status&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-globe&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn-link btn&quot;&gt;
+              &lt;span class=&quot;glyphicon glyphicon-chevron-down&quot;&gt;
+              &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
+              &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+               &lt;span class=&quot;input-group-addon&quot;&gt;EN&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
                 </section>
+                
+                <section id="section-12.2" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.2</span> Thumbnails</h2>
+              
+                    <div class="kss-description">
+                        <p>Thumbnail with Status Indicator and centered hover content</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <a class="thumbnail {$modifiers}">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
+                            </div>
+                        </div>
+                        <div class="kss-modifier">
+                            <div class="kss-mod-head">
+
+                                <div class="kss-mod-desc">
+                                    <p>selected state</p>
+
+                                </div>
+                                <div class="kss-mod-name">.active</div>
+                            </div>
+                            <div class="kss-modifier-example">
+                                <a class="thumbnail active">
+	<div class="alert alert-primary">Status</div>
+	<img src="http://placehold.it/440x350" alt="alttext">
+	<div class="show-onhover">
+		<div class="centered"> 			
+			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
+			<button class="btn btn-default">Some Button</button>
+		</div>
+	</div>
+</a>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;a class=&quot;thumbnail {$modifiers}&quot;&gt;
+	&lt;div class=&quot;alert alert-primary&quot;&gt;Status&lt;/div&gt;
+	&lt;img src=&quot;http://placehold.it/440x350&quot; alt=&quot;alttext&quot;&gt;
+	&lt;div class=&quot;show-onhover&quot;&gt;
+		&lt;div class=&quot;centered&quot;&gt; 			
+			&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Some Button&lt;/button&gt;&lt;br/&gt; &lt;br/&gt;
+			&lt;button class=&quot;btn btn-default&quot;&gt;Some Button&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-12.3" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.3</span> Alerts</h2>
+              
+                    <div class="kss-description">
+                        <p>Provide the user with contextual and relevant feedback for typical user actions through the utilization of a handful of available and flexible alert messages</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="alert alert-success alert-dismissible" role="alert">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   Well done! You successfully read this important alert message.
+</div>
+<div class="alert alert-info alert-dismissible" role="alert">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   Heads Up! Are you sure you want to do that? 
+</div>
+<div class="alert alert-danger alert-dismissible" role="alert">                                        
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Stop! This is all wrong.        
+</div>                                          
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+   Well done! You successfully read this important alert message.
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info alert-dismissible&quot; role=&quot;alert&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+   Heads Up! Are you sure you want to do that? 
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;                                        
+ &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+  Stop! This is all wrong.        
+&lt;/div&gt;                                          </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+>>>>>>> develop
             </article>
         </div>
 
@@ -384,7 +374,6 @@ The table component is fully responsive so that even tabular data is easily read
           </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 </footer>
-</div>
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
 
