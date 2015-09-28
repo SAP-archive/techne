@@ -343,6 +343,133 @@ please don&apos;t use it anymore.</p>
                     </div>
                 </section>
                 
+                <section id="section-12.4" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.4</span> Spinner</h2>
+              
+                    <div class="kss-description">
+                        <p>CSS based spinner to indicate to the user that some information is processing or loading.</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div id="demo-page-background" class="panel panel-default">
+  <div class="panel-heading">Inline Spinner</div>
+  <div class="panel-body">
+    <div class="spinner">
+      <div class="spinner-container spinner-container1">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container spinner-container2">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container spinner-container3">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+    </div>
+  </div>
+</div> 
+<div id="demo-page-background" class="panel panel-default">
+  <div class="panel-heading">Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. </div>
+  <div class="panel-body">
+    <div class="demo-wrapper">
+      <div class="spinner-backdrop">
+        <div class="spinner">
+          <div class="spinner-container spinner-container1">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container2">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container3">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>                                      
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Inline Spinner&lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div class=&quot;spinner&quot;&gt;
+      &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;spinner-container spinner-container2&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;spinner-container spinner-container3&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div class=&quot;demo-wrapper&quot;&gt;
+      &lt;div class=&quot;spinner-backdrop&quot;&gt;
+        &lt;div class=&quot;spinner&quot;&gt;
+          &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;spinner-container spinner-container2&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;spinner-container spinner-container3&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;                                      </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
                 <section id="section-12.5" class="kss-section kss-depth-2">
                               <h2 class="kss-title"><span class="kss-ref">12.5</span> Page Header Navigation Bar</h2>
               
