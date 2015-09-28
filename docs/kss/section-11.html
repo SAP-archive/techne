@@ -150,14 +150,15 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Products </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -168,246 +169,40 @@
             <article id="kss-content">
                 
                 <section id="section-11" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">11</span> Miscellaneous </h1>
+                              <h1 class="kss-title"><span class="kss-ref">11</span> Panels </h1>
               
                     <div class="kss-description">
-                        <p>Reusable elements that can be used across the site.</p>
+                        <p>Reusable elements that can be used across the site.
+So far this just includes panels. </p>
 
                     </div>
                 </section>
                 
                 <section id="section-11.1" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.1</span> Locals Editor</h2>
+                              <h2 class="kss-title"><span class="kss-ref">11.1</span> Panels</h2>
               
                     <div class="kss-description">
-                        <p>Deprecated - This component will be replaced in the future 
-please don&apos;t use it anymore.</p>
+                        <p>Use panels to display content in the builder
+
+</p>
+<p>.panel</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="form-group locals-editor">
-    <div class="locals-header clearfix">
-        <div class="pull-right">
-            <div class="validation-status">
-            <span class="glyphicon glyphicon-globe">
-                </span>
-            </div>
-            <a href="" class="btn-link btn">
-              <span class="glyphicon glyphicon-chevron-down">
-              </span>
-            </a>
-        </div>
-        <label class="control-label">Label</label>
-    </div>
-    <div class="form-group">
-        <div class="input-group property" baas-form-name ng-form="innerForm">
-              <input name="lastName" type="text" class="form-control input-lg">
-               <span class="input-group-addon">EN</span>
-        </div>
-    </div>
+                                <div id="demo-page-background" class="panel panel-default">
+	<div class="panel-heading">Panel heading without title</div>
+	<div class="panel-body">Panel content</div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group locals-editor&quot;&gt;
-    &lt;div class=&quot;locals-header clearfix&quot;&gt;
-        &lt;div class=&quot;pull-right&quot;&gt;
-            &lt;div class=&quot;validation-status&quot;&gt;
-            &lt;span class=&quot;glyphicon glyphicon-globe&quot;&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn-link btn&quot;&gt;
-              &lt;span class=&quot;glyphicon glyphicon-chevron-down&quot;&gt;
-              &lt;/span&gt;
-            &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
-              &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
-               &lt;span class=&quot;input-group-addon&quot;&gt;EN&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+	&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
+	&lt;div class=&quot;panel-body&quot;&gt;Panel content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-11.2" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.2</span> Thumbnails</h2>
-              
-                    <div class="kss-description">
-                        <p>Thumbnail with Status Indicator and centered hover content</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <a class="thumbnail {$modifiers}">
-	<div class="alert alert-primary">Status</div>
-	<img src="http://placehold.it/440x350" alt="alttext">
-	<div class="show-onhover">
-		<div class="centered"> 			
-			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
-			<button class="btn btn-default">Some Button</button>
-		</div>
-	</div>
-</a>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>selected state</p>
-
-                                </div>
-                                <div class="kss-mod-name">.active</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <a class="thumbnail active">
-	<div class="alert alert-primary">Status</div>
-	<img src="http://placehold.it/440x350" alt="alttext">
-	<div class="show-onhover">
-		<div class="centered"> 			
-			<button class="btn btn-primary btn-lg">Some Button</button><br/> <br/>
-			<button class="btn btn-default">Some Button</button>
-		</div>
-	</div>
-</a>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;a class=&quot;thumbnail {$modifiers}&quot;&gt;
-	&lt;div class=&quot;alert alert-primary&quot;&gt;Status&lt;/div&gt;
-	&lt;img src=&quot;http://placehold.it/440x350&quot; alt=&quot;alttext&quot;&gt;
-	&lt;div class=&quot;show-onhover&quot;&gt;
-		&lt;div class=&quot;centered&quot;&gt; 			
-			&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Some Button&lt;/button&gt;&lt;br/&gt; &lt;br/&gt;
-			&lt;button class=&quot;btn btn-default&quot;&gt;Some Button&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/a&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-11.3" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.3</span> Alerts</h2>
-              
-                    <div class="kss-description">
-                        <p>Provide the user with contextual and relevant feedback for typical user actions through the utilization of a handful of available and flexible alert messages</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="alert alert-success alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Well done! You successfully read this important alert message.
-</div>
-<div class="alert alert-info alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Heads Up! Are you sure you want to do that? 
-</div>
-<div class="alert alert-danger alert-dismissible" role="alert">                                        
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  Stop! This is all wrong.        
-</div>                                          
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-   Well done! You successfully read this important alert message.
-&lt;/div&gt;
-&lt;div class=&quot;alert alert-info alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-   Heads Up! Are you sure you want to do that? 
-&lt;/div&gt;
-&lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;                                        
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-  Stop! This is all wrong.        
-&lt;/div&gt;                                          </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-11.5" class="kss-section kss-depth-2">
-                              <h2 class="kss-title"><span class="kss-ref">11.5</span> Page Header Navigation Bar</h2>
-              
-                    <div class="kss-description">
-                        <p>Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
-        <div class="container-fluid">
-            <div class="navbar-left">
-                <a href="#">
-                    <button class="btn-subordinate btn navbar-btn">
-                        <span class="caret left"></span> <span>Back</span></button>
-                </a>
-            </div>
-            <div class="y-navbar-center">
-                <div class="y-navbar-center-content">
-                    <h1>Long Page Title</h1>
-                </div>
-            </div>
-            <div class="navbar-right">
-                <div class="y-toolbar">
-                    <div class="y-toolbar-cell">
-                        <button class="btn btn-subordinate navbar-btn">Cancel
-                        </button>
-                    </div>
-                    <div class="y-toolbar-cell">
-                        <button class="btn btn-warning navbar-btn">Save
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;navbar navbar-default y-navbar-centered y-navbar-lg&quot;&gt;
-        &lt;div class=&quot;container-fluid&quot;&gt;
-            &lt;div class=&quot;navbar-left&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;
-                    &lt;button class=&quot;btn-subordinate btn navbar-btn&quot;&gt;
-                        &lt;span class=&quot;caret left&quot;&gt;&lt;/span&gt; &lt;span&gt;Back&lt;/span&gt;&lt;/button&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;y-navbar-center&quot;&gt;
-                &lt;div class=&quot;y-navbar-center-content&quot;&gt;
-                    &lt;h1&gt;Long Page Title&lt;/h1&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;navbar-right&quot;&gt;
-                &lt;div class=&quot;y-toolbar&quot;&gt;
-                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
-                        &lt;button class=&quot;btn btn-subordinate navbar-btn&quot;&gt;Cancel
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
-                        &lt;button class=&quot;btn btn-warning navbar-btn&quot;&gt;Save
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -429,7 +224,6 @@ please don&apos;t use it anymore.</p>
           <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
           <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
           <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
-          <span class="footer-item copyright">© hybris AG</span>
       </div>
       <div class="modal fade" id="feedbackModal">
           <div class="modal-dialog feedback-modal">
