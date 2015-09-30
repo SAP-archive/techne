@@ -152,14 +152,15 @@
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
-                                <li class="kss-menu-item"><a href="section-4.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-4.html"> Icons </a></li>
                                 <li class="kss-menu-item"><a href="section-5.html"> Tabs </a></li>
-                                <li class="kss-menu-item"><a href="section-6.html"> Panels </a></li>
-                                <li class="kss-menu-item"><a href="section-7.html"> Tables </a></li>
-                                <li class="kss-menu-item"><a href="section-8.html"> Cards </a></li>
-                                <li class="kss-menu-item"><a href="section-9.html"> Listgroups </a></li>
-                                <li class="kss-menu-item"><a href="section-10.html"> Icons </a></li>
-                                <li class="kss-menu-item"><a href="section-11.html"> Miscellaneous </a></li>
+                                <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
+                                <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
+                                <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Products </a></li>
+                                <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
+                                <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
+                                <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
                         </ul>
                 </nav>
 
@@ -171,12 +172,142 @@
             <article id="kss-content">
                 
                 <section id="section-9" class="kss-section kss-depth-1">
-                              <h1 class="kss-title"><span class="kss-ref">9</span> Listgroups </h1>
+                              <h1 class="kss-title"><span class="kss-ref">9</span> Products </h1>
               
                     <div class="kss-description">
-                        <p>Reusable elements that can be used across the site.
-So far this just includes listgroups. </p>
+                        <p>Reusable elements that can be used across the site.</p>
 
+                    </div>
+                </section>
+                
+                <section id="section-9.1" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">9.1</span> Products</h2>
+              
+                    <div class="kss-description">
+                        <p>Description for some product</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="product {$modifiers}">
+	<div class="y-mouseout-view productThumbnail">
+		<div class="y-thumbnailContainer thumbnailContainer">
+			<img src="images/blue_square.png" alt="product" class="productImage">
+			<img src="images/btn_more.png" alt="product" class="btnMore">	
+		</div>
+		<p class="statusDataValue">
+        <span class="active">
+          Active
+        </span>
+     </p>
+		<p class="primaryData">
+ 		Product Name
+		</p>
+		<p class="secondaryData">
+ 		SKU #1234567
+		</p>
+		<p class="primaryData priceSpace">
+ 		$00.00
+		</p>
+		<div class="y-on-click-show show-onhover">
+			<div class="menubar">
+				<div class="menu">
+					<div class="buttonContainer"> 			
+						<button class="button mainColor">
+							Publish Product
+						</button>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="buttonContainer">
+						<button class="button mainColor">
+							Edit Product
+						</button>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="buttonContainer">
+						<button class="button dangerColor">
+							Remove Product
+						</button>
+					</div>
+				</div>
+				<div class="backgroundContainer">
+					<div class="menuClose">		
+						<div class="buttonContainer">
+							<button class="button closeColor y-buttonClose">
+								X CLOSE
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;product {$modifiers}&quot;&gt;
+	&lt;div class=&quot;y-mouseout-view productThumbnail&quot;&gt;
+		&lt;div class=&quot;y-thumbnailContainer thumbnailContainer&quot;&gt;
+			&lt;img src=&quot;images/blue_square.png&quot; alt=&quot;product&quot; class=&quot;productImage&quot;&gt;
+			&lt;img src=&quot;images/btn_more.png&quot; alt=&quot;product&quot; class=&quot;btnMore&quot;&gt;	
+		&lt;/div&gt;
+		&lt;p class=&quot;statusDataValue&quot;&gt;
+        &lt;span class=&quot;active&quot;&gt;
+          Active
+        &lt;/span&gt;
+     &lt;/p&gt;
+		&lt;p class=&quot;primaryData&quot;&gt;
+ 		Product Name
+		&lt;/p&gt;
+		&lt;p class=&quot;secondaryData&quot;&gt;
+ 		SKU #1234567
+		&lt;/p&gt;
+		&lt;p class=&quot;primaryData priceSpace&quot;&gt;
+ 		$00.00
+		&lt;/p&gt;
+		&lt;div class=&quot;y-on-click-show show-onhover&quot;&gt;
+			&lt;div class=&quot;menubar&quot;&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt; 			
+						&lt;button class=&quot;button mainColor&quot;&gt;
+							Publish Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt;
+						&lt;button class=&quot;button mainColor&quot;&gt;
+							Edit Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;menu&quot;&gt;
+					&lt;div class=&quot;buttonContainer&quot;&gt;
+						&lt;button class=&quot;button dangerColor&quot;&gt;
+							Remove Product
+						&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;backgroundContainer&quot;&gt;
+					&lt;div class=&quot;menuClose&quot;&gt;		
+						&lt;div class=&quot;buttonContainer&quot;&gt;
+							&lt;button class=&quot;button closeColor y-buttonClose&quot;&gt;
+								X CLOSE
+							&lt;/button&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </article>
@@ -196,7 +327,6 @@ So far this just includes listgroups. </p>
           <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
           <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
           <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
-          <span class="footer-item copyright">© hybris AG</span>
       </div>
       <div class="modal fade" id="feedbackModal">
           <div class="modal-dialog feedback-modal">

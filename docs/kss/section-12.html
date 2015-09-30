@@ -155,6 +155,7 @@
                                 <li class="kss-menu-item"><a href="section-6.html"> Listgroups </a></li>
                                 <li class="kss-menu-item"><a href="section-7.html"> Cards </a></li>
                                 <li class="kss-menu-item"><a href="section-8.html"> Tables </a></li>
+                                <li class="kss-menu-item"><a href="section-9.html"> Products </a></li>
                                 <li class="kss-menu-item"><a href="section-10.html"> Forms </a></li>
                                 <li class="kss-menu-item"><a href="section-11.html"> Panels </a></li>
                                 <li class="kss-menu-item"><a href="section-12.html"> Miscellaneous </a></li>
@@ -175,8 +176,6 @@
 
                     </div>
                 </section>
-<<<<<<< HEAD
-=======
                 
                 <section id="section-12.1" class="kss-section kss-depth-2">
                               <h2 class="kss-title"><span class="kss-ref">12.1</span> Locals Editor</h2>
@@ -343,7 +342,204 @@ please don&apos;t use it anymore.</p>
                         </div>
                     </div>
                 </section>
->>>>>>> develop
+                
+                <section id="section-12.4" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.4</span> Spinner</h2>
+              
+                    <div class="kss-description">
+                        <p>CSS based spinner to indicate to the user that some information is processing or loading.</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div id="demo-page-background" class="panel panel-default">
+  <div class="panel-heading">Inline Spinner</div>
+  <div class="panel-body">
+    <div class="spinner">
+      <div class="spinner-container spinner-container1">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container spinner-container2">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container spinner-container3">
+        <div class="spinner-circle1"></div>
+        <div class="spinner-circle2"></div>
+        <div class="spinner-circle3"></div>
+        <div class="circle4"></div>
+      </div>
+    </div>
+  </div>
+</div> 
+<div id="demo-page-background" class="panel panel-default">
+  <div class="panel-heading">Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. </div>
+  <div class="panel-body">
+    <div class="demo-wrapper">
+      <div class="spinner-backdrop">
+        <div class="spinner">
+          <div class="spinner-container spinner-container1">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container2">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container3">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>                                      
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Inline Spinner&lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div class=&quot;spinner&quot;&gt;
+      &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;spinner-container spinner-container2&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;spinner-container spinner-container3&quot;&gt;
+        &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div class=&quot;demo-wrapper&quot;&gt;
+      &lt;div class=&quot;spinner-backdrop&quot;&gt;
+        &lt;div class=&quot;spinner&quot;&gt;
+          &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;spinner-container spinner-container2&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;spinner-container spinner-container3&quot;&gt;
+            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;                                      </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-12.5" class="kss-section kss-depth-2">
+                              <h2 class="kss-title"><span class="kss-ref">12.5</span> Page Header Navigation Bar</h2>
+              
+                    <div class="kss-description">
+                        <p>Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
+        <div class="container-fluid">
+            <div class="navbar-left">
+                <a href="#">
+                    <button class="btn-subordinate btn navbar-btn">
+                        <span class="caret left"></span> <span>Back</span></button>
+                </a>
+            </div>
+            <div class="y-navbar-center">
+                <div class="y-navbar-center-content">
+                    <h1>Long Page Title</h1>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <div class="y-toolbar">
+                    <div class="y-toolbar-cell">
+                        <button class="btn btn-subordinate navbar-btn">Cancel
+                        </button>
+                    </div>
+                    <div class="y-toolbar-cell">
+                        <button class="btn btn-warning navbar-btn">Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;navbar navbar-default y-navbar-centered y-navbar-lg&quot;&gt;
+        &lt;div class=&quot;container-fluid&quot;&gt;
+            &lt;div class=&quot;navbar-left&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;button class=&quot;btn-subordinate btn navbar-btn&quot;&gt;
+                        &lt;span class=&quot;caret left&quot;&gt;&lt;/span&gt; &lt;span&gt;Back&lt;/span&gt;&lt;/button&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;y-navbar-center&quot;&gt;
+                &lt;div class=&quot;y-navbar-center-content&quot;&gt;
+                    &lt;h1&gt;Long Page Title&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;navbar-right&quot;&gt;
+                &lt;div class=&quot;y-toolbar&quot;&gt;
+                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
+                        &lt;button class=&quot;btn btn-subordinate navbar-btn&quot;&gt;Cancel
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;y-toolbar-cell&quot;&gt;
+                        &lt;button class=&quot;btn btn-warning navbar-btn&quot;&gt;Save
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </article>
         </div>
 
@@ -361,7 +557,6 @@ please don&apos;t use it anymore.</p>
           <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
           <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
           <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
-          <span class="footer-item copyright">© hybris AG</span>
       </div>
       <div class="modal fade" id="feedbackModal">
           <div class="modal-dialog feedback-modal">
