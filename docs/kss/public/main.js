@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
      };
  });
 
- $("#menu-toggle").click(function(e) {
+ $(".js-menu-toggle").click(function(e) {
      e.preventDefault();
-     $("#kss-wrapper").toggleClass("toggled");
+     $("body").toggleClass("toggled");
  });
