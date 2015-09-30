@@ -2,9 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  margin-top: 100px!important;
-}
 
 body.kss-body {
     background: #ffffff;
@@ -13,9 +10,10 @@ body.kss-body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     max-width: 100%;
+
+    padding-top: 100px;
 }
 #kss-wrapper {
-    background-color: #fff;
     height: auto;
 }
 .active.demo-container {
@@ -58,6 +56,13 @@ body.kss-body {
     @media (max-width: 768px) {
         #menu-toggle {
             display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+            .toggled &{
+                min-height: 30px;
+                min-width: 30px;
+            }
         }
     }
     .icon-bar {
@@ -69,6 +74,43 @@ body.kss-body {
         border-radius: 1px;
         display: block;
         margin-top: 4px;
+
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        .toggled &{
+            position: absolute;
+            margin-top: 8px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+
+            &:nth-child(2n+1){
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.kss-sidebar-shadow{
+    background: fade(#1e2c3b, 80%);
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 900;
+
+    top: 0;
+    cursor: pointer;
+
+    .toggled &{
+        display: block;
+    }
+
+    @media(min-width:768px) {
+        display: none!important;
     }
 }
 
@@ -83,6 +125,7 @@ body.kss-body {
         ;
         padding: 0;
         list-style-type: none;
+
         li {
             a {
                 border-left: 4px solid #fff;
@@ -93,6 +136,28 @@ body.kss-body {
                 font-size: 15px;
                 &:hover {
                     color: #0486E0;
+                }
+            }
+            &.kss-back{
+                border-bottom: 1px solid #ced7e0;
+                position: relative;
+
+                @media(min-width:768px) {
+                    display: none;
+                }
+
+                &:before{
+                    content: '';
+                    width: 0;
+                    position: absolute;
+
+                    left: 16px;
+                    top: 50%;
+                    margin-top: -4px;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 5px 4px 5px 0;
+                    border-color: transparent #0486E0 transparent transparent;
                 }
             }
             &.kss-active a {
@@ -106,8 +171,8 @@ body.kss-body {
 }
 .kss-navbar.navbar {
     border: 0 none;
-    margin-top: 10px;
     box-shadow: none;
+    padding-bottom: 41px;
 }
 #kss-header h1 {
     font-size: 1.5em;
@@ -121,7 +186,6 @@ h1.kss-title {
     font-family: 'Dosis', sans-serif;
 }
 #kss-main {
-    border-left: 1px solid #e2e6e9;
     padding-left: 15px;
 }
 .kss-mod-list {
@@ -328,11 +392,10 @@ li.L9 {
     #kss-nav {
         display: block;
         margin: 0;
-        border-bottom: 1px solid #ddd;
         background: 0;
         box-shadow: none;
         nav > ul {
-            margin-top: .5em;
+            margin-top: 1px;
             margin-bottom: .5em;
             & > li {
                 display: inline-block;
@@ -351,13 +414,15 @@ li.L9 {
     }
 }
 // @end
-.footer a:visited {
-    color: white;
+.footer {
+    a:visited {
+        color: white;
+    }
+    .toggled &{
+        display: none!important;
+    }
 }
-.kss-body .footer {
-    display: block !important;
-    height: 41px;
-}
+
 /* Sidebar */
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
@@ -375,39 +440,61 @@ li.L9 {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-body.has-left-nav #kss-wrapper.toggled {
+body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper{
+    padding-left: 0;
+
+    @media(min-width:768px) {
+        padding-left: 0px!important;
+    }
+}
+
+body.has-left-nav.toggled #kss-wrapper{
     padding-left: 265px;
     /* 250 + 15px container padding */
 }
+
+
 body.has-left-nav #kss-nav {
-    z-index: 1000;
     position: fixed;
+    z-index: 901;
+
     left: 250px;
+    top: 0;
+
     width: 0;
-    height: 80%;
+    height: 100%;
     margin-left: -250px;
+        padding: 0;
+    padding-top: 100px;
+
     overflow-y: auto;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    padding: 0;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+
+    background: transparent;
+
 }
-body.has-left-nav #kss-wrapper.toggled #kss-nav {
-    width: 265px;
+
+body.has-left-nav.navbar-super-up #kss-nav {
+    padding-top: 50px;
+}
+body.has-left-nav.toggled #kss-wrapper #kss-nav {
+    width: 250px;
+    background: #fff;
 }
 #kss-main {
     padding: 15px;
 }
-body.has-left-nav #kss-wrapper.toggled #kss-main {
+body.has-left-nav.toggled #kss-wrapper #kss-main {
     margin-right: -250px;
 }
 /* Sidebar Styles */
-
 body.has-left-nav .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -415,15 +502,26 @@ body.has-left-nav .sidebar-nav {
 @media(min-width:768px) {
     body.has-left-nav #kss-wrapper {
         padding-left: 265px;
+        background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTY4RkM5ODM0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTY4RkM5ODQ0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NjhGQzk4MTRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NjhGQzk4MjRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAwBAwMDBQQFCQYGCQ0LCQsNDw4ODg4PDwwMDAwMDw8MDAwMDAwPDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAEAAQMBEQACEQEDEQH/xABKAAEAAAAAAAAAAAAAAAAAAAAJAQEAAAAAAAAAAAAAAAAAAAADEAEAAAAAAAAAAAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBlTBf/2Q==');
+        background-repeat: repeat-y;
+        background-position: 250px;
     }
+    body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+        background: none;
+    }
+    
     body.has-left-nav #kss-nav {
         width: 250px;
-        padding: 0;
+    }
+
+    body.has-left-nav.navbar-super-up #kss-nav {
+        margin-top: -41px;
+        padding-top: 100px!important;
     }
     #kss-main {
         position: relative;
     }
-    #kss-wrapper.toggled #kss-main {
+    .toggled #kss-wrapper #kss-main {
         position: relative;
         margin-right: 0;
     }

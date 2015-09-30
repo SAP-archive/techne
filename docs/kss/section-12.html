@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body has-left-nav">
+<body class="kss-body has-left-nav ">
+    <div class="main-content">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
             <div class="navbar-super" role="navigation">
@@ -44,7 +45,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="account">
+            <li class="account js-yg-dropdown-node">
                 <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Account</a>
                 <div class="nav-super-submenu-toggle">
                     <span class="nav-super-triangle"></span>
@@ -103,7 +104,7 @@
     </div>
         <div id="kss-top-nav">
 
-            <a href="#menu-toggle" id="menu-toggle">
+            <a href="#menu-toggle" id="menu-toggle" class="js-menu-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -136,17 +137,18 @@
 
         </div>
     </header>
-  <div class="main-content container-fluid" id="kss-wrapper">
+  <div class="container-fluid" id="kss-wrapper">
     <section id="content" class="row">
       <!-- / SUPER HEADER -->
-        <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12" role="navigation">
-
+      <div class="kss-sidebar-shadow js-menu-toggle" ></div>
+        <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12 " role="navigation">
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
 
 
 
                         <ul class="kss-menu sidebar-nav" data-kss-ref="12">
+                            <li class="kss-menu-item kss-back"><a href="index.html">Back to Home</a></li>
                                 <li class="kss-menu-item"><a href="section-1.html"> Status Indicators</a></li>
                                 <li class="kss-menu-item"><a href="section-2.html"> Buttons </a></li>
                                 <li class="kss-menu-item"><a href="section-3.html"> Toggles </a></li>
@@ -165,6 +167,7 @@
 
             </aside>
           </div>
+        
         <div role="main" id="kss-main" class="kss-main col-md-10 col-sm-8 col-xs-12">
             <article id="kss-content">
                 
@@ -569,6 +572,7 @@ please don&apos;t use it anymore.</p>
           </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 </footer>
+</div>
 <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
 
