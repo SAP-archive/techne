@@ -24,7 +24,7 @@
     "dist/js/techne.min.js",
     "dist/css/techne.min.css"
   ],
-  "license": "MIT",
+  "license": "Apache 2.0",
   "private": false,
   "dependencies": {
     "bootstrap": "~3.3.2",
