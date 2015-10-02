@@ -8,7 +8,7 @@
 //             <div class="navbar-left">
 //                 <a href="#">
 //                     <button class="btn-subordinate btn navbar-btn">
-//                         <span class="caret left"></span> <span>Back</span></button>
+//                         <span class="hyicon hyicon-back"></span> <span>Back</span></button>
 //                 </a>
 //             </div>
 //             <div class="y-navbar-center">
@@ -77,6 +77,8 @@
     .container-fluid{
       width: 100%;
       display: table;
+      padding-left: 0;
+      padding-right: 0;
       
       // overwrite boostrap clearfix 
       // that breaks table layout
@@ -92,8 +94,7 @@
 
   .y-navbar-center-content{
     width: 100%;
-
-        position: absolute;
+    position: absolute;
 
     h1{
       overflow: hidden;
@@ -121,7 +122,45 @@
     width: 1%;
     float: none!important;
   }
+  .navbar-left{
+    .navbar-btn{
+      animation-name: easeInLeft;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-duration: 50ms;
+    }
   }
+  .navbar-right{
+    .navbar-btn{
+      animation-name: easeInRight;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-duration: 50ms;
+    }
+  }
+  }
+}
+
+@keyframes easeInLeft {
+    0% {
+      transform: translateX(-100%);
+      width: 0;
+    }
+    100% {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes easeInRight {
+    0% {
+      transform: translateX(100%);
+      width: 0;
+    }
+    100% {
+        width: 100%;
+        transform: translateX(0);
+    }
 }
 
 
