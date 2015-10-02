@@ -1,6 +1,6 @@
 {
   "name": "techne-components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "hybris Techne Style Guide",
   "main": "docs/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.hybris.com:7999/cx/techne-components.git"
+    "url": "https://github.com/SAP/techne.git"
   },
   "author": "Hybris Software",
   "license": "MIT",
