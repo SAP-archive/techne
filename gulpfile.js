@@ -275,7 +275,7 @@ gulp.task('watch',
 );
 
 
-gulp.task('build', ['less', 'styleguide', 'deploy']);
+gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'deploy']);
 
 // iconfont, less, kss_bootrap_src
 gulp.task('dist', ['iconfont', 'build']);
