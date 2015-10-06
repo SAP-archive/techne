@@ -1,0 +1,10 @@
+---
+title: 'Overview'
+service: 'Commerce Builder Module'
+type: Overview
+order: 1
+---
+
+The Commerce Builder Module is integrated with the <%- @partial('storefronttemplate_YaaSStorefront') %>, but can be coupled with any other front-end application. It supports a number of configuration options, and enables easy management of commerce functionality.
+
+After you set up your project in the Builder, and subscribe to the Core and Commerce packages in the YaaS Market, you can see the Commerce Builder Module in your Builder project. The module includes views for Products, Categories, Customers, Orders, Coupons, and Commerce Settings.
