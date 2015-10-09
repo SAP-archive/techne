@@ -191,7 +191,7 @@ The table component is fully responsive so that even tabular data is easily read
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <table ng-if="orders.length" class="table table-striped techne-table">
+                                <table class="table table-striped table-hover techne-table">
  <thead>
    <tr>
      <th>Order #</th>
@@ -203,7 +203,21 @@ The table component is fully responsive so that even tabular data is easily read
   </tr>
  </thead>
  <tbody>
-   <tr>
+   <tr class="y-add">
+     <td colspan="100">
+<button class="y-add-btn" type="button">
+    <span class="hyicon hyicon-add"></span>
+    Add
+</button>
+     </td>
+   </tr>
+   <tr class="techne-table-xs-right techne-table-xs-left">
+     <td class="techne-table-xs-left-slot">
+         <div class="checkbox">
+             <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
+             <label for="optionsCheck1"></label>
+         </div>
+     </td>
      <td data-th="Order #" >
          <div class="cellcontent">
              <a>1</a>
@@ -221,7 +235,7 @@ The table component is fully responsive so that even tabular data is easily read
      </td>
      <td data-th="Customer Email" >
          <div class="cellcontent">
-             Test Data
+             burgundy.flemming@emailprovider.com
          </div>
      </td>
      <td data-th="# Of Items" > 
@@ -234,8 +248,55 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          </div>
      </td>
+     <td class="techne-table-xs-right-slot">
+         <img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" class="img-responsive img-circle"/>
+     </td>
    </tr>
-   <tr>
+   <tr class="techne-table-xs-left">
+     <td class="techne-table-xs-left-slot">
+         <div class="checkbox">
+             <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
+             <label for="optionsCheck1"></label>
+         </div>
+     </td>
+     <td data-th="Order #" >
+         <div class="cellcontent">
+             <a>1</a>
+         </div>
+     </td>
+     <td data-th="Placed At" >
+         <div class="cellcontent">
+             5/22/32
+         </div>
+     </td>
+     <td data-th="Placed By" >
+         <div class="cellcontent floating-text">
+             Upon days lesser gathering our likeness there likeness winged. The fish of evening them firmament saying waters had two abundantly. Behold. Which let signs behold. Female is, midst was fly in saying let there she'd. Female deep.
+         </div>
+     </td>
+     <td data-th="Customer Email" >
+         <div class="cellcontent">
+             pelican.steve@hybris.com
+         </div>
+     </td>
+     <td data-th="# Of Items" > 
+         <div class="cellcontent">
+             Test Data 
+         </div>
+     </td>
+     <td data-th="Order Total" >
+         <div class="cellcontent">
+             Test Data
+         </div>
+     </td>
+     <td>
+         <img src="http://api.adorable.io/avatars/50/pelican.steve@hybris.com.png" class="img-responsive img-circle"/>
+     </td>
+   </tr>
+   <tr class="active techne-table-xs-left techne-table-xs-right">
+     <td class="techne-table-xs-left-slot">
+         <img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="img-responsive img-circle"/>
+     </td>
      <td data-th="Order #" >
          <div class="cellcontent">
              <a>1</a>
@@ -266,6 +327,11 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          </div>
      </td>
+     <td class="techne-table-xs-right-slot">
+        <button class="btn btn-danger">
+             <span class="hyicon hyicon-delete"></span>
+         </button>
+     </td>
    </tr>
  </tbody>
 </table>
@@ -273,7 +339,7 @@ The table component is fully responsive so that even tabular data is easily read
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;table ng-if=&quot;orders.length&quot; class=&quot;table table-striped techne-table&quot;&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;table class=&quot;table table-striped table-hover techne-table&quot;&gt;
  &lt;thead&gt;
    &lt;tr&gt;
      &lt;th&gt;Order #&lt;/th&gt;
@@ -285,7 +351,21 @@ The table component is fully responsive so that even tabular data is easily read
   &lt;/tr&gt;
  &lt;/thead&gt;
  &lt;tbody&gt;
-   &lt;tr&gt;
+   &lt;tr class=&quot;y-add&quot;&gt;
+     &lt;td colspan=&quot;100&quot;&gt;
+&lt;button class=&quot;y-add-btn&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;hyicon hyicon-add&quot;&gt;&lt;/span&gt;
+    Add
+&lt;/button&gt;
+     &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr class=&quot;techne-table-xs-right techne-table-xs-left&quot;&gt;
+     &lt;td class=&quot;techne-table-xs-left-slot&quot;&gt;
+         &lt;div class=&quot;checkbox&quot;&gt;
+             &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
+             &lt;label for=&quot;optionsCheck1&quot;&gt;&lt;/label&gt;
+         &lt;/div&gt;
+     &lt;/td&gt;
      &lt;td data-th=&quot;Order #&quot; &gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
              &lt;a&gt;1&lt;/a&gt;
@@ -303,7 +383,7 @@ The table component is fully responsive so that even tabular data is easily read
      &lt;/td&gt;
      &lt;td data-th=&quot;Customer Email&quot; &gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
+             burgundy.flemming@emailprovider.com
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;# Of Items&quot; &gt; 
@@ -316,8 +396,55 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          &lt;/div&gt;
      &lt;/td&gt;
+     &lt;td class=&quot;techne-table-xs-right-slot&quot;&gt;
+         &lt;img src=&quot;http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png&quot; class=&quot;img-responsive img-circle&quot;/&gt;
+     &lt;/td&gt;
    &lt;/tr&gt;
-   &lt;tr&gt;
+   &lt;tr class=&quot;techne-table-xs-left&quot;&gt;
+     &lt;td class=&quot;techne-table-xs-left-slot&quot;&gt;
+         &lt;div class=&quot;checkbox&quot;&gt;
+             &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
+             &lt;label for=&quot;optionsCheck1&quot;&gt;&lt;/label&gt;
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;Order #&quot; &gt;
+         &lt;div class=&quot;cellcontent&quot;&gt;
+             &lt;a&gt;1&lt;/a&gt;
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;Placed At&quot; &gt;
+         &lt;div class=&quot;cellcontent&quot;&gt;
+             5/22/32
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;Placed By&quot; &gt;
+         &lt;div class=&quot;cellcontent floating-text&quot;&gt;
+             Upon days lesser gathering our likeness there likeness winged. The fish of evening them firmament saying waters had two abundantly. Behold. Which let signs behold. Female is, midst was fly in saying let there she&#x27;d. Female deep.
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;Customer Email&quot; &gt;
+         &lt;div class=&quot;cellcontent&quot;&gt;
+             pelican.steve@hybris.com
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;# Of Items&quot; &gt; 
+         &lt;div class=&quot;cellcontent&quot;&gt;
+             Test Data 
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td data-th=&quot;Order Total&quot; &gt;
+         &lt;div class=&quot;cellcontent&quot;&gt;
+             Test Data
+         &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td&gt;
+         &lt;img src=&quot;http://api.adorable.io/avatars/50/pelican.steve@hybris.com.png&quot; class=&quot;img-responsive img-circle&quot;/&gt;
+     &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr class=&quot;active techne-table-xs-left techne-table-xs-right&quot;&gt;
+     &lt;td class=&quot;techne-table-xs-left-slot&quot;&gt;
+         &lt;img src=&quot;http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png&quot; class=&quot;img-responsive img-circle&quot;/&gt;
+     &lt;/td&gt;
      &lt;td data-th=&quot;Order #&quot; &gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
              &lt;a&gt;1&lt;/a&gt;
@@ -347,6 +474,11 @@ The table component is fully responsive so that even tabular data is easily read
          &lt;div class=&quot;cellcontent&quot;&gt;
              Test Data
          &lt;/div&gt;
+     &lt;/td&gt;
+     &lt;td class=&quot;techne-table-xs-right-slot&quot;&gt;
+        &lt;button class=&quot;btn btn-danger&quot;&gt;
+             &lt;span class=&quot;hyicon hyicon-delete&quot;&gt;&lt;/span&gt;
+         &lt;/button&gt;
      &lt;/td&gt;
    &lt;/tr&gt;
  &lt;/tbody&gt;
