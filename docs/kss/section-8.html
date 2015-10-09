@@ -194,12 +194,14 @@ The table component is fully responsive so that even tabular data is easily read
                                 <table class="table table-striped table-hover techne-table">
  <thead>
    <tr>
+     <th></th>
      <th>Order #</th>
      <th>Placed At</th>
-     <th>Placed By</th>
+     <th>Description</th>
      <th>Customer Email</th>
      <th># Of Items</th>
      <th>Order Total</th>
+     <th></th>
   </tr>
  </thead>
  <tbody>
@@ -218,9 +220,9 @@ The table component is fully responsive so that even tabular data is easily read
              <label for="optionsCheck1"></label>
          </div>
      </td>
-     <td data-th="Order #" >
+     <td>
          <div class="cellcontent">
-             <a>1</a>
+             <a href="#">5254789653412</a>
          </div>
      </td>
      <td data-th="Placed At" >
@@ -228,9 +230,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          </div>
      </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
+     <td data-th="Description" >
+         <div class="cellcontent floating-text">
+             Upon days lesser gathering our likeness there likeness winged.
          </div>
      </td>
      <td data-th="Customer Email" >
@@ -255,13 +257,13 @@ The table component is fully responsive so that even tabular data is easily read
    <tr class="techne-table-xs-left">
      <td class="techne-table-xs-left-slot">
          <div class="checkbox">
-             <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
-             <label for="optionsCheck1"></label>
+             <input type="checkbox" id="optionsCheck2" value="optionc1" checked>
+             <label for="optionsCheck2"></label>
          </div>
      </td>
-     <td data-th="Order #" >
+     <td>
          <div class="cellcontent">
-             <a>1</a>
+             <a href="#">5254789653412</a>
          </div>
      </td>
      <td data-th="Placed At" >
@@ -269,9 +271,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          </div>
      </td>
-     <td data-th="Placed By" >
+     <td data-th="Description" >
          <div class="cellcontent floating-text">
-             Upon days lesser gathering our likeness there likeness winged. The fish of evening them firmament saying waters had two abundantly. Behold. Which let signs behold. Female is, midst was fly in saying let there she'd. Female deep.
+             Upon days lesser gathering our likeness there likeness winged.
          </div>
      </td>
      <td data-th="Customer Email" >
@@ -289,17 +291,19 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          </div>
      </td>
-     <td>
-         <img src="http://api.adorable.io/avatars/50/pelican.steve@hybris.com.png" class="img-responsive img-circle"/>
+     <td class="techne-table-xs-right-slot techne-table-action">
+        <button class="btn btn-link">
+             <span class="hyicon hyicon-remove"></span>
+         </button>
      </td>
    </tr>
    <tr class="active techne-table-xs-left techne-table-xs-right">
      <td class="techne-table-xs-left-slot">
          <img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="img-responsive img-circle"/>
      </td>
-     <td data-th="Order #" >
+     <td>
          <div class="cellcontent">
-             <a>1</a>
+             <a href="#">5254789653412</a>
          </div>
      </td>
      <td data-th="Placed At" >
@@ -307,9 +311,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          </div>
      </td>
-     <td data-th="Placed By" >
-         <div class="cellcontent">
-             Test Data
+     <td data-th="Description" >
+         <div class="cellcontent floating-text">
+             Upon days lesser gathering our likeness there likeness winged.
          </div>
      </td>
      <td data-th="Customer Email" >
@@ -327,9 +331,9 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          </div>
      </td>
-     <td class="techne-table-xs-right-slot">
-        <button class="btn btn-danger">
-             <span class="hyicon hyicon-delete"></span>
+     <td class="techne-table-xs-right-slot techne-table-action">
+        <button class="btn btn-link">
+             <span class="hyicon hyicon-more"></span>
          </button>
      </td>
    </tr>
@@ -342,12 +346,14 @@ The table component is fully responsive so that even tabular data is easily read
                                 <pre class="code-snippet"><code data-language="html">&lt;table class=&quot;table table-striped table-hover techne-table&quot;&gt;
  &lt;thead&gt;
    &lt;tr&gt;
+     &lt;th&gt;&lt;/th&gt;
      &lt;th&gt;Order #&lt;/th&gt;
      &lt;th&gt;Placed At&lt;/th&gt;
-     &lt;th&gt;Placed By&lt;/th&gt;
+     &lt;th&gt;Description&lt;/th&gt;
      &lt;th&gt;Customer Email&lt;/th&gt;
      &lt;th&gt;# Of Items&lt;/th&gt;
      &lt;th&gt;Order Total&lt;/th&gt;
+     &lt;th&gt;&lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
  &lt;tbody&gt;
@@ -366,9 +372,9 @@ The table component is fully responsive so that even tabular data is easily read
              &lt;label for=&quot;optionsCheck1&quot;&gt;&lt;/label&gt;
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
+     &lt;td&gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
+             &lt;a href=&quot;#&quot;&gt;5254789653412&lt;/a&gt;
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Placed At&quot; &gt;
@@ -376,9 +382,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
+     &lt;td data-th=&quot;Description&quot; &gt;
+         &lt;div class=&quot;cellcontent floating-text&quot;&gt;
+             Upon days lesser gathering our likeness there likeness winged.
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Customer Email&quot; &gt;
@@ -403,13 +409,13 @@ The table component is fully responsive so that even tabular data is easily read
    &lt;tr class=&quot;techne-table-xs-left&quot;&gt;
      &lt;td class=&quot;techne-table-xs-left-slot&quot;&gt;
          &lt;div class=&quot;checkbox&quot;&gt;
-             &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
-             &lt;label for=&quot;optionsCheck1&quot;&gt;&lt;/label&gt;
+             &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck2&quot; value=&quot;optionc1&quot; checked&gt;
+             &lt;label for=&quot;optionsCheck2&quot;&gt;&lt;/label&gt;
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
+     &lt;td&gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
+             &lt;a href=&quot;#&quot;&gt;5254789653412&lt;/a&gt;
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Placed At&quot; &gt;
@@ -417,9 +423,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
+     &lt;td data-th=&quot;Description&quot; &gt;
          &lt;div class=&quot;cellcontent floating-text&quot;&gt;
-             Upon days lesser gathering our likeness there likeness winged. The fish of evening them firmament saying waters had two abundantly. Behold. Which let signs behold. Female is, midst was fly in saying let there she&#x27;d. Female deep.
+             Upon days lesser gathering our likeness there likeness winged.
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Customer Email&quot; &gt;
@@ -437,17 +443,19 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td&gt;
-         &lt;img src=&quot;http://api.adorable.io/avatars/50/pelican.steve@hybris.com.png&quot; class=&quot;img-responsive img-circle&quot;/&gt;
+     &lt;td class=&quot;techne-table-xs-right-slot techne-table-action&quot;&gt;
+        &lt;button class=&quot;btn btn-link&quot;&gt;
+             &lt;span class=&quot;hyicon hyicon-remove&quot;&gt;&lt;/span&gt;
+         &lt;/button&gt;
      &lt;/td&gt;
    &lt;/tr&gt;
    &lt;tr class=&quot;active techne-table-xs-left techne-table-xs-right&quot;&gt;
      &lt;td class=&quot;techne-table-xs-left-slot&quot;&gt;
          &lt;img src=&quot;http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png&quot; class=&quot;img-responsive img-circle&quot;/&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Order #&quot; &gt;
+     &lt;td&gt;
          &lt;div class=&quot;cellcontent&quot;&gt;
-             &lt;a&gt;1&lt;/a&gt;
+             &lt;a href=&quot;#&quot;&gt;5254789653412&lt;/a&gt;
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Placed At&quot; &gt;
@@ -455,9 +463,9 @@ The table component is fully responsive so that even tabular data is easily read
              5/22/32
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td data-th=&quot;Placed By&quot; &gt;
-         &lt;div class=&quot;cellcontent&quot;&gt;
-             Test Data
+     &lt;td data-th=&quot;Description&quot; &gt;
+         &lt;div class=&quot;cellcontent floating-text&quot;&gt;
+             Upon days lesser gathering our likeness there likeness winged.
          &lt;/div&gt;
      &lt;/td&gt;
      &lt;td data-th=&quot;Customer Email&quot; &gt;
@@ -475,9 +483,9 @@ The table component is fully responsive so that even tabular data is easily read
              Test Data
          &lt;/div&gt;
      &lt;/td&gt;
-     &lt;td class=&quot;techne-table-xs-right-slot&quot;&gt;
-        &lt;button class=&quot;btn btn-danger&quot;&gt;
-             &lt;span class=&quot;hyicon hyicon-delete&quot;&gt;&lt;/span&gt;
+     &lt;td class=&quot;techne-table-xs-right-slot techne-table-action&quot;&gt;
+        &lt;button class=&quot;btn btn-link&quot;&gt;
+             &lt;span class=&quot;hyicon hyicon-more&quot;&gt;&lt;/span&gt;
          &lt;/button&gt;
      &lt;/td&gt;
    &lt;/tr&gt;
