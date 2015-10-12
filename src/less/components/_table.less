@@ -3,22 +3,38 @@
 // Modifier Class for responsive behavoir
 //
 // Markup:
-// <table ng-if="orders.length" class="table table-striped techne-table">
+// <table class="table table-striped table-hover techne-table">
 //  <thead>
 //    <tr>
+//      <th></th>
 //      <th>Order #</th>
 //      <th>Placed At</th>
-//      <th>Placed By</th>
+//      <th>Description</th>
 //      <th>Customer Email</th>
 //      <th># Of Items</th>
 //      <th>Order Total</th>
+//      <th></th>
 //   </tr>
 //  </thead>
 //  <tbody>
-//    <tr>
-//      <td data-th="Order #" >
+//    <tr class="y-add">
+//      <td colspan="100">
+// <button class="y-add-btn" type="button">
+//     <span class="hyicon hyicon-add"></span>
+//     Add
+// </button>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-right techne-table-xs-left">
+//      <td class="techne-table-xs-left-slot">
+//          <div class="checkbox">
+//              <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
+//              <label for="optionsCheck1"></label>
+//          </div>
+//      </td>
+//      <td>
 //          <div class="cellcontent">
-//              <a>1</a>
+//              <a href="#">5254789653412</a>
 //          </div>
 //      </td>
 //      <td data-th="Placed At" >
@@ -26,14 +42,14 @@
 //              5/22/32
 //          </div>
 //      </td>
-//      <td data-th="Placed By" >
-//          <div class="cellcontent">
-//              Test Data
+//      <td data-th="Description" >
+//          <div class="cellcontent floating-text">
+//              Upon days lesser gathering our likeness there likeness winged.
 //          </div>
 //      </td>
 //      <td data-th="Customer Email" >
 //          <div class="cellcontent">
-//              Test Data
+//              burgundy.flemming@emailprovider.com
 //          </div>
 //      </td>
 //      <td data-th="# Of Items" > 
@@ -46,11 +62,20 @@
 //              Test Data
 //          </div>
 //      </td>
+//      <td class="techne-table-xs-right-slot">
+//          <img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" class="img-responsive img-circle"/>
+//      </td>
 //    </tr>
-//    <tr>
-//      <td data-th="Order #" >
+//    <tr class="techne-table-xs-left">
+//      <td class="techne-table-xs-left-slot">
+//          <div class="checkbox">
+//              <input type="checkbox" id="optionsCheck2" value="optionc1" checked>
+//              <label for="optionsCheck2"></label>
+//          </div>
+//      </td>
+//      <td>
 //          <div class="cellcontent">
-//              <a>1</a>
+//              <a href="#">5254789653412</a>
 //          </div>
 //      </td>
 //      <td data-th="Placed At" >
@@ -58,9 +83,49 @@
 //              5/22/32
 //          </div>
 //      </td>
-//      <td data-th="Placed By" >
+//      <td data-th="Description" >
+//          <div class="cellcontent floating-text">
+//              Upon days lesser gathering our likeness there likeness winged.
+//          </div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">
+//              pelican.steve@hybris.com
+//          </div>
+//      </td>
+//      <td data-th="# Of Items" > 
+//          <div class="cellcontent">
+//              Test Data 
+//          </div>
+//      </td>
+//      <td data-th="Order Total" >
 //          <div class="cellcontent">
 //              Test Data
+//          </div>
+//      </td>
+//      <td class="techne-table-xs-right-slot techne-table-action">
+//         <button class="btn btn-link">
+//              <span class="hyicon hyicon-remove"></span>
+//          </button>
+//      </td>
+//    </tr>
+//    <tr class="active techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="img-responsive img-circle"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">5254789653412</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">
+//              5/22/32
+//          </div>
+//      </td>
+//      <td data-th="Description" >
+//          <div class="cellcontent floating-text">
+//              Upon days lesser gathering our likeness there likeness winged.
 //          </div>
 //      </td>
 //      <td data-th="Customer Email" >
@@ -78,6 +143,11 @@
 //              Test Data
 //          </div>
 //      </td>
+//      <td class="techne-table-xs-right-slot techne-table-action">
+//         <button class="btn btn-link">
+//              <span class="hyicon hyicon-more"></span>
+//          </button>
+//      </td>
 //    </tr>
 //  </tbody>
 // </table>
@@ -85,106 +155,150 @@
 // Styleguide 8.1
 table.techne-table {
     td {
-        display: table-cell;
-        padding-top: 23px;
-        padding-bottom: 60px !important;
-        clear: both;
-    }
-    tr.even {
-        background-color: #f5f5f5;
-    }
-    tr.odd {
-        background-color: #fff;
-    }
-    
-    > tbody > tr:hover {
-        background-color: @default-greyblue-200 !important;
         cursor: pointer;
-        .status {
-            &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED {
-                color: #fff;
+        color: @techne-typo-default;
+
+         &.no-padding{
+            padding: 0px!important;
+        }
+
+        &.techne-table-action{
+                .hyicon{
+                    font-size: 24px;
+                }
+        }
+    }
+
+    tr{
+        &.y-add{
+            background: transparent!important;
+            box-shadow: none;
+            > td{
+                padding: 0px 0px 10px!important;
+                border: none;
             }
+            margin-bottom: 10px;
         }
     }
     
-    > tbody > tr >td:first-child {
-        padding-left: 8px;
-    }
-    .nested-body {
-        background-color: @nested-body-backgroundcolor;
-        margin: 0 -15px 30px -15px;
-        padding: 15px;
-        border: 1px solid @nested-body-bordercolor;
-    }
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-md-max) {
+
+
         thead {
             display: none;
         }
-        td {
+        td{
+            clear:both;
             display: block;
-            -webkit-box-shadow: none !important;
-            box-shadow: none !important;
             border-top: none !important;
-        }
-        td > div.cellcontent {
-            width: 60%;
-            display: inline-block;
-            float: left;
-        }
-        td:before {
-            content: attr(data-th) "";
-            font-weight: bold;
-            width: 40%;
-            display: inline-block;
-            vertical-align: top;
-            float: left;
-        }
-        
-        tr {
-            display: block;
-        }
-        tr:hover {
-            cursor: pointer;
-            .status {
-                &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED {
-                    color: #fff;
-                }
+
+            /* These are technically the same, but use both */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+
+            -ms-word-break: break-all;
+            /* This is the dangerous one in WebKit, as it breaks things wherever */
+            word-break: break-all;
+            /* Instead use this non-standard one: */
+            word-break: break-word;
+
+            /* Adds a hyphen where the word breaks, if supported (No Blink) */
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+
+            .floating-text{
+                -moz-hyphens: none;
+                -webkit-hyphens: none;
+                -ms-hyphens: none;
+                word-break: initial;
+                word-wrap: initial;
+            }
+
+            &:before{
+                content: attr(data-th) "";
+                width: 100%;
+                display: block;
+                font-size: 13px;
+                color: #8a8fa1;
+            }
+
+            > div.cellcontent {
+                width: 100%;
+                display: block;
+                color: @techne-typo-default;
+                font-size: 15px;
+            }
+
+            &.techne-table-xs-left-slot{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                padding-right: 5px;
+                padding-left: 10px;
+            }
+
+            &.techne-table-xs-right-slot{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                padding-left: 5px; 
+                padding-right: 10px;
             }
         }
-        tr + tr {
-            border-top: none !important;
-        }
-        padding: .25em .5em;
-        :first-child {
-            padding-left: 0;
-        }
-    }
-    table.techne-table {
-        padding: 0;
+   
         tr {
-            border: none !important;
-            padding: 20px 5px;
+
+            display: block;
+            position: relative;
+            box-shadow: 0 2px 3px fade(#8a8fa1, 20%);
+            margin-bottom: 10px;
+
+            &.techne-table-row-clickable{
+                &:hover{
+                    box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
+                }
+            }
+
+
+
+            &:hover{
+
+
+                .status {
+                    &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED {
+                        color: #fff;
+                    }
+                }
+            }
+            &.techne-table-xs-left{
+                padding-left: 50px;
+            }
+            &.techne-table-xs-right{
+                padding-right: 50px;
+            }
         }
-        tr.even {
-            background-color: transparent;
+
+        // Thanks Bootstrap! That's called too specific selectors...
+         > tbody > tr {
+
+            // table-stripe overwrite
+            &:nth-child(1n){
+                background: #fff;
+            }
+
+            > td {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+
         }
-        td:before {
-            font-weight: normal !important;
-            display: block !important;
-        }
-        td {
-            padding: 3px 10px !important;
-            display: block !important;
-            font-weight: bold !important;
-        }
-        td span {
-            display: block !important;
-        }
-        td + td {
-            padding-top: 12px !important;
-        }
-        td:after {
-            display: none !important;
-        }
+
     }
 }
