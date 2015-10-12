@@ -5,6 +5,6 @@ type: Overview
 order: 1
 ---
 
-The Commerce Builder Module is integrated with the <%- @partial('storefronttemplate_YaaSStorefront') %>, but can be coupled with any other front-end application. It supports a number of configuration options, and enables easy management of commerce functionality.
+techné is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST
 
-After you set up your project in the Builder, and subscribe to the Core and Commerce packages in the YaaS Market, you can see the Commerce Builder Module in your Builder project. The module includes views for Products, Categories, Customers, Orders, Coupons, and Commerce Settings.
+techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience.
