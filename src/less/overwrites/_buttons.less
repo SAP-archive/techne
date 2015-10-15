@@ -14,16 +14,17 @@
 
 .btn{
 	border: @btn-border;
+  font-family: @font-family-dosis;
+  text-transform: uppercase;
+  border-radius: 0;
 }
 
 .btn-primary {
-  .button-variant-custom(@btn-primary-color; @btn-primary-bg; @btn-primary-border; @default-yellow-100; @dark-blue; @default-yellow-200; @default-yellow-100; @default-yellow-100; @default-yellow-100);
-	.box-shadow(0 3px 0 darken(@btn-primary-bg, 7%));
+  .button-variant-custom(@btn-primary-color; @btn-primary-bg; @btn-primary-border; @default-yellow-300; @dark-blue; @default-yellow-200; @default-yellow-100; @default-yellow-100; @default-yellow-300);
 }
 
 .btn-default {
-  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; @dark-blue-600; #fff; @dark-blue-900; @dark-blue-400; @dark-blue-600; @dark-blue-500);
-	.box-shadow(0 3px 0 darken(@btn-default-bg, 10%));
+  .button-variant-custom(@btn-default-color; @btn-default-bg; @btn-default-border; darken(@btn-default-bg, 10%); #fff; @dark-blue-900; @dark-blue-400; @dark-blue-600; @dark-blue-500);
 }
 
 .btn-success {
@@ -79,20 +80,22 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    .box-shadow(0 2px 0 fade(@boxshadow-default, 100%));
+    box-shadow: none;
+    background-color: @btn-bg-disabled;
+    color: @btn-color-disabled;
     
     &,
     &:hover,
     &:active,
     &.active {
-      background-color: @background-default;
+      background-color: @btn-bg-disabled;
       border-color: @border-default;
     }
     &:active,
     &.active,
     .open .dropdown-toggle& {
       background-image: none;
-      background-color: lighten(@background-hover, 4%);
+      background-color: @btn-bg-disabled;
       border-color: lighten(@border-hover, 4%);
       .box-shadow(0 2px 0 fade(darken(@boxshadow-hover, 4%), 100%));
     }
@@ -109,7 +112,7 @@
 // 
 // Markup:
 //<button class="btn btn-lg btn-subordinate">
-//  <span class="hyicon hyicon-back">BACK</span>
+//  <span class="hyicon hyicon-back"></span> BACK
 //</button>
 //
 // Styleguide 2.2
