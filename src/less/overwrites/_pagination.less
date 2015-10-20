@@ -25,6 +25,24 @@
 
 
 .pagination{
-   margin-top: 0;
-   font-weight: 600;
+  > li {
+    > a,
+    > span{  
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    &.disabled,
+    &.active{
+          > a,
+          > span{  
+            &:hover{
+              text-decoration: none;
+            }
+          }
+    }
+ }
+  margin-top: 0;
+  font-weight: 600;
 }
