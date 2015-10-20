@@ -1710,3 +1710,14 @@ header.hyHomeHeaderMinor {
 #demo-page-background .panel-body {
   background-color: #fff;
 }
+.hyPatternsPage .modal-dialog {
+  width: 90%;
+}
+#viewFullscreen .modal-dialog {
+  overflow: hidden;
+  background-color: #e0e9f0;
+}
+#viewFullscreen .modal-dialog .modal-content {
+  border: none;
+  box-shadow: none;
+}
