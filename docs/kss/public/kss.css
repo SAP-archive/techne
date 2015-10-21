@@ -1710,3 +1710,13 @@ header.hyHomeHeaderMinor {
 #demo-page-background .panel-body {
   background-color: #fff;
 }
+.error-message-table td:nth-child(2),
+.error-message-table td:nth-child(3) {
+  word-break: break-all;
+}
+.error-message-table .narrow-col {
+  min-width: 130px;
+}
+.error-message-table .wide-col {
+  min-width: 260px;
+}
