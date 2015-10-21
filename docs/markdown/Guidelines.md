@@ -611,15 +611,15 @@
                 <th>HTTP Code</th>   
                 <th>Top-Level Error Type</th>   
                 <th>Sub-Level Error Type</th>   
-                <th>Description</th>   
-                <th>Message to Display</th>   
+                <th>Error Description</th>   
+                <th>Recommended Error Message</th>   
             </tr>
             <tr>
                 <td>400</td>
                 <td>bad_payload_syntax</td>
                 <td></td>
                 <td>The request payload has incorrect syntax according to the sent Content-Type. Check the payload content for syntax errors, such as missing commas or quotation marks that are not closed.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
@@ -640,21 +640,21 @@
                 <td></td>
                 <td>missing_header</td>
                 <td>Any of the required headers is missing. Check the request to see if it contains the required header, or refer to the error details response to identify the missing header.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
                 <td></td>
                 <td>invalid_header</td>
                 <td>One or more sent headers has an invalid format. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.A value is longer than the maximum length.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
+                <td></td>
                 <td>missing_query_parameter</td>
                 <td>A required query parameter is missing. Check your request to ensure that it contains the required query parameters.</td>
-                <td></td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
@@ -667,14 +667,14 @@
                         <li>A value is longer than the maximum length."</li>
                     </ul>
                 </td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
                 <td></td>
                 <td>out_of_range_parameter</td>
                 <td>A query parameter has an invalid format. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>400</td>
@@ -687,7 +687,7 @@
                 <td>400</td>
                 <td></td>
                 <td>your_api's_specific_type</td>
-                <td>Enter your description.</td>
+                <td>depends on specific API</td>
                 <td>Whoops!  Something went wrong. Make sure all fields are complete and try again</td>
             </tr>
             <tr>
@@ -695,21 +695,21 @@
                 <td>insufficient_credentials</td>
                 <td></td>
                 <td>No credentials are provided, or the provided credentials are refused.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>403</td>
                 <td>insufficient_permissions</td>
                 <td></td>
                 <td>The credentials indicate a system-known user, but the user is not allowed to perform the requested operation.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>404</td>
                 <td>collection_resource_non_existing</td>
                 <td></td>
                 <td>The requested URI for a collection resource is not accessible. Check the syntax, and verify that the requested service is available.</td>
-                <td>Whoops!  That doesn't exist.  Try again</td>
+                <td>Whoops! That doesn't exist. Try again</td>
             </tr>
             <tr>
                 <td>404</td>
@@ -723,21 +723,21 @@
                 <td>unsupported_method</td>
                 <td></td>
                 <td>The requested resource does not support the specified HTTP action. Verify that you are calling an action supported by the requested endpoint.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>406</td>
                 <td>unsupported_response_content_type</td>
                 <td></td>
                 <td>The client requested a response type which cannot be obtained from the requested resource. Check the requested endpoint response capabilities and compare them with your client Accept header.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>409</td>
                 <td>conflict_resource</td>
                 <td></td>
                 <td>The requested resource could not be created, updated, or deleted due to server-side validation. This could be caused either by a temporary issue, such as an optimistic lock or persistent data constraint. Refer to the error details response to identify conflict details.</td>
-                <td>That's so great it already exists!  Try something different</td>
+                <td>That's so great it already exists! Try something different</td>
             </tr>
             <tr>
                 <td>413</td>
@@ -758,28 +758,28 @@
                 <td>unsupported_request_content_type</td>
                 <td></td>
                 <td>The client sent a type of request which is not supported by the requested endpoint. Verify that your request's Content-Type matches the requested endpoint accepted content.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>500</td>
                 <td>internal_service_error</td>
                 <td></td>
                 <td>A server-side exception occurred which prevented the system from correctly returning the result. Refer to the error details response to identify exception details.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>500</td>
                 <td>backing_service_unavailable</td>
                 <td></td>
                 <td>Some backing service is not available. Refer to the error details response to identify the origin of the problem.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
             <tr>
                 <td>503</td>
                 <td>service_temporarily_unavailable</td>
                 <td></td>
                 <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
-                <td></td>
+                <td>Something went very wrong. Please try again.</td>
             </tr>
 
         </table>
