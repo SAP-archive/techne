@@ -606,13 +606,13 @@
         <h3>Generic System Errors</h3>
         <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the API Best Practices page (link to https://devportal.yaas.io/tools/apibestpractices/index.html#Errors) in the Dev Portal.</p>
 
-        <table class="table teche-table">
+        <table class="table teche-table error-message-table">
             <tr>
                 <th>HTTP Code</th>   
-                <th>Top-Level Error Type</th>   
-                <th>Sub-Level Error Type</th>   
-                <th>Error Description</th>   
-                <th>Recommended Error Message</th>   
+                <th class="narrow-col">Top-Level Error Type</th>   
+                <th class="narrow-col">Sub-Level Error Type</th>   
+                <th class="wide-col">Error Description</th>   
+                <th class="wide-col">Recommended Error Message</th>   
             </tr>
             <tr>
                 <td>400</td>
