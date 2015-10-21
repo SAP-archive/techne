@@ -1710,13 +1710,14 @@ header.hyHomeHeaderMinor {
 #demo-page-background .panel-body {
   background-color: #fff;
 }
-.error-message-table td:nth-child(2),
-.error-message-table td:nth-child(3) {
-  word-break: break-all;
+.hyPatternsPage .modal-dialog {
+  width: 90%;
 }
-.error-message-table .narrow-col {
-  min-width: 130px;
+#viewFullscreen .modal-dialog {
+  overflow: hidden;
+  background-color: #e0e9f0;
 }
-.error-message-table .wide-col {
-  min-width: 260px;
+#viewFullscreen .modal-dialog .modal-content {
+  border: none;
+  box-shadow: none;
 }
