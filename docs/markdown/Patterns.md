@@ -3,7 +3,7 @@
 		"showLeftNav": true,
 		"navigation": [
 			{
-				"text": "List Pages",
+				"text": "Table Example",
 				"id": "#patterns-list-pages"
 			},
       {
