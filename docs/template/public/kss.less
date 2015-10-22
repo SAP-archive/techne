@@ -123,13 +123,13 @@ body.kss-body {
     nav ul {
         margin: 0;
         ;
-        padding: 0;
+        padding: 15px 0 0 0;
         list-style-type: none;
 
         li {
             a {
-                border-left: 4px solid #fff;
-                color: #808fa1;
+                // border-left: 4px solid #fff;
+                color: #dbe3eb;
                 display: block;
                 padding: 10px 15px 10px 31px;
                 text-decoration: none;
@@ -139,7 +139,7 @@ body.kss-body {
                 }
             }
             &.kss-back{
-                border-bottom: 1px solid #ced7e0;
+                border-bottom: 1px solid #27394f;
                 position: relative;
 
                 @media(min-width:768px) {
@@ -161,7 +161,7 @@ body.kss-body {
                 }
             }
             &.kss-active a {
-                background: none repeat scroll 0 0 #edf1f5;
+                // background: none repeat scroll 0 0 #edf1f5;
                 border-left-color: #0486E0;
                 color: #0486E0;
                 text-decoration: none;
@@ -173,6 +173,7 @@ body.kss-body {
     border: 0 none;
     box-shadow: none;
     padding-bottom: 41px;
+    background:none;
 }
 #kss-header h1 {
     font-size: 1.5em;
@@ -439,6 +440,7 @@ li.L9 {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    // background:#e0e9f0;
 }
 body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper{
     padding-left: 0;
@@ -473,7 +475,7 @@ body.has-left-nav #kss-nav {
     -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 
-    background: transparent;
+    background: #233243;
 
 }
 
@@ -482,7 +484,7 @@ body.has-left-nav.navbar-super-up #kss-nav {
 }
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
     width: 250px;
-    background: #fff;
+    // background: #233243;
 }
 #kss-main {
     padding: 15px;
@@ -1419,6 +1421,10 @@ header.hyHomeHeaderMinor {
             }
         }
     }
+}
+
+body.hyComponentsPage{
+    background: #e0e9f0;
 }
 
 #demo-page-background {

@@ -17,7 +17,10 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}}">
+<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}">
+
+    
+    
     <div class="main-content">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
@@ -59,7 +62,7 @@
                                 <img class="profile-img" src="/img/profile-image.jpg" alt=""/>
                                 <div class="profile-details">
                                     <div class="profile-email">
-                                        
+
                                     </div>
                                     <div class="profile-link">
                                         <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Profile</a>
@@ -117,21 +120,21 @@
                 <li>
                     {{#if_eq pagename "index"}}
                         <span class="active js_navtrigger">Home</span>
-                    {{else}} 
+                    {{else}}
                         <a href="index.html" class="inactive">Home</a>
-                    {{/if_eq}}      
+                    {{/if_eq}}
                 </li>
                 <li>
                     {{#if_eq pagename "Guidelines"}}
-                        <span class="active js_navtrigger">Guidelines</span>
-                    {{else}} 
+                        <span class="active js_navtrigger">Design Guidelines</span>
+                    {{else}}
                         <a href="Guidelines.html" class="inactive">Guidelines</a>
-                    {{/if_eq}}     
+                    {{/if_eq}}
                 </li>
                 <li>
                     {{#if_eq pagename "components"}}
                         <span class="active">Components</span>
-                    {{else}} 
+                    {{else}}
                         <a href="section-1.html" class="inactive">Components</a>
                     {{/if_eq}}
                 </li>
@@ -142,14 +145,14 @@
                         <a href="Patterns.html" class="inactive">Patterns &amp; Layouts</a></li>
                     {{/if_eq}}
                     <li>
-                    
+
                 </li>
                 <li>
                     {{#if_eq pagename "GettingStarted"}}
                         <span class="active">Download &amp; Get Started</span>
-                    {{else}} 
+                    {{else}}
                         <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
-                    {{/if_eq}}     
+                    {{/if_eq}}
                 </li>
 
             </ul>
@@ -190,14 +193,14 @@
                                 <li class="kss-menu-item"><a href="section-{{reference}}.html"> {{header}}</a></li>
                                 {{/eachRoot}}
                             {{/if}}
-                            {{/if_eq}}   
+                            {{/if_eq}}
                         </ul>
                 </nav>
 
 
             </aside>
           </div>
-        
+
         {{#if leftNavMobileOnly}}
         <div role="main" id="kss-main" class="kss-main col-xs-12">
         {{else}}
@@ -214,11 +217,20 @@
                 {{rootNumber}}
                 <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
                     {{#if_eq refDepth 1}}
+                      {{#if_eq reference 1}}
+                        <h1>Components</h1>
+                        <p>
+                          The hybris techne component library is rooted in Bootstrap 3 and includes custom UI components used across YaaS.
+                          It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
+                          also across YaaS. If you’re looking for something basic for your UI, <a href="http://getbootstrap.com/components">check here</a> to help build out your pages.
+                        </p>
+                      {{/if_eq}}
                               <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
-                    {{else}} 
+
+                    {{else}}
                               <h2 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h2>
-                    {{/if_eq}}      
-              
+                    {{/if_eq}}
+
                     {{#if markup}}
                     {{#if description}}
                     <div class="kss-description">
@@ -281,7 +293,7 @@
       </div>
       <div class="modal fade" id="feedbackModal">
           <div class="modal-dialog feedback-modal">
-              <div class="modal-content">     
+              <div class="modal-content">
                   <div class="modal-body">
                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                       <iframe src="https://cloud4.wufoo.eu/forms/feedback/" width="100%" frameborder="0" scrolling="no"  height="584"></iframe>
