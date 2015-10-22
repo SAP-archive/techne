@@ -17,7 +17,10 @@
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
 
 </head>
-<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}}">
+<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}">
+
+    
+    
     <div class="main-content">
     <!-- / SUPER HEADER -->
     <header class="navbar-super-holder">
