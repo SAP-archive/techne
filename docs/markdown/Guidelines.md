@@ -3,25 +3,33 @@
     	"showLeftNav": true,
     	"navigation": [
     		{
-    			"text": "Spirit & Vision", 
+    			"text": "Spirit & Vision",
     			"id": "#guidelines-spirit-vision"
     		},
          {
-           "text": "Design Principles", 
+           "text": "Design Principles",
            "id": "#guidelines-design-principles"
          },
          {
-           "text": "Navigation", 
+           "text": "Navigation",
            "id": "#guidelines-navigation"
          },
          {
-           "text": "Visual System", 
+           "text": "Visual System",
            "id": "#guidelines-visual-system"
          },
          {
            "text": "Tone & Voice",
            "id": "#guidelines-tone-voice"
          },
+	 {
+	   "text": "Errors & Notifications",
+	   "id": "#guidelines-errors"
+	 },
+	 {
+	   "text": "System Errors",
+	   "id": "#guidelines-system-errors"
+	 },
          {
            "text": "Accessibility",
            "id": "#guidelines-accessibility"
@@ -394,7 +402,7 @@
                     <!-- Wrapper for slides -->
                         <div class="item active">
                             <img src="images/H1.png" alt="..." >
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H1 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -403,7 +411,7 @@
                         </div>
                         <div class="item">
                             <img src="images/H2.png" alt="..." >
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H2 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -412,7 +420,7 @@
                         </div>
                         <div class="item">
                             <img src="images/H3.png" alt="...">
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H3 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -457,7 +465,7 @@
                         &lt;h2&gt;H3 Example&lt;/h2&gt;
                         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
                     &lt;/div&gt;
-                &lt;/div&gt; 
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -554,7 +562,8 @@
                 <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
             </tr>
         </table>
-        <hr>
+      </section>
+        <hr id="guidelines-errors">
         <h3>Messaging; Errors &amp; Notifications</h3>
         <ul>
             <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
@@ -569,7 +578,7 @@
             </tr>
             <tr>
                 <td>
-                    Billing Method 
+                    Billing Method
                     <Billing Method Method Name>
                     added.  
                 </td>
@@ -577,12 +586,12 @@
             </tr>
             <tr>
                 <td>
-                    Shipping Cost 
+                    Shipping Cost
                     <Shipping Cost>
                     saved successfully. Shipping costs saved
                 </td>
                 <td>
-                    Package 
+                    Package
                     <Package Name>
                     couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
                 </td>
@@ -593,24 +602,24 @@
             </tr>
             <tr>
                 <td>
-                    Package 
+                    Package
                     <Package Name>
-                    approved. Team 
+                    approved. Team
                     <Team Name>
                     can decide when to publish to y Market.
                 </td>
                 <td>
                     <Package Name>
-                    approved. 
+                    approved.
                     <Team Name>
                     can decide when to publish.
                 </td>
             </tr>
         </table>
 
-        <hr>
-        
-        <h3>Generic System Errors</h3>
+        <hr id="guidelines-system-errors">
+
+        <h3>System Errors</h3>
         <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the API Best Practices page (link to https://devportal.yaas.io/tools/apibestpractices/index.html#Errors) in the Dev Portal.</p>
 
         <table class="table teche-table error-message-table">
@@ -667,7 +676,7 @@
                 <td>400</td>
                 <td></td>
                 <td>invalid_query_parameter</td>
-                <td>One or more sent query parameters has an invalid format. This denotes specifically that there is: 
+                <td>One or more sent query parameters has an invalid format. This denotes specifically that there is:
                     <ul>
                         <li>A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.</li>
                         <li>A type incompatibility, such as a field modeled to be an integer, but a non numeric expression was found instead.</li>
@@ -790,7 +799,7 @@
             </tr>
 
         </table>
-        
+
         <h3>Language and Translation</h3>
         <ul>
             <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>

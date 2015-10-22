@@ -24,8 +24,7 @@
 
 // Buttons
 //
-// Reusable elements that can be used across the site.
-// So far this just includes buttons.
+// Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. <a href="Guidelines.html">See Patterns & Layouts</a> for examples of usage.
 //
 // Styleguide 2
 
@@ -38,14 +37,14 @@
 
 // Icons
 //
-// Reusable icons that can be used across the site.
+// Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun.  Icons can be used adaptively if desired, but at this point are used more as visual elements within other components.
 //
 // Styleguide 4
 @import "./components/_icons";
 
 // Tabs
 //
-// Tabs are a good way to organize and group information on page while reducing information density.
+// Use Tabs when you need to organize and group information on page while reducing information density.
 //
 // Styleguide 5
 
@@ -60,7 +59,7 @@
 
 // Cards
 //
-// Cards are used to display information in a visual, scannable manner.
+// Cards are used to display information in a visual, scannable manner. Use in scenarios when people want to associate a visual with information e.g. a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
 //
 // Styleguide 7
 @import "./components/_usercards";
@@ -69,24 +68,22 @@
 
 // Tables
 //
-// Tables are used across UI modules to display data that is best viewed and manipulated in tabular format by users.
-// The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
+// Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
 //
 // Styleguide 8
 @import "./components/_table.less";
 
 
-// Products
+// Product Thumbnails
 //
-// Reusable elements that can be used across the site.
+// The Product Thumbnail component is a highly interactive and intuitive component that allows immediate visualiation and contextually relevant actions.  Use for any marketing or merchandising UI where product info must be maniupulated. Product Thumbnail pages can employ pagination or infininte scroll, depending on the use case.
 //
 // Styleguide 9
 @import "./components/_products.less";
 
-// Forms
+// Form Elements
 //
-// Reusable elements that can be used across the site.
-// So far this just includes form elements.
+// Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field.  Use these components along with inline help and error state treatements for any form design.
 //
 // Styleguide 10
 @import "./components/_forms-toggle";
@@ -95,16 +92,15 @@
 @import "./components/_forms-readonly";
 @import "./components/_forms-hint-text";
 
-// Panels
+// Page Content Panels
 //
-// Reusable elements that can be used across the site.
-// So far this just includes panels.
+// Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
 //
 // Styleguide 11
 
 // Modals
 //
-// Displays content in an inpage lightbox
+// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
 //
 // Styleguide 13
 @import "./components/_modals.less";
@@ -120,6 +116,13 @@
 
 @import "./components/_sticky_navbar.less";
 @import "./components/_alert.less";
+
+
+// Loading Spinner
+//
+// CSS based spinner to indicate to the user that some information is processing or loading.
+//
+// Styleguide 14
 @import "./components/_spinner.less";
 
 
