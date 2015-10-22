@@ -33,7 +33,6 @@
     <section id="guidelines-spirit-vision" class="page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
-        <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs">
         <div class="hybris-guy-bg">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
@@ -112,24 +111,32 @@
         <h3>Mobile Navigation</h3>
         <p>At the mobile inflection point menu is closed by default.</p>
         <div class="row">
-            <div class="col-md-4 col-sm-6 text-center">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
                 <img src="images/navigation-mobile-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
             </div>
             <span class="visible-xs"><br><br></span>
-            <div class="col-md-4 col-md-offset-2 col-sm-6 text-center">
+            <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+	     <span class="visible-xs"><br><br><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
         </div>
         <hr>
         <h3>Tablet Navigation</h3>
         <p>At the tablet inflection point menu is closed by default. </p>
         <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
                 <img src="images/navigation-tablet-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
             </div>
             <span class="visible-xs"><br><br></span>
-            <div class="col-md-6  text-center">
+            <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+	    <span class="visible-xs"><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
         </div>
         <hr>
