@@ -1720,4 +1720,5 @@ header.hyHomeHeaderMinor {
 #viewFullscreen .modal-dialog .modal-content {
   border: none;
   box-shadow: none;
+  background-color: transparent;
 }
