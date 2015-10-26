@@ -10,7 +10,7 @@ src/less/globals/_resource-paths.less
 ## IDE Specfici folders
 .idea/
 
-docs/kss/public/*.html
+docs/kss/*.html
 
 # OS generated files #
 ######################
