@@ -13,8 +13,12 @@ body.kss-body {
 
     padding-top: 100px;
 }
+.main-content{  background: #27394f none repeat scroll 0 0;}
 #kss-wrapper {
     height: auto;
+}
+#content{  
+    background: #fff;
 }
 .active.demo-container {
     background-color: #e0e9f0;
@@ -118,7 +122,7 @@ body.kss-body {
   display: none;
 }
 #kss-nav {
-    background-color: #fff;
+    // background-color: #fff;
     font-family: "Dosis", sans-serif !important;
     nav ul {
         margin: 0;
@@ -475,13 +479,16 @@ body.has-left-nav #kss-nav {
     -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 
-    background: #233243;
-
 }
 
 body.has-left-nav.navbar-super-up #kss-nav {
     padding-top: 50px;
 }
+
+body.has-left-nav #kss-wrapper{
+    // background: #233243;
+}
+
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
     width: 250px;
     // background: #233243;
