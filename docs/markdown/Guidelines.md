@@ -3,25 +3,33 @@
     	"showLeftNav": true,
     	"navigation": [
     		{
-    			"text": "Spirit & Vision", 
+    			"text": "Spirit & Vision",
     			"id": "#guidelines-spirit-vision"
     		},
          {
-           "text": "Design Principles", 
+           "text": "Design Principles",
            "id": "#guidelines-design-principles"
          },
          {
-           "text": "Navigation", 
+           "text": "Navigation",
            "id": "#guidelines-navigation"
          },
          {
-           "text": "Visual System", 
+           "text": "Visual System",
            "id": "#guidelines-visual-system"
          },
          {
            "text": "Tone & Voice",
            "id": "#guidelines-tone-voice"
          },
+	 {
+	   "text": "Errors & Notifications",
+	   "id": "#guidelines-errors"
+	 },
+	 {
+	   "text": "System Errors",
+	   "id": "#guidelines-system-errors"
+	 },
          {
            "text": "Accessibility",
            "id": "#guidelines-accessibility"
@@ -33,7 +41,6 @@
     <section id="guidelines-spirit-vision" class="page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
-        <img src="images/arrows-four-down.png" alt="" width="80%" class="hidden-xs">
         <div class="hybris-guy-bg">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
@@ -112,24 +119,32 @@
         <h3>Mobile Navigation</h3>
         <p>At the mobile inflection point menu is closed by default.</p>
         <div class="row">
-            <div class="col-md-4 col-sm-6 text-center">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
                 <img src="images/navigation-mobile-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
             </div>
             <span class="visible-xs"><br><br></span>
-            <div class="col-md-4 col-md-offset-2 col-sm-6 text-center">
+            <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+	     <span class="visible-xs"><br><br><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
         </div>
         <hr>
         <h3>Tablet Navigation</h3>
         <p>At the tablet inflection point menu is closed by default. </p>
         <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
                 <img src="images/navigation-tablet-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
             </div>
             <span class="visible-xs"><br><br></span>
-            <div class="col-md-6  text-center">
+            <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+	    <span class="visible-xs"><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
         </div>
         <hr>
@@ -387,7 +402,7 @@
                     <!-- Wrapper for slides -->
                         <div class="item active">
                             <img src="images/H1.png" alt="..." >
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H1 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -396,7 +411,7 @@
                         </div>
                         <div class="item">
                             <img src="images/H2.png" alt="..." >
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H2 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -405,7 +420,7 @@
                         </div>
                         <div class="item">
                             <img src="images/H3.png" alt="...">
-                            <!-- Hidden For Now 
+                            <!-- Hidden For Now
                             <div class="carousel-caption">
                                 <h2>H3 Example</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -450,7 +465,7 @@
                         &lt;h2&gt;H3 Example&lt;/h2&gt;
                         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
                     &lt;/div&gt;
-                &lt;/div&gt; 
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -547,7 +562,8 @@
                 <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
             </tr>
         </table>
-        <hr>
+      </section>
+        <hr id="guidelines-errors">
         <h3>Messaging; Errors &amp; Notifications</h3>
         <ul>
             <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
@@ -562,7 +578,7 @@
             </tr>
             <tr>
                 <td>
-                    Billing Method 
+                    Billing Method
                     <Billing Method Method Name>
                     added.  
                 </td>
@@ -570,12 +586,12 @@
             </tr>
             <tr>
                 <td>
-                    Shipping Cost 
+                    Shipping Cost
                     <Shipping Cost>
                     saved successfully. Shipping costs saved
                 </td>
                 <td>
-                    Package 
+                    Package
                     <Package Name>
                     couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
                 </td>
@@ -586,25 +602,25 @@
             </tr>
             <tr>
                 <td>
-                    Package 
+                    Package
                     <Package Name>
-                    approved. Team 
+                    approved. Team
                     <Team Name>
                     can decide when to publish to y Market.
                 </td>
                 <td>
                     <Package Name>
-                    approved. 
+                    approved.
                     <Team Name>
                     can decide when to publish.
                 </td>
             </tr>
         </table>
 
-        <hr>
-        
-        <h3>Generic System Errors</h3>
-        <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
+        <hr id="guidelines-system-errors">
+
+        <h3>System Errors</h3>
+        <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the API Best Practices page (link to https://devportal.yaas.io/tools/apibestpractices/index.html#Errors) in the Dev Portal.</p>
 
         <table class="table teche-table error-message-table">
             <tr>
@@ -660,7 +676,7 @@
                 <td>400</td>
                 <td></td>
                 <td>invalid_query_parameter</td>
-                <td>One or more sent query parameters has an invalid format. This denotes specifically that there is: 
+                <td>One or more sent query parameters has an invalid format. This denotes specifically that there is:
                     <ul>
                         <li>A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.</li>
                         <li>A type incompatibility, such as a field modeled to be an integer, but a non numeric expression was found instead.</li>
@@ -783,7 +799,7 @@
             </tr>
 
         </table>
-        
+
         <h3>Language and Translation</h3>
         <ul>
             <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>

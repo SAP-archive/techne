@@ -3,7 +3,7 @@
 		"showLeftNav": true,
 		"navigation": [
 			{
-				"text": "List Pages",
+				"text": "Table Example",
 				"id": "#patterns-list-pages"
 			},
       {
@@ -136,9 +136,80 @@
       </div>
     </div>
   </section>
+  <section id="patterns-header" class="page">
+    <h2>Standard Add/Edit/Delete Page Header</h2>
+    <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”. </p>
+    <ul>
+      <li><strong>“Save”</strong> commits adds or updates.<li>
+      <li><strong>“Cancel”</strong> discards any updates in progress and brings the person back to the previous page they were on; acting as a historical “back”.</li>
+      <li><strong>“Back”</strong>  in the left navigation and button link act as a hierarchical ‘back’. </li>
+      <li><strong>NOTE:</strong> It is standard practis to use the dialog pattern to warn people if they try and leave a CRUD operations page without saving their updates.</li>
+    </ul>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/standard-header.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/standard-header.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/standard-header_mobile.png" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/standard-header_mobile.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="patterns-wizard" class="page">
+    <h2>Wizards</h2>
+    <p>Wizards are made up of the modal component and button and/or button link components. Use the wizard pattern when you want to guide people through a step-by-step process. Typically a wizard will have a ‘next’ and ‘previous’ action and a “Save” action at the last step. </p>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/wizard-desktop.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/wizard.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/wizard_mobile.png" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/wizard_mobile.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="patterns-wizard" class="page">
+    <h2>Dialogues</h2>
+    <p>Dialogues are made up of the modal component and buttons/button links. Use the dialogue pattern when you want to bring attention to an action that needs to be taken before someone proceeds.  An example of this is when someone tries to leave a page without submitting their updates. </p>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Dialogues.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Dialogues.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="patterns-card-pages" class="page">
+    <h2>Tours</h2>
+    <p>A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanation of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.</p>
+
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/tour_mobile.png" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/tour_mobile.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Tour_desktop_1.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Tour_desktop_1.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Tour_desktop_2.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Tour_desktop_1.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
   <section id="patterns-overall-pattern-reference" class="page">
     <h2>Overall Pattern Reference</h2>
-    <p>Consider this a LIVING DOCUMENT that will be updated for each techne release</p>
+    <p>Attached is the overal style guide for existing UI Components in techne.  This should be considered a LIVING DOCUMENT for reference only.  Please refer to the “Components” section for the latest and greatest of any UI Component in techne.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/techne_styles.png" title="View Full Image" href="#viewFullscreen">
@@ -147,31 +218,6 @@
       </div>
     </div>
   </section>
-
-  <section id="patterns-tour" class="page">
-    <h2>Tours</h2>
-    <p>A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanatino of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.</p>
-
-    <div class="row">
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Tour_desktop_1.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Tour_desktop_1.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Tour_desktop_2.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Tour_desktop_2.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/tour_mobile.png" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/tour_mobile.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-    </div>
-
-  </section>
-
   <div class="modal fade bs-example-modal-lg" id="viewFullscreen">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
