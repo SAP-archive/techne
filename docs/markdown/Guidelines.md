@@ -620,7 +620,7 @@
         <hr id="guidelines-system-errors">
 
         <h3>System Errors</h3>
-        <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors">API Best Practices page</a> in the Dev Portal.</p>
+        <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="link to https://devportal.yaas.io/tools/apibestpractices/index.html#Errors">API Best Practices page</a> in the Dev Portal.</p>
 
         <table class="table teche-table error-message-table">
             <tr>
