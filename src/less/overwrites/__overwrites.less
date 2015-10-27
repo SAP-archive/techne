@@ -1,21 +1,8 @@
 /* GENERAL BOOTSTRAP THEME SPECIFIC OVERWRITES - REQURIES CLEANUP & SPLIT IN FILES! */
-
-@import '_buttons.less';
 @import '_grid.less';
-@import '_listgroup.less';
-@import '_modal.less';
-@import '_navs.less';
-@import '_panels.less';
-@import '_popover.less';
-@import '_tables.less';
 @import '_type.less';
-@import '_navbar.less';
-@import '_labels.less';
-@import '_dropdowns.less';
 @import '_tooltip.less';
-@import '_forms.less';
 
-@import '_pagination.less';
 
 
 .alert-primary{
@@ -35,7 +22,7 @@
 
 .dropdown-menu{
    min-width: 300px;
-   form, 
+   form,
    form&{
       padding: 15px;
    }
@@ -86,7 +73,7 @@ pre{
 
 
 
-// Overwrite of backgroundcolor for input-group-addons 
+// Overwrite of backgroundcolor for input-group-addons
 .has-success,
 .has-warning,
 .has-error{
@@ -150,7 +137,7 @@ h6{
          left: 0;
       }
    }
-   // Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0 
+   // Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0
    label.sr-only ~ .form-control-feedback{
       top: 0;
    }
@@ -165,24 +152,24 @@ h6{
     margin-left: 0;
     position: relative;
     width: 10%
-    
+
   }
-  
+
   label{
     display:inline-block;
     padding-left: 0;
     width: auto;
-    
-    
+
+
   }
-  
+
   .note{
     font-size: 10px;
     margin-top: 5px;
     color:@dark-grey;
-    
+
   }
-  
+
 }
 
 
