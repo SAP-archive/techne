@@ -59,7 +59,13 @@
   </section>
   <section id="patterns-card-pages" class="page">
     <h2>Card Pages</h2>
-    <p>Cards allow for a highly-visual approach for browsing, scanning and mental information organization. Cards can be used with or without a visual component, or with different patterns of visual components to allow for data visualization and seperation.</p>
+    <p>Cards allow for a highly-visual approach for browsing, scanning and mental information organization. Cards can be used with or without a visual component, or with different patterns of visual components to allow for data visualization and separation. Standard YaaS business objects should use the following icon style:</p> 
+    <ul>
+      <li>People, Dev Teams, Organizations - circle</li>
+      <li>Projects & Sites - square</li>
+      <li>Packages - hexagons</li>
+    </ul>
+    <p>Please refer to the <a href="#patterns-overall-pattern-reference">Overall Pattern Reference</a> for additional examples.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/cards-Packages.jpg" title="View Full Image" href="#viewFullscreen">
