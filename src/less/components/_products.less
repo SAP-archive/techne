@@ -1,13 +1,13 @@
 // Products
 //
-// Description for some product
+// The Product Thumbnail component is a highly interactive and intuitive component that allows immediate visualiation and contextually relevant actions.  Use for any marketing or merchandising UI where product info must be maniupulated. Product Thumbnail pages can employ pagination or infininte scroll, depending on the use case.
 //
 // Markup:
 // <div class="product {$modifiers}">
 //	<div class="y-mouseout-view productThumbnail">
 //		<div class="y-thumbnailContainer thumbnailContainer">
 //			<img src="images/blue_square.png" alt="product" class="productImage">
-//			<img src="images/btn_more.png" alt="product" class="btnMore">	
+//			<img src="images/btn_more.png" alt="product" class="btnMore">
 //		</div>
 //		<p class="statusDataValue">
 //         <span class="active">
@@ -26,7 +26,7 @@
 //		<div class="y-on-click-show show-onhover">
 //			<div class="menubar">
 //				<div class="menu">
-// 					<div class="buttonContainer"> 			
+// 					<div class="buttonContainer">
 // 						<button class="button mainColor">
 //							Publish Product
 //						</button>
@@ -47,7 +47,7 @@
 //					</div>
 //				</div>
 //				<div class="backgroundContainer">
-//					<div class="menuClose">		
+//					<div class="menuClose">
 //						<div class="buttonContainer">
 //							<button class="button closeColor y-buttonClose">
 //								X CLOSE
@@ -60,7 +60,7 @@
 //	</div>
 // </div>
 //
-// Styleguide 9.1
+// Styleguide 17.1
 
 .product {
 	.productThumbnail {
@@ -77,7 +77,7 @@
 		 }
 		.thumbnailContainer {
 			display: inline-block;
-			position: relative;		
+			position: relative;
 			.productImage {
 				width: 100%;
 			}
@@ -87,7 +87,7 @@
 				right: 0%;
 				width: 20%;
 			}
-		}		
+		}
 		.statusDataValue{
 			padding-top: 10px;
 			padding-left: 5px;
@@ -115,9 +115,9 @@
 			text-align: center;
 			top: 0;
 			width: 100%;
-			opacity: 0;	
+			opacity: 0;
 			transition: opacity .25s ease-in-out;
-	
+
 			/* The ghost, nudged to maintain perfect centering */
 			&:before {
 				content: '';
@@ -136,8 +136,8 @@
 				vertical-align: top;
 				.menuClose {
 					position: absolute;
-					left: 0; 
-					width: 100%; 
+					left: 0;
+					width: 100%;
 					bottom: 0;
 					display: table-row;
 				}
@@ -162,19 +162,19 @@
 						padding-top: 15px;
 						padding-bottom: 15px;
 						width: 100%;
-						font-weight: 600;	
-						border: none;				
+						font-weight: 600;
+						border: none;
 					}
 					.dangerColor {
 						color: @default-red;
 					}
 					.mainColor {
 						color: @dark-blue-100;
-					}		
+					}
 					.closeColor {
 						color: @dark-blue-100;
 						background: transparent;
-					}		
+					}
 				}
 			}
 		}
