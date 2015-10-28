@@ -37,111 +37,20 @@
 
 
 
-// CUSTOMIZING SKINNING FOR TABS 
-@nav-tabs-border-width-bottom: 2px;
-
-.nav-tabs {
-  > li {
-    &.active{
-      > a{
-        border-width: 0 0 @nav-tabs-border-width-bottom;
-        border-color: @nav-tabs-active-link-hover-border-color;
-        background-color: transparent;
-
-        &:hover,
-        &:focus,
-        &:active{
-          border-width: 0 0 @nav-tabs-border-width-bottom;
-          border-color: @nav-tabs-active-link-hover-border-color;
-          background:   @nav-tabs-active-link-hover-border-color;
-          color: #fff;
-        }
-      }
-    }
-    > a {
-      
-      transition: background 0.1s ease-out, border 0.1s ease-out;
-      text-transform: uppercase;
-      border-radius: 0;
-      border-width: 0 0 @nav-tabs-border-width-bottom;
-
-    		&:hover,
-    		&:active{
-    			color: @default-blue;
-          border-width: 0 0 @nav-tabs-border-width-bottom;
-          background: #fff;
-    		}
-        &:focus,
-        &:active{
-          background: #fff;
-          border-color: @nav-tabs-link-active-border-color;
-        }
-
-    	}
-    }
-
-    // modifier class
-
-    &.nav-tabs-center{
-      display: table;
-      > li {
-        text-align: center;
-      }
-      margin: 0 auto;
-    }
-}
-
-
-// CALL MIXINS
-// ==================================================================
-
-
-// Left Aligned Tabs
-//
-// Left aligned tabs are designed to be used within a panel for short content 
-// 
-//
-// Markup:
-//<ul class="nav nav-tabs">
-//  <li role="presentation" class="active"><a href="#">Home</a></li>
-//  <li role="presentation" ><a href="#">Profile</a></li>
-//</ul>
-//
-// Styleguide 5.1
-
-// Centered Tabs
-//
-// Centered tabs are designed to be used outside of a panel. They can be used for the overall content of a page or view. 
-//
-// Markup:
-//<ul class="nav nav-tabs nav-tabs-center">
-//  <li role="presentation" class="active"><a href="#">Home</a></li>
-//  <li role="presentation" ><a href="#">Profile</a></li>
-//</ul>
-//
-// Styleguide 5.2
-
-//Color States are deprecated, please remove them soon
-
-.nav-tabs-variant(has-success; transparent; @state-success-bg; @state-success-bg;);
-.nav-tabs-variant(has-info; transparent; @state-info-bg; @state-info-bg);
-.nav-tabs-variant(has-warning; transparent; @state-warning-bg; @state-warning-bg;);
-.nav-tabs-variant(has-error; transparent; @state-danger-bg; @state-danger-bg;);
-
-
 // Standalone Pills
 //
 // Extend Pills to show validation states
-// Deprecated - The states will be removed in the future 
+// Deprecated - The states will be removed in the future
 // please don't use it anymore
 //
 // Experimental: Only use states standalone with for static text right now!
-// 
+//
 // Markup:
 //   <div class="nav-pill">Text</div>
-// 
+//
 // .nav-pill
 //
+// Styleguide 16.1
 
 
 //Color States are deprecated, please remove them soon
@@ -191,40 +100,4 @@
       .nav-pill-state;
     }
 
-}
-
-
-
-// States for Tabs
-
-.nav-tabs-variant(@state; @background; @border; @color; ) {
-
-  .nav-tabs {
-      //border-bottom: @border;
-    > li.@{state} {
-
-      // Actual tabs (as links)
-      > a {
-        background: @background;
-        color: @color;
-        &:hover {
-          border-color: @border @border @border;
-        }
-      }
-
-      // Active state, and its :hover to override normal :hover
-      &.active > a {
-        color: @color;
-        background-color: transparent;
-        border-color: @border;
-
-        &:hover,
-        &:focus {
-          color: @color;
-          background-color: transparent;
-          border-color: @border;
-        }
-      }
-    }
-  }
 }

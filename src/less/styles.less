@@ -16,117 +16,216 @@
 
 @import "./overwrites/__overwrites.less";
 
-// Status Indicators
+
+
+// Alerts, Errors & Notifications
 //
-// Use standard techné Status Indicator words and color coding to communicate different types of status across UI modules at-a-glance.
+// Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
-// Styleguide 1
+// Styleguide 2
+@import "./components/_alert.less";
+
 
 // Buttons
 //
-// Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. <a href="Guidelines.html">See Patterns & Layouts</a> for examples of usage.
-//
-// Styleguide 2
-
-// Toggles
-//
-// Reusable elements that can be used across the site.
-// So far this just includes toggles.
+// Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. See Patterns & Layouts for examples of usage.
 //
 // Styleguide 3
+@import './overwrites/_buttons.less';
 
-// Icons
-//
-// Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun.  Icons can be used adaptively if desired, but at this point are used more as visual elements within other components.
-//
-// Styleguide 4
-@import "./components/_icons";
-
-// Tabs
-//
-// Use Tabs when you need to organize and group information on page while reducing information density.
-//
-// Styleguide 5
-
-
-// Listgroups
-//
-// Reusable elements that can be used across the site.
-// So far this just includes listgroups.
-//
-// Styleguide 6
-@import "./components/_addToList.less";
 
 // Cards
 //
 // Cards are used to display information in a visual, scannable manner. Use in scenarios when people want to associate a visual with information e.g. a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
 //
-// Styleguide 7
+// Styleguide 4
 @import "./components/_usercards";
-@import "./components/new/_data.less";
-@import "./components/new/patterns/_data-card.less";
-
-// Tables
-//
-// Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
-//
-// Styleguide 8
-@import "./components/_table.less";
+@import "./components/_data.less";
+@import "./components/_data-card.less";
 
 
-// Product Thumbnails
+
+
+// Character Counter
 //
-// The Product Thumbnail component is a highly interactive and intuitive component that allows immediate visualiation and contextually relevant actions.  Use for any marketing or merchandising UI where product info must be maniupulated. Product Thumbnail pages can employ pagination or infininte scroll, depending on the use case.
+// Character Counter components
 //
-// Styleguide 9
-@import "./components/_products.less";
+// Styleguide 5
+@import "./components/_charactercounter.less";
+
+
+
+
+// Contextual Menu
+//
+// The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
+//
+// Styleguide 6
+@import './overwrites/_dropdowns.less';
+
+
+
 
 // Form Elements
 //
 // Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field.  Use these components along with inline help and error state treatements for any form design.
 //
-// Styleguide 10
-@import "./components/_forms-toggle";
+// Styleguide 7
+@import './overwrites/_forms.less';
 @import "./components/_forms-checkboxes";
 @import "./components/_forms-radioboxes";
 @import "./components/_forms-readonly";
+
+
+
+// Form Validation
+//
+// Use the form validation included in techne to clearly inform people about errors made in completing the form and give clear direction on how to fix the mistakes.
+//
+// Styleguide 8
+
+
+
+// Icons
+//
+// Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun.  Icons can be used adaptively if desired, but at this point are used more as visual elements within other components.
+//
+// Styleguide 9
+@import "./components/_icons";
+
+
+// Inline Help
+//
+// Inline Help components
+//
+// Styleguide 10
 @import "./components/_forms-hint-text";
 
-// Page Content Panels
+
+
+// Lists
 //
-// Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
+// N/A Page Header components
 //
 // Styleguide 11
-
-// Modals
-//
-// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
-//
-// Styleguide 13
-@import "./components/_modals.less";
-
-
-// Miscellaneous
-//
-// Reusable elements that can be used across the site.
-//
-// Styleguide 12
-@import "./components/_locals-editor";
-@import "./components/_thumbnails";
-
-@import "./components/_sticky_navbar.less";
-@import "./components/_alert.less";
+@import './overwrites/_listgroup.less';
 
 
 // Loading Spinner
 //
 // CSS based spinner to indicate to the user that some information is processing or loading.
 //
-// Styleguide 14
+// Styleguide 12
 @import "./components/_spinner.less";
 
 
 
+// Localization
+//
+// The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.
+//
+// Styleguide 13
+@import "./components/_locals-editor";
+
+
+
+// Modal
+//
+// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
+//
+// Styleguide 14
+@import './overwrites/_modal.less';
+@import "./components/_modals.less";
+
+
+
+
+// Page Content Panels
+//
+// Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
+//
+// Styleguide 15
+@import './overwrites/_panels.less';
+
+
+
+// Page Header
+//
+//
+//
+// Styleguide 16
+@import './overwrites/_navs.less';
+@import "./components/_sticky_navbar.less";
+@import './overwrites/_navbar.less';
+
+// Pagination
+//
+// Use pagination components in conjuction with Tables to allow for more efficient performance and quick access to specific records in the overall data set. techne recommends displaying three pages in the pagination; the current page; the previous page and the next page.  i.e. < 1 2 3 > This recommendation also allows for improved white space on mobile devices.  For ease of use, it’s recommended that pagination is placed at both the top and bottom of tables on desktop and tablet, but only at the bottom on mobile.
+// At desktop and tablet, it is recommended to show 25 records before pagination displays; at mobile, it is recommended to show 10 records before pagination displays.
+// As a side recommendation, the total record # should display at the top of the page (see Patterns & Layouts) and display the total number of records, not just the number of records displayed on the page.
+//
+// Styleguide 17
+@import './overwrites/_pagination.less';
+
+
+
+
+// Product Thumbnails
+//
+// The Product Thumbnail component is a highly interactive and intuitive component that allows immediate visualiation and contextually relevant actions.  Use for any marketing or merchandising UI where product info must be maniupulated. Product Thumbnail pages can employ pagination or infininte scroll, depending on the use case.
+//
+// Styleguide 18
+@import "./components/_products.less";
+
+
+
+// Status Indicators
+//
+// Use standard techné Status Indicator words and color coding to communicate different types of status across UI modules at-a-glance.
+//
+// Styleguide 19
+@import './overwrites/_labels.less';
+
+
+// Tables
+//
+// Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
+//
+// Styleguide 20
+@import './overwrites/_tables.less';
+@import "./components/_table.less";
+
+
+// Tabs
+//
+// Use Tabs when you need to organize and group information on page while reducing information density.
+//
+// Styleguide 21
+@import './overwrites/_tabs.less';
+
+
+
+// Toggles
+//
+// Toggles components
+//
+// Styleguide 22
+@import "./components/_forms-toggle";
+
+// Tour Bubble
+//
+// Use the Tour UI component to put together a comprehensive overview of UIs to new visitors.
+//
+// Styleguide 23
+@import './overwrites/_popover.less';
+
+
+// Trees
+//
+// The tree component is used to display and manipulate hierarchical data, e.g. product categories.
+//
+// Styleguide 24
+@import "./components/_tree";
 
 
 
