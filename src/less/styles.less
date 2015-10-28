@@ -17,49 +17,32 @@
 @import "./overwrites/__overwrites.less";
 
 
-// "Add X" Button
-//
-// Use the “Add To” (+ Add <record>) button link component at the top of Cards and Tables to enable people to ‘add’ a record to the current data set quickly and efficiently.
-//
-// Styleguide 1
-@import "./components/_addxbutton.less";
-
-
-// "More" Contextual Menu
-//
-// The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
-//
-// Styleguide 2
-@import './overwrites/_dropdowns.less';
-
-
 
 // Alerts, Errors & Notifications
 //
 // Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
-// Styleguide 3
+// Styleguide 2
 @import "./components/_alert.less";
-
 
 
 // Buttons
 //
 // Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. See Patterns & Layouts for examples of usage.
 //
-// Styleguide 4
+// Styleguide 3
 @import './overwrites/_buttons.less';
-
 
 
 // Cards
 //
 // Cards are used to display information in a visual, scannable manner. Use in scenarios when people want to associate a visual with information e.g. a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
 //
-// Styleguide 5
+// Styleguide 4
 @import "./components/_usercards";
 @import "./components/_data.less";
 @import "./components/_data-card.less";
+
 
 
 
@@ -67,8 +50,20 @@
 //
 // Character Counter components
 //
-// Styleguide 6
+// Styleguide 5
 @import "./components/_charactercounter.less";
+
+
+
+
+// Contextual Menu
+//
+// The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
+//
+// Styleguide 6
+@import './overwrites/_dropdowns.less';
+
+
 
 
 // Form Elements
@@ -167,7 +162,7 @@
 //
 // Use pagination components in conjuction with Tables to allow for more efficient performance and quick access to specific records in the overall data set. techne recommends displaying three pages in the pagination; the current page; the previous page and the next page.  i.e. < 1 2 3 > This recommendation also allows for improved white space on mobile devices.  For ease of use, it’s recommended that pagination is placed at both the top and bottom of tables on desktop and tablet, but only at the bottom on mobile.
 // At desktop and tablet, it is recommended to show 25 records before pagination displays; at mobile, it is recommended to show 10 records before pagination displays.
-// As a side recommendation, the total record # should display at the top of the page (see Patterns & Layouts) and display the total number of records, not just the number of records displayed on the page.   
+// As a side recommendation, the total record # should display at the top of the page (see Patterns & Layouts) and display the total number of records, not just the number of records displayed on the page.
 //
 // Styleguide 17
 @import './overwrites/_pagination.less';
@@ -230,7 +225,7 @@
 // The tree component is used to display and manipulate hierarchical data, e.g. product categories.
 //
 // Styleguide 24
-
+@import "./components/_tree";
 
 
 
@@ -251,8 +246,3 @@
 @import "./vendor/_select2";
 
 @import "./globals/_shame";
-
-
-
-//DEPRECATED
-// @import "./components/_thumbnails";
