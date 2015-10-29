@@ -408,6 +408,9 @@ h1.kss-title {
   padding-left: 15px;
   padding-bottom: 40px;
 }
+#kss-main.col-md-12 {
+  max-width: 1000px;
+}
 .kss-mod-list {
   width: 100%;
 }
@@ -719,6 +722,10 @@ body.has-left-nav .sidebar-nav {
     position: relative;
     margin-right: 0;
   }
+}
+.kss-modifier-example {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .kss-modifier-example .popover {
   position: relative!important;
