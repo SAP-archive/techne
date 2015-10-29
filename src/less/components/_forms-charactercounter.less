@@ -1,6 +1,85 @@
-//  Character Counter
+// Inline Character Counter
+//
+// Display the remaining characters for a input or textarea when the formfield 
+// is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functionality is not provided by techne.<br/></br> 
 //
 // Markup:
-// <div class=""></div>
+// <div class="form-group">
+//   <label for="character-counter-sample" class="control-label">Label</label>
+//   <div class="y-counter">
+//     <input type="text" max-character="35" id="character-counter-sample" class="form-control input-lg">
+//     <span class="y-counter-number {$modifiers}">30</span>
+//   </div>
+//   <p class="help-block">Maximum text length is 30 characters</p>    
+// </div>
 //
-// Styleguide 7.5
+// .y-counter-error - Append this class when the limit is reached
+//
+// Styleguide 5.4
+
+
+@y-counter-padding-vertical: 5px;
+@y-counter-base-width: 35px;
+@y-counter-color: @default-blue;
+@y-counter-error-color: @default-red;
+
+.y-counter{
+  position: relative;
+
+  &-number{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    color: @y-counter-color;
+
+  }
+
+  &-error{
+    color: @y-counter-error-color;
+  }
+
+  input,
+  textarea{
+
+    &:focus{
+      padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-base-vertical;
+
+      & + .y-counter-number{
+        display: block;
+
+        // simulate border
+        margin-top: 1px;
+      }
+    }
+
+    &.input-sm {
+
+      &:focus{
+        padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-small-vertical;
+      }
+      & + .y-counter-number{
+        height: @input-height-small;
+        line-height: @line-height-small;
+        padding: @padding-small-vertical @padding-small-horizontal @padding-small-vertical @y-counter-padding-vertical;
+        font-size: @font-size-small; 
+        border-radius: @input-border-radius-small;
+      }
+    }
+
+    &.input-lg {
+      &:focus{
+        padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-large-vertical;
+      }
+
+      & + .y-counter-number{
+          height: @input-height-large;
+          line-height: @line-height-large;
+          padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical @y-counter-padding-vertical;
+          font-size: @font-size-large; 
+          border-radius: @input-border-radius-large;
+        }
+    }
+  }
+}

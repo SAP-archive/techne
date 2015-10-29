@@ -22,7 +22,7 @@
 //
 // Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
-// Styleguide 2
+// Styleguide 1
 @import "./components/_alert.less";
 
 
@@ -30,15 +30,16 @@
 //
 // Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. See Patterns & Layouts for examples of usage.
 //
-// Styleguide 3
+// Styleguide 2
 @import './overwrites/_buttons.less';
+@import "./components/_forms-toggle";
 
 
 // Cards
 //
 // Cards are used to display information in a visual, scannable manner. Use in scenarios when people want to associate a visual with information e.g. a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
 //
-// Styleguide 4
+// Styleguide 3
 @import "./components/_usercards";
 @import "./components/_data.less";
 @import "./components/_data-card.less";
@@ -49,7 +50,7 @@
 //
 // The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
 //
-// Styleguide 6
+// Styleguide 4
 @import './overwrites/_dropdowns.less';
 
 
@@ -59,7 +60,7 @@
 //
 // Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field.  Use these components along with inline help and error state treatements for any form design.
 //
-// Styleguide 7
+// Styleguide 5
 @import './overwrites/_forms.less';
 @import "./components/_forms-hint-text";
 @import "./components/_forms-checkboxes";
@@ -73,16 +74,16 @@
 //
 // Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun.  Icons can be used adaptively if desired, but at this point are used more as visual elements within other components.
 //
-// Styleguide 9
+// Styleguide 6
 @import "./components/_icons";
 
 
 
 // Lists
 //
-// N/A Page Header components
+// Use a Listgroup when data is meant to show in a single column
 //
-// Styleguide 11
+// Styleguide 7
 @import './overwrites/_listgroup.less';
 
 
@@ -90,7 +91,7 @@
 //
 // CSS based spinner to indicate to the user that some information is processing or loading.
 //
-// Styleguide 12
+// Styleguide 8
 @import "./components/_spinner.less";
 
 
@@ -99,7 +100,7 @@
 //
 // The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.
 //
-// Styleguide 13
+// Styleguide 9
 @import "./components/_locals-editor";
 
 
@@ -108,9 +109,8 @@
 //
 // Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
 //
-// Styleguide 14
+// Styleguide 10
 @import './overwrites/_modal.less';
-@import "./components/_modals.less";
 
 
 
@@ -119,7 +119,7 @@
 //
 // Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
 //
-// Styleguide 15
+// Styleguide 11
 @import './overwrites/_panels.less';
 
 
@@ -128,7 +128,7 @@
 //
 //
 //
-// Styleguide 16
+// Styleguide 12
 @import './overwrites/_navs.less';
 @import "./components/_sticky_navbar.less";
 @import './overwrites/_navbar.less';
@@ -139,7 +139,7 @@
 // At desktop and tablet, it is recommended to show 25 records before pagination displays; at mobile, it is recommended to show 10 records before pagination displays.
 // As a side recommendation, the total record # should display at the top of the page (see Patterns & Layouts) and display the total number of records, not just the number of records displayed on the page.
 //
-// Styleguide 17
+// Styleguide 13
 @import './overwrites/_pagination.less';
 
 
@@ -149,7 +149,7 @@
 //
 // The Product Thumbnail component is a highly interactive and intuitive component that allows immediate visualiation and contextually relevant actions.  Use for any marketing or merchandising UI where product info must be maniupulated. Product Thumbnail pages can employ pagination or infininte scroll, depending on the use case.
 //
-// Styleguide 18
+// Styleguide 14
 @import "./components/_products.less";
 
 
@@ -158,7 +158,7 @@
 //
 // Use standard techné Status Indicator words and color coding to communicate different types of status across UI modules at-a-glance.
 //
-// Styleguide 19
+// Styleguide 15
 @import './overwrites/_labels.less';
 
 
@@ -166,7 +166,7 @@
 //
 // Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
 //
-// Styleguide 20
+// Styleguide 16
 @import './overwrites/_tables.less';
 @import "./components/_table.less";
 
@@ -175,23 +175,16 @@
 //
 // Use Tabs when you need to organize and group information on page while reducing information density.
 //
-// Styleguide 21
+// Styleguide 17
 @import './overwrites/_tabs.less';
 
 
-
-// Toggles
-//
-// Toggles components
-//
-// Styleguide 22
-@import "./components/_forms-toggle";
 
 // Tour Bubble
 //
 // Use the Tour UI component to put together a comprehensive overview of UIs to new visitors.
 //
-// Styleguide 23
+// Styleguide 18
 @import './overwrites/_popover.less';
 
 
@@ -199,7 +192,7 @@
 //
 // The tree component is used to display and manipulate hierarchical data, e.g. product categories.
 //
-// Styleguide 24
+// Styleguide 19
 @import "./components/_tree";
 
 
