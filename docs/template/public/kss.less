@@ -131,7 +131,6 @@ body.kss-body {
     font-family: "Dosis", sans-serif !important;
     nav ul {
         margin: 0;
-        ;
         padding: 15px 0 0 0;
         list-style-type: none;
 
@@ -198,6 +197,9 @@ h1.kss-title {
 #kss-main {
     padding-left: 15px;
     padding-bottom: 40px;
+    &.col-md-12{
+        max-width: 1000px;
+    }
 }
 .kss-mod-list {
     width: 100%;
@@ -566,6 +568,9 @@ body.has-left-nav .sidebar-nav {
 }
 // Styleguide specifc overwrites
 .kss-modifier-example {
+    padding-bottom: 20px;
+    padding-top: 20px;
+
     .popover {
         position: relative!important;
         z-index: 1!important;
