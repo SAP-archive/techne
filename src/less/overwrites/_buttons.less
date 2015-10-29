@@ -221,9 +221,43 @@
 // Add Button
 //
 // Markup:
-// <button class="y-add-btn ng-binding" type="button" ng-click="clickAddInternal()">
+// <button class="y-add-btn type="button">
 //   <span class="hyicon hyicon-add"></span>
 //   Add
 // </button>
 //
 // Styleguide 3.6
+
+.y-add{
+    border:none;
+}
+
+.y-add-btn{
+  border: none;
+  color: @default-blue;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  background: #f3f6f9;
+
+  box-shadow: 0 2px 3px fade(#8a8fa1, 20%);
+
+  &:hover{
+    background: @default-greyblue-200;
+  }
+
+  &:active{
+    background: @default-greyblue-500;
+  }
+
+  .hyicon{
+    &:before{
+      font-size: 22px;
+    }
+
+  }
+}

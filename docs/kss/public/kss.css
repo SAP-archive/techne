@@ -246,8 +246,16 @@ body.kss-body {
   max-width: 100%;
   padding-top: 100px;
 }
+.main-content {
+  background: #27394f none repeat scroll 0 0;
+  margin-top: -100px;
+}
 #kss-wrapper {
   height: auto;
+}
+#content {
+  background: #fff;
+  padding-top: 100px;
 }
 .active.demo-container {
   background-color: #e0e9f0;
@@ -343,7 +351,6 @@ body.kss-body {
   display: none;
 }
 #kss-nav {
-  background-color: #fff;
   font-family: "Dosis", sans-serif !important;
 }
 #kss-nav nav ul {
@@ -658,7 +665,6 @@ body.has-left-nav #kss-nav {
   -moz-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
-  background: #233243;
 }
 body.has-left-nav.navbar-super-up #kss-nav {
   padding-top: 50px;
