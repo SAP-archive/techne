@@ -3,14 +3,14 @@
 // At Desktop and Tablet inflections, it is recommended to show 15 cards before pagination and “See All”.  At the Mobile inflection, it is recommended to show 5 cards before pagination and “See All.”
 //
 // Markup:
-// <ul class="list-group dataCards">
-//  <li class="y-add list-group-item dataCard ">
+// <ul class="dataCards {$modifiers}">
+//  <li class="y-add dataCard ">
 //     <button  type="button" class="y-add-btn">
 //         <span class="hyicon hyicon-add"></span>
 //         New Button
 //     </button>
 //  </li>
-//  <li class="list-group-item dataCard">
+//  <li class="dataCard">
 //    <div class="cardRow cardRowClickable">
 //        <p class="primaryData">
 //          Primary Value
@@ -24,7 +24,7 @@
 //          </span>
 //        </p>
 //  </li>
-//  <li class="list-group-item dataCard">
+//  <li class="dataCard">
 //    <div class="cardRow">
 //        <p class="primaryData">
 //          Primary Value
@@ -40,8 +40,16 @@
 //    </div>
 //  </li>
 // </ul>
+// <div class="dataCard-seeall">
+//   <button class="btn btn-link">
+//         <span>See All</span>
+//         <span class="hyicon hyicon-chevron"></span>
+//     </button>
+// </div>
+// 
+// .dataCards-singleColumn - Force the card layout to stay in one column. Built to be used within a existing grid column. 
 //
-// Styleguide 4.5
+// Styleguide 3.1
 
 .dataCards {
   display: flex;
@@ -100,7 +108,7 @@ a.dataCard{
   display: -ms-flexbox; /* IE10 */
   cursor: default;
 
-  overflow: visible;
+  overflow: visible!important;
 
   box-shadow: 0 1px 0 rgba(138, 143, 161, 0.3);
   margin-bottom: 5px;
@@ -240,49 +248,18 @@ a.dataCard{
 
 }
 
+.dataCard-seeall{
+  text-align: center;
+  background: none;
+  font-weight: bold;
+  .btn{
+      font-weight: bold;
+  }
+
+}
+
 .cardCalloutHeader{
   color: #fff;
   padding: 13px;
   background-color: #7f90a4;
-}
-
-
-
-
-
-// ADD COMPONENT
-// ----------------------------------
-
-.y-add{
-    border:none;
-}
-
-.y-add-btn{
-  border: none;
-  color: @default-blue;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: block;
-  background: #f3f6f9;
-
-  box-shadow: 0 2px 3px fade(#8a8fa1, 20%);
-
-  &:hover{
-    background: @default-greyblue-200;
-  }
-
-  &:active{
-    background: @default-greyblue-500;
-  }
-
-  .hyicon{
-    &:before{
-      font-size: 22px;
-    }
-
-  }
 }
