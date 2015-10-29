@@ -13,13 +13,17 @@ body.kss-body {
 
     padding-top: 100px;
 }
-.main-content{  background: #27394f none repeat scroll 0 0; margin-top: -100px;}
+
+.hyComponentsPage{
+
+}
+
 #kss-wrapper {
     height: auto;
 }
-#content{  
-    background: #fff;
-    padding-top:100px;
+#content{
+    // background: #fff;
+    // padding-top:100px;
 }
 .active.demo-container {
     background-color: #e0e9f0;
@@ -123,7 +127,7 @@ body.kss-body {
   display: none;
 }
 #kss-nav {
-    // background-color: #fff;
+    background: #27394f none repeat scroll 0 0;
     font-family: "Dosis", sans-serif !important;
     nav ul {
         margin: 0;
@@ -193,6 +197,7 @@ h1.kss-title {
 }
 #kss-main {
     padding-left: 15px;
+    padding-bottom: 40px;
 }
 .kss-mod-list {
     width: 100%;
@@ -255,6 +260,8 @@ h1.kss-title {
 .kss-depth-6 > h1 {
     font-size: 2.5em * .700;
 }
+
+
 // ------------------------------------------------------------------------------
 //   @group prettyprint.js styling
 // ------------------------------------------------------------------------------
@@ -395,6 +402,11 @@ li.L9 {
 //   @group Mobile/Tablet Styling
 // ------------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
+
+  body.toggled{
+    overflow-y: hidden;
+  }
+
     #kss-nav {
         display: block;
         margin: 0;
@@ -492,7 +504,7 @@ body.has-left-nav #kss-wrapper{
 
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
     width: 250px;
-    // background: #233243;
+    background: #27394f none repeat scroll 0 0;
 }
 #kss-main {
     padding: 15px;
@@ -516,6 +528,22 @@ body.has-left-nav .sidebar-nav {
         background-repeat: repeat-y;
         background-position: 250px;
     }
+
+    .kss-body .footer{
+      position: fixed;
+      height: 40px;
+      bottom: 0;
+      z-index: 102;
+    }
+
+
+    body.has-left-nav #kss-nav {
+        padding-top: 140px;
+        margin-top: -40px;
+    }
+
+
+
     body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
         background: none;
     }
@@ -525,7 +553,7 @@ body.has-left-nav .sidebar-nav {
     }
 
     body.has-left-nav.navbar-super-up #kss-nav {
-        margin-top: -41px;
+        margin-top: -40px;
         padding-top: 100px!important;
     }
     #kss-main {
@@ -1468,4 +1496,3 @@ body.hyComponentsPage{
 .error-message-table .wide-col {
     min-width: 260px;
 }
-

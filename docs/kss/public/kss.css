@@ -246,16 +246,8 @@ body.kss-body {
   max-width: 100%;
   padding-top: 100px;
 }
-.main-content {
-  background: #27394f none repeat scroll 0 0;
-  margin-top: -100px;
-}
 #kss-wrapper {
   height: auto;
-}
-#content {
-  background: #fff;
-  padding-top: 100px;
 }
 .active.demo-container {
   background-color: #e0e9f0;
@@ -351,6 +343,7 @@ body.kss-body {
   display: none;
 }
 #kss-nav {
+  background: #27394f none repeat scroll 0 0;
   font-family: "Dosis", sans-serif !important;
 }
 #kss-nav nav ul {
@@ -413,6 +406,7 @@ h1.kss-title {
 }
 #kss-main {
   padding-left: 15px;
+  padding-bottom: 40px;
 }
 .kss-mod-list {
   width: 100%;
@@ -593,6 +587,9 @@ li.L9 {
   background: #eee;
 }
 @media screen and (max-width: 768px) {
+  body.toggled {
+    overflow-y: hidden;
+  }
   #kss-nav {
     display: block;
     margin: 0;
@@ -671,6 +668,7 @@ body.has-left-nav.navbar-super-up #kss-nav {
 }
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
   width: 250px;
+  background: #27394f none repeat scroll 0 0;
 }
 #kss-main {
   padding: 15px;
@@ -694,6 +692,16 @@ body.has-left-nav .sidebar-nav {
     background-repeat: repeat-y;
     background-position: 250px;
   }
+  .kss-body .footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    z-index: 102;
+  }
+  body.has-left-nav #kss-nav {
+    padding-top: 140px;
+    margin-top: -40px;
+  }
   body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     background: none;
   }
@@ -701,7 +709,7 @@ body.has-left-nav .sidebar-nav {
     width: 250px;
   }
   body.has-left-nav.navbar-super-up #kss-nav {
-    margin-top: -41px;
+    margin-top: -40px;
     padding-top: 100px!important;
   }
   #kss-main {
