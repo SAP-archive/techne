@@ -41,11 +41,7 @@
       {
         "text": "Mixed Component & Pattern Pages",
         "id": "#patterns-mixed-pattern-pages"
-      },
-      {
-        "text": "Standard Add/Edit/Delete Page Header",
-        "id": "#patterns-header"
-      },
+      },  
       {
         "text": "Overall Style Reference",
         "id": "#patterns-overall-pattern-reference"
@@ -54,6 +50,10 @@
 	}
 -->
 
+<!---{
+  "text": "Standard Add/Edit/Delete Page Header",
+  "id": "#patterns-header"
+}, --->
 
 <div class="hyPatternsPage container-fluid" >
   <div class="row">
@@ -233,6 +233,7 @@
       </div>
     </div>
   </section>
+  <!---
   <section id="patterns-header" class="page">
     <h2>Standard Add/Edit/Delete Page Header</h2>
     <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”. </p>
@@ -255,6 +256,7 @@
       </div>
     </div>
   </section>
+  --->
   <section id="patterns-overall-pattern-reference" class="page">
     <h2>Overall Pattern Reference</h2>
     <p>Attached is the overall style guide for existing UI Components in techne.  This should be considered a LIVING DOCUMENT for reference only.  Please refer to the “Components” section for the latest and greatest of any UI Component in techne.</p>
