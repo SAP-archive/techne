@@ -1,8 +1,14 @@
 // Page Header Navigation Bar
 //
-// Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.
+// Page Header with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title.<br/><br/>
+// Typically lives at “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. 
+// In this pattern, always display “Save”, “Cancel” and “Back”. 
+// “Save” commits adds or updates.
+// “Cancel” discards any updates in progress and brings the person back to the previous page they were on; acting as a historical “back”.
+// “Back” in the left navigation and button link act as a hierarchical ‘back’.
 //
 // Markup:
+// <div id="demo-page-background">
 // <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
 // <div class="container-fluid">
 //     <div class="navbar-left">
@@ -28,8 +34,9 @@
 //         </div>
 //     </div>
 // </div>
+// </div>
 //
-// Styleguide 16.1
+// Styleguide 12.1
 
 @navbar-height-large: 70px;
 

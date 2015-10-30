@@ -343,7 +343,7 @@ body.kss-body {
   display: none;
 }
 #kss-nav {
-  background-color: #fff;
+  background: #27394f none repeat scroll 0 0;
   font-family: "Dosis", sans-serif !important;
 }
 #kss-nav nav ul {
@@ -406,6 +406,10 @@ h1.kss-title {
 }
 #kss-main {
   padding-left: 15px;
+  padding-bottom: 40px;
+}
+#kss-main.col-md-12 {
+  max-width: 1000px;
 }
 .kss-mod-list {
   width: 100%;
@@ -586,6 +590,9 @@ li.L9 {
   background: #eee;
 }
 @media screen and (max-width: 768px) {
+  body.toggled {
+    overflow-y: hidden;
+  }
   #kss-nav {
     display: block;
     margin: 0;
@@ -658,13 +665,13 @@ body.has-left-nav #kss-nav {
   -moz-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
-  background: #233243;
 }
 body.has-left-nav.navbar-super-up #kss-nav {
   padding-top: 50px;
 }
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
   width: 250px;
+  background: #27394f none repeat scroll 0 0;
 }
 #kss-main {
   padding: 15px;
@@ -688,6 +695,16 @@ body.has-left-nav .sidebar-nav {
     background-repeat: repeat-y;
     background-position: 250px;
   }
+  .kss-body .footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    z-index: 102;
+  }
+  body.has-left-nav #kss-nav {
+    padding-top: 140px;
+    margin-top: -40px;
+  }
   body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     background: none;
   }
@@ -695,7 +712,7 @@ body.has-left-nav .sidebar-nav {
     width: 250px;
   }
   body.has-left-nav.navbar-super-up #kss-nav {
-    margin-top: -41px;
+    margin-top: -40px;
     padding-top: 100px!important;
   }
   #kss-main {
@@ -705,6 +722,10 @@ body.has-left-nav .sidebar-nav {
     position: relative;
     margin-right: 0;
   }
+}
+.kss-modifier-example {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .kss-modifier-example .popover {
   position: relative!important;
