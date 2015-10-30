@@ -43,6 +43,7 @@
 
   })();
 
-  new KssStateGenerator;
+  // Removed because it caused trouble with normal active classes
+  //new KssStateGenerator;
 
 }).call(this);
