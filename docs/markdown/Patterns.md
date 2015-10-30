@@ -7,10 +7,6 @@
         "id": "#patterns-tours"
       },
       {
-        "text": "First Contact",
-        "id": "#patterns-first"
-      },
-      {
         "text": "Wizards",
         "id": "#patterns-wizard"
       },
@@ -19,16 +15,12 @@
         "id": "#patterns-Dialogues"
       },
       {
-        "text": "Tables",
-        "id": "#patterns-tables"
-      },
-      {
         "text": "Cards",
         "id": "#patterns-cards"
       },
 			{
-				"text": "Lists",
-				"id": "#patterns-lists"
+				"text": "Tables",
+				"id": "#patterns-tables"
 			},
       {
         "text": "Trees",
@@ -50,10 +42,21 @@
 	}
 -->
 
-<!---{
+<!---
+
+{
+  "text": "First Contact",
+  "id": "#patterns-first"
+},
+{
   "text": "Standard Add/Edit/Delete Page Header",
   "id": "#patterns-header"
-}, --->
+},
+{
+  "text": "Tables",
+  "id": "#patterns-tables"
+},
+ --->
 
 <div class="hyPatternsPage container-fluid" >
   <div class="row">
@@ -81,6 +84,7 @@
       </div>
     </div>
   </section>
+  <!---
   <section id="patterns-card-pages" class="page">
     <h2>First Contact</h2>
     <p>“First Contact” should be used when someone comes to a page that has no data yet.  The ‘First Contact’ pattern uses the Inline Help component but defaults to ‘all on’ until the user initiates closing the help. </p>
@@ -91,6 +95,7 @@
       </div>
     </div>
   </section>
+  --->
   <section id="patterns-wizard" class="page">
     <h2>Wizards</h2>
     <p>Wizards are made up of the modal component and button and/or button link components. Use the wizard pattern when you want to guide people through a step-by-step process. Typically a wizard will have a ‘next’ and ‘previous’ action and a “Save” action at the last step. </p>
@@ -118,6 +123,7 @@
       </div>
     </div>
   </section>
+  <!---
   <section id="patterns-tables" class="page">
     <h2>Tables</h2>
     <p></p>
@@ -127,6 +133,7 @@
       </div>
     </div>
   </section>
+  --->
   <section id="patterns-cards" class="page">
     <h2>Cards</h2>
     <p>Cards allow for a highly-visual approach for browsing, scanning and mental information organization. Cards can be used with or without a visual component, or with different patterns of visual components to allow for data visualization and separation. Standard YaaS business objects should use the following icon style:</p>
@@ -154,8 +161,8 @@
       </div>
     </div>
   </section>
-  <section id="patterns-lists" class="page">
-    <h2>Lists</h2>
+  <section id="patterns-tables" class="page">
+    <h2>Tables</h2>
     <p>Lists are a high-utility pattern that allows for quick sorting, filtering and scanning. 'Add a X' ideally is found at the top of the list pattern for users to quickly add data in context. </p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
@@ -192,7 +199,7 @@
     </div>
   </section>
   <section id="patterns-retail-product-grids" class="page">
-    <h2>Prodct Grids</h2>
+    <h2>Product Grids</h2>
     <p>Specific for implementation in need of high-touch product information management and administration, the product admin layout provides and immersive, WYSIWYG enviorenment for business users to work within.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
