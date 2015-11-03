@@ -16,14 +16,14 @@
                 <img src="images/techne_Zip.png"></img>
                 <h2 class="dosis-semibold">Pre-Bundled Download</h2>
                 <p class="dosis-book">Precompiled and minified version of techné ready to grab and use.</p>
-                <a class="btn btn-warning dosis-book" href="https://github.com/hybris/techne/tree/master/docs/kss/public/release-archive" target=“_new”/>DOWNLOAD.ZIP</a>
+                <a class="btn btn-warning dosis-book" href="https://github.com/SAP/techne/releases" target=“_new”/>DOWNLOAD.ZIP</a>
             </div>
             <!--.col-xs-12 col-sm-4 text-center-->
             <div class="col-xs-12 col-sm-4 text-center">
                 <img src="images/techne_Cat.png"></img>
                 <h2 class="dosis-semibold">Source Code</h2>
                 <p class="dosis-book">Bundle including Default files and all the source files (LESS/JS) not yet compiled.</p>
-                <a class="btn btn-warning dosis-book" href="https://github.com/hybris/techne">VIEW SOURCE AT GITHUB</a>
+                <a class="btn btn-warning dosis-book" href="https://github.com/SAP/techne">VIEW SOURCE AT GITHUB</a>
             </div>
             <!--.col-xs-12 col-sm-4 text-center-->
         </div>
@@ -44,7 +44,7 @@
                 </p>
                 <code>npm install -g bower</code>
                 <p>and run</p>
-                <code>bower install hyTechne</code> 
+                <code>bower install hyTechne</code>
                 <p>afterwards, to get techné.</p>
             </div>
             <!--.col-xs-12-->
@@ -62,11 +62,11 @@
             <div id="hyInstallContainer" class="col-xs-12 col-md-9">
                 <h2 class="dosis-semibold">How to build techné locally</h2>
                 <p>
-                    techné is using Gulp as build system. 
+                    techné is using Gulp as build system.
                 </p>
                 <h3>INSTALLING GULP</h3>
                 <p>
-                    Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager. Then you can simply run 
+                    Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager. Then you can simply run
                 </p>
                 <code>npm install --global gulp</code>
                 <p>(Note the —global, otherwise you would not be able to run gulp systemwide)</p>
@@ -115,7 +115,7 @@
                 <h2 class="dosis-semibold">How to contribute</h2>
                 <p>So you wrote a new component or fixed a bug in techné? You want to contribute? That’s actually super easy. Just pull our repository from github, make your changes in a feature-branch, push it to origin and create a pull-request to our develop brach.
                 </p>
-                <a href="https://github.com/hybris/techne">techné on Github</a>
+                <a href="https://github.com/SAP/techne">techné on Github</a>
             </div>
             <!--.col-xs-12-->
         </div>

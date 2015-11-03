@@ -1589,9 +1589,11 @@ header.hyHomeHeaderMinor {
     list-style-position: inside;
   }
 }
+.hyGuidelinesPage {
+  margin-bottom: 50px;
+}
 .hyGuidelinesPage section {
   padding-top: 40px;
-  margin-bottom: -10px;
 }
 .hyGuidelinesPage .imageCenter {
   position: relative;

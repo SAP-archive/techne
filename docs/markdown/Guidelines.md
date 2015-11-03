@@ -217,13 +217,6 @@
             </div>
             <div class="col-md-5ths col-xs-6">
                 <div class="hexagonVector">
-                        <span style="color: #3cb1da;">&#x2B22;</span>
-                </div>
-                <p class="no-bottom-margin">Heads Up! Attention!</p>
-                <h4>#3CB1DA</h4>
-            </div>
-            <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
                     <span style="color: #233243;">&#x2B22;</span>
                 </div>
                 <p class="no-bottom-margin">Well Done! Success!</p>
@@ -247,14 +240,6 @@
                     Error notification can go here and look like this...
                 </div>
             </div>
-        </div>
-        <div class="usage visualSystemSpacing">
-            <h4>Usage Guidelines</h4>
-            <p><b>Helpful Information:</b> use background color app-wide for notification field-level help modals.</p>
-            <p><b>Heads Up! Attention:</b> use background color app-wide for notification messaging only.</p>
-            <p><b>Well Done! Success!:</b> use background color app-wide for success messaging only.</p>
-            <p><b>Warning! Not looking good:</b> use background color app-wide for warning messaging only.</p>
-            <p><b>Oh Snap! Try again:</b> use background color app-wide for error messaging only.</p>
         </div>
         <div class="row visualSystemSpacing typographyAlignment">
             <hr />
