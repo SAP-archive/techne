@@ -153,7 +153,7 @@
         <img src="images/navigation-desktop.png" alt="" class="img-responsive">
     </section>
     <!-- load visual system -->
-    <section id="guidelines-visual-system" class="page">
+    <section id="guidelines-visual-system" class="page visual-system">
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
