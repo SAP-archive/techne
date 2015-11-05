@@ -160,37 +160,27 @@
         <div class="row">
             <div class="row text-center">
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #E0E9F0;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #E0E9F0;"></div>
                     <p class="no-bottom-margin">Screen Background</p>
                     <h4>#E0E9F0</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #FFFFFF;"></div>
                     <p class="no-bottom-margin">Content Background</p>
                     <h4>#FFFFFF</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                         <span style="color: #313440;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #313440;"></div>
                     <p class="no-bottom-margin">Typography (Main)</p>
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #8A8FA1;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #8A8FA1;"></div>
                     <p class="no-bottom-margin">Typography (Secondary)</p>
                     <h4>#8A8FA1</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #0486E0;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
                 </div>
@@ -209,22 +199,19 @@
         <p>These colors are desaturated to work better with the primary application colors.</p>
         <div class="row text-center">
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #d3dbe6;">&#x2B22;</span>
+                <div class="circle"style="background: #d3dbe6;">
                 </div>
                 <p class="no-bottom-margin">Help Information</p>
                 <h4>#D3DBE6</h4>
             </div>
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #233243;">&#x2B22;</span>
+                <div class="circle"style="background: #233243;">
                 </div>
                 <p class="no-bottom-margin">Well Done! Success!</p>
                 <h4>#233243</h4>
             </div>
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #ff3b30;">&#x2B22;</span>
+                <div class="circle"style="background: #ff3b30;">
                 </div>
                 <p class="no-bottom-margin">Oh Snap! Try Again.</p>
                 <h4>#FF3B30</h4>
@@ -253,30 +240,26 @@
         <div class="row">
             <div class="row text-center type-face">
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-light">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-light circle-type">Aa</p>
                     </div>
                     <p>Light</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-book">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-book circle-type">Aa</p>
                     </div>
                     <p>Book</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-medium">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-medium circle-type">Aa</p>
                     </div>
                     <p>Medium</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-semibold circle-type">Aa</p>
                     </div>
                     <p>SemiBold</p>
                 </div>
@@ -336,37 +319,32 @@
         <div class="row">
             <div class="row text-center">
                 <div class="col-md-5ths col-xs-6">
-                   <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-light">H1</p>
+                   <div class="circle">
+                        <p class="dosis-light circle-type">H1</p>
                     </div>
                     <p class="dosis-light">Dosis Light <br> 30pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H2</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H2</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 22pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H3</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H3</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 19pt </p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                   <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-medium">H4</p>
+                   <div class="circle">
+                        <p class="dosis-mediu circle-type">H4</p>
                     </div>
                     <p class="dosis-medium">Dosis Medium <br> 19pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H5</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H5</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 14pt</p>
                 </div>
@@ -378,9 +356,9 @@
                     <!-- Indicators -->
                     <div class="carousel-inner">
                     <ol class="carousel-indicators">
-                        <li data-target="#header-example-carousel" data-slide-to="0" class="active">H1</li>
-                        <li data-target="#header-example-carousel" data-slide-to="1">H2</li>
-                        <li data-target="#header-example-carousel" data-slide-to="2">H3</li>
+                        <li data-target="#header-example-carousel" data-slide-to="0" class="active"><span>H1</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="1"><span>H2</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="2"><span>H3</span></li>
                     </ol>
                     <!-- Wrapper for slides -->
                         <div class="item active">
@@ -601,9 +579,7 @@
             </tr>
         </table>
         </section>
-
         <section id="guidelines-system-errors" class="page">
-
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
             
