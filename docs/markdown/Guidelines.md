@@ -792,7 +792,7 @@
         </section>
 
         <!-- load tone/voice -->
-        <section id="guidelines-accessibility">
+        <section id="guidelines-accessibility" class="page">
             <h2>Accessibility</h2>
             <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
