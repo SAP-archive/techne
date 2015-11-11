@@ -37,8 +37,8 @@
        ]
     }
     -->
-<div class="hyGuidelinesPage container-fluid" >
-    <section id="guidelines-spirit-vision" class="page">
+<div class="kss-guidelines-page container-fluid" >
+    <section id="guidelines-spirit-vision" class="kss-page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <div class="hybris-guy-bg">
@@ -95,7 +95,7 @@
             </div>
         </div>
     </section>
-    <section id="guidelines-design-principles" class="page">
+    <section id="guidelines-design-principles" class="kss-page">
         <h2>Design Principles</h2>
         <div class="row text-left">
             <div class="col-md-6">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section id="guidelines-navigation" class="page">
+    <section id="guidelines-navigation" class="kss-page">
         <h2>Navigation and Parent/Child Panels</h2>
         <h3>YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.</h3>
         <p>A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.</p>
@@ -153,7 +153,7 @@
         <img src="images/navigation-desktop.png" alt="" class="img-responsive">
     </section>
     <!-- load visual system -->
-    <section id="guidelines-visual-system" class="page">
+    <section id="guidelines-visual-system" class="kss-page">
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
@@ -462,7 +462,7 @@
         <hr>
     </section>
     <!-- load tone/voice -->
-    <section id="guidelines-tone-voice" class="page">
+    <section id="guidelines-tone-voice" class="kss-page">
         <h2>Tone &amp; Voice</h2>
         <h3>Guiding Principles for Tone and Voice</h3>
         <ul>
@@ -546,7 +546,7 @@
             </tr>
         </table>
       </section>
-      <section id="guidelines-errors" class="page">
+      <section id="guidelines-errors" class="kss-page">
         <!-- <hr id="guidelines-errors"> -->
         <h3>Messaging; Errors &amp; Notifications</h3>
         <ul>
@@ -602,7 +602,7 @@
         </table>
         </section>
 
-        <section id="guidelines-system-errors" class="page">
+        <section id="guidelines-system-errors" class="kss-page">
 
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
@@ -792,7 +792,7 @@
         </section>
 
         <!-- load tone/voice -->
-        <section id="guidelines-accessibility" class="page">
+        <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
             <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
