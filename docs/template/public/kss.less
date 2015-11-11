@@ -1113,10 +1113,14 @@ body.has-left-nav .sidebar-nav {
 header.hyHomeHeaderMain {
     /*font sizes per psd-not following the styleguide*/
 
-    background-image: url("/images/home/banner_bg.png");
+    background: url("/images/home/banner_bg.png") top center repeat-x ;
     margin-top: -20px;
-    margin-left: -16px;
+    margin-left: -15px;
     margin-right: -15px;
+    height: 440px;
+    .techne-logo{
+        margin: 30px 0;
+    }
 }
 header.hyHomeHeaderMinor {
     background-color: #f2f3f5;
@@ -1127,14 +1131,15 @@ header.hyHomeHeaderMinor {
     /*font sizes per psd-not following the styleguide*/
 
     h1 {
-        font-size: 57px;
+        font-size: 35px;
     }
     h3 {
-        font-size: 42px;
+        font-size: 40px;
     }
     .hyHomeHeader p,
     .hyHomeHeader a {
-        font-size: 22px;
+        font-size: 18px;
+        font-family: 'Dosis';
     }
     .hyHomeHeader {
         text-weight: lighter;
@@ -1151,7 +1156,7 @@ header.hyHomeHeaderMinor {
         padding-top: 30px;
         @media (min-width: 768px) {
             p {
-                padding: 30px 0;
+                padding: 0 0 25px 0;
             }
         }
     }
@@ -1162,9 +1167,17 @@ header.hyHomeHeaderMinor {
             line-height: 20px;
         }
     }
+    .hyHomeHeader3{
+        margin:50px;
+    }    
+
     .hyHomeHeader3,
     .personaIcons {
         background-color: #ffffff;
+        a{
+            display: inline-block;
+            cursor: pointer;
+        }
         a.hyPersonaText:hover {
             text-decoration: none;
         }
@@ -1215,6 +1228,7 @@ header.hyHomeHeaderMinor {
     }
     .personasCarousel {
         background-color: #ffffff;
+        min-height: 280px;
 
         .carousel-control{
             padding-top:50px;
@@ -1240,6 +1254,14 @@ header.hyHomeHeaderMinor {
             padding-right: 15%;
         }
     }
+    .hyHomePageSection{
+        h3{
+            margin-bottom:40px;
+        }
+        padding:40px 20px;
+
+    }
+
     .hyHomePageSection:nth-of-type(even) {
         background-color: #f7f7f7;
         margin-left: -15px;
@@ -1250,12 +1272,9 @@ header.hyHomeHeaderMinor {
         /*background-color: #ffffff;*/
     }
     .hyHomePageSection:not(:first-of-type) {
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
     }
     .consumerCarousel {
-        padding-top: 100px;
-        padding-left: 20px;
-        padding-right: 20px;
         .hyHomeSlider {
             padding-top: 20px;
         }
@@ -1292,22 +1311,27 @@ header.hyHomeHeaderMinor {
                         a {
                             text-transform: uppercase;
                             background-color: transparent;
-                            border-bottom: 1px solid #0486E0;
-                            color: #313440;
+                            border-bottom: none;
+                            color: #0486e0;
                             word-break: break-word;
+                            font-weight: bold;
+                            font-family: 'Dosis';
                         }
                     }
                     li.active a {
-                        border: 1px solid transparent;
-                        color: #8a8fa1;
+                        border: none;
+                        color: #000;
+                    }
+                    li.tab-seperator{
+                        padding:10px;
                     }
                 }
                 @media (min-width: 992px){
                     ul.w5_list{
 
-                        columns: 2;
-                        -webkit-columns: 2;
-                        -moz-columns: 2;
+                        // columns: 2;
+                        // -webkit-columns: 2;
+                        // -moz-columns: 2;
                         list-style-position: inside;
                     }
                 }
