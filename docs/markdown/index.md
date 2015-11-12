@@ -90,7 +90,7 @@
             <h3 class="text-center">The Consumer</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/home/consumer_1.png">
+                    <img src="images/home/consumer_1.png" class="personaScreen">
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</strong></p>
@@ -138,10 +138,10 @@
             <h3 class="text-center">High-touch Business User</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/home/hight_user_1.png">
+                    <img src="images/home/hight_user_1.png" class="personaScreen">
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
-                    <p>Our Marketers, Merchandisers, Product Managers and other Designer people</p>
+                    <p><strong>Our Marketers, Merchandisers, Product Managers and other Designer people</strong></p>
                     <div class="container">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
@@ -184,10 +184,10 @@
         <div class="consumerCarousel" id="hyHomeLowTC">
             <h3 class="text-center">The Low-touch Business User</h3>
             <div class="col-md-6">
-                <img src="images/home/lowt_user_1.png">
+                <img src="images/home/lowt_user_1.png" class="personaScreen">
             </div>
             <div class="col-md-6 hyPersonaTabs">
-                <p>Our  IT, Operations, Customer Service, Order Management people</p>
+                <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
                 <div class="container">
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
@@ -229,10 +229,10 @@
             <h3 class="text-center">and of course, Software Developers</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/home/developer_1.png"></img>
+                    <img src="images/home/developer_1.png" class="personaScreen">
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
-                    <p>The heart of YaaS. They need stability, community and tools that don’t get in their way</p>
+                    <p><strong>The heart of YaaS. They need stability, community and tools that don’t get in their way</strong></p>
                     <div class="container">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
