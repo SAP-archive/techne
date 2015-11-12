@@ -4,7 +4,7 @@
             <div class="page-header hyHomeHeader text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
-                    <h1>hybris techne*</h1>
+                    <h1>hybris techné*</h1>
                     <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
                 </div>
@@ -13,7 +13,7 @@
     </header>
     <header class="hyHomeHeaderMinor">
         <div class="container">
-            <div class="row hyHomeHeader2 row">
+            <div class="hyHomeHeader2">
                 <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
             </div>
         </div>
@@ -28,31 +28,27 @@
         </div><!-- row why techné -->
         <div class="row personaIcons">
             <h3 class="text-center">Who are the techné personas?</h3>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="0" data-target="#hyPersonasCarouselID" class="hyPersonaText">
-                    <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
-                    <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>
+                    <img id="hyConsumUpImg" src="images/home/consumer_up.png"/>
                     <p class="text-center">The Consumer</p>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="1" data-target="#hyPersonasCarouselID">
                     <img id="hyHighTUpImg" src="images/home/high_touch_up.png"/>
-                    <img id="hyHighTOverImg" class="hidden" src="images/home/high_touch_over.png"/>
                     <p class="text-center">High-touch Business Users</p>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="2" data-target="#hyPersonasCarouselID">
                     <img id="hyLowTUpImg" src="images/home/low_touch_up.png"/>
-                    <img id="hyLowTOverImg" class="hidden" src="images/home/low_touch_over.png"/>
                     <p class="text-center">Low-touch Business Users</p>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="3" data-target="#hyPersonasCarouselID">
                     <img id="hyDevUpImg" src="images/home/developers_up.png"/>
-                    <img id="hyDevOverImg" class="hidden" src="images/home/developers_over.png"/>
                     <p class="text-center">Software Developers</p>
                 </a>
             </div>
