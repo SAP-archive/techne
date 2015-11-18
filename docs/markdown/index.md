@@ -97,9 +97,9 @@
                     <div class="container">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#cons_wwwwh">who/what/where/when/how</a></li>
+                                <li class="active"><a data-toggle="tab" href="#cons_wwwwh">Context</a></li>
                                 <li class="tab-seperator">|</li>
-                                <li><a data-toggle="tab" href="#cons_interface">interfaces must be</a></li>
+                                <li><a data-toggle="tab" href="#cons_interface">UI Supports</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade active in" id="cons_wwwwh">
@@ -145,9 +145,9 @@
                     <div class="container">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#hight_wwwwh">who/what/where/when/how</a></li>
+                                <li class="active"><a data-toggle="tab" href="#hight_wwwwh">Context</a></li>
                                 <li class="tab-seperator">|</li>
-                                <li><a data-toggle="tab" href="#hight_interface">interfaces must be</a></li>
+                                <li><a data-toggle="tab" href="#hight_interface">UI Supports</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade active in" id="hight_wwwwh">
@@ -191,9 +191,9 @@
                 <div class="container">
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">who/what/where/when/how</a></li>
+                            <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">Context</a></li>
                             <li class="tab-seperator">|</li>
-                            <li><a data-toggle="tab" href="#lowt_interface">interfaces must be</a></li>
+                            <li><a data-toggle="tab" href="#lowt_interface">UI Supports</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade active in" id="lowt_wwwwh">
@@ -236,9 +236,9 @@
                     <div class="container">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#dev_wwwwh">who/what/where/when/how</a></li>
+                                <li class="active"><a data-toggle="tab" href="#dev_wwwwh">Context</a></li>
                                 <li class="tab-seperator">|</li>
-                                <li><a data-toggle="tab" href="#dev_interface">interfaces must be</a></li>
+                                <li><a data-toggle="tab" href="#dev_interface">UI Supports</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade active in" id="dev_wwwwh">
