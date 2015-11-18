@@ -160,17 +160,21 @@ $( document ).ready(function(){
     var aActivePersonasID = ['#hyConsumUpImg', '#hyConsumOverImg'];
     var aInactivePersonasID = ['#hyConsumUpImg','#hyHighTUpImg','#hyLowTUpImg','#hyDevUpImg'];
     var fUpdatePersonaImgs = function() {
-        if($(".kss-body").width() <= 992) {
+        if($(".kss-body").width() <= 991) {
             for (var i = 0; i <= aInactivePersonasID.length; i++){
-                $(aInactivePersonasID[i]).addClass('hidden').prev().addClass('hidden');
+                if(!$(aInactivePersonasID[i]).parent().hasClass('hyPersonaText')) {
+                    $(aInactivePersonasID[i]).addClass('hidden').parents('.personaWrapper').addClass('hidden');
+                }
+                $(aInactivePersonasID[i]).next().addClass('hidden');
             }
         } else {
             for (var j = 0; j <= aInactivePersonasID.length; j++){
-                if(aInactivePersonasID[j] != aActivePersonasID[0]){
-                    $(aInactivePersonasID[j]).removeClass('hidden').prev().removeClass('hidden');
-                } else{
-                    $(aInactivePersonasID[j]).prev().removeClass('hidden');
-                }
+                    $(aInactivePersonasID[j]).removeClass('hidden').next().removeClass('hidden');
+                    $(aInactivePersonasID[j]).parents('.personaWrapper').removeClass('hidden');
+                // if(aInactivePersonasID[j] != aActivePersonasID[0]){
+                // } else{
+                //     $(aInactivePersonasID[j]).next().removeClass('hidden');
+                // }
             }
         }
     };
@@ -179,23 +183,24 @@ $( document ).ready(function(){
 
     $('#hyPersonasCarouselID').on('slide.bs.carousel', function(oEvent){
 
-        if($(".kss-body").width() <= 992){
+        if($(".kss-body").width() <= 991){
             //inactivate the previous image
-            $(aActivePersonasID[1]).addClass('hidden');
+            $(aActivePersonasID[0]).addClass('hidden').parents('.personaWrapper').addClass('hidden');
 
             //cache the current image
             aActivePersonasID[0] = $(oEvent.relatedTarget).data('imgUp');
-            aActivePersonasID[1] = $(oEvent.relatedTarget).data('imgOver');
+            // aActivePersonasID[1] = $(oEvent.relatedTarget).data('imgOver');
 
             //make it active
-            $(aActivePersonasID[1]).removeClass('hidden');
+            $(aActivePersonasID[0]).removeClass('hidden').parents('.personaWrapper').removeClass('hidden');
 
         } else {
 
             //inactivate the previous image
 			$(aActivePersonasID[0]).parent().removeClass("hyPersonaText");
             $(aActivePersonasID[0]).removeClass('hidden');
-            $(aActivePersonasID[1]).addClass('hidden');
+
+            // $(aActivePersonasID[1]).addClass('hidden');
 
             //cache the current image
             aActivePersonasID[0] = $(oEvent.relatedTarget).data('imgUp');
@@ -203,7 +208,7 @@ $( document ).ready(function(){
 
             //make it active
             $(aActivePersonasID[1]).removeClass('hidden');
-            $(aActivePersonasID[0]).addClass('hidden');
+            // $(aActivePersonasID[0]).addClass('hidden');
 			$(aActivePersonasID[0]).parent().addClass("hyPersonaText");
         }
     });
