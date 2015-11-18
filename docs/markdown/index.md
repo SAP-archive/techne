@@ -1,54 +1,55 @@
 <div class="hyHomePage">
     <header class="main-header hyHomeHeaderMain">
         <div class="container">
-            <div class="page-header hyHomeHeader">
-                <h1 class="text-center">hybris techné</h1>
-                <p class="text-center">techné is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
-                <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-5"><a class="text-center btn btn-warning" href="/GettingStarted.html">Download now</a></div>
+            <div class="page-header hyHomeHeader text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
+                    <h1>hybris techné*</h1>
+                    <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
+                    <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
+                </div>
             </div>
         </div>
     </header>
     <header class="hyHomeHeaderMinor">
         <div class="container">
-            <div class="row hyHomeHeader2 row">
+            <div class="hyHomeHeader2">
                 <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
             </div>
         </div>
     </header>
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
-        <div class="row hyHomeHeader3">
-            <h3 class="text-center">Why is techné different?</h3>
-            <p class="text-center">techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. </p>
+        <div class="row hyHomeHeader3 text-center">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>Why is techné different?</h3>
+                <p>techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. </p>
+            </div>
         </div><!-- row why techné -->
         <div class="row personaIcons">
             <h3 class="text-center">Who are the techné personas?</h3>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="0" data-target="#hyPersonasCarouselID" class="hyPersonaText">
+                    <img id="hyConsumUpImg" src="images/home/consumer_up.png"/>
                     <p class="text-center">The Consumer</p>
-                    <img id="hyConsumUpImg" class="hidden" src="images/home/consumer_up.png"/>
-                    <img id="hyConsumOverImg" src="images/home/consumer_over.png"/>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="1" data-target="#hyPersonasCarouselID">
-                    <p class="text-center">High-touch Business Users</p>
                     <img id="hyHighTUpImg" src="images/home/high_touch_up.png"/>
-                    <img id="hyHighTOverImg" class="hidden" src="images/home/high_touch_over.png"/>
+                    <p class="text-center">High-touch Business Users</p>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="2" data-target="#hyPersonasCarouselID">
-                    <p class="text-center">Low-touch Business Users</p>
                     <img id="hyLowTUpImg" src="images/home/low_touch_up.png"/>
-                    <img id="hyLowTOverImg" class="hidden" src="images/home/low_touch_over.png"/>
+                    <p class="text-center">Low-touch Business Users</p>
                 </a>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="3" data-target="#hyPersonasCarouselID">
-                    <p class="text-center">Software Developers</p>
                     <img id="hyDevUpImg" src="images/home/developers_up.png"/>
-                    <img id="hyDevOverImg" class="hidden" src="images/home/developers_over.png"/>
+                    <p class="text-center">Software Developers</p>
                 </a>
             </div>
         </div> <!-- row - personas -->
@@ -85,317 +86,190 @@
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
         <!-- Consumer Section-->
-        <div class="row consumerCarousel" id="hyHomeConsumerC">
-            <div class="col-md-6">
-                <div id="hyConsumerCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!--<ol class="carousel-indicators">
-                    </ol>-->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="images/home/consumer_1.png"></img>
-                        </div>
-                       <!-- <div class="item">
-                            <img src="images/home/consumer_2.png"></img>
-                        </div>
-                        <div class="item">
-                            <img src="images/home/consumer_3.png"></img>
-                        </div>-->
-                    </div> <!-- carousel inner -->
-                </div> <!-- carousel hyConsumerCarouselID -->
-            </div><!--consumer carousel-->
-            <div class="col-md-6 hyPersonaTabs">
-                <h3>The Consumer</h3>
-                <p>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</p>
-                <div class="container">
-                    <div class="row hyPersonaTab">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#cons_wwwwh">who/what/where/when/how</a></li>
-                            <li><a data-toggle="tab" href="#cons_interface">interfaces must be</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active in" id="cons_wwwwh">
-                                <ul class="w5_list">
-                                    <li>at home, at work, on the go</li>
-                                    <li>low and high bandwidth environments</li>
-                                    <li>browser and searcher, depending on the need</li>
-                                    <li>mobile/social/local</li>
-                                    <li>laptop/tablet/mobile phone</li>
-                                    <li>task-driven at times; relaxed researcher at others</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="cons_interface">
-                                <ul class="w5_list">
-                                    <li>convenient</li>
-                                    <li>consistent</li>
-                                    <li>easy</li>
-                                    <li>flexible</li>
-                                    <li>efficient</li>
-                                    <li>helpful</li>
-                                    <li>secure</li>
-                                </ul>
+        <div class="consumerCarousel" id="hyHomeConsumerC">
+            <h3 class="text-center">The Consumer</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/home/consumer_1.png" class="personaScreen">
+                </div>
+                <div class="col-md-6 hyPersonaTabs">
+                    <p><strong>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</strong></p>
+                    <div class="container">
+                        <div class="row hyPersonaTab">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#cons_wwwwh">Context</a></li>
+                                <li class="tab-seperator">|</li>
+                                <li><a data-toggle="tab" href="#cons_interface">UI Supports</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="cons_wwwwh">
+                                    <ul class="w5_list">
+                                        <li>At home, at work, on the go</li>
+                                        <li>Low and high bandwidth environments</li>
+                                        <li>Browser and searcher, depending on the need</li>
+                                        <li>Mobile/social/local</li>
+                                        <li>Laptop/tablet/mobile phone</li>
+                                        <li>Task-driven at times; relaxed researcher at others</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="cons_interface">
+                                    <ul class="w5_list">
+                                        <li>Convenient</li>
+                                        <li>Consistent</li>
+                                        <li>Easy</li>
+                                        <li>Flexible</li>
+                                        <li>Efficient</li>
+                                        <li>Helpful</li>
+                                        <li>Secure</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!--consumer data-->
-            <div class="col-sm-12 hyHomeSlider">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
-                </div>
-                <div class="row hySliderText">
-                    <div class="col-xs-4 col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Longer Task Duration</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-md-pull-3">
-                        <img src="images/home/consumer_slider.png"></img>
-                    </div>
-                </div>
-            </div><!-- consumerization slider-->
-        </div><!-- the consumer carousel-->
+            </div>
+        </div>
     </div>
 </div>
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
         <!-- High-touch User Section-->
-        <div class="row consumerCarousel" id="hyHomeHighTC">
-            <div class="col-md-6 col-md-push-6">
-                <div id="hyHightCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!--<ol class="carousel-indicators">
-                    </ol>-->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="images/home/hight_user_1.png"></img>
-                        </div>
-                        <!--<div class="item">
-                            <img src="images/home/hight_user_2.png"></img>
-                        </div>
-                        <div class="item">
-                            <img src="images/home/hight_user_3.png"></img>
-                        </div>-->
-                    </div> <!-- carousel inner -->
-                </div> <!-- carousel hyConsumerCarouselID -->
-            </div><!--consumer carousel-->
-            <div class="col-md-6 col-md-pull-6 hyPersonaTabs">
-                <h3>High-touch Business User</h3>
-                <p>Our Marketers, Merchandisers, Product Managers and other Designer people</p>
-                <div class="container">
-                    <div class="row hyPersonaTab">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#hight_wwwwh">who/what/where/when/how</a></li>
-                            <li><a data-toggle="tab" href="#hight_interface">interfaces must be</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active in" id="hight_wwwwh">
-                                <ul class="w5_list">
-                                    <li>at home, at work, on the go</li>
-                                    <li>high demand on time and effort; multi-tasker</li>
-                                    <li>collaborative</li>
-                                    <li>typically high bandwidth environments</li>
-                                    <li>laptop/tablet/mobile phone</li>
-                                    <li>performance-driven</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="hight_interface">
-                                <ul class="w5_list">
-                                    <li>collaboration</li>
-                                    <li>scale regardless of device</li>
-                                    <li>multi-tasking</li>
-                                    <li>nonlinear task flows</li>
-                                    <li>preview of consumer experience</li>
-                                    <li>easy info comparison</li>
-                                    <li>scalable information density</li>
-                                </ul>
+        <div class="consumerCarousel" id="hyHomeHighTC">
+            <h3 class="text-center">High-touch Business User</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/home/hight_user_1.png" class="personaScreen">
+                </div>
+                <div class="col-md-6 hyPersonaTabs">
+                    <p><strong>Our Marketers, Merchandisers, Product Managers and other Designer people</strong></p>
+                    <div class="container">
+                        <div class="row hyPersonaTab">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#hight_wwwwh">Context</a></li>
+                                <li class="tab-seperator">|</li>
+                                <li><a data-toggle="tab" href="#hight_interface">UI Supports</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="hight_wwwwh">
+                                    <ul class="w5_list">
+                                        <li>At home, at work, on the go</li>
+                                        <li>High demand on time and effort; multi-tasker</li>
+                                        <li>Collaborative</li>
+                                        <li>Typically high bandwidth environments</li>
+                                        <li>Laptop/tablet/mobile phone</li>
+                                        <li>Performance-driven</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="hight_interface">
+                                    <ul class="w5_list">
+                                        <li>Collaboration</li>
+                                        <li>Scale regardless of device</li>
+                                        <li>Multi-tasking</li>
+                                        <li>Nonlinear task flows</li>
+                                        <li>Preview of consumer experience</li>
+                                        <li>Easy info comparison</li>
+                                        <li>Scalable information density</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!--consumer data-->
-            <div class="col-sm-12 hyHomeSlider">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
-                </div>
-                <div class="row hySliderText">
-                    <div class="col-xs-4 col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Longer Task Duration</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-md-pull-3">
-                        <img src="images/home/hight_slider.png"></img>
-                    </div>
-                </div>
-            </div><!-- consumerization slider-->
-        </div><!-- the consumer carousel-->
-        <!-- -->
+            </div>
+        </div>
     </div>
 </div>
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
-        <div class="row consumerCarousel" id="hyHomeLowTC">
+        <div class="consumerCarousel" id="hyHomeLowTC">
+            <h3 class="text-center">The Low-touch Business User</h3>
             <div class="col-md-6">
-                <div id="hyLowtCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!--<ol class="carousel-indicators">
-                    </ol>-->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="images/home/lowt_user_1.png"></img>
-                        </div>
-                        <!--<div class="item">
-                            <img src="images/home/lowt_user_2.png"></img>
-                        </div>
-                        <div class="item">
-                            <img src="images/home/lowt_user_3.png"></img>
-                        </div>-->
-                    </div> <!-- carousel inner -->
-                </div> <!-- carousel hyLowtCarouselID -->
-            </div><!--consumer carousel-->
+                <img src="images/home/lowt_user_1.png" class="personaScreen">
+            </div>
             <div class="col-md-6 hyPersonaTabs">
-                <h3>The Low-touch Business User</h3>
-                <p>Our  IT, Operations, Customer Service, Order Management people</p>
+                <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
                 <div class="container">
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">who/what/where/when/how</a></li>
-                            <li><a data-toggle="tab" href="#lowt_interface">interfaces must be</a></li>
+                            <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">Context</a></li>
+                            <li class="tab-seperator">|</li>
+                            <li><a data-toggle="tab" href="#lowt_interface">UI Supports</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade active in" id="lowt_wwwwh">
                                 <ul class="w5_list">
-                                    <li>works at work (generally)</li>
-                                    <li>high demand on time and effort; serial tasker</li>
-                                    <li>independent</li>
-                                    <li>low and high bandwidth environments</li>
-                                    <li>laptop (mostly)</li>
-                                    <li>efficiency-driven</li>
+                                    <li>Works at work (generally)</li>
+                                    <li>High demand on time and effort; serial tasker</li>
+                                    <li>Independent</li>
+                                    <li>Low and high bandwidth environments</li>
+                                    <li>Laptop (mostly)</li>
+                                    <li>Efficiency-driven</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="lowt_interface">
                                 <ul class="w5_list">
-                                    <li>data-at-a-glance</li>
-                                    <li>tabular manipulation</li>
-                                    <li>keyboard shortcuts</li>
-                                    <li>one-click actions</li>
-                                    <li>linear and nonlinear flows</li>
-                                    <li>consumer interface emulation</li>
+                                    <li>Data-at-a-glance</li>
+                                    <li>Tabular manipulation</li>
+                                    <li>Keyboard shortcuts</li>
+                                    <li>One-click actions</li>
+                                    <li>Linear and nonlinear flows</li>
+                                    <li>Consumer interface emulation</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!--consumer data-->
-            <div class="col-sm-12 hyHomeSlider">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
-                </div>
-                <div class="row hySliderText">
-                    <div class="col-xs-4 col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Longer Task Duration</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-md-pull-3">
-                        <img src="images/home/lowt_slider.png"></img>
-                    </div>
-                </div>
-            </div><!-- consumerization slider-->
-        </div><!-- the consumer carousel-->
-        <!-- -->
+            </div>
+        </div>
     </div>
 </div>
 <div class="hyHomePageSection">
     <div class="container hyHomeContentCentered">
-        <div class="row consumerCarousel" id="hyHomeSoftDevC">
-            <div class="col-md-6 col-md-push-6">
-                <div id="hyDevCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!--<ol class="carousel-indicators">
-                    </ol>-->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="images/home/developer_1.png"></img>
-                        </div>
-                       <!-- <div class="item">
-                            <img src="images/home/developer_2.png"></img>
-                        </div>
-                        <div class="item">
-                            <img src="images/home/developer_3.png"></img>
-                        </div> -->
-                    </div> <!-- carousel inner -->
-                </div> <!-- carousel hyDevCarouselID -->
-            </div><!--consumer carousel-->
-            <div class="col-md-6 col-md-pull-6 hyPersonaTabs">
-                <h3>and of course, Software Developers</h3>
-                <p>The heart of YaaS. They need stability, community and tools that don’t get in their way</p>
-                <div class="container">
-                    <div class="row hyPersonaTab">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#dev_wwwwh">who/what/where/when/how</a></li>
-                            <li><a data-toggle="tab" href="#dev_interface">interfaces must be</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active in" id="dev_wwwwh">
-                                <ul class="w5_list">
-                                    <li>works everywhere</li>
-                                    <li>works with remote teams</li>
-                                    <li>high bandwidth and low bandwidth</li>
-                                    <li>typically under tight deadlines</li>
-                                    <li>task-driven</li>
-                                    <li>performance-driven</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="dev_interface">
-                                <ul class="w5_list">
-                                    <li>quick and easy setup</li>
-                                    <li>instant feedback</li>
-                                    <li>error avoidance</li>
-                                    <li>one-click access to documentation</li>
-                                    <li>speed</li>
-                                    <li>access to developer community</li>
-                                    <li>preview of final experience where applicable</li>
-                                </ul>
+        <div class="consumerCarousel" id="hyHomeSoftDevC">
+            <h3 class="text-center">and of course, Software Developers</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/home/developer_1.png" class="personaScreen">
+                </div>
+                <div class="col-md-6 hyPersonaTabs">
+                    <p><strong>The heart of YaaS. They need stability, community and tools that don’t get in their way</strong></p>
+                    <div class="container">
+                        <div class="row hyPersonaTab">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#dev_wwwwh">Context</a></li>
+                                <li class="tab-seperator">|</li>
+                                <li><a data-toggle="tab" href="#dev_interface">UI Supports</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="dev_wwwwh">
+                                    <ul class="w5_list">
+                                        <li>Works everywhere</li>
+                                        <li>Works with remote teams</li>
+                                        <li>High bandwidth and low bandwidth</li>
+                                        <li>Typically under tight deadlines</li>
+                                        <li>Task-driven</li>
+                                        <li>Performance-driven</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="dev_interface">
+                                    <ul class="w5_list">
+                                        <li>Quick and easy setup</li>
+                                        <li>Instant feedback</li>
+                                        <li>Error avoidance</li>
+                                        <li>One-click access to documentation</li>
+                                        <li>Speed</li>
+                                        <li>Access to developer community</li>
+                                        <li>Preview of final experience where applicable</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!--consumer data-->
-            <div class="col-sm-12 hyHomeSlider">
-                <div class="row">
-                    <p class="text-center">The "consumerization continuum"</p>
-                </div>
-                <div class="row hySliderText">
-                    <div class="col-xs-4 col-sm-3 text-right">
-                        <p>Less Visual,</p>
-                        <p>Less Collaborative,</p>
-                        <p>Shorter Task Duration</p>
-                    </div>
-                    <div class="col-xs-4 col-xs-offset-4 col-sm-offset-6 col-md-offset-0 col-sm-3 col-md-push-6">
-                        <p>More Visual,</p>
-                        <p>More Collaborative,</p>
-                        <p>Longer Task Duration</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-md-pull-3">
-                        <img src="images/home/developer_slider.png"></img>
-                    </div>
-                </div>
-            </div><!-- consumerization slider-->
-        </div><!-- the consumer carousel-->
+            </div>
+        </div>
     </div>
+    <br><br>
 </div><!--/.container-->
 </div>
 
