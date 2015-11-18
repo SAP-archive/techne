@@ -10,7 +10,6 @@ body.kss-body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     max-width: 100%;
-
     padding-top: 100px;
 }
 
@@ -655,6 +654,7 @@ body.has-left-nav .sidebar-nav {
         height: 0;
         padding: 50% 0;
         border-radius: 50%;
+        
     }
     .circle-type {
         font-size: 74px;
@@ -662,7 +662,7 @@ body.has-left-nav .sidebar-nav {
         margin-top: -35%;
     }
     .seperator {
-        margin: 40px 0 60px 0;
+        margin: 40px 0 80px 0;
         position: relative;
         .hexagon {
             top: 31px;
@@ -693,7 +693,7 @@ body.has-left-nav .sidebar-nav {
             .code-close {
                 font-size: 20px;
                 position: absolute;
-                top: -4.5px;
+                top: -2.5px;
                 left: 8px;
                 font-weight: 500;
                 color: #fff;
@@ -718,9 +718,7 @@ body.has-left-nav .sidebar-nav {
             width: 0;
             border-top: 10.39px solid #d8dfe8;
         }
-        .open-hexagon {
-            background: #7e858d;
-        }
+        
         .open-hexagon:before {
             bottom: 100%;
             border-bottom: 10.39px solid #7e858d;
@@ -729,6 +727,50 @@ body.has-left-nav .sidebar-nav {
             top: 100%;
             width: 0;
             border-top: 10.39px solid #7e858d;
+        }
+        .circle {
+            top: 38px;
+            left: 0;
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background-color: #d8dfe8;
+            margin: auto;
+            display: block;
+            z-index: 2;
+            padding:0;
+            border: none;
+            box-shadow: none;
+            span{
+                margin-top: 5px;
+            }
+            .glyphicon {
+                font-size: 20px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: #7e858d;
+            }
+            .code-open {
+                font-size: 12px;
+                position: absolute;
+                top: 4px;
+                left: 6px;
+                font-weight: 900;
+                color: #7e858d;
+                display: none;
+            }
+            .code-close {
+                font-size: 20px;
+                position: absolute;
+                top: -2.5px;
+                left: 8px;
+                font-weight: 500;
+                color: #fff;
+            }
+        }
+        .open-circle {
+            background: #7e858d;
         }
 
 
@@ -753,11 +795,11 @@ body.has-left-nav .sidebar-nav {
             text-transform: uppercase;
             position: absolute;
             width: 100%;
-            top: 20px;
+            top: 35px;
         }
     }
 }
-#visual-system {
+.visual-system {
     /* font-size */
 
     .size-26 {
@@ -767,6 +809,7 @@ body.has-left-nav .sidebar-nav {
         font-size: 20px;
     }
     .hexagonVector {
+        font-family: 'Open Sans', sans-serif;
         position: relative;
         span {
             text-shadow:
@@ -774,6 +817,7 @@ body.has-left-nav .sidebar-nav {
             1px -1px 0 #cfd8e3,
             -1px 1px 0 #cfd8e3,
             1px 1px 0 #cfd8e3;
+            font-size: 30px;
         }
         p {
             position: absolute;
@@ -1026,43 +1070,47 @@ body.has-left-nav .sidebar-nav {
             li {
                 line-height: 60%;
                 position: relative;
-                width: 38px;
-                height: 21.94px;
+                width: 40px;
+                height: 40px;
                 background-color: #d8dfe8;
-                border-radius: 0px;
+                border-radius: 50%;
+                span{   
+                    display: inline-block;
+                    margin-top: 8px;
+                }
 
             }
-            li:before,
-            li:after {
-                content: "";
-                position: absolute;
-                width: 0;
-                border-left: 19px solid transparent;
-                border-right: 19px solid transparent;
-            }
+            // li:before,
+            // li:after {
+            //     content: "";
+            //     position: absolute;
+            //     width: 0;
+            //     border-left: 19px solid transparent;
+            //     border-right: 19px solid transparent;
+            // }
 
-            li:before {
-                margin-left: -9px;
-                bottom: 100%;
-                border-bottom: 10.97px solid #d8dfe8;
-            }
+            // li:before {
+            //     margin-left: -9px;
+            //     bottom: 100%;
+            //     border-bottom: 10.97px solid #d8dfe8;
+            // }
 
-            li:after {
-                margin-left: -29px;
-                top: 100%;
-                width: 0;
-                border-top: 10.97px solid #d8dfe8;
-            }
+            // li:after {
+            //     margin-left: -29px;
+            //     top: 100%;
+            //     width: 0;
+            //     border-top: 10.97px solid #d8dfe8;
+            // }
             li.active {
                 color: #fff;
                 background-color: @blue_gd;
             }
-            li.active:before {
-                border-bottom: 10.97px solid @blue_gd;
-            }
-            li.active:after {
-                border-top: 10.97px solid @blue_gd;
-            }
+            // li.active:before {
+            //     border-bottom: 10.97px solid @blue_gd;
+            // }
+            // li.active:after {
+            //     border-top: 10.97px solid @blue_gd;
+            // }
         }
     }
     .carouselSpacing {
@@ -1315,10 +1363,10 @@ header.hyHomeHeaderMinor {
         }
     }
 }
-.hyGuidelinesPage {
+.kss-guidelines-page {
   margin-bottom:50px;
     section {
-        padding-top: 40px;
+        // padding-top: 40px;
     }
     .imageCenter {
         position: relative;
@@ -1476,7 +1524,7 @@ body.hyComponentsPage{
         }
     }
 
-.hyPatternsPage .modal-dialog{
+.kss-patterns-page .modal-dialog{
 	width: 90%;
 }
 
@@ -1500,4 +1548,12 @@ body.hyComponentsPage{
 }
 .error-message-table .wide-col {
     min-width: 260px;
+}
+
+.kss-guidelines-page .kss-page, 
+.kss-patterns-page .kss-page{
+    h2, h3{
+        margin-top: -55px;
+        padding-top: 100px;
+    }
 }

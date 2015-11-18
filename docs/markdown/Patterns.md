@@ -58,12 +58,12 @@
 },
  --->
 
-<div class="hyPatternsPage container-fluid" >
+<div class="kss-patterns-page container-fluid" >
   <div class="row">
     <h1>Patterns & Layouts</h1>
     <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
   </div>
-  <section id="patterns-tours" class="page">
+  <section id="patterns-tours" class="kss-page">
     <h2>Tours</h2>
     <p>A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanation of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.</p>
     <div class="row">
@@ -85,7 +85,7 @@
     </div>
   </section>
   <!---
-  <section id="patterns-card-pages" class="page">
+  <section id="patterns-card-pages" class="kss-page">
     <h2>First Contact</h2>
     <p>“First Contact” should be used when someone comes to a page that has no data yet.  The ‘First Contact’ pattern uses the Inline Help component but defaults to ‘all on’ until the user initiates closing the help. </p>
 
@@ -96,7 +96,7 @@
     </div>
   </section>
   --->
-  <section id="patterns-wizard" class="page">
+  <section id="patterns-wizard" class="kss-page">
     <h2>Wizards</h2>
     <p>Wizards are made up of the modal component and button and/or button link components. Use the wizard pattern when you want to guide people through a step-by-step process. Typically a wizard will have a ‘next’ and ‘previous’ action and a “Save” action at the last step. </p>
     <div class="row">
@@ -112,7 +112,7 @@
       </div>
     </div>
   </section>
-  <section id="patterns-Dialogues" class="page">
+  <section id="patterns-Dialogues" class="kss-page">
     <h2>Dialogues</h2>
     <p>Dialogues are made up of the modal component and buttons/button links. Use the dialogue pattern when you want to bring attention to an action that needs to be taken before someone proceeds.  An example of this is when someone tries to leave a page without submitting their updates. </p>
     <div class="row">
@@ -124,7 +124,7 @@
     </div>
   </section>
   <!---
-  <section id="patterns-tables" class="page">
+  <section id="patterns-tables" class="kss-page">
     <h2>Tables</h2>
     <p></p>
     <div class="row">
@@ -134,7 +134,7 @@
     </div>
   </section>
   --->
-  <section id="patterns-cards" class="page">
+  <section id="patterns-cards" class="kss-page">
     <h2>Cards</h2>
     <p>Cards allow for a highly-visual approach for browsing, scanning and mental information organization. Cards can be used with or without a visual component, or with different patterns of visual components to allow for data visualization and separation. Standard YaaS business objects should use the following icon style:</p>
     <ul>
@@ -161,7 +161,7 @@
       </div>
     </div>
   </section>
-  <section id="patterns-tables" class="page">
+  <section id="patterns-tables" class="kss-page">
     <h2>Tables</h2>
     <p>Lists are a high-utility pattern that allows for quick sorting, filtering and scanning. 'Add a X' ideally is found at the top of the list pattern for users to quickly add data in context. </p>
     <div class="row">
@@ -182,7 +182,7 @@
       </div>
     </div>
   </section>
-  <section id="patterns-trees" class="page">
+  <section id="patterns-trees" class="kss-page">
     <h2>Trees</h2>
     <p>Trees are a great way to display and manage hierarchy in a visual, drag-and-drop manner.</p>
     <div class="row">
@@ -198,7 +198,7 @@
       </div>
     </div>
   </section>
-  <section id="patterns-retail-product-grids" class="page">
+  <section id="patterns-retail-product-grids" class="kss-page">
     <h2>Product Grids</h2>
     <p>Specific for implementation in need of high-touch product information management and administration, the product admin layout provides and immersive, WYSIWYG enviorenment for business users to work within.</p>
     <div class="row">
@@ -219,7 +219,7 @@
       </div>
     </div>
   </section>
-  <section id="patterns-mixed-pattern-pages" class="page">
+  <section id="patterns-mixed-pattern-pages" class="kss-page">
     <h2>Mixed Component & Pattern Pages</h2>
     <p>Mix patterns to create page layouts that are highly intuitive and contextual for business users</p>
     <div class="row">
@@ -241,7 +241,7 @@
     </div>
   </section>
   <!---
-  <section id="patterns-header" class="page">
+  <section id="patterns-header" class="kss-page">
     <h2>Standard Add/Edit/Delete Page Header</h2>
     <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”. </p>
     <ul>
@@ -264,7 +264,7 @@
     </div>
   </section>
   --->
-  <section id="patterns-overall-pattern-reference" class="page">
+  <section id="patterns-overall-pattern-reference" class="kss-page">
     <h2>Overall Pattern Reference</h2>
     <p>Attached is the overall style guide for existing UI Components in techne.  This should be considered a LIVING DOCUMENT for reference only.  Please refer to the “Components” section for the latest and greatest of any UI Component in techne.</p>
     <div class="row">

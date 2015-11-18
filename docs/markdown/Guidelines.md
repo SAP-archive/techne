@@ -37,8 +37,8 @@
        ]
     }
     -->
-<div class="hyGuidelinesPage container-fluid" >
-    <section id="guidelines-spirit-vision" class="page">
+<div class="kss-guidelines-page container-fluid" >
+    <section id="guidelines-spirit-vision" class="kss-page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <div class="hybris-guy-bg">
@@ -95,7 +95,7 @@
             </div>
         </div>
     </section>
-    <section id="guidelines-design-principles" class="page">
+    <section id="guidelines-design-principles" class="kss-page">
         <h2>Design Principles</h2>
         <div class="row text-left">
             <div class="col-md-6">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section id="guidelines-navigation" class="page">
+    <section id="guidelines-navigation" class="kss-page">
         <h2>Navigation and Parent/Child Panels</h2>
         <h3>YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.</h3>
         <p>A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.</p>
@@ -153,44 +153,34 @@
         <img src="images/navigation-desktop.png" alt="" class="img-responsive">
     </section>
     <!-- load visual system -->
-    <section id="guidelines-visual-system" class="page">
+    <section id="guidelines-visual-system" class="kss-page visual-system">
         <h2>Visual System</h2>
         <h3>Main Colors</h3>
         <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
         <div class="row">
             <div class="row text-center">
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #E0E9F0;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #E0E9F0;"></div>
                     <p class="no-bottom-margin">Screen Background</p>
                     <h4>#E0E9F0</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #FFFFFF;"></div>
                     <p class="no-bottom-margin">Content Background</p>
                     <h4>#FFFFFF</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                         <span style="color: #313440;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #313440;"></div>
                     <p class="no-bottom-margin">Typography (Main)</p>
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #8A8FA1;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #8A8FA1;"></div>
                     <p class="no-bottom-margin">Typography (Secondary)</p>
                     <h4>#8A8FA1</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #0486E0;">&#x2B22;</span>
-                    </div>
+                    <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
                 </div>
@@ -209,22 +199,19 @@
         <p>These colors are desaturated to work better with the primary application colors.</p>
         <div class="row text-center">
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #d3dbe6;">&#x2B22;</span>
+                <div class="circle"style="background: #d3dbe6;">
                 </div>
                 <p class="no-bottom-margin">Help Information</p>
                 <h4>#D3DBE6</h4>
             </div>
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #233243;">&#x2B22;</span>
+                <div class="circle"style="background: #233243;">
                 </div>
                 <p class="no-bottom-margin">Well Done! Success!</p>
                 <h4>#233243</h4>
             </div>
             <div class="col-md-5ths col-xs-6">
-                <div class="hexagonVector">
-                    <span style="color: #ff3b30;">&#x2B22;</span>
+                <div class="circle"style="background: #ff3b30;">
                 </div>
                 <p class="no-bottom-margin">Oh Snap! Try Again.</p>
                 <h4>#FF3B30</h4>
@@ -253,30 +240,26 @@
         <div class="row">
             <div class="row text-center type-face">
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-light">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-light circle-type">Aa</p>
                     </div>
                     <p>Light</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-book">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-book circle-type">Aa</p>
                     </div>
                     <p>Book</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-medium">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-medium circle-type">Aa</p>
                     </div>
                     <p>Medium</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">Aa</p>
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-semibold circle-type">Aa</p>
                     </div>
                     <p>SemiBold</p>
                 </div>
@@ -336,37 +319,32 @@
         <div class="row">
             <div class="row text-center">
                 <div class="col-md-5ths col-xs-6">
-                   <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-light">H1</p>
+                   <div class="circle">
+                        <p class="dosis-light circle-type">H1</p>
                     </div>
                     <p class="dosis-light">Dosis Light <br> 30pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H2</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H2</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 22pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H3</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H3</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 19pt </p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                   <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-medium">H4</p>
+                   <div class="circle">
+                        <p class="dosis-mediu circle-type">H4</p>
                     </div>
                     <p class="dosis-medium">Dosis Medium <br> 19pt</p>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="hexagonVector">
-                        <span style="color: #FFFFFF;">&#x2B22;</span>
-                        <p class="dosis-semibold">H5</p>
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H5</p>
                     </div>
                     <p class="dosis-semibold">Dosis SemiBold <br> 14pt</p>
                 </div>
@@ -378,9 +356,9 @@
                     <!-- Indicators -->
                     <div class="carousel-inner">
                     <ol class="carousel-indicators">
-                        <li data-target="#header-example-carousel" data-slide-to="0" class="active">H1</li>
-                        <li data-target="#header-example-carousel" data-slide-to="1">H2</li>
-                        <li data-target="#header-example-carousel" data-slide-to="2">H3</li>
+                        <li data-target="#header-example-carousel" data-slide-to="0" class="active"><span>H1</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="1"><span>H2</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="2"><span>H3</span></li>
                     </ol>
                     <!-- Wrapper for slides -->
                         <div class="item active">
@@ -462,7 +440,7 @@
         <hr>
     </section>
     <!-- load tone/voice -->
-    <section id="guidelines-tone-voice" class="page">
+    <section id="guidelines-tone-voice" class="kss-page">
         <h2>Tone &amp; Voice</h2>
         <h3>Guiding Principles for Tone and Voice</h3>
         <ul>
@@ -546,7 +524,7 @@
             </tr>
         </table>
       </section>
-      <section id="guidelines-errors" class="page">
+      <section id="guidelines-errors" class="kss-page">
         <!-- <hr id="guidelines-errors"> -->
         <h3>Messaging; Errors &amp; Notifications</h3>
         <ul>
@@ -602,7 +580,7 @@
         </table>
         </section>
 
-        <section id="guidelines-system-errors" class="page">
+        <section id="guidelines-system-errors" class="kss-page">
 
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
@@ -792,7 +770,7 @@
         </section>
 
         <!-- load tone/voice -->
-        <section id="guidelines-accessibility">
+        <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
             <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
