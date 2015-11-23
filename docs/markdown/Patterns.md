@@ -29,6 +29,9 @@
       {
         "text": "Product Grids",
         "id": "#patterns-retail-product-grids"
+      },      {
+        "text": "Builder Help & Form Validation ",
+        "id": "#builder-help-form-validation"
       },
       {
         "text": "Mixed Component & Pattern Pages",
@@ -215,6 +218,36 @@
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/products-mobile.png" title="View Full Image" href="#viewFullscreen">
           <img src="images/thumbnails/Products-mobile.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="builder-help-form-validation" class="kss-page">
+    <h2>Builder Help and Form Validation </h2>
+    <p>To aid Builder users we have established different levels of help and help interaction patterns to address specific interaction and feedback needs. In order of criticality: </p>
+    <ul>
+      <li>Critical Error-Avoidance Inline Help</li>
+      <li>Character Counter</li>
+      <li>Form Field Validation</li>
+      <li>Additional Inline Help (two states)</li>
+      <li>Section-Level Help</li>
+      <li>Page-Level Help</li>
+    </ul>
+    <p>Find out how to use them under <a href="#">Help and Validation</a> on the components section.</p>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-All.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-All.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-Bubble.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-Bubble.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-validation.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-validation.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
     </div>
