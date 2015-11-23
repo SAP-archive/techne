@@ -31,6 +31,10 @@
         "id": "#patterns-retail-product-grids"
       },
       {
+        "text": "Page Header Navigation Bar",
+        "id": "#page-header-navigation-bar"
+      },
+      {
         "text": "Mixed Component & Pattern Pages",
         "id": "#patterns-mixed-pattern-pages"
       },  
@@ -218,6 +222,63 @@
         </a>
       </div>
     </div>
+  </section>
+  <section id="page-header-navigation-bar" class="kss-page">
+    <h2>Page Header Navigation Bar</h2>
+    <h3>Add/Edit/Delete Page Header</h3>
+    <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”.
+    </p>
+
+    <p><strong>Save:</strong> Saves changes to the page or view. The Save button will be inactive when the page/form is clean and active when the page/form is dirty.</p>
+
+    <p><strong>Cancel:</strong> Stops the process the user has started and brings the user back to the page before they started the process. Cancel stops a new object being created, closes a modal or an edit page, ends a complete wizard and deletes all data changes. Most of the time, this pattern can be solved with a historical back using the Referrer from the Builder link manager.</p>
+
+    <p><strong>Back:</strong> Hierarchical back that brings you to a higher node/leaf in your object tree. Back is displayed on every page inside the Builder where there is a higher node.</p>
+
+    <h3>Page Header with Primary Interaction</h3>
+
+    <p>Primary Interaction: If there is a primary action for a page/form, display in place of Save when no changes have been made to the form. (e.g. publish, deploy).</p>
+    
+    <h3>Page Examples</h3>
+    
+    <p><strong>Every Page:</strong> Always show back</p>
+
+    <p><strong>New Form pages:</strong> Always show back, cancel and save</p>
+
+    <p><strong>Revisited edit pages AND user has enough rights:</strong> Always show back, cancel and inactive save</p>
+    
+    <p><strong>OR:</strong> Always show back, cancel and primary interactions</p>
+    <p><strong>Why:</strong> On certain pages we need a clear call to action and we need to save space on mobile</p>
+
+    <p><strong>Changed/Form dirty pages:</strong> Always show back, cancel and save</p>
+    <p><strong>Why:</strong> User needs to get feedback that he has to save his changes.</p>
+
+    <p><strong>Saved Form pages AND user has enough rights:</strong> Always show back, cancel and inactive save</p>
+    <p><strong>OR:</strong>Always show back, cancel and primary interactions</p>
+
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_clean.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_clean.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_dirty.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_dirty.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_publish.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_publish.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_validate.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_validate.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+
   </section>
   <section id="patterns-mixed-pattern-pages" class="kss-page">
     <h2>Mixed Component & Pattern Pages</h2>
