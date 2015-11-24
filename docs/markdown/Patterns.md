@@ -45,9 +45,7 @@
     ]
 	}
 -->
-
 <!---
-
 {
   "text": "First Contact",
   "id": "#patterns-first"
@@ -61,8 +59,7 @@
   "id": "#patterns-tables"
 },
  --->
-
-<div class="kss-patterns-page container-fluid" >
+<div class="kss-patterns-page container-fluid">
   <div class="row">
     <h1>Patterns & Layouts</h1>
     <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
@@ -238,24 +235,44 @@
     <h3>Page Header with Primary Interaction</h3>
 
     <p>Primary Interaction: If there is a primary action for a page/form, display in place of Save when no changes have been made to the form. (e.g. publish, deploy).</p>
-    
-    <h3>Page Examples</h3>
-    
-    <p><strong>Every Page:</strong> Always show back</p>
-
-    <p><strong>New Form pages:</strong> Always show back, cancel and save</p>
-
-    <p><strong>Revisited edit pages AND user has enough rights:</strong> Always show back, cancel and inactive save</p>
-    
-    <p><strong>OR:</strong> Always show back, cancel and primary interactions</p>
-    <p><strong>Why:</strong> On certain pages we need a clear call to action and we need to save space on mobile</p>
-
-    <p><strong>Changed/Form dirty pages:</strong> Always show back, cancel and save</p>
-    <p><strong>Why:</strong> User needs to get feedback that he has to save his changes.</p>
-
-    <p><strong>Saved Form pages AND user has enough rights:</strong> Always show back, cancel and inactive save</p>
-    <p><strong>OR:</strong>Always show back, cancel and primary interactions</p>
-
+    <table class="table techne-table">
+      <tr>
+        <th>Page Examples</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><strong>Every Page:</strong></td>
+        <td>  <p><strong></strong> Always show back</p></td>
+      </tr>
+      <tr>
+        <td><strong>New Form pages:</strong> </td>
+        <td><p>Always show back, cancel and save</p></td>
+      </tr>
+      <tr>
+        <td><strong>Revisited edit pages AND user has enough rights:</strong></td>
+        <td><p> Always show back, cancel and inactive save</p></td>
+      </tr>
+      <tr>
+        <td><strong>OR:</strong></td>
+        <td><p> Always show back, cancel and primary interactions</p></td>
+      </tr>
+      <tr>
+        <td><strong>Changed/Form dirty pages:</strong> </td>
+        <td><p>Always show back, cancel and save</p></td>
+      </tr>
+      <tr>
+        <td><strong>Why:</strong></td>
+        <td><p> User needs to get feedback that he has to save his changes.</p></td>
+      </tr>
+      <tr>
+        <td><strong>Saved Form pages AND user has enough rights:</strong></td>
+        <td><p>Always show back, cancel and inactive save</p></td>
+      </td>
+      <tr>
+        <td><strong>OR:</strong></td>
+        <td><p>Always show back, cancel and primary interactions</p></td>
+      </tr>
+    </table>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_clean.jpg" title="View Full Image" href="#viewFullscreen">
