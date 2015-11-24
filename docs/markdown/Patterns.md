@@ -235,6 +235,8 @@
     <h3>Page Header with Primary Interaction</h3>
 
     <p>Primary Interaction: If there is a primary action for a page/form, display in place of Save when no changes have been made to the form. (e.g. publish, deploy).</p>
+
+    <h3>Page Header examples</h3>
     <table class="table techne-table">
       <tr>
         <th>Page Type</th>
