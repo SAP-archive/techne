@@ -250,7 +250,7 @@
       </tr>
       <tr>
         <td>
-          User has edit rights on:
+          User has enough rights on
           <ul>
             <li>Revisited edit pages</li>
             <li>Saved Form pages</li>
