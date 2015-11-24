@@ -237,40 +237,26 @@
     <p>Primary Interaction: If there is a primary action for a page/form, display in place of Save when no changes have been made to the form. (e.g. publish, deploy).</p>
     <table class="table techne-table">
       <tr>
-        <th>Page Examples</th>
-        <th></th>
+        <th>Page Type</th>
+        <th>Always Show</th>
       </tr>
       <tr>
-        <td><strong>Every Page:</strong></td>
-        <td>  <p><strong></strong> Always show back</p></td>
+        <td>Every Page</td>
+          <td>Back button</td>
       </tr>
       <tr>
-        <td><strong>New Form pages:</strong> </td>
-        <td><p>Always show back, cancel and save</p></td>
+        <td>New, change or dirty Forms</td>
+        <td>Back, cancel and save buttons</td>
       </tr>
       <tr>
-        <td><strong>Revisited edit pages AND user has enough rights:</strong></td>
-        <td><p> Always show back, cancel and inactive save</p></td>
-      </tr>
-      <tr>
-        <td><strong>OR:</strong></td>
-        <td><p> Always show back, cancel and primary interactions</p></td>
-      </tr>
-      <tr>
-        <td><strong>Changed/Form dirty pages:</strong> </td>
-        <td><p>Always show back, cancel and save</p></td>
-      </tr>
-      <tr>
-        <td><strong>Why:</strong></td>
-        <td><p> User needs to get feedback that he has to save his changes.</p></td>
-      </tr>
-      <tr>
-        <td><strong>Saved Form pages AND user has enough rights:</strong></td>
-        <td><p>Always show back, cancel and inactive save</p></td>
-      </td>
-      <tr>
-        <td><strong>OR:</strong></td>
-        <td><p>Always show back, cancel and primary interactions</p></td>
+        <td>
+          User has edit rights on:
+          <ul>
+            <li>Revisited edit pages</li>
+            <li>Saved Form pages</li>
+          </ul>
+        </td>
+        <td>Back, cancel, inactive save or primary interactions</td>
       </tr>
     </table>
     <div class="row">
