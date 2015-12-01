@@ -31,6 +31,10 @@
         "id": "#patterns-retail-product-grids"
       },
       {
+        "text": "Page Header Navigation Bar",
+        "id": "#page-header-navigation-bar"
+      },
+      {
         "text": "Mixed Component & Pattern Pages",
         "id": "#patterns-mixed-pattern-pages"
       },  
@@ -41,9 +45,7 @@
     ]
 	}
 -->
-
 <!---
-
 {
   "text": "First Contact",
   "id": "#patterns-first"
@@ -57,8 +59,7 @@
   "id": "#patterns-tables"
 },
  --->
-
-<div class="kss-patterns-page container-fluid" >
+<div class="kss-patterns-page container-fluid">
   <div class="row">
     <h1>Patterns & Layouts</h1>
     <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
@@ -218,6 +219,71 @@
         </a>
       </div>
     </div>
+  </section>
+  <section id="page-header-navigation-bar" class="kss-page">
+    <h2>Page Header Navigation Bar</h2>
+    <h3>Add/Edit/Delete Page Header</h3>
+    <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”.
+    </p>
+
+    <p><strong>Save:</strong> Saves changes to the page or view. The Save button will be inactive when the page/form is clean and active when the page/form is dirty.</p>
+
+    <p><strong>Cancel:</strong> Stops the process the user has started and brings the user back to the page before they started the process. Cancel stops a new object being created, closes a modal or an edit page, ends a complete wizard and deletes all data changes. Most of the time, this pattern can be solved with a historical back using the Referrer from the Builder link manager.</p>
+
+    <p><strong>Back:</strong> Hierarchical back that brings you to a higher node/leaf in your object tree. Back is displayed on every page inside the Builder where there is a higher node.</p>
+
+    <h3>Page Header with Primary Interaction</h3>
+
+    <p>Primary Interaction: If there is a primary action for a page/form, display in place of Save when no changes have been made to the form. (e.g. publish, deploy).</p>
+
+    <h3>Page Header examples</h3>
+    <table class="table techne-table">
+      <tr>
+        <th>Page Type</th>
+        <th>Always Show</th>
+      </tr>
+      <tr>
+        <td>Every Page</td>
+          <td>Back button</td>
+      </tr>
+      <tr>
+        <td>New, change or dirty Forms</td>
+        <td>Back, cancel and save buttons</td>
+      </tr>
+      <tr>
+        <td>
+          User has enough rights on
+          <ul>
+            <li>Revisited edit pages</li>
+            <li>Saved Form pages</li>
+          </ul>
+        </td>
+        <td>Back, cancel, inactive save or primary interactions</td>
+      </tr>
+    </table>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_clean.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_clean.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_dirty.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_dirty.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_publish.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_publish.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/header_validate.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/header_validate.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+
   </section>
   <section id="patterns-mixed-pattern-pages" class="kss-page">
     <h2>Mixed Component & Pattern Pages</h2>
