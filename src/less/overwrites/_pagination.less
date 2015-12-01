@@ -1,9 +1,21 @@
-// Usage Guideline
+//Infinity Scroll
 //
-// <b>Use pagination components in conjuction with Tables to allow for more efficient performance and quick access to specific records in the overall data set.</b> <br/><br/>techne recommends displaying three pages in the pagination; the current page; the previous page and the next page.  i.e. < 1 2 3 >. This recommendation also allows for improved white space on mobile devices.  For ease of use, it’s recommended that pagination is placed at both the top and bottom of tables on desktop and tablet, but only at the bottom on mobile.<br/><br/>
-// As a side recommendation, the total record # should display at the top of the page (see Patterns & Layouts) and display the total number of records, not just the number of records displayed on the page.
+//When displaying records that are more fun, for entertainment, or if people need to quickly scan the list, infinity scroll can be used.When using infinity scroll on a lengthy list, a filter is recommended to allow for a faster search capabilities.
+//
+//<h2>Pagination</h2>
+//
+// Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. techne recommends displaying up to three pages in the pagination: the current page; the previous page and the next page, as well as arrows to go to the first page (<<)  or last page (>>). It is also recommended that the number of records is displayed at the top of the page (see <a href="Patterns.html#patterns-cards">Patterns & Layouts</a>), not just the total number displayed on the single page.
 //
 // Markup:
+// <p><b>When 3 pages or less, do not display arrows:</b></p> <br>
+// <nav>
+//   <ul class="pagination">
+//     <li class="active"><a href="#">1</a></li>
+//     <li><a href="#">2</a></li>
+//     <li><a href="#">3</a></li>
+//   </ul>
+// </nav>
+// <p><b>When more than three pages, display arrows:</b></p> <br>
 // <nav>
 //   <ul class="pagination">
 //     <li class="disabled">
@@ -21,10 +33,10 @@
 //     </li>
 //   </ul>
 // </nav>
-// <p>&laquo; is disabled, first number is active.</p> <br>
+// <p>On the first page: first number is active, &laquo;  is disabled</p> <br>
 // <nav>
 //   <ul class="pagination">
-//     <li>
+//     <li class="disabled">
 //       <a href="#" aria-label="Previous">
 //         <span aria-hidden="true">&laquo;</span>
 //       </a>
@@ -39,7 +51,6 @@
 //     </li>
 //   </ul>
 // </nav>
-// <p>Middle number is active.</p> <br>
 // <nav>
 //   <ul class="pagination">
 //     <li>
@@ -47,9 +58,27 @@
 //         <span aria-hidden="true">&laquo;</span>
 //       </a>
 //     </li>
-//     <li><a href="#">1</a></li>
 //     <li><a href="#">2</a></li>
 //     <li class="active"><a href="#">3</a></li>
+//     <li><a href="#">4</a></li>
+//     <li>
+//       <a href="#" aria-label="Next">
+//         <span aria-hidden="true">&raquo;</span>
+//       </a>
+//     </li>
+//   </ul>
+// </nav>
+// <p>On the middle page: middle number is always active</p> <br>
+// <nav>
+//   <ul class="pagination">
+//     <li>
+//       <a href="#" aria-label="Previous">
+//         <span aria-hidden="true">&laquo;</span>
+//       </a>
+//     </li>
+//     <li><a href="#">3</a></li>
+//     <li class="active"><a href="#">4</a></li>
+//     <li><a href="#">5</a></li>
 //     <li class="disabled">
 //       <a href="#" aria-label="Next">
 //         <span aria-hidden="true">&raquo;</span>
@@ -57,7 +86,24 @@
 //     </li>
 //   </ul>
 // </nav>
-// <p>&raquo; is disabled, last number is active.</p> <br>
+// <nav>
+//   <ul class="pagination">
+//     <li>
+//       <a href="#" aria-label="Previous">
+//         <span aria-hidden="true">&laquo;</span>
+//       </a>
+//     </li>
+//     <li><a href="#">3</a></li>
+//     <li><a href="#">4</a></li>
+//     <li class="active"><a href="#">5</a></li>
+//     <li class="disabled">
+//       <a href="#" aria-label="Next">
+//         <span aria-hidden="true">&raquo;</span>
+//       </a>
+//     </li>
+//   </ul>
+// </nav>
+// <p>On the last page: last number is active, &raquo; is disabled</p> <br>
 //
 // Styleguide 13.1
 
