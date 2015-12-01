@@ -192,7 +192,7 @@
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
             <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
             <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
-            <p><b>Text Link Color:</b> use app-wide for links in any context.</p>
+            <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
         <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
