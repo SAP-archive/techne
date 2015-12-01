@@ -1,8 +1,6 @@
 // Form Field Validation
 //
-// When a user provides content that does not fit the form field format, requirements, or restrictions, display inline validation as guidance for the user.  The validation is placed between the form field and the help text. Validation is always red, and the form field should be outlined in red. This pattern is displayed when clicking on a primary interaction or with direct inline validation. Find more information on validation and form fields in the ‘Back, Cancel and Save’ section. 
-//
-// Form Validation
+// When a user provides content that does not fit the form field format, requirements, or restrictions, display inline validation as guidance for the user.  The validation is placed between the form field and the help text. Validation is always red, and the form field should be outlined in red. This pattern is displayed when clicking on a primary interaction or with direct inline validation.
 //
 // Markup:
 // <div class="form-group has-error">
@@ -83,58 +81,70 @@
 
 // Additional Inline Help
 //
-// Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is "The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed."
+// Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is "The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed." <br><br><br>
 //
 // Styleguide 6.4
 
 
-//Additional Inline Help States (is this needed? what goes here? ) 
-//
-//<br><br><br>
-//
-// Styleguide 6.5
-
-// On-Demand: Help Bubbles
+// Additional Inline Help State: On-Demand (Help Bubble)
 //
 // By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
 //
 // Markup:
 //  <div class="form-group">
-//    <label class="control-label ng-binding">Label</label>
-//    <span class="help-control" data-toggle="tooltip" data-placement="bottom" title="Additional Inline Help message goes here"><img src="images/inline-help-icon.png" alt=""></span>
-//    <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" > 
-//    <span class="builder-help-text inline-hint-text ng-scope" style="display:none"><img src="images/help-icon.png" alt=""> The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed.</span>
-//    <span class="builder-input-hint inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
+//    <label class="control-label">Label</label>
+//    <span class="help-control" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span>
+//    <input type="text" name="Project Description" class="form-control input-lg" > 
+//    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
 //
-// Styleguide 6.6
+// Styleguide 6.5
 //
 .help-control{
-  float: right; 
   padding: 0 5px; 
   cursor: default;
-}
-.help-inline{       
-  float: none; 
-  font-size: 17px; 
-  padding: 0;
+  position: relative;
+  width:25px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 0 -5px 5px;
+  .hyicon-help-icon{
+    color: #7e858d;
+    font-size: 25px;
+    position: absolute;
+    margin: -20px 0 0 -2px;
+  }
+  .hyicon-help-icon:before {
+    content: "\e011";
+  }
+
 }
 
+.help-control:hover{
+    .hyicon-help-icon:before {
+    content: "\e012";
+  }
+}
 
-// All “Help On”
+.help-icon-inline:before{
+  margin: -23px 5px 0 0;
+  font-size: 25px; 
+  color:#7e858d;
+}
+
+// Additional Inline Help State: All "Help On"
 //
 // Users can choose to enable “Help Mode” using a toggle in the footer of the left navigation panel or from the “My Profile” section. This will display all Additional Inline help on the page. Use ‘inline help’ when ‘all help on’ is set to true. Inline Help is displayed below a form field.
 //
 // Markup:
 //  <div class="form-group">
-//    <label class="control-label ng-binding">Label</label>
-//    <span class="help-control pull-right hidden" data-toggle="tooltip" data-placement="bottom" title="Additional Inline Help message goes here"><img src="images/inline-help-icon.png" alt=""></span>
+//    <label class="control-label">Label</label>
 //    <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" > 
-//    <span class="builder-help-text inline-hint-text ng-scope" ><img src="images/inline-help-icon.png" width="20"> Inline Help message will be displayed here when "All Help" is turned on</span>
-//    <span class="builder-input-hint inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
+//    <span class="inline-hint-text"><span class="hyicon hyicon-helpon help-icon-inline"></span> Help message will be displayed here when "All Help" is turned on</span>
+//    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
 //
-// Styleguide 6.7
+// Styleguide 6.6
 //
 
 
@@ -142,15 +152,86 @@
 //
 // Section-level help will always display IF it exists, but it isn’t required. Section-level help is displayed below the section title. Whether or not section-level help is included is at the discretion of each team.
 //
-// Styleguide 6.8
+// Markup:
+// <div id="demo-page-background" class="panel panel-default">
+//   <div class="panel-heading">Section Level Help Example</div>
+//   <div class="panel-body">
+//    <div class="row">
+//      <div class="col-md-4">
+//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
+//       <ul class="list-group">
+//          <li class="list-group-item">Cras justo odio</li>
+//         <li class="list-group-item">Cras justo odio</li>
+//        </ul>
+//      </div>
+//      <div class="col-md-4">
+//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
+//       <ul class="list-group">
+//         <li class="list-group-item">Cras justo odio</li>
+//         <li class="list-group-item">Cras justo odio</li>
+//       </ul>
+//      </div>
+//      <div class="col-md-4">
+//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
+//        <ul class="list-group">
+//          <li class="list-group-item">Cras justo odio</li>
+//          <li class="list-group-item">Cras justo odio</li>
+//        </ul>
+//      </div>
+//    </div>
+//   </div>
+// </div>
+//
+// Styleguide 6.7
 
+.section-help-demo{
+  .hyicon-help-icon{
+    margin:-16px 0 0 -9px;
+  }
+}
 
 // Page Level Help
 //
 //Page-level help will always display IF it exists, but it isn’t required. Whether or not page-level help is included is at the discretion of each team. Use this pattern only on complex pages with unfamiliar concepts and provide a source for detailed information. <br><br>
 //<strong>Do:</strong> Add builder modules to make your services configurable in YaaS Builder.<br>
-//<strong>Don't:</strong> Find below a list of all members assigned to your project. <br><br><br><br>
+//<strong>Don't:</strong> Find below a list of all members assigned to your project.
 //
-// Styleguide 6.9
+// Markup:
+// <div id="demo-page-background">
+// <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
+// <div class="container-fluid">
+//     <div class="navbar-left">
+//         <button class="btn-subordinate btn navbar-btn">
+//             <span class="hyicon hyicon-back"></span> <span class="hidden-xs">Back</span>
+//         </button>
+//     </div>
+//     <div class="y-navbar-center">
+//         <div class="y-navbar-center-content">
+//             <h1>Long Page Title</h1>
+//         </div>
+//     </div>
+//     <div class="navbar-right">
+//         <div class="y-toolbar">
+//             <div class="y-toolbar-cell">
+//                 <button class="btn btn-subordinate navbar-btn">Cancel
+//                 </button>
+//             </div>
+//             <div class="y-toolbar-cell">
+//                 <button class="btn btn-warning navbar-btn">Save
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// </div>
+// <span class="page-level-help-message">Page level help message goes here </span>
+//
+// Styleguide 6.8
 
-
+.page-level-help-message{
+  display: block;
+  padding:20px;
+  font-style: italic;
+  color:#8A8FA1!important;
+  text-align: center;
+}
