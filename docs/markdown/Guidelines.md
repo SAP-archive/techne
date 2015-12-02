@@ -26,9 +26,12 @@
 	   "text": "Errors & Notifications",
 	   "id": "#guidelines-errors"
 	 },
-	 {
-	   "text": "System Errors",
-	   "id": "#guidelines-system-errors"
+     {
+       "text": "System Errors",
+       "id": "#guidelines-system-errors"
+     },	 {
+	   "text": "Writing Help",
+	   "id": "#writing-help"
 	 },
          {
            "text": "Accessibility",
@@ -192,7 +195,7 @@
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
             <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
             <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
-            <p><b>Text Link Color:</b> use app-wide for links in any context.</p>
+            <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
         <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
@@ -579,12 +582,9 @@
             </tr>
         </table>
         </section>
-
         <section id="guidelines-system-errors" class="kss-page">
-
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
-            
             <table class="table teche-table error-message-table">
                 <tr>
                     <th>HTTP Code</th>   
@@ -760,15 +760,49 @@
                     <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
                     <td>Something went very wrong. Please try again.</td>
                 </tr>
-
             </table>
-
             <h3>Language and Translation</h3>
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
         </section>
+        <section id="writing-help" class="kss-page">
+            <h2>Writing Help</h2>
+            <table class="table techne-table">
+                <tr>
+                    <th width="50%">Do explain:</th>
+                    <th>Don’t explain:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Unfamiliar concepts</li>
+                            <li>Where to find obscure information</li>
+                            <li>What format the information should be given in</li>
+                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>The interface</li>
+                            <li>The user’s job to them</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>Example how to use Links</p>
+            <table class="table techne-table">
+                <tr>
+                    <th>Do:</th>
+                    <th>Don’t:</th>
+                </tr>
+                <tr>
+                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                </tr>
+            </table>
 
+        </section>
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
@@ -776,5 +810,4 @@
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
-
 </div>

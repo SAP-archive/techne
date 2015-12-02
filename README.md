@@ -49,6 +49,7 @@ and add in the file something like:
 ```
 // Use this file to point to the right folders
 // for correct paths for icon-fonts etc 
+// icon names much follow a UTF hex naming format
 
 @bootstrap-path: '../../bower_components/bootstrap'; // Path to bootstrap folder
 @bower-path: '../../bower_components';  // Path to bower_components folder

@@ -12,4 +12,7 @@ $(document).ready(function(){
 		var menuLayer = $(this).siblings(".y-on-click-show")
 		menuLayer.fadeIn(150);
 	});	
+
+	$('[data-toggle="tooltip"]').tooltip();
+
 });
