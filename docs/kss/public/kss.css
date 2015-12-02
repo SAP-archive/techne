@@ -411,6 +411,9 @@ h1.kss-title {
 #kss-main.col-md-12 {
   max-width: 1000px;
 }
+#kss-main a:visited {
+  color: #0486e0;
+}
 .kss-mod-list {
   width: 100%;
 }
