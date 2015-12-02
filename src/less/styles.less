@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600);
 
-@bower-path: '../../..'; // Default bower_components path - Don't change here
+@bower-path: '../../bower_components'; // Default bower_components path - Don't change here
 @hytech-path: "../";
 
 @import "@{bower-path}/bootstrap/less/bootstrap";
@@ -23,7 +23,7 @@
 // Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
 // Styleguide 1
-@import "./components/_alert.less";
+@import "./overwrites/_alert.less";
 
 
 // Buttons
@@ -138,7 +138,9 @@
 @import "./components/_sticky_navbar.less";
 @import './overwrites/_navbar.less';
 
-// Pagination & Infinity Scroll
+// Pagination
+//
+// Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.
 //
 // Styleguide 14
 @import './overwrites/_pagination.less';
