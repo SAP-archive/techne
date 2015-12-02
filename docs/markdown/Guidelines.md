@@ -29,6 +29,13 @@
      {
        "text": "System Errors",
        "id": "#guidelines-system-errors"
+     },	 {
+	   "text": "Writing Help",
+	   "id": "#writing-help"
+	 },
+     {
+       "text": "System Errors",
+       "id": "#guidelines-system-errors"
      },
      {
        "text": "Infinite Scroll & Pagination",
@@ -196,7 +203,7 @@
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
             <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
             <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
-            <p><b>Text Link Color:</b> use app-wide for links in any context.</p>
+            <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
         <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
@@ -767,6 +774,42 @@
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
         </section>
+        <section id="writing-help" class="kss-page">
+            <h2>Writing Help</h2>
+            <table class="table techne-table">
+                <tr>
+                    <th width="50%">Do explain:</th>
+                    <th>Don’t explain:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Unfamiliar concepts</li>
+                            <li>Where to find obscure information</li>
+                            <li>What format the information should be given in</li>
+                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>The interface</li>
+                            <li>The user’s job to them</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>Example how to use Links</p>
+            <table class="table techne-table">
+                <tr>
+                    <th>Do:</th>
+                    <th>Don’t:</th>
+                </tr>
+                <tr>
+                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                </tr>
+            </table>
+        </section>
         <section id="guidelines-scroll-pagination" class="kss-page">
             <h2>Infinite Scroll & Pagination</h2>
             <h3>Infinite Scroll</h3>
@@ -781,5 +824,4 @@
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
-
 </div>
