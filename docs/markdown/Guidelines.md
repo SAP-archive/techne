@@ -26,10 +26,14 @@
 	   "text": "Errors & Notifications",
 	   "id": "#guidelines-errors"
 	 },
-	 {
-	   "text": "System Errors",
-	   "id": "#guidelines-system-errors"
-	 },
+     {
+       "text": "System Errors",
+       "id": "#guidelines-system-errors"
+     },
+     {
+       "text": "Infinite Scroll & Pagination",
+       "id": "#guidelines-scroll-pagination"
+     },
          {
            "text": "Accessibility",
            "id": "#guidelines-accessibility"
@@ -767,6 +771,17 @@
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
+        </section>
+
+
+        <section id="guidelines-scroll-pagination" class="kss-page">
+            <h2>Infinite Scroll & Pagination</h2>
+            <h3>Infinite Scroll</h3>
+            <p>When displaying records that are more fun, for entertainment, or if people need to quickly scan the list, infinite scroll can be used.When using infinite scroll on a lengthy list, a filter is recommended to allow for a faster search capabilities.</p>
+
+            <h3>Pagination</h3>
+            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-13.html">pagination</a>.</p>
+
         </section>
 
         <!-- load tone/voice -->
