@@ -33,6 +33,9 @@
       {
         "text": "Page Header Navigation Bar",
         "id": "#page-header-navigation-bar"
+      },      {
+        "text": "Builder Help & Form Validation ",
+        "id": "#builder-help-form-validation"
       },
       {
         "text": "Mixed Component & Pattern Pages",
@@ -45,7 +48,9 @@
     ]
 	}
 -->
+
 <!---
+
 {
   "text": "First Contact",
   "id": "#patterns-first"
@@ -59,7 +64,8 @@
   "id": "#patterns-tables"
 },
  --->
-<div class="kss-patterns-page container-fluid">
+
+<div class="kss-patterns-page container-fluid" >
   <div class="row">
     <h1>Patterns & Layouts</h1>
     <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
@@ -220,7 +226,57 @@
       </div>
     </div>
   </section>
-  <section id="page-header-navigation-bar" class="kss-page">
+  <section id="builder-help-form-validation" class="kss-page">
+    <h2>Builder Help and Form Validation </h2>
+    <p>To aid Builder users we have established different levels of help and help interaction patterns to address specific interaction and feedback needs. In order of criticality: </p>
+    <ul>
+      <li>Critical Error-Avoidance Inline Help</li>
+      <li>Character Counter</li>
+      <li>Form Field Validation</li>
+      <li>Additional Inline Help (two states)</li>
+      <li>Section-Level Help</li>
+      <li>Page-Level Help</li>
+    </ul>
+    <p>Find out how to use them under <a href="section-6.html">Help and Validation</a> on the components section.</p>
+    <div class="row">
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-All.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-All.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-Bubble.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-Bubble.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-all.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-pageLevel.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-pageLevel.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-section.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-section.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-section-all.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>      
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-mobile.png" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-mobile.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+    </div>
+  </section>
+    <section id="page-header-navigation-bar" class="kss-page">
     <h2>Page Header Navigation Bar</h2>
     <h3>Add/Edit/Delete Page Header</h3>
     <p>At “leaf” level pages where there are add, edit or delete actions available use the standard, mobile-first page header. In this pattern, always display “Save”, “Cancel” and “Back”.
