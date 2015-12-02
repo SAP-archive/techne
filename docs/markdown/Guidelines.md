@@ -583,12 +583,9 @@
             </tr>
         </table>
         </section>
-
         <section id="guidelines-system-errors" class="kss-page">
-
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
-            
             <table class="table teche-table error-message-table">
                 <tr>
                     <th>HTTP Code</th>   
@@ -764,26 +761,19 @@
                     <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
                     <td>Something went very wrong. Please try again.</td>
                 </tr>
-
             </table>
-
             <h3>Language and Translation</h3>
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
         </section>
-
-
         <section id="guidelines-scroll-pagination" class="kss-page">
             <h2>Infinite Scroll & Pagination</h2>
             <h3>Infinite Scroll</h3>
-            <p>When displaying records that are more fun, for entertainment, or if people need to quickly scan the list, infinite scroll can be used.When using infinite scroll on a lengthy list, a filter is recommended to allow for a faster search capabilities.</p>
-
+            <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using infinite scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
             <h3>Pagination</h3>
             <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-13.html">pagination</a>.</p>
-
         </section>
-
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
