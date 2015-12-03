@@ -240,7 +240,7 @@
     <p>Find out how to use them under <a href="section-6.html">Help and Validation</a> on the components section.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-All.jpg" title="View Full Image" href="#viewFullscreen">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-all.jpg" title="View Full Image" href="#viewFullscreen">
           <img src="images/thumbnails/Help-all.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
@@ -255,7 +255,7 @@
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-section.jpg" title="View Full Image" href="#viewFullscreen">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section.jpg" title="View Full Image" href="#viewFullscreen">
           <img src="images/thumbnails/help-section.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
