@@ -411,9 +411,6 @@ h1.kss-title {
 #kss-main.col-md-12 {
   max-width: 1000px;
 }
-#kss-main a:visited {
-  color: #0486e0;
-}
 .kss-mod-list {
   width: 100%;
 }
@@ -1828,6 +1825,9 @@ body.hyComponentsPage {
 }
 .error-message-table .wide-col {
   min-width: 260px;
+}
+.kss-page a:visited {
+  color: #0486e0;
 }
 .kss-guidelines-page .kss-page h2,
 .kss-patterns-page .kss-page h2,

@@ -260,6 +260,7 @@ gulp.task('patchgulpkss',
         gulp.src('./gulp-patch/gulp-kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss'));
         //patch the gulp-kss depednecy of kss
         gulp.src('./gulp-patch/kss/**/*.js').pipe(gulp.dest('./node_modules/gulp-kss/node_modules/kss/lib'));
+        gulp.src('./gulp-patch/kss/**/*.js').pipe(gulp.dest('./node_modules/kss/lib'));
     }
 );
 
