@@ -241,17 +241,12 @@
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-All.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-All.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-Bubble.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-Bubble.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
           <img src="images/thumbnails/Help-all.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-bubble.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/Help-bubble.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
@@ -261,12 +256,12 @@
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-section.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-section.jpg" alt="" class="img-thumbnail">
+          <img src="images/thumbnails/help-section.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-section-all.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/help-section-all.jpg" alt="" class="img-thumbnail">
         </a>
       </div>      
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
