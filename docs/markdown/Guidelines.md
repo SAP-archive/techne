@@ -815,7 +815,7 @@
             <h3>Infinite Scroll</h3>
             <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using Infinite Scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
             <h3>Pagination</h3>
-            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-13.html">pagination</a>.</p>
+            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-14.html">pagination</a>.</p>
         </section>
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
