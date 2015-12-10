@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/SAP/techne.git"
   },
-  "homepage": "https://techne.yaas.io/",
+  "homepage": "http://techne.yaas.io/",
   "author": "SAP SE",
   "license": "Apache-2.0",
   "dependencies": {
