@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
   <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
-
 </head>
 <body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}">
 
@@ -220,9 +219,9 @@
                       {{#if_eq reference 1}}
                      <h1>Components</h1>
                          <p>
-                           The hybris techne component library is rooted in Bootstrap 3 and includes custom UI components used across YaaS.
+                           The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
                            It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
-                           also across YaaS. If you’re looking for something basic for your UI, <a href="http://getbootstrap.com/components">check here</a> to help build out your pages.
+                           also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.
                         </p>
                         {{/if_eq}}
                           <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
@@ -319,6 +318,13 @@
   <script src="public/script.js"></script>
   <!--<script src="public/super-nav.js"></script>-->
 
+  <script src="https://www.yaas.io/globalresources/v3/js/yaas.cookiebar.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function() {
+        $.cookieBar();
+      });
+  </script>
+  
   <!-- TODO to be fixed!-->
   <script>
     $(document).ready(function() {
