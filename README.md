@@ -7,7 +7,7 @@ https://techne.yaas.io/section-1.html
 You can easily  install techne using [Bower](http://bower.io/):
 `bower install hyTechne`
 
-## Contribute to hybris techne
+## Getting started
 
 Four quick steps to get started:
 
