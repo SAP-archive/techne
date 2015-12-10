@@ -280,7 +280,8 @@
   </div>
 <footer class="footer">
       <div class="footer-right">
-          <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal">Feedback</a>
+          <!-- <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal">Feedback</a> -->
+          <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal" style="display: none;">Feedback</a>
           <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
           <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
       </div>
@@ -291,16 +292,6 @@
           <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
           <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
       </div>
-      <div class="modal fade" id="feedbackModal">
-          <div class="modal-dialog feedback-modal">
-              <div class="modal-content">
-                  <div class="modal-body">
-                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                      <iframe src="https://cloud4.wufoo.eu/forms/feedback/" width="100%" frameborder="0" scrolling="no"  height="584"></iframe>
-                  </div>
-              </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
 </footer>
 </div>
 <!-- SCRIPTS -->
@@ -340,27 +331,30 @@
     <!-- End Google Analytics -->
 
 
-    <!--{{! This won't be included in the demo page }}-->
-    <!--{{#if argv.xdemo}}-->
-      <!--<script type="text/javascript">-->
-      <!--var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);-->
-      <!--(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();-->
-      <!--</script>-->
-    <!--{{/if}}-->
-    
+  <!--{{! This won't be included in the demo page }}-->
+  <!--{{#if argv.xdemo}}-->
+    <!--<script type="text/javascript">-->
+    <!--var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);-->
+    <!--(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();-->
+    <!--</script>-->
+  <!--{{/if}}-->
     <script src="https://www.yaas.io/globalresources/v3/js/global.novendor.min.js"></script>
+    
+    <!-- feedback modal -->
+    <div class="modal fade" id="feedbackModal">
+      <div id="feedbackPlaceholder"></div>
+    </div>
+    <!-- /feedback modal -->
 
-    <!-- cookie bar -->
-    <script src="https://www.yaas.io/globalresources/v3/js/yaas.cookiebar.js"></script>
+    <!-- feedback script -->
     <script type="text/javascript">
-        $(document).ready(function() {
-          $.cookieBar();
-        });
+      $('#feedbackPlaceholder').load("https://api.yaas.io/hybris/feedback/v1/form/basic?jiraProjectKey=CCE", function(response, status, xhr){
+        if(xhr.status === 200){
+          $('.feedback-affix').show();
+        }
+      });
     </script>
-    <!-- /cookie bar -->
-
+    <!-- /feedback script -->
 
     </body>
-
-
 </html>
