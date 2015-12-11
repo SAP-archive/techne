@@ -12,8 +12,9 @@
     "type": "git",
     "url": "https://github.com/SAP/techne.git"
   },
-  "author": "Hybris Software",
-  "license": "MIT",
+  "homepage": "http://techne.yaas.io/",
+  "author": "SAP SE",
+  "license": "Apache-2.0",
   "dependencies": {
     "gulp-connect-multi": "^1.0.8"
   },
