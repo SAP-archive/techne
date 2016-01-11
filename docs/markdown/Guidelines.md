@@ -592,7 +592,7 @@
         </section>
         <section id="guidelines-system-errors" class="kss-page">
             <h3>System Errors</h3>
-            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Belowe are listed examples on how to write YaaS system errors:</p>
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
                 <li>We need all required fields complete to keep you moving.</li>
                 <li>We need all your entries to be correct to keep you moving</li>
