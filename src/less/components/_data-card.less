@@ -43,6 +43,21 @@
 //        </p>
 //    </div>
 //  </li>
+//  <li class="dataCard">
+//    <div class="cardRow cardRowDisabled">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can't click me, I'm disabled!
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//    </div>
+//  </li>
 // </ul>
 // <div class="dataCard-seeall">
 //   <button class="btn btn-link">
@@ -59,27 +74,20 @@
   display: flex;
   display: -webkit-flex; /* Safari */
   display: -ms-flexbox; /* IE10 */
-
   align-items: stretch;
   -ms-flex-align: stretch;
-
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-
   flex: 0 1 auto;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
-
   flex-direction: row;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
-
   position: relative;
-
 
   @media (max-width:@screen-xs-max) {
     flex-direction: column;
@@ -111,9 +119,7 @@ a.dataCard{
   display: -webkit-flex; /* Safari */
   display: -ms-flexbox; /* IE10 */
   cursor: default;
-
   overflow: visible!important;
-
   box-shadow: 0 1px 0 rgba(138, 143, 161, 0.3);
   margin-bottom: 5px;
   margin-top: 0;
@@ -179,12 +185,10 @@ a.dataCard{
     height: auto;
     padding: 13px;
     background: #fff;
-
     width: 100%;
     flex: 1;
     -ms-flex: 1; /* IE 10 */
     -webkit-flex: 1; /* Safari */
-
     transition: all 0.1s ease-in-out 0s;
 
     .hyicon-remove{
@@ -216,6 +220,15 @@ a.dataCard{
       .primaryData{
         color: @default-blue;
       }
+    }
+
+    &.cardRowDisabled{
+        background-color: #d2dae4;
+        user-select: none;
+        & *{ 
+          color:#a4a9b9;
+        }
+
     }
   }
 
