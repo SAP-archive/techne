@@ -1,11 +1,11 @@
 <!--SIDENAVCONFIG
     {
-    	"showLeftNav": true,
-    	"navigation": [
-    		{
-    			"text": "Spirit & Vision",
-    			"id": "#guidelines-spirit-vision"
-    		},
+        "showLeftNav": true,
+        "navigation": [
+            {
+                "text": "Spirit & Vision",
+                "id": "#guidelines-spirit-vision"
+            },
          {
            "text": "Design Principles",
            "id": "#guidelines-design-principles"
@@ -22,10 +22,10 @@
            "text": "Tone & Voice",
            "id": "#guidelines-tone-voice"
          },
-	 {
-	   "text": "Errors & Notifications",
-	   "id": "#guidelines-errors"
-	 },
+     {
+       "text": "Errors & Notifications",
+       "id": "#guidelines-errors"
+     },
      {
        "text": "System Errors",
        "id": "#guidelines-system-errors"
@@ -137,7 +137,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	     <span class="visible-xs"><br><br><br><br></span>
+         <span class="visible-xs"><br><br><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -153,7 +153,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	    <span class="visible-xs"><br><br></span>
+        <span class="visible-xs"><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -186,11 +186,6 @@
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="circle" style="background: #8A8FA1;"></div>
-                    <p class="no-bottom-margin">Typography (Secondary)</p>
-                    <h4>#8A8FA1</h4>
-                </div>
-                <div class="col-md-5ths col-xs-6">
                     <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
@@ -201,8 +196,7 @@
             <h4>Usage Guidelines</h4>
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
-            <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
-            <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
+            <p><b>Typography (Main):</b> use app-wide for body copy and headings. Provides for high-contrast on white background.</p>
             <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
@@ -592,183 +586,17 @@
         </section>
         <section id="guidelines-system-errors" class="kss-page">
             <h3>System Errors</h3>
-            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
-            <table class="table teche-table error-message-table">
-                <tr>
-                    <th>HTTP Code</th>   
-                    <th class="narrow-col">Top-Level Error Type</th>   
-                    <th class="narrow-col">Sub-Level Error Type</th>   
-                    <th class="wide-col">Error Description</th>   
-                    <th class="wide-col">Recommended Error Message</th>   
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>bad_payload_syntax</td>
-                    <td></td>
-                    <td>The request payload has incorrect syntax according to the sent Content-Type. Check the payload content for syntax errors, such as missing commas or quotation marks that are not closed.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>validation_violation</td>
-                    <td>missing_field</td>
-                    <td>The requested body payload for a POST or PUT operation is missing, which violates the defined validation constraints. This denotes a missing field when a value is expected.</td>
-                    <td>We need all required fields complete to keep you moving.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_field</td>
-                    <td>The requested body payload for the POST or PUT operation violates the validation constraints. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.</td>
-                    <td>We need all your entries to be correct to keep you moving</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>missing_header</td>
-                    <td>Any of the required headers is missing. Check the request to see if it contains the required header, or refer to the error details response to identify the missing header.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_header</td>
-                    <td>One or more sent headers has an invalid format. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.A value is longer than the maximum length.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>missing_query_parameter</td>
-                    <td>A required query parameter is missing. Check your request to ensure that it contains the required query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_query_parameter</td>
-                    <td>One or more sent query parameters has an invalid format. This denotes specifically that there is:
-                        <ul>
-                            <li>A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.</li>
-                            <li>A type incompatibility, such as a field modeled to be an integer, but a non numeric expression was found instead.</li>
-                            <li>A value is longer than the maximum length."</li>
-                        </ul>
-                    </td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>out_of_range_parameter</td>
-                    <td>A query parameter has an invalid format. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>business_error</td>
-                    <td>imaginary_product_unavailable</td>
-                    <td>A business error indicating that a product with an imaginary description is not in the inventory.</td>
-                    <td>Whoops!  We can't find what you're looking for.  Try again</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>your_api's_specific_type</td>
-                    <td>depends on specific API</td>
-                    <td>Whoops!  Something went wrong. Make sure all fields are complete and try again</td>
-                </tr>
-                <tr>
-                    <td>401</td>
-                    <td>insufficient_credentials</td>
-                    <td></td>
-                    <td>No credentials are provided, or the provided credentials are refused.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>403</td>
-                    <td>insufficient_permissions</td>
-                    <td></td>
-                    <td>The credentials indicate a system-known user, but the user is not allowed to perform the requested operation.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>collection_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI for a collection resource is not accessible. Check the syntax, and verify that the requested service is available.</td>
-                    <td>Whoops! That doesn't exist. Try again</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>element_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI does not map to a single element resource.</td>
-                    <td>Whoops!  That doesn't exist.  Try again</td>
-                </tr>
-                <tr>
-                    <td>405</td>
-                    <td>unsupported_method</td>
-                    <td></td>
-                    <td>The requested resource does not support the specified HTTP action. Verify that you are calling an action supported by the requested endpoint.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>406</td>
-                    <td>unsupported_response_content_type</td>
-                    <td></td>
-                    <td>The client requested a response type which cannot be obtained from the requested resource. Check the requested endpoint response capabilities and compare them with your client Accept header.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>409</td>
-                    <td>conflict_resource</td>
-                    <td></td>
-                    <td>The requested resource could not be created, updated, or deleted due to server-side validation. This could be caused either by a temporary issue, such as an optimistic lock or persistent data constraint. Refer to the error details response to identify conflict details.</td>
-                    <td>That's so great it already exists! Try something different</td>
-                </tr>
-                <tr>
-                    <td>413</td>
-                    <td>bad_payload_size</td>
-                    <td></td>
-                    <td>The request payload is larger than the server can process.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>414</td>
-                    <td>uri_too_long</td>
-                    <td></td>
-                    <td>The Request-URI is longer than allowed. This can occur when a client has improperly converted a POST request to a GET request with long query information, or when the client has descended into a URI endless redirection, such as a redirected URI prefix that points to a suffix of itself. Also, it can occur when the server is under attack by a client attempting to exploit security holes present in some servers using fixed-length buffers for reading or manipulating the Request-URI.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>415</td>
-                    <td>unsupported_request_content_type</td>
-                    <td></td>
-                    <td>The client sent a type of request which is not supported by the requested endpoint. Verify that your request's Content-Type matches the requested endpoint accepted content.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>internal_service_error</td>
-                    <td></td>
-                    <td>A server-side exception occurred which prevented the system from correctly returning the result. Refer to the error details response to identify exception details.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>backing_service_unavailable</td>
-                    <td></td>
-                    <td>Some backing service is not available. Refer to the error details response to identify the origin of the problem.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>503</td>
-                    <td>service_temporarily_unavailable</td>
-                    <td></td>
-                    <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-            </table>
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
+            <ul>
+                <li>We need all required fields complete to keep you moving.</li>
+                <li>We need all your entries to be correct to keep you moving</li>
+                <li>Whoops! We can't find what you're looking for. Try again</li>
+                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
+                <li>Whoops! That doesn't exist. Try again</li>
+                <li>That's so great it already exists! Try something different</li>
+                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
+                <li>Something went very wrong. Please try again.</li>
+            </ul>
             <h3>Language and Translation</h3>
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
