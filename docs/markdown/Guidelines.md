@@ -22,14 +22,14 @@
                "text": "Tone & Voice",
                "id": "#guidelines-tone-voice"
              },
-             {
-               "text": "Errors & Notifications",
-               "id": "#guidelines-errors"
-             },
+        	 {
+        	   "text": "Messaging & Dialogs",
+        	   "id": "#guidelines-messaging"
+        	 },
              {
                "text": "System Errors",
                "id": "#guidelines-system-errors"
-             },
+             },	 
              {
                "text": "Form Validation & Error Avoidance",
                "id": "#form-validation"
@@ -530,65 +530,117 @@
             </tr>
         </table>
       </section>
-      <section id="guidelines-errors" class="kss-page">
-        <!-- <hr id="guidelines-errors"> -->
-        <h2>Messaging; Errors &amp; Notifications</h2>
-        <ul>
-            <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
-            <li>For errors, use 'unsuccessful' as the key word. </li>
-            <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end. </li>
-            <li>Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. </li>
-        </ul> 
+      <section id="guidelines-messaging" class="kss-page">
+        <!-- <hr id="guidelines-messaging"> -->
+        <h2>Messaging & Dialogs</h2>
+        <p>
+            Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. Use hyperlinks to guide the user to pages where they can get more help or informations.
+        </p>
         <br />
         <table class="table techne-table">
-            <tr>
-                <th>Is Not</th>
-                <th>Is</th>
-            </tr>
-            <tr>
-                <td>
-                    Billing Method
-                    <Billing Method Method Name>
-                    added.  
-                </td>
-                <td>Billing Method added</td>
-            </tr>
-            <tr>
-                <td>
-                    Shipping Cost
-                    <Shipping Cost>
-                    saved successfully. Shipping costs saved
-                </td>
-                <td>
-                    Package
-                    <Package Name>
-                    couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
-                </td>
-            </tr>
-            <tr>
-                <td>Image upload wasn't successful. Try again</td>
-                <td>Image upload unsuccessful. Try again.</td>
-            </tr>
-            <tr>
-                <td>
-                    Package
-                    <Package Name>
-                    approved. Team
-                    <Team Name>
-                    can decide when to publish to y Market.
-                </td>
-                <td>
-                    <Package Name>
-                    approved.
-                    <Team Name>
-                    can decide when to publish.
-                </td>
-            </tr>
-            </table>
-            <h3>Language and Translation</h3>
-            <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
-        </section>
-        <section id="guidelines-system-errors" class="kss-page">
+            <tbody>
+                <tr>
+                    <th>Is Not</th>
+                    <th>Is</th>
+                </tr>
+                <tr>
+                    <td>
+                        Billing Method
+                        <billing method="" name="">
+                        added.<br>                </billing></td>
+                    <td>Billing Method added</td>
+                </tr>
+                <tr>
+                    <td>
+                        Shipping Cost
+                        <shipping cost="">
+                        saved successfully. Shipping costs saved
+                    </shipping></td>
+                    <td>
+                        Package
+                        <package name="">
+                        couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
+                    </package></td>
+                </tr>
+                <tr>
+                    <td>Image upload wasn't successful. Try again</td>
+                    <td>Image upload unsuccessful. Try again.</td>
+                </tr>
+                <tr>
+                    <td>
+                        Package
+                        <package name="">
+                        approved. Team
+                        <team name="">
+                        can decide when to publish to y Market.
+                    </team></package></td>
+                    <td>
+                        <package name="">
+                        approved.
+                        <team name="">
+                        can decide when to publish.
+                    </team></package></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Notifications</h3>
+        <p>Use to let people know about some information or action that happened, but no action is needed on their part, e.g. the service will be deprecated at a future date. </p>
+        <h3>Errors</h3>
+        <p>Use to let people know there is an issue that needs attention immediately, e.g. an authorization is expired and no work can proceed until it’s resolved. </p>
+        <p>For errors that allow specific direction for correction, end the message at that specific direction. For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end.</p>
+        <h3>Success/Confirmation</h3>
+        <p>Use confirmation/success messages to give the user feedback on a performed interaction with the system e.g. the user clicked on Save or a new member was invited a service was deleted. </p>
+        <p>You could also acknowledge the user's interaction by showing or deleting the element directly. In this case provide visual feedback such as highlighting the new element or making the element disappear. </p>
+        <br />
+        <table class="table techne-table">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Notifications</th>
+                    <th>Errors</th>
+                    <th>Success/Confirmation</th>
+                </tr>
+                <tr>
+                    <td>Background color</td>
+                    <td>Dark blue</td>
+                    <td>Red</td>
+                    <td>Dark blue</td>
+                </tr>
+                <tr>
+                    <td>Display time</td>
+                    <td>3 seconds before they  disappear on their own.</td>
+                    <td>Must be dismissed by clicking or tapping X.</td>
+                    <td>3 seconds before they  disappear on their own.</td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
+                    <td></td>
+                    <td>Always 'unsuccessful'</td>
+                    <td>Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
+                </tr>
+                <tr>
+                    <td>Alternative</td>
+                    <td></td>
+                    <td></td>
+                    <td>Display or delete the element visually</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>‘Your Action Required’ Dialog</h3>
+        <p>Inform users with a dialog and give guidance when they need to be alerted to significant consequences before deciding to proceed. Examples include:</p>
+        <ul>
+            <li>Unrecoverable data loss</li>
+            <li>Credit card informations expired</li>
+            <li>Update a package</li>
+            <li>Change configurations manually</li>
+        </ul>
+        <p>Explain to users the action that is about to take place and give them an opportunity to back out if they're uncomfortable (eg. to save already made changes before). If necessary give clear guidance and point them towards the page where they can resolve the problem.</p>
+        <h3>‘Confirm Action’ Dialog</h3>
+        <p>YaaS APIs currently have no undo functionality available. If the user's interaction could cause harm or major inconvenience, provide a confirmation dialog. For example, an accidental page turn wouldn't cause a problem, but accidental deletion of an email message could. Make sure this wasn't an accident, so that users don't end up in a bad, irreversible situation. Give implicit feedback or showing a success message after proceeding.</p>
+        <h3>Language and Translation</h3>
+        <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
+    </section>
+    <section id="guidelines-system-errors" class="kss-page">
             <h2>System Errors</h2>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
@@ -661,117 +713,7 @@
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
-</div>
-at. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>business_error</td>
-                    <td>imaginary_product_unavailable</td>
-                    <td>A business error indicating that a product with an imaginary description is not in the inventory.</td>
-                    <td>Whoops!  We can't find what you're looking for.  Try again</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>your_api's_specific_type</td>
-                    <td>depends on specific API</td>
-                    <td>Whoops!  Something went wrong. Make sure all fields are complete and try again</td>
-                </tr>
-                <tr>
-                    <td>401</td>
-                    <td>insufficient_credentials</td>
-                    <td></td>
-                    <td>No credentials are provided, or the provided credentials are refused.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>403</td>
-                    <td>insufficient_permissions</td>
-                    <td></td>
-                    <td>The credentials indicate a system-known user, but the user is not allowed to perform the requested operation.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>collection_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI for a collection resource is not accessible. Check the syntax, and verify that the requested service is available.</td>
-                    <td>Whoops! That doesn't exist. Try again</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>element_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI does not map to a single element resource.</td>
-                    <td>Whoops!  That doesn't exist.  Try again</td>
-                </tr>
-                <tr>
-                    <td>405</td>
-                    <td>unsupported_method</td>
-                    <td></td>
-                    <td>The requested resource does not support the specified HTTP action. Verify that you are calling an action supported by the requested endpoint.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>406</td>
-                    <td>unsupported_response_content_type</td>
-                    <td></td>
-                    <td>The client requested a response type which cannot be obtained from the requested resource. Check the requested endpoint response capabilities and compare them with your client Accept header.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>409</td>
-                    <td>conflict_resource</td>
-                    <td></td>
-                    <td>The requested resource could not be created, updated, or deleted due to server-side validation. This could be caused either by a temporary issue, such as an optimistic lock or persistent data constraint. Refer to the error details response to identify conflict details.</td>
-                    <td>That's so great it already exists! Try something different</td>
-                </tr>
-                <tr>
-                    <td>413</td>
-                    <td>bad_payload_size</td>
-                    <td></td>
-                    <td>The request payload is larger than the server can process.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>414</td>
-                    <td>uri_too_long</td>
-                    <td></td>
-                    <td>The Request-URI is longer than allowed. This can occur when a client has improperly converted a POST request to a GET request with long query information, or when the client has descended into a URI endless redirection, such as a redirected URI prefix that points to a suffix of itself. Also, it can occur when the server is under attack by a client attempting to exploit security holes present in some servers using fixed-length buffers for reading or manipulating the Request-URI.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>415</td>
-                    <td>unsupported_request_content_type</td>
-                    <td></td>
-                    <td>The client sent a type of request which is not supported by the requested endpoint. Verify that your request's Content-Type matches the requested endpoint accepted content.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>internal_service_error</td>
-                    <td></td>
-                    <td>A server-side exception occurred which prevented the system from correctly returning the result. Refer to the error details response to identify exception details.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>backing_service_unavailable</td>
-                    <td></td>
-                    <td>Some backing service is not available. Refer to the error details response to identify the origin of the problem.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>503</td>
-                    <td>service_temporarily_unavailable</td>
-                    <td></td>
-                    <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-            </table>           
-        </section>
+
          <section id="form-validation" class="kss-page">
             <h2>Form Validation & Error Avoidance</h2>
             <h3>Page Validation</h3>
@@ -780,7 +722,7 @@ at. This could be due to a range under or over flow validation violation cause. 
             <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
             <h3>Leaving the page and form is dirty</h3>
             <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
-=======
+
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
@@ -797,7 +739,6 @@ at. This could be due to a range under or over flow validation violation cause. 
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
->>>>>>> develop
         </section>
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
@@ -849,4 +790,5 @@ at. This could be due to a range under or over flow validation violation cause. 
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
+>>>>>>> develop
 </div>
