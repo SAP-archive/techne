@@ -186,11 +186,6 @@
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="circle" style="background: #8A8FA1;"></div>
-                    <p class="no-bottom-margin">Typography (Secondary)</p>
-                    <h4>#8A8FA1</h4>
-                </div>
-                <div class="col-md-5ths col-xs-6">
                     <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
@@ -201,8 +196,7 @@
             <h4>Usage Guidelines</h4>
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
-            <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
-            <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
+            <p><b>Typography (Main):</b> use app-wide for body copy and headings. Provides for high-contrast on white background.</p>
             <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
