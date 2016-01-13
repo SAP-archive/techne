@@ -6,46 +6,47 @@
                 "text": "Spirit & Vision",
                 "id": "#guidelines-spirit-vision"
             },
-         {
-           "text": "Design Principles",
-           "id": "#guidelines-design-principles"
-         },
-         {
-           "text": "Navigation",
-           "id": "#guidelines-navigation"
-         },
-         {
-           "text": "Visual System",
-           "id": "#guidelines-visual-system"
-         },
-         {
-           "text": "Tone & Voice",
-           "id": "#guidelines-tone-voice"
-         },
-     {
-       "text": "Errors & Notifications",
-       "id": "#guidelines-errors"
-     },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },	 {
-	   "text": "Writing Help",
-	   "id": "#writing-help"
-	 },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },
-     {
-       "text": "Infinite Scroll & Pagination",
-       "id": "#guidelines-scroll-pagination"
-     },
-         {
-           "text": "Accessibility",
-           "id": "#guidelines-accessibility"
-         }
-       ]
+             {
+               "text": "Design Principles",
+               "id": "#guidelines-design-principles"
+             },
+             {
+               "text": "Navigation",
+               "id": "#guidelines-navigation"
+             },
+             {
+               "text": "Visual System",
+               "id": "#guidelines-visual-system"
+             },
+             {
+               "text": "Tone & Voice",
+               "id": "#guidelines-tone-voice"
+             },
+             {
+               "text": "Errors & Notifications",
+               "id": "#guidelines-errors"
+             },
+             {
+               "text": "System Errors",
+               "id": "#guidelines-system-errors"
+             },
+             {
+               "text": "Form Validation & Error Avoidance",
+               "id": "#form-validation"
+             },  
+             {
+               "text": "Writing Help",
+               "id": "#writing-help"
+             },
+             {
+               "text": "Infinite Scroll & Pagination",
+               "id": "#guidelines-scroll-pagination"
+             },
+             {
+               "text": "Accessibility",
+               "id": "#guidelines-accessibility"
+             }
+        ]
     }
     -->
 <div class="kss-guidelines-page container-fluid" >
@@ -531,13 +532,14 @@
       </section>
       <section id="guidelines-errors" class="kss-page">
         <!-- <hr id="guidelines-errors"> -->
-        <h3>Messaging; Errors &amp; Notifications</h3>
+        <h2>Messaging; Errors &amp; Notifications</h2>
         <ul>
             <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
             <li>For errors, use 'unsuccessful' as the key word. </li>
             <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end. </li>
             <li>Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. </li>
-        </ul>
+        </ul> 
+        <br />
         <table class="table techne-table">
             <tr>
                 <th>Is Not</th>
@@ -582,9 +584,203 @@
                     can decide when to publish.
                 </td>
             </tr>
-        </table>
+            </table>
+            <h3>Language and Translation</h3>
+            <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
         </section>
         <section id="guidelines-system-errors" class="kss-page">
+            <h2>System Errors</h2>
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
+            <ul>
+                <li>We need all required fields complete to keep you moving.</li>
+                <li>We need all your entries to be correct to keep you moving</li>
+                <li>Whoops! We can't find what you're looking for. Try again</li>
+                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
+                <li>Whoops! That doesn't exist. Try again</li>
+                <li>That's so great it already exists! Try something different</li>
+                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
+                <li>Something went very wrong. Please try again.</li>
+            </ul>
+        </section>
+        <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
+        </section>
+        <section id="writing-help" class="kss-page">
+            <h2>Writing Help</h2>
+            <table class="table techne-table">
+                <tr>
+                    <th width="50%">Do explain:</th>
+                    <th>Don’t explain:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Unfamiliar concepts</li>
+                            <li>Where to find obscure information</li>
+                            <li>What format the information should be given in</li>
+                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>The interface</li>
+                            <li>The user’s job to them</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>Example how to use Links</p>
+            <table class="table techne-table">
+                <tr>
+                    <th>Do:</th>
+                    <th>Don’t:</th>
+                </tr>
+                <tr>
+                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="guidelines-scroll-pagination" class="kss-page">
+            <h2>Infinite Scroll & Pagination</h2>
+            <h3>Infinite Scroll</h3>
+            <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using Infinite Scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
+            <h3>Pagination</h3>
+            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-14.html">pagination</a>.</p>
+        </section>
+        <!-- load tone/voice -->
+        <section id="guidelines-accessibility" class="kss-page">
+            <h2>Accessibility</h2>
+            <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
+            <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
+            <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
+        </section>
+</div>
+at. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>business_error</td>
+                    <td>imaginary_product_unavailable</td>
+                    <td>A business error indicating that a product with an imaginary description is not in the inventory.</td>
+                    <td>Whoops!  We can't find what you're looking for.  Try again</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td></td>
+                    <td>your_api's_specific_type</td>
+                    <td>depends on specific API</td>
+                    <td>Whoops!  Something went wrong. Make sure all fields are complete and try again</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>insufficient_credentials</td>
+                    <td></td>
+                    <td>No credentials are provided, or the provided credentials are refused.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>403</td>
+                    <td>insufficient_permissions</td>
+                    <td></td>
+                    <td>The credentials indicate a system-known user, but the user is not allowed to perform the requested operation.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>collection_resource_non_existing</td>
+                    <td></td>
+                    <td>The requested URI for a collection resource is not accessible. Check the syntax, and verify that the requested service is available.</td>
+                    <td>Whoops! That doesn't exist. Try again</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>element_resource_non_existing</td>
+                    <td></td>
+                    <td>The requested URI does not map to a single element resource.</td>
+                    <td>Whoops!  That doesn't exist.  Try again</td>
+                </tr>
+                <tr>
+                    <td>405</td>
+                    <td>unsupported_method</td>
+                    <td></td>
+                    <td>The requested resource does not support the specified HTTP action. Verify that you are calling an action supported by the requested endpoint.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>406</td>
+                    <td>unsupported_response_content_type</td>
+                    <td></td>
+                    <td>The client requested a response type which cannot be obtained from the requested resource. Check the requested endpoint response capabilities and compare them with your client Accept header.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>409</td>
+                    <td>conflict_resource</td>
+                    <td></td>
+                    <td>The requested resource could not be created, updated, or deleted due to server-side validation. This could be caused either by a temporary issue, such as an optimistic lock or persistent data constraint. Refer to the error details response to identify conflict details.</td>
+                    <td>That's so great it already exists! Try something different</td>
+                </tr>
+                <tr>
+                    <td>413</td>
+                    <td>bad_payload_size</td>
+                    <td></td>
+                    <td>The request payload is larger than the server can process.</td>
+                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
+                </tr>
+                <tr>
+                    <td>414</td>
+                    <td>uri_too_long</td>
+                    <td></td>
+                    <td>The Request-URI is longer than allowed. This can occur when a client has improperly converted a POST request to a GET request with long query information, or when the client has descended into a URI endless redirection, such as a redirected URI prefix that points to a suffix of itself. Also, it can occur when the server is under attack by a client attempting to exploit security holes present in some servers using fixed-length buffers for reading or manipulating the Request-URI.</td>
+                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
+                </tr>
+                <tr>
+                    <td>415</td>
+                    <td>unsupported_request_content_type</td>
+                    <td></td>
+                    <td>The client sent a type of request which is not supported by the requested endpoint. Verify that your request's Content-Type matches the requested endpoint accepted content.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>internal_service_error</td>
+                    <td></td>
+                    <td>A server-side exception occurred which prevented the system from correctly returning the result. Refer to the error details response to identify exception details.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>backing_service_unavailable</td>
+                    <td></td>
+                    <td>Some backing service is not available. Refer to the error details response to identify the origin of the problem.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+                <tr>
+                    <td>503</td>
+                    <td>service_temporarily_unavailable</td>
+                    <td></td>
+                    <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
+                    <td>Something went very wrong. Please try again.</td>
+                </tr>
+            </table>           
+        </section>
+         <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
+=======
             <h3>System Errors</h3>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
@@ -601,6 +797,7 @@
             <ul>
                 <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
             </ul>
+>>>>>>> develop
         </section>
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
