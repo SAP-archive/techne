@@ -6,46 +6,47 @@
     			"text": "Spirit & Vision",
     			"id": "#guidelines-spirit-vision"
     		},
-         {
-           "text": "Design Principles",
-           "id": "#guidelines-design-principles"
-         },
-         {
-           "text": "Navigation",
-           "id": "#guidelines-navigation"
-         },
-         {
-           "text": "Visual System",
-           "id": "#guidelines-visual-system"
-         },
-         {
-           "text": "Tone & Voice",
-           "id": "#guidelines-tone-voice"
-         },
-	 {
-	   "text": "Errors & Notifications",
-	   "id": "#guidelines-errors"
-	 },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },	 {
-	   "text": "Writing Help",
-	   "id": "#writing-help"
-	 },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },
-     {
-       "text": "Infinite Scroll & Pagination",
-       "id": "#guidelines-scroll-pagination"
-     },
-         {
-           "text": "Accessibility",
-           "id": "#guidelines-accessibility"
-         }
-       ]
+             {
+               "text": "Design Principles",
+               "id": "#guidelines-design-principles"
+             },
+             {
+               "text": "Navigation",
+               "id": "#guidelines-navigation"
+             },
+             {
+               "text": "Visual System",
+               "id": "#guidelines-visual-system"
+             },
+             {
+               "text": "Tone & Voice",
+               "id": "#guidelines-tone-voice"
+             },
+        	 {
+        	   "text": "Errors & Notifications",
+        	   "id": "#guidelines-errors"
+        	 },
+             {
+               "text": "System Errors",
+               "id": "#guidelines-system-errors"
+             },
+             {
+               "text": "Form Validation & Error Avoidance",
+               "id": "#form-validation"
+             },	 
+             {
+        	   "text": "Writing Help",
+        	   "id": "#writing-help"
+        	 },
+             {
+               "text": "Infinite Scroll & Pagination",
+               "id": "#guidelines-scroll-pagination"
+             },
+             {
+               "text": "Accessibility",
+               "id": "#guidelines-accessibility"
+             }
+        ]
     }
     -->
 <div class="kss-guidelines-page container-fluid" >
@@ -537,13 +538,14 @@
       </section>
       <section id="guidelines-errors" class="kss-page">
         <!-- <hr id="guidelines-errors"> -->
-        <h3>Messaging; Errors &amp; Notifications</h3>
+        <h2>Messaging; Errors &amp; Notifications</h2>
         <ul>
             <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
             <li>For errors, use 'unsuccessful' as the key word. </li>
             <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end. </li>
             <li>Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. </li>
-        </ul>
+        </ul> 
+        <br />
         <table class="table techne-table">
             <tr>
                 <th>Is Not</th>
@@ -589,9 +591,11 @@
                 </td>
             </tr>
         </table>
+        <h3>Language and Translation</h3>
+        <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
         </section>
         <section id="guidelines-system-errors" class="kss-page">
-            <h3>System Errors</h3>
+            <h2>System Errors</h2>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
             <table class="table teche-table error-message-table">
                 <tr>
@@ -768,11 +772,16 @@
                     <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
                     <td>Something went very wrong. Please try again.</td>
                 </tr>
-            </table>
-            <h3>Language and Translation</h3>
-            <ul>
-                <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
-            </ul>
+            </table>           
+        </section>
+         <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
         </section>
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
