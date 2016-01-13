@@ -1,11 +1,11 @@
 <!--SIDENAVCONFIG
     {
-    	"showLeftNav": true,
-    	"navigation": [
-    		{
-    			"text": "Spirit & Vision",
-    			"id": "#guidelines-spirit-vision"
-    		},
+        "showLeftNav": true,
+        "navigation": [
+            {
+                "text": "Spirit & Vision",
+                "id": "#guidelines-spirit-vision"
+            },
              {
                "text": "Design Principles",
                "id": "#guidelines-design-principles"
@@ -22,10 +22,10 @@
                "text": "Tone & Voice",
                "id": "#guidelines-tone-voice"
              },
-        	 {
-        	   "text": "Errors & Notifications",
-        	   "id": "#guidelines-errors"
-        	 },
+             {
+               "text": "Errors & Notifications",
+               "id": "#guidelines-errors"
+             },
              {
                "text": "System Errors",
                "id": "#guidelines-system-errors"
@@ -33,11 +33,11 @@
              {
                "text": "Form Validation & Error Avoidance",
                "id": "#form-validation"
-             },	 
+             },  
              {
-        	   "text": "Writing Help",
-        	   "id": "#writing-help"
-        	 },
+               "text": "Writing Help",
+               "id": "#writing-help"
+             },
              {
                "text": "Infinite Scroll & Pagination",
                "id": "#guidelines-scroll-pagination"
@@ -138,7 +138,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	     <span class="visible-xs"><br><br><br><br></span>
+         <span class="visible-xs"><br><br><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -154,7 +154,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	    <span class="visible-xs"><br><br></span>
+        <span class="visible-xs"><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -187,11 +187,6 @@
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="circle" style="background: #8A8FA1;"></div>
-                    <p class="no-bottom-margin">Typography (Secondary)</p>
-                    <h4>#8A8FA1</h4>
-                </div>
-                <div class="col-md-5ths col-xs-6">
                     <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
@@ -202,8 +197,7 @@
             <h4>Usage Guidelines</h4>
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
-            <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
-            <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
+            <p><b>Typography (Main):</b> use app-wide for body copy and headings. Provides for high-contrast on white background.</p>
             <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
@@ -590,81 +584,85 @@
                     can decide when to publish.
                 </td>
             </tr>
-        </table>
-        <h3>Language and Translation</h3>
-        <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
+            </table>
+            <h3>Language and Translation</h3>
+            <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
         </section>
         <section id="guidelines-system-errors" class="kss-page">
             <h2>System Errors</h2>
-            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
-            <table class="table teche-table error-message-table">
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
+            <ul>
+                <li>We need all required fields complete to keep you moving.</li>
+                <li>We need all your entries to be correct to keep you moving</li>
+                <li>Whoops! We can't find what you're looking for. Try again</li>
+                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
+                <li>Whoops! That doesn't exist. Try again</li>
+                <li>That's so great it already exists! Try something different</li>
+                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
+                <li>Something went very wrong. Please try again.</li>
+            </ul>
+        </section>
+        <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
+        </section>
+        <section id="writing-help" class="kss-page">
+            <h2>Writing Help</h2>
+            <table class="table techne-table">
                 <tr>
-                    <th>HTTP Code</th>   
-                    <th class="narrow-col">Top-Level Error Type</th>   
-                    <th class="narrow-col">Sub-Level Error Type</th>   
-                    <th class="wide-col">Error Description</th>   
-                    <th class="wide-col">Recommended Error Message</th>   
+                    <th width="50%">Do explain:</th>
+                    <th>Don’t explain:</th>
                 </tr>
                 <tr>
-                    <td>400</td>
-                    <td>bad_payload_syntax</td>
-                    <td></td>
-                    <td>The request payload has incorrect syntax according to the sent Content-Type. Check the payload content for syntax errors, such as missing commas or quotation marks that are not closed.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>validation_violation</td>
-                    <td>missing_field</td>
-                    <td>The requested body payload for a POST or PUT operation is missing, which violates the defined validation constraints. This denotes a missing field when a value is expected.</td>
-                    <td>We need all required fields complete to keep you moving.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_field</td>
-                    <td>The requested body payload for the POST or PUT operation violates the validation constraints. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.</td>
-                    <td>We need all your entries to be correct to keep you moving</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>missing_header</td>
-                    <td>Any of the required headers is missing. Check the request to see if it contains the required header, or refer to the error details response to identify the missing header.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_header</td>
-                    <td>One or more sent headers has an invalid format. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.A value is longer than the maximum length.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>missing_query_parameter</td>
-                    <td>A required query parameter is missing. Check your request to ensure that it contains the required query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_query_parameter</td>
-                    <td>One or more sent query parameters has an invalid format. This denotes specifically that there is:
+                    <td>
                         <ul>
-                            <li>A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.</li>
-                            <li>A type incompatibility, such as a field modeled to be an integer, but a non numeric expression was found instead.</li>
-                            <li>A value is longer than the maximum length."</li>
+                            <li>Unfamiliar concepts</li>
+                            <li>Where to find obscure information</li>
+                            <li>What format the information should be given in</li>
+                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
                         </ul>
                     </td>
-                    <td>Something went very wrong. Please try again.</td>
+                    <td>
+                        <ul>
+                            <li>The interface</li>
+                            <li>The user’s job to them</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>Example how to use Links</p>
+            <table class="table techne-table">
+                <tr>
+                    <th>Do:</th>
+                    <th>Don’t:</th>
                 </tr>
                 <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>out_of_range_parameter</td>
-                    <td>A query parameter has an invalid format. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
+                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="guidelines-scroll-pagination" class="kss-page">
+            <h2>Infinite Scroll & Pagination</h2>
+            <h3>Infinite Scroll</h3>
+            <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using Infinite Scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
+            <h3>Pagination</h3>
+            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-14.html">pagination</a>.</p>
+        </section>
+        <!-- load tone/voice -->
+        <section id="guidelines-accessibility" class="kss-page">
+            <h2>Accessibility</h2>
+            <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
+            <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
+            <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
+        </section>
+</div>
+at. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
                     <td>Something went very wrong. Please try again.</td>
                 </tr>
                 <tr>
@@ -782,6 +780,24 @@
             <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
             <h3>Leaving the page and form is dirty</h3>
             <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
+=======
+            <h3>System Errors</h3>
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
+            <ul>
+                <li>We need all required fields complete to keep you moving.</li>
+                <li>We need all your entries to be correct to keep you moving</li>
+                <li>Whoops! We can't find what you're looking for. Try again</li>
+                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
+                <li>Whoops! That doesn't exist. Try again</li>
+                <li>That's so great it already exists! Try something different</li>
+                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
+                <li>Something went very wrong. Please try again.</li>
+            </ul>
+            <h3>Language and Translation</h3>
+            <ul>
+                <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
+            </ul>
+>>>>>>> develop
         </section>
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
