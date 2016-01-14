@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
+var cachebust = require('gulp-cache-bust');
 var concat = require('gulp-concat');
 var insert = require('gulp-insert');
 var config = require('./config.json');
@@ -121,6 +122,9 @@ gulp.task('less', ['setpath'] ,
         .pipe(
             concat('techne.min.css')
         )
+        .pipe(cachebust({
+            type: 'timestamp'
+        }))
         .pipe(
             gulp.dest( paths.environment+'/css/' )
         );
@@ -137,6 +141,9 @@ gulp.task('html',
     function ()
     {
         gulp.src(paths.html)
+        .pipe(cachebust({
+            type: 'timestamp'
+        }))
         .pipe(
             gulp.dest('docs/')
         );
@@ -157,12 +164,21 @@ gulp.task('styleguide', function () {
             }
         )
     )
+    .pipe(cachebust({
+        type: 'timestamp'
+    }))
     .pipe( gulp.dest('docs/kss') );
 
-    gulp.src('./dist/**/*')
+    gulp.src('./dist/**/*') 
+    .pipe(cachebust({
+        type: 'timestamp'
+    }))
     .pipe( gulp.dest('./docs/kss/public/y-techne/dist/') );
 
-    gulp.src('./bower_components/bootstrap/fonts/**/*')
+    gulp.src('./bower_components/bootstrap/fonts/**/*') 
+    .pipe(cachebust({
+        type: 'timestamp'
+    }))
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
 });
 
