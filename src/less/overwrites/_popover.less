@@ -13,51 +13,34 @@
 //
 // Styleguide 18.1
 
-//Color States are deprecated, please remove them soon
-
-.popover-variant(has-success; @state-success-bg; 5px solid @state-success-bg; #fff);
-.popover-variant(has-info; @state-info-bg; 5px solid @state-info-bg; #fff);
-.popover-variant(has-warning; @state-warning-bg; 5px solid @state-warning-bg; #fff);
-.popover-variant(has-error; @state-danger-bg; 5px solid @state-danger-bg; #fff);
-
-
-
-/* EXTENDED THE DEFAULT POPUP TO HAVE DIFFERENT STATES */
-.popover-variant(@state; @background; @border; @color) {
-
-  .popover{
-    &.@{state}{
-      background: @background;
-      color: @color;
-
-      &.top {
-        > .arrow:after{
-        border-top-color: @background;
-        }
-      }
-      &.bottom {
-        > .arrow:after{
-        border-bottom-color: @background;
-        }
-      }
-      &.left {
-        > .arrow:after{
-        border-left-color: @background;
-        }
-      }
-      &.right {
-        > .arrow:after{
-        border-right-color: @background;
-        }
-      }
-
-
-      .popover-title{
-        background: darken(@background, 5%);
-        color: @color;
-        border-bottom: @border;
-      }
-    }
+@y-popover-bg : #7f90a4;
+.popover {
+  background-color: @y-popover-bg;
+  color:#fff;
+  border: none;
+  border-radius: 0;
+  background-clip:border-box;
+  font-size: 15px;
+  .popover-title{
+    background-color: @y-popover-bg;
+    border-bottom: none;
+    font-size: 19px;
+    padding:25px 25px 15/2px 25px;
+  }
+  .popover-content{
+    padding:15/2px 25px 25px 25px;
   }
 
+   &.left > .arrow:after {
+    border-left-color: @y-popover-bg;
+  }
+  &.top > .arrow:after{
+    border-top-color: @y-popover-bg;
+  }
+  &.right > .arrow:after{
+    border-right-color: @y-popover-bg;
+   }
+  &.bottom > .arrow:after{
+    border-bottom-color: @y-popover-bg;
+  }
 }
