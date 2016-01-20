@@ -63,7 +63,17 @@
 // Markup:
 //<p class="statusDataValue">
 //  <span class="active">
-//    Active
+//    Active Label
+//  </span>
+//</p> <br />
+//<p class="statusDataValue">
+//  <span class="inactive">
+//    Inctive Label
+//  </span>
+//</p><br />
+//<p class="statusDataValue">
+//  <span>
+//    Default Label
 //  </span>
 //</p>
 //
@@ -74,6 +84,7 @@
   margin-bottom: 0;
   font-weight: bold;
   font-size: 11px;
+  color: @techne-status-inactive;
 
   > .active{
     color: @default-green;
