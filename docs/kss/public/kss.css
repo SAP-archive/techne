@@ -1836,3 +1836,13 @@ body.hyComponentsPage {
   margin-top: -55px;
   padding-top: 100px;
 }
+.feedback-form-wrapper .close {
+  font-size: 30px;
+  padding: 10px 5px;
+}
+.feedback-form-wrapper a:visited {
+  color: #0486e0;
+}
+.yg-cookie-bar {
+  z-index: 5000!important;
+}
