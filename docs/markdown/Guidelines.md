@@ -466,7 +466,7 @@
             <li>Don't 'second guess' the user's intentions. Only ask for confirmation of action if action will cause root-level or irretrievable changes.</li>
         </ul>
         <!-- Table -->
-        <table class="table table-striped techne-table">
+        <table class="table techne-table">
             <thead>
                 <tr>
                     <th>Is Not</th>
@@ -511,7 +511,7 @@
             <li>Capitalize proper nouns only. Do not capitalize random words in a sentence. It IS difficult to Read.</li>
             <li>Use an ellipsis...  to indicate lag or that an additional action will be required after making the selection.</li>
         </ul>
-        <table class="table table-striped techne-table">
+        <table class="table techne-table">
             <thead>
                 <tr>
                     <th>Don't</th>
@@ -613,25 +613,25 @@
             </thead>
             <tbody>
                 <tr>
-                    <th>Background color</th>
+                    <td>Background color</td>
                     <td data-th="Notifications">Dark blue</td>
                     <td data-th="Errros">Red</td>
                     <td data-th="Success/Confirmation">Dark blue</td>
                 </tr>
                 <tr>
-                    <th>Display time</th>
+                    <td>Display time</td>
                     <td data-th="Notifications">3 seconds before they  disappear on their own.</td>
                     <td data-th="Errros">Must be dismissed by clicking or tapping X.</td>
                     <td data-th="Success/Confirmation">3 seconds before they  disappear on their own.</td>
                 </tr>
                 <tr>
-                    <th>Keyword</th>
+                    <td>Keyword</td>
                     <td></td>
                     <td data-th="Errros">Always 'unsuccessful'</td>
                     <td data-th="Success/Confirmation">Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
                 </tr>
                 <tr>
-                    <th>Alternative</th>
+                    <td>Alternative</td>
                     <td></td>
                     <td></td>
                     <td data-th="Success/Confirmation">Display or delete the element visually</td>
