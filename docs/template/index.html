@@ -349,7 +349,7 @@
 
     <!-- feedback script -->
     <script type="text/javascript">
-      $('#feedbackPlaceholder').load("https://api.yaas.io/hybris/feedback/v1/form/basic?jiraProjectKey=CCE", function(response, status, xhr){
+      $('#feedbackPlaceholder').load("https://feedback.yaas.io/form/basic?jiraProjectKey=CCE", function(response, status, xhr){
         if(xhr.status === 200){
           $('.feedback-affix').show();
         }
