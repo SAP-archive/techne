@@ -21,6 +21,7 @@
   "devDependencies": {
     "bower": "^1.3.12",
     "gulp": "^3.8.11",
+    "gulp-cache-bust": "^1.0.2",
     "gulp-concat": "^2.4.3",
     "gulp-consolidate": "^0.1.2",
     "gulp-env": "^0.2.0",

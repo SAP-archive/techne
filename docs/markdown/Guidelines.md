@@ -1,51 +1,52 @@
 <!--SIDENAVCONFIG
     {
-    	"showLeftNav": true,
-    	"navigation": [
-    		{
-    			"text": "Spirit & Vision",
-    			"id": "#guidelines-spirit-vision"
-    		},
-         {
-           "text": "Design Principles",
-           "id": "#guidelines-design-principles"
-         },
-         {
-           "text": "Navigation",
-           "id": "#guidelines-navigation"
-         },
-         {
-           "text": "Visual System",
-           "id": "#guidelines-visual-system"
-         },
-         {
-           "text": "Tone & Voice",
-           "id": "#guidelines-tone-voice"
-         },
-	 {
-	   "text": "Errors & Notifications",
-	   "id": "#guidelines-errors"
-	 },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },	 {
-	   "text": "Writing Help",
-	   "id": "#writing-help"
-	 },
-     {
-       "text": "System Errors",
-       "id": "#guidelines-system-errors"
-     },
-     {
-       "text": "Infinite Scroll & Pagination",
-       "id": "#guidelines-scroll-pagination"
-     },
-         {
-           "text": "Accessibility",
-           "id": "#guidelines-accessibility"
-         }
-       ]
+        "showLeftNav": true,
+        "navigation": [
+            {
+                "text": "Spirit & Vision",
+                "id": "#guidelines-spirit-vision"
+            },
+             {
+               "text": "Design Principles",
+               "id": "#guidelines-design-principles"
+             },
+             {
+               "text": "Navigation",
+               "id": "#guidelines-navigation"
+             },
+             {
+               "text": "Visual System",
+               "id": "#guidelines-visual-system"
+             },
+             {
+               "text": "Tone & Voice",
+               "id": "#guidelines-tone-voice"
+             },
+        	 {
+        	   "text": "Messaging & Dialogs",
+        	   "id": "#guidelines-messaging"
+        	 },
+             {
+               "text": "System Errors",
+               "id": "#guidelines-system-errors"
+             },	 
+             {
+               "text": "Form Validation & Error Avoidance",
+               "id": "#form-validation"
+             },  
+             {
+               "text": "Writing Help",
+               "id": "#writing-help"
+             },
+             {
+               "text": "Infinite Scroll & Pagination",
+               "id": "#guidelines-scroll-pagination"
+             },
+             {
+               "text": "Accessibility",
+               "id": "#guidelines-accessibility"
+             }
+        ]
     }
     -->
 <div class="kss-guidelines-page container-fluid" >
@@ -137,7 +138,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	     <span class="visible-xs"><br><br><br><br></span>
+         <span class="visible-xs"><br><br><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -153,7 +154,7 @@
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
             </div>
-	    <span class="visible-xs"><br><br></span>
+        <span class="visible-xs"><br><br></span>
             <div class="col-md-4 col-sm-6 text-center">
                 <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
             </div>
@@ -186,11 +187,6 @@
                     <h4>#313440</h4>
                 </div>
                 <div class="col-md-5ths col-xs-6">
-                    <div class="circle" style="background: #8A8FA1;"></div>
-                    <p class="no-bottom-margin">Typography (Secondary)</p>
-                    <h4>#8A8FA1</h4>
-                </div>
-                <div class="col-md-5ths col-xs-6">
                     <div class="circle" style="background: #0486E0;"></div>
                     <p class="no-bottom-margin">Text Link Color</p>
                     <h4>#0486E0</h4>
@@ -201,8 +197,7 @@
             <h4>Usage Guidelines</h4>
             <p><b>Screen Background:</b> use app-wide as the background color</p>
             <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
-            <p><b>Typography (Main):</b> use app-wide for body copy. Provides for high-contrast on white background.</p>
-            <p><b>Typography (Secondary):</b> use app-wide for Primary headings/values.</p>
+            <p><b>Typography (Main):</b> use app-wide for body copy and headings. Provides for high-contrast on white background.</p>
             <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
         </div>
         <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
@@ -472,36 +467,40 @@
         </ul>
         <!-- Table -->
         <table class="table techne-table">
-            <tr>
-                <th>Is Not</th>
-                <th>Is</th>
-            </tr>
-            <tr>
-                <td>This is a large file and may take time to download. Please wait until all files have been download.</td>
-                <td>Large files may take additional time to download</td>
-            </tr>
-            <tr>
-                <td>
-                    <ProductName>
-                    has been successfully deleted.
-                </td>
-                <td>
-                    <Product Name>
-                    deleted
-                </td>
-            </tr>
-            <tr>
-                <td>To add a product, upload an image.</td>
-                <td>Upload an image to add a product</td>
-            </tr>
-            <tr>
-                <td>You are. Is not. Will not. Did not.</td>
-                <td>You're. Isn't. Won't. Didn't.</td>
-            </tr>
-            <tr>
-                <td>Do you really want to delete this file? Warning!</td>
-                <td>Warning! File will be permanently deleted.</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Is Not</th>
+                    <th>Is</th>
+                </tr>
+            </thead>
+            </tbody>
+                <tr>
+                    <td data-th="Is Not">This is a large file and may take time to download. Please wait until all files have been download.</td>
+                    <td data-th="Is">Large files may take additional time to download</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">
+                        <ProductName>
+                        has been successfully deleted.
+                    </td>
+                    <td data-th="Is">
+                        <Product Name>
+                        deleted
+                    </td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">To add a product, upload an image.</td>
+                    <td data-th="Is">Upload an image to add a product</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">You are. Is not. Will not. Did not.</td>
+                    <td data-th="Is">You're. Isn't. Won't. Didn't.</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">Do you really want to delete this file? Warning!</td>
+                    <td data-th="Is">Warning! File will be permanently deleted.</td>
+                </tr>
+            </tbody>
         </table>
         <hr>
         <h3>Punctuation &amp; Capitalization</h3>
@@ -513,301 +512,210 @@
             <li>Use an ellipsis...  to indicate lag or that an additional action will be required after making the selection.</li>
         </ul>
         <table class="table techne-table">
-            <tr>
-                <th>Don't</th>
-                <th>Do</th>
-            </tr>
-            <tr>
-                <td>Spell out numbers <br> i.e. five, ten, fourty-two</td>
-                <td>Use numeric characters <br> i.e. 5, 10, 42</td>
-            </tr>
-            <tr>
-                <td>Use lower cases for labels <br> i.e. save</td>
-                <td>Use initial caps for labels <br> i.e. Save </td>
-            </tr>
-            <tr>
-                <td>Spell out words with common abbreviations <br> i.e. application</td>
-                <td>Use common abbreviations <br> i.e. app</td>
-            </tr>
-            <tr>
-                <td>Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
-                <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Don't</th>
+                    <th>Do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="Don't">Spell out numbers <br> i.e. five, ten, fourty-two</td>
+                    <td data-th="Do">Use numeric characters <br> i.e. 5, 10, 42</td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Use lower cases for labels <br> i.e. save</td>
+                    <td data-th="Do">Use initial caps for labels <br> i.e. Save </td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Spell out words with common abbreviations <br> i.e. application</td>
+                    <td data-th="Do">Use common abbreviations <br> i.e. app</td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
+                    <td data-th="Do">Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
+                </tr>
+            </tbody>
         </table>
       </section>
-      <section id="guidelines-errors" class="kss-page">
-        <!-- <hr id="guidelines-errors"> -->
-        <h3>Messaging; Errors &amp; Notifications</h3>
-        <ul>
-            <li>For confirmation/success messages, use the action as the key word i.e. 'saved,' 'added,' 'sent,' etc.  If not direct action is available, use 'successful' as the key word. </li>
-            <li>For errors, use 'unsuccessful' as the key word. </li>
-            <li>For errors that allow specific direction for correction, end the message at that specific direction.  For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end. </li>
-            <li>Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. </li>
-        </ul>
+      <section id="guidelines-messaging" class="kss-page">
+        <!-- <hr id="guidelines-messaging"> -->
+        <h2>Messaging & Dialogs</h2>
+        <p>
+            Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. Use hyperlinks to guide the user to pages where they can get more help or informations.
+        </p>
+        <br />
         <table class="table techne-table">
-            <tr>
-                <th>Is Not</th>
-                <th>Is</th>
-            </tr>
-            <tr>
-                <td>
-                    Billing Method
-                    <Billing Method Method Name>
-                    added.  
-                </td>
-                <td>Billing Method added</td>
-            </tr>
-            <tr>
-                <td>
-                    Shipping Cost
-                    <Shipping Cost>
-                    saved successfully. Shipping costs saved
-                </td>
-                <td>
-                    Package
-                    <Package Name>
-                    couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
-                </td>
-            </tr>
-            <tr>
-                <td>Image upload wasn't successful. Try again</td>
-                <td>Image upload unsuccessful. Try again.</td>
-            </tr>
-            <tr>
-                <td>
-                    Package
-                    <Package Name>
-                    approved. Team
-                    <Team Name>
-                    can decide when to publish to y Market.
-                </td>
-                <td>
-                    <Package Name>
-                    approved.
-                    <Team Name>
-                    can decide when to publish.
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Is Not</th>
+                    <th>Is</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="Is Not">
+                        Billing Method
+                        <billing method="" name="">
+                        added.<br>                </billing></td>
+                    <td data-th="Is">Billing Method added</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">
+                        Shipping Cost
+                        <shipping cost="">
+                        saved successfully. Shipping costs saved
+                    </shipping></td>
+                    <td data-th="Is">
+                        Package
+                        <package name="">
+                        couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
+                    </package></td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">Image upload wasn't successful. Try again</td>
+                    <td data-th="Is">Image upload unsuccessful. Try again.</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">
+                        Package
+                        <package name="">
+                        approved. Team
+                        <team name="">
+                        can decide when to publish to y Market.
+                    </team></package></td>
+                    <td data-th="Is">
+                        <package name="">
+                        approved.
+                        <team name="">
+                        can decide when to publish.
+                    </team></package></td>
+                </tr>
+            </tbody>
         </table>
-        </section>
-        <section id="guidelines-system-errors" class="kss-page">
-            <h3>System Errors</h3>
-            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping below to help people recover quickly when an error occurs. For more information consult the <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> page in the Dev Portal.</p>
-            <table class="table teche-table error-message-table">
+        <h3>Notifications</h3>
+        <p>Use to let people know about some information or action that happened, but no action is needed on their part, e.g. the service will be deprecated at a future date. </p>
+        <h3>Errors</h3>
+        <p>Use to let people know there is an issue that needs attention immediately, e.g. an authorization is expired and no work can proceed until it’s resolved. </p>
+        <p>For errors that allow specific direction for correction, end the message at that specific direction. For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end.</p>
+        <h3>Success/Confirmation</h3>
+        <p>Use confirmation/success messages to give the user feedback on a performed interaction with the system e.g. the user clicked on Save or a new member was invited a service was deleted. </p>
+        <p>You could also acknowledge the user's interaction by showing or deleting the element directly. In this case provide visual feedback such as highlighting the new element or making the element disappear. </p>
+        <br />
+        <table class="table techne-table">
+            <thead>
                 <tr>
-                    <th>HTTP Code</th>   
-                    <th class="narrow-col">Top-Level Error Type</th>   
-                    <th class="narrow-col">Sub-Level Error Type</th>   
-                    <th class="wide-col">Error Description</th>   
-                    <th class="wide-col">Recommended Error Message</th>   
+                    <th></th>
+                    <th>Notifications</th>
+                    <th>Errors</th>
+                    <th>Success/Confirmation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Background color</td>
+                    <td data-th="Notifications">Dark blue</td>
+                    <td data-th="Errros">Red</td>
+                    <td data-th="Success/Confirmation">Dark blue</td>
                 </tr>
                 <tr>
-                    <td>400</td>
-                    <td>bad_payload_syntax</td>
+                    <td>Display time</td>
+                    <td data-th="Notifications">3 seconds before they  disappear on their own.</td>
+                    <td data-th="Errros">Must be dismissed by clicking or tapping X.</td>
+                    <td data-th="Success/Confirmation">3 seconds before they  disappear on their own.</td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
                     <td></td>
-                    <td>The request payload has incorrect syntax according to the sent Content-Type. Check the payload content for syntax errors, such as missing commas or quotation marks that are not closed.</td>
-                    <td>Something went very wrong. Please try again.</td>
+                    <td data-th="Errros">Always 'unsuccessful'</td>
+                    <td data-th="Success/Confirmation">Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
                 </tr>
                 <tr>
-                    <td>400</td>
-                    <td>validation_violation</td>
-                    <td>missing_field</td>
-                    <td>The requested body payload for a POST or PUT operation is missing, which violates the defined validation constraints. This denotes a missing field when a value is expected.</td>
-                    <td>We need all required fields complete to keep you moving.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
+                    <td>Alternative</td>
                     <td></td>
-                    <td>invalid_field</td>
-                    <td>The requested body payload for the POST or PUT operation violates the validation constraints. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.</td>
-                    <td>We need all your entries to be correct to keep you moving</td>
-                </tr>
-                <tr>
-                    <td>400</td>
                     <td></td>
-                    <td>missing_header</td>
-                    <td>Any of the required headers is missing. Check the request to see if it contains the required header, or refer to the error details response to identify the missing header.</td>
-                    <td>Something went very wrong. Please try again.</td>
+                    <td data-th="Success/Confirmation">Display or delete the element visually</td>
                 </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_header</td>
-                    <td>One or more sent headers has an invalid format. This denotes specifically that there is:A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.A type incompatibility, such as a field modeled to be an integer, but a non-numeric expression was found instead.A range under or over flow validation violation cause.A value is longer than the maximum length.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>missing_query_parameter</td>
-                    <td>A required query parameter is missing. Check your request to ensure that it contains the required query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>invalid_query_parameter</td>
-                    <td>One or more sent query parameters has an invalid format. This denotes specifically that there is:
-                        <ul>
-                            <li>A type format incompatibility, such as specifying a pattern, but the given value does not match the pattern.</li>
-                            <li>A type incompatibility, such as a field modeled to be an integer, but a non numeric expression was found instead.</li>
-                            <li>A value is longer than the maximum length."</li>
-                        </ul>
-                    </td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>out_of_range_parameter</td>
-                    <td>A query parameter has an invalid format. This could be due to a range under or over flow validation violation cause. Check your request to ensure it contains valid query parameters.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td>business_error</td>
-                    <td>imaginary_product_unavailable</td>
-                    <td>A business error indicating that a product with an imaginary description is not in the inventory.</td>
-                    <td>Whoops!  We can't find what you're looking for.  Try again</td>
-                </tr>
-                <tr>
-                    <td>400</td>
-                    <td></td>
-                    <td>your_api's_specific_type</td>
-                    <td>depends on specific API</td>
-                    <td>Whoops!  Something went wrong. Make sure all fields are complete and try again</td>
-                </tr>
-                <tr>
-                    <td>401</td>
-                    <td>insufficient_credentials</td>
-                    <td></td>
-                    <td>No credentials are provided, or the provided credentials are refused.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>403</td>
-                    <td>insufficient_permissions</td>
-                    <td></td>
-                    <td>The credentials indicate a system-known user, but the user is not allowed to perform the requested operation.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>collection_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI for a collection resource is not accessible. Check the syntax, and verify that the requested service is available.</td>
-                    <td>Whoops! That doesn't exist. Try again</td>
-                </tr>
-                <tr>
-                    <td>404</td>
-                    <td>element_resource_non_existing</td>
-                    <td></td>
-                    <td>The requested URI does not map to a single element resource.</td>
-                    <td>Whoops!  That doesn't exist.  Try again</td>
-                </tr>
-                <tr>
-                    <td>405</td>
-                    <td>unsupported_method</td>
-                    <td></td>
-                    <td>The requested resource does not support the specified HTTP action. Verify that you are calling an action supported by the requested endpoint.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>406</td>
-                    <td>unsupported_response_content_type</td>
-                    <td></td>
-                    <td>The client requested a response type which cannot be obtained from the requested resource. Check the requested endpoint response capabilities and compare them with your client Accept header.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>409</td>
-                    <td>conflict_resource</td>
-                    <td></td>
-                    <td>The requested resource could not be created, updated, or deleted due to server-side validation. This could be caused either by a temporary issue, such as an optimistic lock or persistent data constraint. Refer to the error details response to identify conflict details.</td>
-                    <td>That's so great it already exists! Try something different</td>
-                </tr>
-                <tr>
-                    <td>413</td>
-                    <td>bad_payload_size</td>
-                    <td></td>
-                    <td>The request payload is larger than the server can process.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>414</td>
-                    <td>uri_too_long</td>
-                    <td></td>
-                    <td>The Request-URI is longer than allowed. This can occur when a client has improperly converted a POST request to a GET request with long query information, or when the client has descended into a URI endless redirection, such as a redirected URI prefix that points to a suffix of itself. Also, it can occur when the server is under attack by a client attempting to exploit security holes present in some servers using fixed-length buffers for reading or manipulating the Request-URI.</td>
-                    <td>There's a ghost in the machine.  Sorry about that. Please try again</td>
-                </tr>
-                <tr>
-                    <td>415</td>
-                    <td>unsupported_request_content_type</td>
-                    <td></td>
-                    <td>The client sent a type of request which is not supported by the requested endpoint. Verify that your request's Content-Type matches the requested endpoint accepted content.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>internal_service_error</td>
-                    <td></td>
-                    <td>A server-side exception occurred which prevented the system from correctly returning the result. Refer to the error details response to identify exception details.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>500</td>
-                    <td>backing_service_unavailable</td>
-                    <td></td>
-                    <td>Some backing service is not available. Refer to the error details response to identify the origin of the problem.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-                <tr>
-                    <td>503</td>
-                    <td>service_temporarily_unavailable</td>
-                    <td></td>
-                    <td>A temporary service unavailability was detected. Refer to the error details response for a reattempt strategy.</td>
-                    <td>Something went very wrong. Please try again.</td>
-                </tr>
-            </table>
-            <h3>Language and Translation</h3>
+            </tbody>
+        </table>
+        <h3>‘Your Action Required’ Dialog</h3>
+        <p>Inform users with a dialog and give guidance when they need to be alerted to significant consequences before deciding to proceed. Examples include:</p>
+        <ul>
+            <li>Unrecoverable data loss</li>
+            <li>Credit card informations expired</li>
+            <li>Update a package</li>
+            <li>Change configurations manually</li>
+        </ul>
+        <p>Explain to users the action that is about to take place and give them an opportunity to back out if they're uncomfortable (eg. to save already made changes before). If necessary give clear guidance and point them towards the page where they can resolve the problem.</p>
+        <h3>‘Confirm Action’ Dialog</h3>
+        <p>YaaS APIs currently have no undo functionality available. If the user's interaction could cause harm or major inconvenience, provide a confirmation dialog. For example, an accidental page turn wouldn't cause a problem, but accidental deletion of an email message could. Make sure this wasn't an accident, so that users don't end up in a bad, irreversible situation. Give implicit feedback or showing a success message after proceeding.</p>
+        <h3>Language and Translation</h3>
+        <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
+    </section>
+    <section id="guidelines-system-errors" class="kss-page">
+            <h2>System Errors</h2>
+            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
-                <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
+                <li>We need all required fields complete to keep you moving.</li>
+                <li>We need all your entries to be correct to keep you moving</li>
+                <li>Whoops! We can't find what you're looking for. Try again</li>
+                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
+                <li>Whoops! That doesn't exist. Try again</li>
+                <li>That's so great it already exists! Try something different</li>
+                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
+                <li>Something went very wrong. Please try again.</li>
             </ul>
+        </section>
+        <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
         </section>
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
             <table class="table techne-table">
-                <tr>
-                    <th width="50%">Do explain:</th>
-                    <th>Don’t explain:</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Unfamiliar concepts</li>
-                            <li>Where to find obscure information</li>
-                            <li>What format the information should be given in</li>
-                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>The interface</li>
-                            <li>The user’s job to them</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <p>Example how to use Links</p>
-            <table class="table techne-table">
-                <tr>
-                    <th>Do:</th>
-                    <th>Don’t:</th>
-                </tr>
-                <tr>
-                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
-                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th width="50%">Do explain:</th>
+                        <th>Don’t explain:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-th="Do explain:">
+                            <ul>
+                                <li>Unfamiliar concepts</li>
+                                <li>Where to find obscure information</li>
+                                <li>What format the information should be given in</li>
+                                <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
+                            </ul>
+                        </td>
+                        <td data-th="Don't Expalin:">
+                            <ul>
+                                <li>The interface</li>
+                                <li>The user’s job to them</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p>Example how to use Links</p>
+                <table class="table techne-table">
+                    <thead>
+                        <tr>
+                            <th>Do:</th>
+                            <th>Don’t:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-th="Do:">More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                            <td data-th="Don't:">More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                        </tr>
+                    </tbody>
             </table>
         </section>
         <section id="guidelines-scroll-pagination" class="kss-page">
