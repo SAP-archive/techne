@@ -467,36 +467,40 @@
         </ul>
         <!-- Table -->
         <table class="table techne-table">
-            <tr>
-                <th>Is Not</th>
-                <th>Is</th>
-            </tr>
-            <tr>
-                <td>This is a large file and may take time to download. Please wait until all files have been download.</td>
-                <td>Large files may take additional time to download</td>
-            </tr>
-            <tr>
-                <td>
-                    <ProductName>
-                    has been successfully deleted.
-                </td>
-                <td>
-                    <Product Name>
-                    deleted
-                </td>
-            </tr>
-            <tr>
-                <td>To add a product, upload an image.</td>
-                <td>Upload an image to add a product</td>
-            </tr>
-            <tr>
-                <td>You are. Is not. Will not. Did not.</td>
-                <td>You're. Isn't. Won't. Didn't.</td>
-            </tr>
-            <tr>
-                <td>Do you really want to delete this file? Warning!</td>
-                <td>Warning! File will be permanently deleted.</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Is Not</th>
+                    <th>Is</th>
+                </tr>
+            </thead>
+            </tbody>
+                <tr>
+                    <td data-th="Is Not">This is a large file and may take time to download. Please wait until all files have been download.</td>
+                    <td data-th="Is">Large files may take additional time to download</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">
+                        <ProductName>
+                        has been successfully deleted.
+                    </td>
+                    <td data-th="Is">
+                        <Product Name>
+                        deleted
+                    </td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">To add a product, upload an image.</td>
+                    <td data-th="Is">Upload an image to add a product</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">You are. Is not. Will not. Did not.</td>
+                    <td data-th="Is">You're. Isn't. Won't. Didn't.</td>
+                </tr>
+                <tr>
+                    <td data-th="Is Not">Do you really want to delete this file? Warning!</td>
+                    <td data-th="Is">Warning! File will be permanently deleted.</td>
+                </tr>
+            </tbody>
         </table>
         <hr>
         <h3>Punctuation &amp; Capitalization</h3>
@@ -508,26 +512,30 @@
             <li>Use an ellipsis...  to indicate lag or that an additional action will be required after making the selection.</li>
         </ul>
         <table class="table techne-table">
-            <tr>
-                <th>Don't</th>
-                <th>Do</th>
-            </tr>
-            <tr>
-                <td>Spell out numbers <br> i.e. five, ten, fourty-two</td>
-                <td>Use numeric characters <br> i.e. 5, 10, 42</td>
-            </tr>
-            <tr>
-                <td>Use lower cases for labels <br> i.e. save</td>
-                <td>Use initial caps for labels <br> i.e. Save </td>
-            </tr>
-            <tr>
-                <td>Spell out words with common abbreviations <br> i.e. application</td>
-                <td>Use common abbreviations <br> i.e. app</td>
-            </tr>
-            <tr>
-                <td>Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
-                <td>Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Don't</th>
+                    <th>Do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="Don't">Spell out numbers <br> i.e. five, ten, fourty-two</td>
+                    <td data-th="Do">Use numeric characters <br> i.e. 5, 10, 42</td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Use lower cases for labels <br> i.e. save</td>
+                    <td data-th="Do">Use initial caps for labels <br> i.e. Save </td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Spell out words with common abbreviations <br> i.e. application</td>
+                    <td data-th="Do">Use common abbreviations <br> i.e. app</td>
+                </tr>
+                <tr>
+                    <td data-th="Don't">Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
+                    <td data-th="Do">Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
+                </tr>
+            </tbody>
         </table>
       </section>
       <section id="guidelines-messaging" class="kss-page">
@@ -538,43 +546,45 @@
         </p>
         <br />
         <table class="table techne-table">
-            <tbody>
+            <thead>
                 <tr>
                     <th>Is Not</th>
                     <th>Is</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
-                    <td>
+                    <td data-th="Is Not">
                         Billing Method
                         <billing method="" name="">
                         added.<br>                </billing></td>
-                    <td>Billing Method added</td>
+                    <td data-th="Is">Billing Method added</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td data-th="Is Not">
                         Shipping Cost
                         <shipping cost="">
                         saved successfully. Shipping costs saved
                     </shipping></td>
-                    <td>
+                    <td data-th="Is">
                         Package
                         <package name="">
                         couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
                     </package></td>
                 </tr>
                 <tr>
-                    <td>Image upload wasn't successful. Try again</td>
-                    <td>Image upload unsuccessful. Try again.</td>
+                    <td data-th="Is Not">Image upload wasn't successful. Try again</td>
+                    <td data-th="Is">Image upload unsuccessful. Try again.</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td data-th="Is Not">
                         Package
                         <package name="">
                         approved. Team
                         <team name="">
                         can decide when to publish to y Market.
                     </team></package></td>
-                    <td>
+                    <td data-th="Is">
                         <package name="">
                         approved.
                         <team name="">
@@ -593,36 +603,38 @@
         <p>You could also acknowledge the user's interaction by showing or deleting the element directly. In this case provide visual feedback such as highlighting the new element or making the element disappear. </p>
         <br />
         <table class="table techne-table">
-            <tbody>
+            <thead>
                 <tr>
                     <th></th>
                     <th>Notifications</th>
                     <th>Errors</th>
                     <th>Success/Confirmation</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>Background color</td>
-                    <td>Dark blue</td>
-                    <td>Red</td>
-                    <td>Dark blue</td>
+                    <td data-th="Notifications">Dark blue</td>
+                    <td data-th="Errros">Red</td>
+                    <td data-th="Success/Confirmation">Dark blue</td>
                 </tr>
                 <tr>
                     <td>Display time</td>
-                    <td>3 seconds before they  disappear on their own.</td>
-                    <td>Must be dismissed by clicking or tapping X.</td>
-                    <td>3 seconds before they  disappear on their own.</td>
+                    <td data-th="Notifications">3 seconds before they  disappear on their own.</td>
+                    <td data-th="Errros">Must be dismissed by clicking or tapping X.</td>
+                    <td data-th="Success/Confirmation">3 seconds before they  disappear on their own.</td>
                 </tr>
                 <tr>
                     <td>Keyword</td>
                     <td></td>
-                    <td>Always 'unsuccessful'</td>
-                    <td>Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
+                    <td data-th="Errros">Always 'unsuccessful'</td>
+                    <td data-th="Success/Confirmation">Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
                 </tr>
                 <tr>
                     <td>Alternative</td>
                     <td></td>
                     <td></td>
-                    <td>Display or delete the element visually</td>
+                    <td data-th="Success/Confirmation">Display or delete the element visually</td>
                 </tr>
             </tbody>
         </table>
@@ -666,114 +678,44 @@
         <section id="writing-help" class="kss-page">
             <h2>Writing Help</h2>
             <table class="table techne-table">
-                <tr>
-                    <th width="50%">Do explain:</th>
-                    <th>Don’t explain:</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Unfamiliar concepts</li>
-                            <li>Where to find obscure information</li>
-                            <li>What format the information should be given in</li>
-                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>The interface</li>
-                            <li>The user’s job to them</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <p>Example how to use Links</p>
-            <table class="table techne-table">
-                <tr>
-                    <th>Do:</th>
-                    <th>Don’t:</th>
-                </tr>
-                <tr>
-                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
-                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
-                </tr>
-            </table>
-        </section>
-        <section id="guidelines-scroll-pagination" class="kss-page">
-            <h2>Infinite Scroll & Pagination</h2>
-            <h3>Infinite Scroll</h3>
-            <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using Infinite Scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
-            <h3>Pagination</h3>
-            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-14.html">pagination</a>.</p>
-        </section>
-        <!-- load tone/voice -->
-        <section id="guidelines-accessibility" class="kss-page">
-            <h2>Accessibility</h2>
-            <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
-            <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
-            <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
-        </section>
-
-         <section id="form-validation" class="kss-page">
-            <h2>Form Validation & Error Avoidance</h2>
-            <h3>Page Validation</h3>
-            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
-            <h3>Inline Validation</h3>
-            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
-            <h3>Leaving the page and form is dirty</h3>
-            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
-
-            <h3>System Errors</h3>
-            <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
-            <ul>
-                <li>We need all required fields complete to keep you moving.</li>
-                <li>We need all your entries to be correct to keep you moving</li>
-                <li>Whoops! We can't find what you're looking for. Try again</li>
-                <li>Whoops! Something went wrong. Make sure all fields are complete and try again</li>
-                <li>Whoops! That doesn't exist. Try again</li>
-                <li>That's so great it already exists! Try something different</li>
-                <li>There's a ghost in the machine. Sorry about that. Please try again</li>
-                <li>Something went very wrong. Please try again.</li>
-            </ul>
-            <h3>Language and Translation</h3>
-            <ul>
-                <li>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</li>
-            </ul>
-        </section>
-        <section id="writing-help" class="kss-page">
-            <h2>Writing Help</h2>
-            <table class="table techne-table">
-                <tr>
-                    <th width="50%">Do explain:</th>
-                    <th>Don’t explain:</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Unfamiliar concepts</li>
-                            <li>Where to find obscure information</li>
-                            <li>What format the information should be given in</li>
-                            <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>The interface</li>
-                            <li>The user’s job to them</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <p>Example how to use Links</p>
-            <table class="table techne-table">
-                <tr>
-                    <th>Do:</th>
-                    <th>Don’t:</th>
-                </tr>
-                <tr>
-                    <td>More information on how to <a href="#">create a service</a> on DevPortal.</td>
-                    <td>More information  on how to create a service on <a href="#">DevPortal</a>.</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th width="50%">Do explain:</th>
+                        <th>Don’t explain:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-th="Do explain:">
+                            <ul>
+                                <li>Unfamiliar concepts</li>
+                                <li>Where to find obscure information</li>
+                                <li>What format the information should be given in</li>
+                                <li>If possible, provide a link to documentation where people can find further information on complex topics. The link should always be to the topic, not to the documentation source.</li>
+                            </ul>
+                        </td>
+                        <td data-th="Don't Expalin:">
+                            <ul>
+                                <li>The interface</li>
+                                <li>The user’s job to them</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p>Example how to use Links</p>
+                <table class="table techne-table">
+                    <thead>
+                        <tr>
+                            <th>Do:</th>
+                            <th>Don’t:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-th="Do:">More information on how to <a href="#">create a service</a> on DevPortal.</td>
+                            <td data-th="Don't:">More information  on how to create a service on <a href="#">DevPortal</a>.</td>
+                        </tr>
+                    </tbody>
             </table>
         </section>
         <section id="guidelines-scroll-pagination" class="kss-page">
@@ -790,5 +732,4 @@
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
->>>>>>> develop
 </div>
