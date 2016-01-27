@@ -170,15 +170,9 @@ gulp.task('styleguide', function () {
     .pipe( gulp.dest('docs/kss') );
 
     gulp.src('./dist/**/*') 
-    .pipe(cachebust({
-        type: 'timestamp'
-    }))
     .pipe( gulp.dest('./docs/kss/public/y-techne/dist/') );
 
     gulp.src('./bower_components/bootstrap/fonts/**/*') 
-    .pipe(cachebust({
-        type: 'timestamp'
-    }))
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
 });
 
