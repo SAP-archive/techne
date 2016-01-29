@@ -1,0 +1,137 @@
+// Additional Inline Help
+//
+// Users can choose to enable “Help Mode” using a toggle in the footer of the left navigation panel or from the “My Profile” section. This will display all Additional Inline help on the page. Use ‘inline help’ when ‘all help on’ is set to true. Inline Help is displayed below a form field.
+//
+// Markup:
+// <div class="form-group">
+//   <label class="control-label">Label</label>
+//   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
+// 	<span class="help-tooltip help-tooltip--active">
+// 		<span class="hyicon hyicon-helpoff"></span>
+// 		<span class="help-block">I'm a Additional Inline Help if global Help Mode is disabled.</span>
+// 	</span>
+ //   <span class="help-block">I'm a Critical Error-Avoidance Help text. I'm always there.</span>
+ // </div>
+// <div class="form-group">
+//   <label class="control-label">Label</label>
+//   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
+// 	<span class="help-tooltip">
+// 		<span class="hyicon hyicon-helpoff"></span>
+// 		<span class="help-block" >I'm a Additional Inline Help when the global Helpmode is enabled. </span>
+// 	</span>
+ // </div>
+//
+// Styleguide 6.5
+//
+
+// HELP TOOLTIP
+// ---------------------------------
+// Wrapper Class for the default .help-block
+// Can be triggered via the --active modifier
+
+.help-tooltip{
+   position: relative;
+
+   display: block;
+
+   margin-top: 5px;
+   margin-bottom: 10px;
+
+   cursor: default;
+   .hyicon{
+      font-size: 25px;
+      line-height: 0;
+   }
+   .help-block{
+      font-size: 15px;
+
+      display: inline;
+      vertical-align: text-top;
+   }
+}
+
+// keep this prefixed with the 
+///active modifier to avoid overwrites
+.help-tooltip--active{
+   margin: 0;
+
+   &.help-tooltip{
+      display: inline-block;
+   }
+   &:hover{
+      .help-block{
+         display: block;
+         visibility: visible;
+
+         opacity: 1;
+      }
+      .hyicon{
+         &:before{
+            // .hyicon-helpon
+            content: '\e012';
+         }
+      }
+   }
+   // Tooltip
+   .help-block{
+      position: absolute;
+      z-index: 1;
+      top: 25px;
+      right: -10px;
+
+      visibility: hidden;
+
+      width: 300px;
+      margin: 0;
+      padding: 10px;
+
+      transition: visibility 0s, opacity .25s ease-in-out;
+      transform: translate(0, 7px);
+      text-align: left;
+
+      opacity: 0;
+      color: #fff;
+      background: @default-greyblue;
+      box-shadow: 0 0 2px #000;
+      // Triangle
+      &:before{
+         position: absolute;
+         top: -15px;
+         right: 8px;
+
+         width: 0;
+         height: 0;
+         margin-left: -15px;
+
+         content: '';
+
+         border-width: 0 15px 15px;
+         border-style: solid;
+         border-color: transparent;
+         border-bottom-color: @default-greyblue;
+      }
+   }
+}
+
+// Special Usecases
+// ----------------------
+
+// Form Groups
+.form-group{
+   position: relative;
+   // special position of the tooltip for form-groups
+   .help-tooltip--active{
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+}
+
+// Section Help 
+.y-section-help{
+   &.help-tooltip--active{
+      float: right;
+
+      margint-bottom: 0;
+   }
+}
