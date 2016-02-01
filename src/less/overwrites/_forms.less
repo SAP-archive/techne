@@ -1,16 +1,18 @@
 // Input Field
 //
-// If a field is required simply add a asterisk at the end of the label.
-//
 // Markup:
 // <form>
 //   <div class="form-group">
-//     <label for="exampleInputEmail1">Email address *</label>
+//     <label for="exampleInputEmail1" class="control-label required">Email address</label>
 //     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
 //   </div>
 //   <div class="form-group">
-//     <label for="exampleInputPassword1">Password</label>
+//     <label for="exampleInputPassword1" class="control-label required">Password</label>
 //     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+//   </div>
+//   <div class="form-group">
+//     <label for="exampleInputNotRequired">Optional field label</label>
+//     <input type="password" class="form-control" id="exampleInputNotRequired" placeholder="Password">
 //   </div>
 // </form>
 //
@@ -20,6 +22,7 @@
 
 label{
   color: @form-label-color;
+  font-weight: normal;
 }
 
 textarea{
@@ -41,7 +44,6 @@ textarea{
   }
 }
 
-
 .has-error{
     // Color error form element value
   .form-control {
@@ -49,13 +51,13 @@ textarea{
   }
 }
 
-
 .input-group-addon{
   background-color: #e1e6ec;
 }
 
-label.control-label.required::after{
-  content: '*';
+label.control-label.required{
   font-weight: bold;
-
+  &:after{
+    content: ' *';
+  }
 }
