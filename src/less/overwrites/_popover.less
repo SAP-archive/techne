@@ -13,34 +13,19 @@
 //
 // Styleguide 18.1
 
-@y-popover-bg : #7f90a4;
 .popover {
-  background-color: @y-popover-bg;
   color:#fff;
   border: none;
   border-radius: 0;
   background-clip:border-box;
   font-size: 15px;
+  opacity: 1;
   .popover-title{
-    background-color: @y-popover-bg;
     border-bottom: none;
     font-size: 19px;
     padding:25px 25px 15/2px 25px;
   }
   .popover-content{
     padding:15/2px 25px 25px 25px;
-  }
-
-   &.left > .arrow:after {
-    border-left-color: @y-popover-bg;
-  }
-  &.top > .arrow:after{
-    border-top-color: @y-popover-bg;
-  }
-  &.right > .arrow:after{
-    border-right-color: @y-popover-bg;
-   }
-  &.bottom > .arrow:after{
-    border-bottom-color: @y-popover-bg;
   }
 }
