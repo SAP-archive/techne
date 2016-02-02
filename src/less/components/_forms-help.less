@@ -1,25 +1,25 @@
 // Additional Inline Help
 //
+// Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is "The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed." <br><br><br>
+//
+// Styleguide 6.4
+
+
+// Additional Inline Help
+//
 // Users can choose to enable “Help Mode” using a toggle in the footer of the left navigation panel or from the “My Profile” section. This will display all Additional Inline help on the page. Use ‘inline help’ when ‘all help on’ is set to true. Inline Help is displayed below a form field.
 //
 // Markup:
 // <div class="form-group">
 //   <label class="control-label">Label</label>
 //   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
-// 	<span class="help-tooltip help-tooltip--active">
+// 	<span class="help-inline {$modifiers}">
 // 		<span class="hyicon hyicon-helpoff"></span>
-// 		<span class="help-block">I'm a Additional Inline Help if global Help Mode is disabled.</span>
+// 		<span class="help-block">I'm a Additional Inline Help</span>
 // 	</span>
- //   <span class="help-block">I'm a Critical Error-Avoidance Help text. I'm always there.</span>
- // </div>
-// <div class="form-group">
-//   <label class="control-label">Label</label>
-//   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
-// 	<span class="help-tooltip">
-// 		<span class="hyicon hyicon-helpoff"></span>
-// 		<span class="help-block" >I'm a Additional Inline Help when the global Helpmode is enabled. </span>
-// 	</span>
- // </div>
+// </div>
+//
+// .help-inline--tooltip - By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
 //
 // Styleguide 6.5
 //
@@ -27,9 +27,8 @@
 // HELP TOOLTIP
 // ---------------------------------
 // Wrapper Class for the default .help-block
-// Can be triggered via the --active modifier
 
-.help-tooltip{
+.help-inline{
    position: relative;
 
    display: block;
@@ -52,10 +51,10 @@
 
 // keep this prefixed with the 
 ///active modifier to avoid overwrites
-.help-tooltip--active{
+.help-inline--tooltip{
    margin: 0;
 
-   &.help-tooltip{
+   &.help-inline{
       display: inline-block;
    }
    &:hover{
@@ -93,6 +92,7 @@
       color: #fff;
       background: @default-greyblue;
       box-shadow: 0 0 2px #000;
+
       // Triangle
       &:before{
          position: absolute;
@@ -120,7 +120,7 @@
 .form-group{
    position: relative;
    // special position of the tooltip for form-groups
-   .help-tooltip--active{
+   .help-inline--tooltip{
       position: absolute;
       top: 0;
       right: 0;
@@ -129,7 +129,7 @@
 
 // Section Help 
 .y-section-help{
-   &.help-tooltip--active{
+   &.help-inline--tooltip{
       float: right;
 
       margint-bottom: 0;
