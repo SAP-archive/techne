@@ -15,7 +15,7 @@
 //   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
 // 	<span class="help-inline {$modifiers}">
 // 		<span class="hyicon hyicon-helpoff"></span>
-// 		<span class="help-block">I'm a Additional Inline Help</span>
+// 		<span class="help-block-inline">I'm a Additional Inline Help</span>
 // 	</span>
 // </div>
 //
@@ -27,6 +27,12 @@
 // HELP TOOLTIP
 // ---------------------------------
 // Wrapper Class for the default .help-block
+
+// Inherit all styles of the .help-block to
+// avoid validation overwrites (.has-error etc)
+.help-block-inline{
+   .help-block();
+}
 
 .help-inline{
    position: relative;
@@ -40,8 +46,9 @@
    .hyicon{
       font-size: 25px;
       line-height: 0;
+      color: currentColor;
    }
-   .help-block{
+   .help-block-inline{
       font-size: 15px;
 
       display: inline;
@@ -58,7 +65,7 @@
       display: inline-block;
    }
    &:hover{
-      .help-block{
+      .help-block-inline{
          display: block;
          visibility: visible;
 
@@ -72,7 +79,7 @@
       }
    }
    // Tooltip
-   .help-block{
+   .help-block-inline{
       position: absolute;
       z-index: 1;
       top: 25px;
