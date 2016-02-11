@@ -58,22 +58,13 @@
   margin-bottom: 3px;
 }
 
-// Status Value Label
-//
-// Markup:
-//<p class="statusDataValue">
-//  <span class="active">
-//    Active
-//  </span>
-//</p>
-//
-// Styleguide 3.5
-
+// statusDataValue is depereciated. please use bootstrap lables instead
 .statusDataValue{
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: bold;
   font-size: 11px;
+  color: @techne-status-inactive;
 
   > .active{
     color: @default-green;

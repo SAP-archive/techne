@@ -245,6 +245,7 @@ body.kss-body {
   padding: 0;
   max-width: 100%;
   padding-top: 100px;
+  padding-right: 0!important;
 }
 #kss-wrapper {
   height: auto;
