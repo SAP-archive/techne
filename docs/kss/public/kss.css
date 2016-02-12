@@ -923,7 +923,6 @@ body.has-left-nav .sidebar-nav {
   left: 6px;
   font-weight: 900;
   color: #7e858d;
-  display: none;
 }
 #patterns-list-pages .seperator .hexagon .code-close,
 #patterns-card-pages .seperator .hexagon .code-close,
@@ -938,6 +937,7 @@ body.has-left-nav .sidebar-nav {
   left: 8px;
   font-weight: 500;
   color: #fff;
+  display: none;
 }
 #patterns-list-pages .seperator .hexagon:before,
 #patterns-card-pages .seperator .hexagon:before,
@@ -1056,7 +1056,6 @@ body.has-left-nav .sidebar-nav {
   left: 6px;
   font-weight: 900;
   color: #7e858d;
-  display: none;
 }
 #patterns-list-pages .seperator .circle .code-close,
 #patterns-card-pages .seperator .circle .code-close,
@@ -1071,6 +1070,7 @@ body.has-left-nav .sidebar-nav {
   left: 8px;
   font-weight: 500;
   color: #fff;
+  display: none;
 }
 #patterns-list-pages .seperator .open-circle,
 #patterns-card-pages .seperator .open-circle,
