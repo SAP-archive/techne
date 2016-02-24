@@ -3,66 +3,10 @@
 @import '_type.less';
 @import '_tooltip.less';
 @import '_alert.less';
-
-
-
-.alert-primary{
-   .alert-variant(@brand-primary; @brand-primary; @alert-success-text);
-}
-
-.alert-processing{
-   .alert-variant(@dark-blue; @dark-blue; @alert-success-text);
-}
-
-
-.close{
-   text-shadow: none;
-
-   .opacity(1);
-}
-
-.dropdown-menu{
-   min-width: 300px;
-   form,
-   form&{
-      padding: 15px;
-   }
-}
-
-
-
-/* custom pre theming */
-pre{
-   &.pre-lg{
-      .input-lg();
-   }
-   &.pre-sm{
-      .input-sm();
-   }
-}
-
-
-.caret{
-   display: inline-block;
-
-   width: 0;
-   height: 0;
-   margin-left: 2px;
-
-   vertical-align: middle;
-   &.left{
-      border-top: @caret-width-base solid transparent;
-      border-right: @caret-width-base solid;
-      border-bottom: @caret-width-base solid transparent;
-      border-left: 0;
-   }
-   &.right{
-      border-top: @caret-width-base solid transparent;
-      border-right: 0;
-      border-bottom: @caret-width-base solid transparent;
-      border-left: @caret-width-base solid;
-   }
-}
+@import '_thumbnails.less';
+@import '_input-groups.less';
+@import '_close.less';
+@import '_code.less';
 
 .color-danger{
    color: @default-red;
@@ -71,18 +15,6 @@ pre{
 .light-text{
    color: @light-blue-700;
 }
-
-
-
-// Overwrite of backgroundcolor for input-group-addons
-.has-success,
-.has-warning,
-.has-error{
-   .input-group-addon{
-      background: @alert-success-text;
-   }
-}
-
 
 h1,
 h2,
@@ -96,89 +28,6 @@ h6{
 
          margin-bottom: 10px;
       }
-   }
-}
-
-
-
-// Icon within the modal title
-
-.modal-title{
-   .glyphicon{
-      margin-right: 6px;
-   }
-}
-
-.modal-content{
-   > .list-group{
-      > .list-group-item{
-         border-right: 0;
-         border-left: 0;
-         border-radius: 0;
-         &:last-child{
-            border-bottom: 0;
-         }
-      }
-   }
-}
-
-
-// Input Icons left hand side
-.has-feedback{
-   &.has-feedback-left{
-      // Ensure icons don't overlap text
-      .form-control{
-         padding-right: 0;
-         padding-left: (@input-height-base * 1.25);
-      }
-      // Feedback icon (requires .glyphicon classes)
-      .form-control-feedback{
-         top: (@line-height-computed + 5); // Height of the `label` and its margin
-         right: auto;
-         left: 0;
-      }
-   }
-   // Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0
-   label.sr-only ~ .form-control-feedback{
-      top: 0;
-   }
-}
-
-//Checkbox label
-.checkbox{
-  padding-left: 0;
-  line-height: 14px;
-
-  input[type=checkbox]{
-    margin-left: 0;
-    position: relative;
-    width: 10%
-
-  }
-
-  label{
-    display:inline-block;
-    padding-left: 0;
-    width: auto;
-
-
-  }
-
-  .note{
-    font-size: 10px;
-    margin-top: 5px;
-    color:@dark-grey;
-
-  }
-
-}
-
-
-// Button input groups fixes
-// -------------------------
-.input-group-btn{
-   > .btn, > .btn-group{
-      margin-top: -2px;
    }
 }
 
@@ -253,8 +102,4 @@ h6{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.input-group-addon{
-  background-color: #fff;
-
 }
