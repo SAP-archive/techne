@@ -88,3 +88,17 @@ label.control-label.required{
       top: 0;
    }
 }
+
+// Fix form-inline when radios are chained 
+.form-inline{
+  &.form-inline-padding{
+     > .radio{
+      margin-top: @form-group-margin-bottom;
+      margin-bottom: @form-group-margin-bottom * 1.5;
+      
+      & + .radio{
+        margin-left: 15px;
+      }
+    }
+  }
+}
