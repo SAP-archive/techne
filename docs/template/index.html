@@ -148,7 +148,7 @@
                     {{#if_eq pagename "components"}}
                         <span class="active">Components</span>
                     {{else}}
-                        <a href="section-1.html" class="inactive">Components</a>
+                        <a href="Alerts-Errors-Notifications.html" class="inactive">Components</a>
                     {{/if_eq}}
                 </li>
                 <li>
@@ -192,7 +192,7 @@
                             {{#if_eq pagename "index"}}
                               <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
                               <li class="kss-menu-item"><a href="Guidelines.html" >Guidelines</a></li>
-                              <li class="kss-menu-item"><a href="section-1.html">Components</a></li>
+                              <li class="kss-menu-item"><a href="Alerts-Errors-Notifications.html">Components</a></li>
                               <li class="kss-menu-item"><a href="Patterns.html">Patterns &amp; Layouts</a></li>
                               <li class="kss-menu-item"><a href="GettingStarted.html">Download &amp; Get Started</a></li>
                             {{else}}
@@ -203,6 +203,7 @@
                                 {{/each}}
                             {{else}}
                                 {{#eachRoot}}
+                                sw - {{pageLink}}
                                 <li class="kss-menu-item"><a href="section-{{reference}}.html"> {{header}}</a></li>
                                 {{/eachRoot}}
                             {{/if}}
