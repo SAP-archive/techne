@@ -45,12 +45,18 @@ module.exports = function (handlebars, styleguide) {
             i, l;
 
         sections = styleguide.section('x');
+
         if (!sections) return '';
 
         l = sections.length;
         for (i = 0; i < l; i += 1) {
+            var pLink =  sections[i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
+
+            sections[i].data.pageLink = pLink;
             buffer += options.fn(sections[i].data);
         }
+
+        //console.log('buffer check', buffer);
 
         return buffer;
     });

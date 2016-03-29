@@ -51,6 +51,7 @@ module.exports = function(opt) {
                     rootCount, childSections = [];
 
 
+
             // Accumulate all of the sections' first indexes
             // in case they don't have a root element.
             for (i = 0; i < sectionCount; i += 1) {
@@ -63,7 +64,9 @@ module.exports = function(opt) {
 
             sectionRoots.sort();
             rootCount = sectionRoots.length;
+            
 
+            //console.log(styleguide);
             handlebarHelpers(handlebars, styleguide);
 
             // Generate HTML from all supplied markdown files
@@ -117,7 +120,20 @@ module.exports = function(opt) {
             // Now, group all of the sections by their root
             // reference, and make a page for each.
             for (i = 0; i < rootCount; i += 1) {
+
+                //console.log('sc', styleguide.section);
                 childSections = styleguide.section(sectionRoots[i]+'.*');
+
+                
+                var fileRoot = parseInt(sectionRoots[i],10);
+
+
+
+                var fileName = styleguide.data.section_refs[fileRoot].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
+            
+
+                //update the childSections reference to point at the new file name links
+                childSections.pageLink = fileName;
 
                 var content = template({
                     showLeftNav: true, //show the nav bar for all sections
@@ -130,7 +146,10 @@ module.exports = function(opt) {
                     argv: {}
                 });
 
-                var joinedPath = path.join(firstFile.base, 'section-' + sectionRoots[i] + '.html');
+                //console.log('var index' + i + ' = ', childSections);
+
+                var joinedPath = path.join(firstFile.base,  fileName + '.html');
+
 
                 var file = new File({
                     cwd: firstFile.cwd,
@@ -161,7 +180,10 @@ module.exports = function(opt) {
     }
 
     function jsonSections(sections) {
+
         return sections.map(function(section) {
+            
+            //console.log('sectionref', section.reference());
             return {
                 header: section.header(),
                 description: section.description(),
