@@ -133,11 +133,7 @@ module.exports = function(opt) {
             
 
                 //update the childSections reference to point at the new file name links
-                //console.log(styleguide.data.section_refs);
                 childSections.pageLink = fileName;
-                //console.log(sectionRoots.pageLink);
-                console.log(childSections.length);
-
 
                 var content = template({
                     showLeftNav: true, //show the nav bar for all sections
