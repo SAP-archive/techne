@@ -124,20 +124,20 @@ module.exports = function(opt) {
                 //console.log('sc', styleguide.section);
                 childSections = styleguide.section(sectionRoots[i]+'.*');
 
-                console.log(styleguide.data[i]);
                 
                 var fileRoot = parseInt(sectionRoots[i],10);
 
 
-                console.log('froot', fileRoot);
 
                 var fileName = styleguide.data.section_refs[fileRoot].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
-
+            
 
                 //update the childSections reference to point at the new file name links
                 //console.log(styleguide.data.section_refs);
                 childSections.pageLink = fileName;
                 //console.log(sectionRoots.pageLink);
+                console.log(childSections.length);
+
 
                 var content = template({
                     showLeftNav: true, //show the nav bar for all sections
@@ -186,6 +186,8 @@ module.exports = function(opt) {
     function jsonSections(sections) {
 
         return sections.map(function(section) {
+            
+            //console.log('sectionref', section.reference());
             return {
                 header: section.header(),
                 description: section.description(),
