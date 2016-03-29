@@ -16,7 +16,7 @@
 @label-default-color: @label-color;
 @label-success-color: @default-green;
 @label-danger-color: @default-red;
-
+@label-warning-color: @default-orange;
 
 .label{
   font-size: 12px;
@@ -39,6 +39,10 @@
 
 .label-danger {
   .label-variant-custom(@label-danger-bg, @label-danger-color);
+}
+
+.label-warning {
+  .label-variant-custom(@label-default-bg, @label-warning-color);
 }
 
 // Activity Status
