@@ -261,6 +261,7 @@ body.kss-body {
   height: 50px;
 }
 #kss-top-nav ul {
+  overflow: hidden;
   list-style: outside none none;
   margin: 0;
   padding: 0 20px;
@@ -335,7 +336,7 @@ body.kss-body {
 .toggled .kss-sidebar-shadow {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .kss-sidebar-shadow {
     display: none!important;
   }
@@ -366,7 +367,7 @@ body.kss-body {
   border-bottom: 1px solid #27394f;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   #kss-nav nav ul li.kss-back {
     display: none;
   }
@@ -590,9 +591,20 @@ li.L7,
 li.L9 {
   background: #eee;
 }
+@media screen and (min-width: 769px) {
+  body.has-left-nav #kss-nav.mobileOnlineNavigation {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 768px) {
   body.toggled {
     overflow-y: hidden;
+  }
+  body.has-left-nav #kss-nav.mobileOnlineNavigation {
+    display: block !important;
+  }
+  body.kss-sidebar-nav-mobile-only .hyHomePage .container {
+    width: auto !important;
   }
   #kss-nav {
     display: block;
@@ -642,7 +654,7 @@ li.L9 {
 body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
   padding-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     padding-left: 0px!important;
   }
@@ -689,7 +701,7 @@ body.has-left-nav .sidebar-nav {
   padding: 0;
   list-style: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   body.has-left-nav #kss-wrapper {
     padding-left: 265px;
     background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTY4RkM5ODM0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTY4RkM5ODQ0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NjhGQzk4MTRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NjhGQzk4MjRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAwBAwMDBQQFCQYGCQ0LCQsNDw4ODg4PDwwMDAwMDw8MDAwMDAwPDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAEAAQMBEQACEQEDEQH/xABKAAEAAAAAAAAAAAAAAAAAAAAJAQEAAAAAAAAAAAAAAAAAAAADEAEAAAAAAAAAAAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBlTBf/2Q==');
@@ -1210,7 +1222,7 @@ body.has-left-nav .sidebar-nav {
     top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 809px) {
+@media (min-width: 769px) and (max-width: 809px) {
   .visual-system .hexagonVector span {
     font-size: 85px;
   }
@@ -1250,7 +1262,7 @@ body.has-left-nav .sidebar-nav {
   width: 20%;
   float: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 76npx) {
   .visual-system .col-sm-5ths {
     width: 20%;
     float: left;
@@ -1361,7 +1373,7 @@ body.has-left-nav .sidebar-nav {
     padding-top: 120px;
   }
 }
-@media only screen and (max-width: 910px) and (min-width: 768px) {
+@media only screen and (max-width: 910px) and (min-width: 769px) {
   .visual-system .carousel-caption {
     padding-top: 120px;
   }
@@ -1485,7 +1497,7 @@ header.hyHomeHeaderMinor {
   padding-bottom: 100px;
   padding-top: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .hyHomePage .hyHomeHeader p {
     padding: 0 0 25px 0;
   }
@@ -1496,7 +1508,7 @@ header.hyHomeHeaderMinor {
 .hyHomePage .hyHomeHeader2 p {
   line-height: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .hyHomePage .hyHomeHeader2 p {
     line-height: 20px;
   }
@@ -1775,7 +1787,7 @@ header.hyHomeHeaderMinor {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 829px) and (min-width: 768px) {
+@media only screen and (max-width: 829px) and (min-width: 769px) {
   .hyGettingStartedPage .downloadOptions a {
     font-size: 16px;
   }
