@@ -1640,20 +1640,20 @@ header.hyHomeHeaderMinor {
 .hyHomePage .consumerCarousel .personaScreen {
   margin-bottom: 20px;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid {
   max-width: 555px;
   padding-left: 0;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab .w5_list li {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab .w5_list li {
   margin-bottom: 10px;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.nav-tabs {
   border-bottom: none;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.nav-tabs li {
   max-width: 47%;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li a {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.nav-tabs li a {
   text-transform: uppercase;
   background-color: transparent;
   border-bottom: none;
@@ -1663,15 +1663,15 @@ header.hyHomeHeaderMinor {
   font-family: 'Dosis';
   white-space: nowrap;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li.active a {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.nav-tabs li.active a {
   border: none;
   color: #000;
 }
-.hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.nav-tabs li.tab-seperator {
+.hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.nav-tabs li.tab-seperator {
   padding: 10px 0;
 }
 @media (min-width: 992px) {
-  .hyHomePage .consumerCarousel .hyPersonaTabs .container .hyPersonaTab ul.w5_list {
+  .hyHomePage .consumerCarousel .hyPersonaTabs .container-fluid .hyPersonaTab ul.w5_list {
     list-style-position: inside;
   }
 }
