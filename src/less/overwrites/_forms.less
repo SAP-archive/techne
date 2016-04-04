@@ -42,6 +42,11 @@ textarea{
   &.checkbox-inline label  {
     color: @form-label-color;
   }
+  
+  // Overwrite of backgroundcolor for input-group-addons
+  .input-group-addon{
+      background: @alert-success-text;
+   }
 }
 
 .has-error{
@@ -59,5 +64,41 @@ label.control-label.required{
   font-weight: bold;
   &:after{
     content: ' *';
+  }
+}
+
+
+// Input Icons left hand side
+.has-feedback{
+   &.has-feedback-left{
+      // Ensure icons don't overlap text
+      .form-control{
+         padding-right: 0;
+         padding-left: (@input-height-base * 1.25);
+      }
+      // Feedback icon (requires .glyphicon classes)
+      .form-control-feedback{
+         top: (@line-height-computed + 5); // Height of the `label` and its margin
+         right: auto;
+         left: 0;
+      }
+   }
+   // Reposition feedback icon if label is hidden with "screenreader only" state - Fixed in Boostrap 3.2.0
+   label.sr-only ~ .form-control-feedback{
+      top: 0;
+   }
+}
+
+// Fix form-inline when radios are chained 
+.form-inline{
+  &.form-inline-padding{
+     > .radio{
+      margin-top: @form-group-margin-bottom;
+      margin-bottom: @form-group-margin-bottom * 1.5;
+      
+      & + .radio{
+        margin-left: 15px;
+      }
+    }
   }
 }
