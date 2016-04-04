@@ -291,6 +291,8 @@ gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'deploy']);
 // iconfont, less, kss_bootrap_src
 gulp.task('dist', ['iconfont', 'build']);
 
+gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
+
 
 
 // The default task (called when you run `gulp` from cli)
