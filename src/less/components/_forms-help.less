@@ -15,7 +15,7 @@
 //   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
 // 	<span class="help-inline {$modifiers}">
 // 		<span class="hyicon hyicon-helpoff"></span>
-// 		<span class="help-block-inline">I'm a Additional Inline Help</span>
+// 		<span class="help-block-inline">I'm a additional Inline Help</span>
 // 	</span>
 // </div>
 //
@@ -50,7 +50,7 @@
    }
    .help-block-inline{
       font-size: 15px;
-
+      vertical-align: inherit;
       display: inline;
    }
 }
@@ -77,6 +77,10 @@
          }
       }
    }
+   a {
+      color: currentColor;
+   }
+
    // Tooltip
    .help-block-inline{
       position: absolute;
@@ -132,11 +136,28 @@
    }
 }
 
-// Section Help 
-.y-section-help{
+// Section Level Help
+//
+// Section-level help will always display IF it exists, but it isn’t required. Section-level help is displayed below the section title. Whether or not section-level help is included is at the discretion of each team.
+//
+// Markup:
+// <section>
+//    <div class="section-header">
+//    <h2 class="section-headline">I'm the Section Headline</h2>
+//    <span class="section-help help-inline help-inline--section {$modifiers}">
+//       <span class="hyicon hyicon-helpoff"></span>
+//       <span class="help-block-inline"> I'm a additional Inline Help Text</span>
+//    </span>
+// </div>
+// </section>
+//
+// .help-inline--tooltip - By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
+//
+// Styleguide 6.7
+
+.help-inline--section{
    &.help-inline--tooltip{
       float: right;
-
       margint-bottom: 0;
    }
 }
