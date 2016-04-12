@@ -1,6 +1,6 @@
 <div class="hyHomePage">
     <header class="main-header hyHomeHeaderMain">
-        <div class="container">
+        <div class="container-fluid">
             <div class="page-header hyHomeHeader text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
@@ -12,14 +12,14 @@
         </div>
     </header>
     <header class="hyHomeHeaderMinor">
-        <div class="container">
+        <div class="container-fluid">
             <div class="hyHomeHeader2">
                 <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
             </div>
         </div>
     </header>
 <div class="hyHomePageSection">
-    <div class="container hyHomeContentCentered">
+    <div class="container-fluid hyHomeContentCentered">
         <div class="row hyHomeHeader3 text-center">
             <div class="col-md-10 col-md-offset-1">
                 <h3>Why is techné different?</h3>
@@ -84,7 +84,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container hyHomeContentCentered">
+    <div class="container-fluid hyHomeContentCentered">
         <!-- Consumer Section-->
         <div class="consumerCarousel" id="hyHomeConsumerC">
             <h3 class="text-center">The Consumer</h3>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</strong></p>
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#cons_wwwwh">Context</a></li>
@@ -132,7 +132,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container hyHomeContentCentered">
+    <div class="container-fluid hyHomeContentCentered">
         <!-- High-touch User Section-->
         <div class="consumerCarousel" id="hyHomeHighTC">
             <h3 class="text-center">High-touch Business User</h3>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>Our Marketers, Merchandisers, Product Managers and other Designer people</strong></p>
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#hight_wwwwh">Context</a></li>
@@ -180,7 +180,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container hyHomeContentCentered">
+    <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeLowTC">
             <h3 class="text-center">The Low-touch Business User</h3>
             <div class="col-md-6">
@@ -188,7 +188,7 @@
             </div>
             <div class="col-md-6 hyPersonaTabs">
                 <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">Context</a></li>
@@ -224,7 +224,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container hyHomeContentCentered">
+    <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeSoftDevC">
             <h3 class="text-center">and of course, Software Developers</h3>
             <div class="row">
@@ -233,7 +233,7 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>The heart of YaaS. They need stability, community and tools that don’t get in their way</strong></p>
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#dev_wwwwh">Context</a></li>
