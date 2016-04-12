@@ -69,7 +69,8 @@
                     Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager. Then you can simply run
                 </p>
                 <code>npm install --global gulp</code>
-                <p>(Note the —global, otherwise you would not be able to run gulp systemwide)</p>
+                <p>(Note the —global, otherwise you would not be able to run gulp systemwide)</p>          
+                <div class="alert alert-success"><strong>IMPORTANT:</strong> The variable <code>@bower-path</code> is not defined per default. It is required that you define this variable in your own stylesheet and point to your bower_components folder. (No trailing slash).<br/><br/>Example:<code>@bower-path: '../../bower_components'; </code></div>
                 <h3>AVAILABLE COMMANDS</h3>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
