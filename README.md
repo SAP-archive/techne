@@ -39,7 +39,17 @@ Within the repo you'll find the following directories and files:
 Nothing easier than that! Simply include our styes.less files like: 
 `@import "bower_components/hyTechne/src/less/styles";`.
 
-Remember to fix the paths for fonts by overwriting the path variables 
+IMPORTANT: There is no default value for @bower-path set. It is required 
+that you define this variable in your own stylesheet and point to your 
+bower_components folder. (No trailing slash).
+
+ `@bower-path: '../../bower_components'; `
+
+Reason: In order to be able to overwrite a variable in a import path, 
+the variable can not yet be defined. Otherwise the LESS compiler picks
+the first definition and that's it.
+
+Also remember to fix the paths for fonts by overwriting the path variables 
 in a less include after the style.less include like: 
 
 `@import "_resource-paths";`
@@ -52,7 +62,6 @@ and add in the file something like:
 // icon names much follow a UTF hex naming format
 
 @bootstrap-path: '../../bower_components/bootstrap'; // Path to bootstrap folder
-@bower-path: '../../bower_components';  // Path to bower_components folder
 @hytech-path: '../../bower_components/hyTechne'; // Path to hytech folder
 ```
 
