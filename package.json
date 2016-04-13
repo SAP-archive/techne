@@ -4,8 +4,7 @@
   "description": "hybris Techne Style Guide",
   "main": "docs/index.js",
   "scripts": {
-    "test": "gulp",
-    "start": "docs/index.js",
+    "start": "gulp",
     "postinstall": "bower install && gulp patchgulpkss"
   },
   "repository": {
