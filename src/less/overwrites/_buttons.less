@@ -1,16 +1,26 @@
-// Action Buttons
+// Primary Button
 //
-// A majority of buttons in the site are built from the same base class.
+//The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.
 //
 // Markup:
-//<button class="btn btn-lg {$modifiers}">
-//	This is a Button
+//<button class="btn btn-lg btn-primary">
+//    Primary Button
 //</button>
 //
-// .btn-primary           - The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.
-// .btn-default           - The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
+// Styleguide 2.1.1
+
+
+// Secondary Button
 //
-// Styleguide 3.1
+//The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
+//
+// Markup:
+//<button class="btn btn-lg btn-default">
+//    Secondary Button
+//</button>
+//
+// Styleguide 2.1.2
+
 
 .btn{
 	border: @btn-border;
@@ -21,6 +31,11 @@
   &:active, 
   &:focus{
     outline:none !important;
+  }
+
+  // Inherit the color of the buttons font color. hover etc. 
+  .caret{
+    color: inherit!important;
   }
 }
 
@@ -120,7 +135,7 @@
 //  <span class="hyicon hyicon-back"></span> BACK
 //</button>
 //
-// Styleguide 3.2
+// Styleguide 2.2
 
 
 // Buttons (Input Type)
@@ -136,7 +151,7 @@
 //	</span>
 //</div>
 //
-// Styleguide 3.3
+// Styleguide 2.3
 
 .file-selector {
   display: inline-block;
@@ -165,19 +180,28 @@
   }
 }
 
-// Links
+// Delete Link
 //
-// A majority of links in the site are built from the same base class.
+//The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style.
 //
 // Markup:
-//<button class="btn btn-lg {$modifiers}">
-//	THIS IS A LINK
+//<button class="btn btn-lg btn-danger">
+//	DELETE LINK
 //</button>
 //
-// .btn-danger            - The Delete link is used to indicate removal of records from the system. Delete is represented by a red link, typically placed on the lower right quadrant of the actionable area. Any action analogous to Cancel or Undo should use the secondary action style.
-// .btn-subordinate       - Cancel is to be styled as a link as it's a tertiary action. Use Cancel to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current // page are discarded
+// Styleguide 2.4.1
+
+
+// Cancel Link
 //
-// Styleguide 3.4
+//Cancel is to be styled as a link as it's a tertiary action. Use Cancel to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current page are discarded
+//
+// Markup:
+//<button class="btn btn-lg btn-subordinate">
+//  CANCEL LINK
+//</button>
+//
+// Styleguide 2.4.2
 
 .btn-subordinate{
   .button-variant(@btn-subordinate-color; @btn-subordinate-bg; @btn-subordinate-border);
@@ -202,7 +226,7 @@
 //	</label>
 //</div>
 //
-// Styleguide 3.5
+// Styleguide 2.5
 .btn-group {
   border-radius: 4px;
   .box-shadow(1px 2px 1px fade(@default-greyblue-200, 100%));
@@ -231,10 +255,11 @@
 //   Add
 // </button>
 //
-// Styleguide 3.6
+// Styleguide 2.6
 
 .y-add{
     border:none;
+    position: relative;
 }
 
 .y-add-btn{

@@ -39,3 +39,28 @@
   border:none;
   background: @default-greyblue-100;
 }
+
+
+
+// Icon within the modal title
+
+.modal-title{
+   .glyphicon{
+      margin-right: 6px;
+   }
+}
+
+
+// Styling for Listgroups within modals 
+.modal-content{
+   > .list-group{
+      > .list-group-item{
+         border-right: 0;
+         border-left: 0;
+         border-radius: 0;
+         &:last-child{
+            border-bottom: 0;
+         }
+      }
+   }
+}

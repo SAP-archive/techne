@@ -13,51 +13,17 @@
 //
 // Styleguide 19.1
 
-//Color States are deprecated, please remove them soon
-
-.popover-variant(has-success; @state-success-bg; 5px solid @state-success-bg; #fff);
-.popover-variant(has-info; @state-info-bg; 5px solid @state-info-bg; #fff);
-.popover-variant(has-warning; @state-warning-bg; 5px solid @state-warning-bg; #fff);
-.popover-variant(has-error; @state-danger-bg; 5px solid @state-danger-bg; #fff);
-
-
-
-/* EXTENDED THE DEFAULT POPUP TO HAVE DIFFERENT STATES */
-.popover-variant(@state; @background; @border; @color) {
-
-  .popover{
-    &.@{state}{
-      background: @background;
-      color: @color;
-
-      &.top {
-        > .arrow:after{
-        border-top-color: @background;
-        }
-      }
-      &.bottom {
-        > .arrow:after{
-        border-bottom-color: @background;
-        }
-      }
-      &.left {
-        > .arrow:after{
-        border-left-color: @background;
-        }
-      }
-      &.right {
-        > .arrow:after{
-        border-right-color: @background;
-        }
-      }
-
-
-      .popover-title{
-        background: darken(@background, 5%);
-        color: @color;
-        border-bottom: @border;
-      }
-    }
+.popover {
+  color:#fff;
+  border: none;
+  border-radius: 0;
+  font-size: @font-size-base;
+  .popover-title{
+    border-bottom: none;
+    font-size: @popover-heading-font-size;
+    padding:25px 25px 8px 25px;
   }
-
+  .popover-content{
+    padding:8px 25px 25px 25px;
+  }
 }

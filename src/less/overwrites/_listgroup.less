@@ -18,7 +18,8 @@
 		.list-group-item-delete{
 			position: absolute;
 			right: 15px;
-			top: 45%;
+			top: 50%;
+			transform: translateY(-50%);
 			font-size: 1.4em;
 			cursor: pointer;
 		}
@@ -34,7 +35,6 @@
 
 // CALL MIXINS
 // ==================================================================
-
 .list-group-item-variant(has-info; @state-info-bg; );
 .list-group-item-variant(has-success; @state-success-bg; );
 .list-group-item-variant(has-danger; @state-danger-bg; );

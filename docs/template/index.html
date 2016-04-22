@@ -5,21 +5,21 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <link rel="apple-touch-icon" sizes="57x57" href="http://techne.yaas.io/images/favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="http://techne.yaas.io/images/favicons/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="http://techne.yaas.io/images/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="http://techne.yaas.io/images/favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="http://techne.yaas.io/images/favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="http://techne.yaas.io/images/favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="http://techne.yaas.io/images/favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="http://techne.yaas.io/images/favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="http://techne.yaas.io/images/favicons/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="http://techne.yaas.io/images/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="http://techne.yaas.io/images/favicons/favicon-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="http://techne.yaas.io/images/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="http://techne.yaas.io/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://techne.yaas.io/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://techne.yaas.io/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://techne.yaas.io/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://techne.yaas.io/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://techne.yaas.io/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://techne.yaas.io/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://techne.yaas.io/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://techne.yaas.io/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://techne.yaas.io/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://techne.yaas.io/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://techne.yaas.io/images/favicons/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://techne.yaas.io/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://techne.yaas.io/images/favicons/favicon-16x16.png" sizes="16x16">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="http://techne.yaas.io/images/favicons/mstile-144x144.png">
+  <meta name="msapplication-TileImage" content="https://techne.yaas.io/images/favicons/mstile-144x144.png">
   
   <title>Techne: Yaas Styleguide</title>
   <meta name="description" content="">
@@ -73,7 +73,6 @@
                         <div>
                             <ul>
                                 <li class="profile-head">
-                                <img class="profile-img" src="/img/profile-image.jpg" alt=""/>
                                 <div class="profile-details">
                                     <div class="profile-email">
 
@@ -149,7 +148,7 @@
                     {{#if_eq pagename "components"}}
                         <span class="active">Components</span>
                     {{else}}
-                        <a href="section-1.html" class="inactive">Components</a>
+                        <a href="Alerts-Errors-Notifications.html" class="inactive">Components</a>
                     {{/if_eq}}
                 </li>
                 <li>
@@ -180,7 +179,7 @@
       {{#if showLeftNav}}
       <div class="kss-sidebar-shadow js-menu-toggle" ></div>
         {{#if leftNavMobileOnly}}
-        <div id="kss-nav" class="visible-xs" role="navigation">
+        <div id="kss-nav" class="mobileOnlineNavigation" role="navigation">
         {{else}}
         <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12 " role="navigation">
         {{/if}}
@@ -193,7 +192,7 @@
                             {{#if_eq pagename "index"}}
                               <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
                               <li class="kss-menu-item"><a href="Guidelines.html" >Guidelines</a></li>
-                              <li class="kss-menu-item"><a href="section-1.html">Components</a></li>
+                              <li class="kss-menu-item"><a href="Alerts-Errors-Notifications.html">Components</a></li>
                               <li class="kss-menu-item"><a href="Patterns.html">Patterns &amp; Layouts</a></li>
                               <li class="kss-menu-item"><a href="GettingStarted.html">Download &amp; Get Started</a></li>
                             {{else}}
@@ -204,7 +203,7 @@
                                 {{/each}}
                             {{else}}
                                 {{#eachRoot}}
-                                <li class="kss-menu-item"><a href="section-{{reference}}.html"> {{header}}</a></li>
+                                <li class="kss-menu-item"><a href="{{pageLink}}.html"> {{header}}</a></li>
                                 {{/eachRoot}}
                             {{/if}}
                             {{/if_eq}}
@@ -319,6 +318,7 @@
   <script src="public/js/techne.min.js"></script>
   <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
   <script src="public/js/yaas.sso.js"></script>
+  <script src="public/jquery.cookiebar.js"></script>
 
   <!--<script src="public/jquery-ui.js"></script>-->
   <script src="public/script.js"></script>
@@ -350,7 +350,7 @@
 
     <!-- feedback script -->
     <script type="text/javascript">
-      $('#feedbackPlaceholder').load("https://api.yaas.io/hybris/feedback/v1/form/basic?jiraProjectKey=CCE", function(response, status, xhr){
+      $('#feedbackPlaceholder').load("https://feedback.yaas.io/form/basic?jiraProjectKey=CCE", function(response, status, xhr){
         if(xhr.status === 200){
           $('.feedback-affix').show();
         }
@@ -359,7 +359,7 @@
     <!-- /feedback script -->
 
     <!-- cookie bar -->
-    <script src="https://www.yaas.io/globalresources/v3/js/yaas.cookiebar.js"></script>
+    <script src="https://www.yaas.io/globalresources/v3/js/yaas.ga.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
           $.cookieBar();
@@ -368,7 +368,6 @@
     <!-- /cookie bar -->
 
     <!-- google analytics -->
-    <script src="https://www.yaas.io/globalresources/v3/js/yaas.ga.min.js"></script>
     <script type="text/javascript"> 
       $(document).ready(function(){ 
 

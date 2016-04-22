@@ -5,7 +5,7 @@
 //  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg"/>
 //</div>
 //
-// Styleguide 4.2
+// Styleguide 3.2
 
 
 .userAvatar{
@@ -33,7 +33,7 @@
 //  Primary Value
 //</p>
 //
-// Styleguide 4.3
+// Styleguide 3.3
 
 .primaryData{
   color: @gray-base;
@@ -50,7 +50,7 @@
 //  Secondary Value goes here
 //</p>
 //
-// Styleguide 4.4
+// Styleguide 3.4
 
 .secondaryData{
   color: @gray-base;
@@ -58,22 +58,13 @@
   margin-bottom: 3px;
 }
 
-// Status Value Label
-//
-// Markup:
-//<p class="statusDataValue">
-//  <span class="active">
-//    Active
-//  </span>
-//</p>
-//
-// Styleguide 4.5
-
+// statusDataValue is depereciated. please use bootstrap lables instead
 .statusDataValue{
   text-transform: uppercase;
   margin-bottom: 0;
   font-weight: bold;
   font-size: 11px;
+  color: @techne-status-inactive;
 
   > .active{
     color: @default-green;

@@ -1,0 +1,52 @@
+// Status Badges
+//
+//
+// Markup:
+// <span class="badge">Default</span>
+// <span class="badge badge-success">Success</span>
+// <span class="badge badge-warning">Warning</span>
+// <span class="badge badge-danger">Danger</span>
+//
+// Styleguide 15.3
+
+.badge{
+	text-transform: uppercase;
+  font-weight: bold;
+	padding: 5px 12px;
+	border-radius: 15px;
+  border: 1px solid @default-greyblue-500;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: @badge-hover-bg;
+    }
+  }
+}
+
+.badge-success {
+  .badge-variant(@badge-success-bg);
+}
+.badge-warning {
+  .badge-variant(@badge-warning-bg);
+}
+
+.badge-danger {
+  .badge-variant(@badge-danger-bg);
+}
+
+// Mixin
+.badge-variant(@color) {
+  border-color: @color;
+  color: @color;
+
+  &[href] {
+    color: @color;
+
+    &:hover,
+    &:focus {
+      background-color: darken(@color, 10%);
+      color: #fff;
+    }
+  }
+}

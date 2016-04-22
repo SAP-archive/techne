@@ -1,89 +1,8 @@
-// Form Field Validation
-//
-// When a user provides content that does not fit the form field format, requirements, or restrictions, display inline validation as guidance for the user.  The validation is placed between the form field and the help text. Validation is always red, and the form field should be outlined in red. This pattern is displayed when clicking on a primary interaction or with direct inline validation.
-//
-// Markup:
-// <div class="form-group has-error">
-//   <label class="control-label">Description *</label>
-//   <input class="form-control input-lg" name="Team Description" required>
-//   <span class="error-input help-block"> Field is required </span>
-// </div>
-//
-// Styleguide 7.3
-//
-
-@y-counter-padding-vertical: 5px;
-@y-counter-base-width: 35px;
-@y-counter-color: @default-blue;
-@y-counter-error-color: @default-red;
-
-.y-counter{
-  position: relative;
-
-  &-number{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: @padding-base-vertical @padding-base-horizontal;
-    color: @y-counter-color;
-
-  }
-
-  &-error{
-    color: @y-counter-error-color;
-  }
-
-  input,
-  textarea{
-
-    &:focus{
-      padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-base-vertical;
-
-      & + .y-counter-number{
-        display: block;
-
-        // simulate border
-        margin-top: 1px;
-      }
-    }
-
-    &.input-sm {
-
-      &:focus{
-        padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-small-vertical;
-      }
-      & + .y-counter-number{
-        height: @input-height-small;
-        line-height: @line-height-small;
-        padding: @padding-small-vertical @padding-small-horizontal @padding-small-vertical @y-counter-padding-vertical;
-        font-size: @font-size-small; 
-        border-radius: @input-border-radius-small;
-      }
-    }
-
-    &.input-lg {
-      &:focus{
-        padding-right: @y-counter-base-width + @y-counter-padding-vertical + @padding-large-vertical;
-      }
-
-      & + .y-counter-number{
-          height: @input-height-large;
-          line-height: @line-height-large;
-          padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical @y-counter-padding-vertical;
-          font-size: @font-size-large; 
-          border-radius: @input-border-radius-large;
-        }
-    }
-  }
-}
-
-
 // Additional Inline Help
 //
 // Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is "The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed." <br><br><br>
 //
-// Styleguide 6.4
+
 
 
 // Additional Inline Help State: On-Demand (Help Bubble)
@@ -98,7 +17,7 @@
 //    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
 //
-// Styleguide 6.5
+
 //
 .help-control{
   padding: 0 5px; 
@@ -144,51 +63,6 @@
 //    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
 //
-// Styleguide 6.6
-//
-
-
-// Section Level Help
-//
-// Section-level help will always display IF it exists, but it isn’t required. Section-level help is displayed below the section title. Whether or not section-level help is included is at the discretion of each team.
-//
-// Markup:
-// <div id="demo-page-background" class="panel panel-default">
-//   <div class="panel-heading">Section Level Help Example</div>
-//   <div class="panel-body">
-//    <div class="row">
-//      <div class="col-md-4">
-//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
-//       <ul class="list-group">
-//          <li class="list-group-item">Cras justo odio</li>
-//         <li class="list-group-item">Cras justo odio</li>
-//        </ul>
-//      </div>
-//      <div class="col-md-4">
-//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
-//       <ul class="list-group">
-//         <li class="list-group-item">Cras justo odio</li>
-//         <li class="list-group-item">Cras justo odio</li>
-//       </ul>
-//      </div>
-//      <div class="col-md-4">
-//       <h2 class="text-center">Section Heading <span class="help-control section-help-demo" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span></h2>
-//        <ul class="list-group">
-//          <li class="list-group-item">Cras justo odio</li>
-//          <li class="list-group-item">Cras justo odio</li>
-//        </ul>
-//      </div>
-//    </div>
-//   </div>
-// </div>
-//
-// Styleguide 6.7
-
-.section-help-demo{
-  .hyicon-help-icon{
-    margin:-5px 0 0 -11px;
-  }
-}
 
 // Page Level Help
 //

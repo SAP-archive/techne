@@ -25,9 +25,38 @@
 
 
 .dropdown-menu{
-  border-radius: 0;
+   min-width: 300px;
 
-    > li > a {
+   border-radius: 0;
+   form,
+   form&{
+      padding: 15px;
+   }
+   > li > a{
       padding: 10px 16px;
-    }
+   }
+}
+
+
+// Extend caret to have left / right available
+.caret{
+   display: inline-block;
+
+   width: 0;
+   height: 0;
+   margin-left: 2px;
+
+   vertical-align: middle;
+   &.left{
+      border-top: @caret-width-base solid transparent;
+      border-right: @caret-width-base solid;
+      border-bottom: @caret-width-base solid transparent;
+      border-left: 0;
+   }
+   &.right{
+      border-top: @caret-width-base solid transparent;
+      border-right: 0;
+      border-bottom: @caret-width-base solid transparent;
+      border-left: @caret-width-base solid;
+   }
 }
