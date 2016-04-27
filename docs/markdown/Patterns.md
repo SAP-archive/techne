@@ -240,33 +240,43 @@
     <p>Find out how to use them under <a href="section-6.html">Help and Validation</a> on the components section.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-all.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-all.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/01_help_page.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/01_help_page.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-bubble.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-bubble.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/02_help_hover.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/02_help_hover.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-pageLevel.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-pageLevel.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/03_help_all.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/03_help_all.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/help-section.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/04_help_errors.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/04_help_errors.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/help-section-all.jpg" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/help-section-all.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/05_help_sectionOff.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/05_help_sectionOff.jpg" alt="" class="img-thumbnail">
         </a>
       </div>      
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/Help-mobile.png" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/Help-mobile.jpg" alt="" class="img-thumbnail">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/06_help_sectionOn.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/06_help_sectionOn.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/07_forms_alignment.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/07_forms_alignment.jpg" alt="" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
+        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/08_forms_alignment.jpg" title="View Full Image" href="#viewFullscreen">
+          <img src="images/thumbnails/08_forms_alignment.jpg" alt="" class="img-thumbnail">
         </a>
       </div>
     </div>

@@ -11,10 +11,10 @@
 //
 // Markup:
 // <div class="form-group">
-//   <label class="control-label">Label</label>
+//   <label class="control-label">Label </label>
 //   <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
 // 	<span class="help-inline {$modifiers}">
-// 		<span class="hyicon hyicon-helpoff"></span>
+// 		<span class="hyicon hyicon-helpoff help-icon-inline"></span>
 // 		<span class="help-block-inline">I'm a additional Inline Help</span>
 // 	</span>
 // </div>
@@ -36,18 +36,18 @@
 
 .help-inline{
    position: relative;
-
    display: block;
-
    margin-top: 5px;
    margin-bottom: 10px;
-
    cursor: default;
+   font-style: italic;
+
    .hyicon{
       font-size: 25px;
       line-height: 0;
       color: currentColor;
    }
+   
    .help-block-inline{
       font-size: 15px;
       vertical-align: inherit;
@@ -145,7 +145,7 @@
 //    <div class="section-header">
 //    <h2 class="section-headline">I'm the Section Headline</h2>
 //    <span class="section-help help-inline help-inline--section {$modifiers}">
-//       <span class="hyicon hyicon-helpoff"></span>
+//       <span class="hyicon hyicon-helpoff help-icon-inline"></span>
 //       <span class="help-block-inline"> I'm a additional Inline Help Text</span>
 //    </span>
 // </div>
