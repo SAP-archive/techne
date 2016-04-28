@@ -121,3 +121,65 @@
     }
   }
 }
+
+//mobile Tabs-dropdown
+.nav-tabs {
+
+  li.tabs-mobile-caret {
+    display: none;
+  }
+
+  @media (max-width: @screen-xs) {
+    width: 100%;
+    position: relative;
+    background:#fff;
+
+    &.all-tabs-open {
+      .tabs-mobile-caret {
+        width: 20%;
+
+        .caret{
+          content: "";
+          border-top: 0;
+          border-bottom: 4px dashed;
+        }
+      }
+    }
+
+    .visibleTab {
+      display: block !important;
+    }
+
+    .nav-tabs-selector {
+      display: none;
+      width:100%;
+
+      &.active {
+        display: block;
+        background-color: white;
+        a:focus, a:hover, a:active {
+          background: none;
+          color: @default-blue;
+        }
+      }
+    }
+
+    li.tabs-mobile-caret {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      cursor: pointer;
+
+      a {
+        border: none;
+        background-color: transparent;
+        &:focus, &active {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
