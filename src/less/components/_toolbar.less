@@ -1,0 +1,204 @@
+// Toolbar
+//
+// Bla
+// 
+// Markup:
+// <div class="y-toolbar__wrapper">
+// 	<div class="y-toolbar">
+// 		<div class="y-toolbar__dropdown y-toolbar__item">
+// 			<button class="y-toolbar__btn y-toolbar__btn--caption " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+// 			<span class="hyicon hyicon-add"></span> Dropdown
+// 			<span class="caret"></span>
+// 			</button>
+// 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+// 				<li><a href="#">Action</a></li>
+// 				<li><a href="#">Another action</a></li>
+// 				<li><a href="#">Something else here</a></li>
+// 				<li role="separator" class="divider"></li>
+// 				<li><a href="#">Separated link</a></li>
+// 			</ul>
+// 		</div>
+// 		<button class="y-toolbar__btn  y-toolbar__btn--caption y-toolbar__item"><span class="hyicon hyicon-add"></span> Text</button>
+// 		<button class="y-toolbar__btn  y-toolbar__btn--caption y-toolbar__item">Text</button>
+// 		<div class="y-toolbar__group y-toolbar__item">
+// 			<div class="y-toolbar__input y-toolbar__input--transparent">
+// 				<input type="text" class="y-toolbar__btn-combo__input form-control" placeholder="Input">
+// 				<div class="y-toolbar__btn-combo__btn-dropdown"></div>
+// 			</div>
+// 			<button class="y-toolbar__btn">
+// 				<span class="hyicon hyicon-search"></span>
+// 			</button>
+// 		</div>
+// 		<div class="y-toolbar__right">
+// 			<div class="y-toolbar__group y-toolbar__item">
+// 				<button class="y-toolbar__btn ">
+// 					<span class="hyicon hyicon-list"></span>
+// 				</button>
+// 				<button class="y-toolbar__btn">
+// 					<span class="hyicon hyicon-grid"></span>
+// 				</button>
+// 			</div>
+// 			<button class="y-toolbar__btn y-toolbar__btn--disabled y-toolbar__item">
+// 				<span class="hyicon hyicon-dragdrop"></span>
+// 			</button>
+// 			<nav class="y-toolbar__item" >
+// 				<ul class="pagination">
+// 					<li class="disabled">
+// 						<a href="#" aria-label="Previous">
+// 							<span aria-hidden="true">&laquo;</span>
+// 						</a>
+// 					</li>
+// 					<li class="active"><a href="#">1</a></li>
+// 					<li><a href="#">2</a></li>
+// 					<li><a href="#">3</a></li>
+// 					<li>
+// 						<a href="#" aria-label="Next">
+// 							<span aria-hidden="true">&raquo;</span>
+// 						</a>
+// 					</li>
+// 				</ul>
+// 			</nav>
+// 		</div>
+// 	</div>
+// </div>
+//
+// Styleguide 26
+
+
+@y-toolbar-height: 50px;
+
+.y-toolbar__wrapper{
+	border-top: 1px solid @default-greyblue-500;
+	border-bottom: 1px solid @default-greyblue-500;
+}
+
+.y-toolbar{
+	display: flex;
+	width: 100%;
+	max-width: @container-large-desktop;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	min-height: @y-toolbar-height;
+	font-size: 15px;
+}
+
+.y-toolbar__right{
+	display: flex;
+    margin-left: auto!important;
+
+
+}
+
+// Generic Layout Modifier
+.y-toolbar__item{
+	position: relative;
+    vertical-align: middle;
+    line-height: 1;
+    text-decoration: none;
+    user-select: none;
+	
+	flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+	
+	border: none;
+
+	&:not(:last-child){
+		border-right: 1px solid @default-greyblue-500;
+	}
+}
+
+// Button 
+.y-toolbar__btn{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    height: @y-toolbar-height;
+
+	color: @dark-blue;
+	cursor: pointer;
+	padding: 10px;
+	background: none;
+	border: none;
+	padding: @padding-base-vertical @padding-base-horizontal;
+
+	transition: all 0.1s ease-in-out 0s;
+
+	&:hover:not(.y-toolbar__btn--disabled),
+	&:focus:not(.y-toolbar__btn--disabled){
+		background: #fff;
+	}
+
+	&:active:not(.y-toolbar__btn--disabled){
+		color: @default-blue;
+	}
+
+	&.y-toolbar__btn--disabled{
+		opacity: 0.65;
+		cursor: not-allowed;
+	}
+	
+	// Modifier for  text-only or icon-text buttons
+	&.y-toolbar__btn--caption{
+		.hyicon{
+			margin-right: 5px;
+		}
+	}
+	
+	.hyicon{
+		font-size: 24px;
+	}
+}
+
+.y-toolbar__group{
+	display: flex;
+	border-right: 1px solid @default-greyblue-500;
+}
+
+
+.y-toolbar__input{
+	display: inline-flex;
+
+	input,
+	select{
+		height: @y-toolbar-height;
+		max-width: 100%;
+		flex: 1 0 auto;
+		-webkit-appearance: none;
+
+
+		.y-toolbar__input--transparent&{
+			-webkit-user-select: none;
+			background: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			border-radius: 0;
+
+			transition: all 0.1s ease-in-out 0s;
+
+			&:focus{
+				background: #fff;
+			}
+		}
+	}
+}
+
+.y-toolbar__dropdown{
+	.caret{
+		margin-left: 8px;
+	}
+
+}
+
+
+
+/* Bootstrap Overwrites */ 
+
+.y-toolbar{
+	.pagination{
+		margin: 0;
+	}
+}
