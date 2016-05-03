@@ -1,21 +1,30 @@
 
 // Markup:
-// <div class="feedback-form-wrapper">
-//   <div id="container">
-//     <div class="row">
+// <div class="form-group">
+//	<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#feedbackModal">Open Feedback form</button>
+// </div>
+// <div id="feedbackModal" class="modal fade " role="dialog">
+//    <div class="modal-dialog">
+//     <div class="modal-content">
+//   	<div id="container">
+//     	<div class="row">
 //       <div class="col-md-12">
-//         <div id="feedback">
-//           <header class="text-center">
-//	            <button type="button" class="close" data-dismiss="modal">
-//	                <span class="hyicon hyicon-close"></span>
-//	                <span class="sr-only">Close</span>
-//	              </button>
-//             <h2>Submit Feedback to SAP Hybris</h2>
-//             <h4>Tell us how we can improve</h4>
-//           </header>
+//         <header class="text-center modal-header">
+//	         <button type="button" class="close" data-dismiss="modal">
+//	           <span class="hyicon hyicon-close"></span>
+//	           <span class="sr-only">Close</span>
+//	         </button>
+//           <h2>Submit Feedback to SAP Hybris</h2>
+//           <h4>Tell us how we can improve</h4>
+//         </header>
+//         <div id="feedback" class="feedback-form-wrapper">
 //           <div class="form-group">
 //             <label for="email">Email</label>
 //             <input type="text" class="form-control input-lg" id="email" placeholder="Optional">
+//			   <span class="help-inline">
+//  		     <span class="hyicon hyicon-helpoff"></span>
+//  		     <span class="help-block-inline">Your email address is used only if we need to contact you for more details.</span>
+//  	       </span>
 //           </div>
 //           <div class="form-group">
 //             <label for="subject">Subject</label>
@@ -41,10 +50,18 @@
 //       </div>
 //     </div>
 //   </div>
+//	</div>
+// </div>
 // </div>
 //
 // Styleguide 5.1
 
 .feedback-form-wrapper{
-	background: white;
+	padding:10px;
+	.hyicon-helpoff{
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -4px;
+	}
 }
+
