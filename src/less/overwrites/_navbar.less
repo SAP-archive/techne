@@ -35,7 +35,7 @@
 // </div>
 // </div>
 //
-// Styleguide 14.1
+// Styleguide 15.1
 
 @navbar-height-large: 70px;
 
@@ -134,11 +134,6 @@
     }
     .navbar-left{
       .navbar-btn{
-        animation-name: easeInLeft;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 50ms;
-
         &.btn-subordinate{
            span:before{
             font-size: 53px;
@@ -149,10 +144,6 @@
     }
     .navbar-right{
       .navbar-btn{
-        animation-name: easeInRight;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 50ms;
 
         &.btn-subordinate{
           padding-right: 0;
@@ -166,28 +157,6 @@
       }
     }
   }
-}
-
-@keyframes easeInLeft {
-    0% {
-      transform: translateX(-100%);
-      width: 0;
-    }
-    100% {
-        width: 100%;
-        transform: translateX(0);
-    }
-}
-
-@keyframes easeInRight {
-    0% {
-      transform: translateX(100%);
-      width: 0;
-    }
-    100% {
-        width: 100%;
-        transform: translateX(0);
-    }
 }
 
 
