@@ -158,47 +158,6 @@
 // </table>
 //
 // Styleguide 17.1
-.table{
-   border-collapse: separate;
-
-   color: @default-greyblue;
-   > thead, > tbody, > tfoot{
-      > tr{
-         > th, > td{
-            &.sticky-right{
-               text-align: right;
-            }
-         }
-         > th{
-            text-transform: uppercase;
-
-            color: @table-head-color;
-            background: @table-head-bg;
-            a{
-               color: #fff;
-            }
-         }
-         &:last-child{
-            > th, > td{
-               border-bottom: none;
-            }
-         }
-         &.active{
-            a{
-               color: #fff;
-            }
-         }
-      }
-   }
-}
-
-
-
-.table-responsive{
-	-webkit-overflow-scrolling: touch;
-}
-
-
 table.techne-table {
     td {
         cursor: pointer;
