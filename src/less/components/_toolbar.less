@@ -5,10 +5,10 @@
 // Markup:
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
-// 		<div class="y-toolbar__dropdown y-toolbar__item">
+// 		<div class="y-toolbar__item y-toolbar__dropdown">
 // 			<button class="y-toolbar__btn y-toolbar__btn--caption " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-// 			<span class="hyicon hyicon-add"></span> Dropdown
-// 			<span class="caret"></span>
+// 				<span class="hyicon hyicon-add"></span> Dropdown
+// 				<span class="caret"></span>
 // 			</button>
 // 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 // 				<li><a href="#">Action</a></li>
@@ -18,27 +18,41 @@
 // 				<li><a href="#">Separated link</a></li>
 // 			</ul>
 // 		</div>
-// 		<button class="y-toolbar__btn  y-toolbar__btn--caption y-toolbar__item"><span class="hyicon hyicon-add"></span> Text</button>
-// 		<button class="y-toolbar__btn  y-toolbar__btn--caption y-toolbar__item">Text</button>
-// 		<div class="y-toolbar__group y-toolbar__item">
+// 		<button class="y-toolbar__item y-toolbar__btn y-toolbar__btn--caption">
+// 			<span class="hyicon hyicon-add"></span> Text
+// 		</button>
+// 		<button class="y-toolbar__item y-toolbar__btn  y-toolbar__btn--caption">
+// 			Text
+// 		</button>
+// 		<div class="y-toolbar__item y-toolbar__group">
 // 			<div class="y-toolbar__input y-toolbar__input--transparent">
-// 				<input type="text" class="y-toolbar__btn-combo__input form-control" placeholder="Input">
-// 				<div class="y-toolbar__btn-combo__btn-dropdown"></div>
+// 				<div class="form-group">
+// 					<input type="text" class="form-control" placeholder="Input">
+// 				</div>
 // 			</div>
 // 			<button class="y-toolbar__btn">
 // 				<span class="hyicon hyicon-search"></span>
 // 			</button>
 // 		</div>
+// 		<div class="y-toolbar__item y-toolbar__horizontal-spacing">
+// 			<div class="radio">
+// 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+// 				<label for="optionsRadios1">Option</label>
+// 			</div>
+// 		</div>
 // 		<div class="y-toolbar__right">
-// 			<div class="y-toolbar__group y-toolbar__item">
-// 				<button class="y-toolbar__btn ">
-// 					<span class="hyicon hyicon-list"></span>
+// 			<div class="y-toolbar__item y-toolbar__group ">
+// 				<button class="y-toolbar__btn y-toolbar__btn--active">
+// 				<span class="hyicon hyicon-list"></span>
+// 				</button>
+// 				<button class="y-toolbar__btn y-toolbar__btn--inactive">
+// 				<span class="hyicon hyicon-grid"></span>
 // 				</button>
 // 				<button class="y-toolbar__btn">
-// 					<span class="hyicon hyicon-grid"></span>
+// 				<span class="hyicon hyicon-dragdrop"></span>
 // 				</button>
 // 			</div>
-// 			<button class="y-toolbar__btn y-toolbar__btn--disabled y-toolbar__item">
+// 			<button class="y-toolbar__item y-toolbar__btn y-toolbar__btn--disabled">
 // 				<span class="hyicon hyicon-dragdrop"></span>
 // 			</button>
 // 			<nav class="y-toolbar__item" >
@@ -127,15 +141,32 @@
 
 	transition: all 0.1s ease-in-out 0s;
 
-	&:hover:not(.y-toolbar__btn--disabled),
-	&:focus:not(.y-toolbar__btn--disabled){
+	&:hover:not(.y-toolbar__btn--disabled){
 		background: #fff;
 	}
-
-	&:active:not(.y-toolbar__btn--disabled){
+	
+	&:active:not(.y-toolbar__btn--disabled),
+	&:focus:not(.y-toolbar__btn--disabled){
 		color: @default-blue;
 	}
 
+	// Dropdown Open State
+	.open &:not(.y-toolbar__btn--disabled){
+		background: #fff;
+		color: @default-blue;
+	}
+	
+	// Toggle Active
+	&.y-toolbar__btn--active{
+		color: @default-blue;	
+	}
+	
+	// Toggle Inactive
+	&.y-toolbar__btn--inactive{
+		color: fade(@dark-blue, 65%);
+	}
+
+	// Disabled / No permission
 	&.y-toolbar__btn--disabled{
 		opacity: 0.65;
 		cursor: not-allowed;
@@ -153,12 +184,13 @@
 	}
 }
 
+// Group Buttons without seperators
 .y-toolbar__group{
 	display: flex;
 	border-right: 1px solid @default-greyblue-500;
 }
 
-
+// Forms in toolbars
 .y-toolbar__input{
 	display: inline-flex;
 
@@ -186,6 +218,16 @@
 	}
 }
 
+.y-toolbar__horizontal-spacing{
+	padding-left: @padding-base-horizontal;
+	padding-right: @padding-base-horizontal;
+}
+
+.y-toolbar__vertical-spacing{
+	padding-top: @padding-base-vertical;
+	padding-bottom: @padding-base-vertical;
+}
+
 .y-toolbar__dropdown{
 	.caret{
 		margin-left: 8px;
@@ -200,5 +242,8 @@
 .y-toolbar{
 	.pagination{
 		margin: 0;
+	}
+	.form-group{
+		margin-bottom: 0;
 	}
 }
