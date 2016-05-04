@@ -8,15 +8,12 @@
 @import (less) "@{bower-path}/select2/select2.css";
 
 
-
 // Globals
 @import "./globals/_variables";
 @import (optional) "./globals/_resource-paths";
 @import "./globals/_utils";
-
 @import "./overwrites/__overwrites.less";
 @import "./components/_layout-section";
-
 
 
 // Alerts, Errors & Notifications
@@ -34,6 +31,7 @@
 // Styleguide 2
 @import './overwrites/_buttons.less';
 @import "./components/_forms-toggle";
+@import "./components/_back-to-top.less";
 
 
 // Cards
@@ -46,7 +44,6 @@
 @import "./components/_data-card.less";
 
 
-
 // Contextual Menu
 //
 // The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
@@ -55,14 +52,12 @@
 @import './overwrites/_dropdowns.less';
 
 
-
 // Feedback form 
 //
 // Standardized feedback form pattern.
 //
 // Styleguide 5
 @import "./components/_feedback-form";
-
 
 
 // Form Elements
@@ -82,10 +77,11 @@
 // To aid Builder users we have established different levels of help and help interaction patterns to address specific interaction and feedback needs.
 //
 // Styleguide 7
-@import "./components/_forms-criticalcrroravoidance.less";
+@import "./components/_forms-criticalerroravoidance.less";
 @import "./components/_forms-charactercounter.less";
 @import "./components/_forms-validationandhelp.less";
 @import "./components/_forms-help.less";
+
 
 // Icons
 //
@@ -93,8 +89,6 @@
 //
 // Styleguide 8
 @import "./components/_icons";
-
-
 
 
 // Lists
@@ -111,7 +105,6 @@
 @import "./components/_spinner.less";
 
 
-
 // Localization
 //
 // The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.
@@ -120,15 +113,12 @@
 @import "./components/_locals-editor";
 
 
-
 // Modal
 //
 // Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
 //
 // Styleguide 12
 @import './overwrites/_modal.less';
-
-
 
 
 // Page Content Panels
@@ -149,6 +139,8 @@
 @import "./components/_sticky_navbar.less";
 @import './overwrites/_navbar.less';
 
+
+
 // Pagination
 //
 // Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.
@@ -157,10 +149,7 @@
 @import './overwrites/_pagination.less';
 
 
-
-
 @import "./components/_products.less"; 
-
 
 
 // Status Indicators
@@ -235,7 +224,6 @@
 //
 
 @import "./components/_atoms";
-
 
 
 // Vendor
