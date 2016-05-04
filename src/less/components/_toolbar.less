@@ -130,7 +130,7 @@
     align-items: center;
     flex-wrap: wrap;
     vertical-align: middle;
-    height: @y-toolbar-height;
+    min-height: @y-toolbar-height;
 
 	color: @dark-blue;
 	cursor: pointer;
@@ -140,13 +140,13 @@
 	padding: @padding-base-vertical @padding-base-horizontal;
 
 	transition: all 0.1s ease-in-out 0s;
-
+	
+	&:focus:not(.y-toolbar__btn--disabled),
 	&:hover:not(.y-toolbar__btn--disabled){
 		background: #fff;
 	}
 	
-	&:active:not(.y-toolbar__btn--disabled),
-	&:focus:not(.y-toolbar__btn--disabled){
+	&:active:not(.y-toolbar__btn--disabled){
 		color: @default-blue;
 	}
 
