@@ -6,10 +6,10 @@
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
 // 		<div class="y-toolbar__item y-toolbar__dropdown">
-// 			<button class="y-toolbar__btn y-toolbar__btn--caption " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+// 			<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
 // 				<span class="hyicon hyicon-add"></span> Dropdown
 // 				<span class="caret"></span>
-// 			</button>
+// 			</a>
 // 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 // 				<li><a href="#">Action</a></li>
 // 				<li><a href="#">Another action</a></li>
@@ -18,21 +18,21 @@
 // 				<li><a href="#">Separated link</a></li>
 // 			</ul>
 // 		</div>
-// 		<button class="y-toolbar__item y-toolbar__btn y-toolbar__btn--caption">
+// 		<a href="#" class="y-toolbar__item y-toolbar__btn y-toolbar__btn--caption">
 // 			<span class="hyicon hyicon-add"></span> Text
-// 		</button>
-// 		<button class="y-toolbar__item y-toolbar__btn  y-toolbar__btn--caption">
+// 		</a>
+// 		<a href="#" class="y-toolbar__item y-toolbar__btn  y-toolbar__btn--caption">
 // 			Text
-// 		</button>
-// 		<div class="y-toolbar__item y-toolbar__group">
+// 		</a>
+// 		<div class="y-toolbar__item y-toolbar__group y-toolbar__group--combo ">
 // 			<div class="y-toolbar__input y-toolbar__input--transparent">
 // 				<div class="form-group">
 // 					<input type="text" class="form-control" placeholder="Input">
 // 				</div>
 // 			</div>
-// 			<button class="y-toolbar__btn">
+// 			<a href="#" class="y-toolbar__btn">
 // 				<span class="hyicon hyicon-search"></span>
-// 			</button>
+// 			</a>
 // 		</div>
 // 		<div class="y-toolbar__item y-toolbar__horizontal-spacing">
 // 			<div class="radio">
@@ -42,19 +42,19 @@
 // 		</div>
 // 		<div class="y-toolbar__right">
 // 			<div class="y-toolbar__item y-toolbar__group ">
-// 				<button class="y-toolbar__btn y-toolbar__btn--active">
-// 				<span class="hyicon hyicon-list"></span>
-// 				</button>
-// 				<button class="y-toolbar__btn y-toolbar__btn--inactive">
-// 				<span class="hyicon hyicon-grid"></span>
-// 				</button>
-// 				<button class="y-toolbar__btn">
-// 				<span class="hyicon hyicon-dragdrop"></span>
-// 				</button>
+// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--active" aria-pressed="true" aria-label="">
+// 					<span class="hyicon hyicon-list"></span>
+// 				</a>
+// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--inactive" aria-pressed="false" aria-label="">
+// 					<span class="hyicon hyicon-grid"></span>
+// 				</a>
+// 				<a href="#" role="button" class="y-toolbar__btn">
+// 					<span class="hyicon hyicon-dragdrop"></span>
+// 				</a>
 // 			</div>
-// 			<button class="y-toolbar__item y-toolbar__btn y-toolbar__btn--disabled">
+// 			<a href="#" class="y-toolbar__item y-toolbar__btn y-toolbar__btn--disabled">
 // 				<span class="hyicon hyicon-dragdrop"></span>
-// 			</button>
+// 			</a>
 // 			<nav class="y-toolbar__item" >
 // 				<ul class="pagination">
 // 					<li class="disabled">
@@ -132,7 +132,6 @@
     vertical-align: middle;
     min-height: @y-toolbar-height;
 
-	color: @dark-blue;
 	cursor: pointer;
 	padding: 10px;
 	background: none;
@@ -140,10 +139,16 @@
 	padding: @padding-base-vertical @padding-base-horizontal;
 
 	transition: all 0.1s ease-in-out 0s;
+
+	&,
+	&:visited{
+		color: @dark-blue;
+	}
 	
 	&:focus:not(.y-toolbar__btn--disabled),
 	&:hover:not(.y-toolbar__btn--disabled){
 		background: #fff;
+		text-decoration: none;
 	}
 	
 	&:active:not(.y-toolbar__btn--disabled){
@@ -168,7 +173,7 @@
 
 	// Disabled / No permission
 	&.y-toolbar__btn--disabled{
-		opacity: 0.65;
+		opacity: 0.3;
 		cursor: not-allowed;
 	}
 	
@@ -181,6 +186,7 @@
 	
 	.hyicon{
 		font-size: 24px;
+		line-height: 0;
 	}
 }
 
@@ -188,6 +194,19 @@
 .y-toolbar__group{
 	display: flex;
 	border-right: 1px solid @default-greyblue-500;
+
+	&.y-toolbar__group--combo{
+		
+		&:focus:not(.y-toolbar__btn--disabled),
+		&:hover:not(.y-toolbar__btn--disabled){
+			background: #fff;
+			text-decoration: none;
+		}
+		
+		&:active:not(.y-toolbar__btn--disabled){
+			color: @default-blue;
+		}
+	}
 }
 
 // Forms in toolbars
@@ -228,16 +247,14 @@
 	padding-bottom: @padding-base-vertical;
 }
 
+
+/* Bootstrap Overwrites */ 
+
 .y-toolbar__dropdown{
 	.caret{
 		margin-left: 8px;
 	}
-
 }
-
-
-
-/* Bootstrap Overwrites */ 
 
 .y-toolbar{
 	.pagination{
