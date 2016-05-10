@@ -1,61 +1,69 @@
-// Toolbar
+// Toolbar 
+//
+// Bla
+//
+// <div class="y-toolbar__wrapper">
+// 	<div class="y-toolbar">
+// 		<div class="y-toolbar__item y-toolbar__input y-toolbar__input--transparent">
+// 			<div class="form-group">
+// 				<input type="text" class="form-control" placeholder="Filter/Search">
+// 			</div>
+// 		</div>
+// 		<div class="y-toolbar__item y-toolbar__dropdown">
+// 			<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+// 				Sort By: <b> Newst</b>
+// 				<span class="caret"></span>
+// 			</a>
+// 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+// 				<li><a href="#">Newest</a></li>
+// 				<li><a href="#">Name A-Z</a></li>
+// 				<li><a href="#">Name Z-A</a></li>
+// 				<li role="separator" class="divider"></li>
+// 				<li><a href="#">Price</a></li>
+// 			</ul>
+// 		</div>
+// 		<div class="y-toolbar__right">
+// <div class="y-toolbar__item y-toolbar__group ">
+// 	<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--active" aria-pressed="true" aria-label="">
+// 		<span class="hyicon hyicon-list"></span>
+// 	</a>
+// 	<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--inactive" aria-pressed="false" aria-label="">
+// 		<span class="hyicon hyicon-grid"></span>
+// 	</a>
+// </div>
+// 			<nav class="y-toolbar__item">
+// 				<ul class="pagination">
+// 					<li class="disabled">
+// 						<a href="#" aria-label="Previous">
+// 							<span aria-hidden="true">&laquo;</span>
+// 						</a>
+// 					</li>
+// 					<li class="active"><a href="#">1</a></li>
+// 					<li><a href="#">2</a></li>
+// 					<li><a href="#">3</a></li>
+// 					<li>
+// 						<a href="#" aria-label="Next">
+// 							<span aria-hidden="true">&raquo;</span>
+// 						</a>
+// 					</li>
+// 				</ul>
+// 				283 Items
+// 			</nav>
+// 		</div>
+// 	</div>
+// </div>
+//
+// Styleguide 26
+
+// Toolbar with pagination
 //
 // Bla
 // 
 // Markup:
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
-// 		<div class="y-toolbar__item y-toolbar__dropdown">
-// 			<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-// 				<span class="hyicon hyicon-add"></span> Dropdown
-// 				<span class="caret"></span>
-// 			</a>
-// 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-// 				<li><a href="#">Action</a></li>
-// 				<li><a href="#">Another action</a></li>
-// 				<li><a href="#">Something else here</a></li>
-// 				<li role="separator" class="divider"></li>
-// 				<li><a href="#">Separated link</a></li>
-// 			</ul>
-// 		</div>
-// 		<a href="#" class="y-toolbar__item y-toolbar__btn y-toolbar__btn--caption">
-// 			<span class="hyicon hyicon-add"></span> Text
-// 		</a>
-// 		<a href="#" class="y-toolbar__item y-toolbar__btn  y-toolbar__btn--caption">
-// 			Text
-// 		</a>
-// 		<div class="y-toolbar__item y-toolbar__group y-toolbar__group--combo ">
-// 			<div class="y-toolbar__input y-toolbar__input--transparent">
-// 				<div class="form-group">
-// 					<input type="text" class="form-control" placeholder="Input">
-// 				</div>
-// 			</div>
-// 			<a href="#" class="y-toolbar__btn">
-// 				<span class="hyicon hyicon-search"></span>
-// 			</a>
-// 		</div>
-// 		<div class="y-toolbar__item y-toolbar__horizontal-spacing">
-// 			<div class="radio">
-// 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-// 				<label for="optionsRadios1">Option</label>
-// 			</div>
-// 		</div>
 // 		<div class="y-toolbar__right">
-// 			<div class="y-toolbar__item y-toolbar__group ">
-// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--active" aria-pressed="true" aria-label="">
-// 					<span class="hyicon hyicon-list"></span>
-// 				</a>
-// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--inactive" aria-pressed="false" aria-label="">
-// 					<span class="hyicon hyicon-grid"></span>
-// 				</a>
-// 				<a href="#" role="button" class="y-toolbar__btn">
-// 					<span class="hyicon hyicon-dragdrop"></span>
-// 				</a>
-// 			</div>
-// 			<a href="#" class="y-toolbar__item y-toolbar__btn y-toolbar__btn--disabled">
-// 				<span class="hyicon hyicon-dragdrop"></span>
-// 			</a>
-// 			<nav class="y-toolbar__item" >
+// 			<nav class="y-toolbar__item">
 // 				<ul class="pagination">
 // 					<li class="disabled">
 // 						<a href="#" aria-label="Previous">
@@ -76,31 +84,83 @@
 // 	</div>
 // </div>
 //
-// Styleguide 26
+// Styleguide 26.1
+
+// Toolbar with Dropdown
+//
+// Bla
+// 
+// Markup:
+// <div class="y-toolbar__wrapper">
+// 	<div class="y-toolbar">
+		// <div class="y-toolbar__item y-toolbar__dropdown">
+		// 	<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+		// 		Click Me
+		// 		<span class="caret"></span>
+		// 	</a>
+		// 	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		// 		<li><a href="#">Action</a></li>
+		// 		<li><a href="#">Another action</a></li>
+		// 		<li><a href="#">Something else here</a></li>
+		// 		<li role="separator" class="divider"></li>
+		// 		<li><a href="#">Separated link</a></li>
+		// 	</ul>
+		// </div>
+// 	</div>
+// </div>
+//
+// Styleguide 26.1
 
 
 @y-toolbar-height: 50px;
+@y-toolbar-breakpoint: @screen-sm;
 
 .y-toolbar__wrapper{
 	border-top: 1px solid @default-greyblue-500;
-	border-bottom: 1px solid @default-greyblue-500;
+	margin-bottom: 15px;
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		z-index: 1;
+
+		// Prevent fake border to receive hover/click events
+		pointer-events: none;
+
+		// Multiline Fake Border
+		background-image:linear-gradient(@default-greyblue-500 1px, transparent 1px);
+		background-size: @y-toolbar-height @y-toolbar-height;
+		background-position: 0 (@y-toolbar-height - 1px);
+	}
 }
 
 .y-toolbar{
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	max-width: @container-large-desktop;
 	margin: 0 auto;
-	flex-wrap: wrap;
-	min-height: @y-toolbar-height;
 	font-size: 15px;
 }
 
 .y-toolbar__right{
 	display: flex;
     margin-left: auto!important;
+    flex-wrap: wrap;
 
 
+	@media (max-width: @y-toolbar-breakpoint){
+		width: 100%;
+		&:not(:first-child){
+			//border-top: 1px solid @default-greyblue-500;
+		}
+	}
 }
 
 // Generic Layout Modifier
@@ -114,9 +174,12 @@
 	flex: 0 0 auto;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    text-transform: uppercase;
 	
 	border: none;
+	height: @y-toolbar-height;
+
+	color: @default-greyblue;
 
 	&:not(:last-child){
 		border-right: 1px solid @default-greyblue-500;
