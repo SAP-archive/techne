@@ -7,12 +7,12 @@
 // 		<div class="y-toolbar__item y-toolbar__input y-toolbar__input--transparent">
 // 			<div class="form-group">
 // 				<input type="text" class="form-control" placeholder="Filter/Search">
+//				<span class="glyphicon glyphicon-chevron-down form-control-feedback" aria-hidden="true"></span>
 // 			</div>
 // 		</div>
 // 		<div class="y-toolbar__item y-toolbar__dropdown">
 // 			<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-// 				Sort By: <b> Newst</b>
-// 				<span class="caret"></span>
+// 				Sort By: <strong> Newst </strong> <span class="glyphicon glyphicon-chevron-down y-toolbar__dropdown__icon" aria-hidden="true"></span>
 // 			</a>
 // 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 // 				<li><a href="#">Newest</a></li>
@@ -314,9 +314,11 @@
 /* Bootstrap Overwrites */ 
 
 .y-toolbar__dropdown{
-	.caret{
+	.caret,
+	.y-toolbar__dropdown__icon{
 		margin-left: 8px;
 	}
+
 }
 
 .y-toolbar{
@@ -325,5 +327,10 @@
 	}
 	.form-group{
 		margin-bottom: 0;
+	}
+
+	.form-control-feedback{
+		height: @y-toolbar-height;
+		line-height: @y-toolbar-height;
 	}
 }
