@@ -1,7 +1,14 @@
 // Toolbar 
 //
-// Bla
+// General Toolbar Description
+// 
+// Styleguide 26
+
+// Sample Toolbar Configuration
 //
+// Bla
+// 
+// Markup:
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
 // 		<div class="y-toolbar__item y-toolbar__input y-toolbar__input--transparent">
@@ -53,63 +60,8 @@
 // 	</div>
 // </div>
 //
-// Styleguide 26
-
-// Toolbar with pagination
-//
-// Bla
-// 
-// Markup:
-// <div class="y-toolbar__wrapper">
-// 	<div class="y-toolbar">
-// 		<div class="y-toolbar__right">
-// 			<nav class="y-toolbar__item">
-// 				<ul class="pagination">
-// 					<li class="disabled">
-// 						<a href="#" aria-label="Previous">
-// 							<span aria-hidden="true">&laquo;</span>
-// 						</a>
-// 					</li>
-// 					<li class="active"><a href="#">1</a></li>
-// 					<li><a href="#">2</a></li>
-// 					<li><a href="#">3</a></li>
-// 					<li>
-// 						<a href="#" aria-label="Next">
-// 							<span aria-hidden="true">&raquo;</span>
-// 						</a>
-// 					</li>
-// 				</ul>
-// 			</nav>
-// 		</div>
-// 	</div>
-// </div>
-//
 // Styleguide 26.1
 
-// Toolbar with Dropdown
-//
-// Bla
-// 
-// Markup:
-// <div class="y-toolbar__wrapper">
-// 	<div class="y-toolbar">
-		// <div class="y-toolbar__item y-toolbar__dropdown">
-		// 	<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-		// 		Click Me
-		// 		<span class="caret"></span>
-		// 	</a>
-		// 	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-		// 		<li><a href="#">Action</a></li>
-		// 		<li><a href="#">Another action</a></li>
-		// 		<li><a href="#">Something else here</a></li>
-		// 		<li role="separator" class="divider"></li>
-		// 		<li><a href="#">Separated link</a></li>
-		// 	</ul>
-		// </div>
-// 	</div>
-// </div>
-//
-// Styleguide 26.1
 
 
 @y-toolbar-height: 50px;
@@ -120,6 +72,7 @@
 	margin-bottom: 15px;
 	position: relative;
 
+	// Multiline border
 	&:before{
 		content: '';
 		position: absolute;
@@ -193,7 +146,8 @@
     align-items: center;
     flex-wrap: wrap;
     vertical-align: middle;
-    min-height: @y-toolbar-height;
+    height: @y-toolbar-height;
+    line-height: 1;
 
 	cursor: pointer;
 	padding: 10px;
