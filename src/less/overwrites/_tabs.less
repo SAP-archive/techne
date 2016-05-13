@@ -17,8 +17,11 @@
 //
 // Markup:
 //<ul class="nav nav-tabs nav-tabs-center">
-//  <li role="presentation" class="active"><a href="#">Home</a></li>
-//  <li role="presentation" ><a href="#">Profile</a></li>
+//  <li role="presentation" class="active visibleTab"><a href="#">Home</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Profile</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Account</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Settings</a></li>
+//  <li class="tabs-mobile-caret"><a class="pull-right" href="#"><span class="caret"></span></a></li>
 //</ul>
 //
 // Styleguide 17.2
@@ -130,9 +133,11 @@
   }
 
   @media (max-width: @screen-xs) {
-    width: 100%;
     position: relative;
     background:#fff;
+    li{
+      width: 100%;
+    }
 
     &.all-tabs-open {
       .tabs-mobile-caret {
@@ -181,5 +186,6 @@
     }
   }
 }
+
 
 
