@@ -17,8 +17,11 @@
 //
 // Markup:
 //<ul class="nav nav-tabs nav-tabs-center">
-//  <li role="presentation" class="active"><a href="#">Home</a></li>
-//  <li role="presentation" ><a href="#">Profile</a></li>
+//  <li role="presentation" class="active visibleTab"><a href="#">Home</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Profile</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Account</a></li>
+//  <li role="presentation" class="visibleTab"><a href="#">Settings</a></li>
+//  <li class="tabs-mobile-caret"><a class="pull-right" href="#"><span class="caret"></span></a></li>
 //</ul>
 //
 // Styleguide 18.2
@@ -121,3 +124,68 @@
     }
   }
 }
+
+//mobile Tabs-dropdown
+.nav-tabs {
+
+  li.tabs-mobile-caret {
+    display: none;
+  }
+
+  @media (max-width: @screen-xs) {
+    position: relative;
+    background:#fff;
+    li{
+      width: 100%;
+    }
+
+    &.all-tabs-open {
+      .tabs-mobile-caret {
+        width: 20%;
+
+        .caret{
+          content: "";
+          border-top: 0;
+          border-bottom: 4px dashed;
+        }
+      }
+    }
+
+    .visibleTab {
+      display: block !important;
+    }
+
+    .nav-tabs-selector {
+      display: none;
+      width:100%;
+
+      &.active {
+        display: block;
+        background-color: white;
+        a:focus, a:hover, a:active {
+          background: none;
+          color: @default-blue;
+        }
+      }
+    }
+
+    li.tabs-mobile-caret {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      cursor: pointer;
+
+      a {
+        border: none;
+        background-color: transparent;
+        &:focus, &active {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+
