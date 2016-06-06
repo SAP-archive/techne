@@ -53,13 +53,19 @@ gulp.task('iconfont',
                     fontName: 'hyicon',
                     normalize: true,
                     centerHorizontally: true,
-                    fontHeight: 100 // IMPORTANT
+                    fontHeight: 100, // IMPORTANT
+                    appendCodepoints: true
                 }
             )
         )
         .on('codepoints',
             function(codepoints, options)
             {
+                // automatically assign a unicode value to the icon
+                codepoints.forEach(function(glyph, idx, arr) {
+                arr[idx].codepoint = glyph.codepoint.toString(16)
+                });
+                
                 gulp.src('src/less/templates/_icons.less')
                 .pipe(
                     consolidate('lodash',

@@ -1,0 +1,46 @@
+// Markup:
+// <div class="thumbnail-zoom">
+//	<button class="btn btn-img-control btn-img-close">
+//		<span class="hyicon hyicon-close"></span>
+//	</button>
+//	<img src="/images/bb8-large-img.jpg" class="zoom-img">
+//	<button class="btn btn-img-control btn-img-previous">
+//		<span class="hyicon hyicon-back"></span>
+//	</button>
+//	<button class="btn btn-img-control btn-img-next">
+//		<span class="hyicon hyicon-chevron"></span>	
+//	</button>
+// </div>                                                                                                                                                                                                                                     </div>
+//
+// Styleguide 19.1
+
+.thumbnail-zoom{
+	position: relative;
+
+	.btn-img-control{
+		background:@dark-blue;
+		position: absolute;
+		padding:10px;
+		color: white;
+		.hyicon:before{
+			font-size: 25px;
+		}		
+	}
+
+	.btn-img-close{
+		top: 0;
+		right: 0;
+	}
+
+	.btn-img-previous{
+		top:50%;
+		left: 0;
+		padding:10px 5px;
+	}
+
+	.btn-img-next{
+		top:50%;
+		right: 0;
+		padding:10px 5px;
+	}
+}

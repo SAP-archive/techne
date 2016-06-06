@@ -9,19 +9,28 @@
 //  <li role="presentation" ><a href="#">Profile</a></li>
 //</ul>
 //
-// Styleguide 17.1
+// Styleguide 18.1
 
 // Centered Tabs
 //
 // Centered tabs are designed to be used outside of a panel. They can be used for the overall content of a page or view.
 //
 // Markup:
-//<ul class="nav nav-tabs nav-tabs-center">
-//  <li role="presentation" class="active"><a href="#">Home</a></li>
-//  <li role="presentation" ><a href="#">Profile</a></li>
+//<ul class="nav nav-tabs nav-tabs--center nav-tabs--responsive" role="tablist" id="demo-tabs">
+//  <li role="presentation"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+//  <li role="presentation" class="active"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+//  <li role="presentation" ><a href="#account" role="tab" data-toggle="tab">Account</a></li>
+//  <li role="presentation" ><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+//  <li class="nav-tabs-mobile-caret" data-toggle="dropdown" data-target="#demotabs"><a class="pull-right" href="#"><span class="caret"></span></a></li>
 //</ul>
+// <div class="tab-content">
+//   <div role="tabpanel" class="tab-pane" id="home"><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2></div>
+//   <div role="tabpanel" class="tab-pane active" id="profile"><h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2></div>
+//   <div role="tabpanel" class="tab-pane" id="account"><h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h2></div>
+//   <div role="tabpanel" class="tab-pane" id="settings"><h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2></div>
+// </div>
 //
-// Styleguide 17.2
+// Styleguide 18.2
 
 // CUSTOMIZING SKINNING FOR TABS
 @nav-tabs-border-width-bottom: 2px;
@@ -66,15 +75,93 @@
     	}
     }
 
-    // modifier class
-
-    &.nav-tabs-center{
+    // modifier class (the one with one dash is deprecated and should not be used any further)
+    &.nav-tabs-center,
+    &.nav-tabs--center{
       display: table;
       > li {
         text-align: center;
       }
       margin: 0 auto;
     }
+}
+
+// Modifier for responsive tabs
+.nav-tabs--responsive {
+
+  position: relative;
+  
+  // Additional required trigger element
+  .nav-tabs-mobile-caret {
+    display: none;
+  }
+  
+  // mobile
+  @media (max-width: @screen-xs) {
+    
+    background:#fff;
+    // Requried for full width when tabs are centered
+    display: block!important;
+
+    li{
+      width: 100%;
+
+      &:not(.active) {
+        // Hide all li except for the active one
+        display: none;
+
+        // Styling for active element
+        &.active {
+          display: block;
+          background-color: white;
+          a{
+            &:focus,
+            &:hover,
+            &:active{
+              background: none;
+              color: @default-blue;
+            }
+          }
+        }
+      }
+      
+      // Styling of trigger element
+      &.nav-tabs-mobile-caret {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        cursor: pointer;
+
+        a {
+          border: none;
+          background-color: transparent;
+          &:focus, &active {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    
+    // Dropdown Open State
+    &.open {
+      .nav-tabs-mobile-caret{
+        // Shrink close trigger when open
+        width: 20%;
+        
+        // Rotate Caret
+        .caret{
+          content: "";
+          border-top: 0;
+          border-bottom: 4px dashed;
+        }
+      }
+      li{
+        // Display all elements when open
+        display: block!important;
+      }
+    }
+  }
 }
 
 
@@ -121,3 +208,6 @@
     }
   }
 }
+
+
+
