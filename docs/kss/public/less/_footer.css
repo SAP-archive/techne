@@ -1,0 +1,6 @@
+.footer a:visited {
+  color: white;
+}
+.toggled .footer {
+  display: none!important;
+}

@@ -1,0 +1,172 @@
+.kss-sidebar-shadow {
+  background: rgba(30, 44, 59, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  cursor: pointer;
+}
+.toggled .kss-sidebar-shadow {
+  display: block;
+}
+@media (min-width: 769px) {
+  .kss-sidebar-shadow {
+    display: none!important;
+  }
+}
+.kss-ref {
+  display: none;
+}
+#kss-nav {
+  background: #27394f none repeat scroll 0 0;
+  font-family: "Dosis", sans-serif !important;
+}
+#kss-nav nav ul {
+  margin: 0;
+  padding: 15px 0 0 0;
+  list-style-type: none;
+}
+#kss-nav nav ul li a {
+  color: #dbe3eb;
+  display: block;
+  padding: 10px 15px 10px 31px;
+  text-decoration: none;
+  font-size: 15px;
+}
+#kss-nav nav ul li a:hover {
+  color: #0486E0;
+}
+#kss-nav nav ul li.kss-back {
+  border-bottom: 1px solid #27394f;
+  position: relative;
+}
+@media (min-width: 769px) {
+  #kss-nav nav ul li.kss-back {
+    display: none;
+  }
+}
+#kss-nav nav ul li.kss-back:before {
+  content: '';
+  width: 0;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  margin-top: -4px;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 5px 0;
+  border-color: transparent #0486E0 transparent transparent;
+}
+#kss-nav nav ul li.kss-active a {
+  border-left-color: #0486E0;
+  color: #0486E0;
+  text-decoration: none;
+}
+.kss-navbar.navbar {
+  border: 0 none;
+  box-shadow: none;
+  padding-bottom: 41px;
+  background: none;
+}
+/* Sidebar */
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Toggle Styles */
+#kss-wrapper {
+  padding-left: 15px;
+  /* container - fluid ! */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+  padding-left: 0;
+}
+@media (min-width: 769px) {
+  body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+    padding-left: 0px!important;
+  }
+}
+body.has-left-nav.toggled #kss-wrapper {
+  padding-left: 265px;
+  /* 250 + 15px container padding */
+}
+body.has-left-nav #kss-nav {
+  position: fixed;
+  z-index: 901;
+  left: 250px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  padding: 0;
+  padding-top: 100px;
+  overflow-y: auto;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+body.has-left-nav.navbar-super-up #kss-nav {
+  padding-top: 50px;
+}
+body.has-left-nav.toggled #kss-wrapper #kss-nav {
+  width: 250px;
+  background: #27394f none repeat scroll 0 0;
+}
+#kss-main {
+  padding: 15px;
+}
+body.has-left-nav.toggled #kss-wrapper #kss-main {
+  margin-right: -250px;
+}
+/* Sidebar Styles */
+body.has-left-nav .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 769px) {
+  body.has-left-nav #kss-wrapper {
+    padding-left: 265px;
+    background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTY4RkM5ODM0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTY4RkM5ODQ0QTQ5MTFFNUI2NkFEREFFNjA3QTg4RTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NjhGQzk4MTRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NjhGQzk4MjRBNDkxMUU1QjY2QUREQUU2MDdBODhFMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAwBAwMDBQQFCQYGCQ0LCQsNDw4ODg4PDwwMDAwMDw8MDAwMDAwPDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAEAAQMBEQACEQEDEQH/xABKAAEAAAAAAAAAAAAAAAAAAAAJAQEAAAAAAAAAAAAAAAAAAAADEAEAAAAAAAAAAAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBlTBf/2Q==');
+    background-repeat: repeat-y;
+    background-position: 250px;
+  }
+  .kss-body .footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    z-index: 102;
+  }
+  body.has-left-nav #kss-nav {
+    padding-top: 140px;
+    margin-top: -40px;
+  }
+  body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
+    background: none;
+  }
+  body.has-left-nav #kss-nav {
+    width: 250px;
+  }
+  body.has-left-nav.navbar-super-up #kss-nav {
+    margin-top: -40px;
+    padding-top: 100px!important;
+  }
+  #kss-main {
+    position: relative;
+  }
+  .toggled #kss-wrapper #kss-main {
+    position: relative;
+    margin-right: 0;
+  }
+}

@@ -115,3 +115,22 @@ h1.kss-title {
 .kss-depth-6 > h1 {
     font-size: 2.5em * .700;
 }
+
+// Styleguide specifc overwrites
+.kss-modifier-example {
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .popover {
+        position: relative!important;
+        z-index: 1!important;
+        display: block!important;
+    }
+    > [class^="hyicon-"],
+    > [class*=" hyicon-"] {
+        font-size: 35px;
+    }
+    > .nav-pill {
+        float: none!important;
+    }
+}
