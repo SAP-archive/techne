@@ -1,5 +1,7 @@
+@import '_variables';
+
 .kss-sidebar-shadow{
-    background: fade(#1e2c3b, 80%);
+    background: fade(@kss-shadow, 80%);
     height: 100%;
     width: 100%;
     display: none;
@@ -22,7 +24,7 @@
 }
 
 #kss-nav {
-    background: #27394f none repeat scroll 0 0;
+    background: @dark-blue none repeat scroll 0 0;
     font-family: "Dosis", sans-serif !important;
 
     nav ul {
@@ -33,18 +35,18 @@
         li {
            
             a {
-                color: #dbe3eb;
+                color: @side-nav-link;
                 display: block;
                 padding: 10px 15px 10px 31px;
                 text-decoration: none;
                 font-size: 15px;
                
                 &:hover {
-                    color: #0486E0;
+                    color: @blue_gd;
                 }
             }
             &.kss-back{
-                border-bottom: 1px solid #27394f;
+                border-bottom: 1px solid @dark-blue;
                 position: relative;
 
                 @media(min-width:769px) {
@@ -61,13 +63,13 @@
                     height: 0;
                     border-style: solid;
                     border-width: 5px 4px 5px 0;
-                    border-color: transparent #0486E0 transparent transparent;
+                    border-color: transparent @blue_gd transparent transparent;
                 }
             }
 
             &.kss-active a {
-                border-left-color: #0486E0;
-                color: #0486E0;
+                border-left-color: @blue_gd;
+                color: @blue_gd;
                 text-decoration: none;
             }
         }
@@ -136,7 +138,7 @@ body.has-left-nav.navbar-super-up #kss-nav {
 
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
     width: 250px;
-    background: #27394f none repeat scroll 0 0;
+    background: @dark-blue none repeat scroll 0 0;
 }
 
 #kss-main {
@@ -145,6 +147,7 @@ body.has-left-nav.toggled #kss-wrapper #kss-nav {
 body.has-left-nav.toggled #kss-wrapper #kss-main {
     margin-right: -250px;
 }
+
 /* Sidebar Styles */
 body.has-left-nav .sidebar-nav {
     position: absolute;
