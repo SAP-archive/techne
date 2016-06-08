@@ -83,6 +83,10 @@
 	width:45px;
 }
 
+.img-circle{
+	height:50px;
+}
+
 
 /* techne resets */
 .help-inline--on .hyicon-helpoff:before{
