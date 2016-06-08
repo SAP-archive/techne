@@ -75,6 +75,14 @@
 	margin-top: 50px;
 }
 
+.y-thumbnail img{
+	width:200px;
+}
+
+.userAvatar img{
+	width:45px;
+}
+
 
 /* techne resets */
 .help-inline--on .hyicon-helpoff:before{
