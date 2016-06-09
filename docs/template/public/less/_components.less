@@ -1,14 +1,17 @@
 // componentes page 
+
+@import '_variables';
+
 body.hyComponentsPage{
-    background: #e0e9f0;
+    background: @screen-bg_gd;
 }
 
 #demo-page-background {
-        background-color: #e0e9f0;
+        background-color: @screen-bg_gd;
         padding: 40px;
 
         .panel-body {
-            background-color: #fff;
+            background-color: @white;
         }
     }
 
@@ -18,7 +21,7 @@ body.hyComponentsPage{
 
 #viewFullscreen .modal-dialog{
   overflow: hidden;
-  background-color: #e0e9f0;
+  background-color: @screen-bg_gd;
 
   .modal-content{
     border: none;
@@ -41,8 +44,9 @@ body.hyComponentsPage{
 .kss-page{
 
     a:visited {
-        color: #0486e0;
+        color: @blue_gd;
     }
+    
 }
 
 .kss-guidelines-page .kss-page,  .kss-patterns-page .kss-page{
