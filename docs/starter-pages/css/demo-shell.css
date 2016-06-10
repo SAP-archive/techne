@@ -1,5 +1,9 @@
 /* demo.css used for example site skeleton. It should not be included in your project */
 
+body{
+	overflow: hidden;
+}
+
 .top-nav{					
 	background: #27394f; 
 	color:#fff; 
