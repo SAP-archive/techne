@@ -63,36 +63,6 @@
 	padding-top: 90px;
 }
 
-.demo-label{ 
-	padding:10px 20px;
-}
-
-.nav-tabs.nav-tabs--center{
-	margin-top: 30px;
-}
-
-.card-col{
-	margin-top: 50px;
-}
-
-.y-thumbnail img{
-	width:200px;
-}
-
-.userAvatar img{
-	width:45px;
-}
-
-.img-circle{
-	height:50px;
-}
-
-
-/* techne resets */
-.help-inline--on .hyicon-helpoff:before{
-	margin-top: 5px;
-}
-
 @media screen and (max-width: 778px) {
 
 	.side-bar{ 			
