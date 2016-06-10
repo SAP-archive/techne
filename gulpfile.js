@@ -280,6 +280,13 @@ gulp.task('patchgulpkss',
     }
 );
 
+gulp.task('starterpages',
+    function(){
+        //copy starter pages files to kss folder
+        gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
+    }
+);
+
 
 // Rerun the task when a file changes
 gulp.task('watch',
