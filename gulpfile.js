@@ -284,6 +284,7 @@ gulp.task('starterpages',
     function(){
         //copy starter pages files to kss folder
         gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
+        gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('dist/demo'));
     }
 );
 
@@ -299,13 +300,13 @@ gulp.task('watch',
 );
 
 
-gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'deploy']);
+gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'starterpages', 'deploy']);
 
 // iconfont, less, kss_bootrap_src
 gulp.task('dist', ['iconfont', 'build']);
 
-gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
 
+gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
 
 
 // The default task (called when you run `gulp` from cli)
