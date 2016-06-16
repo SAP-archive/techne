@@ -283,7 +283,14 @@ gulp.task('patchgulpkss',
 gulp.task('starterpages',
     function(){
         //copy starter pages files to kss folder
-        gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
+        gulp.src(['docs/starter-pages/css/**/*',
+                  'docs/starter-pages/images/**/*',
+                  'docs/starter-pages/cards.html',
+                  'docs/starter-pages/details-1.html',
+                  'docs/starter-pages/details-2.html',
+                  'docs/starter-pages/table.html',
+                  'docs/starter-pages/index.html'],
+                  {base: 'docs/'  }).pipe(gulp.dest('docs/kss'));
     }
 );
 
