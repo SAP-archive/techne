@@ -3,6 +3,10 @@
 		"showLeftNav": true,
 		"navigation": [
       {
+        "text": "Page Layouts",
+        "url": "#page-layouts"
+      },
+      {
         "text": "Tours",
         "id": "#patterns-tours"
       },
@@ -18,10 +22,10 @@
         "text": "Cards",
         "id": "#patterns-cards"
       },
-			{
-				"text": "Tables",
-				"id": "#patterns-tables"
-			},
+      {
+        "text": "Tables",
+        "id": "#patterns-tables"
+      },
       {
         "text": "Trees",
         "id": "#patterns-trees"
@@ -49,27 +53,16 @@
 	}
 -->
 
-<!---
-
-{
-  "text": "First Contact",
-  "id": "#patterns-first"
-},
-{
-  "text": "Standard Add/Edit/Delete Page Header",
-  "id": "#patterns-header"
-},
-{
-  "text": "Tables",
-  "id": "#patterns-tables"
-},
- --->
 
 <div class="kss-patterns-page container-fluid" >
   <div class="row">
     <h1>Patterns & Layouts</h1>
     <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
   </div>
+  <section id="page-layouts" class="kss-page">
+    <h2>Page Layouts</h2>
+    <p>In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. See examples of the Starter Pages here >> <a href="starter-pages/" target="_blank">Starter Pages</a> and download on Github here >> <a href="https://github.com/SAP/techne/tree/master/dist/demo/starter-pages">Starter Pages on Github </a>.</p>
+  </section>
   <section id="patterns-tours" class="kss-page">
     <h2>Tours</h2>
     <p>A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanation of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.</p>
