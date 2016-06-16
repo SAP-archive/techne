@@ -284,6 +284,7 @@ gulp.task('starterpages',
     function(){
         //copy techne into the demo path
         gulp.src('dist/css/**/*').pipe(gulp.dest('docs/starter-pages/css'));
+        gulp.src('dist/fonts/**/*').pipe(gulp.dest('docs/starter-pages/fonts'));
 
         //copy starter pages files to kss folder
         gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
