@@ -282,9 +282,20 @@ gulp.task('patchgulpkss',
 
 gulp.task('starterpages',
     function(){
+        //copy techne into the demo path
+        gulp.src('dist/css/**/*').pipe(gulp.dest('docs/starter-pages/css'));
+
         //copy starter pages files to kss folder
         gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
-        gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('dist/demo'));
+
+        //copy the dist files
+        gulp.src(['docs/starter-pages/css/**/*',
+                  'docs/starter-pages/images/**/*',
+                  'docs/starter-pages/cards.html',
+                  'docs/starter-pages/details-1.html',
+                  'docs/starter-pages/details-2.html',
+                  'docs/starter-pages/table.html'],
+                  {base: 'docs/'  }).pipe(gulp.dest('dist/demo'));
     }
 );
 
