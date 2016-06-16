@@ -1,5 +1,3 @@
-/* demo.css used for example site skeleton. It should not be included in your project */
-
 body{
 	overflow: hidden;
 }
@@ -7,34 +5,44 @@ body{
 .top-nav{					
 	background: #27394f; 
 	color:#fff; 
-	text-align: center; 
-	height: 50px; 
+    overflow: hidden;
 }
 
-.top-nav h1{
-	margin:15px 0 0 10px;
-	text-transform: uppercase;
-	font-size: 20px;
+.brand{
+    font-size: 20px;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 0 0 20px;
+    display: inline-block;
+    
 }
 
-.brand .brand-logo {
+.brand:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.brand-logo {
     padding: 10px;
     height: 50px;
 }
 
 .sub-nav{					
+    color: #fff;
 	background: #0486e0; 
-	margin-top: 50px; 
 	height: 50px;
-	text-align: left;
+    padding: 18px;
 }
 
 .sub-nav a{
-	color: #fff;
-	font-size: 14px;
-	display: inline-block;
-	padding:15px 20px;
+    color: #fff; 
+    margin-right: 20px;
+    text-decoration: none;
 }
+
+
+
+
 
 .offcanvas-row{			
 	padding-left: 0; 
