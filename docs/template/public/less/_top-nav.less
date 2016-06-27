@@ -14,30 +14,33 @@
 
         li {
             float: left;
-
-            span.active {
-                padding: 14px;
-                display: inline-block;
-            }
-
-            a {
-                color: @top-nav-link;
-                display: inline-block;
-                padding: 14px;
-                transition: all 0.25s  ease-out;
-                -webkit-transition: all 0.25s ease-out;
-
-                &:hover {
-                    text-decoration: none;
-                    background-color: @top-nav-hover!important;
-                }
-            }
         }
+    }
+
+    a {
+        color: @top-nav-link;
+        display: inline-block;
+        padding: 14px;
+        transition: all 0.25s  ease-out;
+        -webkit-transition: all 0.25s ease-out;
+
+        &:hover {
+            text-decoration: none;
+            background-color: @top-nav-hover !important;
+        }
+    }
+
+    span.active {
+        padding: 14px;
+        display: inline-block;
     }
     
     #menu-toggle {
-        margin: 15px 20px 0;
+        margin:0;
         display: none;
+        &:hover{
+           background-color: transparent !important; 
+        }
     }
     
     @media (max-width: 768px) {
@@ -47,7 +50,7 @@
             position: relative;
             cursor: pointer;
 
-            .toggled &{
+            .toggled {
                 min-height: 30px;
                 min-width: 30px;
             }

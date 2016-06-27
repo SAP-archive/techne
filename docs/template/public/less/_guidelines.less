@@ -4,16 +4,17 @@
 
 .kss-guidelines-page {
     margin-bottom:50px;
+    max-width: 1000px;
+    padding: 0 20px;
 
     .imageCenter {
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
+        margin: -40px auto 0 auto; 
         text-align: center;
-        margin-top: -40px;
     }
 
-    a img, a span {
+    a img, 
+    a span {
         vertical-align: middle;
     }
 
@@ -21,8 +22,10 @@
         padding-bottom: 20px;
     }
 
-    .carousel-inner > .item > img {
-        margin: 0 auto;
+    .carousel-inner{
+        img {
+            margin: 0 auto;
+        }
     }
 
     .visualSystemSpacing {
@@ -40,7 +43,7 @@
     .size-20 {
         font-size: 20px;
     }
-
+    
     /* 5 column layout */
     .col-xs-5ths,
     .col-sm-5ths,
@@ -76,11 +79,7 @@
             width: 20%;
             float: left;
         }
-    }
-
-    .screen-bg {
-        background: @screen-bg_gd;
-    }
+    }    
 
     .content-bg {
         background: @content-bg_gd;
@@ -94,14 +93,6 @@
         background: @typography_gd;
     }
 
-    .typographySecondValue {
-        background: @typographySecondValue_gd;
-    }
-
-    .blue {
-        background: @blue_gd;
-    }
-    
     .typographySecondValue {
         background: @typographySecondValue_gd;
     }
@@ -158,10 +149,10 @@
 
     .carousel-indicators {
         position: absolute;
-        background: #fff;
+        background: @white;
 
         li {
-            background: #d8dfe8;
+            background: @light-grey;
             text-indent: 0;
             border-radius: 50%;
             height: 10px;
@@ -169,13 +160,13 @@
             padding-top: 7px;
             text-align: center;
             border: none;
-            box-shadow: 0px 2px 2px #fff;
+            box-shadow: 0px 2px 2px @white;
             margin: 0 10px;
         }
 
         .active {
             background-color: @blue_gd;
-            color: #fff;
+            color: @white;
             height: 10px;
             width: 10px;
         }
@@ -186,7 +177,7 @@
         left: auto;
         right: auto;
         padding-top: 95px;
-        color: #313440;
+        color: @typography_gd;
         text-shadow: none;
        
         @media only screen and (max-width: 1012px) and (min-width: 992px) {
@@ -227,7 +218,7 @@
                 position: relative;
                 width: 40px;
                 height: 40px;
-                background-color: #d8dfe8;
+                background-color: @light-grey;
                 border-radius: 50%;
               
                 span{   

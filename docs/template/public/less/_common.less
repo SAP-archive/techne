@@ -13,6 +13,10 @@ body.kss-body {
     padding-right:0!important;
 }
 
+a:visited {
+    color: @blue_gd;
+}
+
 #kss-wrapper {
     height: auto;
 }
@@ -38,12 +42,8 @@ h1.kss-title {
 #kss-main {
     padding-left: 15px;
     padding-bottom: 40px;
-
-    &.col-md-12{
-        max-width: 1000px;
-    }
-
 }
+
 
 .kss-mod-list {
     width: 100%;
@@ -77,46 +77,10 @@ h1.kss-title {
     border: 1px solid @kss-grey-border;
     border-radius: 3px;
     font-family: Courier, "Courier New", monospaced;
-  
-    p {
-        display: block;
-    }
-}
-
-.kss-mod-example {
-    display: block;
-    padding-bottom: 20px;
-    & > td {
-        display: block;
-    }
 }
 
 .kss-markup {
     margin: 20px 0 40px;
-}
-
-.kss-depth-1 > h1 {
-    font-size: 2.5em * .950;
-}
-
-.kss-depth-2 > h1 {
-    font-size: 2.5em * .900;
-}
-
-.kss-depth-3 > h1 {
-    font-size: 2.5em * .850;
-}
-
-.kss-depth-4 > h1 {
-    font-size: 2.5em * .800;
-}
-
-.kss-depth-5 > h1 {
-    font-size: 2.5em * .750;
-}
-
-.kss-depth-6 > h1 {
-    font-size: 2.5em * .700;
 }
 
 // Styleguide specifc overwrites
@@ -141,7 +105,3 @@ h1.kss-title {
 .kss-lead{
     font-weight: bold;
 }
-
-
-
-
