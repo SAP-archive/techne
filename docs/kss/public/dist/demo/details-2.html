@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+    <title>Techne: Layout Template - Details</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../public/dist/css/techne.min.css">
+</head>
+<style>
+    
+    .nav-tabs-wrapper{
+        margin-top: 50px;
+    }
+
+    .section-header{
+        margin-top: 25px;
+    }
+
+    .help-inline--on .hyicon-helpoff:before{
+        margin-top: 5px;
+    }
+
+    .page-level-help-message{
+        margin-top: 30px;
+    }
+
+</style>
+<body>
+
+    <!-- page header  -->
+    <div class="navbar navbar-default y-navbar-centered y-navbar-lg navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-left">
+                <div class="y-toolbar">
+                    <div class="y-toolbar-cell">
+                        <button class="btn-subordinate btn navbar-btn">
+                            <span class="hyicon hyicon-back"></span> 
+                            <span class="hidden-xs">Back</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="y-navbar-center">
+                <div class="y-navbar-center-content">
+                    <h1>Page Title</h1>
+                </div>
+            </div>
+            <div class="navbar-right">
+            </div>
+        </div>
+    </div>
+
+    <!-- tabs -->
+    <div class="nav-tabs-wrapper">
+        <ul class="nav nav-tabs nav-tabs--center nav-tabs--responsive" role="tablist" id="demo-tabs">
+            <li role="presentation"  class="active"><a href="#home" role="tab" data-toggle="tab">TAB ON</a></li>
+            <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">TAB OFF</a></li>
+            <li role="presentation" ><a href="#account" role="tab" data-toggle="tab">TAB OFF</a></li>
+            <li role="presentation" ><a href="#settings" role="tab" data-toggle="tab">TAB OFF</a></li>
+            <li class="nav-tabs-mobile-caret" data-toggle="dropdown" data-target="#demotabs"><a class="pull-right" href="#"><span class="caret"></span></a></li>
+        </ul>
+    </div>
+
+    <!-- top panel -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Identifier</label>
+                            <p class="form-readonly-text form-readonly-text-lg">version 2.1.0</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <textarea type="text" class="form-control input-lg"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">YaaS Client</label>
+                            <p class="form-readonly-text form-readonly-text-lg">subscriber.buildermodule123</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Last updated</label>
+                            <p class="form-readonly-text form-readonly-text-lg">Fed 26, 2016</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label required">Display Name</label>
+                            <input type="text" class="form-control input-lg">
+                            <span class="help-inline help-inline--on">
+                                <span class="hyicon hyicon-helpoff"></span>
+                                <span class="help-block-inline">
+                                    Enter name of the module, which will be displayed in Builder.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Module location</label>
+                            <input type="text" class="form-control input-lg" value="https://www.buildermodule123.de">
+                            <span class="help-inline help-inline--on">
+                                <span class="hyicon hyicon-helpoff"></span>
+                                <span class="help-block-inline">
+                                    The absolute path URL of Builder Module's JSON file <br>(https://example.com/module.json)
+                                </span>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Owner</label>
+                            <p class="form-readonly-text form-readonly-text-lg" >username</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer text-right">
+            <button class="btn btn-link">Secondary Link</button>
+            <button class="btn btn-link">Secondary Link</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+
+    <!-- cards  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="section-header">
+                    <h2 class="section-headline">Headline (12)</h2>
+                    <span class="help-inline help-inline--section help-inline--tooltip">
+                        <span class="hyicon hyicon-helpoff"></span>
+                        <span class="help-block-inline ng-binding">Section help message goes here</span>
+                    </span>
+                </div>
+                <ul class="dataCards dataCards-singleColumn list-group">
+                    <li class="dataCard">
+                        <div class="cardRow cardRowClickable">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <div class="userAvatar">
+                                        <img src="images/user-icon.png" >
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <p class="primaryData">
+                                        user.name@email.com
+                                    </p>
+                                    <p class="secondaryData">
+                                        First name Last name 
+                                    </p>
+                                    <span class="label label-default">
+                                        Inactive
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="section-header">
+                    <h2 class="section-headline">Headline (12)</h2>
+                    <span class="help-inline help-inline--section help-inline--tooltip">
+                        <span class="hyicon hyicon-helpoff"></span>
+                        <span class="help-block-inline ng-binding">Section help message goes here</span>
+                    </span>
+                </div>
+                <ul class="dataCards dataCards-singleColumn list-group">
+                    <li class="dataCard">
+                        <div class="cardRow cardRowClickable">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <div class="userAvatar">
+                                        <img src="images/user-icon.png">
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <p class="primaryData">
+                                        user.name@email.com
+                                    </p>
+                                    <p class="secondaryData">
+                                        First name Last name 
+                                    </p>
+                                    <span class="label label-default">
+                                        Inactive
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="section-header">
+                    <h2 class="section-headline">Headline (12)</h2>
+                </div>
+                <ul class="dataCards dataCards-singleColumn list-group">
+                    <li class="dataCard">
+                        <div class="cardRow cardRowClickable">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <div class="userAvatar">
+                                        <img src="images/user-icon.png"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <p class="primaryData">
+                                        user.name@email.com
+                                    </p>
+                                    <p class="secondaryData">
+                                        First name Last name 
+                                    </p>
+                                    <span class="label label-default">
+                                        Inactive
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/select2.js"></script>
+    
+</body>
+</html>

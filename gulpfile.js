@@ -280,6 +280,26 @@ gulp.task('patchgulpkss',
     }
 );
 
+gulp.task('starterpages',
+    function(){
+        //copy techne into the demo path
+        gulp.src('dist/css/**/*').pipe(gulp.dest('docs/starter-pages/css'));
+        gulp.src('dist/fonts/**/*').pipe(gulp.dest('docs/starter-pages/fonts'));
+
+        //copy starter pages files to kss folder
+        gulp.src('docs/starter-pages/**/*').pipe(gulp.dest('docs/kss/starter-pages'));
+
+        //copy the dist files
+        gulp.src(['docs/starter-pages/css/**/*',
+                  'docs/starter-pages/images/**/*',
+                  'docs/starter-pages/cards.html',
+                  'docs/starter-pages/details-1.html',
+                  'docs/starter-pages/details-2.html',
+                  'docs/starter-pages/table.html'],
+                  {base: 'docs/'  }).pipe(gulp.dest('dist/demo'));
+    }
+);
+
 
 // Rerun the task when a file changes
 gulp.task('watch',
@@ -292,13 +312,13 @@ gulp.task('watch',
 );
 
 
-gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'deploy']);
+gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'starterpages', 'deploy']);
 
 // iconfont, less, kss_bootrap_src
 gulp.task('dist', ['iconfont', 'build']);
 
-gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
 
+gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
 
 
 // The default task (called when you run `gulp` from cli)
