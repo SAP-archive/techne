@@ -64,7 +64,7 @@ module.exports = function(opt) {
 
             sectionRoots.sort();
             rootCount = sectionRoots.length;
-            
+
 
             //console.log(styleguide);
             handlebarHelpers(handlebars, styleguide);
@@ -84,7 +84,7 @@ module.exports = function(opt) {
                         .pipe(through(function (file) {
 
                             var fName =  file.path.split('/').pop().split('.')[0];
-                            
+
                             var mdNavConfig = kss.getMarkdownNav(file);
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
                             var content = template({
@@ -124,13 +124,13 @@ module.exports = function(opt) {
                 //console.log('sc', styleguide.section);
                 childSections = styleguide.section(sectionRoots[i]+'.*');
 
-                
+
                 var fileRoot = parseInt(sectionRoots[i],10);
 
 
 
                 var fileName = styleguide.data.section_refs[fileRoot].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
-            
+
 
                 //update the childSections reference to point at the new file name links
                 childSections.pageLink = fileName;
@@ -162,7 +162,7 @@ module.exports = function(opt) {
             }
 
             // Copy template assets, less compilation added because default template uses it
-            gulp.src(path.join(opt.templateDirectory, '/**/*.less'))
+            gulp.src(path.join(opt.templateDirectory, '/**/kss.less'))
                 .pipe(gulpless())
                 .pipe(through(function (file) {
 
@@ -182,7 +182,7 @@ module.exports = function(opt) {
     function jsonSections(sections) {
 
         return sections.map(function(section) {
-            
+
             //console.log('sectionref', section.reference());
             return {
                 header: section.header(),
