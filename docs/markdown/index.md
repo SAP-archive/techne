@@ -2,11 +2,11 @@
     <header class="main-header hyHomeHeaderMain">
         <div class="container-fluid">
             <div class="page-header hyHomeHeader text-center">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <h1>hybris techné*</h1>
                     <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
+                    <span class="techne-defination text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></span>
                 </div>
             </div>
         </div>
@@ -14,7 +14,7 @@
     <header class="hyHomeHeaderMinor">
         <div class="container-fluid">
             <div class="hyHomeHeader2">
-                <p class="text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
+                <p class="text-center">Have questions about Techné? Visit us at <a href="https://experts.hybris.com/topics/techne.html" target="_blank">Hybirs Experts ></a></p>
             </div>
         </div>
     </header>

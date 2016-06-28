@@ -5,11 +5,11 @@
 header.hyHomeHeaderMain {
     background: url("/images/home/banner_bg.png") top center repeat-x ;
     margin: -20px -15px 0 -15px; 
-    height: 440px;
+    height: 378px;
 }
 
 header.hyHomeHeaderMinor {
-    background-color: @screen-bg_gd;
+    border-bottom: 1px solid @grey-border;
     margin: 0 -15px;
 }
 
@@ -27,19 +27,33 @@ header.hyHomeHeaderMinor {
     .hyHomeHeader a {
         font-size: 18px;
         font-family: 'Dosis';
+
     }
 
     .hyHomeHeader2 p {
         margin-bottom: 0;
-        small {
-            font-size: 14px;
-        }
+        padding:20px;
+        font-size: 20px;
+
     }
 
     .hyHomeHeader {
         color: white;
         padding: 30px 0 100px 0;
+
+        h1{
+            margin:20px 0 30px 0;
+
+            @media (max-width: 769px) {
+                margin:10px 0 10px 0;
+            }
+        }
     
+        .techne-defination {
+            font-size: 14px;
+            margin-top: 40px;
+            display: block;
+        }
         .btn-warning{
             color: @btn-type-color;
         }
@@ -58,7 +72,7 @@ header.hyHomeHeaderMinor {
         line-height: 40px;
 
         @media (max-width: 769px) {
-            line-height: 20px;
+            line-height: 30px;
         }
     }
 
