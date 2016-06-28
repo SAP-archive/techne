@@ -135,7 +135,7 @@
     <div class="container-fluid hyHomeContentCentered">
         <!-- High-touch User Section-->
         <div class="consumerCarousel" id="hyHomeHighTC">
-            <h3 class="text-center">High-touch Business User</h3>
+            <h3 class="text-center">The Creator</h3>
             <div class="row">
                 <div class="col-md-6">
                     <img src="images/home/hight_user_1.png" class="personaScreen">
@@ -182,7 +182,7 @@
 <div class="hyHomePageSection">
     <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeLowTC">
-            <h3 class="text-center">The Low-touch Business User</h3>
+            <h3 class="text-center">The Enabler</h3>
             <div class="col-md-6">
                 <img src="images/home/lowt_user_1.png" class="personaScreen">
             </div>
@@ -226,7 +226,7 @@
 <div class="hyHomePageSection">
     <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeSoftDevC">
-            <h3 class="text-center">and of course, Software Developers</h3>
+            <h3 class="text-center">The Developer</h3>
             <div class="row">
                 <div class="col-md-6">
                     <img src="images/home/developer_1.png" class="personaScreen">
