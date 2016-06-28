@@ -1,0 +1,58 @@
+// componentes page 
+
+@import '_variables';
+
+body.hyComponentsPage{
+    background: @screen-bg_gd;
+}
+
+#demo-page-background {
+    background-color: @screen-bg_gd;
+    padding: 40px;
+
+    .panel-body {
+        background-color: @white;
+    }
+}
+
+.kss-componnet-page{
+    max-width: 1000px;
+}
+
+.kss-patterns-page .modal-dialog{
+    width: 90%;
+}
+
+#viewFullscreen .modal-dialog{
+  overflow: hidden;
+  background-color: @screen-bg_gd;
+
+  .modal-content{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+.error-message-table td:nth-child(2),
+.error-message-table td:nth-child(3) {
+    word-break: break-all;
+}
+
+.error-message-table .narrow-col {
+    min-width: 130px;
+}
+
+.error-message-table .wide-col {
+    min-width: 260px;
+}
+
+.kss-guidelines-page .kss-page,
+.kss-patterns-page .kss-page{
+
+    h2, 
+    h3{
+        margin-top: -55px;
+        padding-top: 100px;
+    }
+}

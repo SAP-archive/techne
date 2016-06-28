@@ -228,7 +228,7 @@
                 {{else}}
                 {{#eachSection rootNumber}}
                 {{rootNumber}}
-                <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
+                <section id="section-{{reference}}" class="kss-section kss-componnet-page">
                     {{#if_eq refDepth 1}}
                       {{#if_eq reference 1}}
                      <h1>Components</h1>
@@ -263,7 +263,7 @@
                                 <div class="kss-mod-desc">
                                     {{{description}}}
                                 </div>
-                                <div class="kss-mod-name">{{name}}</div>
+                                <div class="kss-mod-name text-right">{{name}}</div>
                             </div>
                             <div class="kss-modifier-example">
                                 {{modifierMarkup}}

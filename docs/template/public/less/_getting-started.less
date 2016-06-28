@@ -1,0 +1,137 @@
+// getting started page 
+
+@import '_variables';
+
+.hyGettingStartedPage {
+    margin-top: -25px;
+
+    .hyDownloads {
+        background-color: @screen-bg_gd;
+        padding-top: 63px;
+        margin: 0 -15px 20px -15px
+    }
+
+    h2 {
+        color: @dark-blue;
+        font-size: 25px;
+    }
+
+    #installingBower {
+        margin-top: 39px;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    p {
+        color: @dark-blue;
+        padding-bottom: 20px;
+    }
+
+    a {
+        vertical-align: middle;
+    }
+
+    .customFonts {
+
+        h2 {
+            color: @success_gd;
+        }
+
+        p {
+            color: @typography-light_gd;
+            font-size: 16px;
+            height: 63px;
+        }
+
+        a {
+            font-size: 23px;
+            color: @dark-blue;
+        }
+    }
+
+    .hyInstall {
+        background-color: @white;
+
+        dt {
+            font-weight: normal;
+        }
+
+        dd {
+            margin-bottom: 18px;
+        }
+
+        code {
+            color: @blue_gd;
+            background-color: @kss-grey;
+        }
+    }
+    .downloadOptions {
+
+        div {
+            padding-right: 35px;
+            padding-left: 35px;
+            padding-bottom: 57px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            font-size: 23px;
+        }
+
+        img {
+            width: 153px;
+            height: 134px;
+            margin-bottom: 27px;
+        }
+
+        h2 {
+            height: 54px;
+        }
+
+        @media only screen and (max-width: 977px) and (min-width: 890px) {
+
+            a {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 889px) and (min-width: 830px) {
+
+            a {
+                font-size: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 829px) and (min-width: 769px) {
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) and (min-width: 391px) {
+
+            div {
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+        }
+
+        //For iPhone 4, text coming out of button - L.M.
+        @media (max-width: 390px) {
+
+            div {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
