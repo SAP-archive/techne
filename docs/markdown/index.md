@@ -4,7 +4,7 @@
             <div class="page-header hyHomeHeader text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
-                    <h1>hybris techné*</h1>
+                    <h1>SAP Hybris Techné</h1>
                     <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
                 </div>
