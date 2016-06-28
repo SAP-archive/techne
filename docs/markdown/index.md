@@ -6,7 +6,7 @@
                     <h1>hybris techné*</h1>
                     <p>techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
-                    <span class="techne-defination text-center"><small>“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></span>
+                    <span class="techne-defination text-center">“techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</span>
                 </div>
             </div>
         </div>
