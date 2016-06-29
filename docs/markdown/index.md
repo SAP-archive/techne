@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="page-header hyHomeHeader text-center">
                 <div class="col-md-8 col-md-offset-2">
-                    <img src="images/home/techne-logo.png" alt="techne" class="techne-logo">
+                    <img src="images/home/techne-logo.png" alt="Techné" class="techne-logo">
                     <h1>SAP Hybris Techné</h1>
                     <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
@@ -14,7 +14,7 @@
     <header class="hyHomeHeaderMinor">
         <div class="container-fluid">
             <div class="hyHomeHeader2">
-                <p class="text-center"><small>“Techne” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
+                <p class="text-center"><small>“Techné” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
             </div>
         </div>
     </header>
@@ -23,7 +23,7 @@
         <div class="row hyHomeHeader3 text-center">
             <div class="col-md-10 col-md-offset-1">
                 <h3>Why is Techné different?</h3>
-                <p>Techne' design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
+                <p>Techné' design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
             </div>
         </div><!-- row why Techné -->
         <div class="row personaIcons">
