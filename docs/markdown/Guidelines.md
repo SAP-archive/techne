@@ -442,7 +442,7 @@
         </div>
         <h2>Processing Icon/Treatment</h2>
         <img src="images/visual-system-processing-position.png" alt="" class="img-responsive"> <br><br>
-        <p>It’s important to notify users when the system is processing.  hybris techné uses the above treatment to indicate the system is processing</p>
+        <p>It’s important to notify users when the system is processing.  SAP Hybris Techné uses the above treatment to indicate the system is processing</p>
         <hr>
     </section>
     <!-- load tone/voice -->
@@ -728,7 +728,7 @@
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
-            <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
+            <p>Being truly user-centric means supporting ALL users.  Techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>

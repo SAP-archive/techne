@@ -2,19 +2,19 @@
     <header class="main-header hyHomeHeaderMain">
         <div class="container-fluid">
             <div class="page-header hyHomeHeader text-center">
-                <div class="col-md-8 col-md-offset-2">
-                    <img src="images/home/techne-logo.png" alt="Techné" class="techne-logo">
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <h1>SAP Hybris Techné</h1>
-                    <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS that gives UX professionals the freedom and creativity to implement experiences from design to deployment FAST</p>
+                    <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design that gives teams the freedom and creativity to implement experiences from design to deployment FAST on YaaS, or anywhere they choose.</p>
                     <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
                 </div>
             </div>
         </div>
+        <span class="techne-definition text-center">“Techné” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</span>
     </header>
     <header class="hyHomeHeaderMinor">
         <div class="container-fluid">
             <div class="hyHomeHeader2">
-                <p class="text-center"><small>“Techné” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</small></p>
+                <p class="text-center">Have questions about Techné? Visit us at <a href="https://experts.hybris.com/topics/techne.html" target="_blank" class="link-arrow">Hybris Experts</a></p>
             </div>
         </div>
     </header>
@@ -23,7 +23,7 @@
         <div class="row hyHomeHeader3 text-center">
             <div class="col-md-10 col-md-offset-1">
                 <h3>Why is Techné different?</h3>
-                <p>Techné' design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
+                <p>Techné design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
             </div>
         </div><!-- row why Techné -->
         <div class="row personaIcons">
@@ -58,7 +58,7 @@
                 <div class="carousel-inner">
                     <div class="item active text-center" data-img-up="#hyConsumUpImg" data-img-over="#hyConsumOverImg">
                         <p class="hyPersonaTitle">The Consumer</p>
-                        <p>We are all consumers in our life outside of work and we have high expectations when it comes to our digital experiences. With this in mind it’s important to remember everything we experience across digital touchpoints, good AND bad, sets the bar for any new digital experience we encounter. Consumer-facing experiences try to be engaging, informative, efficient and fun. Techne uses the consumer viewpoint as it's starting inspiration for all interactions it uses.. <a href="#hyHomeConsumerC">Learn more »</a></p>
+                        <p>We are all consumers in our life outside of work and we have high expectations when it comes to our digital experiences. With this in mind it’s important to remember everything we experience across digital touchpoints, good AND bad, sets the bar for any new digital experience we encounter. Consumer-facing experiences try to be engaging, informative, efficient and fun. Techné uses the consumer viewpoint as it's starting inspiration for all interactions it uses.. <a href="#hyHomeConsumerC">Learn more »</a></p>
                     </div>
                     <div class="item text-center" data-img-up="#hyHighTUpImg" data-img-over="#hyHighTOverImg">
                         <p class="hyPersonaTitle">The Creator</p>

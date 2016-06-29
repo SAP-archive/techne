@@ -52,7 +52,7 @@
 
 <div class="kss-patterns-page">
   <h1>Patterns & Layouts</h1>
-  <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
+  <p>SAP Hybris Techné allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
   <section id="page-layouts" class="kss-page">
     <h2>Page Layouts</h2>
     <p>In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. See examples of the Starter Pages here >> <a href="starter-pages/" target="_blank">Starter Pages</a> and download on Github here >> <a href="https://github.com/SAP/techne/tree/master/dist/demo/starter-pages">Starter Pages on Github </a>.</p>

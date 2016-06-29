@@ -1,7 +1,7 @@
 <div id="visual-system" class="hyGettingStartedPage">
     <div class="container-fluid hyDownloads" >
         <div class="page-header  customFonts">
-            <p class="text-center">We have a few options for you to start designing and building with hybris Techné fast.</p>
+            <p class="text-center">We have a few options for you to start designing and building with SAP Hybris Techné fast.</p>
         </div>
         <!--.page-header  customFonts-->
         <div class="row column definitions customFonts downloadOptions">

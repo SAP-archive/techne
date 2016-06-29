@@ -5,11 +5,24 @@
 header.hyHomeHeaderMain {
     background: url("/images/home/banner_bg.png") top center repeat-x ;
     margin: -20px -15px 0 -15px; 
-    height: 440px;
+    height: 378px;
+    position: relative;
+
+    .techne-definition {
+        font-size: 13px;
+        margin: 0;
+        padding: 0 20px;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        width:100%;
+        color: @white;
+        font-style: italic;
+    }
 }
 
 header.hyHomeHeaderMinor {
-    background-color: @screen-bg_gd;
+    border-bottom: 1px solid @grey-border;
     margin: 0 -15px;
 }
 
@@ -27,18 +40,22 @@ header.hyHomeHeaderMinor {
     .hyHomeHeader a {
         font-size: 18px;
         font-family: 'Dosis';
+
     }
 
-    .hyHomeHeader2 p {
-        margin-bottom: 0;
-        small {
-            font-size: 14px;
-        }
-    }
+
 
     .hyHomeHeader {
         color: white;
         padding: 30px 0 100px 0;
+
+        h1{
+            margin:20px 0 30px 0;
+
+            @media (max-width: 769px) {
+                margin:10px 0 10px 0;
+            }
+        }
     
         .btn-warning{
             color: @btn-type-color;
@@ -54,13 +71,24 @@ header.hyHomeHeaderMinor {
         }
     }
 
-    .hyHomeHeader2 p {
-        line-height: 40px;
+    .hyHomeHeader2{
 
-        @media (max-width: 769px) {
-            line-height: 20px;
+        p {
+            line-height: 40px;
+            margin-bottom: 0;
+            padding:45px 20px;
+            font-size: 21px;
+
+            @media (max-width: 769px) {
+                line-height: 30px;
+            }
+        }
+        .link-arrow{
+            background: url("/images/home/link-arrow.png") right 7px no-repeat;
+            padding-right: 15px;
         }
     }
+
 
     .hyHomeHeader3{
         margin-bottom:50px;
