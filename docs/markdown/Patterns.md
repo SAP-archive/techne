@@ -136,7 +136,6 @@
       <li>Projects & Sites - square</li>
       <li>Packages - hexagons</li>
     </ul>
-    <p>Please refer to the <a href="#patterns-overall-pattern-reference">Overall Pattern Reference</a> for additional examples.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/cards-Packages.jpg" title="View Full Image" href="#viewFullscreen">
