@@ -22,12 +22,12 @@
     <div class="container-fluid hyHomeContentCentered">
         <div class="row hyHomeHeader3 text-center">
             <div class="col-md-10 col-md-offset-1">
-                <h3>Why is techné different?</h3>
-                <p>techné design patterns serve consumers and business users equally. It enables best practice storefront and other digital touchpoint experiences as well as what we like to call the “consumerization of business user tooling,” which is an ethos that envisions any digital experience, regardless of whether it is buying a shirt as a consumer or marketing that shirt as a business user, will provide the same highly engaged, visual, efficient and fun experience. </p>
+                <h3>Why is Techné different?</h3>
+                <p>Techné' design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
             </div>
-        </div><!-- row why techné -->
+        </div><!-- row why Techné -->
         <div class="row personaIcons">
-            <h3 class="text-center">Who are the techné personas?</h3>
+            <h3 class="text-center">Who are the Techné personas?</h3>
             <div class="col-md-3 text-center personaWrapper">
                 <a data-slide-to="0" data-target="#hyPersonasCarouselID" class="hyPersonaText">
                     <img id="hyConsumUpImg" src="images/home/consumer_up.png"/>
@@ -135,7 +135,7 @@
     <div class="container-fluid hyHomeContentCentered">
         <!-- High-touch User Section-->
         <div class="consumerCarousel" id="hyHomeHighTC">
-            <h3 class="text-center">High-touch Business User</h3>
+            <h3 class="text-center">The Creator</h3>
             <div class="row">
                 <div class="col-md-6">
                     <img src="images/home/hight_user_1.png" class="personaScreen">
@@ -182,7 +182,7 @@
 <div class="hyHomePageSection">
     <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeLowTC">
-            <h3 class="text-center">The Low-touch Business User</h3>
+            <h3 class="text-center">The Enabler</h3>
             <div class="col-md-6">
                 <img src="images/home/lowt_user_1.png" class="personaScreen">
             </div>
@@ -226,7 +226,7 @@
 <div class="hyHomePageSection">
     <div class="container-fluid hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeSoftDevC">
-            <h3 class="text-center">and of course, Software Developers</h3>
+            <h3 class="text-center">The Developer</h3>
             <div class="row">
                 <div class="col-md-6">
                     <img src="images/home/developer_1.png" class="personaScreen">
