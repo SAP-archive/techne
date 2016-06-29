@@ -44,21 +44,15 @@
       {
         "text": "Mixed Component & Pattern Pages",
         "id": "#patterns-mixed-pattern-pages"
-      },  
-      {
-        "text": "Overall Style Reference",
-        "id": "#patterns-overall-pattern-reference"
       }
     ]
 	}
 -->
 
 
-<div class="kss-patterns-page container-fluid" >
-  <div class="row">
-    <h1>Patterns & Layouts</h1>
-    <p>hybris techne allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
-  </div>
+<div class="kss-patterns-page">
+  <h1>Patterns & Layouts</h1>
+  <p>SAP Hybris Techné allows for an immersive, consumer-like experience for business users. Using the components provided in the component library, achieve patterns and mobile-first page layouts as exemplified below.</p>
   <section id="page-layouts" class="kss-page">
     <h2>Page Layouts</h2>
     <p>In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. See examples of the Starter Pages here >> <a href="starter-pages/" target="_blank">Starter Pages</a> and download on Github here >> <a href="https://github.com/SAP/techne/tree/master/dist/demo/starter-pages">Starter Pages on Github </a>.</p>
@@ -142,7 +136,6 @@
       <li>Projects & Sites - square</li>
       <li>Packages - hexagons</li>
     </ul>
-    <p>Please refer to the <a href="#patterns-overall-pattern-reference">Overall Pattern Reference</a> for additional examples.</p>
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
         <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/cards-Packages.jpg" title="View Full Image" href="#viewFullscreen">
@@ -384,17 +377,6 @@
     </div>
   </section>
   --->
-  <section id="patterns-overall-pattern-reference" class="kss-page">
-    <h2>Overall Pattern Reference</h2>
-    <p>Attached is the overall style guide for existing UI Components in techne.  This should be considered a LIVING DOCUMENT for reference only.  Please refer to the “Components” section for the latest and greatest of any UI Component in techne.</p>
-    <div class="row">
-      <div class="col-md-4 col-xs-12 col-sm-6 text-center sectionSpacing">
-        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/techne_styles.png" title="View Full Image" href="#viewFullscreen">
-          <img src="images/thumbnails/techne_styles.jpg" alt="" class="img-thumbnail">
-        </a>
-      </div>
-    </div>
-  </section>
   <div class="modal fade bs-example-modal-lg" id="viewFullscreen">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">

@@ -49,7 +49,7 @@
         ]
     }
     -->
-<div class="kss-guidelines-page container-fluid" >
+<div class="kss-guidelines-page">
     <section id="guidelines-spirit-vision" class="kss-page">
         <h2>Spirit &amp; Vision</h2>
         <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
@@ -442,7 +442,7 @@
         </div>
         <h2>Processing Icon/Treatment</h2>
         <img src="images/visual-system-processing-position.png" alt="" class="img-responsive"> <br><br>
-        <p>It’s important to notify users when the system is processing.  hybris techné uses the above treatment to indicate the system is processing</p>
+        <p>It’s important to notify users when the system is processing.  SAP Hybris Techné uses the above treatment to indicate the system is processing</p>
         <hr>
     </section>
     <!-- load tone/voice -->
@@ -728,7 +728,7 @@
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
-            <p>Being truly user-centric means supporting ALL users.  techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
+            <p>Being truly user-centric means supporting ALL users.  Techné is designed to be accessible to all users.   All interfaces should make every best effort to adhere to the W3C Accessibillty guideline critiera  as detailed here:</p>
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
