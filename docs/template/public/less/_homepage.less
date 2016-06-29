@@ -6,6 +6,19 @@ header.hyHomeHeaderMain {
     background: url("/images/home/banner_bg.png") top center repeat-x ;
     margin: -20px -15px 0 -15px; 
     height: 378px;
+    position: relative;
+
+    .techne-definition {
+        font-size: 13px;
+        margin: 0;
+        padding: 0 20px;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        width:100%;
+        color: @white;
+        font-style: italic;
+    }
 }
 
 header.hyHomeHeaderMinor {
@@ -30,12 +43,7 @@ header.hyHomeHeaderMinor {
 
     }
 
-    .hyHomeHeader2 p {
-        margin-bottom: 0;
-        padding:20px;
-        font-size: 20px;
 
-    }
 
     .hyHomeHeader {
         color: white;
@@ -49,11 +57,6 @@ header.hyHomeHeaderMinor {
             }
         }
     
-        .techne-defination {
-            font-size: 12px;
-            margin-top: 40px;
-            display: block;
-        }
         .btn-warning{
             color: @btn-type-color;
         }
@@ -68,13 +71,24 @@ header.hyHomeHeaderMinor {
         }
     }
 
-    .hyHomeHeader2 p {
-        line-height: 40px;
+    .hyHomeHeader2{
 
-        @media (max-width: 769px) {
-            line-height: 30px;
+        p {
+            line-height: 40px;
+            margin-bottom: 0;
+            padding:45px 20px;
+            font-size: 21px;
+
+            @media (max-width: 769px) {
+                line-height: 30px;
+            }
+        }
+        .link-arrow{
+            background: url("/images/home/link-arrow.png") right 7px no-repeat;
+            padding-right: 15px;
         }
     }
+
 
     .hyHomeHeader3{
         margin-bottom:50px;
