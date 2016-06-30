@@ -20,7 +20,7 @@
   <link rel="icon" type="image/png" href="https://techne.yaas.io/images/favicons/favicon-16x16.png" sizes="16x16">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="https://techne.yaas.io/images/favicons/mstile-144x144.png">
-  
+
   <title>Techne: Yaas Styleguide</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node" />
@@ -29,7 +29,9 @@
 
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="public/y-techne/dist/css/techne.min.css">
+  <link rel="stylesheet" href="public/dist/techne/css/techne.min.css">
+
+  <script src="public/js/jquery.min.js"></script>
 </head>
 <body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}">
 
@@ -90,16 +92,6 @@
                         </div>
                     </li>
                     <li class="account-overlay-login" >
-                        <!-- <div class="login-form">
-                            <p>Please sign In with your Yaas credentials:</p>
-                            <input class="form-field" placeholder="Email" name="email" id="email" />
-                            <input class="form-field" type="password" placeholder="Password" id="password" name="password" />
-                            <div class="action-buttons">
-                                <a class="forgot-pwd" href="#">Forgot your password?</a>
-                                <button class="btn-submit">Sign In</button>
-                                <div class="clr"></div>
-                            </div>
-                        </div>-->
                         <div class="menu-link">
                             <a href="https://builder.yaas.io/">Sign In</a>
                         </div>
@@ -119,7 +111,6 @@
         </a>
     </div>
         <div id="kss-top-nav">
-
             <a href="#menu-toggle" id="menu-toggle" class="js-menu-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -127,8 +118,6 @@
                 <span class="icon-bar"></span>
 
             </a>
-
-
             <ul class="hidden-xs">
                 <li>
                     {{#if_eq pagename "index"}}
@@ -169,8 +158,6 @@
                 </li>
 
             </ul>
-
-
         </div>
     </header>
   <div class="container-fluid" id="kss-wrapper">
@@ -185,9 +172,6 @@
         {{/if}}
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
-
-
-
                         <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
                             {{#if_eq pagename "index"}}
                               <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
@@ -209,19 +193,16 @@
                             {{/if_eq}}
                         </ul>
                 </nav>
-
-
             </aside>
           </div>
-
         {{#if leftNavMobileOnly}}
-        <div role="main" id="kss-main" class="kss-main col-xs-12">
+          <div role="main" id="kss-main" class="kss-main col-xs-12">
         {{else}}
-        <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
+          <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
         {{/if}}
-      {{else}}
-        <div role="main" id="kss-main" class="kss-main col-xs-12">
-      {{/if}}
+        {{else}}
+          <div role="main" id="kss-main" class="kss-main col-xs-12">
+        {{/if}}
             <article id="kss-content">
               {{#if overview}}
                 {{html overview}}
@@ -288,107 +269,78 @@
                 {{/if}}
             </article>
         </div>
-
     </section>
   </div>
-<footer class="footer">
-      <div class="footer-right">
-          <!-- <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal">Feedback</a> -->
-          <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal" style="display: none;">Feedback</a>
-          <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
-          <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
-      </div>
-      <div class="footer-left">
-
-          <a href="http://www.sap.com/about/legal/copyright.html" target="_blank" class="footer-item">Copyright</a>
-          <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
-          <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
-          <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
-      </div>
-</footer>
+  <footer class="footer">
+        <div class="footer-right">
+            <a href="#" class="feedback-affix" data-toggle="modal" data-target="#feedbackModal" style="display: none;">Feedback</a>
+            <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
+            <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
+        </div>
+        <div class="footer-left">
+            <a href="http://www.sap.com/about/legal/copyright.html" target="_blank" class="footer-item">Copyright</a>
+            <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
+            <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
+            <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
+        </div>
+  </footer>
+</div>
+<!-- feedback modal -->
+<div class="modal fade" id="feedbackModal">
+  <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-  <script src="public/kss.js"></script>
 
-  <script src="public/prettify.js"></script>
-  <script src="public/js/jquery.min.js"></script>
-  <script src="public/main.js"></script>
-  <script src="public/js/bootstrap.min.js"></script>
-  <script src="public/js/select2.js"></script>
-  <script src="public/js/techne.min.js"></script>
+
   <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-  <script src="public/js/yaas.sso.js"></script>
+  <script src="https://www.yaas.io/globalresources/v3/js/global.novendor.min.js"></script>
+  <script src="https://www.yaas.io/globalresources/v3/js/yaas.ga.min.js"></script>
+
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="public/main.js"></script>
   <script src="public/jquery.cookiebar.js"></script>
 
-  <!--<script src="public/jquery-ui.js"></script>-->
-  <script src="public/script.js"></script>
-  <!--<script src="public/super-nav.js"></script>-->
+  <script src="public/js/yaas.sso.js"></script>
 
-  
-  <!-- TODO to be fixed!-->
-  <script>
+  <script src="public/dist/js/jquery.min.js"></script>
+  <script src="public/dist/js/bootstrap.min.js"></script>
+  <script src="public/dist/js/select2.js"></script>
+
+  <script src="public/script.js"></script>
+
+  <script type="text/javascript">
+
     $(document).ready(function() {
       sso('https://builder.yaas.io');
-    });
-  </script>
 
-  <!--{{! This won't be included in the demo page }}-->
-  <!--{{#if argv.xdemo}}-->
-    <!--<script type="text/javascript">-->
-    <!--var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);-->
-    <!--(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();-->
-    <!--</script>-->
-  <!--{{/if}}-->
-  
-    <script src="https://www.yaas.io/globalresources/v3/js/global.novendor.min.js"></script>
-
-    <!-- feedback modal -->
-    <div class="modal fade" id="feedbackModal">
-      <div id="feedbackPlaceholder"></div>
-    </div>
-    <!-- /feedback modal -->
-
-    <!-- feedback script -->
-    <script type="text/javascript">
       $('#feedbackPlaceholder').load("https://feedback.yaas.io/form/basic", function(response, status, xhr){
         if(xhr.status === 200){
           $('.feedback-affix').show();
         }
       });
-    </script>
-    <!-- /feedback script -->
 
-    <!-- cookie bar -->
-    <script src="https://www.yaas.io/globalresources/v3/js/yaas.ga.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $.cookieBar();
-        });
-    </script>
-    <!-- /cookie bar -->
+      // cookie bar
+      $.cookieBar();
 
-    <!-- google analytics -->
-    <script type="text/javascript"> 
-      $(document).ready(function(){ 
-
-        sendYaaSAnalytics([
-            {
-              "id": "UA-56768310-10",
-              "name": "techne"
-            },
-            {
-              "id": "UA-56768310-7",
-              "name": "yaas"
-            }
-          ],
+      // google analytics
+      sendYaaSAnalytics([
           {
-            "pageview": true,
-            "exception": true
-          });
+            "id": "UA-56768310-10",
+            "name": "techne"
+          },
+          {
+            "id": "UA-56768310-7",
+            "name": "yaas"
+          }
+        ],
+        {
+          "pageview": true,
+          "exception": true
+        });
+    });
 
-      }); 
-    </script>
-    <!-- /google analytics -->
-
-    </body>
+  </script>
+  <!-- /google analytics -->
+  </body>
 </html>
