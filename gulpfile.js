@@ -205,7 +205,7 @@ gulp.task('deploy', function(){
             './bower_components/select2/select2.js',
             './src/js/**/*.js'
         ]
-    ).pipe(gulp.dest(paths.environment+'/js/'))
+    ).pipe(gulp.dest(paths.environment+'/js/'));
 
     gulp.src('./bower_components/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('docs/kss/public/js/'));
@@ -291,6 +291,9 @@ gulp.task('starterpages',
         //copy  generated JS files to starter pages
         gulp.src('dist/js/**/*')
         .pipe( gulp.dest('docs/kss/starter-pages/js/') );
+
+        gulp.src('dist/js/**/*')
+        .pipe( gulp.dest('dist/demo/starter-pages/js/') );
 
         //copy techne folder to demo pages
         gulp.src('dist/techne/**/*')
