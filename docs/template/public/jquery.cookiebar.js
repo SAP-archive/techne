@@ -1,14 +1,14 @@
 /*
  * Copyright (C) 2012 PrimeBox (info@primebox.co.uk)
- * 
+ *
  * This work is licensed under the Creative Commons
  * Attribution 3.0 Unported License. To view a copy
  * of this license, visit
  * http://creativecommons.org/licenses/by/3.0/.
- * 
+ *
  * Documentation available at:
  * http://www.primebox.co.uk/projects/cookie-bar/
- * 
+ *
  * When using this software you use it at your own risk. We hold
  * no responsibility for any damage caused by using this plugin
  * or the documentation provided.
@@ -50,14 +50,14 @@
 			referrer: String(document.referrer) //Where visitor has come from
 		};
 		var options = $.extend(defaults,options);
-		
+
 		//Sets expiration date for cookie
 		var expireDate = new Date();
 		expireDate.setTime(expireDate.getTime()+(options.expireDays*86400000));
 		expireDate = expireDate.toGMTString();
-		
+
 		var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
-		
+
 		//Retrieves current cookie preference
 		var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
 		for (i=0;i<aCookies.length;i++){
@@ -97,7 +97,7 @@
 		}else{
 			//Sets up enable/accept button if required
 			var message = options.message.replace('{policy_url}',options.policyURL);
-			
+
 			if(options.acceptButton){
 				var acceptButton = '<a href="" class="cb-enable">'+options.acceptText+'</a>';
 			}else{
@@ -130,7 +130,7 @@
 			}else{
 				var zindex = '';
 			}
-			
+
 			//Displays the cookie bar if arguments met
 			if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
 				if(options.append){
@@ -139,7 +139,7 @@
 					$(options.element).prepend('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
 				}
 			}
-			
+
 			var removeBar = function(func){
 				if(options.acceptOnScroll) $(document).off('scroll');
 				if(typeof(func)==='function') func(cookieValue);
@@ -175,7 +175,7 @@
 			var anyClick = function(e){
 				if(!$(e.target).hasClass('cb-policy')) cookieAccept();
 			};
-			
+
 			$('#cookie-bar .cb-enable').click(function(){cookieAccept();return false;});
 			$('#cookie-bar .cb-disable').click(function(){cookieDecline();return false;});
 			if(options.acceptOnScroll){
