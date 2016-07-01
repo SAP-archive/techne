@@ -2,9 +2,9 @@ body{
 	overflow: hidden;
 }
 
-.top-nav{					
-	background: #27394f; 
-	color:#fff; 
+.top-nav{
+	background: #27394f;
+	color:#fff;
     overflow: hidden;
 }
 
@@ -14,7 +14,7 @@ body{
     text-decoration: none;
     padding: 10px 0 0 20px;
     display: inline-block;
-    
+
 }
 
 .brand:hover{
@@ -27,15 +27,15 @@ body{
     height: 50px;
 }
 
-.sub-nav{					
+.sub-nav{
     color: #fff;
-	background: #0486e0; 
+	background: #0486e0;
 	height: 50px;
     padding: 18px;
 }
 
 .sub-nav a{
-    color: #fff; 
+    color: #fff;
     margin-right: 20px;
     text-decoration: none;
 }
@@ -44,24 +44,24 @@ body{
 
 
 
-.offcanvas-row{			
-	padding-left: 0; 
+.offcanvas-row{
+	padding-left: 0;
 	padding-right: 0;
 }
 
-.side-bar{					
-	background:#233243; 
-	width: 266px; 
-	color:#fff; 
-	vertical-align: middle; 
-	text-align: center; 
-	text-transform: uppercase; 
-	position: fixed; 
-	left: 0; 
+.side-bar{
+	background:#233243;
+	width: 266px;
+	color:#fff;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	position: fixed;
+	left: 0;
 	height: 100%;
 }
 
-.content{					
+.content{
 	padding-left: 266px;
 	margin-top: 100px;
 	position: absolute;
@@ -76,23 +76,23 @@ body{
 	width:100%;
 }
 
-.page-header{				
-	margin-top: 100px; 
-	margin-left: 266px; 
+.page-header{
+	margin-top: 100px;
+	margin-left: 266px;
 	height: 70px;
 }
 
-.page-content{				
+.page-content{
 	padding-top: 90px;
 }
 
 @media screen and (max-width: 778px) {
 
-	.side-bar{ 			
+	.side-bar{
 		left: -266px;
 	}
 
-	.content {			
+	.content {
 		padding-left: 0;
 	}
 
@@ -100,10 +100,9 @@ body{
 		margin-left: 0;
 	}
 
-	.btn-back{			
-		padding:10px 0px!important; 
+	.btn-back{
+		padding:10px 0px!important;
 		margin-right: 5px!important;
 	}
 
 }
-
