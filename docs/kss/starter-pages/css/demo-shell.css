@@ -1,0 +1,108 @@
+body{
+	overflow: hidden;
+}
+
+.top-nav{
+	background: #27394f;
+	color:#fff;
+    overflow: hidden;
+}
+
+.brand{
+    font-size: 20px;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 0 0 20px;
+    display: inline-block;
+
+}
+
+.brand:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.brand-logo {
+    padding: 10px;
+    height: 50px;
+}
+
+.sub-nav{
+    color: #fff;
+	background: #0486e0;
+	height: 50px;
+    padding: 18px;
+}
+
+.sub-nav a{
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+.offcanvas-row{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.side-bar{
+	background:#233243;
+	width: 266px;
+	color:#fff;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	position: fixed;
+	left: 0;
+	height: 100%;
+}
+
+.content{
+	padding-left: 266px;
+	margin-top: 100px;
+	position: absolute;
+	width: 100%;
+	top:0;
+	bottom: 0;
+
+}
+
+.content-frame{
+	height: 100%;
+	width:100%;
+}
+
+.page-header{
+	margin-top: 100px;
+	margin-left: 266px;
+	height: 70px;
+}
+
+.page-content{
+	padding-top: 90px;
+}
+
+@media screen and (max-width: 778px) {
+
+	.side-bar{
+		left: -266px;
+	}
+
+	.content {
+		padding-left: 0;
+	}
+
+	.page-header{ 		
+		margin-left: 0;
+	}
+
+	.btn-back{
+		padding:10px 0px!important;
+		margin-right: 5px!important;
+	}
+
+}
