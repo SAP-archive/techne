@@ -7,8 +7,8 @@ jQuery(document).ready(function() {
 
     $menuItem.eq(ref).addClass('kss-active');
      $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
-        });
+          $('.row-offcanvas').toggleClass('active')
+      });
 
      if ($(".js_navtrigger.active").size() > 0) {
         $menuItem.removeClass('kss-active');

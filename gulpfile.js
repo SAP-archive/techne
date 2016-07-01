@@ -287,6 +287,18 @@ gulp.task('starterpages',
         //copy techne into the demo path
         gulp.src('dist/css/**/*').pipe(gulp.dest('docs/kss/starter-pages/css'));
         gulp.src('dist/fonts/**/*').pipe(gulp.dest('docs/kss/starter-pages/fonts'));
+
+        //copy  generated JS files to starter pages
+        gulp.src('dist/js/**/*')
+        .pipe( gulp.dest('docs/kss/starter-pages/js/') );
+
+        //copy techne folder to demo pages
+        gulp.src('dist/techne/**/*')
+        .pipe( gulp.dest('docs/kss/starter-pages/techne/') );
+
+        //copy techne folder to demo pages
+        gulp.src('dist/bootstrap/**/*')
+        .pipe( gulp.dest('docs/kss/starter-pages/bootstrap/') );
     }
 );
 
