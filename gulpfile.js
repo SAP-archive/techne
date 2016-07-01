@@ -313,9 +313,10 @@ gulp.task('packagedist',
     gulp.src('./bower_components/bootstrap/fonts/**/*').pipe( gulp.dest('dist/bootstrap/fonts') );
 
     //copy the dist files
-    gulp.src(['docs/kss/starter-pages/css/**/*',
-              'docs/kss/starter-pages/fonts/**/*',
+    gulp.src(['docs/kss/starter-pages/bootstrap/**/*',
               'docs/kss/starter-pages/images/**/*',
+              'docs/kss/starter-pages/js/**/*',
+              'docs/kss/starter-pages/techne/**/*',
               'docs/kss/starter-pages/cards.html',
               'docs/kss/starter-pages/details-1.html',
               'docs/kss/starter-pages/details-2.html',
