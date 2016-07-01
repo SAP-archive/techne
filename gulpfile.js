@@ -105,8 +105,6 @@ gulp.task('setpath', function(cb) {
 gulp.task('less', ['setpath'] ,
     function()
     {
-
-
         gulp.src(paths.less)
         //.pipe(sourcemaps.init())
         .pipe(
