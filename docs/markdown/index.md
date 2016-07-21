@@ -1,31 +1,25 @@
 <div class="hyHomePage">
     <header class="main-header hyHomeHeaderMain">
-        <div class="container-fluid">
-            <div class="page-header hyHomeHeader text-center">
-                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <h1>SAP Hybris Techné</h1>
-                    <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design that gives teams the freedom and creativity to implement experiences from design to deployment FAST on YaaS, or anywhere they choose.</p>
-                    <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
-                </div>
-            </div>
+        <div class="hyHomeHeader text-center">
+            <h1>SAP Hybris Techné</h1>
+            <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design that gives teams the freedom and creativity to implement experiences from design to deployment FAST on YaaS, or anywhere they choose.</p>
+            <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
         </div>
         <span class="techne-definition text-center">“Techné” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</span>
     </header>
     <header class="hyHomeHeaderMinor">
-        <div class="container-fluid">
-            <div class="hyHomeHeader2">
-                <p class="text-center">Have questions about Techné? Visit us at <a href="https://experts.hybris.com/topics/techne.html" target="_blank" class="link-arrow">Hybris Experts</a></p>
-            </div>
+        <div class="hyExpertsLink">
+            <p class="text-center">Have questions about Techné? Visit us at <a href="https://experts.hybris.com/topics/techne.html" target="_blank" class="link-arrow">Hybris Experts</a></p>
         </div>
     </header>
 <div class="hyHomePageSection">
-    <div class="container-fluid hyHomeContentCentered">
+    <div class="hyHomeContentCentered">
+        <!-- row why Techné -->
         <div class="row hyHomeHeader3 text-center">
-            <div class="col-md-10 col-md-offset-1">
-                <h3>Why is Techné different?</h3>
-                <p>Techné design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
-            </div>
-        </div><!-- row why Techné -->
+            <h3>Why is Techné different?</h3>
+            <p>Techné design patterns focus on delivering an experience that reflects what we call “the consumerization of business user tooling.” It's an ethos that says an experience designed for those working in any kind of development, administrative or "back office" type scenario should drop the utilitarian design mentality and embrace the same interactions, visualizations and engaging, fun flows to accomplish tasks as any consumer-facing experience.</p>
+        </div>
+        <!-- row - personas -->
         <div class="row personaIcons">
             <h3 class="text-center">Who are the Techné personas?</h3>
             <div class="col-md-3 text-center personaWrapper">
@@ -52,9 +46,11 @@
                     <p class="text-center">The Developer</p>
                 </a>
             </div>
-        </div> <!-- row - personas -->
+        </div> 
         <div class="row personasCarousel">
+            <!-- carousel #hyPersonasCarouselID -->
             <div id="hyPersonasCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- carousel inner-->
                 <div class="carousel-inner">
                     <div class="item active text-center" data-img-up="#hyConsumUpImg" data-img-over="#hyConsumOverImg">
                         <p class="hyPersonaTitle">The Consumer</p>
@@ -72,19 +68,19 @@
                     <p class="hyPersonaTitle">The Developer</p>
                         <p>These are the people who make it possible for all other personas to get stuff done. Whether working independently or in a team; for themselves or for another brand, these developers need tools to get s#&% done fast. There is no tolerance for confusing interfaces, slowness or barriers to getting that next release out. In fact the less time spent in a 'tool' the better. <a href="#hyHomeSoftDevC">Learn more »</a></p>
                     </div>
-                </div> <!-- carousel inner-->
+                </div> 
                 <a href="#hyPersonasCarouselID" class="left carousel-control" role="button" data-slide="prev">
                     <img src="images/home/arrow_left.png">
                 </a>
                 <a href="#hyPersonasCarouselID" class="right carousel-control" role="button" data-slide="next">
                     <img src="images/home/arrow_right.png">
                 </a>
-            </div><!-- carousel #hyPersonasCarouselID -->
-        </div><!-- row carousel -->
+            </div>
+        </div>
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container-fluid hyHomeContentCentered">
+    <div class="hyHomeContentCentered">
         <!-- Consumer Section-->
         <div class="consumerCarousel" id="hyHomeConsumerC">
             <h3 class="text-center">The Consumer</h3>
@@ -94,7 +90,7 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>Visual, social, collaborative. Expects a unified experience across channels and devices; how they want it, where they want it, when they want it.</strong></p>
-                    <div class="container-fluid">
+                    <div class="">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#cons_wwwwh">Context</a></li>
@@ -132,7 +128,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container-fluid hyHomeContentCentered">
+    <div class="hyHomeContentCentered">
         <!-- High-touch User Section-->
         <div class="consumerCarousel" id="hyHomeHighTC">
             <h3 class="text-center">The Creator</h3>
@@ -142,7 +138,7 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>Our Marketers, Merchandisers, Product Managers and other Designer people</strong></p>
-                    <div class="container-fluid">
+                    <div class="">
                         <div class="row hyPersonaTab">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#hight_wwwwh">Context</a></li>
@@ -180,7 +176,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container-fluid hyHomeContentCentered">
+    <div class="hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeLowTC">
             <h3 class="text-center">The Enabler</h3>
             <div class="col-md-6">
@@ -188,7 +184,7 @@
             </div>
             <div class="col-md-6 hyPersonaTabs">
                 <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
-                <div class="container-fluid">
+                <div class="">
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">Context</a></li>
@@ -224,7 +220,7 @@
     </div>
 </div>
 <div class="hyHomePageSection">
-    <div class="container-fluid hyHomeContentCentered">
+    <div class="hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeSoftDevC">
             <h3 class="text-center">The Developer</h3>
             <div class="row">
@@ -233,35 +229,33 @@
                 </div>
                 <div class="col-md-6 hyPersonaTabs">
                     <p><strong>The heart of YaaS. They need stability, community and tools that don’t get in their way</strong></p>
-                    <div class="container-fluid">
-                        <div class="row hyPersonaTab">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#dev_wwwwh">Context</a></li>
-                                <li class="tab-seperator">|</li>
-                                <li><a data-toggle="tab" href="#dev_interface">UI Supports</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade active in" id="dev_wwwwh">
-                                    <ul class="w5_list">
-                                        <li>Works everywhere</li>
-                                        <li>Works with remote teams</li>
-                                        <li>High bandwidth and low bandwidth</li>
-                                        <li>Typically under tight deadlines</li>
-                                        <li>Task-driven</li>
-                                        <li>Performance-driven</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="dev_interface">
-                                    <ul class="w5_list">
-                                        <li>Quick and easy setup</li>
-                                        <li>Instant feedback</li>
-                                        <li>Error avoidance</li>
-                                        <li>One-click access to documentation</li>
-                                        <li>Speed</li>
-                                        <li>Access to developer community</li>
-                                        <li>Preview of final experience where applicable</li>
-                                    </ul>
-                                </div>
+                    <div class="row hyPersonaTab">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#dev_wwwwh">Context</a></li>
+                            <li class="tab-seperator">|</li>
+                            <li><a data-toggle="tab" href="#dev_interface">UI Supports</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="dev_wwwwh">
+                                <ul class="w5_list">
+                                    <li>Works everywhere</li>
+                                    <li>Works with remote teams</li>
+                                    <li>High bandwidth and low bandwidth</li>
+                                    <li>Typically under tight deadlines</li>
+                                    <li>Task-driven</li>
+                                    <li>Performance-driven</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="dev_interface">
+                                <ul class="w5_list">
+                                    <li>Quick and easy setup</li>
+                                    <li>Instant feedback</li>
+                                    <li>Error avoidance</li>
+                                    <li>One-click access to documentation</li>
+                                    <li>Speed</li>
+                                    <li>Access to developer community</li>
+                                    <li>Preview of final experience where applicable</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -270,7 +264,7 @@
         </div>
     </div>
     <br><br>
-</div><!--/.container-->
+</div>
 </div>
 
 <!--SIDENAVCONFIG

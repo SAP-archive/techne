@@ -2,6 +2,11 @@
 
 @import '_variables';
 
+.hyHomeMaxWidth{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 header.hyHomeHeaderMain {
     background: url("/images/home/banner_bg.png") top center repeat-x ;
     margin: -20px -15px 0 -15px; 
@@ -43,11 +48,11 @@ header.hyHomeHeaderMinor {
 
     }
 
-
-
     .hyHomeHeader {
         color: white;
-        padding: 30px 0 100px 0;
+        padding: 30px 10px 100px 20px;
+        
+        .hyHomeMaxWidth;        
 
         h1{
             margin:20px 0 30px 0;
@@ -71,7 +76,10 @@ header.hyHomeHeaderMinor {
         }
     }
 
-    .hyHomeHeader2{
+
+
+    .hyExpertsLink{
+        transition: background-color 0.25s ease;
 
         p {
             line-height: 40px;
@@ -87,6 +95,10 @@ header.hyHomeHeaderMinor {
             background: url("/images/home/link-arrow.png") right 7px no-repeat;
             padding-right: 15px;
         }
+
+        &:hover{
+            background: @screen-bg_gd;
+        }
     }
 
 
@@ -94,9 +106,10 @@ header.hyHomeHeaderMinor {
         margin-bottom:50px;
     }    
 
-    .hyHomeHeader3, .personaIcons {
+    .hyHomeHeader3, 
+    .personaIcons {
         background-color: @white;
-        
+        .hyHomeMaxWidth;
         img{
             margin-bottom: 20px;
         }
@@ -113,6 +126,7 @@ header.hyHomeHeaderMinor {
         a.hyPersonaText p {
             color: black;
         }
+
     }
 
     .hyHomeContentCentered p {
@@ -154,21 +168,12 @@ header.hyHomeHeaderMinor {
         }
     }
     
-    .hyHomeHeader3hyHomeHeader3, 
-    .personaIcons {
-        background-color: @white;
-        
-        a.hyPersonaText:hover {
-            text-decoration: none;
-        }
-        
-        a.hyPersonaText p {
-            color: black;
-        }
-    }
+
     .personasCarousel {
         background-color: @white;
         min-height: 280px;
+        
+        .hyHomeMaxWidth;
 
         .carousel-control{
             padding-top:50px;
@@ -203,12 +208,14 @@ header.hyHomeHeaderMinor {
     }
 
     .hyHomePageSection:nth-of-type(even) {
-        background-color: @screen-bg_gd;
+        background-color: @home-persona-bg;
         margin-left: -15px;
         margin-right: -15px;
     }
 
     .consumerCarousel {
+
+        .hyHomeMaxWidth;
         
         .hyHomeSlider {
             padding-top: 20px;
