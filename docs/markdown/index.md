@@ -179,12 +179,12 @@
     <div class="hyHomeContentCentered">
         <div class="consumerCarousel" id="hyHomeLowTC">
             <h3 class="text-center">The Enabler</h3>
-            <div class="col-md-6">
-                <img src="images/home/lowt_user_1.png" class="personaScreen">
-            </div>
-            <div class="col-md-6 hyPersonaTabs">
-                <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
-                <div class="">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/home/lowt_user_1.png" class="personaScreen">
+                </div>
+                <div class="col-md-6 hyPersonaTabs">
+                    <p><strong>Our  IT, Operations, Customer Service, Order Management people</strong></p>
                     <div class="row hyPersonaTab">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#lowt_wwwwh">Context</a></li>
