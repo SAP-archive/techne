@@ -107,23 +107,23 @@
         <p>techne combines the soft modern tones with high-contrast, friendly colors.</p>
         <div class="row text-center visualSystemSpacing">
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #e0e9f0;"></div>
+                <div class="circle circle-primary-grey"></div>
                 <h4>#e0e9f0</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #ffffff;"></div>
+                <div class="circle circle-white"></div>
                 <h4>#ffffff</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #313440;"></div>
+                <div class="circle circle-primary-dark-grey"></div>
                 <h4>#313440</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #0486e0;"></div>
+                <div class="circle circle-primary-blue"></div>
                 <h4>#0486e0</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #fcdf2b;"></div>
+                <div class="circle circle-primary-yellow"></div>
                 <h4>#fcdf2b</h4>
             </div>
         </div>
@@ -131,19 +131,19 @@
         <p>We use a broad range of secondary colors that complement our primary colors.</p>
         <div class="row text-center visualSystemSpacing">
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #b7c1cd;"></div>
+                <div class="circle circle-secondary-grey"></div>
                 <h4>#b7c1cd</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #04ce26;"></div>
+                <div class="circle circle-secondary-green"></div>
                 <h4>#04ce26</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #fbbb21;"></DIV>
+                <div class="circle circle-secondary-orange"></DIV>
                 <h4>#fbbb21</h4>
             </div>
             <div class="col-md-circle col-xs-6">
-                <div class="circle" style="background: #ff3b30;"></DIV>
+                <div class="circle circle-secondary-red"></DIV>
                 <h4>#ff3b30</h4>
             </div>
         </div>

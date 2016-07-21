@@ -1,9 +1,15 @@
 // shared styles across pages 
 #kss-content {
+
+    h2, h3{
+        font-weight: 600;
+    }
+
     .sectionSpacing {
         padding-bottom: 30px;
         padding-top: 30px;
     }
+    
     .table-behavoir-cell .seperator {
         margin: 0 50px 0 0;
     }
@@ -26,14 +32,49 @@
     }
 
     .circle {
-        border: 1px solid #cfd8e3;
         box-shadow: 0px 1px 1px #fff;
         margin: 0 auto 20px auto;
         width: 100%;
         height: 0;
         padding: 50% 0;
         border-radius: 50%;
-        
+    }
+
+    .circle-primary-grey{
+        background-color: @screen-bg_gd;
+    }
+
+    .circle-white{
+        background-color: @white;
+        border: 1px solid @circle-border-color;
+    }
+
+    .circle-primary-dark-grey{
+        background-color: @typography_gd;
+    }
+
+    .circle-primary-blue{
+        background-color: @blue_gd;
+    }
+
+    .circle-primary-yellow{
+        background-color: @primary-yellow;
+    }    
+
+    .circle-secondary-grey{
+        background-color: @secondary-grey;
+    }
+
+    .circle-secondary-green{
+        background-color: @secondary-green;
+    }
+
+    .circle-secondary-orange{
+        background-color: @secondary-orange;
+    }
+
+    .circle-secondary-red{
+        background-color: @secondary-red;
     }
 
     .circle-type {
