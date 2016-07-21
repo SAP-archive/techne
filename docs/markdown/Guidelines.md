@@ -11,12 +11,36 @@
                "id": "#guidelines-design-principles"
              },
              {
+               "text": "Navigation",
+               "id": "#guidelines-navigation"
+             },
+             {
                "text": "Visual System",
                "id": "#guidelines-visual-system"
              },
              {
                "text": "Tone & Voice",
                "id": "#guidelines-tone-voice"
+             },
+        	 {
+        	   "text": "Messaging & Dialogs",
+        	   "id": "#guidelines-messaging"
+        	 },
+             {
+               "text": "System Errors",
+               "id": "#guidelines-system-errors"
+             },	 
+             {
+               "text": "Form Validation & Error Avoidance",
+               "id": "#form-validation"
+             },  
+             {
+               "text": "Writing Help",
+               "id": "#writing-help"
+             },
+             {
+               "text": "Infinite Scroll & Pagination",
+               "id": "#guidelines-scroll-pagination"
              },
              {
                "text": "Accessibility",
@@ -28,7 +52,7 @@
 <div class="kss-guidelines-page">
     <section id="guidelines-spirit-vision" class="kss-page">
         <h2>Spirit &amp; Vision</h2>
-        <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers, we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used.</p>
+        <p>We like to think we know what users want, and that’s what we design to. Covering both business users and consumers,  we have controls, patterns, layouts and guidelines, but those tools need to come together to meet the Expectations, Values, Motivations and avoid the Deal Breakers so that the experience is optimized for the individual user and not the technologies used. </p>
         <div class="hybris-guy-bg">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
@@ -99,52 +123,115 @@
             </div>
         </div>
     </section>
+    <section id="guidelines-navigation" class="kss-page">
+        <h2>Navigation and Parent/Child Panels</h2>
+        <h3>YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.</h3>
+        <p>A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.</p>
+        <p>It is not recommended additional panels are created or nested within the existing parent/child structure as this will put the overall flow and focus of content at risk.</p>
+        <h3>Mobile Navigation</h3>
+        <p>At the mobile inflection point menu is closed by default.</p>
+        <div class="row">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
+                <img src="images/navigation-mobile-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
+            </div>
+            <span class="visible-xs"><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-mobile-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+         <span class="visible-xs"><br><br><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-mobile-open-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
+            </div>
+        </div>
+        <hr>
+        <h3>Tablet Navigation</h3>
+        <p>At the tablet inflection point menu is closed by default. </p>
+        <div class="row">
+            <div class="col-md-4 hidden-sm hidden-xs text-center">
+                <img src="images/navigation-tablet-closed.png" alt="" class="img-responsive"> <br> Default View - Collapsed menu
+            </div>
+            <span class="visible-xs"><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-tablet-open.png" alt="" class="img-responsive"> <br> Menu expanded
+            </div>
+        <span class="visible-xs"><br><br></span>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="images/navigation-tablet-OPEN-2.png" alt="" class="img-responsive"> <br>Yaas Menu expanded
+            </div>
+        </div>
+        <hr>
+        <h3>Desktop Navigation</h3>
+        <p>At the desktop inflection point menu is open by default with a clear indication of how to close to take full advantage of the available screen real estate. </p>
+        <img src="images/navigation-desktop.png" alt="" class="img-responsive">
+    </section>
     <!-- load visual system -->
     <section id="guidelines-visual-system" class="kss-page visual-system">
         <h2>Visual System</h2>
-        <p>With the YaaS identity we combine strong, meaningful attributes and elements to form a transformative brand for a transformative time.</p>
-        <h3>Primary Colors</h3>
-        <p>techne combines the soft modern tones with high-contrast, friendly colors.</p>
-        <div class="row text-center visualSystemSpacing">
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-primary-grey"></div>
-                <h4>#e0e9f0</h4>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-white"></div>
-                <h4>#ffffff</h4>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-primary-dark-grey"></div>
-                <h4>#313440</h4>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-primary-blue"></div>
-                <h4>#0486e0</h4>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-primary-yellow"></div>
-                <h4>#fcdf2b</h4>
+        <h3>Main Colors</h3>
+        <p>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</p>
+        <div class="row">
+            <div class="row text-center">
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #E0E9F0;"></div>
+                    <p class="no-bottom-margin">Screen Background</p>
+                    <h4>#E0E9F0</h4>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #FFFFFF;"></div>
+                    <p class="no-bottom-margin">Content Background</p>
+                    <h4>#FFFFFF</h4>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #313440;"></div>
+                    <p class="no-bottom-margin">Typography (Main)</p>
+                    <h4>#313440</h4>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #0486E0;"></div>
+                    <p class="no-bottom-margin">Text Link Color</p>
+                    <h4>#0486E0</h4>
+                </div>
             </div>
         </div>
-        <h3 class="visualSystemSpacing">Secondary Colors</h3>
-        <p>We use a broad range of secondary colors that complement our primary colors.</p>
-        <div class="row text-center visualSystemSpacing">
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-secondary-grey"></div>
-                <h4>#b7c1cd</h4>
+        <div class="usage visualSystemSpacing">
+            <h4>Usage Guidelines</h4>
+            <p><b>Screen Background:</b> use app-wide as the background color</p>
+            <p><b>Content Background:</b> use app-wide as background for any content block. Provides contrast between screen background and content background.</p>
+            <p><b>Typography (Main):</b> use app-wide for body copy and headings. Provides for high-contrast on white background.</p>
+            <p><b>Text Link Color:</b> use app-wide for links in any context except for alerts, errors & notifications.</p>
+        </div>
+        <h3 class="visualSystemSpacing">Alerts, Errors &amp; Notifications</h3>
+        <p>All alerts within the application are color coded to emphasize the level of urgency.  In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task.  The color coded system should allow at-a-glance understanding of allowable actions.</p>
+        <p>These colors are desaturated to work better with the primary application colors.</p>
+        <div class="row text-center">
+            <div class="col-md-5ths col-xs-6">
+                <div class="circle"style="background: #d3dbe6;">
+                </div>
+                <p class="no-bottom-margin">Help Information</p>
+                <h4>#D3DBE6</h4>
             </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-secondary-green"></div>
-                <h4>#04ce26</h4>
+            <div class="col-md-5ths col-xs-6">
+                <div class="circle"style="background: #233243;">
+                </div>
+                <p class="no-bottom-margin">Well Done! Success!</p>
+                <h4>#233243</h4>
             </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-secondary-orange"></DIV>
-                <h4>#fbbb21</h4>
+            <div class="col-md-5ths col-xs-6">
+                <div class="circle"style="background: #ff3b30;">
+                </div>
+                <p class="no-bottom-margin">Oh Snap! Try Again.</p>
+                <h4>#FF3B30</h4>
             </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-secondary-red"></DIV>
-                <h4>#ff3b30</h4>
+        </div>
+        <div class="row visualSystemSpacing">
+            <div class="col-md-9 alertSpacing">
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    Status notification can go here and look like this...
+                </div>
+                <div class="alert alert-danger">
+                    Error notification can go here and look like this...
+                </div>
             </div>
         </div>
         <div class="row visualSystemSpacing typographyAlignment">
@@ -153,74 +240,209 @@
         <div class="row visualSystemSpacing">
             <div class="col-xs-12 col-md-12">
                 <h3>Typography</h3>
-                <p>Good typography adds personality to an application, and can help set tone in the absence of visual elements. hybris and YaaS IO uses Dosis to create a friendly and inviting environment.</p>
-                <h3><a href="https://fonts.google.com/specimen/Dosis?query=dosis" target="_blank">Dosis</a></h3>
-                <p>Dosis is being used for large text such as titles and headlines. We use Dosis in 3 different weights. </p>
-                <p class="font-example-dosis">ABCDEFGHIJKKLMNOPQRSTUVW</p>
-                <p class="font-example-dosis">abcdefghijkklmnopqrstuvw</p>
-                <p class="font-example-dosis">0123456789</p>
+                <p>Good typography adds personality to an application, and can help set tone in the absence of visual elements. hybris and YaaS IO uses <strong><a href="https://www.google.com/fonts/specimen/Dosis" target="_blank">Dosis</a></strong> to create a friendly and inviting environment.</p>
             </div>
         </div>
-        <div class="row text-center type-face visualSystemSpacing">
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-white">
-                    <p class="dosis-light circle-type">Aa</p>
+        <div class="row">
+            <div class="row text-center type-face">
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-light circle-type">Aa</p>
+                    </div>
+                    <p>Light</p>
                 </div>
-                <p>Regular</p>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-white">
-                    <p class="dosis-medium circle-type">Aa</p>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-book circle-type">Aa</p>
+                    </div>
+                    <p>Book</p>
                 </div>
-                <p>Medium</p>
-            </div>
-            <div class="col-md-circle col-xs-6">
-                <div class="circle circle-white">
-                    <p class="dosis-semibold circle-type">Aa</p>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-medium circle-type">Aa</p>
+                    </div>
+                    <p>Medium</p>
                 </div>
-                <p>Semibold</p>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle" style="background: #FFFFFF;">
+                        <p class="dosis-semibold circle-type">Aa</p>
+                    </div>
+                    <p>SemiBold</p>
+                </div>
             </div>
         </div>
         <div class="row visualSystemSpacing typographyAlignment">
             <div class="usage">
-                <h4 class="dosis-semibold">Font sizes</h4>
-                <h1>Grumpy wizards make toxic brew for the evil Queen and Jack.</h1>
-                <p>H1 - Dosis Regular, 29 pt - Page Title, mobile header</p>
-                <h2 class="font-size-example-h2">Grumpy wizards make toxic brew for the evil Queen and Jack.</h2>
-                <p>H2 - Dosis Semibold, 26 pt - Section titles</p>
+                <h4 class="dosis-semibold">Usage Guidelines</h4>
+                <p><b>Light:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <p><b>Book:</b> Use 'Dosis Book' app-wide for body copy. The font size for body copy is 14pt, app-wide.</p>
+                <p><b>Medium:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <p><b>Semibold:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+        </div>
+        <div class="row exampleSpacing">
+            <div class="col-md-4 usage visualSystemSpacing">
+                <h4 class="dosis-semibold">Dosis Light</h4>
+                <p class="dosis-light size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-light size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
+                <p class="dosis-light size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
+            </div>
+            <div class="col-md-offset-3 col-md-4 usage visualSystemSpacing">
+                <h4 class="dosis-semibold">Dosis Book</h4>
+                <p class="dosis-book size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-book size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
+                <p class="dosis-book size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
+            </div>
+        </div>
+        <div class="row exampleSpacing">
+            <div class="col-md-4 usage visualSystemSpacing">
+                <h4 class="dosis-semibold">Dosis Medium</h4>
+                <p class="dosis-medium size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-medium size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
+                <p class="dosis-medium size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
+            </div>
+            <div class="col-md-offset-3 col-md-4 usage visualSystemSpacing">
+                <h4 class="dosis-semibold">Dosis SemiBold</h4>
+                <p class="dosis-semibold size-26">abcdefghijklmnopqrstuvwxyz</p>
+                <p class="dosis-semibold size-26">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
+                <p class="dosis-semibold size-26">1234567890!@£$%^&amp;&lowast;()&#95;&#43;</p>
+            </div>
+        </div>
+        <div class="row visualSystemSpacing typographyAlignment">
+            <hr />
+            <div class="imageCenter">
+                <a href="https://www.google.com/fonts/specimen/Dosis" target="_blank">
+                    <img src="images/ico_type.png" alt="Download Typeface" id="downloadTypeface"/>
+                </a>
+                <h5>DOWNLOAD TYPEFACE</h5>
             </div>
         </div>
         <div class="row visualSystemSpacing">
             <div class="col-xs-12 col-md-12">
-                <h3><a href="https://fonts.google.com/specimen/Open+Sans?query=open+sans" target="_blank">Open Sans</a></h3>
-                <p>For the main body copy we switch to a font with a great readability on the screen. Open Sans is a Google font that’s crisp and clean. For maximised legibility we slightly increase the leading as well.</p>
-                <p class="font-example-open-sans">ABCDEFGHIJKKLMNOPQRSTUVW</p>
-                <p class="font-example-open-sans">abcdefghijkklmnopqrstuvw</p>
-                <p class="font-example-open-sans">0123456789</p>
+                <h3>Header Styles</h3>
             </div>
         </div>
-        <div class="row visualSystemSpacing typographyAlignment">
-            <div class="usage">
-                <h4 class="dosis-semibold">Font sizes</h4>
-                <p class="font-size-example-body">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-                <p>Body copy - Open Sans regular, 15 pt</p>
-            </div>
-        </div>
-        <div class="row visualSystemSpacing typographyAlignment">
-            <div class="usage">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4 class="dosis-semibold">Usage</h4>                
-                        <p>Click on the thumnail to see an example of the applied fonts, weights and sizes</p>
+        <div class="row">
+            <div class="row text-center">
+                <div class="col-md-5ths col-xs-6">
+                   <div class="circle">
+                        <p class="dosis-light circle-type">H1</p>
                     </div>
-                    <div class="col-md-4">
-                        <a class="js_fullscreen" data-toggle="modal" data-id="images/fullscreen/headers-guidelines.png" title="View Full Image" href="#viewFullscreen">
-                            <img src="images/thumbnails/headers-guidelines-thumb.png" class="img-thumbnail">
-                        </a>
+                    <p class="dosis-light">Dosis Light <br> 30pt</p>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H2</p>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 22pt</p>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H3</p>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 19pt </p>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                   <div class="circle">
+                        <p class="dosis-mediu circle-type">H4</p>
+                    </div>
+                    <p class="dosis-medium">Dosis Medium <br> 19pt</p>
+                </div>
+                <div class="col-md-5ths col-xs-6">
+                    <div class="circle">
+                        <p class="dosis-semib circle-type">H5</p>
+                    </div>
+                    <p class="dosis-semibold">Dosis SemiBold <br> 14pt</p>
+                </div>
+            </div>
+        </div>
+        <div class="row visualSystemSpacing">
+            <div class="col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2">
+                <div id="header-example-carousel" class="carousel slide header-example-carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-inner">
+                    <ol class="carousel-indicators">
+                        <li data-target="#header-example-carousel" data-slide-to="0" class="active"><span>H1</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="1"><span>H2</span></li>
+                        <li data-target="#header-example-carousel" data-slide-to="2"><span>H3</span></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                        <div class="item active">
+                            <img src="images/H1.png" alt="..." >
+                            <!-- Hidden For Now
+                            <div class="carousel-caption">
+                                <h2>H1 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            -->
+                        </div>
+                        <div class="item">
+                            <img src="images/H2.png" alt="..." >
+                            <!-- Hidden For Now
+                            <div class="carousel-caption">
+                                <h2>H2 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            -->
+                        </div>
+                        <div class="item">
+                            <img src="images/H3.png" alt="...">
+                            <!-- Hidden For Now
+                            <div class="carousel-caption">
+                                <h2>H3 Example</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="seperator">
+            <pre class="code-snippet">
+                <!-- snippet start -->
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-lg-8 col-md-8 col-xs-12 col-lg-offset-2 col-md-offset-2&quot;&gt;
+        &lt;div id=&quot;header-example-carousel&quot; class=&quot;carousel slide header-example-carousel&quot; data-ride=&quot;carousel&quot;&gt;
+        &lt;!-- Indicators --&gt;
+            &lt;ol class=&quot;carousel-indicators&quot;&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;H1&lt;/li&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;1&quot;&gt;H2&lt;/li&gt;
+                &lt;li data-target=&quot;#header-example-carousel&quot; data-slide-to=&quot;2&quot;&gt;H3&lt;/li&gt;
+            &lt;/ol&gt;
+         &lt;!-- Wrapper for slides --&gt;
+            &lt;div class=&quot;carousel-inner carouselSpacing&quot;&gt;
+                &lt;div class=&quot;item active&quot;&gt;
+                    &lt;img src=&quot;images/h1-example.png&quot; alt=&quot;...&quot; &gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H1 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                    &lt;img src=&quot;images/h2-example.png&quot; alt=&quot;...&quot; &gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H2 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                    &lt;img src=&quot;images/h1-example.png&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;carousel-caption&quot;&gt;
+                        &lt;h2&gt;H3 Example&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;    
+                <!-- snippet end -->
+            </pre>
+        </div>
+        <h2>Processing Icon/Treatment</h2>
+        <img src="images/visual-system-processing-position.png" alt="" class="img-responsive"> <br><br>
+        <p>It’s important to notify users when the system is processing.  SAP Hybris Techné uses the above treatment to indicate the system is processing</p>
         <hr>
     </section>
     <!-- load tone/voice -->
@@ -231,7 +453,7 @@
             <li>Mobile first</li>
             <li>Consider 3Cs (context): user context (likes/hates/habits/state-of-mind, device posture), environmental context (time, day, location, place), world context (what is happening around the user we can leverage or use to inform the UI) </li>
         </ul>
-        <h3>Language</h3>
+        <h3>Overall Tone and Voice</h3>
         <ul>
             <li>Friendly</li>
             <li>Concise</li>
@@ -247,8 +469,8 @@
         <table class="table techne-table">
             <thead>
                 <tr>
-                    <th><span class="text-danger">Is Not</span></th>
-                    <th><span class="text-success">Is</span></th>
+                    <th>Is Not</th>
+                    <th>Is</th>
                 </tr>
             </thead>
             </tbody>
@@ -292,33 +514,33 @@
         <table class="table techne-table">
             <thead>
                 <tr>
-                    <th><span class="text-danger">Don't</span></th>
-                    <th><span class="text-success">Do</span></th>
+                    <th>Don't</th>
+                    <th>Do</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-th="Don't">Spell out numbers <br> <strong>i.e. five, ten, fourty-two</strong></td>
-                    <td data-th="Do">Use numeric characters <br> <strong>i.e. 5, 10, 42</strong></td>
+                    <td data-th="Don't">Spell out numbers <br> i.e. five, ten, fourty-two</td>
+                    <td data-th="Do">Use numeric characters <br> i.e. 5, 10, 42</td>
                 </tr>
                 <tr>
-                    <td data-th="Don't">Use lower cases for labels <br> <strong>i.e. save</strong></td>
-                    <td data-th="Do">Use initial caps for labels <br> <strong>i.e. Save</strong></td>
+                    <td data-th="Don't">Use lower cases for labels <br> i.e. save</td>
+                    <td data-th="Do">Use initial caps for labels <br> i.e. Save </td>
                 </tr>
                 <tr>
-                    <td data-th="Don't">Spell out words with common abbreviations <br> <strong>i.e. application</strong></td>
-                    <td data-th="Do">Use common abbreviations <br> <strong>i.e. app</strong></td>
+                    <td data-th="Don't">Spell out words with common abbreviations <br> i.e. application</td>
+                    <td data-th="Do">Use common abbreviations <br> i.e. app</td>
                 </tr>
                 <tr>
-                    <td data-th="Don't">Use words like 'please' or 'sorry' <strong><br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</strong></td>
-                    <td data-th="Do">Be concise and friendly. Stick to the important content and lead based on the task. <strong><br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</strong></td>
+                    <td data-th="Don't">Use words like 'please' or 'sorry' <br> i.e. "Sorry, that file cannot be deleted." <br> i.e. "Please contact your administrator if you forgot your password"</td>
+                    <td data-th="Do">Be concise and friendly. Stick to the important content and lead based on the task. <br> i.e. "File can't be deleted." <br> i.e. "Forgot your password? Contact your admin."</td>
                 </tr>
             </tbody>
         </table>
       </section>
       <section id="guidelines-messaging" class="kss-page">
         <!-- <hr id="guidelines-messaging"> -->
-        <h3>Messaging & Dialogs</h3>
+        <h2>Messaging & Dialogs</h2>
         <p>
             Keep messaging as generic as possible to allow for product branding/labeling name changes in the future. Use hyperlinks to guide the user to pages where they can get more help or informations.
         </p>
@@ -326,8 +548,8 @@
         <table class="table techne-table">
             <thead>
                 <tr>
-                    <th><span class="text-danger">Is Not</span></th>
-                    <th><span class="text-success">Is</span></th>
+                    <th>Is Not</th>
+                    <th>Is</th>
                 </tr>
             </thead>
             <tbody>
@@ -371,11 +593,67 @@
                 </tr>
             </tbody>
         </table>
+        <h3>Notifications</h3>
+        <p>Use to let people know about some information or action that happened, but no action is needed on their part, e.g. the service will be deprecated at a future date. </p>
+        <h3>Errors</h3>
+        <p>Use to let people know there is an issue that needs attention immediately, e.g. an authorization is expired and no work can proceed until it’s resolved. </p>
+        <p>For errors that allow specific direction for correction, end the message at that specific direction. For errors where the reason and/or correction steps cannot be specified, it is appropriate to add "Try Again." to the message so as not to leave the user at a dead end.</p>
+        <h3>Success/Confirmation</h3>
+        <p>Use confirmation/success messages to give the user feedback on a performed interaction with the system e.g. the user clicked on Save or a new member was invited a service was deleted. </p>
+        <p>You could also acknowledge the user's interaction by showing or deleting the element directly. In this case provide visual feedback such as highlighting the new element or making the element disappear. </p>
+        <br />
+        <table class="table techne-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Notifications</th>
+                    <th>Errors</th>
+                    <th>Success/Confirmation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Background color</td>
+                    <td data-th="Notifications">Dark blue</td>
+                    <td data-th="Errros">Red</td>
+                    <td data-th="Success/Confirmation">Dark blue</td>
+                </tr>
+                <tr>
+                    <td>Display time</td>
+                    <td data-th="Notifications">3 seconds before they  disappear on their own.</td>
+                    <td data-th="Errros">Must be dismissed by clicking or tapping X.</td>
+                    <td data-th="Success/Confirmation">3 seconds before they  disappear on their own.</td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
+                    <td></td>
+                    <td data-th="Errros">Always 'unsuccessful'</td>
+                    <td data-th="Success/Confirmation">Use action i.e. 'saved,' 'added,' 'sent,' etc. If no direct action is available, use 'successful'.</td>
+                </tr>
+                <tr>
+                    <td>Alternative</td>
+                    <td></td>
+                    <td></td>
+                    <td data-th="Success/Confirmation">Display or delete the element visually</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>‘Your Action Required’ Dialog</h3>
+        <p>Inform users with a dialog and give guidance when they need to be alerted to significant consequences before deciding to proceed. Examples include:</p>
+        <ul>
+            <li>Unrecoverable data loss</li>
+            <li>Credit card informations expired</li>
+            <li>Update a package</li>
+            <li>Change configurations manually</li>
+        </ul>
+        <p>Explain to users the action that is about to take place and give them an opportunity to back out if they're uncomfortable (eg. to save already made changes before). If necessary give clear guidance and point them towards the page where they can resolve the problem.</p>
+        <h3>‘Confirm Action’ Dialog</h3>
+        <p>YaaS APIs currently have no undo functionality available. If the user's interaction could cause harm or major inconvenience, provide a confirmation dialog. For example, an accidental page turn wouldn't cause a problem, but accidental deletion of an email message could. Make sure this wasn't an accident, so that users don't end up in a bad, irreversible situation. Give implicit feedback or showing a success message after proceeding.</p>
         <h3>Language and Translation</h3>
         <p>Initial UI messaging should be written in American English using the guidelines above.  hybris Translation Services will take care of product copy translations.</p>
     </section>
     <section id="guidelines-system-errors" class="kss-page">
-            <h3>System Errors</h3>
+            <h2>System Errors</h2>
             <p>Every service in YaaS uses the common error message schema for error response payloads. However, these messages are typically not human-friendly. We recommend using the error code mapping provided for <a href="https://devportal.yaas.io/tools/apibestpractices/index.html#Errors" target="_blank">API Best Practices</a> at the Dev Portal. Some examples on how to write YaaS system errors:</p>
             <ul>
                 <li>We need all required fields complete to keep you moving.</li>
@@ -388,13 +666,22 @@
                 <li>Something went very wrong. Please try again.</li>
             </ul>
         </section>
+        <section id="form-validation" class="kss-page">
+            <h2>Form Validation & Error Avoidance</h2>
+            <h3>Page Validation</h3>
+            <p>When a user clicks on a primary button and there is an error on the page, always show a page-level error, as well as having inline validation in place. Pages can get really long, and the user gets no feedback on what to change if the error is made in an area that is not currently visible. Page level error text: <em>Required field(s) missing information below</em></p>
+            <h3>Inline Validation</h3>
+            <p>Inline validation is recommended for required fields and fields that require specific data formats (e.g. a 24-character limit). In most cases, implement inline validation for form fields when the user enters more than three characters into or leaves a required or character-restricted form field. Implement this to make your users fall in love with your product. Throwing an error too fast stops the user’s flow when they are working.</p>
+            <h3>Leaving the page and form is dirty</h3>
+            <p>f the user clicks Back or another button that takes them away (except Cancel) from the page without saving the latest changes, always show a dialog to inform the user about the possibility of data loss by using <a href="https://devportal.yaas.io/tools/buildersdk/index.html#DraftanddirtystatehandlingintheBuilder">draft and dirty state handling in the Builder</a>.</p>
+        </section>
         <section id="writing-help" class="kss-page">
-            <h3>Writing Help</h3>
+            <h2>Writing Help</h2>
             <table class="table techne-table">
                 <thead>
                     <tr>
-                        <th width="50%"><span class="text-success">Do explain:</span></th>
-                        <th><span class="text-danger">Don’t explain:</span></th>
+                        <th width="50%">Do explain:</th>
+                        <th>Don’t explain:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -419,8 +706,8 @@
                 <table class="table techne-table">
                     <thead>
                         <tr>
-                            <th><span class="text-success">Do:</span></th>
-                            <th><span class="text-danger">Don’t:</span></th>
+                            <th>Do:</th>
+                            <th>Don’t:</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -431,6 +718,13 @@
                     </tbody>
             </table>
         </section>
+        <section id="guidelines-scroll-pagination" class="kss-page">
+            <h2>Infinite Scroll & Pagination</h2>
+            <h3>Infinite Scroll</h3>
+            <p>Infinite Scroll is a familiar consumer interaction pattern that allows an immersive experience when browsing or searching through data sets. It can and should be incorporated into administrative interfaces to enhance the usability. Examples of these instances are in the case of 'known searching' a filtered dataset; browsing scenarios; and to quickly identify visual objects. When using Infinite Scroll on a lengthy data set employing filtering and sorting components is recommended.</p>
+            <h3>Pagination</h3>
+            <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page. Get more information how to display <a href="section-14.html">pagination</a>.</p>
+        </section>
         <!-- load tone/voice -->
         <section id="guidelines-accessibility" class="kss-page">
             <h2>Accessibility</h2>
@@ -438,14 +732,4 @@
             <p><strong>Web Content Accessibilty Guidelines:</strong> <br> <a href="http://www.w3.org/TR/WCAG20/" target="_blank">http://www.w3.org/TR/WCAG20/</a></p>
             <p><strong>Authoring Tools Accessibility Guidelines (candidate recommendation: </strong> <br> <a href="http://www.w3.org/TR/ATAG20/" target="_blank">http://www.w3.org/TR/ATAG20/</a>)</p>
         </section>
-</div>
-  <div class="modal fade bs-example-modal-lg" id="viewFullscreen">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div>
-          <img src="" class="showFullscreen">
-        </div>
-      </div>
-    </div>
-  </div>    
 </div>
