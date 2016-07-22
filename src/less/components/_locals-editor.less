@@ -1,112 +1,126 @@
 // Locals Editor
 //
-// <span class="badge badge-warning">Soon To Be Deprecated</span><br/><br/>
-// The Localization component should be used when content or currency being configured needs to be localized.<br/><br/>
-// <i>This component will be replaced in 2016 to improve usability and scalability for additional localizations.</i>
+// Markup:
+//<h3> Locals editor - active tab; mandatory tabs </h3>
+//    <div class="form-group locals-editor">
+//        <div class="locals-header clearfix">
+//            <ul class="nav nav-tabs locals-tabs">
+//                <li class="active"> <a href="" class="is-required">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li> <a href="" class="is-required">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
+//            </ul>
+//        </div>
+//        <div class="form-group ">
+//            <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
+//                <input name="lastName" type="text" class="form-control input-lg">
+//            </div>
+//        </div>
+//    </div>
 //
 // Markup:
-// <div class="form-group locals-editor">
-//     <div class="locals-header clearfix">
-//         <div class="pull-right">
-//             <div class="validation-status">
-//             <span class="glyphicon glyphicon-globe">
-//                 </span>
-//             </div>
-//             <a href="" class="btn-link btn">
-//               <span class="glyphicon glyphicon-chevron-down">
-//               </span>
-//             </a>
-//         </div>
-//         <label class="control-label">Label</label>
-//     </div>
-//     <div class="form-group">
-//         <div class="input-group property" baas-form-name ng-form="innerForm">
-//               <input name="lastName" type="text" class="form-control input-lg">
-//                <span class="input-group-addon">EN</span>
-//         </div>
-//     </div>
-// </div>
+//<h3> Locals editor - active tab; mandatory tab; error tab </h3>
+//    <div class="form-group locals-editor">
+//    <div class="locals-header clearfix">
+//        <ul class="nav nav-tabs locals-tabs">
+//            <li class="active"> <a class="has-error" href="">EN</a></li>
+//            <li> <a href="">BG</a></li>
+//            <li> <a class="has-error is-required" href="">DE</a></li>
+//            <li> <a href="">FR</a></li>
+//            <li> <a href="">PL</a></li>
+//        </ul>
+//    </div>
+//    <div class="form-group">
+//        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
+//            <input name="lastName" type="text" class="form-control input-lg">
+//        </div>
+//    </div>
+//</div>
+//
+// Markup:
+//<h3> Locals editor - active tab; mandatory tab; error tab </h3>
+//<div class="form-group locals-editor">
+//    <div class="locals-header clearfix">
+//        <ul class="nav nav-tabs locals-tabs">
+//            <li class="active"> <a href="">EN</a></li>
+//            <li> <a href="">BG</a></li>
+//            <li> <a class="has-error" href="">DE</a></li>
+//            <li class="dropdown locals-tabs__more-btn">
+//                <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">MORE
+//                    <span class="caret"></span>
+//                </a>
+//                <ul class="dropdown-menu locals-tabs__more-tabs">
+//                    <li>
+//                        <a href="" class="locals-tabs__more-tab">IT</a>
+//                    </li>
+//                    <li>
+//                        <a href="" class="locals-tabs__more-tab has-error">PL</a>
+//                    </li>
+//                </ul>
+//            </li>
+//        </ul>
+//    </div>
+//    <div class="form-group">
+//        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
+//            <input name="lastName" type="text" class="form-control input-lg">
+//        </div>
+//    </div>
+//</div>
 //
 // Styleguide 11.1
 
-
-.locals-editor{
-	.input-group-addon{
-		min-width: 49px;
-	}
+.locals-tabs .active{
+    background-color: #0486E0;
+    border-color: #0486E0;
+}
+.locals-editor .locals-tabs .active a,
+.locals-editor .locals-tabs .active a:hover,
+.locals-editor .locals-tabs .active a:focus{
+    color: #FFFFFF;
 }
 
-.locals-header{
-  min-height: 26px;
-    .control-label{
-    margin-top: 7px;
-  }
+.locals-editor .locals-tabs a,
+.locals-editor .locals-tabs a:hover,
+.locals-editor .locals-tabs a:focus{
+    font-weight: bold;
 }
 
-.y-locale-label {
-  display: none;
-  margin: 15px 0 3px;
+.locals-editor .locals-tabs li:not(.active){
+    border-color: #a1aebd;
 }
 
-.baas-editor-expanded {
-  .y-locale-label {
-    display: block;
-  }
-  .tab-pane {
-    display: block;
-    opacity: 1;
-  }
-  .scrollable-tabs-container {
-    display: none;
-  }
+.locals-editor .locals-tabs li:last-of-type {
+    border-right: 1px solid #a1aebd;
 }
 
-.validation-status{
-	font-size: 16px;
-  padding: 6px 0;
-  line-height: @line-height-base;
-  display: inline-block;
-  color: @dark-grey;
-  vertical-align: middle;
-
-	&.has-success {
-    color: @state-success-bg;
-  }
-  &.has-warning {
-    color:  @state-warning-bg;
-  }
-  &.has-error {
-    color:  @state-danger-bg;
-  }
+.locals-editor .locals-tabs > li{
+    border-top: 1px solid #a1aebd;
+    border-left: 1px solid #a1aebd;
+    border-bottom: 1px solid #a1aebd;
 }
 
+.locals-header .locals-tabs{
+    margin-bottom: 0;
+}
 
-// Special Skinning for the navpills within
-// the panes when the multi version is expanded
+.locals-tabs .has-error,
+.locals-editor .locals-tabs .active a.has-error,
+.locals-editor .locals-tabs .active a:hover .has-error,
+.locals-editor .locals-tabs .active a:focus .has-error,
+.locals-tabs__more-tabs a.locals-tabs__more-tab.has-error{
+    color: #ff3830;
+}
 
-.tab-pane{
-  &.has-warning{
-    .y-locale-label{
-      .nav-pill{
-        .nav-pill.has-warning();
-      }
-    }
-  }
-  &.has-error{
-    .y-locale-label{
-      .nav-pill{
-        .nav-pill.has-error();
-      }
-    }
+.locals-tabs .has-error:before{
+    content: "! "
+}
 
-  }
-  &.has-success{
-    .y-locale-label{
-      .nav-pill{
-        .nav-pill.has-success();
-      }
-    }
+.locals-tabs .is-required:after{
+    content: "*";
+}
 
-  }
-
+.locals-tabs__more-tabs a.locals-tabs__more-tab {
+    color: #0486E0;
+    font-weight: normal;
 }
