@@ -198,16 +198,12 @@ parseChunk = function(data, input, options) {
 		currSection = processMarkup(paragraphs, options, currSection);
 
 		// Then check for a styleguide reference number. If not listed, ignore this block!
-        var checkRef = checkReference(paragraphs, options);
-        currSection.referenceType = checkRef[0] || ''; 
-		currSection.reference = checkRef[1] || '';
-
+		currSection.reference = checkReference(paragraphs, options) || '';
         console.log(currSection);
 
 		if (!currSection.reference) {
 			continue;
 		}
-
 		currSection.refDepth = currSection.reference ? currSection.reference.split(/\./g).length : false;
 
 
@@ -421,29 +417,18 @@ checkReference = function(paragraphs, options) {
         }
 
 		if (numbers[1]) {
-			return [ refType, numbers[1].replace(/^\.|\.$|(\.0){1,}$/g, '') ]; // Removes trailing 0's and .'s
+			return (refType, numbers[1].replace(/^\.|\.$|(\.0){1,}$/g, '') ); // Removes trailing 0's and .'s
 		} 
 	}
 	if (options.typos) {
 		styleWord = words.join('').replace(/\-|\s*/g, '');
 
-		if( natural.Metaphone.compare('Styleguide', styleWord) || 
+		if (natural.Metaphone.compare('Styleguide', styleWord) || 
            natural.Metaphone.compare('Component', styleWord) ||
            natural.Metaphone.compare('Pattern', styleWord) ) {
-
-            if(natural.Metaphone.compare('Pattern', styleWord))
-               refType = 'pattern';
-
-            if(natural.Metaphone.compare('Styleguide', styleWord))
-               refType = 'styleguide';
-
-            if(natural.Metaphone.compare('Component', styleWord))  
-               refType = 'component';
-
 			numbers = paragraph.match(/[0-9\.]+/g);
-            
 			if (numbers[0]) {
-				return [ refType, numbers[0].replace(/^\.|\.$|(\.0){1,}$/g, '') ]; // Removes trailing 0's and .'s
+				return numbers[0].replace(/^\.|\.$|(\.0){1,}$/g, ''); // Removes trailing 0's and .'s
 			}
 		}
 	}
