@@ -148,6 +148,7 @@ parse = function(input, options, callback) {
 	for (i = 0; i < l; i += 1) {
 		data = parseChunk(data, input[i], options) || data;
 	}
+
 	callback(false, new KssStyleguide(data));
 };
 
@@ -202,7 +203,6 @@ parseChunk = function(data, input, options) {
         currSection.referenceType = checkRef[0] || ''; 
 		currSection.reference = checkRef[1] || '';
 
-        console.log(currSection);
 
 		if (!currSection.reference) {
 			continue;
@@ -272,6 +272,7 @@ parseChunk = function(data, input, options) {
 
 		// Add the new section instance to the sections array
 		currSection = new KssSection(currSection);
+
 		data.sections.push(currSection);
 
 		// Store the reference for quick searching later, if it's supplied

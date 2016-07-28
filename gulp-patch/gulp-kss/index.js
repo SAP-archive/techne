@@ -10,6 +10,7 @@ var marked = require('marked');
 var handlebars = require('handlebars');
 var PluginError = gutil.PluginError;
 var File = gutil.File;
+var _ = require('lodash');
 
 var handlebarHelpers = require('./handlebarHelpers');
 
@@ -45,28 +46,44 @@ module.exports = function(opt) {
 
             if (err) console.log('Error', error);
 
-                var sections = styleguide.section('*.'),
-                    i, sectionCount = sections.length,
-                    sectionRoots = [], currentRoot,
-                    rootCount, childSections = [];
+            var sections = styleguide.section('*.'),
+                i, sectionCount = sections.length,
+                sectionRoots = [], currentRoot,
+                rootCount, childSections = [],
+                dynamicpagelists = {};
 
 
+            // get grouping of page types
+            dynamicpagelists.pattern = _.filter( sections, function(o){return o.data.referenceType == 'pattern';}) ;
+            dynamicpagelists.component = _.filter( sections, function(o){return o.data.referenceType == 'component';});
+            dynamicpagelists.styleguide = _.filter( sections, function(o){return o.data.referenceType == 'styleguide';});
 
-            // Accumulate all of the sections' first indexes
-            // in case they don't have a root element.
-            for (i = 0; i < sectionCount; i += 1) {
-                currentRoot = sections[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
 
-                if (!~sectionRoots.indexOf(currentRoot)) {
-                    sectionRoots.push(currentRoot);
+            _.forEach(dynamicpagelists, function(val, key){
+                // Accumulate all of the sections' first indexes
+                // in case they don't have a root element.
+               
+                for (i = 0; i < val.length; i += 1) {
+                    console.log('inspection', val[i]);
+                    currentRoot = val[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
+
+                    console.log('cROOT', currentRoot );
+                    // console.log('test', sections[i].data.referenceType);
+
+                    if (!~sectionRoots.indexOf(currentRoot)) {
+                        sectionRoots.push(currentRoot);
+                    }
                 }
-            }
 
-            sectionRoots.sort();
-            rootCount = sectionRoots.length;
+                sectionRoots.sort();
+                //console.log('sectionroots', sectionRoots);
+                rootCount = sectionRoots.length;
 
 
-            //console.log(styleguide);
+                console.log(styleguide);
+            });
+
+
             handlebarHelpers(handlebars, styleguide);
 
             // Generate HTML from all supplied markdown files
@@ -87,6 +104,10 @@ module.exports = function(opt) {
 
                             var mdNavConfig = kss.getMarkdownNav(file);
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
+
+                            
+    
+
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
                                 leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
@@ -134,6 +155,8 @@ module.exports = function(opt) {
 
                 //update the childSections reference to point at the new file name links
                 childSections.pageLink = fileName;
+
+                //console.log('sections', jsonSections(childSections));
 
                 var content = template({
                     showLeftNav: true, //show the nav bar for all sections

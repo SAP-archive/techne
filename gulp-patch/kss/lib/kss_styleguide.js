@@ -23,6 +23,8 @@ KssStyleguide.prototype.section = function(query) {
 		current, isExact = false,
 		sections = [];
 
+
+    console.log('query', this.data);
 	if (!query) {
 		return this.section(/.+/);
 	}
