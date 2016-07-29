@@ -135,20 +135,19 @@
                     {{/if_eq}}
                 </li>
                 <li>
-                    {{#if_eq pagename "components"}}
+                    {{#if_eq pagetype "component"}}
                         <span class="active">Components</span>
                     {{else}}
-                        <a href="Alerts-Errors-Notifications.html" class="inactive">Components</a>
+                        <a href="components/Testing-Section.html" class="inactive">Components</a>
                     {{/if_eq}}
                 </li>
                 <li>
-                    {{#if_eq pagename "Patterns"}}
-                        <span class="active js_navtrigger">Patterns &amp; Layouts</span>
+                    {{#if_eq pagetype "pattern"}}
+                        {{pagetype}}
+                        <span class="active js_navtrigger">Patterns</span>
                     {{else}}
-                        <a href="Patterns.html" class="inactive">Patterns &amp; Layouts</a></li>
+                        <a href="patterns/Pattern-Section.html" class="inactive">Patterns</a>
                     {{/if_eq}}
-                    <li>
-
                 </li>
                 <li>
                     {{#if_eq pagename "GettingStarted"}}
@@ -177,8 +176,8 @@
                             {{#if_eq pagename "index"}}
                               <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
                               <li class="kss-menu-item"><a href="Guidelines.html" >Guidelines</a></li>
-                              <li class="kss-menu-item"><a href="Alerts-Errors-Notifications.html">Components</a></li>
-                              <li class="kss-menu-item"><a href="Patterns.html">Patterns &amp; Layouts</a></li>
+                              <li class="kss-menu-item"><a href="components/Testing-Section.html">Components</a></li>
+                              <li class="kss-menu-item"><a href="patterns/Pattern-Section.html">Patterns</a></li>
                               <li class="kss-menu-item"><a href="GettingStarted.html">Download &amp; Get Started</a></li>
                             {{else}}
                             <li class="kss-menu-item kss-back"><a href="index.html">Back to Home</a></li>

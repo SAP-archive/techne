@@ -18,13 +18,18 @@ KssStyleguide.prototype.init = function () {
 
 };
 
-KssStyleguide.prototype.section = function(query) {
-	var i, l = this.data.sections.length,
+KssStyleguide.prototype.pagesection = function(type, query){
+    console.log(type, query);
+};
+
+KssStyleguide.prototype.section = function( query, qType) {
+	var i, l ,
 		current, isExact = false,
 		sections = [];
 
+    
+    //@TODO do something with the qType so that when called with we look only at the page type posibilities that match the passed qType instead of all sections
 
-    console.log('query', this.data);
 	if (!query) {
 		return this.section(/.+/);
 	}
@@ -41,6 +46,7 @@ KssStyleguide.prototype.section = function(query) {
 		}
 	}
 
+
 	// If recieving a n.x or n.* query, convert it
 	// to regex for general search
 	if (!(query instanceof RegExp)) {
@@ -51,9 +57,12 @@ KssStyleguide.prototype.section = function(query) {
 		);
 	}
 
+    l = (qType)? qType.length : this.data.sections.length;
+
 	// General (regex) search
 	for (i = 0; i < l; i += 1) {
-		current = this.data.sections[i];
+        
+		current = (qType != undefined)? qType[i] : this.data.sections[i];
 		if (sectionQueryMatch(current.data.reference, query)) {
 			sections.push(current);
 		}

@@ -35,8 +35,6 @@ module.exports = function(opt) {
 
 //    / Is called when all files were added to buffer /
     function endStream(){
-        var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
-        template = handlebars.compile(template);
 
 
 
@@ -60,15 +58,13 @@ module.exports = function(opt) {
 
 
             _.forEach(dynamicpagelists, function(val, key){
+                sectionRoots = [];
+            
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
                
                 for (i = 0; i < val.length; i += 1) {
-                    console.log('inspection', val[i]);
                     currentRoot = val[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
-
-                    console.log('cROOT', currentRoot );
-                    // console.log('test', sections[i].data.referenceType);
 
                     if (!~sectionRoots.indexOf(currentRoot)) {
                         sectionRoots.push(currentRoot);
@@ -76,20 +72,71 @@ module.exports = function(opt) {
                 }
 
                 sectionRoots.sort();
-                //console.log('sectionroots', sectionRoots);
                 rootCount = sectionRoots.length;
 
 
-                console.log(styleguide);
+                handlebarHelpers(handlebars, styleguide);
+
+
+                var template = fs.readFileSync(path.join(opt.templateDirectory, 'elements.html'), 'utf8');
+                template = handlebars.compile(template);
+                // Now, group all of the sections by their root
+                // reference, and make a page for each.
+                for (i = 0; i < rootCount; i += 1) {
+
+                    childSections = styleguide.section((sectionRoots[i]+'.*'), dynamicpagelists[key]);
+
+                    //console.log('cSections', childSections);
+
+                    var fileRoot = parseInt(sectionRoots[i],10);
+
+                    var fileName = dynamicpagelists[key][i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
+
+
+                    //update the childSections reference to point at the new file name links
+                    childSections.pageLink = fileName;
+
+                    //console.log('sections', sectionRoots);
+                    //console.log('sectionroots', sectionRoots[i]);
+
+                    var content = template({
+                        showLeftNav: true, //show the nav bar for all sections
+                        styleguide: styleguide,
+                        childSections: childSections,
+                        sections: jsonSections(childSections),
+                        rootNumber: sectionRoots[i],
+                        sectionRoots: sectionRoots,
+                        overview: false,
+                        pagename: "components",
+                        pagetype: key,
+                        argv: {}
+                    });
+
+                    //console.log('var index' + i + ' = ', childSections);
+
+                    var joinedPath = path.join(firstFile.base + '/' + key + 's' ,  fileName + '.html');
+
+
+                    var file = new File({
+                        cwd: firstFile.cwd,
+                        base: firstFile.base,
+                        path: joinedPath,
+                        contents: new Buffer(content)
+                    });
+
+                    self.emit('data', file);
+                }
+
             });
 
 
-            handlebarHelpers(handlebars, styleguide);
 
             // Generate HTML from all supplied markdown files
-            if(opt.markDownDirectory)
+           /* if(opt.markDownDirectory)
             {
 
+                var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
+                template = handlebars.compile(template);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory);
 
                 for( i = 0; i < mdFiles.length; i++)
@@ -136,53 +183,8 @@ module.exports = function(opt) {
 
                 }
 
-            }
+            } */
 
-            // Now, group all of the sections by their root
-            // reference, and make a page for each.
-            for (i = 0; i < rootCount; i += 1) {
-
-                //console.log('sc', styleguide.section);
-                childSections = styleguide.section(sectionRoots[i]+'.*');
-
-
-                var fileRoot = parseInt(sectionRoots[i],10);
-
-
-
-                var fileName = styleguide.data.section_refs[fileRoot].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
-
-
-                //update the childSections reference to point at the new file name links
-                childSections.pageLink = fileName;
-
-                //console.log('sections', jsonSections(childSections));
-
-                var content = template({
-                    showLeftNav: true, //show the nav bar for all sections
-                    styleguide: styleguide,
-                    sections: jsonSections(childSections),
-                    rootNumber: sectionRoots[i],
-                    sectionRoots: sectionRoots,
-                    overview: false,
-                    pagename: "components",
-                    argv: {}
-                });
-
-                //console.log('var index' + i + ' = ', childSections);
-
-                var joinedPath = path.join(firstFile.base,  fileName + '.html');
-
-
-                var file = new File({
-                    cwd: firstFile.cwd,
-                    base: firstFile.base,
-                    path: joinedPath,
-                    contents: new Buffer(content)
-                });
-
-                self.emit('data', file);
-            }
 
             // Copy template assets, less compilation added because default template uses it
             gulp.src(path.join(opt.templateDirectory, '/**/kss.less'))

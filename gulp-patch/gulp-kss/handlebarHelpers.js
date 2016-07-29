@@ -39,12 +39,13 @@ module.exports = function (handlebars, styleguide) {
     /**
      * Loop over each section root, i.e. each section only one level deep.
      */
-    handlebars.registerHelper('eachRoot', function(options) {
+    handlebars.registerHelper('eachRoot', function(type, options) {
         var buffer = '',
             sections,
             i, l;
 
-        sections = styleguide.section('x');
+        console.log('CS', type);
+        sections = type;/*styleguide.section('x');*/
 
         if (!sections) return '';
 
