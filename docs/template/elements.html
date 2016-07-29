@@ -207,23 +207,11 @@
               {{#if overview}}
                 {{html overview}}
                 {{else}}
-                {{#eachSection rootNumber}}
+                {{#eachSection rootNumber childSections}}
                 {{rootNumber}}
                 <section id="section-{{reference}}" class="kss-section kss-componnet-page">
-                    {{#if_eq refDepth 1}}
-                      {{#if_eq reference 1}}
-                     <h1>Components</h1>
-                         <p>
-                           The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
-                           It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
-                           also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.
-                        </p>
-                        {{/if_eq}}
-                          <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
 
-                    {{else}}
-                          <h2 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h2>
-                    {{/if_eq}}
+                    <h2 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h2>
 
                     {{#if markup}}
                     {{#if description}}

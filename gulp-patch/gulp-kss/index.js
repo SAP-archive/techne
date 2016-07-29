@@ -86,6 +86,8 @@ module.exports = function(opt) {
 
                     childSections = styleguide.section((sectionRoots[i]+'.*'), dynamicpagelists[key]);
 
+                    //console.log('childSections', childSections);
+
                     //console.log('cSections', childSections);
 
                     var fileRoot = parseInt(sectionRoots[i],10);
@@ -116,6 +118,7 @@ module.exports = function(opt) {
 
                     var joinedPath = path.join(firstFile.base + '/' + key + 's' ,  fileName + '.html');
 
+                    console.log('path', joinedPath );
 
                     var file = new File({
                         cwd: firstFile.cwd,
