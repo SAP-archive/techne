@@ -72,6 +72,8 @@ module.exports = function(opt) {
                 }
 
                 sectionRoots.sort();
+
+                //console.log('sro', sectionRoots);
                 rootCount = sectionRoots.length;
 
 
@@ -82,30 +84,36 @@ module.exports = function(opt) {
                 template = handlebars.compile(template);
                 // Now, group all of the sections by their root
                 // reference, and make a page for each.
-                for (i = 0; i < rootCount; i += 1) {
+
+                var mainFiles = styleguide.section('x', dynamicpagelists[key]);
+                console.log('mf', mainFiles.length);
+
+                for (i = 0; i < mainFiles.length; i += 1) {
+
+                    
 
                     childSections = styleguide.section((sectionRoots[i]+'.*'), dynamicpagelists[key]);
 
-                    //console.log('childSections', childSections);
-
-                    //console.log('cSections', childSections);
-
                     var fileRoot = parseInt(sectionRoots[i],10);
 
-                    var fileName = dynamicpagelists[key][i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
+                    console.log('root', fileRoot);
+
+                    console.log('fff', mainFiles[i]); 
+                    var fileName = mainFiles[i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
 
 
                     //update the childSections reference to point at the new file name links
                     childSections.pageLink = fileName;
 
-                    //console.log('sections', sectionRoots);
-                    //console.log('sectionroots', sectionRoots[i]);
+                    //console.log('jsections', jsonSections(childSections));
+                    //console.log('sectionroots', styleguide.section( sectionRoots[i], dynamicpagelists[key]) );
+                    //console.log('sectionroots', dynamicpagelists[key]);
 
                     var content = template({
                         showLeftNav: true, //show the nav bar for all sections
                         styleguide: styleguide,
                         childSections: childSections,
-                        sections: jsonSections(childSections),
+                        sections: dynamicpagelists[key],
                         rootNumber: sectionRoots[i],
                         sectionRoots: sectionRoots,
                         overview: false,

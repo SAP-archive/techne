@@ -21,7 +21,7 @@ module.exports = function (handlebars, styleguide) {
             sections,
             i, l;
 
-        console.log('PAGE SECTION CHILDREN', childSections);
+        //console.log('PAGE SECTION CHILDREN', childSections);
 
 
         l = childSections.length;
@@ -40,8 +40,10 @@ module.exports = function (handlebars, styleguide) {
             sections,
             i, l;
 
-        sections = type;/*styleguide.section('x');*/
+        console.log('type', type);
+        sections = styleguide.section('x', type);
 
+        //console.log('data to show: ', tmp);
         if (!sections) return '';
 
         l = sections.length;

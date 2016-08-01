@@ -28,9 +28,9 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1469834547271">
+  <link rel="stylesheet" href="../public/kss.css?t=1470085967157">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1469834547271">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470085967157">
 
 
 
@@ -128,7 +128,7 @@
                         <a href="../Guidelines.html" class="inactive">Guidelines</a>
                 </li>
                 <li>
-                        <a href="../components/Testing-Section.html" class="inactive">Components</a>
+                        <span class="active">Components</span>
                 </li>
                 <li>
                         <a href="../patterns/Pattern-Section.html" class="inactive">Patterns</a>
@@ -147,12 +147,30 @@
         <div id="kss-nav" class="col-md-2 col-sm-4 col-xs-12 " role="navigation">
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
-                        <ul class="kss-menu sidebar-nav" data-kss-ref="6">
+                        <ul class="kss-menu sidebar-nav" data-kss-ref="1">
                             <li class="kss-menu-item kss-back"><a href="../index.html">Back to Home</a></li>
-                                    <li class="kss-menu-item"><a href="Input-Field.html">Input Field</a></li>
-                                    <li class="kss-menu-item"><a href="Read-Only-Form-Elements.html">Read Only Form Elements</a></li>
-                                    <li class="kss-menu-item"><a href="Custom-Checkboxes.html">Custom Checkboxes</a></li>
-                                    <li class="kss-menu-item"><a href="Custom-Radio-buttons.html">Custom Radio buttons</a></li>
+                                    <li class="kss-menu-item"><a href="Alerts-Errors-Notifications.html">Alerts, Errors &amp; Notifications</a></li>
+                                    <li class="kss-menu-item"><a href="Buttons.html">Buttons</a></li>
+                                    <li class="kss-menu-item"><a href="Cards.html">Cards</a></li>
+                                    <li class="kss-menu-item"><a href="Contextual-Menu.html">Contextual Menu</a></li>
+                                    <li class="kss-menu-item"><a href="Feedback-Form.html">Feedback Form </a></li>
+                                    <li class="kss-menu-item"><a href="Form-Elements.html">Form Elements</a></li>
+                                    <li class="kss-menu-item"><a href="Help-and-Validation.html">Help and Validation </a></li>
+                                    <li class="kss-menu-item"><a href="Icons.html">Icons</a></li>
+                                    <li class="kss-menu-item"><a href="Lists.html">Lists</a></li>
+                                    <li class="kss-menu-item"><a href="Loading-Spinner.html">Loading Spinner</a></li>
+                                    <li class="kss-menu-item"><a href="Localization.html">Localization</a></li>
+                                    <li class="kss-menu-item"><a href="Modal.html">Modal</a></li>
+                                    <li class="kss-menu-item"><a href="Page-Content-Panels.html">Page Content Panels</a></li>
+                                    <li class="kss-menu-item"><a href="Page-Header.html">Page Header</a></li>
+                                    <li class="kss-menu-item"><a href="Pagination.html">Pagination</a></li>
+                                    <li class="kss-menu-item"><a href="Status-Indicators.html">Status Indicators</a></li>
+                                    <li class="kss-menu-item"><a href="Tables.html">Tables</a></li>
+                                    <li class="kss-menu-item"><a href="Tabs.html">Tabs</a></li>
+                                    <li class="kss-menu-item"><a href="Thumbnail-Zoom.html">Thumbnail Zoom</a></li>
+                                    <li class="kss-menu-item"><a href="Tour-Bubble.html">Tour Bubble</a></li>
+                                    <li class="kss-menu-item"><a href="Tooltip-and-Popover.html">Tooltip and Popover</a></li>
+                                    <li class="kss-menu-item"><a href="Trees.html">Trees</a></li>
                         </ul>
                 </nav>
             </aside>
@@ -160,182 +178,168 @@
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
                 
-                <section id="section-6.1" class="kss-section kss-componnet-page">
+                <section id="section-1.1" class="kss-section kss-componnet-page">
 
-                    <h2 class="kss-title"><span class="kss-ref">6.1</span> Input Field</h2>
-
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="control-label required">Email address</label>
-    <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="control-label required">Password</label>
-    <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputNotRequired">Optional field label</label>
-    <input type="password" class="form-control input-lg" id="exampleInputNotRequired" placeholder="Password">
-  </div>
-</form>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;form&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;exampleInputEmail1&quot; class=&quot;control-label required&quot;&gt;Email address&lt;/label&gt;
-    &lt;input type=&quot;email&quot; class=&quot;form-control input-lg&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot; required&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;exampleInputPassword1&quot; class=&quot;control-label required&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; class=&quot;form-control input-lg&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;exampleInputNotRequired&quot;&gt;Optional field label&lt;/label&gt;
-    &lt;input type=&quot;password&quot; class=&quot;form-control input-lg&quot; id=&quot;exampleInputNotRequired&quot; placeholder=&quot;Password&quot;&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-6.4" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">6.4</span> Read Only Form Elements</h2>
+                    <h2 class="kss-title"><span class="kss-ref">1.1</span> Alerts</h2>
 
                     <div class="kss-description">
-                        <p>Read Only Form Elements share the same styling as
-the well know input-lg, input-sm size modifier classes.
-Use them if you want to provide inline text with a label
-within a form.</p>
+                        <p><dl>
+   <dt>Alert</dt>
+   <dd>Use to let people know there is something happening, but you can dismiss and act upon it later if needed, e.g. a service subscribed to needs updating. It’s recommended to use the dark blue treatment for Alerts. Alerts should display until they are dismissed by clicking or tapping X.</dd>
+   <dt>Notification</dt>
+   <dd>Use to let people know about some information or action that happened, but no action is needed on their part, e.g. the service will be deprecated at a future date. It’s recommended to use the dark blue treatment for Notifications. Notifications should display for 3 seconds, and disappear on their own.</dd>
+   <dt>Error</dt>
+   <dd>Use to let people know there is an issue that needs attention immediately, e.g. an authorization is expired and no work can proceed until it’s resolved. It’s recommended to use the red treatment for Errors. Errors should display until they are dismissed by clicking or tapping X. </dd>
+</ul></p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text {$modifiers}">
-	Content
-	</p>
+                                <div class="alert alert-success alert-dismissible" role="alert">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   Well done! You successfully read this important alert message. <a href="#">Link</a>
 </div>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>input large styling</p>
-
-                                </div>
-                                <div class="kss-mod-name text-right">.form-readonly-text-lg</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-lg">
-	Content
-	</p>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>input small styling</p>
-
-                                </div>
-                                <div class="kss-mod-name text-right">.form-readonly-text-sm</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-	<label class="control-label">Service name</label>
-	<p class="form-readonly-text form-readonly-text-sm">
-	Content
-	</p>
+<div class="alert alert-danger alert-dismissible" role="alert">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Stop! This is all wrong. <a href="#">Link</a> 
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-	&lt;label class=&quot;control-label&quot;&gt;Service name&lt;/label&gt;
-	&lt;p class=&quot;form-readonly-text {$modifiers}&quot;&gt;
-	Content
-	&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-6.5" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">6.5</span> Custom Checkboxes</h2>
-
-                    <div class="kss-description">
-                        <p>Checkboxes adhere to typical use; when multiple selections for an item are available. Check Boxes should be placed in proximity to the value needing selection(s).</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="checkbox">
- <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
- <label for="optionsCheck1">Check me out</label>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;checkbox&quot;&gt;
- &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
- &lt;label for=&quot;optionsCheck1&quot;&gt;Check me out&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-6.6" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">6.6</span> Custom Radio buttons</h2>
-
-                    <div class="kss-description">
-                        <p>Radio buttons allows to choose only one of a predefined set of options for an item. Radio buttons should be placed in proximity to the value needing selection(s)</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
-</div>
-<div class="radio">
-	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+   Well done! You successfully read this important alert message. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
 &lt;/div&gt;
-&lt;div class=&quot;radio&quot;&gt;
-	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
+&lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+  Stop! This is all wrong. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt; 
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
+                    </div>
+                </section>
+                
+                <section id="section-1.1" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">1.1</span> New to the to top</h2>
+
+                    <div class="kss-description">
+                        <p>Back to top button to help the user easily jump to the top of the page when scrolling a long page.</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <span  class="hyicon hyicon-top back-to-top"></span>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html">&lt;span  class=&quot;hyicon hyicon-top back-to-top&quot;&gt;&lt;/span&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section-10" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">10</span> Loading Spinner</h2>
+
+                </section>
+                
+                <section id="section-11" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">11</span> Localization</h2>
+
+                    <div class="kss-description">
+                        <p>The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-12" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">12</span> Modal</h2>
+
+                    <div class="kss-description">
+                        <p>Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-13" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">13</span> Page Content Panels</h2>
+
+                    <div class="kss-description">
+                        <p>Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-14" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">14</span> Page Header</h2>
+
+                </section>
+                
+                <section id="section-15" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">15</span> Pagination</h2>
+
+                    <div class="kss-description">
+                        <p>Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-16" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">16</span> Status Indicators</h2>
+
+                    <div class="kss-description">
+                        <p class="kss-lead">Labels should be uses within cards and list rows while Pills should be used within Detail panels to give the status more prominence.</p>
+<p>Colors may be used to help highlight various statuses or states. The following colors should be used as a standard, and are reserved for these statues or states.</p>
+    <ul>
+        <li><b>Green</b> - confirmation, approval, generally positive</li>
+        <li><b>Orange</b> - warning, action can be taken</li>
+        <li><b>Red</b> - error, non-approval, generally negative, action can&apos;t be taken</li>
+        <li><b>Grey</b> - inactive</li>
+    </ul>
+
+<p><i>Note that information, statuses or states should not be communicated by color alone. It is recommended a label always accompany a color.</i></p>
+                    </div>
+                </section>
+                
+                <section id="section-17" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">17</span> Tables</h2>
+
+                    <div class="kss-description">
+                        <p>Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-18" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">18</span> Tabs</h2>
+
+                    <div class="kss-description">
+                        <p>Use Tabs when you need to organize and group information on page while reducing information density.</p>
+
+                    </div>
+                </section>
+                
+                <section id="section-19" class="kss-section kss-componnet-page">
+
+                    <h2 class="kss-title"><span class="kss-ref">19</span> Thumbnail Zoom</h2>
+
+                    <div class="kss-description">
+                        <p>If a thumbnail image or images are used it is recommended you allow someone to get a larger view. Use this component to allow a larger view.</p>
+
                     </div>
                 </section>
             </article>
@@ -361,19 +365,19 @@ within a form.</p>
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1469834547271"></script>
+<script src="../public/kss.js?t=1470085967157"></script>
 
-<script src="../public/prettify.js?t=1469834547271"></script>
-<script src="../public/js/jquery.min.js?t=1469834547271"></script>
-<script src="../public/main.js?t=1469834547271"></script>
-<script src="../public/js/bootstrap.min.js?t=1469834547271"></script>
-<script src="../public/js/select2.js?t=1469834547271"></script>
+<script src="../public/prettify.js?t=1470085967157"></script>
+<script src="../public/js/jquery.min.js?t=1470085967157"></script>
+<script src="../public/main.js?t=1470085967157"></script>
+<script src="../public/js/bootstrap.min.js?t=1470085967157"></script>
+<script src="../public/js/select2.js?t=1470085967157"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1469834547271"></script>
-<script src="../public/jquery.cookiebar.js?t=1469834547271"></script>
+<script src="../public/js/yaas.sso.js?t=1470085967157"></script>
+<script src="../public/jquery.cookiebar.js?t=1470085967157"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1469834547271"></script>
+<script src="../public/script.js?t=1470085967157"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
