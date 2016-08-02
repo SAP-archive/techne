@@ -73,9 +73,7 @@ module.exports = function(opt) {
 
                 sectionRoots.sort();
 
-                //console.log('sro', sectionRoots);
                 rootCount = sectionRoots.length;
-
 
                 handlebarHelpers(handlebars, styleguide);
 
@@ -86,35 +84,31 @@ module.exports = function(opt) {
                 // reference, and make a page for each.
 
                 var mainFiles = styleguide.section('x', dynamicpagelists[key]);
-                console.log('mf', mainFiles.length);
-
                 for (i = 0; i < mainFiles.length; i += 1) {
 
                     
-
-                    childSections = styleguide.section((sectionRoots[i]+'.*'), dynamicpagelists[key]);
+                    childSections = styleguide.section((sectionRoots[i]+'\\.*'), dynamicpagelists[key]);
 
                     var fileRoot = parseInt(sectionRoots[i],10);
 
-                    console.log('root', fileRoot);
+                    console.log('i', i);
+                    console.log('fileRoot', fileRoot);
+                    console.log('------------------------------');
+                    console.log('mailFiles', mainFiles[i]);
+                    console.log(' ');
 
-                    console.log('fff', mainFiles[i]); 
                     var fileName = mainFiles[i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
 
 
                     //update the childSections reference to point at the new file name links
                     childSections.pageLink = fileName;
 
-                    //console.log('jsections', jsonSections(childSections));
-                    //console.log('sectionroots', styleguide.section( sectionRoots[i], dynamicpagelists[key]) );
-                    //console.log('sectionroots', dynamicpagelists[key]);
-
                     var content = template({
                         showLeftNav: true, //show the nav bar for all sections
                         styleguide: styleguide,
                         childSections: childSections,
                         sections: dynamicpagelists[key],
-                        rootNumber: sectionRoots[i],
+                        rootNumber: (i + 1),
                         sectionRoots: sectionRoots,
                         overview: false,
                         pagename: "components",
@@ -122,11 +116,7 @@ module.exports = function(opt) {
                         argv: {}
                     });
 
-                    //console.log('var index' + i + ' = ', childSections);
-
                     var joinedPath = path.join(firstFile.base + '/' + key + 's' ,  fileName + '.html');
-
-                    console.log('path', joinedPath );
 
                     var file = new File({
                         cwd: firstFile.cwd,

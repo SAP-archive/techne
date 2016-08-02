@@ -18,22 +18,23 @@ KssStyleguide.prototype.init = function () {
 
 };
 
-KssStyleguide.prototype.pagesection = function(type, query){
-    console.log(type, query);
-};
-
 KssStyleguide.prototype.section = function( query, qType) {
 	var i, l ,
 		current, isExact = false,
 		sections = [];
 
-    
     //@TODO do something with the qType so that when called with we look only at the page type posibilities that match the passed qType instead of all sections
 
 	if (!query) {
 		return this.section(/.+/);
 	}
-
+    
+    console.log('----------------------------------------------------------');
+    console.log('----------------------------------------------------------');
+    console.log('------------------  NEW SECTION CHECK  -------------------');
+    console.log('----------------------------------------------------------');
+    console.log('----------------------------------------------------------');
+    console.log('original query', query);
 	// Exact Queries
 	if (typeof query === 'string') {
 		isExact = query.match(/[0-9\.]*/);
@@ -46,16 +47,19 @@ KssStyleguide.prototype.section = function( query, qType) {
 		}
 	}
 
-
 	// If recieving a n.x or n.* query, convert it
 	// to regex for general search
 	if (!(query instanceof RegExp)) {
+
+        console.log('orig query', query);
 		query = new RegExp(
+
 			query
 			 .replace(/\*/g, '([0-9]\\.?)*')
 			 .replace(/x/g, '[0-9]*')
 		);
 	}
+
 
     l = (qType)? qType.length : this.data.sections.length;
 
@@ -63,14 +67,20 @@ KssStyleguide.prototype.section = function( query, qType) {
 	for (i = 0; i < l; i += 1) {
         
 		current = (qType != undefined)? qType[i] : this.data.sections[i];
+
 		if (sectionQueryMatch(current.data.reference, query)) {
 			sections.push(current);
+            //console.log('push current', sections);
 		}
 	}
+    
 
 	if (!sections) {
 		return false;
 	}
+
+    console.log('------------------  FINAL SECTION LIST -------------------');
+    console.log(sections);
 
 	// Sorts results based on reference number.
 	return sections.sort(function(a, b) {
@@ -95,6 +105,15 @@ KssStyleguide.prototype.section = function( query, qType) {
 };
 
 sectionQueryMatch = function(reference, query) {
-	var match = reference.match(query);
+  	var match = reference.match(query);
+    if((match && match[0] === reference))
+    {
+        console.log(" ");
+        console.log("---------------------------------------------");
+        console.log("query :: "+ query + " ; reference :: "+ reference +" ; match :: " + match[0] );
+        console.log('dose it match?', (match && match[0] === reference));
+        console.log("---------------------------------------------");
+        console.log(" ");
+    }
 	return match && match[0] === reference;
 }

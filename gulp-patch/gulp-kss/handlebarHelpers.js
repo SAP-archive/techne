@@ -21,9 +21,6 @@ module.exports = function (handlebars, styleguide) {
             sections,
             i, l;
 
-        //console.log('PAGE SECTION CHILDREN', childSections);
-
-
         l = childSections.length;
         for (i = 0; i < l; i += 1) {
             buffer += options.fn(childSections[i].data);
@@ -40,7 +37,6 @@ module.exports = function (handlebars, styleguide) {
             sections,
             i, l;
 
-        console.log('type', type);
         sections = styleguide.section('x', type);
 
         //console.log('data to show: ', tmp);
