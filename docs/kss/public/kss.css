@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-size: 100%;
   /*overflow-y: scroll; */
@@ -756,7 +754,6 @@ li.L9 {
   z-index: 0;
 }
 #kss-content .circle {
-  border: 1px solid #cfd8e3;
   box-shadow: 0px 1px 1px #fff;
   margin: 0 auto 20px auto;
   width: 100%;
@@ -764,8 +761,36 @@ li.L9 {
   padding: 50% 0;
   border-radius: 50%;
 }
+#kss-content .circle-primary-grey {
+  background-color: #e0e9f0;
+}
+#kss-content .circle-white {
+  background-color: #ffffff;
+  border: 1px solid #cfd8e3;
+}
+#kss-content .circle-primary-dark-grey {
+  background-color: #313440;
+}
+#kss-content .circle-primary-blue {
+  background-color: #0486e0;
+}
+#kss-content .circle-primary-yellow {
+  background-color: #fcdf2b;
+}
+#kss-content .circle-secondary-grey {
+  background-color: #b7c1cd;
+}
+#kss-content .circle-secondary-green {
+  background-color: #04ce26;
+}
+#kss-content .circle-secondary-orange {
+  background-color: #fbbb21;
+}
+#kss-content .circle-secondary-red {
+  background-color: #ff3b30;
+}
 #kss-content .circle-type {
-  font-size: 74px;
+  font-size: 44px;
   display: inline-block;
   margin-top: -35%;
 }
@@ -862,7 +887,7 @@ header.hyHomeHeaderMinor {
   margin: 0 -15px;
 }
 .hyHomePage h1 {
-  font-size: 35px;
+  font-size: 40px;
 }
 .hyHomePage h3 {
   font-size: 40px;
@@ -1131,9 +1156,15 @@ body.hyComponentsPage {
 .kss-guidelines-page .visualSystemSpacing {
   padding-top: 40px;
 }
+.kss-guidelines-page .success {
+  background: #233243;
+}
+.kss-guidelines-page .text-success {
+  color: #04ce26 !important;
+}
 .visual-system {
   /* font-size */
-  /* 5 column layout */
+  /* circles column layout */
   /* alert colors */
   /* typography */
 }
@@ -1143,36 +1174,59 @@ body.hyComponentsPage {
 .visual-system .size-20 {
   font-size: 20px;
 }
-.visual-system .col-xs-5ths,
-.visual-system .col-sm-5ths,
-.visual-system .col-md-5ths,
-.visual-system .col-lg-5ths {
+.visual-system .col-xs-circle,
+.visual-system .col-sm-circle,
+.visual-system .col-md-circle,
+.visual-system .col-lg-circle {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
-.visual-system .col-xs-5ths {
-  width: 20%;
+.visual-system .col-xs-circle {
+  width: 15%;
   float: left;
 }
 @media (min-width: 76npx) {
-  .visual-system .col-sm-5ths {
+  .visual-system .col-sm-circle {
     width: 20%;
     float: left;
   }
 }
 @media (min-width: 992px) {
-  .visual-system .col-md-5ths {
-    width: 20%;
+  .visual-system .col-md-circle {
+    width: 15%;
     float: left;
   }
 }
 @media (min-width: 1200px) {
-  .visual-system .col-lg-5ths {
-    width: 20%;
+  .visual-system .col-lg-circle {
+    width: 15%;
     float: left;
   }
+}
+.visual-system .font-example-dosis {
+  font-size: 31px;
+  font-family: dosis;
+  word-wrap: break-word;
+}
+.visual-system .font-example-open-sans {
+  font-size: 31px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+}
+.visual-system .font-size-example-h2 {
+  font-weight: 600;
+  margin-top: 20px !important;
+  padding-top: 0 !important;
+}
+.visual-system .font-size-example-body {
+  margin-top: 20px !important;
+  padding-top: 0 !important;
+}
+.visual-system .headers-guidelines-thumb {
+  float: right;
 }
 .visual-system .content-bg {
   background: #ffffff;
@@ -1194,9 +1248,6 @@ body.hyComponentsPage {
 }
 .visual-system .attention {
   background: #5bc0de;
-}
-.visual-system .success {
-  background: #233243;
 }
 .visual-system .warning {
   background: #3cb1da;
@@ -1422,7 +1473,6 @@ body.hyComponentsPage {
 #patterns-trees .circle,
 #patterns-mixed-pattern-pages .circle,
 #patterns-overall-pattern-reference .circle {
-  border: 1px solid #cfd8e3;
   box-shadow: 0px 1px 1px #fff;
   margin: 0 auto 20px auto;
   width: 100%;
@@ -1430,13 +1480,86 @@ body.hyComponentsPage {
   padding: 50% 0;
   border-radius: 50%;
 }
+#patterns-list-pages .circle-primary-grey,
+#patterns-card-pages .circle-primary-grey,
+#patterns-retail-product-pages .circle-primary-grey,
+#patterns-trees .circle-primary-grey,
+#patterns-mixed-pattern-pages .circle-primary-grey,
+#patterns-overall-pattern-reference .circle-primary-grey {
+  background-color: #e0e9f0;
+}
+#patterns-list-pages .circle-white,
+#patterns-card-pages .circle-white,
+#patterns-retail-product-pages .circle-white,
+#patterns-trees .circle-white,
+#patterns-mixed-pattern-pages .circle-white,
+#patterns-overall-pattern-reference .circle-white {
+  background-color: #ffffff;
+  border: 1px solid #cfd8e3;
+}
+#patterns-list-pages .circle-primary-dark-grey,
+#patterns-card-pages .circle-primary-dark-grey,
+#patterns-retail-product-pages .circle-primary-dark-grey,
+#patterns-trees .circle-primary-dark-grey,
+#patterns-mixed-pattern-pages .circle-primary-dark-grey,
+#patterns-overall-pattern-reference .circle-primary-dark-grey {
+  background-color: #313440;
+}
+#patterns-list-pages .circle-primary-blue,
+#patterns-card-pages .circle-primary-blue,
+#patterns-retail-product-pages .circle-primary-blue,
+#patterns-trees .circle-primary-blue,
+#patterns-mixed-pattern-pages .circle-primary-blue,
+#patterns-overall-pattern-reference .circle-primary-blue {
+  background-color: #0486e0;
+}
+#patterns-list-pages .circle-primary-yellow,
+#patterns-card-pages .circle-primary-yellow,
+#patterns-retail-product-pages .circle-primary-yellow,
+#patterns-trees .circle-primary-yellow,
+#patterns-mixed-pattern-pages .circle-primary-yellow,
+#patterns-overall-pattern-reference .circle-primary-yellow {
+  background-color: #fcdf2b;
+}
+#patterns-list-pages .circle-secondary-grey,
+#patterns-card-pages .circle-secondary-grey,
+#patterns-retail-product-pages .circle-secondary-grey,
+#patterns-trees .circle-secondary-grey,
+#patterns-mixed-pattern-pages .circle-secondary-grey,
+#patterns-overall-pattern-reference .circle-secondary-grey {
+  background-color: #b7c1cd;
+}
+#patterns-list-pages .circle-secondary-green,
+#patterns-card-pages .circle-secondary-green,
+#patterns-retail-product-pages .circle-secondary-green,
+#patterns-trees .circle-secondary-green,
+#patterns-mixed-pattern-pages .circle-secondary-green,
+#patterns-overall-pattern-reference .circle-secondary-green {
+  background-color: #04ce26;
+}
+#patterns-list-pages .circle-secondary-orange,
+#patterns-card-pages .circle-secondary-orange,
+#patterns-retail-product-pages .circle-secondary-orange,
+#patterns-trees .circle-secondary-orange,
+#patterns-mixed-pattern-pages .circle-secondary-orange,
+#patterns-overall-pattern-reference .circle-secondary-orange {
+  background-color: #fbbb21;
+}
+#patterns-list-pages .circle-secondary-red,
+#patterns-card-pages .circle-secondary-red,
+#patterns-retail-product-pages .circle-secondary-red,
+#patterns-trees .circle-secondary-red,
+#patterns-mixed-pattern-pages .circle-secondary-red,
+#patterns-overall-pattern-reference .circle-secondary-red {
+  background-color: #ff3b30;
+}
 #patterns-list-pages .circle-type,
 #patterns-card-pages .circle-type,
 #patterns-retail-product-pages .circle-type,
 #patterns-trees .circle-type,
 #patterns-mixed-pattern-pages .circle-type,
 #patterns-overall-pattern-reference .circle-type {
-  font-size: 74px;
+  font-size: 44px;
   display: inline-block;
   margin-top: -35%;
 }
