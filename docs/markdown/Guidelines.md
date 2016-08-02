@@ -166,28 +166,32 @@
                 <div class="circle circle-white">
                     <p class="dosis-light circle-type">Aa</p>
                 </div>
-                <p>Regular</p>
+                <p>Regular(400)</p>
             </div>
             <div class="col-md-circle col-xs-6">
                 <div class="circle circle-white">
                     <p class="dosis-medium circle-type">Aa</p>
                 </div>
-                <p>Medium</p>
+                <p>Medium(500)</p>
             </div>
             <div class="col-md-circle col-xs-6">
                 <div class="circle circle-white">
                     <p class="dosis-semibold circle-type">Aa</p>
                 </div>
-                <p>Semibold</p>
+                <p>Semibold(600)</p>
             </div>
         </div>
         <div class="row visualSystemSpacing typographyAlignment">
             <div class="usage">
                 <h4 class="dosis-semibold">Font sizes</h4>
                 <h1>Grumpy wizards make toxic brew for the evil Queen and Jack.</h1>
-                <p>H1 - Dosis Regular, 29 pt - Page Title, mobile header</p>
-                <h2 class="font-size-example-h2">Grumpy wizards make toxic brew for the evil Queen and Jack.</h2>
-                <p>H2 - Dosis Semibold, 26 pt - Section titles</p>
+                <p>H1 - Dosis Regular(400), 29 pt - Page Title, mobile header</p>
+                <h2 class="font-size-example-headings">Grumpy wizards make toxic brew for the evil Queen and Jack.</h2>
+                <p>H2 - Dosis Medium(500), 26 pt - Section titles</p>
+                <h3 class="font-size-example-headings">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+                <p>H3 - Dosis Semibold(600), 21 pt</p>
+                <h4 class="font-size-example-headings">Grumpy wizards make toxic brew for the evil Queen and Jack.</h4>
+                <p>H4 - Dosis Medium(500), 19 pt</p>
             </div>
         </div>
         <div class="row visualSystemSpacing">
