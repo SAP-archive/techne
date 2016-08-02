@@ -28,9 +28,9 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1470156817627">
+  <link rel="stylesheet" href="../public/kss.css?t=1470160356056">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470156817627">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470160356056">
 
 
 
@@ -179,232 +179,35 @@
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
                 
-                <section id="section-7.1" class="kss-section kss-componnet-page">
+                <section id="section-20.1" class="kss-section kss-componnet-page">
 
-                    <h2 class="kss-title"><span class="kss-ref">7.1</span> Critical Error-Avoidance</h2>
+                    <h2 class="kss-title"><span class="kss-ref">20.1</span> Usage Guidlines</h2>
 
                     <div class="kss-description">
-                        <p>Any help that can be offered that allows a user to avoid making an error while completing a form should display directly under the field at all times.  An example of this type of help content is “Must start with a lowercase alpha character, followed by any combination of alphanumeric characters, 3-16 characters”</p>
+                        <p>A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanatino of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.  We recommend to use the bootstrap popover component to do so.</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="form-group">
-  <label for="error-avoidance-sample"" class="control-label">Label</label>
-  <div class="y-counter">
-    <input type="text" id="error-avoidance-sample" class="form-control input-lg">
-  </div>
-  <span class="help-inline {$modifiers}">
-   <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-   <span class="help-block-inline">Must start with a lowercase alpha character, followed by any combination of alphanumeric characters, 3-16 characters</span>
- </span>
+                                <div class="popover bottom {$modifiers}">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Popover</h3>
+	<div class="popover-content">
+		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;error-avoidance-sample&quot;&quot; class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
-  &lt;div class=&quot;y-counter&quot;&gt;
-    &lt;input type=&quot;text&quot; id=&quot;error-avoidance-sample&quot; class=&quot;form-control input-lg&quot;&gt;
-  &lt;/div&gt;
-  &lt;span class=&quot;help-inline {$modifiers}&quot;&gt;
-   &lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
-   &lt;span class=&quot;help-block-inline&quot;&gt;Must start with a lowercase alpha character, followed by any combination of alphanumeric characters, 3-16 characters&lt;/span&gt;
- &lt;/span&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;popover bottom {$modifiers}&quot;&gt;
+	&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+	&lt;h3 class=&quot;popover-title&quot;&gt;Popover&lt;/h3&gt;
+	&lt;div class=&quot;popover-content&quot;&gt;
+		&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-7.2" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">7.2</span> Inline Character Counter</h2>
-
-                    <div class="kss-description">
-                        <p>Display the remaining characters for a input or textarea when the formfield 
-is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functionality is not provided by techne.<br/></br> </p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-  <label for="character-counter-sample" class="control-label">Label</label>
-  <div class="y-counter">
-    <input type="text" max-character="35" id="character-counter-sample" class="form-control input-lg">
-    <span class="y-counter-number {$modifiers}">30</span>
-  </div>
- <span class="help-inline {$modifiers}">
-   <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-   <span class="help-block-inline">Maximum text length is 30 characters</span>
- </span>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>Append this class when the limit is reached</p>
-
-                                </div>
-                                <div class="kss-mod-name text-right">.y-counter-error</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-  <label for="character-counter-sample" class="control-label">Label</label>
-  <div class="y-counter">
-    <input type="text" max-character="35" id="character-counter-sample" class="form-control input-lg">
-    <span class="y-counter-number y-counter-error">30</span>
-  </div>
- <span class="help-inline y-counter-error">
-   <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-   <span class="help-block-inline">Maximum text length is 30 characters</span>
- </span>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;character-counter-sample&quot; class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
-  &lt;div class=&quot;y-counter&quot;&gt;
-    &lt;input type=&quot;text&quot; max-character=&quot;35&quot; id=&quot;character-counter-sample&quot; class=&quot;form-control input-lg&quot;&gt;
-    &lt;span class=&quot;y-counter-number {$modifiers}&quot;&gt;30&lt;/span&gt;
-  &lt;/div&gt;
- &lt;span class=&quot;help-inline {$modifiers}&quot;&gt;
-   &lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
-   &lt;span class=&quot;help-block-inline&quot;&gt;Maximum text length is 30 characters&lt;/span&gt;
- &lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-7.4" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">7.4</span> Additional Inline Help</h2>
-
-                    <div class="kss-description">
-                        <p>Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is &quot;The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed.&quot; <br><br><br></p>
-
-                    </div>
-                </section>
-                
-                <section id="section-7.5" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">7.5</span> Additional Inline Help</h2>
-
-                    <div class="kss-description">
-                        <p>Users can choose to enable “Help Mode” using a toggle in the footer of the left navigation panel or from the “My Profile” section. This will display all Additional Inline help on the page. Use ‘inline help’ when ‘all help on’ is set to true. Inline Help is displayed below a form field.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-  <label class="control-label">Label </label>
-  <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
-	<span class="help-inline {$modifiers}">
-		<span class="hyicon hyicon-helpoff help-icon-inline"></span>
-		<span class="help-block-inline">I'm a additional Inline Help</span>
-	</span>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.</p>
-
-                                </div>
-                                <div class="kss-mod-name text-right">.help-inline--tooltip</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <div class="form-group">
-  <label class="control-label">Label </label>
-  <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
-	<span class="help-inline help-inline--tooltip">
-		<span class="hyicon hyicon-helpoff help-icon-inline"></span>
-		<span class="help-block-inline">I'm a additional Inline Help</span>
-	</span>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label class=&quot;control-label&quot;&gt;Label &lt;/label&gt;
-  &lt;input type=&quot;text&quot; name=&quot;Project Description&quot; builder-input=&quot;noRestriction&quot; class=&quot;form-control input-lg&quot; &gt;
-	&lt;span class=&quot;help-inline {$modifiers}&quot;&gt;
-		&lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
-		&lt;span class=&quot;help-block-inline&quot;&gt;I&#x27;m a additional Inline Help&lt;/span&gt;
-	&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="section-7.7" class="kss-section kss-componnet-page">
-
-                    <h2 class="kss-title"><span class="kss-ref">7.7</span> Section Level Help</h2>
-
-                    <div class="kss-description">
-                        <p>Section-level help will always display IF it exists, but it isn’t required. Section-level help is displayed below the section title. Whether or not section-level help is included is at the discretion of each team.</p>
-
-                    </div>
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                <section>
-   <div class="section-header">
-   <h2 class="section-headline">I'm the Section Headline</h2>
-   <span class="section-help help-inline help-inline--section {$modifiers}">
-      <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-      <span class="help-block-inline"> I'm a additional Inline Help Text</span>
-   </span>
-</div>
-</section>
-                            </div>
-                        </div>
-                        <div class="kss-modifier">
-                            <div class="kss-mod-head">
-
-                                <div class="kss-mod-desc">
-                                    <p>By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.</p>
-
-                                </div>
-                                <div class="kss-mod-name text-right">.help-inline--tooltip</div>
-                            </div>
-                            <div class="kss-modifier-example">
-                                <section>
-   <div class="section-header">
-   <h2 class="section-headline">I'm the Section Headline</h2>
-   <span class="section-help help-inline help-inline--section help-inline--tooltip">
-      <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-      <span class="help-block-inline"> I'm a additional Inline Help Text</span>
-   </span>
-</div>
-</section>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;section&gt;
-   &lt;div class=&quot;section-header&quot;&gt;
-   &lt;h2 class=&quot;section-headline&quot;&gt;I&#x27;m the Section Headline&lt;/h2&gt;
-   &lt;span class=&quot;section-help help-inline help-inline--section {$modifiers}&quot;&gt;
-      &lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
-      &lt;span class=&quot;help-block-inline&quot;&gt; I&#x27;m a additional Inline Help Text&lt;/span&gt;
-   &lt;/span&gt;
-&lt;/div&gt;
-&lt;/section&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -432,19 +235,19 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1470156817627"></script>
+<script src="../public/kss.js?t=1470160356056"></script>
 
-<script src="../public/prettify.js?t=1470156817627"></script>
-<script src="../public/js/jquery.min.js?t=1470156817627"></script>
-<script src="../public/main.js?t=1470156817627"></script>
-<script src="../public/js/bootstrap.min.js?t=1470156817627"></script>
-<script src="../public/js/select2.js?t=1470156817627"></script>
+<script src="../public/prettify.js?t=1470160356056"></script>
+<script src="../public/js/jquery.min.js?t=1470160356056"></script>
+<script src="../public/main.js?t=1470160356056"></script>
+<script src="../public/js/bootstrap.min.js?t=1470160356056"></script>
+<script src="../public/js/select2.js?t=1470160356056"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1470156817627"></script>
-<script src="../public/jquery.cookiebar.js?t=1470156817627"></script>
+<script src="../public/js/yaas.sso.js?t=1470160356056"></script>
+<script src="../public/jquery.cookiebar.js?t=1470160356056"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1470156817627"></script>
+<script src="../public/script.js?t=1470160356056"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 

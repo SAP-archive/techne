@@ -28,9 +28,9 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1470156817561">
+  <link rel="stylesheet" href="../public/kss.css?t=1470160355996">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470156817561">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470160355996">
 
 
 
@@ -179,32 +179,108 @@
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
                 
-                <section id="section-13.1" class="kss-section kss-componnet-page">
+                <section id="section-5.1" class="kss-section kss-componnet-page">
 
-                    <h2 class="kss-title"><span class="kss-ref">13.1</span> Panels</h2>
+                    <h2 class="kss-title"><span class="kss-ref">5.1</span> </h2>
 
-                    <div class="kss-description">
-                        <p>Use panels to display content in the builder</p>
-
-                    </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div id="demo-page-background">
-	<div class="panel panel-default">
-		<div class="panel-heading">Panel heading without title</div>
-		<div class="panel-body">Panel content</div>
-	</div>
+                                <div class="form-group">
+ <button type="button" class="btn btn-lg btn-feedback" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
+</div>
+<div id="feedbackModal" class="modal fade " role="dialog">
+ <div class="modal-dialog">
+     <div class="modal-content">
+     <div class="modal-header text-center">
+         <button type="button" class="close" data-dismiss="modal">
+             <span class="hyicon hyicon-close"></span>
+             <span class="sr-only">Close</span>
+         </button>
+         <h2>Submit Feedback to SAP Hybris</h2>
+         <h4>Tell us how we can improve</h4>
+     </div>
+     <div class="modal-body">
+         <div class="form-group">
+             <label for="email">Email</label>
+             <input type="text" class="form-control input-lg" id="email" placeholder="Optional">
+             <span class="help-inline">
+                 <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+                 <span class="help-block-inline">Your email address is used only if we need to contact you for more details.</span>
+             </span>
+         </div>
+         <div class="form-group">
+             <label for="subject">Subject</label>
+             <select name="" id="issueType" class="form-control input-lg">
+                 <option value="Improvement" selected>Improvement</option>
+                 <option value="New Feature">New Feature</option>
+                 <option value="Bug">Bug</option>
+             </select>
+         </div>
+         <div class="form-group feedbackform-textarea">
+             <label class="desc" for="suggestions">Suggestions / Improvements <span class="req">*</span> </label>
+             <textarea id="suggestions" class="textarea form-control" spellcheck="true" rows="3" cols="50" tabindex="1" required=""></textarea>
+         </div>
+         <p class="text-muted">Other ways to provide feedback:</p>
+         <h3>Talk to Experts</h3>
+         <p>Use <a href="https://experts.hybris.com/spaces/151/index.html" target="_blank"><strong>hybris Experts Forum</strong></a> to get help from y-Experts</p>
+     </div>
+     <div class="modal-footer">
+         <button data-dismiss="modal" tabindex="5" class="btTxt btn btn-lg btn-subordinate">CANCEL</button>
+         <button id="saveForm" tabindex="6" class="btTxt submit btn btn-lg btn-primary">SUBMIT FEEDBACK</button>
+     </div>
+     <div id="complete"></div>
+ </div>
 </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div id=&quot;demo-page-background&quot;&gt;
-	&lt;div class=&quot;panel panel-default&quot;&gt;
-		&lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
-		&lt;div class=&quot;panel-body&quot;&gt;Panel content&lt;/div&gt;
-	&lt;/div&gt;
+                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-feedback&quot; data-toggle=&quot;modal&quot; data-target=&quot;#feedbackModal&quot;&gt;Feedback&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;feedbackModal&quot; class=&quot;modal fade &quot; role=&quot;dialog&quot;&gt;
+ &lt;div class=&quot;modal-dialog&quot;&gt;
+     &lt;div class=&quot;modal-content&quot;&gt;
+     &lt;div class=&quot;modal-header text-center&quot;&gt;
+         &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot;&gt;
+             &lt;span class=&quot;hyicon hyicon-close&quot;&gt;&lt;/span&gt;
+             &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;h2&gt;Submit Feedback to SAP Hybris&lt;/h2&gt;
+         &lt;h4&gt;Tell us how we can improve&lt;/h4&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;modal-body&quot;&gt;
+         &lt;div class=&quot;form-group&quot;&gt;
+             &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+             &lt;input type=&quot;text&quot; class=&quot;form-control input-lg&quot; id=&quot;email&quot; placeholder=&quot;Optional&quot;&gt;
+             &lt;span class=&quot;help-inline&quot;&gt;
+                 &lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
+                 &lt;span class=&quot;help-block-inline&quot;&gt;Your email address is used only if we need to contact you for more details.&lt;/span&gt;
+             &lt;/span&gt;
+         &lt;/div&gt;
+         &lt;div class=&quot;form-group&quot;&gt;
+             &lt;label for=&quot;subject&quot;&gt;Subject&lt;/label&gt;
+             &lt;select name=&quot;&quot; id=&quot;issueType&quot; class=&quot;form-control input-lg&quot;&gt;
+                 &lt;option value=&quot;Improvement&quot; selected&gt;Improvement&lt;/option&gt;
+                 &lt;option value=&quot;New Feature&quot;&gt;New Feature&lt;/option&gt;
+                 &lt;option value=&quot;Bug&quot;&gt;Bug&lt;/option&gt;
+             &lt;/select&gt;
+         &lt;/div&gt;
+         &lt;div class=&quot;form-group feedbackform-textarea&quot;&gt;
+             &lt;label class=&quot;desc&quot; for=&quot;suggestions&quot;&gt;Suggestions / Improvements &lt;span class=&quot;req&quot;&gt;*&lt;/span&gt; &lt;/label&gt;
+             &lt;textarea id=&quot;suggestions&quot; class=&quot;textarea form-control&quot; spellcheck=&quot;true&quot; rows=&quot;3&quot; cols=&quot;50&quot; tabindex=&quot;1&quot; required=&quot;&quot;&gt;&lt;/textarea&gt;
+         &lt;/div&gt;
+         &lt;p class=&quot;text-muted&quot;&gt;Other ways to provide feedback:&lt;/p&gt;
+         &lt;h3&gt;Talk to Experts&lt;/h3&gt;
+         &lt;p&gt;Use &lt;a href=&quot;https://experts.hybris.com/spaces/151/index.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;hybris Experts Forum&lt;/strong&gt;&lt;/a&gt; to get help from y-Experts&lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;modal-footer&quot;&gt;
+         &lt;button data-dismiss=&quot;modal&quot; tabindex=&quot;5&quot; class=&quot;btTxt btn btn-lg btn-subordinate&quot;&gt;CANCEL&lt;/button&gt;
+         &lt;button id=&quot;saveForm&quot; tabindex=&quot;6&quot; class=&quot;btTxt submit btn btn-lg btn-primary&quot;&gt;SUBMIT FEEDBACK&lt;/button&gt;
+     &lt;/div&gt;
+     &lt;div id=&quot;complete&quot;&gt;&lt;/div&gt;
+ &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
@@ -233,19 +309,19 @@
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1470156817561"></script>
+<script src="../public/kss.js?t=1470160355996"></script>
 
-<script src="../public/prettify.js?t=1470156817561"></script>
-<script src="../public/js/jquery.min.js?t=1470156817561"></script>
-<script src="../public/main.js?t=1470156817561"></script>
-<script src="../public/js/bootstrap.min.js?t=1470156817561"></script>
-<script src="../public/js/select2.js?t=1470156817561"></script>
+<script src="../public/prettify.js?t=1470160355996"></script>
+<script src="../public/js/jquery.min.js?t=1470160355996"></script>
+<script src="../public/main.js?t=1470160355996"></script>
+<script src="../public/js/bootstrap.min.js?t=1470160355996"></script>
+<script src="../public/js/select2.js?t=1470160355996"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1470156817561"></script>
-<script src="../public/jquery.cookiebar.js?t=1470156817561"></script>
+<script src="../public/js/yaas.sso.js?t=1470160355996"></script>
+<script src="../public/jquery.cookiebar.js?t=1470160355996"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1470156817561"></script>
+<script src="../public/script.js?t=1470160355996"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 

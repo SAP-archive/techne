@@ -87,7 +87,7 @@ module.exports = function(opt) {
                 for (i = 0; i < mainFiles.length; i += 1) {
 
                     
-                    childSections = styleguide.section((sectionRoots[i]+'\\.*'), dynamicpagelists[key]);
+                    childSections = styleguide.section(((i+1)+'\\.*'), dynamicpagelists[key]);
 
                     var fileRoot = parseInt(sectionRoots[i],10);
 
@@ -104,7 +104,7 @@ module.exports = function(opt) {
                     childSections.pageLink = fileName;
 
                     var content = template({
-                        showLeftNav: true, //show the nav bar for all sections
+                        showLeftNav:true,
                         styleguide: styleguide,
                         childSections: childSections,
                         sections: dynamicpagelists[key],
