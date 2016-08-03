@@ -70,6 +70,11 @@ module.exports = function(opt) {
                         sectionRoots.push(currentRoot);
                     }
                 }
+                
+                //set the page type of each section so we have access to it in the sections #eachSection handlebar exception
+                _.forEach(dynamicpagelists[key], function(val){
+                    val.data.pagetype = key;
+                });
 
                 sectionRoots.sort();
 
