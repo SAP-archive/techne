@@ -16,14 +16,24 @@ module.exports = function (handlebars, styleguide) {
      * a query for all children and descendants of that reference.
      * @param  {Mixed} query The section query
      */
-    handlebars.registerHelper('eachSection', function(query, childSections, options) {
+    handlebars.registerHelper('eachSection', function(query, kids, options) {
         var buffer = '',
             sections,
             i, l;
+        
 
-        l = childSections.length;
+        if (!query.toString().match(/x|\*/g)) {
+            query = new RegExp('^' + query + '$|^' + query + "\\..*");
+        }
+        console.log('big q',query);
+        console.log('kids', kids);
+        sections = styleguide.section(query, kids);
+ 
+        if (!sections) return '';
+
+        l = sections.length;
         for (i = 0; i < l; i += 1) {
-            buffer += options.fn(childSections[i].data);
+            buffer += options.fn(sections[i].data);
         }
 
         return buffer;

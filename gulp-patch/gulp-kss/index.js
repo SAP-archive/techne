@@ -87,15 +87,17 @@ module.exports = function(opt) {
                 for (i = 0; i < mainFiles.length; i += 1) {
 
                     
-                    childSections = styleguide.section(((i+1)+'\\.*'), dynamicpagelists[key]);
+                    childSections = styleguide.section(((i+1)+'.*'), dynamicpagelists[key]);
 
                     var fileRoot = parseInt(sectionRoots[i],10);
 
+                    /*
                     console.log('i', i);
                     console.log('fileRoot', fileRoot);
                     console.log('------------------------------');
                     console.log('mailFiles', mainFiles[i]);
                     console.log(' ');
+                    */
 
                     var fileName = mainFiles[i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
 
@@ -103,11 +105,15 @@ module.exports = function(opt) {
                     //update the childSections reference to point at the new file name links
                     childSections.pageLink = fileName;
 
+
+                    //console.log('dList description', dynamicpagelists[key].data.description );
+
+                    console.log('jchildren', jsonSections(childSections));
                     var content = template({
                         showLeftNav:true,
                         styleguide: styleguide,
-                        childSections: childSections,
-                        sections: dynamicpagelists[key],
+                        childSections: jsonSections(childSections),
+                        sections: (dynamicpagelists[key]),
                         rootNumber: (i + 1),
                         sectionRoots: sectionRoots,
                         overview: false,
@@ -207,9 +213,15 @@ module.exports = function(opt) {
 
     function jsonSections(sections) {
 
+
+        console.log('jsections', sections);
+
         return sections.map(function(section) {
 
-            //console.log('sectionref', section.reference());
+            console.log ('section', section);
+            console.log('header func', section.header());
+            console.log('description', section.description());
+            console.log('ref', section.reference() );
             return {
                 header: section.header(),
                 description: section.description(),

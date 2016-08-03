@@ -28,13 +28,14 @@ KssStyleguide.prototype.section = function( query, qType) {
 	if (!query) {
 		return this.section(/.+/);
 	}
-    
+   /* 
     console.log('----------------------------------------------------------');
     console.log('----------------------------------------------------------');
     console.log('------------------  NEW SECTION CHECK  -------------------');
     console.log('----------------------------------------------------------');
     console.log('----------------------------------------------------------');
     console.log('original query', query);
+    */
 	// Exact Queries
 	if (typeof query === 'string') {
 		isExact = query.match(/[0-9\.]*/);
@@ -51,7 +52,7 @@ KssStyleguide.prototype.section = function( query, qType) {
 	// to regex for general search
 	if (!(query instanceof RegExp)) {
 
-        console.log('orig query', query);
+        //console.log('orig query', query);
 		query = new RegExp(
 
 			query
@@ -79,8 +80,10 @@ KssStyleguide.prototype.section = function( query, qType) {
 		return false;
 	}
 
+    /*
     console.log('------------------  FINAL SECTION LIST -------------------');
     console.log(sections);
+    */
 
 	// Sorts results based on reference number.
 	return sections.sort(function(a, b) {
@@ -108,12 +111,14 @@ sectionQueryMatch = function(reference, query) {
   	var match = reference.match(query);
     if((match && match[0] === reference))
     {
+        /*
         console.log(" ");
         console.log("---------------------------------------------");
         console.log("query :: "+ query + " ; reference :: "+ reference +" ; match :: " + match[0] );
         console.log('dose it match?', (match && match[0] === reference));
         console.log("---------------------------------------------");
         console.log(" ");
+        */
     }
 	return match && match[0] === reference;
 }
