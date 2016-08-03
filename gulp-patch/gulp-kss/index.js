@@ -33,7 +33,7 @@ module.exports = function(opt) {
         buffer.push(file.contents.toString('utf8'));
     }
 
-//    / Is called when all files were added to buffer /
+    // Is called when all files were added to buffer /
     function endStream(){
 
 
@@ -90,25 +90,12 @@ module.exports = function(opt) {
                     childSections = styleguide.section(((i+1)+'.*'), dynamicpagelists[key]);
 
                     var fileRoot = parseInt(sectionRoots[i],10);
-
-                    /*
-                    console.log('i', i);
-                    console.log('fileRoot', fileRoot);
-                    console.log('------------------------------');
-                    console.log('mailFiles', mainFiles[i]);
-                    console.log(' ');
-                    */
-
                     var fileName = mainFiles[i].data.header.replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-').replace(/\-$/, "");
 
 
                     //update the childSections reference to point at the new file name links
                     childSections.pageLink = fileName;
 
-
-                    //console.log('dList description', dynamicpagelists[key].data.description );
-
-                    console.log('jchildren', jsonSections(childSections));
                     var content = template({
                         showLeftNav:true,
                         styleguide: styleguide,
@@ -139,12 +126,25 @@ module.exports = function(opt) {
 
 
             // Generate HTML from all supplied markdown files
-           /* if(opt.markDownDirectory)
+            if(opt.markDownDirectory)
             {
 
                 var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
                 template = handlebars.compile(template);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory);
+                
+                // Accumulate all of the sections' first indexes
+                // in case they don't have a root element.
+                for (i = 0; i < sectionCount; i += 1) {
+                    currentRoot = sections[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
+
+                    if (!~sectionRoots.indexOf(currentRoot)) {
+                        sectionRoots.push(currentRoot);
+                    }
+                }
+
+                sectionRoots.sort();
+                childSections = [];
 
                 for( i = 0; i < mdFiles.length; i++)
                 {
@@ -190,7 +190,7 @@ module.exports = function(opt) {
 
                 }
 
-            } */
+            } 
 
 
             // Copy template assets, less compilation added because default template uses it
@@ -212,16 +212,7 @@ module.exports = function(opt) {
     }
 
     function jsonSections(sections) {
-
-
-        console.log('jsections', sections);
-
         return sections.map(function(section) {
-
-            console.log ('section', section);
-            console.log('header func', section.header());
-            console.log('description', section.description());
-            console.log('ref', section.reference() );
             return {
                 header: section.header(),
                 description: section.description(),

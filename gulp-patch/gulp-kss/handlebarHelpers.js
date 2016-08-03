@@ -25,8 +25,6 @@ module.exports = function (handlebars, styleguide) {
         if (!query.toString().match(/x|\*/g)) {
             query = new RegExp('^' + query + '$|^' + query + "\\..*");
         }
-        console.log('big q',query);
-        console.log('kids', kids);
         sections = styleguide.section(query, kids);
  
         if (!sections) return '';
