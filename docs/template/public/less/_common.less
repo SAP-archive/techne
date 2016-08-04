@@ -13,6 +13,10 @@ body.kss-body {
     padding-right:0!important;
 }
 
+hr{
+    border-top-color: @hr-border-color !important;
+}
+
 a:visited {
     color: @blue_gd;
 }
@@ -43,7 +47,6 @@ h1.kss-title {
     padding-left: 15px;
     padding-bottom: 40px;
 }
-
 
 .kss-mod-list {
     width: 100%;
@@ -103,4 +106,12 @@ h1.kss-title {
 
 .kss-lead{
     font-weight: bold;
+}
+
+// css fix for anchor positioning with super header 
+:target:before {
+content:"";
+display:block;
+height:90px; /* super header height*/
+margin:-90px 0 0; /* negative super header height */
 }

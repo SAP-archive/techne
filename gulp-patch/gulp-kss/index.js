@@ -95,7 +95,7 @@ module.exports = function(opt) {
                                 styleguide: styleguide,
                                 sectionRoots: sectionRoots,
                                 sections: jsonSections(childSections),
-                                rootNumber: 0,
+                                rootNumber: 1,
                                 argv: {},
                                 overview:  marked(file.contents.toString('utf8'), 'utf8')
                             });

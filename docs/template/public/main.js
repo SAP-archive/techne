@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 
      if ($(".js_navtrigger.active").size() > 0) {
         $menuItem.removeClass('kss-active');
-        $($menuItem[0]).toggleClass('kss-active');
+        $($menuItem[1]).toggleClass('kss-active');
         $menuItem.click(function (event) {
             $menuItem.removeClass('kss-active');
             $(this).toggleClass('kss-active');
