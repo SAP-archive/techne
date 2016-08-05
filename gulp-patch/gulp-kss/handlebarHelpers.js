@@ -16,16 +16,17 @@ module.exports = function (handlebars, styleguide) {
      * a query for all children and descendants of that reference.
      * @param  {Mixed} query The section query
      */
-    handlebars.registerHelper('eachSection', function(query, options) {
+    handlebars.registerHelper('eachSection', function(query, kids, options) {
         var buffer = '',
             sections,
             i, l;
+        
 
-
-        if (!query.match(/x|\*/g)) {
+        if (!query.toString().match(/x|\*/g)) {
             query = new RegExp('^' + query + '$|^' + query + "\\..*");
         }
-        sections = styleguide.section(query);
+        sections = styleguide.section(query, kids);
+ 
         if (!sections) return '';
 
         l = sections.length;
@@ -39,13 +40,14 @@ module.exports = function (handlebars, styleguide) {
     /**
      * Loop over each section root, i.e. each section only one level deep.
      */
-    handlebars.registerHelper('eachRoot', function(options) {
+    handlebars.registerHelper('eachRoot', function(type, options) {
         var buffer = '',
             sections,
             i, l;
 
-        sections = styleguide.section('x');
+        sections = styleguide.section('x', type);
 
+        //console.log('data to show: ', tmp);
         if (!sections) return '';
 
         l = sections.length;
