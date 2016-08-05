@@ -20,9 +20,12 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-built_in,
-.hljs-name,
-.hljs-tag {
-  color: #00f;
+.hljs-name {
+  color: #cc1212;
+}
+
+.hljs-tag{
+  color: #2d4056;
 }
 
 .hljs-string,
@@ -34,7 +37,7 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 .hljs-template-variable,
 .hljs-type,
 .hljs-addition {
-  color: #a31515;
+  color: #1186c2;
 }
 
 .hljs-deletion,
@@ -49,7 +52,7 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 }
 
 .hljs-attr {
-  color: #f00;
+  color: #04b63a;
 }
 
 .hljs-symbol,
