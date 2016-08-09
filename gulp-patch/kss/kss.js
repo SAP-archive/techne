@@ -148,6 +148,7 @@ parse = function(input, options, callback) {
 	for (i = 0; i < l; i += 1) {
 		data = parseChunk(data, input[i], options) || data;
 	}
+
 	callback(false, new KssStyleguide(data));
 };
 
@@ -185,6 +186,7 @@ parseChunk = function(data, input, options) {
 			markup: false
 		};
 
+
 		// Split the comment block into paragraphs
 		paragraphs = currSection.raw
 			.replace(/\n\r|\r\n/g, '\n') // Handle Standard Line Breaks
@@ -197,10 +199,15 @@ parseChunk = function(data, input, options) {
 		currSection = processMarkup(paragraphs, options, currSection);
 
 		// Then check for a styleguide reference number. If not listed, ignore this block!
-		currSection.reference = checkReference(paragraphs, options) || '';
+        var checkRef = checkReference(paragraphs, options);
+        currSection.referenceType = checkRef[0] || ''; 
+		currSection.reference = checkRef[1] || '';
+
+
 		if (!currSection.reference) {
 			continue;
 		}
+
 		currSection.refDepth = currSection.reference ? currSection.reference.split(/\./g).length : false;
 
 
@@ -265,6 +272,7 @@ parseChunk = function(data, input, options) {
 
 		// Add the new section instance to the sections array
 		currSection = new KssSection(currSection);
+
 		data.sections.push(currSection);
 
 		// Store the reference for quick searching later, if it's supplied
@@ -388,23 +396,55 @@ checkReference = function(paragraphs, options) {
 	var paragraph = paragraphs[paragraphs.length - 1],
 		words = paragraph.match(/\s*?[a-zA-Z\-]+/g),
 		styleWord,
-		numbers;
+		numbers,
+        refType;
 
 	options = options || {};
+    
 
-	if (words && words[0].toLowerCase() === 'styleguide') {
-		numbers = paragraph.match(/styleguide\s*([0-9\.]*)/i);
+	if (words && (words[0].toLowerCase() === 'styleguide' ||
+                  words[0].toLowerCase() === 'component' ||
+                  words[0].toLowerCase() === 'pattern') ) {
+
+        if( words[0].toLowerCase() === 'styleguide'){
+		    numbers = paragraph.match(/styleguide\s*([0-9\.]*)/i);
+            refType = "styleguide";
+        }
+
+        if( words[0].toLowerCase() === 'component'){
+		    numbers = paragraph.match(/component\s*([0-9\.]*)/i);
+            refType = 'component';
+        }
+
+        if( words[0].toLowerCase() === 'pattern'){
+		    numbers = paragraph.match(/pattern\s*([0-9\.]*)/i);
+            refType = 'pattern';
+        }
+
 		if (numbers[1]) {
-			return numbers[1].replace(/^\.|\.$|(\.0){1,}$/g, ''); // Removes trailing 0's and .'s
-		}
+			return [ refType, numbers[1].replace(/^\.|\.$|(\.0){1,}$/g, '') ]; // Removes trailing 0's and .'s
+		} 
 	}
 	if (options.typos) {
 		styleWord = words.join('').replace(/\-|\s*/g, '');
 
-		if (natural.Metaphone.compare('Styleguide', styleWord)) {
+		if( natural.Metaphone.compare('Styleguide', styleWord) || 
+           natural.Metaphone.compare('Component', styleWord) ||
+           natural.Metaphone.compare('Pattern', styleWord) ) {
+
+            if(natural.Metaphone.compare('Pattern', styleWord))
+               refType = 'pattern';
+
+            if(natural.Metaphone.compare('Styleguide', styleWord))
+               refType = 'styleguide';
+
+            if(natural.Metaphone.compare('Component', styleWord))  
+               refType = 'component';
+
 			numbers = paragraph.match(/[0-9\.]+/g);
+            
 			if (numbers[0]) {
-				return numbers[0].replace(/^\.|\.$|(\.0){1,}$/g, ''); // Removes trailing 0's and .'s
+				return [ refType, numbers[0].replace(/^\.|\.$|(\.0){1,}$/g, '') ]; // Removes trailing 0's and .'s
 			}
 		}
 	}

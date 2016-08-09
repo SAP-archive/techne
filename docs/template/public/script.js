@@ -78,27 +78,6 @@ $( document ).ready(function(){
 
     });
 
-
-    $(".code-snippet").each(function(){
-
-        var preMarkup = "<a href='#' class='circle code-toggle'><span class='code-open'>&lt; / &gt;</span> <span class='code-close hyicon-remove'></span></a><hr><span class='caption'>code snippet</span>";
-
-        $(this).parent().prepend(preMarkup);
-		// $(this).parent().find('.code-snippet').slideToggle();
-
-    });
-
-    // code snippet toggle
-    $('.code-toggle').click(function(e){
-
-        e.preventDefault();
-        $(this).toggleClass('open-circle');
-        $(this).parent().find('.code-snippet').slideToggle();
-        $(this).find('.code-open, .code-close').toggle();
-
-    });
-
-
     // Super nav
     var didScroll;
     var lastScrollTop = 0;
@@ -219,6 +198,11 @@ $( document ).ready(function(){
     $(window).on('resize', fUpdatePersonaImgs);
     //---------------------
     //new Home Page
+
+    // initiate jshilight
+    hljs.initHighlightingOnLoad();
+
 });
+
 
 
