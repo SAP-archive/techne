@@ -28,9 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1470262624523">
+  <link rel="stylesheet" href="../public/kss.css?t=1470693640763">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470262624523">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470693640763">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1470693640763">
 
 
 
@@ -131,7 +132,7 @@
                         <span class="active">Components</span>
                 </li>
                 <li>
-                        <a href="../patterns/Pattern-Section.html" class="inactive">Patterns</a>
+                        <a href="../patterns/Navigation.html" class="inactive">Patterns</a>
                 </li>
                 <li>
                         <a href="../GettingStarted.html" class="inactive">Download &amp; Get Started</a>
@@ -151,26 +152,18 @@
                             <li class="kss-menu-item kss-back"><a href="../index.html">Back to Home</a></li>
                                     <li class="kss-menu-item"><a href="Alerts-Errors-Notifications.html">Alerts, Errors &amp; Notifications</a></li>
                                     <li class="kss-menu-item"><a href="Buttons.html">Buttons</a></li>
-                                    <li class="kss-menu-item"><a href="Cards.html">Cards</a></li>
                                     <li class="kss-menu-item"><a href="Contextual-Menu.html">Contextual Menu</a></li>
-                                    <li class="kss-menu-item"><a href="Feedback-Form.html">Feedback Form </a></li>
                                     <li class="kss-menu-item"><a href="Form-Elements.html">Form Elements</a></li>
                                     <li class="kss-menu-item"><a href="Help-and-Validation.html">Help and Validation </a></li>
                                     <li class="kss-menu-item"><a href="Icons.html">Icons</a></li>
                                     <li class="kss-menu-item"><a href="Lists.html">Lists</a></li>
                                     <li class="kss-menu-item"><a href="Loading-Spinner.html">Loading Spinner</a></li>
-                                    <li class="kss-menu-item"><a href="Localization.html">Localization</a></li>
-                                    <li class="kss-menu-item"><a href="Modal.html">Modal</a></li>
                                     <li class="kss-menu-item"><a href="Page-Content-Panels.html">Page Content Panels</a></li>
-                                    <li class="kss-menu-item"><a href="Page-Header.html">Page Header</a></li>
                                     <li class="kss-menu-item"><a href="Pagination.html">Pagination</a></li>
                                     <li class="kss-menu-item"><a href="Status-Indicators.html">Status Indicators</a></li>
-                                    <li class="kss-menu-item"><a href="Tables.html">Tables</a></li>
                                     <li class="kss-menu-item"><a href="Tabs.html">Tabs</a></li>
                                     <li class="kss-menu-item"><a href="Thumbnail-Zoom.html">Thumbnail Zoom</a></li>
-                                    <li class="kss-menu-item"><a href="Tour-Bubble.html">Tour Bubble</a></li>
                                     <li class="kss-menu-item"><a href="Tooltip-and-Popover.html">Tooltip and Popover</a></li>
-                                    <li class="kss-menu-item"><a href="Trees.html">Trees</a></li>
                         </ul>
                 </nav>
             </aside>
@@ -178,13 +171,12 @@
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
                 <section id="section-1" class="kss-section kss-componnet-page">
-                            <h1>Components</h1>
+                            <h1 class="kss-components-title">Components</h1>
                              <p>
                                The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
                                It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
                                also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.
                             </p>
-                      <h1 class="kss-title"><span class="kss-ref">1</span> Alerts, Errors &amp; Notifications</h1>
 
 
                     <div class="kss-description">
@@ -193,7 +185,7 @@
                     </div>
                 </section>
                 <section id="section-1.1" class="kss-section kss-componnet-page">
-                      <h2 class="kss-title"><span class="kss-ref">1.1</span> Alerts</h2>
+                      <h3 class="kss-title hidden"><span class="kss-ref">1.1</span> Alerts</h3>
 
                     <div class="kss-description">
                         <p><dl>
@@ -209,26 +201,34 @@
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div class="alert alert-success alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-   Well done! You successfully read this important alert message. <a href="#">Link</a>
-</div>
-<div class="alert alert-danger alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  Stop! This is all wrong. <a href="#">Link</a> 
-</div>
+                                 <div class="alert alert-success alert-dismissible" role="alert">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+     </button>
+     Well done! You successfully read this important alert message. <a href="#">Link</a>
+ </div>
+ <div class="alert alert-danger alert-dismissible" role="alert">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+     </button>
+     Stop! This is all wrong. <a href="#">Link</a> 
+ </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html">&lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-   Well done! You successfully read this important alert message. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;
- &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-  Stop! This is all wrong. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt; 
-&lt;/div&gt;</code></pre>
+                                <pre class="code-snippet"><code data-language="html" class="html"> &lt;div class=&quot;alert alert-success alert-dismissible&quot; role=&quot;alert&quot;&gt;
+     &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+         &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+     &lt;/button&gt;
+     Well done! You successfully read this important alert message. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;alert alert-danger alert-dismissible&quot; role=&quot;alert&quot;&gt;
+     &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+         &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+     &lt;/button&gt;
+     Stop! This is all wrong. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt; 
+ &lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -256,19 +256,20 @@
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1470262624523"></script>
+<script src="../public/kss.js?t=1470693640763"></script>
 
-<script src="../public/prettify.js?t=1470262624523"></script>
-<script src="../public/js/jquery.min.js?t=1470262624523"></script>
-<script src="../public/main.js?t=1470262624523"></script>
-<script src="../public/js/bootstrap.min.js?t=1470262624523"></script>
-<script src="../public/js/select2.js?t=1470262624523"></script>
+<script src="../public/prettify.js?t=1470693640763"></script>
+<script src="../public/js/jquery.min.js?t=1470693640763"></script>
+<script src="../public/main.js?t=1470693640763"></script>
+<script src="../public/js/bootstrap.min.js?t=1470693640763"></script>
+<script src="../public/js/select2.js?t=1470693640763"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1470262624523"></script>
-<script src="../public/jquery.cookiebar.js?t=1470262624523"></script>
+<script src="../public/js/yaas.sso.js?t=1470693640763"></script>
+<script src="../public/jquery.cookiebar.js?t=1470693640763"></script>
+<script src="../public/js/highlight.pack.min.js?t=1470693640763"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1470262624523"></script>
+<script src="../public/script.js?t=1470693640763"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
