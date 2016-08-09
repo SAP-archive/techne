@@ -15,12 +15,113 @@
 @import "./overwrites/__overwrites.less";
 @import "./components/_layout-section";
 
+// Navigation
+//
+// YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.
+// A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.
+// It is not recommended additional panels are created or nested within the existing parent/child structure as this will put the overall flow and focus of content at risk.
+//
+// Pattern 1
+@import "./techne-patterns/_navigation.less";
+
+
+// Data Set Display
+//
+// Pattern 2
+@import "./techne-patterns/_data-set-display.less";
+
+
+// Action Bar
+//
+// Action Bar with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title. Back should be displayed every time there is a higher leaf.
+//
+// Pattern 3
+@import "./techne-patterns/_action-bar.less";
+
+
+// Cards
+//
+// Cards are used to display information in a visual, scannable manner. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
+//
+// Pattern 4
+@import "./techne-patterns/_usercards";
+@import "./techne-patterns/_data-card.less";
+@import "./techne-patterns/_data.less";
+
+
+// Tables
+//
+// At Desktop and Tablet inflections, it is recommended to show 25 rows of data before pagination. At the Mobile inflection, it is recommended to show 10 rows of data before pagination. 
+// When used as a summary for a complete list on a mixed content page, display 5 cards before “See All.”
+//
+// Pattern 5
+@import "./techne-patterns/_tables.less";
+
+
+// Trees
+//
+// Tree component with multiple columns
+//
+// Pattern 6
+@import "./techne-patterns/_trees.less";
+
+
+// Dialogues/Modals
+//
+// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
+//
+// Pattern 7
+@import "./techne-patterns/_dialouges-modals.less";
+
+
+// Localization Editor
+//
+// The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.
+//
+// Pattern 8
+@import "./techne-patterns/_locals-editor";
+
+
+// Wizards
+//
+// Wizards are made up of the modal component and button and/or button link components. Use the wizard pattern when you want to guide people through a step-by-step process. Typically a wizard will have a ‘next’ and ‘previous’ action and a “Save” action at the last step.
+//
+// Pattern 9
+@import "./techne-patterns/_wizards";
+
+
+// Tours
+//
+// A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanation of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.
+//
+// Pattern 10
+@import "./techne-patterns/_tours";
+
+
+// Tour Bubble
+//
+// Use the Tour UI component to put together a comprehensive overview of UIs to new visitors.
+//
+// Pattern 11
+@import './techne-patterns/_popover.less';
+
+
+// Feedback Form 
+//
+// Standardized feedback form pattern. Click feedback button below to open form.
+//
+// Pattern 12
+@import "./techne-patterns/_feedback-form";
+
+///////////////////
+// END PATTERNS //
+/////////////////
 
 // Alerts, Errors & Notifications
 //
 // Messaging within the application is color-coded to emphasize the level of urgency, but the goal is to limit the number of colors overall to reduce cognitive load. In some cases alerts will allow for dismissal and in other cases alerts must be acted upon in order to complete a task. The color-coded system should allow at-a-glance understanding of allowable actions.
 //
-// Styleguide 1
+// Component 1
 @import "./overwrites/_alert.less";
 
 
@@ -28,43 +129,25 @@
 //
 // Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.  Used in patterns like page headers, modals and wizards. See Patterns & Layouts for examples of usage.
 //
-// Styleguide 2
+// Component 2
 @import './overwrites/_buttons.less';
 @import "./components/_forms-toggle";
 @import "./components/_back-to-top.less";
-
-
-// Cards
-//
-// Cards are used to display information in a visual, scannable manner. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
-//
-// Styleguide 3
-@import "./components/_usercards";
-@import "./components/_data.less";
-@import "./components/_data-card.less";
 
 
 // Contextual Menu
 //
 // The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
 //
-// Styleguide 4
+// Component 3
 @import './overwrites/_dropdowns.less';
-
-
-// Feedback Form 
-//
-// Standardized feedback form pattern. Click feedback button below to open form.
-//
-// Styleguide 5
-@import "./components/_feedback-form";
 
 
 // Form Elements
 //
 // Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field.  Use these components along with inline help and error state treatements for any form design.
 //
-// Styleguide 6
+// Component 4
 @import './overwrites/_forms.less';
 @import "./components/_forms-hint-text";
 @import "./components/_forms-checkboxes";
@@ -76,7 +159,7 @@
 //
 // To aid Builder users we have established different levels of help and help interaction patterns to address specific interaction and feedback needs.
 //
-// Styleguide 7
+// Component 5
 @import "./components/_forms-criticalerroravoidance.less";
 @import "./components/_forms-charactercounter.less";
 @import "./components/_forms-validationandhelp.less";
@@ -87,7 +170,7 @@
 //
 // Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun.  Icons can be used adaptively if desired, but at this point are used more as visual elements within other components.
 //
-// Styleguide 8
+// Component 6
 @import "./components/_icons";
 
 
@@ -95,61 +178,30 @@
 //
 // Use a Listgroup when data is meant to show in a single column
 //
-// Styleguide 9
+// Component 7
 @import './overwrites/_listgroup.less';
 
 
 // Loading Spinner
 //
-// Styleguide 10
+// Component 8
 @import "./components/_spinner.less";
-
-
-// Localization
-//
-// The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.
-//
-// Styleguide 11
-@import "./components/_locals-editor";
-
-
-// Modal
-//
-// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
-//
-// Styleguide 12
-@import './overwrites/_modal.less';
 
 
 // Page Content Panels
 //
 // Panels are used to set apart the content or form elements on a page from the background.  Place patterns and interactions within panels on your pages to achieve visual focus and separation for the tasks at-hand. Used on every page.
 //
-// Styleguide 13
+// Component 9
 @import './overwrites/_panels.less';
-
-
-
-// Page Header
-//
-//
-//
-// Styleguide 14
-@import './overwrites/_navs.less';
-@import "./components/_sticky_navbar.less";
-@import './overwrites/_navbar.less';
-
 
 
 // Pagination
 //
 // Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.
 //
-// Styleguide 15
+// Component 10
 @import './overwrites/_pagination.less';
-
-
-@import "./components/_products.less"; 
 
 
 // Status Indicators
@@ -165,57 +217,30 @@
 //
 // <p><i>Note that information, statuses or states should not be communicated by color alone. It is recommended a label always accompany a color.</i></p>
 //
-// Styleguide 16
+// Component 11
 @import './overwrites/_labels.less';
-
-
-// Tables
-//
-// Tables are used across UI modules to display data that is best viewed and manipulated in tabular format for quick sorting, filtering and efficient scanning. The table component is fully responsive so that even tabular data is easily readable at smaller inflection points.
-//
-// Styleguide 17
-@import './overwrites/_tables.less';
 
 
 // Tabs
 //
 // Use Tabs when you need to organize and group information on page while reducing information density.
 //
-// Styleguide 18
+// Component 12
 @import './overwrites/_tabs.less';
-
 
 
 // Thumbnail Zoom
 //
 // If a thumbnail image or images are used it is recommended you allow someone to get a larger view. Use this component to allow a larger view.
 //
-// Styleguide 19
+// Component 13
 @import "./components/_thumbnail-zoom";
-
-// Tour Bubble
-//
-// Use the Tour UI component to put together a comprehensive overview of UIs to new visitors.
-//
-// Styleguide 20
-@import './overwrites/_popover.less';
-
 
 
 // Tooltip and Popover
 //
-// Styleguide 21
+// Component 13
 @import "./components/_tooltip-popover";
-
-
-
-// Trees
-//
-// The tree component is used to display and manipulate hierarchical data, e.g. product categories.
-//
-// Styleguide 22
-@import "./components/_tree";
-
 
 
 // Atoms
