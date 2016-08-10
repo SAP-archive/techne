@@ -1,0 +1,203 @@
+// Trees
+//
+// Markup:
+// <div class="categoryTable">
+//     <!-- headers -->
+//     <div class="tablehead clearfix hidden-xs">
+//         <div class="col-sm-3 col-md-offset-1">Category Name</div>
+//         <div class="col-sm-3 ng-binding">Child Categories</div>
+//         <div class="col-sm-5 ng-binding">Linked Products</div>
+//     </div>
+//     <!-- items -->
+//     <div>
+//     <div class="mobileLayout clearfix visible-xs ">
+//     <div class="col-xs-2">
+//         <a class="btn btn-link category-toggle ">
+//             <span class="glyphicon glyphicon-chevron-down">
+//             </span>
+//         </a>
+//     </div>
+//     <div class="col-xs-7">
+//         <p class="primaryData" ><span class="categoryName">Office123</span></p>
+//         <p class="secondaryData " >6 Child Categories</p>
+//         <p class="secondaryData " >31 Products</p>
+//         <p class="statusDataValue">
+//             <span class="active ">Active</span>
+//         </p>
+//     </div>
+//     <div class="col-xs-3">
+//         <div class="dropdown pull-right">
+//             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                 <span class="hyicon-more"></span></a>
+//                 <ul class="dropdown-menu pull-right text-left" role="menu">
+//                     <li><a href="#" >Edit Category Details</a></li>
+//                     <li><a href="#">Add Child Category</a></li>
+//                     <li class="divider"></li>
+//                     <li><a >Delete Category</a></li>
+//                 </ul>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
+//         <div class="col-sm-1">
+//             <a class="btn btn-link category-toggle ">
+//                 <span class="glyphicon glyphicon-chevron-down">
+//                 </span>
+//             </a>
+//         </div>
+//         <div class="col-sm-3">
+//             <p class="primaryData">
+//                 <span class="categoryName">Office123</span>
+//             </p>
+//         </div>
+//         <div class="col-sm-3 " >6 Child Categories</div>
+//         <div class="col-sm-3 " >31 Products</div>
+//         <div class="col-sm-2">
+//             <span class="statusDataValue">
+//                 <span  class="active ng-binding ">Active</span>
+//             </span>
+//             <div class="dropdown pull-right">
+//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                     <span class="hyicon-more"></span></a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#" >Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <!-- <li class="divider"></li>
+//                         <li><a href >Add Category Above</a></li>
+//                         <li><a href >Add Category Below</a></li> -->
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="subcategories-cnt ">
+//             <div class=" clearfix subcategories-list" style="clear:both;">
+//                 <div class="categoryRow  hasNoChildCategories" >
+//                 <div class="mobileLayout clearfix visible-xs ">
+//                 <div class="col-xs-2">
+//                     <a class="btn btn-link category-toggle ">
+//                         <span class="glyphicon glyphicon-chevron-down glyphicon-empty" >
+//                         </span>
+//                     </a>
+//                 </div>
+//                 <div class="col-xs-7">
+//                     <p class="primaryData" ><span class="categoryName">Notebooks &amp; pens</span></p>
+//                     <p class="secondaryData " >0 Child Categories</p>
+//                     <p class="secondaryData " >13 Products</p>
+//                     <p class="statusDataValue">
+//                         <span class="active">Active</span>
+//                     </p>
+//                 </div>
+//                 <div class="col-xs-3">
+//                     <div class="dropdown pull-right">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                             <span class="hyicon-more"></span></a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a >Delete Category</a></li>
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
+//                     <div class="col-sm-1">
+//                         <a class="btn btn-link category-toggle ">
+//                             <span class="glyphicon glyphicon-chevron-down glyphicon-empty">
+//                             </span>
+//                         </a>
+//                     </div>
+//                     <div class="col-sm-3">
+//                         <p class="primaryData">
+//                             <span class="categoryName">Notebooks &amp; pens</span>
+//                         </p>
+//                     </div>
+//                     <div class="col-sm-3 " >0 Child Categories</div>
+//                     <div class="col-sm-3 " >13 Products</div>
+//                     <div class="col-sm-2">
+//                         <span class="statusDataValue">
+//                             <span class="active">Active</span>
+//                         </span>
+//                         <div class="dropdown pull-right">
+//                             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                                 <span class="hyicon-more"></span></a>
+//                                 <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                     <li><a href="#" >Edit Category Details</a></li>
+//                                     <li><a href="#">Add Child Category</a></li>
+//                                     <li class="divider"></li>
+//                                     <li><a>Delete Category</a></li>
+//                                 </ul>
+//                             </div>
+//                         </div>
+//                     </div>
+//                     <div class="subcategories-cnt ">
+//                         <div class=" clearfix subcategories-list" style="clear:both;">
+//                         </div>
+//                         </div></div><div class="categoryRow  hasNoChildCategories" >
+//                         <div class="mobileLayout clearfix visible-xs ">
+//                         <div class="col-xs-2">
+//                             <a class="btn btn-link category-toggle ">
+//                                 <span class="glyphicon glyphicon-chevron-down glyphicon-empty">
+//                                 </span>
+//                             </a>
+//                         </div>
+//                         <div class="col-xs-7">
+//                             <p class="primaryData" ><span class="categoryName">Computer accessories</span></p>
+//                             <p class="secondaryData " >0 Child Categories</p>
+//                             <p class="secondaryData " >1 Products</p>
+//                             <p class="statusDataValue">
+//                                 <span ng-if="category.published" class="active ng-binding ">Active</span>
+//                             </p>
+//                         </div>
+//                         <div class="col-xs-3">
+//                             <div class="dropdown pull-right">
+//                                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                                     <span class="hyicon-more"></span></a>
+//                                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                         <li><a href="#">Edit Category Details</a></li>
+//                                         <li><a href="#">Add Child Category</a></li>
+//                                         <li class="divider"></li>
+//                                         <li><a >Delete Category</a></li>
+//                                     </ul>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
+//                             <div class="col-sm-1">
+//                                 <a class="btn btn-link category-toggle ">
+//                                     <span class="glyphicon glyphicon-chevron-down glyphicon-empty" >
+//                                     </span>
+//                                 </a>
+//                             </div>
+//                             <div class="col-sm-3">
+//                                 <p class="primaryData">
+//                                     <span class="categoryName ng-binding">Computer accessories</span>
+//                                 </p>
+//                             </div>
+//                             <div class="col-sm-3 " >0 Child Categories</div>
+//                             <div class="col-sm-3 " >1 Products</div>
+//                             <div class="col-sm-2">
+//                                 <span class="statusDataValue">
+//                                     <span ng-if="category.published" class="active ng-binding ">Active</span>
+//                                 </span>
+//                                 <div class="dropdown pull-right">
+//                                     <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
+//                                         <span class="hyicon-more"></span></a>
+//                                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                             <li><a href="#">Edit Category Details</a></li>
+//                                             <li><a href="#">Add Child Category</a></li>
+//                                             <li class="divider"></li>
+//                                             <li><a class="ng-binding">Delete Category</a></li>
+//                                         </ul>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                          </div>
+//                        </div>
+//                    </div>
+//                  </div>
+//                </div> 
+//
+// Pattern 6.1
