@@ -33,7 +33,15 @@
 
 // Action Bar
 //
-// Action Bar with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title. Back should be displayed every time there is a higher leaf.
+// The Action Bar sits at the top of an object detail page and allows for saving, cancelling, going back, and other actions upon the object. General guidelines for this pattern are as follows:
+// <ul>
+//  <li>The Action Bar sits at the top of the page </li>
+//  <li>When users come to a new/create object, the Cancel and Save are both visible and enabled.</li>
+//  <li>When there is a primary button other than Save, the Primary button should always be active (see screenshots).  There is no Cancel link in this case.</li>
+//  <li>On an object page in edit mode, before any edits have been made Cancel and Save are not visible or enabled. A user must click or tap inside a field to make visible and enable the Save and Cancel actions.</li>
+//  <li>In the new or edit scenario if a user clicks on Cancel, the form is cleared and the user is taken back to the page they came from.</li>
+//  <li>If the user leaves a page in the middle of create or edit, they should receive a confirmation dialogue asking them to confirm whether they want to leave the page without saving (see screenshot)</li>
+// </ul>
 //
 // Pattern 3
 @import "./techne-patterns/_action-bar.less";

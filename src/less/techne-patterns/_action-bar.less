@@ -34,3 +34,169 @@
 // </div>
 //
 // Pattern 3.1
+
+@navbar-height-large: 70px;
+
+.navbar {
+    > .container-fluid{
+
+        > .navbar-right,
+        > .navbar-left{
+          padding: 0;
+        }
+
+        > .navbar-left{
+          text-align: left !important;
+          margin-left: -@navbar-padding-horizontal;
+        }
+
+        > .navbar-right{
+          text-align: right !important;
+          margin-right: -@navbar-padding-horizontal;
+        }
+  }
+
+  // Button modifcations
+  .navbar-btn {
+    border-radius: 0;
+
+    box-shadow: none !important;
+    height: @navbar-height;
+    margin: 0;
+  }
+  .btn-group{
+    height: 100%;
+  }
+
+  // large navbar modfier
+    &.y-navbar-lg{
+    min-height: @navbar-height-large;
+
+    .navbar-btn {
+      min-height: @navbar-height-large;
+    }
+  }
+
+  // centered element modifier
+  &.y-navbar-centered{
+    text-align: center;
+    .container-fluid{
+      width: 100%;
+      display: table;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+
+
+      // overwrite boostrap clearfix
+      // that breaks table layout
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
+
+    .y-navbar-center{
+      position: relative;
+    }
+
+    .y-navbar-center-content{
+      width: 100%;
+      position: absolute;
+
+      h1{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        // fix strange vertical scroll
+        padding-bottom: 5px;
+
+          @media (max-width:@screen-xs-max) {
+            font-size: 20px;
+            line-height: 1.6;
+          }
+      }
+    }
+
+    .navbar-left,
+    .navbar-right,
+    .y-navbar-center{
+      display: table-cell;
+      vertical-align: top;
+    }
+    .navbar-left,
+    .navbar-right{
+      width: 30%;
+      float: none!important;
+    }
+    .navbar-left{
+      .navbar-btn{
+        &.btn-subordinate{
+           span:before{
+            font-size: 53px;
+          }
+
+        }
+      }
+    }
+    .navbar-right{
+      .navbar-btn{
+
+        &.btn-subordinate{
+          padding-right: 0;
+          margin-right: 30px;
+        }
+
+        &.btn-primary{
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+// helper classes to keep buttons in line in navbar
+.y-toolbar{
+  display: table;
+
+  .navbar-left &{
+    float: left;
+  }
+  .navbar-right &{
+    float: right;
+  }
+}
+
+.y-toolbar-cell{
+  display: table-cell;
+}
+
+@media screen and (max-width: 767px)
+{
+    div.navbar.y-navbar-centered .navbar-left{
+        width: 1%;
+    }
+
+    .navbar.y-navbar-centered > .container-fluid{
+        margin-left:0;
+        padding-left: 0;
+    }
+
+    .navbar.y-navbar-centered .y-navbar-center-content h1 {
+        text-align: left;
+    }
+
+    .navbar-btn.btn-subordinate{
+      padding-right: 0;
+      margin-right: 0;
+      padding-left: 0;
+    }
+
+    .navbar-btn.btn-primary{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}
