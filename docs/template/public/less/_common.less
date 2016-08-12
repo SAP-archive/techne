@@ -24,6 +24,10 @@ a:visited {
 .active.demo-container {
     background-color: @screen-bg_gd;
     padding: 15px;
+
+    .label{
+        margin-top: 0;
+    }
 }
 
 #kss-header h1 {
@@ -57,7 +61,7 @@ h1.kss-title {
 
 .kss-mod-head {
     border-top: 1px solid @grey-border;
-    padding: 100px 0 10px;
+    padding: 40px 0 10px;
     margin-top: 20px;
 }
 
@@ -84,20 +88,24 @@ h1.kss-title {
 
 // Styleguide specifc overwrites
 .kss-modifier-example {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 0;
+
+    .tooltip{
+        position: relative;
+        display: inline-block;
+    }
 
     .popover {
-        position: relative!important;
-        z-index: 1!important;
-        display: block!important;
+        position: relative !important;
+        z-index: 1 !important;
+        display: block !important;
     }
     > [class^="hyicon-"],
     > [class*=" hyicon-"] {
         font-size: 35px;
     }
     > .nav-pill {
-        float: none!important;
+        float: none !important;
     }
 }
 
