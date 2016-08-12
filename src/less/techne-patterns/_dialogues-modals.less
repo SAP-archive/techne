@@ -22,3 +22,60 @@
 // </div>
 //
 // Pattern 7.1
+
+.modal {
+    overflow-y: auto;
+
+    .close{
+        font-size: 37px;
+        font-weight: 400;
+        color: @default-close-grey;
+    }
+}
+
+.modal-dialog-partialblocking {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.modal-header{
+  border:none;
+  padding: 21px 28px 24px 28px;
+}
+
+
+.modal-body{
+  border:none;
+  padding: 0 28px 40px 28px;
+}
+
+
+.modal-footer{
+  border:none;
+  padding: 21px 28px;
+}
+
+// Icon within the modal title
+
+.modal-title{
+   font-size: 33px;
+   .glyphicon{
+      margin-right: 6px;
+   }
+}
+
+
+// Styling for Listgroups within modals 
+.modal-content{
+   > .list-group{
+      > .list-group-item{
+         border-right: 0;
+         border-left: 0;
+         border-radius: 0;
+         &:last-child{
+            border-bottom: 0;
+         }
+      }
+   }
+}
