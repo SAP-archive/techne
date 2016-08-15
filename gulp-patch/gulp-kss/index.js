@@ -134,9 +134,9 @@ module.exports = function(opt) {
             if(opt.markDownDirectory)
             {
 
-                var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
+                var template = fs.readFileSync(path.join(opt.templateDirectory , 'index.html'), 'utf8');
                 template = handlebars.compile(template);
-                var mdFiles = fs.readdirSync(opt.markDownDirectory);
+                var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/main/');
                 
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
@@ -164,9 +164,6 @@ module.exports = function(opt) {
                             var mdNavConfig = kss.getMarkdownNav(file);
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
 
-                            
-    
-
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
                                 leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
@@ -181,6 +178,74 @@ module.exports = function(opt) {
                             });
 
                             var joinedPath = path.join(firstFile.base, (fName+'.html'));
+
+
+                            var file = new File({
+                                cwd: firstFile.cwd,
+                                base: firstFile.base,
+                                path: joinedPath,
+                                contents: new Buffer(content)
+                            });
+
+                            self.emit('data', file);
+                        }));
+
+                }
+
+
+
+                var template = fs.readFileSync(path.join(opt.templateDirectory , 'starterpages.html'), 'utf8');
+                template = handlebars.compile(template);
+                var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/starterpages/');
+
+                console.log(mdFiles);
+                
+                // Accumulate all of the sections' first indexes
+                // in case they don't have a root element.
+                for (i = 0; i < sectionCount; i += 1) {
+                    currentRoot = sections[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
+
+                    if (!~sectionRoots.indexOf(currentRoot)) {
+                        sectionRoots.push(currentRoot);
+                    }
+                }
+
+                sectionRoots.sort();
+                childSections = [];
+
+                for( i = 0; i < mdFiles.length; i++)
+                {
+                    var markDownFile = (opt.markDownDirectory +'/starterpages/') + mdFiles[i];
+
+                    console.log('markdownfile', markDownFile);
+
+
+                    gulp.src(markDownFile)
+                        .pipe(through(function (file) {
+
+                            var fName =  file.path.split('/').pop().split('.')[0];
+
+                            console.log(fName);
+
+                            var mdNavConfig = kss.getMarkdownNav(file);
+                            mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
+
+
+                            console.log('roots', styleguide);
+                            var content = template({
+                                showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
+                                leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
+                                starterpagenav: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
+                                pagename: fName,
+                                styleguide: styleguide,
+                                sectionRoots: sectionRoots,
+                                sections: jsonSections(childSections),
+                                rootNumber: 0,
+                                argv: {},
+                                overview:  marked(file.contents.toString('utf8'), 'utf8')
+                            });
+
+                            var joinedPath = path.join(firstFile.base + "/starterpages/", (fName+'.html'));
 
 
                             var file = new File({

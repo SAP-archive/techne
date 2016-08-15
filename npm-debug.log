@@ -1,0 +1,404 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'md5@2.0.0',
+1 verbose cli   '--save' ]
+2 info using npm@3.8.9
+3 info using node@v5.10.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData md5@2.0.0
+8 silly fetchNamedPackageData md5
+9 silly mapToRegistry name md5
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'md5',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'md5',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/md5
+14 verbose request uri https://registry.npmjs.org/md5
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 10:44:08 AM
+17 verbose request id 2a3d29eb33bc3fcb
+18 verbose etag "3KI1GQYW3FWAY9XIYXZBNEY47"
+19 http request GET https://registry.npmjs.org/md5
+20 http 304 https://registry.npmjs.org/md5
+21 verbose headers { date: 'Thu, 04 Aug 2016 15:42:07 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"3KI1GQYW3FWAY9XIYXZBNEY47"',
+21 verbose headers   age: '151',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1470325327.479496,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Thu, 04 Aug 2016 15:42:07 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"3KI1GQYW3FWAY9XIYXZBNEY47"',
+22 silly get     age: '151',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-ord1725-ORD',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1470325327.479496,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/md5 from cache
+24 verbose get saving md5 to /Users/i844997/.npm/registry.npmjs.org/md5/.cache.json
+25 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly resolveWithNewModule md5@2.0.0 checking installable status
+39 silly cache add args [ 'md5@2.0.0', null ]
+40 verbose cache add spec md5@2.0.0
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'md5@2.0.0',
+41 silly cache add   scope: null,
+41 silly cache add   name: 'md5',
+41 silly cache add   rawSpec: '2.0.0',
+41 silly cache add   spec: '2.0.0',
+41 silly cache add   type: 'version' }
+42 silly addNamed md5@2.0.0
+43 verbose addNamed "2.0.0" is a plain semver version for md5
+44 silly mapToRegistry name md5
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'md5',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   name: 'md5',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/md5
+49 verbose addNameVersion registry:https://registry.npmjs.org/md5 not in flight; fetching
+50 verbose get https://registry.npmjs.org/md5 not expired, no request
+51 silly cache afterAdd md5@2.0.0
+52 verbose afterAdd /Users/i844997/.npm/md5/2.0.0/package/package.json not in flight; writing
+53 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+54 verbose afterAdd /Users/i844997/.npm/md5/2.0.0/package/package.json written
+55 silly fetchNamedPackageData charenc
+56 silly mapToRegistry name charenc
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'charenc',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   name: 'charenc',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/charenc
+61 silly fetchNamedPackageData crypt
+62 silly mapToRegistry name crypt
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'crypt',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   name: 'crypt',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/crypt
+67 silly fetchNamedPackageData is-buffer
+68 silly mapToRegistry name is-buffer
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'is-buffer',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   name: 'is-buffer',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/is-buffer
+73 verbose request uri https://registry.npmjs.org/crypt
+74 verbose request no auth needed
+75 info attempt registry request try #1 at 10:44:08 AM
+76 verbose etag "B1RL9UCH6KDV192TWV14KI8AX"
+77 http request GET https://registry.npmjs.org/crypt
+78 verbose request uri https://registry.npmjs.org/charenc
+79 verbose request no auth needed
+80 info attempt registry request try #1 at 10:44:08 AM
+81 verbose etag "56QWGF6L07H5HVAFRB2ZA83YH"
+82 http request GET https://registry.npmjs.org/charenc
+83 verbose request uri https://registry.npmjs.org/is-buffer
+84 verbose request no auth needed
+85 info attempt registry request try #1 at 10:44:08 AM
+86 verbose etag "307M85SGF48SDNFKWO1ACHF1L"
+87 http request GET https://registry.npmjs.org/is-buffer
+88 http 304 https://registry.npmjs.org/crypt
+89 verbose headers { date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+89 verbose headers   via: '1.1 varnish',
+89 verbose headers   'cache-control': 'max-age=300',
+89 verbose headers   etag: '"B1RL9UCH6KDV192TWV14KI8AX"',
+89 verbose headers   age: '167',
+89 verbose headers   connection: 'keep-alive',
+89 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+89 verbose headers   'x-cache': 'HIT',
+89 verbose headers   'x-cache-hits': '1',
+89 verbose headers   'x-timer': 'S1470325328.052431,VS0,VE0',
+89 verbose headers   vary: 'Accept-Encoding' }
+90 silly get cb [ 304,
+90 silly get   { date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+90 silly get     via: '1.1 varnish',
+90 silly get     'cache-control': 'max-age=300',
+90 silly get     etag: '"B1RL9UCH6KDV192TWV14KI8AX"',
+90 silly get     age: '167',
+90 silly get     connection: 'keep-alive',
+90 silly get     'x-served-by': 'cache-ord1725-ORD',
+90 silly get     'x-cache': 'HIT',
+90 silly get     'x-cache-hits': '1',
+90 silly get     'x-timer': 'S1470325328.052431,VS0,VE0',
+90 silly get     vary: 'Accept-Encoding' } ]
+91 verbose etag https://registry.npmjs.org/crypt from cache
+92 verbose get saving crypt to /Users/i844997/.npm/registry.npmjs.org/crypt/.cache.json
+93 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+94 silly resolveWithNewModule crypt@0.0.1 checking installable status
+95 silly cache add args [ 'crypt@~ 0.0.1', null ]
+96 verbose cache add spec crypt@~ 0.0.1
+97 silly cache add parsed spec Result {
+97 silly cache add   raw: 'crypt@~ 0.0.1',
+97 silly cache add   scope: null,
+97 silly cache add   name: 'crypt',
+97 silly cache add   rawSpec: '~ 0.0.1',
+97 silly cache add   spec: '>=0.0.1 <0.1.0',
+97 silly cache add   type: 'range' }
+98 silly addNamed crypt@>=0.0.1 <0.1.0
+99 verbose addNamed ">=0.0.1 <0.1.0" is a valid semver range for crypt
+100 silly addNameRange { name: 'crypt', range: '>=0.0.1 <0.1.0', hasData: false }
+101 silly mapToRegistry name crypt
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry data Result {
+104 silly mapToRegistry   raw: 'crypt',
+104 silly mapToRegistry   scope: null,
+104 silly mapToRegistry   name: 'crypt',
+104 silly mapToRegistry   rawSpec: '',
+104 silly mapToRegistry   spec: 'latest',
+104 silly mapToRegistry   type: 'tag' }
+105 silly mapToRegistry uri https://registry.npmjs.org/crypt
+106 verbose addNameRange registry:https://registry.npmjs.org/crypt not in flight; fetching
+107 http 304 https://registry.npmjs.org/charenc
+108 verbose headers { date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+108 verbose headers   via: '1.1 varnish',
+108 verbose headers   'cache-control': 'max-age=300',
+108 verbose headers   etag: '"56QWGF6L07H5HVAFRB2ZA83YH"',
+108 verbose headers   age: '167',
+108 verbose headers   connection: 'keep-alive',
+108 verbose headers   'x-served-by': 'cache-ord1748-ORD',
+108 verbose headers   'x-cache': 'HIT',
+108 verbose headers   'x-cache-hits': '1',
+108 verbose headers   'x-timer': 'S1470325328.060377,VS0,VE0',
+108 verbose headers   vary: 'Accept-Encoding' }
+109 silly get cb [ 304,
+109 silly get   { date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+109 silly get     via: '1.1 varnish',
+109 silly get     'cache-control': 'max-age=300',
+109 silly get     etag: '"56QWGF6L07H5HVAFRB2ZA83YH"',
+109 silly get     age: '167',
+109 silly get     connection: 'keep-alive',
+109 silly get     'x-served-by': 'cache-ord1748-ORD',
+109 silly get     'x-cache': 'HIT',
+109 silly get     'x-cache-hits': '1',
+109 silly get     'x-timer': 'S1470325328.060377,VS0,VE0',
+109 silly get     vary: 'Accept-Encoding' } ]
+110 verbose etag https://registry.npmjs.org/charenc from cache
+111 verbose get saving charenc to /Users/i844997/.npm/registry.npmjs.org/charenc/.cache.json
+112 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+113 verbose get https://registry.npmjs.org/crypt not expired, no request
+114 silly addNameRange number 2 { name: 'crypt', range: '>=0.0.1 <0.1.0', hasData: true }
+115 silly addNameRange versions [ 'crypt', [ '0.0.0', '0.0.1' ] ]
+116 silly addNamed crypt@0.0.1
+117 verbose addNamed "0.0.1" is a plain semver version for crypt
+118 silly cache afterAdd crypt@0.0.1
+119 verbose afterAdd /Users/i844997/.npm/crypt/0.0.1/package/package.json not in flight; writing
+120 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+121 http 200 https://registry.npmjs.org/is-buffer
+122 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+122 verbose headers   etag: '"ECSVFAL4NYTVPDBFDO0CW5ZRT"',
+122 verbose headers   'content-type': 'application/json',
+122 verbose headers   'content-encoding': 'gzip',
+122 verbose headers   'cache-control': 'max-age=300',
+122 verbose headers   'content-length': '2659',
+122 verbose headers   'accept-ranges': 'bytes',
+122 verbose headers   date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+122 verbose headers   via: '1.1 varnish',
+122 verbose headers   age: '171',
+122 verbose headers   connection: 'keep-alive',
+122 verbose headers   'x-served-by': 'cache-ord1733-ORD',
+122 verbose headers   'x-cache': 'HIT',
+122 verbose headers   'x-cache-hits': '8',
+122 verbose headers   'x-timer': 'S1470325328.067577,VS0,VE0',
+122 verbose headers   vary: 'Accept-Encoding' }
+123 silly get cb [ 200,
+123 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+123 silly get     etag: '"ECSVFAL4NYTVPDBFDO0CW5ZRT"',
+123 silly get     'content-type': 'application/json',
+123 silly get     'content-encoding': 'gzip',
+123 silly get     'cache-control': 'max-age=300',
+123 silly get     'content-length': '2659',
+123 silly get     'accept-ranges': 'bytes',
+123 silly get     date: 'Thu, 04 Aug 2016 15:42:08 GMT',
+123 silly get     via: '1.1 varnish',
+123 silly get     age: '171',
+123 silly get     connection: 'keep-alive',
+123 silly get     'x-served-by': 'cache-ord1733-ORD',
+123 silly get     'x-cache': 'HIT',
+123 silly get     'x-cache-hits': '8',
+123 silly get     'x-timer': 'S1470325328.067577,VS0,VE0',
+123 silly get     vary: 'Accept-Encoding' } ]
+124 verbose get saving is-buffer to /Users/i844997/.npm/registry.npmjs.org/is-buffer/.cache.json
+125 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+126 silly resolveWithNewModule charenc@0.0.1 checking installable status
+127 silly cache add args [ 'charenc@~ 0.0.1', null ]
+128 verbose cache add spec charenc@~ 0.0.1
+129 silly cache add parsed spec Result {
+129 silly cache add   raw: 'charenc@~ 0.0.1',
+129 silly cache add   scope: null,
+129 silly cache add   name: 'charenc',
+129 silly cache add   rawSpec: '~ 0.0.1',
+129 silly cache add   spec: '>=0.0.1 <0.1.0',
+129 silly cache add   type: 'range' }
+130 silly addNamed charenc@>=0.0.1 <0.1.0
+131 verbose addNamed ">=0.0.1 <0.1.0" is a valid semver range for charenc
+132 silly addNameRange { name: 'charenc', range: '>=0.0.1 <0.1.0', hasData: false }
+133 silly mapToRegistry name charenc
+134 silly mapToRegistry using default registry
+135 silly mapToRegistry registry https://registry.npmjs.org/
+136 silly mapToRegistry data Result {
+136 silly mapToRegistry   raw: 'charenc',
+136 silly mapToRegistry   scope: null,
+136 silly mapToRegistry   name: 'charenc',
+136 silly mapToRegistry   rawSpec: '',
+136 silly mapToRegistry   spec: 'latest',
+136 silly mapToRegistry   type: 'tag' }
+137 silly mapToRegistry uri https://registry.npmjs.org/charenc
+138 verbose addNameRange registry:https://registry.npmjs.org/charenc not in flight; fetching
+139 silly resolveWithNewModule is-buffer@1.0.2 checking installable status
+140 silly cache add args [ 'is-buffer@~ 1.0.2', null ]
+141 verbose cache add spec is-buffer@~ 1.0.2
+142 silly cache add parsed spec Result {
+142 silly cache add   raw: 'is-buffer@~ 1.0.2',
+142 silly cache add   scope: null,
+142 silly cache add   name: 'is-buffer',
+142 silly cache add   rawSpec: '~ 1.0.2',
+142 silly cache add   spec: '>=1.0.2 <1.1.0',
+142 silly cache add   type: 'range' }
+143 silly addNamed is-buffer@>=1.0.2 <1.1.0
+144 verbose addNamed ">=1.0.2 <1.1.0" is a valid semver range for is-buffer
+145 silly addNameRange { name: 'is-buffer', range: '>=1.0.2 <1.1.0', hasData: false }
+146 silly mapToRegistry name is-buffer
+147 silly mapToRegistry using default registry
+148 silly mapToRegistry registry https://registry.npmjs.org/
+149 silly mapToRegistry data Result {
+149 silly mapToRegistry   raw: 'is-buffer',
+149 silly mapToRegistry   scope: null,
+149 silly mapToRegistry   name: 'is-buffer',
+149 silly mapToRegistry   rawSpec: '',
+149 silly mapToRegistry   spec: 'latest',
+149 silly mapToRegistry   type: 'tag' }
+150 silly mapToRegistry uri https://registry.npmjs.org/is-buffer
+151 verbose addNameRange registry:https://registry.npmjs.org/is-buffer not in flight; fetching
+152 verbose get https://registry.npmjs.org/charenc not expired, no request
+153 silly addNameRange number 2 { name: 'charenc', range: '>=0.0.1 <0.1.0', hasData: true }
+154 silly addNameRange versions [ 'charenc', [ '0.0.0', '0.0.1' ] ]
+155 silly addNamed charenc@0.0.1
+156 verbose addNamed "0.0.1" is a plain semver version for charenc
+157 verbose get https://registry.npmjs.org/is-buffer not expired, no request
+158 silly addNameRange number 2 { name: 'is-buffer', range: '>=1.0.2 <1.1.0', hasData: true }
+159 silly addNameRange versions [ 'is-buffer',
+159 silly addNameRange   [ '1.0.0',
+159 silly addNameRange     '1.0.1',
+159 silly addNameRange     '1.0.2',
+159 silly addNameRange     '1.1.0',
+159 silly addNameRange     '1.1.1',
+159 silly addNameRange     '1.1.2',
+159 silly addNameRange     '1.1.3',
+159 silly addNameRange     '1.1.4' ] ]
+160 silly addNamed is-buffer@1.0.2
+161 verbose addNamed "1.0.2" is a plain semver version for is-buffer
+162 silly cache afterAdd charenc@0.0.1
+163 verbose afterAdd /Users/i844997/.npm/charenc/0.0.1/package/package.json not in flight; writing
+164 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+165 verbose afterAdd /Users/i844997/.npm/crypt/0.0.1/package/package.json written
+166 silly cache afterAdd is-buffer@1.0.2
+167 verbose afterAdd /Users/i844997/.npm/is-buffer/1.0.2/package/package.json not in flight; writing
+168 verbose correctMkdir /Users/i844997/.npm correctMkdir not in flight; initializing
+169 verbose afterAdd /Users/i844997/.npm/charenc/0.0.1/package/package.json written
+170 verbose afterAdd /Users/i844997/.npm/is-buffer/1.0.2/package/package.json written
+171 silly fetchNamedPackageData MD5
+172 silly mapToRegistry name MD5
+173 silly mapToRegistry using default registry
+174 silly mapToRegistry registry https://registry.npmjs.org/
+175 silly mapToRegistry data Result {
+175 silly mapToRegistry   raw: 'MD5',
+175 silly mapToRegistry   scope: null,
+175 silly mapToRegistry   name: 'MD5',
+175 silly mapToRegistry   rawSpec: '',
+175 silly mapToRegistry   spec: 'latest',
+175 silly mapToRegistry   type: 'tag' }
+176 silly mapToRegistry uri https://registry.npmjs.org/MD5
+177 verbose get https://registry.npmjs.org/MD5 not expired, no request
+178 silly fetchPackageMetaData Error: No compatible version found: MD5@^1.2.1
+178 silly fetchPackageMetaData Valid install targets:
+178 silly fetchPackageMetaData 2.1.0, 2.0.0, 1.0.1, 1.0.0
+178 silly fetchPackageMetaData
+178 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:157:16)
+178 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+178 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+178 silly fetchPackageMetaData     at CachingRegistryClient.get_ (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:120:16)
+178 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/cache/caching-client.js:87:14
+178 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+178 silly fetchPackageMetaData     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:404:3)
+178 silly fetchPackageMetaData  error for MD5@^1.2.1 [Error: No compatible version found: MD5@^1.2.1
+178 silly fetchPackageMetaData Valid install targets:
+178 silly fetchPackageMetaData 2.1.0, 2.0.0, 1.0.1, 1.0.0
+178 silly fetchPackageMetaData ]
+179 silly rollbackFailedOptional Starting
+180 silly rollbackFailedOptional Finishing
+181 silly runTopLevelLifecycles Starting
+182 silly runTopLevelLifecycles Finishing
+183 silly install printInstalled
+184 verbose stack Error: No compatible version found: MD5@^1.2.1
+184 verbose stack Valid install targets:
+184 verbose stack 2.1.0, 2.0.0, 1.0.1, 1.0.0
+184 verbose stack
+184 verbose stack     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:157:16)
+184 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+184 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+184 verbose stack     at CachingRegistryClient.get_ (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:120:16)
+184 verbose stack     at /usr/local/lib/node_modules/npm/lib/cache/caching-client.js:87:14
+184 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+184 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:404:3)
+185 verbose cwd /Users/i844997/Work/SAP/techne-components
+186 error Darwin 15.0.0
+187 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "md5@2.0.0" "--save"
+188 error node v5.10.1
+189 error npm  v3.8.9
+190 error No compatible version found: MD5@^1.2.1
+190 error Valid install targets:
+190 error 2.1.0, 2.0.0, 1.0.1, 1.0.0
+191 error If you need help, you may report this error at:
+191 error     <https://github.com/npm/npm/issues>
+192 verbose exit [ 1, true ]
