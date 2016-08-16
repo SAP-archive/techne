@@ -231,16 +231,16 @@ module.exports = function(opt) {
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
 
 
-                            console.log('roots', styleguide);
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
                                 leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
                                 starterpagenav: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
                                 pagename: fName,
+                                pagetype: 'starterpages',
                                 styleguide: styleguide,
                                 sectionRoots: sectionRoots,
                                 sections: jsonSections(childSections),
-                                rootNumber: 0,
+                                rootNumber: 1,
                                 argv: {},
                                 overview:  marked(file.contents.toString('utf8'), 'utf8')
                             });

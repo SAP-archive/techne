@@ -4,27 +4,27 @@
         "navigation": [
             {
                 "text": "Table",
-                "id": "#guidelines-spirit-vision"
+                "path": "table.html"
             },
             {
                 "text": "Cards",
-                "id": "#guidelines-spirit-vision"
+                "path": "cards.html"
             },
             {
                 "text": "Details 1",
-                "id": "#guidelines-spirit-vision"
+                "path": "details-1.html"
             },
             {
                 "text": "Details 2",
-                "id": "#guidelines-spirit-vision"
+                "path": "details-2.html"
             },
             {
                 "text": "Grid",
-                "id": "#guidelines-spirit-vision"
+                "path": "grid.html"
             },
             {
                 "text": "Tree",
-                "id": "#guidelines-spirit-vision"
+                "path": "tree.html"
             }
         ]
     }

@@ -155,7 +155,7 @@
                     {{#if_eq pagetype "starterpages"}}
                         <span class="active js_navtrigger">Starter Pages</span>
                     {{else}}
-                        <a href="../starterpages/table.html" class="inactive">Starter Pages</a>
+                        <a href="../starterpages/index.html" class="inactive">Starter Pages</a>
                     {{/if_eq}}
                 </li>
                 <li>
@@ -170,7 +170,7 @@
         </div>
     </header>
   <div class="container-fluid" id="kss-wrapper">
-    <section id="content" class="row">
+    <section id="content" class="starterpages">
       <!-- / SUPER HEADER -->
       {{#if showLeftNav}}
       <div class="kss-sidebar-shadow js-menu-toggle" ></div>
@@ -185,7 +185,7 @@
                         <li class="kss-menu-item kss-back"><a href="../index.html">Back to Home</a></li>
                         {{#if starterpagenav}} 
                             {{#each starterpagenav}}
-                                <li class="kss-menu-item"><a href="{{id}}">{{text}}</a></li>
+                                <li class="kss-menu-item"><a href="{{path}}" target="content-frame">{{text}}</a></li>
                             {{/each}}
                         {{/if}}
                     </ul>
@@ -193,12 +193,12 @@
             </aside>
           </div>
         {{#if leftNavMobileOnly}}
-          <div role="main" id="kss-main" class="kss-main col-xs-12">
+          <div role="main" class="kss-main starterpages">
         {{else}}
-          <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
+          <div role="main" class="kss-main starterpages">
         {{/if}}
         {{else}}
-          <div role="main" id="kss-main" class="kss-main col-xs-12">
+          <div role="main" class="kss-main starterpages">
         {{/if}}
         <!----------------------->
         <!---- MAIN CONTENT ----->
