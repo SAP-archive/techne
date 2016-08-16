@@ -138,7 +138,6 @@ module.exports = function(opt) {
                 template = handlebars.compile(template);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/main/');
 
-                console.log('mdfIles', mdFiles);
                 
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
@@ -158,7 +157,6 @@ module.exports = function(opt) {
                     var markDownFile = opt.markDownDirectory + '/main/' + mdFiles[i];
 
 
-                    console.log('dir', opt.markDownDirectory);
                     gulp.src(markDownFile)
                         .pipe(through(function (file) {
 
@@ -203,7 +201,6 @@ module.exports = function(opt) {
                 template2 = handlebars.compile(template2);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/starterpages/');
 
-                console.log(mdFiles);
                 
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
@@ -222,15 +219,10 @@ module.exports = function(opt) {
                 {
                     var markDownFile = (opt.markDownDirectory +'/starterpages/') + mdFiles[i];
 
-                    console.log('markdownfile', markDownFile);
-
-
                     gulp.src(markDownFile)
                         .pipe(through(function (file) {
 
                             var fName =  file.path.split('/').pop().split('.')[0];
-
-                            console.log(fName);
 
                             var mdNavConfig = kss.getMarkdownNav(file);
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};

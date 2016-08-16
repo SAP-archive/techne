@@ -280,28 +280,6 @@ gulp.task('patchgulpkss',
     }
 );
 
-gulp.task('starterpages',
-    function(){
-        //copy techne into the demo path
-        gulp.src('dist/css/**/*').pipe(gulp.dest('docs/kss/starter-pages/css'));
-        gulp.src('dist/fonts/**/*').pipe(gulp.dest('docs/kss/starter-pages/fonts'));
-
-        //copy  generated JS files to starter pages
-        gulp.src('dist/js/**/*')
-        .pipe( gulp.dest('docs/kss/starter-pages/js/') );
-
-        gulp.src('dist/js/**/*')
-        .pipe( gulp.dest('dist/demo/starter-pages/js/') );
-
-        //copy techne folder to demo pages
-        gulp.src('dist/techne/**/*')
-        .pipe( gulp.dest('docs/kss/starter-pages/techne/') );
-
-        //copy techne folder to demo pages
-        gulp.src('dist/bootstrap/**/*')
-        .pipe( gulp.dest('docs/kss/starter-pages/bootstrap/') );
-    }
-);
 
 
 gulp.task('packagedist',
@@ -309,28 +287,14 @@ gulp.task('packagedist',
   {
     //copies files to the dist folder
     gulp.src('./bower_components/bootstrap/fonts/**/*').pipe( gulp.dest('dist/bootstrap/fonts') );
-
-    //copy the dist files
-    gulp.src(['docs/kss/starter-pages/bootstrap/**/*',
-              'docs/kss/starter-pages/images/**/*',
-              'docs/kss/starter-pages/js/**/*',
-              'docs/kss/starter-pages/techne/**/*',
-              'docs/kss/starter-pages/cards.html',
-              'docs/kss/starter-pages/details-1.html',
-              'docs/kss/starter-pages/details-2.html',
-              'docs/kss/starter-pages/table.html'],
-              {base: 'docs/kss/'}).pipe(gulp.dest('dist/demo'));
   }
 );
 
 
-gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'starterpages', 'packagedist', 'deploy']);
+gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'packagedist', 'deploy']);
 
 // iconfont, less, kss_bootrap_src
 gulp.task('dist', ['iconfont', 'build']);
-
-
-gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
 
 
 // The default task (called when you run `gulp` from cli)
