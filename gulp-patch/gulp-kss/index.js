@@ -137,6 +137,8 @@ module.exports = function(opt) {
                 var template = fs.readFileSync(path.join(opt.templateDirectory , 'index.html'), 'utf8');
                 template = handlebars.compile(template);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/main/');
+
+                console.log('mdfIles', mdFiles);
                 
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
@@ -153,9 +155,10 @@ module.exports = function(opt) {
 
                 for( i = 0; i < mdFiles.length; i++)
                 {
-                    var markDownFile = opt.markDownDirectory + mdFiles[i];
+                    var markDownFile = opt.markDownDirectory + '/main/' + mdFiles[i];
 
 
+                    console.log('dir', opt.markDownDirectory);
                     gulp.src(markDownFile)
                         .pipe(through(function (file) {
 
@@ -187,6 +190,8 @@ module.exports = function(opt) {
                                 contents: new Buffer(content)
                             });
 
+                            console.log(firstFile.cwd, firstFile.base, joinedPath);
+
                             self.emit('data', file);
                         }));
 
@@ -194,8 +199,8 @@ module.exports = function(opt) {
 
 
 
-                var template = fs.readFileSync(path.join(opt.templateDirectory , 'starterpages.html'), 'utf8');
-                template = handlebars.compile(template);
+                var template2 = fs.readFileSync(path.join(opt.templateDirectory , 'starterpages.html'), 'utf8');
+                template2 = handlebars.compile(template2);
                 var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/starterpages/');
 
                 console.log(mdFiles);
@@ -231,7 +236,7 @@ module.exports = function(opt) {
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
 
 
-                            var content = template({
+                            var content = template2({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
                                 leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
                                 starterpagenav: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
