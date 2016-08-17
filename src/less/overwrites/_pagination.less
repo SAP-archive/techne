@@ -1,9 +1,14 @@
 //Usage Guidelines
 //
-// techne recommends displaying up to three pages in the pagination: the current page; the previous page and the next page, as well as arrows to go to the first page (<<) or last page (>>). Display pagination at the top and bottom of the data set. It is also recommended that the number of records is displayed at the top of the page (see Patterns & Layouts), not just the total number displayed on the single page.
+// Techne recommends displaying up to three pages in the pagination: the current page; the previous page and the next page, as well as arrows to go to the first page (<<) or last page (>>). Display pagination at the top and bottom of the data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page.
+// 
+// Component 10.1
+
+// Pagination 
+//
+// When 3 pages or less, do not display arrows:
 //
 // Markup:
-// <p><b>When 3 pages or less, do not display arrows:</b></p> <br>
 // <nav>
 //   <ul class="pagination">
 //     <li class="active"><a href="#">1</a></li>
@@ -11,7 +16,14 @@
 //     <li><a href="#">3</a></li>
 //   </ul>
 // </nav>
-// <p><b>When more than three pages, display arrows:</b></p> <br>
+// 
+// Component 10.2
+
+// Pagination 
+//
+// When more than three pages, display arrows:
+//
+// Markup: 
 // <nav>
 //   <ul class="pagination">
 //     <li class="disabled">
@@ -29,7 +41,14 @@
 //     </li>
 //   </ul>
 // </nav>
-// <p>On the first page: first number is active, &laquo;  is disabled</p> <br>
+// 
+// Component 10.3
+
+// Pagination 
+//
+// On the first page: first number is active, « is disabled
+//
+// Markup: 
 // <nav>
 //   <ul class="pagination">
 //     <li class="disabled">
@@ -37,8 +56,8 @@
 //         <span aria-hidden="true">&laquo;</span>
 //       </a>
 //     </li>
-//     <li><a href="#">1</a></li>
-//     <li class="active"><a href="#">2</a></li>
+//     <li class="active"><a href="#">1</a></li>
+//     <li><a href="#">2</a></li>
 //     <li><a href="#">3</a></li>
 //     <li>
 //       <a href="#" aria-label="Next">
@@ -47,24 +66,14 @@
 //     </li>
 //   </ul>
 // </nav>
-// <nav>
-//   <ul class="pagination">
-//     <li>
-//       <a href="#" aria-label="Previous">
-//         <span aria-hidden="true">&laquo;</span>
-//       </a>
-//     </li>
-//     <li><a href="#">2</a></li>
-//     <li class="active"><a href="#">3</a></li>
-//     <li><a href="#">4</a></li>
-//     <li>
-//       <a href="#" aria-label="Next">
-//         <span aria-hidden="true">&raquo;</span>
-//       </a>
-//     </li>
-//   </ul>
-// </nav>
-// <p>On the middle page: middle number is always active</p> <br>
+// 
+// Component 10.4
+
+// Pagination 
+//
+// On the middle page: middle number is always active
+//
+// Markup: 
 // <nav>
 //   <ul class="pagination">
 //     <li>
@@ -75,14 +84,21 @@
 //     <li><a href="#">3</a></li>
 //     <li class="active"><a href="#">4</a></li>
 //     <li><a href="#">5</a></li>
-//     <li class="disabled">
+//     <li>
 //       <a href="#" aria-label="Next">
 //         <span aria-hidden="true">&raquo;</span>
 //       </a>
 //     </li>
 //   </ul>
 // </nav>
-// <nav>
+//
+// Component 10.5
+
+// Pagination 
+// 
+// On the last page: last number is active, » is disabled
+//
+// Markup: 
 //   <ul class="pagination">
 //     <li>
 //       <a href="#" aria-label="Previous">
@@ -99,9 +115,8 @@
 //     </li>
 //   </ul>
 // </nav>
-// <p>On the last page: last number is active, &raquo; is disabled</p> <br>
 //
-// Component 10.1
+// Component 10.6
 
 
 .pagination{

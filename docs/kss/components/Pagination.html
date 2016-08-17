@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1471383571365">
+  <link rel="stylesheet" href="../public/kss.css?t=1471464574457">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1471383571365">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1471383571365">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1471464574457">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1471464574457">
 
 
 
@@ -173,7 +173,7 @@
           </div>
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
-                <section id="section-10" class="kss-section kss-componnet-page">
+                <section id="section-10" class="Pagination kss-section kss-componnet-page">
 
 
                     <div class="kss-description">
@@ -181,25 +181,57 @@
 
                     </div>
                 </section>
-                <section id="section-10.1" class="kss-section kss-componnet-page">
-                      <h3 class="kss-title hidden"><span class="kss-ref">10.1</span> Usage Guidelines</h3>
+                <section id="section-10.1" class="Usage Guidelines kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.1</span> Usage Guidelines</h3>
 
                     <div class="kss-description">
-                        <p>techne recommends displaying up to three pages in the pagination: the current page; the previous page and the next page, as well as arrows to go to the first page (&lt;&lt;) or last page (&gt;&gt;). Display pagination at the top and bottom of the data set. It is also recommended that the number of records is displayed at the top of the page (see Patterns &amp; Layouts), not just the total number displayed on the single page.</p>
+                        <p>Techne recommends displaying up to three pages in the pagination: the current page; the previous page and the next page, as well as arrows to go to the first page (&lt;&lt;) or last page (&gt;&gt;). Display pagination at the top and bottom of the data set. It is also recommended that the number of records is displayed at the top of the page, not just the total number displayed on the single page.</p>
+
+                    </div>
+                </section>
+                <section id="section-10.2" class="Pagination  kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.2</span> Pagination </h3>
+
+                    <div class="kss-description">
+                        <p>When 3 pages or less, do not display arrows:</p>
 
                     </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <p><b>When 3 pages or less, do not display arrows:</b></p> <br>
-<nav>
+                                <nav>
   <ul class="pagination">
     <li class="active"><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
   </ul>
 </nav>
-<p><b>When more than three pages, display arrows:</b></p> <br>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">&lt;nav&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-10.3" class="Pagination  kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.3</span> Pagination </h3>
+
+                    <div class="kss-description">
+                        <p>When more than three pages, display arrows:</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                
 <nav>
   <ul class="pagination">
     <li class="disabled">
@@ -217,7 +249,43 @@
     </li>
   </ul>
 </nav>
-<p>On the first page: first number is active, &laquo;  is disabled</p> <br>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">
+&lt;nav&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-10.4" class="Pagination  kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.4</span> Pagination </h3>
+
+                    <div class="kss-description">
+                        <p>On the first page: first number is active, « is disabled</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                
 <nav>
   <ul class="pagination">
     <li class="disabled">
@@ -225,8 +293,8 @@
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li>
       <a href="#" aria-label="Next">
@@ -235,24 +303,43 @@
     </li>
   </ul>
 </nav>
-<nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">2</a></li>
-    <li class="active"><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-<p>On the middle page: middle number is always active</p> <br>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">
+&lt;nav&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-10.5" class="Pagination  kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.5</span> Pagination </h3>
+
+                    <div class="kss-description">
+                        <p>On the middle page: middle number is always active</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                
 <nav>
   <ul class="pagination">
     <li>
@@ -263,14 +350,50 @@
     <li><a href="#">3</a></li>
     <li class="active"><a href="#">4</a></li>
     <li><a href="#">5</a></li>
-    <li class="disabled">
+    <li>
       <a href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
   </ul>
 </nav>
-<nav>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">
+&lt;nav&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-10.6" class="Pagination  kss-section kss-componnet-page">
+                      <h3 class="kss-title"><span class="kss-ref">10.6</span> Pagination </h3>
+
+                    <div class="kss-description">
+                        <p>On the last page: last number is active, » is disabled</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                
   <ul class="pagination">
     <li>
       <a href="#" aria-label="Previous">
@@ -287,91 +410,11 @@
     </li>
   </ul>
 </nav>
-<p>On the last page: last number is active, &raquo; is disabled</p> <br>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">&lt;p&gt;&lt;b&gt;When 3 pages or less, do not display arrows:&lt;/b&gt;&lt;/p&gt; &lt;br&gt;
-&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;p&gt;&lt;b&gt;When more than three pages, display arrows:&lt;/b&gt;&lt;/p&gt; &lt;br&gt;
-&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li class=&quot;disabled&quot;&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;p&gt;On the first page: first number is active, &amp;laquo;  is disabled&lt;/p&gt; &lt;br&gt;
-&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li class=&quot;disabled&quot;&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;p&gt;On the middle page: middle number is always active&lt;/p&gt; &lt;br&gt;
-&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;disabled&quot;&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;nav&gt;
+                                <pre class="code-snippet"><code data-language="html" class="html">
   &lt;ul class=&quot;pagination&quot;&gt;
     &lt;li&gt;
       &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
@@ -387,8 +430,7 @@
       &lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;p&gt;On the last page: last number is active, &amp;raquo; is disabled&lt;/p&gt; &lt;br&gt;</code></pre>
+&lt;/nav&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -416,20 +458,20 @@
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1471383571365"></script>
+<script src="../public/kss.js?t=1471464574457"></script>
 
-<script src="../public/prettify.js?t=1471383571365"></script>
-<script src="../public/js/jquery.min.js?t=1471383571365"></script>
-<script src="../public/main.js?t=1471383571365"></script>
-<script src="../public/js/bootstrap.min.js?t=1471383571365"></script>
-<script src="../public/js/select2.js?t=1471383571365"></script>
+<script src="../public/prettify.js?t=1471464574457"></script>
+<script src="../public/js/jquery.min.js?t=1471464574457"></script>
+<script src="../public/main.js?t=1471464574457"></script>
+<script src="../public/js/bootstrap.min.js?t=1471464574457"></script>
+<script src="../public/js/select2.js?t=1471464574457"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1471383571365"></script>
-<script src="../public/jquery.cookiebar.js?t=1471383571365"></script>
-<script src="../public/js/highlight.pack.min.js?t=1471383571365"></script>
+<script src="../public/js/yaas.sso.js?t=1471464574457"></script>
+<script src="../public/jquery.cookiebar.js?t=1471464574457"></script>
+<script src="../public/js/highlight.pack.min.js?t=1471464574457"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1471383571365"></script>
+<script src="../public/script.js?t=1471464574457"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
