@@ -255,6 +255,9 @@ a:visited {
   background-color: #e0e9f0;
   padding: 15px;
 }
+.active.demo-container .label {
+  margin-top: 0;
+}
 #kss-header h1 {
   font-size: 1.5em;
   margin-top: 1.66666667em;
@@ -280,7 +283,7 @@ h1.kss-title {
 }
 .kss-mod-head {
   border-top: 1px solid #e2e6e9;
-  padding: 100px 0 10px;
+  padding: 40px 0 10px;
   margin-top: 20px;
 }
 .kss-mod-name {
@@ -303,20 +306,24 @@ h1.kss-title {
   margin: 20px 0 40px;
 }
 .kss-modifier-example {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 20px 0;
+}
+.kss-modifier-example .tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
 }
 .kss-modifier-example .popover {
-  position: relative!important;
-  z-index: 1!important;
-  display: block!important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
 }
 .kss-modifier-example > [class^="hyicon-"],
 .kss-modifier-example > [class*=" hyicon-"] {
   font-size: 35px;
 }
 .kss-modifier-example > .nav-pill {
-  float: none!important;
+  float: none !important;
 }
 .kss-lead {
   font-weight: bold;
@@ -1144,6 +1151,9 @@ header.hyHomeHeaderMinor {
   border: none;
   box-shadow: none;
   background-color: transparent;
+}
+article section.Pagination h3 {
+  display: none;
 }
 .error-message-table td:nth-child(2),
 .error-message-table td:nth-child(3) {
