@@ -24,7 +24,7 @@
              }
         ]
     }
-    -->
+-->
 <div class="kss-guidelines-page">
     <section id="guidelines-spirit-vision" class="kss-page">
         <h2>Spirit &amp; Vision</h2>
