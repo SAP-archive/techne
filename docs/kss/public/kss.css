@@ -1805,3 +1805,26 @@ header.hyHomeHeaderMinor {
     font-size: 20px;
   }
 }
+#content.starterpages {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 250px;
+  top: 100px;
+  background-color: #e0e9f0;
+}
+@media (max-width: 768px) {
+  #content.starterpages {
+    left: 0;
+  }
+}
+.kss-main.starterpages {
+  height: 100%;
+}
+.content-frame {
+  height: 100%;
+  width: 100%;
+}
+.starterpages #kss-nav .kss-menu-item.kss-active a {
+  background-image: none;
+}
