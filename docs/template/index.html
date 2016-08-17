@@ -143,17 +143,23 @@
                 </li>
                 <li>
                     {{#if_eq pagetype "pattern"}}
-                        {{pagetype}}
                         <span class="active js_navtrigger">Patterns</span>
                     {{else}}
                         <a href="patterns/Navigation.html" class="inactive">Patterns</a>
                     {{/if_eq}}
                 </li>
                 <li>
-                    {{#if_eq pagename "download"}}
-                        <span class="active">Download</span>
+                    {{#if_eq pagetype "starterpages"}}
+                        <span class="active js_navtrigger">Starter Pages</span>
                     {{else}}
-                        <a href="download.html" class="inactive">Download</a>
+                        <a href="starterpages/index.html" class="inactive">Starter Pages</a>
+                    {{/if_eq}}
+                </li>
+                <li>
+                    {{#if_eq pagename "GettingStarted"}}
+                        <span class="active">Download &amp; Get Started</span>
+                    {{else}}
+                        <a href="GettingStarted.html" class="inactive">Download &amp; Get Started</a>
                     {{/if_eq}}
                 </li>
 
@@ -178,7 +184,8 @@
                           <li class="kss-menu-item"><a href="Guidelines.html" >Guidelines</a></li>
                           <li class="kss-menu-item"><a href="components/Alerts-Errors-Notifications.html">Components</a></li>
                           <li class="kss-menu-item"><a href="patterns/Navigation.html">Patterns</a></li>
-                          <li class="kss-menu-item"><a href="download.html">Download</a></li>
+                          <li class="kss-menu-item"><a href="starterpages/index.html">Starter Pages</a></li>
+                          <li class="kss-menu-item"><a href="GettingStarted.html">Download &amp; Get Started</a></li>
                         {{else}}
                         <li class="kss-menu-item kss-back"><a href="index.html">Back to Home</a></li>
                         {{#if sectionData}}

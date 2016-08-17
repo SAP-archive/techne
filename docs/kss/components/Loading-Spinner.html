@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1470693640811">
+  <link rel="stylesheet" href="../public/kss.css?t=1471468621302">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1470693640811">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1470693640811">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1471468621302">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1471468621302">
 
 
 
@@ -135,6 +135,9 @@
                         <a href="../patterns/Navigation.html" class="inactive">Patterns</a>
                 </li>
                 <li>
+                        <a href="../starterpages/index.html" class="inactive">Starter Pages</a>
+                </li>
+                <li>
                         <a href="../GettingStarted.html" class="inactive">Download &amp; Get Started</a>
                 </li>
 
@@ -171,21 +174,26 @@
           <div role="main" id="kss-main" class="kss-main col-md-12 col-sm-12 col-xs-12">
             <article id="kss-content">
                 <section id="section-8" class="kss-section kss-componnet-page">
+                          <h1><span class="kss-ref">8</span> Loading Spinner</h1>
 
-
-                </section>
-                <section id="section-8.1" class="kss-section kss-componnet-page">
-                      <h3 class="kss-title hidden"><span class="kss-ref">8.1</span> Circular Spinner</h3>
 
                     <div class="kss-description">
                         <p>CSS based spinner to indicate to the user that some information is processing or loading.</p>
 
                     </div>
+                </section>
+                <section id="section-8.1" class="kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.1</span> Inline Spinner</h3>
+
+                    <div class="kss-description">
+                        <p> CSS based spinner to indicate to the user that some information is processing or loading.</p>
+
+                    </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                <div id="demo-page-background" class="panel panel-default">
-  <div class="panel-heading">Inline Spinner</div>
+                                  
+ <div class="panel panel-default">
   <div class="panel-body">
     <div class="spinner">
       <div class="spinner-container spinner-container1">
@@ -208,42 +216,13 @@
       </div>
     </div>
   </div>
-</div>
-<div id="demo-page-background" class="panel panel-default">
-  <div class="panel-heading">Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. </div>
-  <div class="panel-body">
-    <div class="demo-wrapper">
-      <div class="spinner-backdrop">
-        <div class="spinner">
-          <div class="spinner-container spinner-container1">
-            <div class="spinner-circle1"></div>
-            <div class="spinner-circle2"></div>
-            <div class="spinner-circle3"></div>
-            <div class="circle4"></div>
-          </div>
-          <div class="spinner-container spinner-container2">
-            <div class="spinner-circle1"></div>
-            <div class="spinner-circle2"></div>
-            <div class="spinner-circle3"></div>
-            <div class="circle4"></div>
-          </div>
-          <div class="spinner-container spinner-container3">
-            <div class="spinner-circle1"></div>
-            <div class="spinner-circle2"></div>
-            <div class="spinner-circle3"></div>
-            <div class="circle4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+ </div>
                             </div>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
-  &lt;div class=&quot;panel-heading&quot;&gt;Inline Spinner&lt;/div&gt;
+                                <pre class="code-snippet"><code data-language="html" class="html">  
+ &lt;div class=&quot;panel panel-default&quot;&gt;
   &lt;div class=&quot;panel-body&quot;&gt;
     &lt;div class=&quot;spinner&quot;&gt;
       &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
@@ -266,38 +245,41 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;demo-page-background&quot; class=&quot;panel panel-default&quot;&gt;
-  &lt;div class=&quot;panel-heading&quot;&gt;Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. &lt;/div&gt;
-  &lt;div class=&quot;panel-body&quot;&gt;
-    &lt;div class=&quot;demo-wrapper&quot;&gt;
-      &lt;div class=&quot;spinner-backdrop&quot;&gt;
-        &lt;div class=&quot;spinner&quot;&gt;
-          &lt;div class=&quot;spinner-container spinner-container1&quot;&gt;
-            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;spinner-container spinner-container2&quot;&gt;
-            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;spinner-container spinner-container3&quot;&gt;
-            &lt;div class=&quot;spinner-circle1&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle2&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;spinner-circle3&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;circle4&quot;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+ &lt;/div&gt;</code></pre>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section id="section-8.2" class="kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.2</span> Overlay Spinner: </h3>
+
+                    <div class="kss-description">
+                        <p>In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. 
+  <div class="panel-body demo-wrapper">
+      <div class="spinner-backdrop">
+        <div class="spinner">
+          <div class="spinner-container spinner-container1">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container2">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container spinner-container3">
+            <div class="spinner-circle1"></div>
+            <div class="spinner-circle2"></div>
+            <div class="spinner-circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+    </div>
+  </div></p>
+
                     </div>
                 </section>
             </article>
@@ -323,20 +305,20 @@
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1470693640811"></script>
+<script src="../public/kss.js?t=1471468621302"></script>
 
-<script src="../public/prettify.js?t=1470693640811"></script>
-<script src="../public/js/jquery.min.js?t=1470693640811"></script>
-<script src="../public/main.js?t=1470693640811"></script>
-<script src="../public/js/bootstrap.min.js?t=1470693640811"></script>
-<script src="../public/js/select2.js?t=1470693640811"></script>
+<script src="../public/prettify.js?t=1471468621302"></script>
+<script src="../public/js/jquery.min.js?t=1471468621302"></script>
+<script src="../public/main.js?t=1471468621302"></script>
+<script src="../public/js/bootstrap.min.js?t=1471468621302"></script>
+<script src="../public/js/select2.js?t=1471468621302"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1470693640811"></script>
-<script src="../public/jquery.cookiebar.js?t=1470693640811"></script>
-<script src="../public/js/highlight.pack.min.js?t=1470693640811"></script>
+<script src="../public/js/yaas.sso.js?t=1471468621302"></script>
+<script src="../public/jquery.cookiebar.js?t=1471468621302"></script>
+<script src="../public/js/highlight.pack.min.js?t=1471468621302"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1470693640811"></script>
+<script src="../public/script.js?t=1471468621302"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 

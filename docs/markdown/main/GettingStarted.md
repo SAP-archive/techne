@@ -35,7 +35,7 @@
                 <p>Compiled and minified CSS, Source LESS, JavaScript, and fonts, but no documentation.</p>
                 <p>
                     <strong>
-                        <a href="https://libraries.io/bower/hyTechne" target="_blank">INSTALL WITH BOWER</a>
+                        <a href="https://libraries.io/bower/hyTechne" target="_blank">INSTALL TECHNE WITH BOWER</a>
                     </strong>
                 </p>
                 <p>
@@ -75,11 +75,11 @@
             <div class="col-xs-12 col-md-9">
                 <h2>Starter Pages</h2>
                 <p>
-                    In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. <a href="http://localhost:8080/starter-pages/" target="_blank">Preview examples of the Starter Pages.</a>
+                    In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. <a href="http://localhost:8080/starterpages/index.html">Preview examples of the Starter Pages.</a>
                 </p>
                 <p>
                     <strong>
-                        <a href="https://github.com/SAP/techne/tree/master/dist/demo/starter-pages" target="_blank">STARTER PAGES ON GITHUB</a>
+                        <a href="https://github.com/SAP/techne/tree/develop/docs/kss/starterpages" target="_blank">STARTER PAGES ON GITHUB</a>
                     </strong>
                 </p>
             </div>
@@ -91,41 +91,34 @@
             <div class="col-xs-12 col-md-9">
                 <h2>Design Resources</h2>
                 <h3>Axure Libraries and Masters</h3>
-                <p>Download our <a href="#">Axure RP</a> library and hit the ground running... The library offers page layouts and specifications</p>
+                <p>Download our Axure RP library and hit the ground running... The library offers page layouts and specifications</p>
                 <div class="row">
                     <div class="col-md-4">
                         <p>
                             <strong>
-                                <a href="#" target="_blank">DOWNLOAD WIDGET LIBRARY</a>
+                                <a href="public/downloads/Techne_AxureLibrary_Q3_2016.rplib.zip" >AXURE RP LIBRARY</a>
                             </strong>
                         </p>
                     </div>
-                    <div class="col-md-6">
-                        <p>
-                            <strong>
-                                <a href="#" target="_blank">DOWNLOAD PAGE MASTERS</a>
-                            </strong>
-                        </p>                        
-                    </div>
                 </div>
-                <h3>Icons</h3>
+                <!---<h3>Icons</h3>
                 <p>
                     Download the full icon set. Each icon is available as SVG.
                 </p>
                 <p>
                     <strong>
-                        <a href="#" target="_blank">DOWNLOAD .SVG</a>
+                        <a href="#" >DOWNLOAD .SVG</a>
                     </strong>
-                </p> 
+                </p>--->
                 <h3>Color Swatches</h3>
                 <p>
                     Download the full set of application color swatches - primary colors as well as secondary colors
                 </p>
                 <p>
                     <strong>
-                        <a href="#" target="_blank">DOWNLOAD COLOR SWATCHES</a>
+                        <a href="public/downloads/teche_colors.aco">DOWNLOAD COLOR SWATCHES</a>
                     </strong>
-                </p> 
+                </p>
                 <h3>Fonts</h3>
                 <p>
                     Download Dosis and Open Sans font families from the link below or find it included in our GitHub project.
@@ -170,7 +163,7 @@
                 <h3>Installing Gulp</h3>
                 <p>
                     Gulp requires you first to install nodejs which includes the node package modules (NPM) package manager. Then you can simply run npm install <code>--global gulp</code> <br>
-                    (Note the —global, otherwise you would not be able to run gulp systemwide) 
+                    (Note the —global, otherwise you would not be able to run gulp systemwide)
                 </p>
                 <div class="alert alert-getting-started"><strong>IMPORTANT:</strong> The variable <code>@bower-path</code> is not defined per default. It is required that you define this variable in your own stylesheet and point to your bower_components folder. (No trailing slash).<br/><br/>Example:<code>@bower-path: '../../bower_components'; </code></div>
                 <h3>Available Commands</h3>

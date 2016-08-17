@@ -134,9 +134,10 @@ module.exports = function(opt) {
             if(opt.markDownDirectory)
             {
 
-                var template = fs.readFileSync(path.join(opt.templateDirectory, 'index.html'), 'utf8');
+                var template = fs.readFileSync(path.join(opt.templateDirectory , 'index.html'), 'utf8');
                 template = handlebars.compile(template);
-                var mdFiles = fs.readdirSync(opt.markDownDirectory);
+                var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/main/');
+
                 
                 // Accumulate all of the sections' first indexes
                 // in case they don't have a root element.
@@ -153,7 +154,7 @@ module.exports = function(opt) {
 
                 for( i = 0; i < mdFiles.length; i++)
                 {
-                    var markDownFile = opt.markDownDirectory + mdFiles[i];
+                    var markDownFile = opt.markDownDirectory + '/main/' + mdFiles[i];
 
 
                     gulp.src(markDownFile)
@@ -163,9 +164,6 @@ module.exports = function(opt) {
 
                             var mdNavConfig = kss.getMarkdownNav(file);
                             mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
-
-                            
-    
 
                             var content = template({
                                 showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
@@ -181,6 +179,70 @@ module.exports = function(opt) {
                             });
 
                             var joinedPath = path.join(firstFile.base, (fName+'.html'));
+
+
+                            var file = new File({
+                                cwd: firstFile.cwd,
+                                base: firstFile.base,
+                                path: joinedPath,
+                                contents: new Buffer(content)
+                            });
+
+                            console.log(firstFile.cwd, firstFile.base, joinedPath);
+
+                            self.emit('data', file);
+                        }));
+
+                }
+
+
+
+                var template2 = fs.readFileSync(path.join(opt.templateDirectory , 'starterpages.html'), 'utf8');
+                template2 = handlebars.compile(template2);
+                var mdFiles = fs.readdirSync(opt.markDownDirectory+ '/starterpages/');
+
+                
+                // Accumulate all of the sections' first indexes
+                // in case they don't have a root element.
+                for (i = 0; i < sectionCount; i += 1) {
+                    currentRoot = sections[i].reference().match(/[0-9]*\.?/)[0].replace('.', '');
+
+                    if (!~sectionRoots.indexOf(currentRoot)) {
+                        sectionRoots.push(currentRoot);
+                    }
+                }
+
+                sectionRoots.sort();
+                childSections = [];
+
+                for( i = 0; i < mdFiles.length; i++)
+                {
+                    var markDownFile = (opt.markDownDirectory +'/starterpages/') + mdFiles[i];
+
+                    gulp.src(markDownFile)
+                        .pipe(through(function (file) {
+
+                            var fName =  file.path.split('/').pop().split('.')[0];
+
+                            var mdNavConfig = kss.getMarkdownNav(file);
+                            mdNavConfig =  typeof mdNavConfig === 'object'? mdNavConfig: {};
+
+
+                            var content = template2({
+                                showLeftNav: ((mdNavConfig.hasOwnProperty('showLeftNav'))? mdNavConfig.showLeftNav: false ),
+                                leftNavMobileOnly: ((mdNavConfig.hasOwnProperty('leftNavMobileOnly'))? mdNavConfig.leftNavMobileOnly: false ),
+                                starterpagenav: ((mdNavConfig.hasOwnProperty('navigation'))? mdNavConfig.navigation: undefined),
+                                pagename: fName,
+                                pagetype: 'starterpages',
+                                styleguide: styleguide,
+                                sectionRoots: sectionRoots,
+                                sections: jsonSections(childSections),
+                                rootNumber: 1,
+                                argv: {},
+                                overview:  marked(file.contents.toString('utf8'), 'utf8')
+                            });
+
+                            var joinedPath = path.join(firstFile.base + "/starterpages/", (fName+'.html'));
 
 
                             var file = new File({
