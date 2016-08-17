@@ -151,6 +151,13 @@
                     {{/if_eq}}
                 </li>
                 <li>
+                    {{#if_eq pagetype "starterpages"}}
+                        <span class="active js_navtrigger">Starter Pages</span>
+                    {{else}}
+                        <a href="../starterpages/index.html" class="inactive">Starter Pages</a>
+                    {{/if_eq}}
+                </li>
+                <li>
                     {{#if_eq pagename "GettingStarted"}}
                         <span class="active">Download &amp; Get Started</span>
                     {{else}}
@@ -179,6 +186,7 @@
                               <li class="kss-menu-item"><a href="../Guidelines.html" >Guidelines</a></li>
                               <li class="kss-menu-item"><a href="../components/Alerts-Errors-Notifications.html">Components</a></li>
                               <li class="kss-menu-item"><a href="../patterns/Pattern-Section.html">Patterns</a></li>
+                              <li class="kss-menu-item"><a href="../starterpages/index.html">Starter Pages</a></li>
                               <li class="kss-menu-item"><a href="../GettingStarted.html">Download &amp; Get Started</a></li>
                             {{else}}
                             <li class="kss-menu-item kss-back"><a href="../index.html">Back to Home</a></li>
@@ -210,20 +218,22 @@
                 {{else}}
                 {{#eachSection rootNumber sections}}
                 <section id="section-{{reference}}" class="kss-section kss-componnet-page">
-                {{#if_eq refDepth 1}}
-                    {{#if_eq reference 1}}
-                        {{#if_eq pagetype "component"}} 
-                            <h1 class="kss-components-title">Components</h1>
-                             <p>
-                               The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
-                               It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
-                               also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.
-                            </p>
+                    {{#if_eq refDepth 1}}
+                      {{#if_eq reference 1}}
+
+                      {{#if_eq pagetype "component"}}
+                         <h1>Components</h1>
+                         <p>
+                           The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
+                           It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
+                           also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.
+                        </p>
                         {{/if_eq}}
-                    {{/if_eq}}
+                       {{/if_eq}}
+                          <h1><span class="kss-ref">{{reference}}</span> {{header}}</h1>
 
                     {{else}}
-                      <h3 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h3>
+                          <h2><span class="kss-ref">{{reference}}</span> {{header}}</h2>
                     {{/if_eq}}
 
                     {{#if markup}}
