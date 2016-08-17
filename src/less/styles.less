@@ -33,7 +33,15 @@
 
 // Action Bar
 //
-// Action Bar with three dynamic areas. Left and right are supposed to hold actions and the middle one only the page title. Back should be displayed every time there is a higher leaf.
+// The Action Bar sits at the top of an object detail page and allows for saving, cancelling, going back, and other actions upon the object. General guidelines for this pattern are as follows:
+// <ul>
+//  <li>The Action Bar sits at the top of the page </li>
+//  <li>When users come to a new/create object, the Cancel and Save are both visible and enabled.</li>
+//  <li>When there is a primary button other than Save, the Primary button should always be active (see screenshots).  There is no Cancel link in this case.</li>
+//  <li>On an object page in edit mode, before any edits have been made Cancel and Save are not visible or enabled. A user must click or tap inside a field to make visible and enable the Save and Cancel actions.</li>
+//  <li>In the new or edit scenario if a user clicks on Cancel, the form is cleared and the user is taken back to the page they came from.</li>
+//  <li>If the user leaves a page in the middle of create or edit, they should receive a confirmation dialogue asking them to confirm whether they want to leave the page without saving (see screenshot)</li>
+// </ul>
 //
 // Pattern 3
 @import "./techne-patterns/_action-bar.less";
@@ -68,7 +76,9 @@
 
 // Dialogues/Modals
 //
-// Modals are used throughout YaaS to facilitate in-context tasks, wizards, and interactive notifications.   Use the Modal component in conjunction with other compoents to build out whatever patterns needed for people to complete tasks quickly and efficiently. At a minimum a modal should have a close action (X), otherwise buttons or actions are at the discretion of the team and task at-hand.
+// <p>Modals can be used to facilitate in-context tasks, wizards, and interactive notifications. Modals can contain other components or patterns to achieve task completion. Use modals sparingly and ensure correct display in mobile devices.<p>
+// <p>When used, at a minimum a modal should have a a clear header title and a close action (X). Other buttons or actions are at the discretion of the team and task at-hand.</p>
+// <p>If there is a primary and secondary action available as part of the modal, for example, "Save" and "Cancel" these actions should follow the standard pattern guidelines where the Primary action uses the Primary Button component placed in the bottom-right corner of the modal, and to the right of the "Cancel" button link.</p>
 //
 // Pattern 7
 @import "./techne-patterns/_dialogues-modals.less";
@@ -183,6 +193,8 @@
 
 
 // Loading Spinner
+//
+// CSS based spinner to indicate to the user that some information is processing or loading.
 //
 // Component 8
 @import "./components/_spinner.less";
