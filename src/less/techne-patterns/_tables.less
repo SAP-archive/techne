@@ -1,5 +1,6 @@
-// Table summary on mixed pages
+// Tables
 //
+//<h3>Table summary on mixed pages</h3>
 //Use table summaries in order to give users quick access to multiple data type lists on a mixed page. When the number of entries is more than 5, provide a “See All” link to either show the complete list within that page or to go to another page and display the full list.
 //
 // Markup:
@@ -114,10 +115,205 @@
 //
 // Pattern 5.1
 
-.techne-table{
-	.y-add{
-		td{
-			padding:0;
-		}
-	}
+
+.table{
+   border-collapse: separate;
+
+   color: @default-greyblue;
+   > thead, > tbody, > tfoot{
+      > tr{
+         > th, > td{
+            &.sticky-right{
+               text-align: right;
+            }
+            vertical-align: middle;
+         }
+         > th{
+            font-size: 13px;
+            text-transform: uppercase;
+            color: @table-head-color;
+            background: @table-head-bg;
+            a{
+               color: #fff;
+            }
+         }
+         &:last-child{
+            > th, > td{
+               border-bottom: none;
+            }
+         }
+         &.active{
+            a{
+               color: #fff;
+            }
+         }
+      }
+   }
+}
+
+
+
+
+.table-responsive{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+table.techne-table {
+    td {
+        cursor: pointer;
+        color: @techne-typo-default;
+
+         &.no-padding{
+            padding: 0px !important;
+        }
+
+        &.techne-table-action{
+            .hyicon{
+                font-size: 24px;
+            }
+        }
+    }
+
+    tr{
+        &.y-add{
+            background: transparent !important;
+            box-shadow: none;
+            > td{
+                padding: 0px !important;
+                border: none;
+            }
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: @screen-sm) {
+
+
+        thead {
+            display: none;
+        }
+        td{
+            clear:both;
+            display: block;
+            border-top: none !important;
+
+            /* These are technically the same, but use both */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+
+            -ms-word-break: break-all;
+            /* This is the dangerous one in WebKit, as it breaks things wherever */
+            word-break: break-all;
+            /* Instead use this non-standard one: */
+            word-break: break-word;
+
+            /* Adds a hyphen where the word breaks, if supported (No Blink) */
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+
+            .floating-text{
+                -moz-hyphens: none;
+                -webkit-hyphens: none;
+                -ms-hyphens: none;
+                word-break: initial;
+                word-wrap: initial;
+            }
+
+            &:before{
+                content: attr(data-th) "";
+                width: 100%;
+                display: block;
+                font-size: 13px;
+                color: #8a8fa1;
+            }
+
+            > div.cellcontent {
+                width: 100%;
+                display: block;
+                color: @techne-typo-default;
+                font-size: 15px;
+            }
+
+            &.techne-table-xs-left-slot{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                padding-right: 5px;
+                padding-left: 10px;
+            }
+
+            &.techne-table-xs-right-slot{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50px;
+                padding-left: 5px;
+                padding-right: 10px;
+            }
+        }
+
+        tr {
+
+            display: block;
+            position: relative;
+            box-shadow: 0 2px 3px fade(#8a8fa1, 20%);
+            margin-bottom: 10px;
+
+            &.techne-table-row-clickable{
+                &:hover{
+                    box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
+                }
+            }
+
+            &:hover{
+
+
+                .status {
+                    &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED {
+                        color: #fff;
+                    }
+                }
+            }
+            &.techne-table-xs-left{
+                padding-left: 50px;
+            }
+            &.techne-table-xs-right{
+                padding-right: 50px;
+            }
+        }
+
+        // Thanks Bootstrap! That's called too specific selectors...
+         > tbody > tr {
+
+            // table-stripe overwrite
+            &:nth-child(1n){
+                background: #fff;
+            }
+
+            > td {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            > th {
+                font-size: 13px; 
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: @screen-sm) {
+
+    table.techne-table{
+        background:none;       
+    }
+
 }
