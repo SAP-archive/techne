@@ -17,18 +17,8 @@
             {
                 "text": "Details 2",
                 "path": "details-2.html"
-            },
-            {
-                "text": "Grid",
-                "path": "grid.html"
-            },
-            {
-                "text": "Tree",
-                "path": "tree.html"
             }
         ]
     }
-    -->
-<div class="work">
-HI HI
-</div>
+-->
+    
