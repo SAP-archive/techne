@@ -1,137 +1,38 @@
-// getting started page 
+// getting download page
 
 @import '_variables';
 
-.hyGettingStartedPage {
-    margin-top: -25px;
-
-    .hyDownloads {
-        background-color: @screen-bg_gd;
-        padding-top: 63px;
-        margin: 0 -15px 20px -15px
-    }
-
-    h2 {
-        color: @dark-blue;
-        font-size: 25px;
-    }
-
-    #installingBower {
-        margin-top: 39px;
-    }
-
-    h3 {
-        font-size: 17px;
-        font-family: 'Open Sans', sans-serif;
-    }
+.hyDownloadPage {
+    padding:0 20px;
+    margin-top: 25px;
 
     p {
-        color: @dark-blue;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     a {
         vertical-align: middle;
     }
 
-    .customFonts {
-
-        h2 {
-            color: @success_gd;
-        }
-
-        p {
-            color: @typography-light_gd;
-            font-size: 16px;
-            height: 63px;
-        }
-
-        a {
-            font-size: 23px;
-            color: @dark-blue;
-        }
+    dt {
+        font-weight: normal;
     }
 
-    .hyInstall {
-        background-color: @white;
-
-        dt {
-            font-weight: normal;
-        }
-
-        dd {
-            margin-bottom: 18px;
-        }
-
-        code {
-            color: @blue_gd;
-            background-color: @kss-grey;
-        }
+    dd {
+        margin-bottom: 18px;
     }
-    .downloadOptions {
 
-        div {
-            padding-right: 35px;
-            padding-left: 35px;
-            padding-bottom: 57px;
-        }
+    code {
+        color: @code-text;
+        background-color: @code-text-bg;
+    }
 
-        a {
-            display: block;
-            width: 100%;
-            font-size: 23px;
-        }
+    .alert-getting-started{
+        background-color: @alert-getting-started-bg;
+        box-shadow: none;
+    }
 
-        img {
-            width: 153px;
-            height: 134px;
-            margin-bottom: 27px;
-        }
-
-        h2 {
-            height: 54px;
-        }
-
-        @media only screen and (max-width: 977px) and (min-width: 890px) {
-
-            a {
-                font-size: 20px;
-            }
-        }
-
-        @media only screen and (max-width: 889px) and (min-width: 830px) {
-
-            a {
-                font-size: 18px;
-            }
-        }
-
-        @media only screen and (max-width: 829px) and (min-width: 769px) {
-
-            a {
-                font-size: 16px;
-            }
-        }
-
-        @media only screen and (max-width: 767px) and (min-width: 391px) {
-
-            div {
-                padding-left: 65px;
-                padding-right: 65px;
-            }
-        }
-
-        //For iPhone 4, text coming out of button - L.M.
-        @media (max-width: 390px) {
-
-            div {
-                padding-left: 45px;
-                padding-right: 45px;
-            }
-
-            a {
-                font-size: 20px;
-            }
-        }
+    .section-seperator{
+        margin:20px -35px;
     }
 }
