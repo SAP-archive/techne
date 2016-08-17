@@ -245,6 +245,9 @@ body.kss-body {
   padding-top: 100px;
   padding-right: 0!important;
 }
+hr {
+  border-top-color: #e7ebef !important;
+}
 a:visited {
   color: #0486e0;
 }
@@ -321,6 +324,14 @@ a:visited {
 }
 .kss-lead {
   font-weight: bold;
+}
+:target:before {
+  content: "";
+  display: block;
+  height: 90px;
+  /* super header height*/
+  margin: -90px 0 0;
+  /* negative super header height */
 }
 #kss-top-nav {
   background: #0486e0;
@@ -1420,6 +1431,7 @@ header.hyHomeHeaderMinor {
 }
 .kss-patterns-page {
   max-width: 1000px;
+  padding: 0 20px;
 }
 #patterns-localization .btn-link.collapsed .glyphicon-chevron-right:before {
   content: "";
@@ -1713,104 +1725,32 @@ header.hyHomeHeaderMinor {
   width: 100%;
   top: 35px;
 }
-.hyGettingStartedPage {
-  margin-top: -25px;
+.hyDownloadPage {
+  padding: 0 20px;
+  margin-top: 25px;
 }
-.hyGettingStartedPage .hyDownloads {
-  background-color: #e0e9f0;
-  padding-top: 63px;
-  margin: 0 -15px 20px -15px;
+.hyDownloadPage p {
+  padding-bottom: 10px;
 }
-.hyGettingStartedPage h2 {
-  color: #27394f;
-  font-size: 25px;
-}
-.hyGettingStartedPage #installingBower {
-  margin-top: 39px;
-}
-.hyGettingStartedPage h3 {
-  font-size: 17px;
-  font-family: 'Open Sans', sans-serif;
-}
-.hyGettingStartedPage p {
-  color: #27394f;
-  padding-bottom: 20px;
-}
-.hyGettingStartedPage a {
+.hyDownloadPage a {
   vertical-align: middle;
 }
-.hyGettingStartedPage .customFonts h2 {
-  color: #233243;
-}
-.hyGettingStartedPage .customFonts p {
-  color: #7f90a4;
-  font-size: 16px;
-  height: 63px;
-}
-.hyGettingStartedPage .customFonts a {
-  font-size: 23px;
-  color: #27394f;
-}
-.hyGettingStartedPage .hyInstall {
-  background-color: #ffffff;
-}
-.hyGettingStartedPage .hyInstall dt {
+.hyDownloadPage dt {
   font-weight: normal;
 }
-.hyGettingStartedPage .hyInstall dd {
+.hyDownloadPage dd {
   margin-bottom: 18px;
 }
-.hyGettingStartedPage .hyInstall code {
-  color: #0486e0;
-  background-color: #edf1f5;
+.hyDownloadPage code {
+  color: #cc1212;
+  background-color: #f8e0e0;
 }
-.hyGettingStartedPage .downloadOptions div {
-  padding-right: 35px;
-  padding-left: 35px;
-  padding-bottom: 57px;
+.hyDownloadPage .alert-getting-started {
+  background-color: #eef1f3;
+  box-shadow: none;
 }
-.hyGettingStartedPage .downloadOptions a {
-  display: block;
-  width: 100%;
-  font-size: 23px;
-}
-.hyGettingStartedPage .downloadOptions img {
-  width: 153px;
-  height: 134px;
-  margin-bottom: 27px;
-}
-.hyGettingStartedPage .downloadOptions h2 {
-  height: 54px;
-}
-@media only screen and (max-width: 977px) and (min-width: 890px) {
-  .hyGettingStartedPage .downloadOptions a {
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 889px) and (min-width: 830px) {
-  .hyGettingStartedPage .downloadOptions a {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 829px) and (min-width: 769px) {
-  .hyGettingStartedPage .downloadOptions a {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 391px) {
-  .hyGettingStartedPage .downloadOptions div {
-    padding-left: 65px;
-    padding-right: 65px;
-  }
-}
-@media (max-width: 390px) {
-  .hyGettingStartedPage .downloadOptions div {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-  .hyGettingStartedPage .downloadOptions a {
-    font-size: 20px;
-  }
+.hyDownloadPage .section-seperator {
+  margin: 20px -35px;
 }
 #content.starterpages {
   position: absolute;
