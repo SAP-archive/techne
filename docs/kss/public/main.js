@@ -5,17 +5,14 @@ jQuery(document).ready(function() {
     $menuItem = $menu.find('.kss-menu-item'),
     ref = $menu.data('kss-ref');
 
-    $menuItem.eq(ref).addClass('kss-active');
-     $('[data-toggle="offcanvas"]').click(function () {
-          $('.row-offcanvas').toggleClass('active')
-      });
+    $menuItem.eq(ref).addClass('active');
 
      if ($(".js_navtrigger.active").size() > 0) {
-        $menuItem.removeClass('kss-active');
-        $($menuItem[1]).toggleClass('kss-active');
+        $menuItem.removeClass('active');
+        $($menuItem[1]).toggleClass('active');
         $menuItem.click(function (event) {
-            $menuItem.removeClass('kss-active');
-            $(this).toggleClass('kss-active');
+            $menuItem.removeClass('active');
+            $(this).toggleClass('active');
         });
      };
  });

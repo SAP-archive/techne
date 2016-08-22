@@ -4,7 +4,7 @@
 //
 // Pattern 4.1
 
-// Table summary for cards on mixed pages 
+// Table summary for cards on mixed pages
 //
 //Use cards summaries in order to give users quick access to multiple data type lists on a mixed page. When the number of entries is more than 5, provide a “See All” link to either show the complete list within that page or to go to another page and display the full list.
 //
@@ -64,8 +64,8 @@
 //         <span class="hyicon hyicon-chevron"></span>
 //     </button>
 // </div>
-// 
-// .dataCards-singleColumn - Force the card layout to stay in one column. Built to be used within a existing grid column. 
+//
+// .dataCards-singleColumn - Force the card layout to stay in one column. Built to be used within a existing grid column.
 //
 // Pattern 4.2
 
@@ -112,7 +112,7 @@ a.dataCard{
 .dataCard{
   width: 100%;
   padding: 0;
-  border: none;
+  border: 1px solid @body-bg !important;
   background: transparent;
   display: flex;
   display: -webkit-flex; /* Safari */
@@ -224,7 +224,7 @@ a.dataCard{
     &.cardRowDisabled{
         background-color: fade(@default-greyblue, 15%);
         user-select: none;
-        & *{ 
+        & *{
           color: fade(@default-greyblue, 70%);
         }
 
