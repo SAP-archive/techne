@@ -19,9 +19,6 @@ $('.js_fullscreen').on('click', function () {
 
 $( document ).ready(function(){
 
-    // initiate scroll spy
-    $('body').scrollspy({ target: '.left-nav' });
-
     // smooth scrolling to target when clicked on left nav sub menu
     $('.sidebar-offcanvas a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -34,7 +34,7 @@
 
 
 </head>
-<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}">
+<body class="kss-body {{#if showLeftNav}}has-left-nav{{else}}has-no-left-nav{{/if}} {{#if leftNavMobileOnly}}kss-sidebar-nav-mobile-only{{/if}} {{#if_eq pagename "components"}}hyComponentsPage{{/if_eq}}" data-spy="scroll" data-target=".kss-navbar" data-offset="100">
 
 
 
@@ -178,7 +178,7 @@
         {{/if}}
             <aside>
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
-                    <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
+                    <ul class="nav kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
                         {{#if_eq pagename "index"}}
                           <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
                           <li class="kss-menu-item"><a href="Guidelines.html" >Guidelines</a></li>
