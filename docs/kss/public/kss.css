@@ -244,6 +244,7 @@ body.kss-body {
   max-width: 100%;
   padding-top: 100px;
   padding-right: 0!important;
+  position: relative;
 }
 hr {
   border-top-color: #e7ebef !important;
@@ -445,8 +446,9 @@ a:visited {
 }
 #kss-nav a:hover {
   color: #0486e0;
+  background-color: transparent;
 }
-#kss-nav .kss-active a {
+#kss-nav .active a {
   border-left-color: #0486e0;
   color: #0486e0;
   text-decoration: none;
@@ -1136,6 +1138,9 @@ header.hyHomeHeaderMinor {
 .kss-componnet-page dd {
   margin-bottom: 20px;
 }
+.kss-componnet-page .intro-text {
+  margin-top: 26px;
+}
 .kss-components-title {
   margin-top: 25px;
 }
@@ -1775,6 +1780,6 @@ article section.Pagination h3 {
   height: 100%;
   width: 100%;
 }
-.starterpages #kss-nav .kss-menu-item.kss-active a {
+.starterpages #kss-nav .kss-menu-item.active a {
   background-image: none;
 }

@@ -182,7 +182,7 @@
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
                         <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
                             {{#if_eq pagename "index"}}
-                              <li class="kss-menu-item kss-active"><a href="index.html">Home</a></li>
+                              <li class="kss-menu-item active"><a href="index.html">Home</a></li>
                               <li class="kss-menu-item"><a href="../Guidelines.html" >Guidelines</a></li>
                               <li class="kss-menu-item"><a href="../components/Alerts-Errors-Notifications.html">Components</a></li>
                               <li class="kss-menu-item"><a href="../patterns/Pattern-Section.html">Patterns</a></li>
@@ -222,8 +222,7 @@
                       {{#if_eq reference 1}}
 
                       {{#if_eq pagetype "component"}}
-                         <h1>Components</h1>
-                         <p>
+                         <p class="intro-text">
                            The hybris techne component library is rooted in <a href="http://getbootstrap.com">Bootstrap 3</a> and includes custom UI components used across YaaS.
                            It does not include any basic Bootstrap components we haven’t customized, even though you will find these elements
                            also across YaaS. If you’re looking for something basic for your UI, check the <a href="http://getbootstrap.com/components">Bootstrap components</a> to help build out your pages.

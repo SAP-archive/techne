@@ -183,9 +183,9 @@
                 <nav class="navbar kss-navbar navbar-default" id="sidebar-wrapper">
                     <ul class="kss-menu sidebar-nav" data-kss-ref="{{rootNumber}}">
                         <li class="kss-menu-item kss-back"><a href="../index.html">Back to Home</a></li>
-                        {{#if starterpagenav}} 
+                        {{#if starterpagenav}}
                             {{#each starterpagenav}}
-                                <li class="kss-menu-item"><a href="{{path}}" target="content-frame">{{text}}</a></li>
+                                <li class="kss-menu-item"><a href="{{path}}" target="{{target}}">{{text}}</a></li>
                             {{/each}}
                         {{/if}}
                     </ul>
@@ -203,8 +203,8 @@
         <!----------------------->
         <!---- MAIN CONTENT ----->
         <!----------------------->
-        
-        <iframe src="table.html" frameborder="0" name="content-frame" class="content-frame"></iframe> 
+
+        <iframe src="table.html" frameborder="0" name="content-frame" class="content-frame"></iframe>
         <!----------------------->
         <!---- /MAIN CONTENT ---->
         <!----------------------->
