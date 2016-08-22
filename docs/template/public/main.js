@@ -6,9 +6,6 @@ jQuery(document).ready(function() {
     ref = $menu.data('kss-ref');
 
     $menuItem.eq(ref).addClass('active');
-    // $('[data-toggle="offcanvas"]').click(function () {
-    //     $('.row-offcanvas').toggleClass('active')
-    // });
 
      if ($(".js_navtrigger.active").size() > 0) {
         $menuItem.removeClass('active');
