@@ -96,7 +96,7 @@
                     <div class="col-md-4">
                         <p>
                             <strong>
-                                <a href="public/downloads/Techne_AxureLibrary_Q3_2016.rplib.zip" >AXURE RP LIBRARY</a>
+                                <a href="public/downloads/Techne_AxureLibrary_v1_3_1.rplib-1.zip" >AXURE RP LIBRARY</a>
                             </strong>
                         </p>
                     </div>
