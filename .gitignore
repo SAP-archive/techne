@@ -11,6 +11,8 @@ src/less/globals/_resource-paths.less
 .idea/
 
 docs/kss/*.html
+docs/kss/patterns/*.html
+docs/kss/components/*.html
 
 # OS generated files #
 ######################
