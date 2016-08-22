@@ -1157,6 +1157,9 @@ header.hyHomeHeaderMinor {
   box-shadow: none;
   background-color: transparent;
 }
+article section.Pagination h3 {
+  display: none;
+}
 .error-message-table td:nth-child(2),
 .error-message-table td:nth-child(3) {
   word-break: break-all;
