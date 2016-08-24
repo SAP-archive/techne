@@ -16,7 +16,7 @@ var zip = require('gulp-zip');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
     LessPluginAutoPrefix = require('less-plugin-autoprefix'),
     cleancss = new LessPluginCleanCSS({ advanced: false, aggressiveMerging:true }),
-    autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
+    autoprefix= new LessPluginAutoPrefix({ browsers:  ["Safari >= 8, last 2 versions, ie >= 9"] });
 
 var connect = require('gulp-connect-multi')();
 
