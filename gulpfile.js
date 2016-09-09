@@ -16,7 +16,7 @@ var zip = require('gulp-zip');
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
     LessPluginAutoPrefix = require('less-plugin-autoprefix'),
     cleancss = new LessPluginCleanCSS({ advanced: false, aggressiveMerging:true }),
-    autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
+    autoprefix= new LessPluginAutoPrefix({ browsers: ["Safari >= 8", "last 2 versions", "ie >= 9"] });
 
 var connect = require('gulp-connect-multi')();
 
@@ -53,13 +53,19 @@ gulp.task('iconfont',
                     fontName: 'hyicon',
                     normalize: true,
                     centerHorizontally: true,
-                    fontHeight: 100 // IMPORTANT
+                    fontHeight: 100, // IMPORTANT
+                    appendCodepoints: true
                 }
             )
         )
         .on('codepoints',
             function(codepoints, options)
             {
+                // automatically assign a unicode value to the icon
+                codepoints.forEach(function(glyph, idx, arr) {
+                arr[idx].codepoint = glyph.codepoint.toString(16)
+                });
+
                 gulp.src('src/less/templates/_icons.less')
                 .pipe(
                     consolidate('lodash',
@@ -75,7 +81,7 @@ gulp.task('iconfont',
                 .pipe(gulp.dest('src/less/components'));
             }
         )
-        .pipe( gulp.dest('dist/fonts/') );
+        .pipe( gulp.dest('dist/techne/fonts/') );
     }
 );
 
@@ -99,8 +105,6 @@ gulp.task('setpath', function(cb) {
 gulp.task('less', ['setpath'] ,
     function()
     {
-
-
         gulp.src(paths.less)
         //.pipe(sourcemaps.init())
         .pipe(
@@ -126,7 +130,7 @@ gulp.task('less', ['setpath'] ,
             type: 'timestamp'
         }))
         .pipe(
-            gulp.dest( paths.environment+'/css/' )
+            gulp.dest( paths.environment+'/techne/css/' )
         );
     }
 );
@@ -169,10 +173,7 @@ gulp.task('styleguide', function () {
     }))
     .pipe( gulp.dest('docs/kss') );
 
-    gulp.src('./dist/**/*') 
-    .pipe( gulp.dest('./docs/kss/public/y-techne/dist/') );
-
-    gulp.src('./bower_components/bootstrap/fonts/**/*') 
+    gulp.src('./bower_components/bootstrap/fonts/**/*')
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
 });
 
@@ -202,7 +203,9 @@ gulp.task('deploy', function(){
             './bower_components/select2/select2.js',
             './src/js/**/*.js'
         ]
-    ).pipe(gulp.dest(paths.environment+'/js/'))
+    ).pipe(gulp.dest(paths.environment+'/js/'));
+
+    gulp.src('./bower_components/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('docs/kss/public/js/'));
 
 
@@ -247,19 +250,22 @@ gulp.task('deploy', function(){
     /*
     Create the distribution zip file
      */
-    gulp.src(
-        [
-            'dist/**/*'
-        ]
-    )
+    gulp.src('dist/**/*')
     .pipe( zip('techne'+require('./bower.json').version+ '.zip') )
     .pipe( gulp.dest('docs/kss/public/release-archive/') );
 
-    gulp.src('dist/**/*')
-    .pipe( gulp.dest('docs/kss/public/dist') );
 
-    gulp.src(['bower_components/bootstrap/**/*'])
-    .pipe( gulp.dest('docs/kss/bower_components/bootstrap') );
+    gulp.src('dist/bootstrap/**/*')
+    .pipe( gulp.dest('docs/kss/public/dist/bootstrap/') );
+
+    gulp.src('dist/js/**/*')
+    .pipe( gulp.dest('docs/kss/public/dist/js/') );
+
+    gulp.src('dist/techne/**/*')
+    .pipe( gulp.dest('docs/kss/public/dist/techne/') );
+
+    // gulp.src(['bower_components/bootstrap/**/*'])
+    // .pipe( gulp.dest('docs/kss/bower_components/bootstrap') );
 
 
 });
@@ -275,6 +281,25 @@ gulp.task('patchgulpkss',
 );
 
 
+
+gulp.task('packagedist',
+  function()
+  {
+    //copies files to the dist folder
+    gulp.src('./bower_components/bootstrap/fonts/**/*').pipe( gulp.dest('dist/bootstrap/fonts') );
+  }
+);
+
+
+gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'packagedist', 'deploy']);
+
+// iconfont, less, kss_bootrap_src
+gulp.task('dist', ['iconfont', 'build']);
+
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', [ 'build' , 'connect', 'watch']);
+
 // Rerun the task when a file changes
 gulp.task('watch',
     function()
@@ -284,16 +309,3 @@ gulp.task('watch',
         gulp.watch(paths.less_watch, ['styleguide']);
     }
 );
-
-
-gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'deploy']);
-
-// iconfont, less, kss_bootrap_src
-gulp.task('dist', ['iconfont', 'build']);
-
-gulp.task('debugStyleguide', ['patchgulpkss', 'styleguide']);
-
-
-
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', [ 'build' , 'connect', 'watch']);

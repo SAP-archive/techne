@@ -1,0 +1,29 @@
+// Usage Guidlines
+//
+// A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanatino of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.  We recommend to use the bootstrap popover component to do so.
+//
+// Markup:
+//<div class="popover bottom {$modifiers}">
+//	<div class="arrow"></div>
+//	<h3 class="popover-title">Popover</h3>
+//	<div class="popover-content">
+//		<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+//	</div>
+//</div>
+//
+// Pattern 11.1
+
+.popover {
+  color:#fff;
+  border: none;
+  border-radius: 0;
+  font-size: @font-size-base;
+  .popover-title{
+    border-bottom: none;
+    font-size: @popover-heading-font-size;
+    padding:25px 25px 8px 25px;
+  }
+  .popover-content{
+    padding:8px 25px 25px 25px;
+  }
+}

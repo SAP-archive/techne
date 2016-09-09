@@ -1,10 +1,10 @@
-// Circular Spinner
+// Inline Spinner
 //
-// CSS based spinner to indicate to the user that some information is processing or loading.
+//  CSS based spinner to indicate to the user that some information is processing or loading.
 //
 // Markup:
-// <div id="demo-page-background" class="panel panel-default">
-//   <div class="panel-heading">Inline Spinner</div>
+//   
+//  <div class="panel panel-default">
 //   <div class="panel-body">
 //     <div class="spinner">
 //       <div class="spinner-container spinner-container1">
@@ -27,11 +27,14 @@
 //       </div>
 //     </div>
 //   </div>
-// </div>
-// <div id="demo-page-background" class="panel panel-default">
-//   <div class="panel-heading">Overlay Spinner: In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. </div>
-//   <div class="panel-body">
-//     <div class="demo-wrapper">
+//  </div>
+//
+// Component 8.1
+
+// Overlay Spinner: 
+//
+// In order to have a full page spinner the overlay spinner html needs to be appended as a direct child of the body tag. 
+//   <div class="panel-body demo-wrapper">
 //       <div class="spinner-backdrop">
 //         <div class="spinner">
 //           <div class="spinner-container spinner-container1">
@@ -53,15 +56,13 @@
 //             <div class="circle4"></div>
 //           </div>
 //         </div>
-//       </div>
 //     </div>
 //   </div>
-// </div>
 //
-// Styleguide 9.1
+// Component 8.2
 
 .spinner {
-  margin: 100px auto;
+  margin: 0 auto;
   width: 40px;
   height: 40px;
   position: relative;
@@ -172,12 +173,12 @@
   width: 100%;
   height: 100%;
   .spinner{
-       position: absolute;
-        left: 0;
-        right: 0;
-        top:0;
-        bottom:0;
-        margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    margin: auto;
   }
 
 }
