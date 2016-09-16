@@ -1,19 +1,18 @@
 // Sample Toolbar Configuration
 //
-// Bla
+// Tool bar text goes here
 //
 // Markup:
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
-// 		<div class="y-toolbar__item y-toolbar__input y-toolbar__input--transparent">
-// 			<div class="form-group">
-// 				<input type="text" class="form-control" placeholder="Filter/Search">
-//				<span class="glyphicon glyphicon-chevron-down form-control-feedback" aria-hidden="true"></span>
-// 			</div>
+// 		<div class="y-toolbar__item y-toolbar__item-filter y-toolbar__dropdown ">
+// 			<a href="#desktopToolbarFilterMenu"  class="y-toolbar__btn y-toolbar__btn--caption" role="button" data-toggle="collapse" aria-exapnded="false" aria-controls="desktopToolbarFilterMenu">
+// 				<span class="glyphicon glyphicon-filter"></span>
+// 			</a>
 // 		</div>
-// 		<div class="y-toolbar__item y-toolbar__dropdown">
+// 		<div class="y-toolbar__item y-toolbar__item-sort y-toolbar__dropdown">
 // 			<a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
-// 				Sort By: <strong> Newst </strong> <span class="glyphicon glyphicon-chevron-down y-toolbar__dropdown__icon" aria-hidden="true"></span>
+// 				<span class="glyphicon glyphicon-sort-by-attributes-alt y-toolbar__dropdown__icon" aria-hidden="true"></span><strong> Newst </strong> <span class="glyphicon glyphicon-chevron-down y-toolbar__dropdown__icon" aria-hidden="true"></span>
 // 			</a>
 // 			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 // 				<li><a href="#">Newest</a></li>
@@ -24,15 +23,8 @@
 // 			</ul>
 // 		</div>
 // 		<div class="y-toolbar__right">
-// <div class="y-toolbar__item y-toolbar__group ">
-// 	<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--active" aria-pressed="true" aria-label="">
-// 		<span class="hyicon hyicon-list"></span>
-// 	</a>
-// 	<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--inactive" aria-pressed="false" aria-label="">
-// 		<span class="hyicon hyicon-grid"></span>
-// 	</a>
-// </div>
 // 			<nav class="y-toolbar__item">
+// 				<span class="pagination-items">283 Items</span>
 // 				<ul class="pagination">
 // 					<li class="disabled">
 // 						<a href="#" aria-label="Previous">
@@ -48,8 +40,48 @@
 // 						</a>
 // 					</li>
 // 				</ul>
-// 				283 Items
 // 			</nav>
+// 			<div class="y-toolbar__item y-toolbar__item-toggles hidden-xs">
+// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--active" aria-pressed="true" aria-label="">
+// 					<span class="hyicon hyicon-list"></span>
+// 				</a>
+// 				<a href="#" role="button" class="y-toolbar__btn y-toolbar__btn--inactive" aria-pressed="false" aria-label="">
+// 					<span class="hyicon hyicon-grid"></span>
+// 				</a>
+// 			</div>
+// 		</div>
+// 		<div class="collapse y-filter-bar" id="desktopToolbarFilterMenu">
+// 		   <div class="y-toolbar__wrapper">
+// 			   <div class="y-toolbar">
+// 				   <div class="y-toolbar__item y-toolbar__dropdown">
+// 					   <a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+// 						   <strong> Newst </strong> <span class="glyphicon glyphicon-chevron-down y-toolbar__dropdown__icon" aria-hidden="true"></span>
+// 					   </a>
+// 					   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+// 						   <li><a href="#">Newest</a></li>
+// 						   <li><a href="#">Name A-Z</a></li>
+// 						   <li><a href="#">Name Z-A</a></li>
+// 						   <li role="separator" class="divider"></li>
+// 						   <li><a href="#">Price</a></li>
+// 					   </ul>
+// 				   </div>
+// 				   <div class="y-toolbar__item y-toolbar__dropdown">
+// 					   <a href="#" class="y-toolbar__btn y-toolbar__btn--caption " role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+// 						   <strong> Newst </strong> <span class="glyphicon glyphicon-chevron-down y-toolbar__dropdown__icon" aria-hidden="true"></span>
+// 					   </a>
+// 					   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+// 						   <li><a href="#">Newest</a></li>
+// 						   <li><a href="#">Name A-Z</a></li>
+// 						   <li><a href="#">Name Z-A</a></li>
+// 						   <li role="separator" class="divider"></li>
+// 						   <li><a href="#">Price</a></li>
+// 					   </ul>
+// 				   </div>
+// 			   </div>
+// 		   </div>
+// 		   <div class="filterList">
+// 			   <div>List is in</div>
+// 		   </div>
 // 		</div>
 // 	</div>
 // </div>
@@ -63,9 +95,16 @@
 
 .y-toolbar__wrapper{
 	border-top: 1px solid @default-greyblue-500;
-	margin-bottom: 15px;
 	position: relative;
+}
 
+.y-toolbar{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: @container-large-desktop;
+	margin: 0 auto;
+	font-size: 15px;
 	// Multiline border
 	&:before{
 		content: '';
@@ -85,15 +124,6 @@
 		background-size: @y-toolbar-height @y-toolbar-height;
 		background-position: 0 (@y-toolbar-height - 1px);
 	}
-}
-
-.y-toolbar{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	max-width: @container-large-desktop;
-	margin: 0 auto;
-	font-size: 15px;
 }
 
 .y-toolbar__right{
@@ -133,6 +163,15 @@
 	}
 }
 
+.y-toolbar__item-filter .y-toolbar__btn{
+
+	background-color: @navbar-default-bg;
+	border-left: 1px solid transparent;
+	&[aria-expanded="true"]{
+		border-left: 1px solid @default-greyblue-500;
+	}
+}
+
 // Button
 .y-toolbar__btn{
     flex: 0 0 auto;
@@ -150,6 +189,7 @@
 	padding: @padding-base-vertical @padding-base-horizontal;
 
 	transition: all 0.1s ease-in-out 0s;
+
 
 	&,
 	&:visited{
@@ -200,6 +240,7 @@
 		line-height: 0;
 	}
 }
+
 
 // Group Buttons without seperators
 .y-toolbar__group{
@@ -267,6 +308,13 @@
 		margin-left: 8px;
 	}
 
+	ul.dropdown-menu{
+		margin-top: 0;
+		left: -1px;
+		border: 1px solid @default-greyblue-500;
+		bordeer-top: .5px solid  @default-greyblue-500;
+	}
+
 }
 
 .y-toolbar{
@@ -281,4 +329,143 @@
 		height: @y-toolbar-height;
 		line-height: @y-toolbar-height;
 	}
+
+
+
+}
+
+.y-toolbar__item-toggles{
+	.y-toolbar__btn + .y-toolbar__btn {
+		border-left: 1px solid @default-greyblue-500;
+	}
+}
+
+.y-filter-bar{
+	width: 100%;
+	.y-toolbar__wrapper {
+		background-color: @navbar-default-bg;
+		margin-bottom: 15px;
+		border-top: none;
+		border-left: 1px solid @default-greyblue-500;
+		border-left: 1px solid @default-greyblue-500;
+	}
+}
+
+@media (max-width: @y-toolbar-breakpoint) {
+	.y-toolbar{
+		// display: flex;
+		// overflow: hidden;
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -moz-box-orient: vertical;
+	    -webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-box-align: start;
+	    -moz-box-align: start;
+	    -ms-flex-align: start;
+	    -webkit-align-items: flex-start;
+	    align-items: flex-start;
+
+		 &:before{
+			 background-image:none;
+		 }
+	}
+
+	.y-toolbar__wrapper:before{
+		background-image: none;
+	}
+
+	.y-toolbar__item{
+		display: block;
+	}
+
+	.y-toolbar__item.y-toolbar__item-filter{
+		// width: 20%;
+		// float: left;
+		webkit-box-ordinal-group: 4;
+		-moz-box-ordinal-group: 4;
+		-ms-flex-order: 1;
+		-webkit-order: 1;
+		order: 1;
+	}
+
+	.y-toolbar__item.y-toolbar__item-sort{
+		border-right: none;
+		// float: right;
+		webkit-box-ordinal-group: 4;
+		-moz-box-ordinal-group: 4;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
+		flex: 2;
+
+		.y-toolbar__btn{
+			display: inline-block;
+			float: right;
+			padding-top: 18px;
+		}
+
+		ul.dropdown-menu{
+			left: initial;
+			right: -1px;
+			min-width: 150px;
+		}
+	}
+
+	.y-toolbar__right{
+		display: block;
+		// float: right;
+		width: 100%;
+		flex-wrap: nowrap;
+		border-top: 1px solid @default-greyblue-500;
+
+		-webkit-box-ordinal-group: 4;
+		-moz-box-ordinal-group: 4;
+		-ms-flex-order: 4;
+		-webkit-order: 4;
+		order: 4;
+
+		.y-toolbar__item{
+			border-right: none;
+			width: 100%;
+
+			&(:last-child){
+				border-right: 1px solid @default-greyblue-500;
+			}
+		}
+		.pagination-items{
+			display: inline-block;
+			width: 30%;
+			float: left;
+			margin-top: 12px;
+		}
+
+		.pagination{
+			display: block;
+			float: right;
+		}
+	}
+
+	.y-filter-bar{
+		width: 100%;
+		border-top: 1px solid @default-greyblue-500;
+
+		-webkit-box-ordinal-group: 4;
+		-moz-box-ordinal-group: 4;
+		-ms-flex-order: 3;
+		-webkit-order: 3;
+		order: 3;
+
+		.y-toolbar__dropdown{
+			width: 100%;
+			border-right: 1px solid @default-greyblue-500;
+			border-bottom: 1px solid @default-greyblue-500;
+		}
+	}
+
 }
