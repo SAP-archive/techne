@@ -408,6 +408,7 @@
 			display: inline-block;
 			float: right;
 			padding-top: 18px;
+
 		}
 
 		ul.dropdown-menu{
@@ -465,6 +466,10 @@
 			width: 100%;
 			border-right: 1px solid @default-greyblue-500;
 			border-bottom: 1px solid @default-greyblue-500;
+
+			.y-toolbar__btn:not(.y-toolbar__btn--disabled){
+				border-bottom: 1px solid @default-greyblue-500;
+			}
 		}
 	}
 
