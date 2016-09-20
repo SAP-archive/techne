@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="31" viewBox="0 0 27 31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #27394f;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="FILTER_copy_4" data-name="FILTER copy 4" class="cls-1" d="M131.706,101H107.291A1.3,1.3,0,0,0,106,102.3h0a1.294,1.294,0,0,0,.2.693c0.1,0.157,10.773,7.817,10.773,7.817H117v12.32l5.02,8.869V110.811s10.674-7.66,10.773-7.817a1.3,1.3,0,0,0,.2-0.693h0A1.3,1.3,0,0,0,131.706,101Z" transform="translate(-106 -101)"/>
+</svg>
