@@ -92,6 +92,7 @@
 
 
 @y-toolbar-height: 50px;
+@y-toobar-inactive-color: #909cab;
 @y-toolbar-breakpoint: @screen-md;
 
 .y-toolbar__wrapper{
@@ -180,7 +181,7 @@
 	}
 
 	.y-toolbar__dropdown__icon{
-		margin-left: 30px;
+		margin-left: 10px;
 		color: @default-greyblue;
 	}
 }
@@ -237,12 +238,12 @@
 
 	// Toggle Active
 	&.y-toolbar__btn--active{
-		color: @default-blue;
+		color: @text-color;
 	}
 
 	// Toggle Inactive
 	&.y-toolbar__btn--inactive{
-		color: fade(@dark-blue, 65%);
+		color: @y-toobar-inactive-color;
 	}
 
 	// Disabled / No permission
@@ -253,6 +254,8 @@
 
 	// Modifier for  text-only or icon-text buttons
 	&.y-toolbar__btn--caption{
+		text-transform: uppercase;
+
 		.hyicon{
 			margin-right: 5px;
 		}
@@ -378,11 +381,11 @@
 }
 
 .y-filter-list{
-	padding: 15px 10px 20px 9px;
+	padding: 15px 10px 20px 17px;
 
 	.y-filter-list__applied{
-		a{
-			color: inherit;
+		.y-filter-list__type{
+			color: @text-color;
 		}
 		padding-left: 0;
 		li{
@@ -548,6 +551,25 @@
 
 	.y-filter-list{
 		border-bottom: none;
+
+		.y-filter-list__applied{
+
+			li{
+				font-size: 12px;
+				display: block;
+				padding: 10px 0;
+			}
+
+			li + li {
+				&:before{
+					content: "";
+					display: inline;
+					margin: 0;
+				}
+			}
+		}
 	}
+
+
 
 }
