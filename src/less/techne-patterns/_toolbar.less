@@ -78,8 +78,8 @@
 // 		   </div>
 // 		   <div class="y-filter-list">
 // 			   <ul class="y-filter-list__applied text-capitalize">
-//			     <li><span class="y-filter-list__label">Color</span><span class="y-filter-list__type">Red</span><a href="#" class="hyicon hyicon-filterremove y-filter-list__remove"/></a></li>
-//			     <li><span class="y-filter-list__label">Size</span><span class="y-filter-list__type">Small</span><a href="#" class="hyicon hyicon-filterremove y-filter-list__remove"/></a></li>
+//			     <li><span class="y-filter-list__label">Color</span><a href="#"><span class="y-filter-list__type">Red</span><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
+//			     <li><span class="y-filter-list__label">Size</span><a href="#"><span class="y-filter-list__type">Small</span><a href="#"><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
 //				 <li> <a href="#" class="y-filter-list__clear text-uppercase">Clear All</a>
 //			   </ul>
 // 		   </div>
@@ -171,7 +171,6 @@
 }
 
 .y-toolbar__item.y-toolbar__item-sort{
-	font-size: 12px;
 
 	.y-toolbar__btn.y-toolbar__btn--caption{
 		padding: 10px 16px;
@@ -382,6 +381,9 @@
 	padding: 15px 10px 20px 9px;
 
 	.y-filter-list__applied{
+		a{
+			color: inherit;
+		}
 		padding-left: 0;
 		li{
 			font-size: 12px;
