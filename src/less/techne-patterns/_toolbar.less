@@ -76,14 +76,14 @@
 // 				   </div>
 // 			   </div>
 // 		   </div>
-// 		   <div class="y-filter-list">
-// 			   <ul class="y-filter-list__applied text-capitalize">
-//			     <li><span class="y-filter-list__label">Color</span><a href="#"><span class="y-filter-list__type">Red</span><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
-//			     <li><span class="y-filter-list__label">Size</span><a href="#"><span class="y-filter-list__type">Small</span><a href="#"><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
-//				 <li> <a href="#" class="y-filter-list__clear text-uppercase">Clear All</a>
-//			   </ul>
-// 		   </div>
 // 		</div>
+// 		<div class="y-filter-list">
+// 		  <ul class="y-filter-list__applied text-capitalize">
+//		    <li><span class="y-filter-list__label">Color</span><a href="#"><span class="y-filter-list__type">Red</span><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
+//			<li><span class="y-filter-list__label">Size</span><a href="#"><span class="y-filter-list__type">Small</span><a href="#"><span class="hyicon hyicon-filterremove y-filter-list__remove"/></span></a></li>
+//		    <li> <a href="#" class="y-filter-list__clear text-uppercase">Clear All</a>
+//	      </ul>
+// 	    </div>
 // 	</div>
 // </div>
 //
@@ -94,6 +94,10 @@
 @y-toolbar-height: 50px;
 @y-toobar-inactive-color: #909cab;
 @y-toolbar-breakpoint: @screen-md;
+
+.y-toolbar__cards{
+	margin-bottom: 15px;
+}
 
 .y-toolbar__wrapper{
 	border-top: 1px solid @default-greyblue-500;
@@ -381,7 +385,8 @@
 	}
 
 	.y-filter-list{
-		padding: 15px 10px 20px 17px;
+		padding: 9px 10px 10px 17px;
+		width: 100%;
 
 		.y-filter-list__applied{
 			.y-filter-list__type{
@@ -465,8 +470,8 @@
 		}
 
 		.y-toolbar__item.y-toolbar__item-filter{
-			webkit-box-ordinal-group: 4;
-			-moz-box-ordinal-group: 4;
+			webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
 			-ms-flex-order: 1;
 			-webkit-order: 1;
 			order: 1;
@@ -474,8 +479,8 @@
 
 		.y-toolbar__item.y-toolbar__item-sort{
 			border-right: none;
-			webkit-box-ordinal-group: 4;
-			-moz-box-ordinal-group: 4;
+			webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
 			-ms-flex-order: 2;
 			-webkit-order: 2;
 			order: 2;
@@ -500,11 +505,11 @@
 			flex-wrap: nowrap;
 			border-top: 1px solid @default-greyblue-500;
 
-			-webkit-box-ordinal-group: 4;
-			-moz-box-ordinal-group: 4;
-			-ms-flex-order: 4;
-			-webkit-order: 4;
-			order: 4;
+			-webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
+			-ms-flex-order: 5;
+			-webkit-order: 5;
+			order: 5;
 
 			.y-toolbar__item{
 				border-right: none;
@@ -531,8 +536,8 @@
 			width: 100%;
 			border-top: 1px solid @default-greyblue-500;
 
-			-webkit-box-ordinal-group: 4;
-			-moz-box-ordinal-group: 4;
+			-webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
 			-ms-flex-order: 3;
 			-webkit-order: 3;
 			order: 3;
@@ -550,9 +555,16 @@
 		}
 
 		.y-filter-list{
+			border-top: 1px solid @default-greyblue-500;
 			border-bottom: none;
+			webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
+			-ms-flex-order: 4;
+			-webkit-order: 4;
+			order: 4;
 
 			.y-filter-list__applied{
+				margin-bottom: 0;
 
 				li{
 					font-size: 12px;
