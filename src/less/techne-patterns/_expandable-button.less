@@ -1,0 +1,100 @@
+
+// Markup:
+// <div class="expandable-btn-wrapper">
+//     <button 
+//         class="y-add-btn y-add-main" 
+//         type="button" 
+//         data-toggle="collapse" 
+//         data-target="#expandableBtnOptions" 
+//         aria-expanded="false" 
+//         aria-controls="expandableBtnOptions">
+//         <span class="hyicon hyicon-add"></span>
+//         VALUE
+//     </button>
+//     <div class="collapse" id="expandableBtnOptions">
+//         <div class="dropdown">
+//             <button 
+//                 class="y-add-btn y-add-existing" 
+//                 type="button" 
+//                 id="existingOptionsList" 
+//                 data-toggle="dropdown" 
+//                 aria-haspopup="true" 
+//                 aria-expanded="true">
+//                 Existing
+//                 <span class="hyicon hyicon-arrow"></span>
+//             </button>
+//             <ul class="dropdown-menu" aria-labelledby="existingOptionsList">
+//                 <li><a href="#">Action</a></li>
+//                 <li><a href="#">Another action</a></li>
+//                 <li><a href="#">Something else here</a></li>
+//                 <li role="separator" class="divider"></li>
+//                 <li><a href="#">Separated link</a></li>
+//             </ul>
+//         </div>
+//         <button class="y-add-btn y-add-new">
+//             <span class="hyicon hyicon-add"></span>
+//             New
+//         </button>
+//     </div>
+// </div>
+//
+// Pattern 13.1
+
+.expandable-btn-wrapper{
+    .y-add-main{
+        position: relative;
+        transition: all 0.25s ease;
+        border: 1px solid @body-bg;
+
+        .hyicon:before{
+            display: inline-block;
+            transition: all 0.25s ease;
+        }
+    }
+
+    .y-add-main[aria-expanded=true]{
+        color: @dark-grey-800;
+        padding:10px; 
+        border-bottom: none;
+        
+        .hyicon{
+           color: @dark-grey-800;
+        }
+
+        .hyicon:before{
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    .dropdown-menu{
+        min-width: 100%;
+        max-height: 200px;
+        overflow-x: hidden;
+    }
+
+    .y-add-existing{
+        .hyicon{
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        } 
+    }
+
+    .y-add-existing, 
+    .y-add-new{
+        background:@white;
+        height: 64px;
+        border-top:1px solid @default-grey-300;
+
+        &:hover{
+            background: @default-blue;
+            color: @white;
+        }
+    }
+
+    *:focus {
+        outline: none;
+    }
+}
