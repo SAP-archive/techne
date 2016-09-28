@@ -1,7 +1,7 @@
 // Locals Editor
 //
-// Locals editor - example with two required tabs, one of them the active
 // Markup:
+//    <label>Headline</label>
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
@@ -10,20 +10,45 @@
 //                <li> <a href="" class="is-required">DE</a></li>
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">PL</a></li>
+//                <li> <a href="">DA</a></li>
 //            </ul>
 //        </div>
 //        <div class="form-group ">
-//            <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-//                <input name="lastName" type="text" class="form-control input-lg">
+//            <div class="property" baas-form-name ng-form="innerForm" style="width:100%">
+//                <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon"/>
 //            </div>
 //        </div>
 //    </div>
 //
+// Pattern 8.1
+
+// Locals Editor
+//
+// Markup:
+//    <label>Headline</label>
+//    <div class="form-group locals-editor">
+//        <div class="locals-header clearfix">
+//            <ul class="nav nav-tabs locals-tabs">
+//                <li> <a href="" class="is-required">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li class="active"> <a href="" class="is-required">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
+//                <li> <a href="">DA</a></li>
+//            </ul>
+//        </div>
+//        <div class="form-group ">
+//            <div class="property" baas-form-name ng-form="innerForm" style="width:100%">
+//                <input name="lastName" type="text" class="form-control input-lg" value="Männer gehen auf Mond"/>
+//            </div>
+//        </div>
+//    </div>
+//
+// Pattern 8.2
 
 
 // Locals Editor
 //
-// Locals editor - example with an error state tab and an active tab which is in error state
 // Markup:
 //    <div class="form-group locals-editor">
 //    <div class="locals-header clearfix">
@@ -33,20 +58,22 @@
 //            <li> <a class="has-error is-required" href="">DE</a></li>
 //            <li> <a href="">FR</a></li>
 //            <li> <a href="">PL</a></li>
+//            <li> <a href="">DA</a></li>
 //        </ul>
 //    </div>
 //    <div class="form-group">
 //        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-//            <input name="lastName" type="text" class="form-control input-lg">
+//            <input name="lastName" type="text" class="form-control input-lg has-error">
+//            <span class="inline-hint-text inline-hint-text__error">This field is required</span> 
 //        </div>
 //    </div>
 //</div>
 //
+// Pattern 8.3
 
 
 // Locals Editor
 //
-// Locals editor - example more menu and error state of tab from the more menu
 // Markup:
 //<div class="form-group locals-editor">
 //    <div class="locals-header clearfix">
@@ -54,16 +81,19 @@
 //            <li class="active"> <a href="">EN</a></li>
 //            <li> <a href="">BG</a></li>
 //            <li> <a class="has-error" href="">DE</a></li>
-//            <li class="dropdown locals-tabs__more-menu">
-//                <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">MORE
+//            <li> <a href="">FR</a></li>
+//            <li> <a href="">DA</a></li>
+//            <li> <a href="">NL</a></li>
+//            <li class="dropdown locals-tabs__more-menu is-required">
+//                <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false"><span class="locals-tabs__more-span">MORE</span>
 //                    <span class="caret"></span>
 //                </a>
 //                <ul class="dropdown-menu locals-tabs__more-tabs">
 //                    <li>
 //                        <a href="" class="locals-tabs__more-tab">IT</a>
 //                    </li>
-//                    <li>
-//                        <a href="" class="locals-tabs__more-tab has-error">PL</a>
+//                    <li class="">
+//                        <a href="" class="locals-tabs__more-tab has-error is-required">PL</a>
 //                    </li>
 //                </ul>
 //            </li>
@@ -71,33 +101,76 @@
 //    </div>
 //    <div class="form-group">
 //        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-//            <input name="lastName" type="text" class="form-control input-lg">
+//            <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon">
 //        </div>
 //    </div>
 //</div>
 //
+// Pattern 8.4
 
 
 // Locals Editor
 //
-// Locals editor - example more menu
+// Markup:
+//<div class="form-group locals-editor">
+//    <div class="locals-header clearfix">
+//        <ul class="nav nav-tabs locals-tabs">
+//            <li class="active"> <a href="">EN</a></li>
+//            <li> <a href="">BG</a></li>
+//            <li> <a class="has-error" href="">DE</a></li>
+//            <li> <a href="">FR</a></li>
+//            <li> <a href="">DA</a></li>
+//            <li> <a href="">NL</a></li>
+//            <li class="dropdown locals-tabs__more-menu is-required">
+//                <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false"><span class="locals-tabs__more-span">MORE</span>
+//                    <span class="caret"></span>
+//                </a>
+//                <ul class="dropdown-menu locals-tabs__more-tabs">
+//                    <li>
+//                        <a href="" class="locals-tabs__more-tab">IT</a>
+//                    </li>
+//                    <li class="">
+//                        <a href="" class="locals-tabs__more-tab has-error is-required">PL</a>
+//                    </li>
+//                    <li class="">
+//                        <a href="" class="locals-tabs__more-tab has-error is-required">PT</a>
+//                    </li>
+//                </ul>
+//            </li>
+//        </ul>
+//    </div>
+//    <div class="form-group">
+//        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
+//            <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon">
+//        </div>
+//    </div>
+//</div>
+//
+// Pattern 8.5
+
+
+// Locals Editor
+//
 // Markup:
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
-//                <li class="active"> <a href="">EN</a></li>
+//                <li> <a href="">EN</a></li>
 //                <li> <a href="">BG</a></li>
 //                <li> <a class="has-error" href="">DE</a></li>
-//                <li class="dropdown locals-tabs__more-menu">
-//                    <a class="dropdown-toggle is-required locals-tabs__more-btn" data-toggle="dropdown" aria-expanded="false">MORE
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">DA</a></li>
+//                <li> <a href="">NL</a></li>
+//                <li class="dropdown locals-tabs__more-menu active">
+//                    <a class="dropdown-toggle is-required locals-tabs__more-btn" data-toggle="dropdown" aria-expanded="false">IT
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu locals-tabs__more-tabs">
-//                        <li>
+//                        <li class="active">
 //                            <a href="" class="locals-tabs__more-tab">IT</a>
 //                        </li>
 //                        <li>
-//                            <a href="" class="locals-tabs__more-tab">PL</a>
+//                            <a href="" class="locals-tabs__more-tab has-error">PL</a>
 //                        </li>
 //                    </ul>
 //                </li>
@@ -105,26 +178,41 @@
 //        </div>
 //        <div class="form-group">
 //            <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-//                <input name="lastName" type="text" class="form-control input-lg">
+//                <input name="lastName" type="text" class="form-control input-lg" value="Gli uomini camminare sulla Luna">
 //            </div>
 //        </div>
 //    </div>
 //
+// Pattern 8.6
 
+// Core Navigation stylings
+.nav {
+	a {
+		color: @navigation-links-color;
+		&:hover {
+			color: @navbar-default-bg
+		}
+	}
+}
 
-.locals-tabs .active :not(.has-error){
+.locals-tabs .active :not(.has-error) {
     background-color: @default-blue;
     border-color: @default-blue;
+    color: @navbar-default-bg;
 }
-.locals-tabs .active .has-error{
+
+.locals-tabs .active .has-error {
     background-color: @default-red;
     border-color: @default-red;
 }
 
-.locals-editor .locals-tabs .active a,
-.locals-editor .locals-tabs .active a:hover,
-.locals-editor .locals-tabs .active a:focus{
-    color: @navbar-default-bg;
+.locals-tabs__more-tabs{
+    border-color: @default-grey-700;
+    background-color:  @navbar-default-bg;
+}
+
+.locals-tabs__more-menu{
+    cursor: pointer;
 }
 
 .locals-editor .locals-tabs a{
@@ -132,27 +220,27 @@
 }
 
 .locals-editor .locals-tabs{
-    border-bottom-color: @grayish;
+    border-bottom-color: @default-grey-700;
 }
 
-.locals-editor .locals-tabs a,
-.locals-editor .locals-tabs a:hover,
-.locals-editor .locals-tabs a:focus{
+.locals-editor .locals-tabs .active a,
+.locals-editor .locals-tabs .active a:hover,
+.locals-editor .locals-tabs .active a:focus{
     font-weight: bold;
 }
 
 .locals-editor .locals-tabs li:not(.active){
-    border-color: @grayish;
+    border-color: @default-grey-700;
 }
 
 .locals-editor .locals-tabs li:last-of-type {
-    border-right: 1px solid @grayish;
+    border-right: 1px solid @default-grey-700;
 }
 
 .locals-editor .locals-tabs > li{
-    border-top: 1px solid @grayish;
-    border-left: 1px solid @grayish;
-    border-bottom: 1px solid @grayish;
+    border-top: 1px solid @default-grey-700;
+    border-left: 1px solid @default-grey-700;
+    border-bottom: 1px solid @default-grey-700;
 }
 
 .locals-header .locals-tabs{
@@ -171,15 +259,37 @@
     content: "! ";
 }
 
-.locals-tabs :not(.locals-tabs__more-menu) .is-required:after{
+.locals-tabs :not(.locals-tabs__more-menu) .is-required:after,
+.locals-tabs__more-menu.is-required .locals-tabs__more-span:after{
     content: "*";
 }
 
-.locals-tabs__more-tabs a.locals-tabs__more-tab,
-.locals-tabs__more-tabs a.locals-tabs__more-tab:hover,
-.locals-tabs__more-tabs a.locals-tabs__more-tab:focus {
-    color: @default-blue;
-    font-weight: normal;
+.locals-header .locals-tabs > :not(.active) > a.has-error:not(:hover){
+    background-color: transparent;
+    color: @state-danger-text;
+}
+
+.locals-editor .form-group{
+    margin-top: -1px;
+}
+
+.locals-tabs .locals-tabs__more-menu.active .caret{
+    border-top-color: @navbar-default-bg;
+}
+
+.has-error{
+    border-color: @state-danger-border;
+}
+
+.locals-editor .inline-hint-text__error,
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs a.locals-tabs__more-tab.has-error{
+    color: @state-danger-text;
+}
+
+.locals-tabs .locals-tabs__more-menu .locals-tabs__more-tabs{
+    background-color: @navbar-default-bg;
+    border-color: @default-grey-700;
 }
 
 .locals-editor .locals-tabs > li.locals-tabs__more-menu{
@@ -189,22 +299,24 @@
 }
 
 .locals-editor .locals-tabs > li.locals-tabs__more-menu.open{
-    border-top-color: @grayish;
-    border-right-color: @grayish;
-    border-bottom-color: @grayish;
+    border-top-color: @default-grey-700;
+    border-right-color: @default-grey-700;
+    border-bottom-color: @default-grey-700;
 }
 
-li.locals-tabs__more-menu.open .locals-tabs__more-btn{
-    background-color: transparent;
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error):hover,
+.locals-tabs .active a.locals-tabs__more-tab.has-error:hover  {
+    background-color:  @navbar-default-bg;
+    font-weight: normal;
+} 
+
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .locals-tabs__more-tab:not(.has-error){
+    color: @grayish;
 }
 
-.locals-tabs__more-tabs a.locals-tabs__more-tab.has-error,
-.locals-tabs__more-tabs a.locals-tabs__more-tab.has-error:hover,
-.locals-tabs__more-tabs a.locals-tabs__more-tab.has-error:focus,
-.locals-header .locals-tabs :not(.active) a.has-error{
-    color: @default-red;
-}
-
-.locals-header .locals-tabs > :not(.active) > a.has-error:not(:hover){
-    background-color: transparent;
+.locals-tabs .locals-tabs__more-tabs .active .locals-tabs__more-tab:not(.has-error){
+    color: @default-blue;
 }
