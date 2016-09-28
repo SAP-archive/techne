@@ -74,7 +74,7 @@
 //    <div class="form-group">
 //        <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
 //            <input name="lastName" type="text" class="form-control input-lg has-error">
-//            <span class="inline-hint-text inline-hint-text__error">This field is required</span> 
+//            <span class="inline-hint-text inline-hint-text__error">This field is required</span>
 //        </div>
 //    </div>
 //</div>
@@ -213,6 +213,35 @@
 //
 // Pattern 8.6
 
+// LocalizationExample
+//
+// <h3>Visual Guidelines</h3>
+//
+// Markup:
+// <div class="container">
+// 	<div class="text-left thumbnails">
+// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_page-level.png" title="View Full Image" href="#viewFullscreen">
+// 			<img src="../images/thumbnails/local_thumbnail.png" alt="single" class="img-thumbnail">
+//			<p>Page leve</p>
+//    	</a>
+// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_field-level.png" title="View Full Image" href="#viewFullscreen">
+// 			<img src="../images/thumbnails/field-level_thumbnail.png" alt="multi" class="img-thumbnail">
+//			<p>Field level</p>
+//     	</a>
+// 	</div>
+// </div>
+// 	<div class="modal fade bs-example-modal-lg" id="viewFullscreen">
+//   <div class="modal-dialog modal-lg">
+//     <div class="modal-content">
+//       <div>
+//         <img src="" class="showFullscreen">
+//       </div>
+//     </div>
+//   </div>
+// 	</div>
+//
+// Pattern 8.7
+
 // Core Navigation stylings
 .nav {
 	a {
@@ -342,7 +371,7 @@
 .locals-tabs .active a.locals-tabs__more-tab.has-error:hover  {
     background-color:  @navbar-default-bg;
     font-weight: normal;
-} 
+}
 
 .locals-tabs .active .locals-tabs__more-tab:not(.has-error),
 .locals-tabs .locals-tabs__more-tab:not(.has-error){
