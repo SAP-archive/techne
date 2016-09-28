@@ -1,3 +1,11 @@
+
+// Toolbar
+//
+// <p>The Toolbar should be used at the top of different listing pages (e.g. Cards and Tables) to allow for sorting, filtering, pagination, and display view toggles. The Toolbar is likely to include other components over time. If a particular Toolbar component is not applicable to the dataset displayed it should be removed from that toolbar.</p>
+// <p>The Toolbar should display on any type of listing page once a record is added. If there is only an "Add" action and no records yet the Toolbar should not display.</p>
+// <p>The TITLE text for the sort and filter icons should never be removed as this is an accessibility consideration.</p>
+// <p>Considering localization, if the Sort value character length exceeds the visible space, on click the drop-down will show the full value and upon selection of the value it should be truncated to fit within the visible space.</p>
+//
 // Markup:
 // <div class="y-toolbar__wrapper">
 // 	<div class="y-toolbar">
@@ -83,7 +91,42 @@
 // 	</div>
 // </div>
 //
-// Pattern 8.1
+// Pattern 8.1.0
+
+
+
+// ToolbarExample
+//
+// <h3>Visual Guidelines</h3>
+//
+// Markup:
+// <div class="container">
+// 	<div class="text-left thumbnails">
+// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/filter_single_attributes.png" title="View Full Image" href="#viewFullscreen">
+// 			<img src="../images/thumbnails/thump_single.png" alt="single" class="img-thumbnail">
+//			<p>Filters - Single Attribute/Facet</p>
+//    	</a>
+// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/filter_multiple_attributes.png" title="View Full Image" href="#viewFullscreen">
+// 			<img src="../images/thumbnails/thump_multi.png" alt="multi" class="img-thumbnail">
+//			<p>Filters - Multiple Attribute/Facet</p>
+//     	</a>
+// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/sort.png" title="View Full Image" href="#viewFullscreen">
+// 			<img src="../images/thumbnails/thump_sort.png" alt="sort" class="img-thumbnail">
+//			<p>Sort</p>
+//     	</a>
+// 	</div>
+// </div>
+// 	<div class="modal fade bs-example-modal-lg" id="viewFullscreen">
+//   <div class="modal-dialog modal-lg">
+//     <div class="modal-content">
+//       <div>
+//         <img src="" class="showFullscreen">
+//       </div>
+//     </div>
+//   </div>
+// 	</div>
+//
+// Pattern 8.1.1
 
 
 
