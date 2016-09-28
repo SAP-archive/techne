@@ -1,7 +1,17 @@
-// Additional Inline Help
+// Form Validation
 //
-// Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is "The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed." <br><br><br>
+// Validation for Form elements
 //
+// Markup:
+// <div class="form-group has-error">
+//     <label for="exampleInputEmail1" class="control-label required">Email address</label>
+//     <input type="email" class="has-error form-control input-lg" id="exampleInputEmail1" placeholder="Email" required>
+//     <div class="help-block">
+//        <p ng-message="required" class="ng-binding ng-scope">Product number required.</p>
+//     </div>
+// </div>
+//
+// Component 5.1
 
 
 
@@ -13,14 +23,14 @@
 //  <div class="form-group">
 //    <label class="control-label">Label</label>
 //    <span class="help-control" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span>
-//    <input type="text" name="Project Description" class="form-control input-lg" > 
+//    <input type="text" name="Project Description" class="form-control input-lg" >
 //    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
 //
-// Component 5.3
+// Component 5.4
 //
 .help-control{
-  padding: 0 5px; 
+  padding: 0 5px;
   cursor: default;
   position: relative;
   width:25px;
@@ -47,7 +57,7 @@
 
 .help-icon-inline:before{
   margin: 5px 0 0 0;
-  font-size: 25px; 
+  font-size: 25px;
   color:@dark-grey-700;
 }
 
@@ -58,7 +68,7 @@
 // Markup:
 //  <div class="form-group">
 //    <label class="control-label">Label</label>
-//    <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" > 
+//    <input type="text" name="Project Description" builder-input="noRestriction" class="form-control input-lg" >
 //    <span class="inline-hint-text"><span class="hyicon hyicon-helpon help-icon-inline"></span> Help message will be displayed here when "All Help" is turned on</span>
 //    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
 //  </div>
@@ -100,7 +110,7 @@
 // </div>
 // <span class="page-level-help-message">Page level help message goes here </span>
 //
-// Component 5.4
+// Component 5.5
 
 .page-level-help-message{
   display: block;
