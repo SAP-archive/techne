@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="29" viewBox="0 0 33 29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #27394f;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="SORT_copy_3" data-name="SORT copy 3" class="cls-1" d="M186.123,125.5V101h-3.264v24.5h3.264Zm6.863-4.2-8.5,8.7-8.5-8.7,2.254-2.314,6.248,6.387,6.246-6.387ZM188,116.008v-3.016h9v3.016h-9Zm0-6.022V107h15v2.982H188Zm0-6V101h21v2.982H188Z" transform="translate(-176 -101)"/>
+</svg>
