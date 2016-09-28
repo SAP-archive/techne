@@ -1165,15 +1165,19 @@ header.hyHomeHeaderMinor {
 article section.Pagination h3,
 article section.Toolbar h3,
 article section.ToolbarExample h3,
+article section.LocalizationExample h3,
+article section.LocalizationExample .kss-markup,
 article section.ToolbarExample .kss-markup {
   display: none;
 }
-article section.ToolbarExample .thumbnails a {
+article section.ToolbarExample .thumbnails a,
+article section.LocalizationExample .thumbnails a {
   display: inline-block;
   color: inherit !important;
   margin-right: 20px;
 }
-article section.ToolbarExample .kss-description h3 {
+article section.ToolbarExample .kss-description h3,
+article section.LocalizationExample .kss-description h3 {
   display: block !important;
 }
 .error-message-table td:nth-child(2),
