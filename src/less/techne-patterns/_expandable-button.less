@@ -1,24 +1,24 @@
 
 // Markup:
 // <div class="expandable-btn-wrapper">
-//     <button 
-//         class="y-add-btn y-add-main" 
-//         type="button" 
-//         data-toggle="collapse" 
-//         data-target="#expandableBtnOptions" 
-//         aria-expanded="false" 
+//     <button
+//         class="y-add-btn y-add-main"
+//         type="button"
+//         data-toggle="collapse"
+//         data-target="#expandableBtnOptions"
+//         aria-expanded="false"
 //         aria-controls="expandableBtnOptions">
 //         <span class="hyicon hyicon-add"></span>
 //         VALUE
 //     </button>
 //     <div class="collapse" id="expandableBtnOptions">
 //         <div class="dropdown">
-//             <button 
-//                 class="y-add-btn y-add-existing" 
-//                 type="button" 
-//                 id="existingOptionsList" 
-//                 data-toggle="dropdown" 
-//                 aria-haspopup="true" 
+//             <button
+//                 class="y-add-btn y-add-existing"
+//                 type="button"
+//                 id="existingOptionsList"
+//                 data-toggle="dropdown"
+//                 aria-haspopup="true"
 //                 aria-expanded="true">
 //                 Existing
 //                 <span class="hyicon hyicon-arrow"></span>
@@ -38,7 +38,7 @@
 //     </div>
 // </div>
 //
-// Pattern 13.1
+// Pattern 14.1
 
 .expandable-btn-wrapper{
     .y-add-main{
@@ -54,9 +54,9 @@
 
     .y-add-main[aria-expanded=true]{
         color: @dark-grey-800;
-        padding:10px; 
+        padding:10px;
         border-bottom: none;
-        
+
         .hyicon{
            color: @dark-grey-800;
         }
@@ -79,10 +79,10 @@
             position: absolute;
             right: 20px;
             top: 15px;
-        } 
+        }
     }
 
-    .y-add-existing, 
+    .y-add-existing,
     .y-add-new{
         background:@white;
         height: 64px;

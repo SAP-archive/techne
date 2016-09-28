@@ -21,7 +21,7 @@
 //
 // .help-inline--tooltip - By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
 //
-// Component 5.5
+// Component 5.6
 //
 
 // HELP TOOLTIP
@@ -47,7 +47,7 @@
       line-height: 0;
       color: currentColor;
    }
-   
+
    .help-block-inline{
       font-size: 15px;
       vertical-align: inherit;
@@ -55,7 +55,7 @@
    }
 }
 
-// keep this prefixed with the 
+// keep this prefixed with the
 ///active modifier to avoid overwrites
 .help-inline--tooltip{
    margin: 0;
@@ -153,11 +153,41 @@
 //
 // .help-inline--tooltip - By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
 //
-// Component 5.6
+// Component 5.7
 
 .help-inline--section{
    &.help-inline--tooltip{
       float: right;
       margint-bottom: 0;
    }
+}
+
+// Section Inline Level help for read-only fields
+//
+// Markup:
+// <div class="form-group form-group__inline">
+//     <label class="control-label">Service Name</label>
+//     <div class="form-readonly-text form-readonly-text__inline">read-only content styling with inline level help </div>
+//     <span class="section-help help-inline help-inline--section help-inline--tooltip section-help--tooltip__inline">
+//         <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//         <span class="help-block-inline">I'm a additional Inline Help Text - inlined</span>
+//     </span>
+//     </div>
+// </div>
+//
+// Component 5.7
+
+.form-group__inline{
+    label{
+        display: block;
+        margin-bottom: 0;
+    }
+    .form-readonly-text__inline{
+        display: inline-block;
+    }
+    .section-help--tooltip__inline{
+        display: inline-block;
+        float: none;
+        position: relative;
+    }
 }

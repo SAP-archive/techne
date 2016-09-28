@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1474572292548">
+  <link rel="stylesheet" href="../public/kss.css?t=1475094758779">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1474572292548">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1474572292548">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1475094758779">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1475094758779">
 
 
 
@@ -182,8 +182,40 @@
 
                     </div>
                 </section>
-                <section id="section-5.1" class="Critical Error-Avoidance kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.1</span> Critical Error-Avoidance</h3>
+                <section id="section-5.1" class="Form Validation kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.1</span> Form Validation</h3>
+
+                    <div class="kss-description">
+                        <p>Validation for Form elements</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="form-group has-error">
+    <label for="exampleInputEmail1" class="control-label required">Email address</label>
+    <input type="email" class="has-error form-control input-lg" id="exampleInputEmail1" placeholder="Email" required>
+    <div class="help-block">
+       <p ng-message="required" class="ng-binding ng-scope">Product number required.</p>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">&lt;div class=&quot;form-group has-error&quot;&gt;
+    &lt;label for=&quot;exampleInputEmail1&quot; class=&quot;control-label required&quot;&gt;Email address&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;has-error form-control input-lg&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot; required&gt;
+    &lt;div class=&quot;help-block&quot;&gt;
+       &lt;p ng-message=&quot;required&quot; class=&quot;ng-binding ng-scope&quot;&gt;Product number required.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-5.2" class="Critical Error-Avoidance kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.2</span> Critical Error-Avoidance</h3>
 
                     <div class="kss-description">
                         <p>Any help that can be offered that allows a user to avoid making an error while completing a form should display directly under the field at all times.  An example of this type of help content is “Must start with a lowercase alpha character, followed by any combination of alphanumeric characters, 3-16 characters”</p>
@@ -220,12 +252,12 @@
                         </div>
                     </div>
                 </section>
-                <section id="section-5.2" class="Inline Character Counter kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.2</span> Inline Character Counter</h3>
+                <section id="section-5.3" class="Inline Character Counter kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.3</span> Inline Character Counter</h3>
 
                     <div class="kss-description">
-                        <p>Display the remaining characters for a input or textarea when the formfield 
-is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functionality is not provided by techne.<br/></br> </p>
+                        <p>Display the remaining characters for a input or textarea when the formfield
+is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functionality is not provided by techne.<br/></br></p>
 
                     </div>
                     <div class="kss-modifier-block">
@@ -284,8 +316,16 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                         </div>
                     </div>
                 </section>
-                <section id="section-5.3" class="Additional Inline Help State: On-Demand (Help Bubble) kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.3</span> Additional Inline Help State: On-Demand (Help Bubble)</h3>
+                <section id="section-5.4" class="Additional Inline Help kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.4</span> Additional Inline Help</h3>
+
+                    <div class="kss-description">
+                        <p>Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is &quot;The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed.&quot; <br><br><br></p>
+
+                    </div>
+                </section>
+                <section id="section-5.4" class="Additional Inline Help State: On-Demand (Help Bubble) kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.4</span> Additional Inline Help State: On-Demand (Help Bubble)</h3>
 
                     <div class="kss-description">
                         <p>By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.</p>
@@ -297,7 +337,7 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                                  <div class="form-group">
    <label class="control-label">Label</label>
    <span class="help-control" data-toggle="tooltip" data-placement="top" title="Help message goes here"><span class="hyicon hyicon-help-icon"></span></span>
-   <input type="text" name="Project Description" class="form-control input-lg" > 
+   <input type="text" name="Project Description" class="form-control input-lg" >
    <span class="inline-hint-text">Start with a letter, use only lowercase alphanumeric characters, 3-16 characters</span>
  </div>
                             </div>
@@ -307,15 +347,15 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                                 <pre class="code-snippet"><code data-language="html" class="html"> &lt;div class=&quot;form-group&quot;&gt;
    &lt;label class=&quot;control-label&quot;&gt;Label&lt;/label&gt;
    &lt;span class=&quot;help-control&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Help message goes here&quot;&gt;&lt;span class=&quot;hyicon hyicon-help-icon&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-   &lt;input type=&quot;text&quot; name=&quot;Project Description&quot; class=&quot;form-control input-lg&quot; &gt; 
+   &lt;input type=&quot;text&quot; name=&quot;Project Description&quot; class=&quot;form-control input-lg&quot; &gt;
    &lt;span class=&quot;inline-hint-text&quot;&gt;Start with a letter, use only lowercase alphanumeric characters, 3-16 characters&lt;/span&gt;
  &lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="section-5.4" class="Page Level Help kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.4</span> Page Level Help</h3>
+                <section id="section-5.5" class="Page Level Help kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.5</span> Page Level Help</h3>
 
                     <div class="kss-description">
                         <p>Page-level help will always display IF it exists, but it isn’t required. Whether or not page-level help is included is at the discretion of each team. Use this pattern only on complex pages with unfamiliar concepts and provide a source for detailed information. <br><br>
@@ -390,16 +430,8 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                         </div>
                     </div>
                 </section>
-                <section id="section-5.4" class="Additional Inline Help kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.4</span> Additional Inline Help</h3>
-
-                    <div class="kss-description">
-                        <p>Any additional help that can be offered allowing a user to get more information about the field or the task they are being asked to complete should display either on click/hover of the adjacent ? icon, or above the error-avoidance inline help, if help mode is toggled to “On”. An example of this type of help content is &quot;The service identifier must be unique within your organization. It will appear as part of the Proxy URL where the {name[identifier]} placeholder is currently displayed.&quot; <br><br><br></p>
-
-                    </div>
-                </section>
-                <section id="section-5.5" class="Additional Inline Help kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.5</span> Additional Inline Help</h3>
+                <section id="section-5.6" class="Additional Inline Help kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.6</span> Additional Inline Help</h3>
 
                     <div class="kss-description">
                         <p>Users can choose to enable “Help Mode” using a toggle in the footer of the left navigation panel or from the “My Profile” section. This will display all Additional Inline help on the page. Use ‘inline help’ when ‘all help on’ is set to true. Inline Help is displayed below a form field.</p>
@@ -452,8 +484,8 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                         </div>
                     </div>
                 </section>
-                <section id="section-5.6" class="Section Level Help kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">5.6</span> Section Level Help</h3>
+                <section id="section-5.7" class="Section Level Help kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.7</span> Section Level Help</h3>
 
                     <div class="kss-description">
                         <p>Section-level help will always display IF it exists, but it isn’t required. Section-level help is displayed below the section title. Whether or not section-level help is included is at the discretion of each team.</p>
@@ -509,6 +541,38 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
                         </div>
                     </div>
                 </section>
+                <section id="section-5.7" class="Section Inline Level help for read-only fields kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">5.7</span> Section Inline Level help for read-only fields</h3>
+
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <div class="form-group form-group__inline">
+    <label class="control-label">Service Name</label>
+    <div class="form-readonly-text form-readonly-text__inline">read-only content styling with inline level help </div>
+    <span class="section-help help-inline help-inline--section help-inline--tooltip section-help--tooltip__inline">
+        <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+        <span class="help-block-inline">I'm a additional Inline Help Text - inlined</span>
+    </span>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">&lt;div class=&quot;form-group form-group__inline&quot;&gt;
+    &lt;label class=&quot;control-label&quot;&gt;Service Name&lt;/label&gt;
+    &lt;div class=&quot;form-readonly-text form-readonly-text__inline&quot;&gt;read-only content styling with inline level help &lt;/div&gt;
+    &lt;span class=&quot;section-help help-inline help-inline--section help-inline--tooltip section-help--tooltip__inline&quot;&gt;
+        &lt;span class=&quot;hyicon hyicon-helpoff help-icon-inline&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;help-block-inline&quot;&gt;I&#x27;m a additional Inline Help Text - inlined&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </article>
         </div>
     </section>
@@ -532,20 +596,20 @@ is in focus. <br/><br/><b>NOTE:</b> This is a static example. Javascript functio
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1474572292548"></script>
+<script src="../public/kss.js?t=1475094758779"></script>
 
-<script src="../public/prettify.js?t=1474572292548"></script>
-<script src="../public/js/jquery.min.js?t=1474572292548"></script>
-<script src="../public/main.js?t=1474572292548"></script>
-<script src="../public/js/bootstrap.min.js?t=1474572292548"></script>
-<script src="../public/js/select2.js?t=1474572292548"></script>
+<script src="../public/prettify.js?t=1475094758779"></script>
+<script src="../public/js/jquery.min.js?t=1475094758779"></script>
+<script src="../public/main.js?t=1475094758779"></script>
+<script src="../public/js/bootstrap.min.js?t=1475094758779"></script>
+<script src="../public/js/select2.js?t=1475094758779"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1474572292548"></script>
-<script src="../public/jquery.cookiebar.js?t=1474572292548"></script>
-<script src="../public/js/highlight.pack.min.js?t=1474572292548"></script>
+<script src="../public/js/yaas.sso.js?t=1475094758779"></script>
+<script src="../public/jquery.cookiebar.js?t=1475094758779"></script>
+<script src="../public/js/highlight.pack.min.js?t=1475094758779"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1474572292548"></script>
+<script src="../public/script.js?t=1475094758779"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 

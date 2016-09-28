@@ -7,7 +7,12 @@
 //      <dd>Use to let people know about some information or action that happened, but no action is needed on their part, e.g. the service will be deprecated at a future date. It’s recommended to use the dark blue treatment for Notifications. Notifications should display for 3 seconds, and disappear on their own.</dd>
 //      <dt>Error</dt>
 //      <dd>Use to let people know there is an issue that needs attention immediately, e.g. an authorization is expired and no work can proceed until it’s resolved. It’s recommended to use the red treatment for Errors. Errors should display until they are dismissed by clicking or tapping X. </dd>
-//  </ul>
+//  </dl>
+//  <p>
+//     <strong>Alert: </strong> Blue - confirmation/notification (disappears on it's down) <br/>
+//     <strong>Notification: </strong> Orange - warning but can be dismissed without taking action (user closes) <br/>
+//     <strong>Error: </strong> Red - action can't be taken (user closes)
+//  </p>
 //
 // Markup:
 //  <div class="alert alert-success alert-dismissible" role="alert">
@@ -15,6 +20,12 @@
 //          <span aria-hidden="true">&times;</span>
 //      </button>
 //      Well done! You successfully read this important alert message. <a href="#">Link</a>
+//  </div>
+//  <div class="alert alert-warning alert-dismissible" role="alert">
+//      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//          <span aria-hidden="true">&times;</span>
+//      </button>
+//      Warning! There is something going on. <a href="#">Link</a> 
 //  </div>
 //  <div class="alert alert-danger alert-dismissible" role="alert">
 //      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -27,7 +38,7 @@
 
 
 .alert {
-  box-shadow: 0 0 3px #000;
+  box-shadow: 0 0 3px @black;
   border-radius: 0;
   opacity: 0.8;
 
@@ -37,10 +48,21 @@
   }
 }
 
-.alert-primary{
+.alert-warning {
+	box-shadow: 0 0 3px @alert-warning-box-shadow-color;
+	a {
+		color: @black;
+	}
+}
+
+.alert-danger {
+	box-shadow: 0 0 3px @alert-danger-box-shadow-color;
+}
+
+.alert-primary {
    .alert-variant(@brand-primary; @brand-primary; @alert-success-text);
 }
 
-.alert-processing{
+.alert-processing {
    .alert-variant(@dark-blue; @dark-blue; @alert-success-text);
 }
