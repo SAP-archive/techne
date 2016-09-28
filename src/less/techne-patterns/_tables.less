@@ -160,7 +160,12 @@
 
 
 table.techne-table {
+    background-color: transparent;
     border: 1px solid @body-bg;
+
+    tbody{
+        background-color: #eef3f7;
+    }
     td {
         cursor: pointer;
         color: @techne-typo-default;
@@ -292,9 +297,14 @@ table.techne-table {
         // Thanks Bootstrap! That's called too specific selectors...
          > tbody > tr {
 
+
             // table-stripe overwrite
             &:nth-child(1n){
                 background: #fff;
+            }
+
+            &:nth-child(2n){
+                background: @table-cell-select-color-default;
             }
 
             > td {
