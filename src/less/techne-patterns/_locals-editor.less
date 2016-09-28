@@ -1,4 +1,9 @@
-// Locals Editor
+// Localization Editor
+//
+// <dl>
+// <dt>Case description:</dt>
+// <dd>The localization tooling will present tabs for each localization language supported. The first and fall back language will be the first tab and will auto-selected. The selected tab is presented with a blue background. The non-selected tabs are presented with white background. The start informs if language is mandatory.</dd>
+// </dl>
 //
 // Markup:
 //    <label>Headline</label>
@@ -22,7 +27,7 @@
 //
 // Pattern 8.1
 
-// Locals Editor
+// Localization Editor
 //
 // Markup:
 //    <label>Headline</label>
@@ -47,7 +52,12 @@
 // Pattern 8.2
 
 
-// Locals Editor
+// Localization Editor
+//
+// <dl>
+// <dt>Error handling Scenario:</dt>
+// <dd>The outcome of a validation error for the last selected tab is to display the selected tab in red background. The outcome of a validation error for a non-selected tab is to present the content in red. The content on the tab will append an exclamation mark (!).</dd>
+// </dl>
 //
 // Markup:
 //    <div class="form-group locals-editor">
@@ -72,7 +82,14 @@
 // Pattern 8.3
 
 
-// Locals Editor
+// Localization Editor
+//
+// <dl>
+// <dt>More menu: </dt>
+// <dd>The number of recommended is 5. If more tabs are required, displayed a more menu replacing the 5th item. The more Menu dropdown lists more available localization languages. The label "More" reflects mandatory fields from the list. In this case there are hidden tabs with mandatory fields, so the "More" label is followed by a start.</dd>
+// <dt>Error handling Scenario:</dt>
+// <dd>The outcome of a validation error for a language hidden on the More menu is present “More” content in red and append the exclamation mark. </dd>
+// </dl>
 //
 // Markup:
 //<div class="form-group locals-editor">
@@ -109,7 +126,7 @@
 // Pattern 8.4
 
 
-// Locals Editor
+// Localization Editor
 //
 // Markup:
 //<div class="form-group locals-editor">
@@ -149,7 +166,18 @@
 // Pattern 8.5
 
 
-// Locals Editor
+// Localization Editor
+//
+// <dl>
+// <dt>More menu:</dt>
+// <dd>When user selects an item from the More Menu the hidden tab gets highlighted in blue and replaces the MORE label. The arrow is kept next to it to remind user that the selected options is part of the More menu.</dd>
+// <dt>Error handling Scenario 1:</dt>
+// <dd>If error happens to the last selected tab from more menu, that tab remains open and its background turns to red. If user opens dropdown he will see that one option on the menu presented on red.</dd>
+// <dt>Error handling Scenario 2: (Recommendation)</dt>
+// <dd>If an error happens to a hidden tab on more menu, but the last selected tab was also an option of the more menu, the system resets the selected tab and switch to the one that contains the error.</dd>
+// <dt>Error handling Scenario 3: (Recommendation)</dt>
+// <dd>If errors happen to more than one hidden tab under the more menu, but the last selected tab was also an option of the more menu, the system resets the selected tab to the default tab (EN in this case) and shows the More menu in red appended by an exclamation mark.</dd>
+// </dl>
 //
 // Markup:
 //    <div class="form-group locals-editor">
