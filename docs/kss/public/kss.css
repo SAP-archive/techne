@@ -1162,8 +1162,19 @@ header.hyHomeHeaderMinor {
   box-shadow: none;
   background-color: transparent;
 }
-article section.Pagination h3 {
+article section.Pagination h3,
+article section.Toolbar h3,
+article section.ToolbarExample h3,
+article section.ToolbarExample .kss-markup {
   display: none;
+}
+article section.ToolbarExample .thumbnails a {
+  display: inline-block;
+  color: inherit !important;
+  margin-right: 20px;
+}
+article section.ToolbarExample .kss-description h3 {
+  display: block !important;
 }
 .error-message-table td:nth-child(2),
 .error-message-table td:nth-child(3) {
