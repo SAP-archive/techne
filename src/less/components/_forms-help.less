@@ -161,3 +161,33 @@
       margint-bottom: 0;
    }
 }
+
+// Section Inline Level help for read-only fields
+//
+// Markup:
+// <div class="form-group form-group__inline">
+//     <label class="control-label">Service Name</label>
+//     <div class="form-readonly-text form-readonly-text__inline">read-only content styling with inline level help </div>
+//     <span class="section-help help-inline help-inline--section help-inline--tooltip section-help--tooltip__inline">
+//         <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//         <span class="help-block-inline">I'm a additional Inline Help Text - inlined</span>
+//     </span>
+//     </div>
+// </div>
+//
+// Component 5.7
+
+.form-group__inline{
+    label{
+        display: block;
+        margin-bottom: 0;
+    }
+    .form-readonly-text__inline{
+        display: inline-block;
+    }
+    .section-help--tooltip__inline{
+        display: inline-block;
+        float: none;
+        position: relative;
+    }
+}
