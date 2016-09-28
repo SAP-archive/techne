@@ -28,7 +28,11 @@
  * <p>
  * Usage: <ol>
  * <li> include this source file in an html page via
+<<<<<<< HEAD
  *   {@code <script type="text/javascript" src="/path/to/prettify.js?t=1475094988221"></script>}
+=======
+ *   {@code <script type="text/javascript" src="/path/to/prettify.js?t=1475094758938"></script>}
+>>>>>>> 1808451b53884626076cab14765b80739b5c6579
  * <li> define style rules.  See the example page for examples.
  * <li> mark the {@code <pre>} and {@code <code>} tags in your source with
  *    {@code class=prettyprint.}
@@ -90,7 +94,11 @@ window['PR_SHOULD_USE_CONTINUATION'] = true;
       "for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then," +
       "true,try,unless,until,when,while,yes";
   var JSCRIPT_KEYWORDS = [COMMON_KEYWORDS,
+<<<<<<< HEAD
       "debugger,eval,export,function,get,null,set,undefined?t=1475094988221,var,with," +
+=======
+      "debugger,eval,export,function,get,null,set,undefined?t=1475094758938,var,with," +
+>>>>>>> 1808451b53884626076cab14765b80739b5c6579
       "Infinity,NaN"];
   var PERL_KEYWORDS = "caller,delete,die,do,dump,elsif,eval,exit,foreach,for," +
       "goto,if,import,last,local,my,next,no,our,print,package,redo,require," +
