@@ -187,20 +187,26 @@
 // <h3>Visual Guidelines</h3>
 //
 // Markup:
-// <div class="container">
 // 	<div class="text-left thumbnails">
+//  <div class="row">
+//   <div class="col-md-4">
 // 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/filter_single_attributes.png" title="View Full Image" href="#viewFullscreen">
 // 			<img src="../images/thumbnails/thump_single.png" alt="single" class="img-thumbnail">
 //			<p>Filters - Single Attribute/Facet</p>
 //    	</a>
+//   </div>
+//   <div class="col-md-4">
 // 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/filter_multiple_attributes.png" title="View Full Image" href="#viewFullscreen">
 // 			<img src="../images/thumbnails/thump_multi.png" alt="multi" class="img-thumbnail">
 //			<p>Filters - Multiple Attribute/Facet</p>
 //     	</a>
+//   </div>
+//   <div class="col-md-4">
 // 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/sort.png" title="View Full Image" href="#viewFullscreen">
 // 			<img src="../images/thumbnails/thump_sort.png" alt="sort" class="img-thumbnail">
 //			<p>Sort</p>
 //     	</a>
+//   </div>
 // 	</div>
 // </div>
 // 	<div class="modal fade bs-example-modal-lg" id="viewFullscreen">
@@ -211,7 +217,6 @@
 //       </div>
 //     </div>
 //   </div>
-// 	</div>
 //
 // Pattern 13.1.2
 
@@ -234,7 +239,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-		max-width: @container-large-desktop;
 		margin: 0 auto;
 		font-size: 15px;
 		// Multiline border
@@ -515,6 +519,8 @@
 		width: 100%;
 
 		.y-filter-list__applied{
+			margin-top: 4px;
+
 			.y-filter-list__type{
 				color: @text-color;
 			}

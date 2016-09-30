@@ -1,12 +1,9 @@
-// Localization Editor
+// Usage Guidelines
 //
-// <dl>
-// <dt>Case description:</dt>
-// <dd>The localization tooling will present tabs for each localization language supported. The first and fall back language will be the first tab and will auto-selected. The selected tab is presented with a blue background. The non-selected tabs are presented with white background. The start informs if language is mandatory.</dd>
-// </dl>
+// The localization editor presents a tab for each locale. The default locale will always be in the first position and selected. The selected tab is presented with a blue background. All other tabs are presented with a white background. The asterisk (*) indicates the locale is required.
 //
 // Markup:
-//    <label>Headline</label>
+//    <label>Field Label</label>
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
@@ -17,7 +14,8 @@
 //                <li> <a href="">PL</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li class="dropdown locals-tabs__more-menu">
-//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false"><span class="locals-tabs__more-span">MORE</span>
+//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+//                    <span class="locals-tabs__more-span">MORE</span>
 //                    <span class="caret"></span>
 //                  </a>
 //                  <ul class="dropdown-menu locals-tabs__more-tabs">
@@ -38,25 +36,25 @@
 // Pattern 8.1
 
 
-// Localization editor when selecting item from More menu
+// Localization Editor - MORE menu
 //
-// <dl>
-// <dt>More menu:</dt>
-// <dd>The more Menu dropdown lists more available localization languages. When user selects an item from the More Menu the hidden tab gets highlighted in blue and replaces the MORE label. The arrow is kept next to it to remind user that the selected options is part of the More menu. If there are mandatory fields inside the "More" menu, the label “More” is followed by a star.</dd>
-// </dl>
+// The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  unctions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.
 //
 // Markup:
+//    <label>Field Label</label>
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
 //                <li> <a href="">EN</a></li>
 //                <li> <a href="">BG</a></li>
-//                <li> <a class="has-error" href="">DE</a></li>
+//                <li> <a href="">DE</a></li>
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li> <a href="">NL</a></li>
 //                <li class="dropdown locals-tabs__more-menu active">
-//                    <a class="dropdown-toggle is-required locals-tabs__more-btn" data-toggle="dropdown" aria-expanded="false">IT
+//                    <a class="dropdown-toggle is-required locals-tabs__more-btn" 
+//                       data-toggle="dropdown" aria-expanded="false">
+//                        IT
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu locals-tabs__more-tabs">
@@ -79,27 +77,63 @@
 //
 // Pattern 8.2
 
-// Localization editor tabs with error
+// Displaying Localization Editor Errors
 //
-// <dl>
-// <dt>Error handling Scenario (1): </dt>
-// <dd>When validation errors happen the content of the tab will show an exclamation mark (!). The outcome of a validation error on the tabs considers:</dd>
-// <dd>Last selected tab contains error >> display the selected tab in red background and add the exclamation mark.</dd>
-// <dd>Non-selected tabs contains error >> present the word on the tab in red and add the exclamation mark (this is also valid for the MORE menu).</dd>
-// </dl>
+// <p>On validation, if one or more locales has an error, display "One or more locales required” in red text below the field.</p>
+// <p>For unselected tabs with errors, display the tab background as white, the locale name in red text, and a red exclamation mark (!) next to locale name.</p>
 //
 // Markup:
+//    <label>Field Label</label>
 //    <div class="form-group locals-editor">
 //    <div class="locals-header clearfix">
 //        <ul class="nav nav-tabs locals-tabs">
-//            <li class="active"> <a class="has-error" href="">EN</a></li>
+//            <li class="active"> <a href="">EN</a></li>
 //            <li> <a href="">BG</a></li>
 //            <li> <a class="has-error is-required" href="">DE</a></li>
 //            <li> <a href="">FR</a></li>
 //            <li> <a href="">PL</a></li>
 //            <li> <a href="">DA</a></li>
 //                <li class="dropdown locals-tabs__more-menu">
-//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false"><span class="locals-tabs__more-span">MORE</span>
+//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+//                    <span class="locals-tabs__more-span">MORE</span>
+//                    <span class="caret"></span>
+//                  </a>
+//                  <ul class="dropdown-menu locals-tabs__more-tabs">
+//                    <li>
+//                        <a href="" class="locals-tabs__more-tab">IT</a>
+//                    </li>
+//                  </ul>
+//                </li>
+//        </ul>
+//    </div>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm" >
+//            <input name="lastName" type="text" class="form-control input-lg">
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//        </div>
+//    </div>
+//</div>
+//
+// Pattern 8.3
+
+// Displaying Localization Editor Errors for Active Tab
+//
+// <p>For a selected tab with an error, display the tab background as red and a red exclamation mark (!) next to the locale name. </p>
+//
+// Markup:
+//    <label>Field Label</label>
+//    <div class="form-group locals-editor">
+//    <div class="locals-header clearfix">
+//        <ul class="nav nav-tabs locals-tabs">
+//            <li> <a href="">EN</a></li>
+//            <li> <a href="">BG</a></li>
+//            <li class="active"> <a class="has-error is-required" href="">DE</a></li>
+//            <li> <a href="">FR</a></li>
+//            <li> <a href="">PL</a></li>
+//            <li> <a href="">DA</a></li>
+//                <li class="dropdown locals-tabs__more-menu">
+//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+//                    <span class="locals-tabs__more-span">MORE</span>
 //                    <span class="caret"></span>
 //                  </a>
 //                  <ul class="dropdown-menu locals-tabs__more-tabs">
@@ -113,34 +147,33 @@
 //    <div class="form-group">
 //        <div class="property" baas-form-name ng-form="innerForm" >
 //            <input name="lastName" type="text" class="form-control input-lg has-error">
-//            <span class="inline-hint-text inline-hint-text__error">This field is required</span>
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
 //        </div>
 //    </div>
 //</div>
 //
-// Pattern 8.3
+// Pattern 8.4
 
-// Localization editor tabs with error on a selected item from More menu
+// Errors within the MORE MENU
 //
-// <dl>
-// <dt>Error handling Scenario (2):</dt>
-// <dd>Suppose the last selected tab was an option from the more menu. The recommendation is:</dd>
-// <dd>If only the selected tab contains error >> display the selected tab in red background</dd>
-// <dd>If more than one tab from More menu contains error >> reset tab selection and make the primary (first) tab selected. The More menu appears in red to show that there are 2 or more tabs with errors under it.</dd>
-// </dl>
+// <p>If the selected locale in the MORE menu position has an error, display the tab with a red background and a red exclamation mark (!) next to the locale name.</p>
+// <p>If additional locales under the more menu have errors, display the locale name in red text with an exclamation next it.</p>
 //
 // Markup:
+//    <label>Field Label</label>
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
-//                <li> <a href="">EN</a></li>
+//                <li class="active"> <a href="">EN</a></li>
 //                <li> <a href="">BG</a></li>
-//                <li class="active"> <a class="has-error" href="">DE</a></li>
+//                <li> <a href="">DE</a></li>
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li> <a href="">NL</a></li>
 //                <li class="dropdown locals-tabs__more-menu ">
-//                    <a class="dropdown-toggle has-error locals-tabs__more-btn" data-toggle="dropdown" aria-expanded="false">MORE
+//                    <a class="dropdown-toggle has-error locals-tabs__more-btn" 
+//                       data-toggle="dropdown" aria-expanded="false">
+//                        MORE
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu locals-tabs__more-tabs">
@@ -153,13 +186,52 @@
 //        </div>
 //        <div class="form-group">
 //            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg has-error" value="">
-//                  <span class="inline-hint-text inline-hint-text__error">This field is required</span>
+//                <input name="lastName" type="text" class="form-control input-lg" value="">
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
 //            </div>
 //        </div>
 //    </div>
 //
-// Pattern 8.4
+// Pattern 8.5
+
+// Errors within the MORE MENU for Selected Tab
+//
+// <p>If another tab is selected and the More menu has one or more locales with errors, display the More text in red on a white background with a red exclamation(!) mark next to it.</p>
+//
+// Markup:
+//    <label>Field Label</label>
+//    <div class="form-group locals-editor">
+//        <div class="locals-header clearfix">
+//            <ul class="nav nav-tabs locals-tabs">
+//                <li> <a href="">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li> <a href="">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">DA</a></li>
+//                <li> <a href="">NL</a></li>
+//                <li class="dropdown locals-tabs__more-menu active">
+//                    <a class="dropdown-toggle has-error locals-tabs__more-btn" 
+//                       data-toggle="dropdown" aria-expanded="false">
+//                      IT
+//                      <span class="caret"></span>
+//                    </a>
+//                    <ul class="dropdown-menu locals-tabs__more-tabs">
+//                        <li class="">
+//                            <a href="" class="locals-tabs__more-tab has-error">IT</a>
+//                        </li>
+//                    </ul>
+//                </li>
+//            </ul>
+//        </div>
+//        <div class="form-group">
+//            <div class="property" baas-form-name ng-form="innerForm">
+//                <input name="lastName" type="text" class="form-control input-lg has-error" value="">
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//            </div>
+//        </div>
+//    </div>
+//
+// Pattern 8.6
 
 // LocalizationExample
 //
@@ -186,7 +258,7 @@
 //     </div>
 //   </div>
 //
-// Pattern 8.5
+// Pattern 8.7
 
 // Core Navigation stylings
 .nav {
