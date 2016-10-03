@@ -1174,7 +1174,7 @@ article section.ToolbarExample .thumbnails a,
 article section.LocalizationExample .thumbnails a {
   display: inline-block;
   color: inherit !important;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
 }
 article section.ToolbarExample .kss-description h3,
 article section.LocalizationExample .kss-description h3 {
