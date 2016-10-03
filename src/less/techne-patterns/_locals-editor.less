@@ -38,7 +38,7 @@
 
 // Localization Editor - MORE menu
 //
-// The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  unctions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.
+// The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  functions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.
 //
 // Markup:
 //    <label>Field Label</label>
@@ -164,16 +164,16 @@
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
-//                <li class="active"> <a href="">EN</a></li>
+//                <li> <a href="">EN</a></li>
 //                <li> <a href="">BG</a></li>
 //                <li> <a href="">DE</a></li>
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li> <a href="">NL</a></li>
-//                <li class="dropdown locals-tabs__more-menu ">
+//                <li class="dropdown locals-tabs__more-menu active">
 //                    <a class="dropdown-toggle has-error locals-tabs__more-btn" 
 //                       data-toggle="dropdown" aria-expanded="false">
-//                        MORE
+//                        IT
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu locals-tabs__more-tabs">
@@ -186,7 +186,7 @@
 //        </div>
 //        <div class="form-group">
 //            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg" value="">
+//                <input name="lastName" type="text" class="form-control input-lg has-error" value="">
 //            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
 //            </div>
 //        </div>
@@ -203,21 +203,21 @@
 //    <div class="form-group locals-editor">
 //        <div class="locals-header clearfix">
 //            <ul class="nav nav-tabs locals-tabs">
-//                <li> <a href="">EN</a></li>
+//                <li class="active"> <a href="">EN</a></li>
 //                <li> <a href="">BG</a></li>
 //                <li> <a href="">DE</a></li>
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li> <a href="">NL</a></li>
-//                <li class="dropdown locals-tabs__more-menu active">
+//                <li class="dropdown locals-tabs__more-menu">
 //                    <a class="dropdown-toggle has-error locals-tabs__more-btn" 
 //                       data-toggle="dropdown" aria-expanded="false">
-//                      IT
+//                      More
 //                      <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu locals-tabs__more-tabs">
 //                        <li class="">
-//                            <a href="" class="locals-tabs__more-tab has-error">IT</a>
+//                            <a href="" class="locals-tabs__more-tab has-error">more</a>
 //                        </li>
 //                    </ul>
 //                </li>
@@ -225,7 +225,7 @@
 //        </div>
 //        <div class="form-group">
 //            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg has-error" value="">
+//                <input name="lastName" type="text" class="form-control input-lg" value="">
 //            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
 //            </div>
 //        </div>
@@ -357,6 +357,7 @@
 
 .locals-tabs .locals-tabs__more-menu.active .caret,
 .locals-tabs .locals-tabs__more-menu.active .has-error .caret{
+    border-color:transparent;
     border-top-color: @navbar-default-bg;
 }
 
