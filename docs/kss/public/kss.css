@@ -1782,6 +1782,7 @@ article section.LocalizationExample .kss-description h3 {
   left: 250px;
   top: 100px;
   background-color: #e0e9f0;
+  margin-bottom: 40px;
 }
 @media (max-width: 768px) {
   #content.starterpages {
