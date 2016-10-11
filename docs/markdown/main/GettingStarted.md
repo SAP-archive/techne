@@ -75,7 +75,7 @@
             <div class="col-xs-12 col-md-9">
                 <h2>Starter Pages</h2>
                 <p>
-                    In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. <a href="/starterpages/index.html">Preview examples of the Starter Pages.</a>
+                    In order to make your UI design and development work even faster and have better consistency across Builder UI Modules we’ve introduced some generic page layout starters you can use and customize as needed. <a href="/starterpages/start.html">Preview examples of the Starter Pages.</a>
                 </p>
                 <p>
                     <strong>
