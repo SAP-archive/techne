@@ -185,7 +185,8 @@ gulp.task('connect',
             port: 8080,
             livereload: true,
             open: {
-                browser: 'none' // if not working OS X browser: 'Google Chrome'
+                // Opens the default browser, to change it use
+                // browser: 'Browser name' 
             }
         }
     )
