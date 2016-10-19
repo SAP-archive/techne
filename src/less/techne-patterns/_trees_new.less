@@ -1,5 +1,5 @@
 // Markup:
-// <div class="techne-tree">
+// <div class="y-tree">
 //     <!-- headers -->
 //     <div class="row tablehead hidden-sm hidden-xs">
 //         <div class="col-sm-4">
@@ -30,14 +30,20 @@
 //             </a>
 //         </div>
 //         <div class="col-xs-8">
-//             <p class="tablehead">Data Header</p>
-//             <p class="primaryData" >&ltPrimary Value&gt</p>
-//             <p class="tablehead">Data Header</p> 
-//             <p class="secondaryData " >Secondary Value</p>
-//             <p class="tablehead">Data Header</p> 
-//             <p class="secondaryData " >Secondary Value</p>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span>
+//                 <p class="primaryData">&ltPrimary Value&gt</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
 //             <p class="statusDataValue">
-//                 <span  class="ng-binding ">Inactive</span>
+//                 <span class="ng-binding">Inactive</span>
 //             </p>
 //         </div>
 //         <div class="col-xs-3">
@@ -85,7 +91,7 @@
 //         </div>
 //     </div>
 //     <!-- node 1 expanded - child 1-->
-//     <div class="categoryRow onFocusRow" >
+//     <div class="onFocusRow" >
 //         <div class="row mobileLayout visible-xs visible-sm ">
 //             <div class="col-xs-1 col-xs-offset-1">
 //                 <a class="btn btn-link category-toggle ">
@@ -93,9 +99,18 @@
 //                 </a>
 //             </div>
 //             <div class="col-xs-7">
-//                 <p class="primaryData" >&ltPrimary Value&gt</p>
-//                 <p class="secondaryData " >Secondary Value</p>
-//                 <p class="secondaryData " >Secondary Value</p>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span>
+//                     <p class="primaryData">&ltPrimary Value&gt</p>
+//                 </div>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
 //                 <p class="statusDataValue">
 //                     <span>Default</span>
 //                 </p>
@@ -146,7 +161,7 @@
 //         </div>
 //     </div>
 //     <!-- node 1 expanded - child 2-->
-//     <div class="categoryRow onFocusRow lastOnFocusRow" >
+//     <div class="onFocusRow lastOnFocusRow" >
 //         <div class="row mobileLayout visible-xs visible-sm ">
 //             <div class="col-xs-1 col-xs-offset-1">
 //                 <a class="btn btn-link category-toggle ">
@@ -154,9 +169,18 @@
 //                 </a>
 //             </div>
 //             <div class="col-xs-7">
-//                 <p class="primaryData" >&ltPrimary Value&gt</p>
-//                 <p class="secondaryData " >Secondary Value</p>
-//                 <p class="secondaryData " >Secondary Value</p>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span>
+//                     <p class="primaryData">&ltPrimary Value&gt</p>
+//                 </div>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobileData">
+//                     <span class="tablehead">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
 //                 <p class="statusDataValue">
 //                     <span>Default</span>
 //                 </p>
@@ -214,9 +238,18 @@
 //             </a>
 //         </div>
 //         <div class="col-xs-8">
-//             <p class="primaryData" >&ltPrimary Value&gt</p>
-//             <p class="secondaryData " >Secondary Value</p>
-//             <p class="secondaryData " >Secondary Value</p>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span>
+//                 <p class="primaryData">&ltPrimary Value&gt</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
 //             <p class="statusDataValue">
 //                 <span class="ng-binding">Inactive</span>
 //             </p>
@@ -273,11 +306,20 @@
 //             </a>
 //         </div>
 //         <div class="col-xs-8">
-//             <p class="primaryData" >&ltPrimary Value&gt</p>
-//             <p class="secondaryData " >Secondary Value</p>
-//             <p class="secondaryData " >Secondary Value</p>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span>
+//                 <p class="primaryData">&ltPrimary Value&gt</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
+//             <div class="mobileData">
+//                 <span class="tablehead">Data Header</span> 
+//                 <p>Secondary Value</p>
+//             </div>
 //             <p class="statusDataValue">
-//                 <span class="active ">Active</span>
+//                 <span class="active">Active</span>
 //             </p>
 //         </div>
 //         <div class="col-xs-3">
@@ -328,21 +370,19 @@
 //
 // Pattern 15.1
 
-.techne-tree {
-     //border: 1px solid @body-bg;
+.y-tree {
      background-color: @body-bg;
      color: @tablerow-text-color;
-     padding: 50px;     //TODO: might need to remove
-     padding-top: 0;    //TODO: might need to remove
+     padding: 0 50px 50px;     //to make the difference between the background color and the rest of the colors
     
     .desktopLayout {
-        background-color: #f0f4f8;  //TODO: take it from the variables
+        background-color: #f3f6f9;  //same as the y-add-btn
         border-bottom: 1px solid @body-bg;
         padding: 20px 15px 10px 15px;
     }
 
     .mobileLayout {
-        background-color: #f0f4f8;  //TODO: take it from the variables
+        background-color: #f3f6f9;  //same as the y-add-btn
         border-bottom: 1px solid @body-bg;
         padding: 15px;
         .tablehead {
@@ -358,26 +398,16 @@
     .tablehead {
         font-size: 13px;
         text-transform: uppercase;
-        color: #7f90a4;
+        color: @tablehead-text-color;
         background: 0 0;
-        padding-top: 50px;
         background-color: transparent;
         border-bottom: 1px solid @body-bg;
-        // font-size: 14px;
-        // color: @tablehead-text-color;
-        // font-weight: 500;
         padding: 50px 15px 25px 15px;
-        // text-transform: uppercase;
-        // border-bottom: 1px solid #dce1e8;
     }
 
     .primaryData {
-        font-weight: 500;
+        font-weight: 600;
         color: @tablerow-text-color;
-    }
-
-    .categoryRow {
-        border-bottom: none;
     }
 
     .onFocusRow { 
