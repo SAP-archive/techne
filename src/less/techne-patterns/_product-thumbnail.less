@@ -1,8 +1,11 @@
 
 // Markup:
 //     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
+//         <div class="product-image">
+//             <div class="img-wrapper">
+//             <span class="img-spacer"></span>
+//             <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+//             </div>
 //         </div>
 //         <div class="product-details">
 //             <div class="product-name">
@@ -16,201 +19,79 @@
 //                 <span class="text-danger">42.48</span>
 //                 <span>USD</span>
 //             </div>
-//             <div class="status success">Published</div>
+//             <div class="label label-success">Published</div>
 //         </div>
 //     </div>
 //
 // Pattern 15.1
 
-// Product Thumbnail Grid
-//
-// Use Product Thumbmail Grid to display a grid of prodcucts    
-//
-// Markup:
-// <div class="product-grid">
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name that is very long</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>470,000,000.48</s>
-//                 <span class="product-price-discount">420,000,000.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-//     <div class="product-thumbnail">
-//         <div class="product-boxed-image">
-//             <img src="../images/product-thumbnail.png">
-//         </div>
-//         <div class="product-details">
-//             <div class="product-name">
-//                 <a>Product Name</a>
-//             </div>
-//             <div class="product-code">
-//                 000123456789000
-//             </div>
-//             <div class="product-price">
-//                 <s>47.48</s>
-//                 <span class="text-danger">42.48</span>
-//                 <span>USD</span>
-//             </div>
-//             <div class="status success">Published</div>
-//         </div>
-//     </div>
-// </div>
-//
-// Pattern 15.2
-
-@product-thumbnail-width: 100%;
-
 .product-grid{
     display: flex;
     flex-wrap: wrap;
+    padding:20px 0;
 }
 
 .product-thumbnail{
-    color: inherit;
     background-color: @white;
     box-shadow: 0 2px 1px @default-greyblue-200;
-    width: @product-thumbnail-width / 3;
-    margin: @product-thumbnail-width * .01; 
+    margin: 1%; 
+    width: 47.85%;
     margin-bottom: 30px;
     overflow: hidden;
     transition: all .1s ease-in-out 0s;
     height: auto;
     position: relative;
-    
-    img {
-        width: 100%;
-        display: inline-block;
-    }
-
-    a.thumbnail{
-        background-color: transparent;
-    }
 
     &:hover {
         cursor: pointer;
         background-color: @white;
         box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
-        color: #555555;
-        // margin-bottom: 2px;
-        // margin-top: -2px;
-        z-index: 5;
+    }
+    
+    .product-image{
+        position:relative;
+        overflow:hidden;
+        padding-bottom:100%;
+        
+        .img-wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            font-size: 0;
+            text-align: center;
+        }
+
+        .img {
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+        }
+
+        .img-spacer {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
     }
 
-    .status{
+    .product-details{
+        color: @black;
+        font-size: 12px;
+        padding: 0 15px 20px 15px;
+    }    
+
+    .label{
         margin-bottom: 15px;
+        padding-left: 0;
     }
 
     .product-code{
         word-wrap: break-word;
         font-size: 13px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -224,12 +105,12 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight:bold;
-        margin: 20px 0 5px 0;
+        margin: 20px 0 0 0;
     }
 
     .product-price {
         font-size: 15px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .product-price-discount{
@@ -244,23 +125,16 @@
         margin-bottom: 5px;
     }
 
-    .product-details{
-        color: @black;
-        font-size: 12px;
-        padding: 0 15px 15px 15px;
-    }
-
     .badge-info{
         color: @brand-info;
         border-color: @brand-info;
     }
-
 }
 
 @media screen and (min-width: @screen-xs) {
     .product-grid{
         .product-thumbnail{
-            width: @product-thumbnail-width / 2;
+            width: 47.85%;
         }
     }
 }
@@ -268,7 +142,7 @@
 @media screen and (min-width: @screen-sm) {
     .product-grid{
         .product-thumbnail{
-            width: @product-thumbnail-width / 4;
+            width: 23%;
         }
     }
 }
@@ -276,7 +150,7 @@
 @media screen and (min-width: @screen-md) {
     .product-grid{
         .product-thumbnail{
-            @product-thumbnail-width / 4;
+            width: 23%;
         }
     }
 }
@@ -284,7 +158,13 @@
 @media screen and (min-width: @screen-lg) {
     .product-grid{
         .product-thumbnail{
-            @product-thumbnail-width / 6;
+            width: 14.65%;
         }
     }
 }
+
+// Product Grid
+//
+// Check out <a href="../starterpages/product-grid.html" target="_blank">Product Grid Starter Page</a> to see an example of grid layout using Product Thumbnails
+//
+// Pattern 15.2
