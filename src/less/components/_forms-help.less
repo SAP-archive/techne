@@ -85,7 +85,6 @@
    .help-block-inline{
       position: absolute;
       z-index: 1;
-      top: 25px;
       right: -10px;
 
       visibility: hidden;
@@ -133,6 +132,12 @@
       position: absolute;
       top: 0;
       right: 0;
+
+      .hyicon {
+        &:before {
+            margin-top: 0;
+        } 
+      }
    }
 }
 
@@ -143,12 +148,12 @@
 // Markup:
 // <section>
 //    <div class="section-header">
-//    <h2 class="section-headline">I'm the Section Headline</h2>
-//    <span class="section-help help-inline help-inline--section {$modifiers}">
-//       <span class="hyicon hyicon-helpoff help-icon-inline"></span>
-//       <span class="help-block-inline"> I'm a additional Inline Help Text</span>
-//    </span>
-// </div>
+//      <h2 class="section-headline">I'm the Section Headline</h2>
+//      <span class="section-help help-inline help-inline--section {$modifiers}">
+//          <span class="hyicon hyicon-helpoff help-icon-inline"></span>
+//          <span class="help-block-inline"> I'm a additional Inline Help Text</span>
+//      </span>
+//    </div>
 // </section>
 //
 // .help-inline--tooltip - By default, all Additional Inline Help is only accessible via the ? icon or “help bubbles.” Use ‘help bubbles’ when ‘all help on’ is set to false. Place a help icon next to the form field or section. When hovering over the help icon or on a touch event, the system displays a text bubble that shows the same content as the inline help.
@@ -157,9 +162,20 @@
 
 .help-inline--section{
    &.help-inline--tooltip{
-      float: right;
-      margint-bottom: 0;
+      margin-bottom: 0;
+      // on mobile the icon and tooltip float right
+      @media (max-width: @screen-xs) {
+          float: right;
+      }
    }
+}
+
+.section-header {
+    .help-inline--tooltip {
+        .help-icon-inline:before {
+          margin: 0;
+      }
+    }
 }
 
 // Section Inline Level help for read-only fields
@@ -189,5 +205,11 @@
         display: inline-block;
         float: none;
         position: relative;
+
+        .help-icon-inline {
+            &:before {
+                margin-top: 5px;
+            }
+        }
     }
 }
