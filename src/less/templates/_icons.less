@@ -1,11 +1,13 @@
-// Icons
-//
+// Icons 
+// 
+//<div class="row">
+<% _.each(glyphs, function(glyph) { %>// <div class="col-md-2 kss-modifier-example text-center"> <span class="hyicon <%= className %>-<%= glyph.name %>"></span><br/><br/><p>.<%= className %>-<%= glyph.name %></p> </div>
+<% }); %>//
+//</div>
 //
 // Markup:
 //<span class="<%= className %> {$modifiers}"></span>
 //
-<% _.each(glyphs, function(glyph) { %>// .<%= className %>-<%= glyph.name %> - Codepoint: U+<%= glyph.codepoint.toString(16) %>
-<% }); %>//
 // Component 6.1
 
 // ----------------------------------------------------------------
