@@ -323,6 +323,10 @@ a:visited {
 .kss-modifier-example > .nav-pill {
   float: none !important;
 }
+.kss-modifier-example .product-thumbnail {
+  margin: -40px 0 0 0;
+  width: 300px;
+}
 .kss-lead {
   font-weight: bold;
 }
