@@ -1,0 +1,80 @@
+@import '_variables';
+
+.Icons.kss-section.kss-componnet-page{
+
+    .kss-description{
+
+        &:before{
+            content: " ";
+            display: table;
+            box-sizing: border-box;
+        }
+
+        &:after{
+            clear: both;
+            content: " ";
+            display: table;
+            box-sizing: border-box;
+        }
+    }
+
+    .icons-grid {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        margin: 10px 0 50px 0;
+        width: 20%;
+        float: left;
+        min-height: 95px;
+
+        @media (min-width: 992px) {
+            width: 20%;
+        }
+
+        @media (max-width: 480px) {
+            width: 33.3333333333%;
+        }
+
+
+        .hyicon {
+            display: block;
+            margin-bottom: 20px;
+
+            color: @secondary-grey;
+
+            &:before{
+                font-size: 30px;
+            }
+        }
+
+        .hyicon-remove {
+            color: @secondary-red;
+        }
+
+        .hyicon-add, 
+        .hyicon-collapse, 
+        .hyicon-expand, 
+        .hyicon-next, 
+        .hyicon-last, 
+        .hyicon-more, 
+        .hyicon-checked {
+            color: @primary-blue;
+        }
+
+        .hyicon-filterremove:before{
+            font-size: 20px;
+        } 
+
+        .icon-cell-localization {
+            display: none;
+        }
+
+    }
+
+    .localization-wrapper{
+        display: none;
+    }
+
+}
