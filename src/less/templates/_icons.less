@@ -1,13 +1,11 @@
-// Available icons 
-// 
-//<div class="row icons-grid">
-<% _.each(glyphs, function(glyph) { %>// <div class="col-md-2 kss-modifier-example text-center icon-cell-<%= glyph.name %>"> <span class="hyicon <%= className %>-<%= glyph.name %>"></span><br/><br/><p>.<%= className %>-<%= glyph.name %></p> </div>
-<% }); %>//
-//</div>
+// Avialable Icons
+//
 //
 // Markup:
-//<span class="<%= className %> <%= className %>-ICON-NAME "></span>
+//<span class="<%= className %> {$modifiers}"></span>
 //
+<% _.each(glyphs, function(glyph) { %>// <div class="icons-grid <%= glyph.name %>-wrapper"><span class="hyicon <%= className %>-<%= glyph.name %>"></span> .<%= className %>-<%= glyph.name %></div>
+<% }); %>//
 // Component 6.1
 
 // ----------------------------------------------------------------
