@@ -1,5 +1,7 @@
 // Tree view on initial load
 //
+// When loaded, all levels are collapsed and have a light background color, that's where the focus of the user should be at the beginning.
+//
 // <div class="y-tree">
 //     <!-- tree header -->
 //     <div class="y-tree-header">
@@ -503,6 +505,10 @@
 
 
 // First level expanded 
+//
+// When the user expand one level, the child levels carry the light background color as the upper levels get a slightly darker background color to keep the user focused. The expanded levels also detach of the rest making it, visually, one independent entity.
+//
+// If more than one level is expanded, the deepest levels tree-wide are highlighted. Not only the recently expanded ones.
 //
 // <div class="y-tree">
 //     <!-- tree header -->
@@ -1008,6 +1014,10 @@
 
 
 // Thrid Level Expanded 
+//
+// Note that as levels go deep in the hierarchy they are indented to the right, but only on the first column.
+//
+// Again the deepest level is highlighted here.
 //
 // Markup:
 // <div class="y-tree">
