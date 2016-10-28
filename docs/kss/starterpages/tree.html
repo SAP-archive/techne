@@ -49,8 +49,16 @@
                     <div class="y-tree-header">
                         <div class="row tree-head hidden-sm hidden-xs">
                         <div class="col-sm-4">
-                            <div class="col-sm-1"><a class="btn btn-link category-toggle" title="Expand All" id="expand-collapse-all">
-                                <span class="hyicon hyicon-chevron"></span>
+                            <div class="col-sm-1">
+                                <a  class="btn btn-link category-toggle" 
+                                    title="Expand All" 
+                                    id="expand-all">
+                                    <span class="hyicon hyicon-chevron"></span>
+                                </a>
+                                <a  class="btn btn-link category-toggle hidden" 
+                                    title="Expand All" 
+                                    id="collapse-all">
+                                    <span class="hyicon hyicon-chevron"></span>
                                 </a>
                             </div>
                             <div class="col-sm-10">Data Header</div>
@@ -76,7 +84,9 @@
                         <div class="row mobile-layout not-active-level collapse visible-xs visible-sm">
                             <div class="col-xs-1">
                                 <a  class="btn btn-link category-toggle"
-                                    aria-expanded="false" title="Expand">
+                                    data-toggle-id="toggle-1"
+                                    aria-expanded="false" 
+                                    title="Expand">
                                 <span class="hyicon hyicon-chevron"></span>
                                 </a>
                             </div>
@@ -121,7 +131,10 @@
                         <div class="row desktop-layout not-active-level collapse visible-md visible-lg">
                             <div class="col-sm-4">
                                 <div class="col-sm-1">
-                                    <a class="btn btn-link category-toggle test-parent-toggle" title="Expand" aria-expanded="false">
+                                    <a  class="btn btn-link category-toggle" 
+                                        data-toggle-id="toggle-1"
+                                        title="Expand" 
+                                        aria-expanded="false">
                                     <span class="hyicon hyicon-chevron"></span>
                                     </a>
                                 </div>
@@ -155,15 +168,18 @@
                         <!-- /desktop row -->
 
                         <!-- Second Level 1 -->
-                        <div class="child-row collapse " id="child-row">
+                        <div class="child-row collapse" id="toggle-1">
 
                             <!-- child 1.1 -->
-                            <div class="">
+                            <div class="y-tree-parent">
 
                                 <!-- mobile row -->
                                 <div class="row mobile-layout not-active-level visible-xs visible-sm">
                                     <div class="col-xs-1 col-xs-offset-1">
-                                        <a class="btn btn-link category-toggle" title="Expand" aria-expanded="false">
+                                        <a  class="btn btn-link category-toggle" 
+                                            data-toggle-id="toggle-1-1"
+                                            title="Expand" 
+                                            aria-expanded="false">
                                         <span class="hyicon hyicon-chevron"></span>
                                         </a>
                                     </div>
@@ -208,7 +224,10 @@
                                 <div class="row desktop-layout not-active-level visible-md visible-lg">
                                     <div class="col-sm-4">
                                         <div class="col-sm-1 col-sm-offset-1">
-                                            <a  class="btn btn-link category-toggle" aria-expanded="false" title="Expand">
+                                            <a  class="btn btn-link category-toggle" 
+                                                data-toggle-id="toggle-1-1"
+                                                aria-expanded="false" 
+                                                title="Expand">
                                             <span class="hyicon hyicon-chevron"></span>
                                             </a>
                                         </div>
@@ -242,7 +261,7 @@
                                 <!-- /desktop row -->
 
                                 <!-- Second Level 1.1 -->
-                                <div class="child-row not-active-level collapse" id="child-row-1-1">
+                                <div class="child-row not-active-level collapse" id="toggle-1-1">
                                 
                                     <!-- child 1.1.1 -->
                                     <div class="on-focus-row on-focus-row--last">
@@ -343,7 +362,10 @@
                         <!-- mobile row -->
                         <div class="row mobile-layout not-active-level collapse visible-xs visible-sm">
                             <div class="col-xs-1">
-                                <a class="btn btn-link category-toggle" title="Expand" aria-expanded="false">
+                                <a class="btn btn-link category-toggle" 
+                                title="Expand" 
+                                data-toggle-id="toggle-2"
+                                aria-expanded="false">
                                 <span class="hyicon hyicon-chevron"></span>
                                 </a>
                             </div>
@@ -385,7 +407,10 @@
                         <div class="row desktop-layout not-active-level collapse visible-md visible-lg">
                             <div class="col-sm-4">
                                 <div class="col-sm-1">
-                                    <a class="btn btn-link category-toggle" title="Expand" aria-expanded="false">
+                                    <a  class="btn btn-link category-toggle" 
+                                        data-toggle-id="toggle-2"
+                                        title="Expand" 
+                                        aria-expanded="false">
                                     <span class="hyicon hyicon-chevron"></span>
                                     </a>
                                 </div>
@@ -416,7 +441,7 @@
                         <!-- /desktop row -->
 
                         <!-- Second Level 2 -->
-                        <div class="collapse child-row" id="child-row-2">
+                        <div class="collapse child-row" id="toggle-2">
                             
                             <!-- child 2.1 -->
                             <div class="">
@@ -577,10 +602,8 @@
                 </div>
                 <!-- /tree -->
                 
-
             </div>
 
-            <div class="spacer-margin-20"></div>
             <div class="spacer-margin-20"></div>
 
         </div>
@@ -594,34 +617,47 @@
         <script>
             $(function(){
 
-                var expandALL,
-                    expandParent;
-
+                var expandALL;
 
                 $('.y-tree-parent .category-toggle').on('click', function(){
 
-                    expandParent = !expandParent
-                    
-                    $(this)
-                        .parents('.y-tree-parent')
-                        .find('.child-row:first')
-                        .collapse('toggle');
+
+                    var toggleId = '#' + $(this).attr("data-toggle-id"),
+                        expandParent = $(this).attr("aria-expanded"),
+                        allRows = $('.row.mobile-layout, .row.desktop-layout');
+
+                    expandParent = !expandParent;
+
+                    $(toggleId).collapse('toggle');
 
                     $(this).attr('aria-expanded', expandParent);
 
+                    $(allRows).removeClass('active-level').addClass('not-active-level');
+
+                    $(toggleId).find('.row').removeClass('not-active-level').addClass('active-level');
+
+                    // console.log(toggleId, expandParent);
                 });
 
-                $('#expand-collapse-all').on('click', function(){
+                $('#expand-all').on('click', function(){
 
-                    expandALL = !expandALL;
+                    $('.category-toggle').attr('aria-expanded', true);                    
+                    $('.child-row').collapse('show');
+                    $(this).addClass('hidden');
+                    $('#collapse-all').removeClass('hidden');
                     
-                    $('.category-toggle').attr('aria-expanded', expandALL);
-
-                    
-                    console.log(expandALL);
-
-                    $('.child-row').collapse('toggle');
                 });
+
+                $('#collapse-all').on('click', function(){
+
+                    $('.category-toggle').attr('aria-expanded', false);                    
+                    $('.child-row').collapse('hide');
+                    $(this).addClass('hidden');
+                    $('#expand-all').removeClass('hidden');
+
+                });
+
+                
 
             });
         </script>
