@@ -1806,3 +1806,64 @@ article section.LocalizationExample .kss-description h3 {
 .donloadsrc {
   margin-top: 30px;
 }
+.Icons.kss-section.kss-componnet-page .kss-description:before {
+  content: " ";
+  display: table;
+  box-sizing: border-box;
+}
+.Icons.kss-section.kss-componnet-page .kss-description:after {
+  clear: both;
+  content: " ";
+  display: table;
+  box-sizing: border-box;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  margin: 10px 0 50px 0;
+  width: 20%;
+  float: left;
+  min-height: 95px;
+}
+@media (min-width: 992px) {
+  .Icons.kss-section.kss-componnet-page .icons-grid {
+    width: 20%;
+  }
+}
+@media (max-width: 480px) {
+  .Icons.kss-section.kss-componnet-page .icons-grid {
+    width: 33.3333333333%;
+  }
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon {
+  display: block;
+  margin-bottom: 20px;
+  color: #b7c1cd;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon:before {
+  font-size: 30px;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-remove {
+  color: #ff3b30;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-add,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-collapse,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-expand,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-next,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-last,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-more,
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-checked {
+  color: #0486e0;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .hyicon-filterremove:before {
+  font-size: 20px;
+}
+.Icons.kss-section.kss-componnet-page .icons-grid .icon-cell-localization {
+  display: none;
+}
+.Icons.kss-section.kss-componnet-page .localization-wrapper {
+  display: none;
+}

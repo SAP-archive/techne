@@ -1,10 +1,10 @@
-// Icons
+// Avialable Icons
 //
 //
 // Markup:
 //<span class="<%= className %> {$modifiers}"></span>
 //
-<% _.each(glyphs, function(glyph) { %>// .<%= className %>-<%= glyph.name %> - Codepoint: U+<%= glyph.codepoint.toString(16) %>
+<% _.each(glyphs, function(glyph) { %>// <div class="icons-grid <%= glyph.name %>-wrapper"><span class="hyicon <%= className %>-<%= glyph.name %>"></span> .<%= className %>-<%= glyph.name %></div>
 <% }); %>//
 // Component 6.1
 
