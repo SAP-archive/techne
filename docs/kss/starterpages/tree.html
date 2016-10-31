@@ -52,12 +52,8 @@
                             <div class="col-sm-1">
                                 <a  class="btn btn-link category-toggle" 
                                     title="Expand All" 
-                                    id="expand-all">
-                                    <span class="hyicon hyicon-chevron"></span>
-                                </a>
-                                <a  class="btn btn-link category-toggle hidden" 
-                                    title="Expand All" 
-                                    id="collapse-all">
+                                    id="expand-collapse-all"
+                                    aria-expanded="false">
                                     <span class="hyicon hyicon-chevron"></span>
                                 </a>
                             </div>
@@ -78,10 +74,10 @@
                     <!-- /tree header -->
 
                     <!-- parent node 1 -->
-                    <div class="y-tree-parent">
+                    <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
 
                         <!-- mobile row -->
-                        <div class="row mobile-layout not-active-level collapse visible-xs visible-sm">
+                        <div class="row mobile-layout collapse visible-xs visible-sm">
                             <div class="col-xs-1">
                                 <a  class="btn btn-link category-toggle"
                                     data-toggle-id="toggle-1"
@@ -128,7 +124,7 @@
                         <!-- /mobile row -->
 
                         <!-- desktop row -->
-                        <div class="row desktop-layout not-active-level collapse visible-md visible-lg">
+                        <div class="row desktop-layout collapse visible-md visible-lg">
                             <div class="col-sm-4">
                                 <div class="col-sm-1">
                                     <a  class="btn btn-link category-toggle" 
@@ -168,20 +164,103 @@
                         <!-- /desktop row -->
 
                         <!-- Second Level 1 -->
-                        <div class="child-row collapse" id="toggle-1">
+                        <div class="y-tree-row child-row collapse" id="toggle-1" data-level="2" aria-expanded="false">
 
                             <!-- child 1.1 -->
-                            <div class="y-tree-parent">
-
-                                <!-- mobile row -->
-                                <div class="row mobile-layout not-active-level visible-xs visible-sm">
-                                    <div class="col-xs-1 col-xs-offset-1">
+                            <!-- mobile row -->
+                            <div class="row mobile-layout visible-xs visible-sm">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <a  class="btn btn-link category-toggle" 
+                                        data-toggle-id="toggle-1-1"
+                                        title="Expand" 
+                                        aria-expanded="false">
+                                    <span class="hyicon hyicon-chevron"></span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span>
+                                        <p class="primaryData"><a href="">Second Level</a></p>
+                                    </div>
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span> 
+                                        <p>Secondary Value</p>
+                                    </div>
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span> 
+                                        <p>Secondary Value</p>
+                                    </div>
+                                    <p class="statusDataValue">
+                                        <span>Default</span>
+                                    </p>
+                                </div>
+                                <div class="mobile-more-menu">
+                                    <div class="dropdown">
+                                        <a  class="btn btn-link btn-lg dropdown-toggle" 
+                                            role="button" 
+                                            aria-haspopup="true" 
+                                            aria-expanded="false" 
+                                            data-toggle="dropdown">
+                                        <span class="hyicon hyicon-more"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right text-left" role="menu">
+                                            <li><a href="#">Edit Category Details</a></li>
+                                            <li><a href="#">Add Child Category</a></li>
+                                            <li class="divider"></li>
+                                            <li><a >Delete Category</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /mobile row -->
+                            
+                            <!-- desktop row -->
+                            <div class="row desktop-layout visible-md visible-lg">
+                                <div class="col-sm-4">
+                                    <div class="col-sm-1 col-sm-offset-1">
                                         <a  class="btn btn-link category-toggle" 
                                             data-toggle-id="toggle-1-1"
-                                            title="Expand" 
-                                            aria-expanded="false">
+                                            aria-expanded="false" 
+                                            title="Expand">
                                         <span class="hyicon hyicon-chevron"></span>
                                         </a>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="primaryData"><a href="">Second Level</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">Secondary Value</div>
+                                <div class="col-sm-3">Secondary Value</div>
+                                <div class="col-sm-2">
+                                    <span class="statusDataValue">
+                                    <span>Default</span>
+                                    </span>
+                                    <div class="dropdown pull-right">
+                                        <a  class="btn btn-link btn-lg dropdown-toggle" 
+                                            role="button" 
+                                            aria-haspopup="true" 
+                                            aria-expanded="false" 
+                                            data-toggle="dropdown">
+                                        <span class="hyicon hyicon-more"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right text-left" role="menu">
+                                            <li><a href="#">Edit Category Details</a></li>
+                                            <li><a href="#">Add Child Category</a></li>
+                                            <li class="divider"></li>
+                                            <li><a >Delete Category</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /desktop row -->
+                            
+                            <!-- Second Level 1.1 -->
+                            <div class="y-tree-row child-row collapse" id="toggle-1-1" data-level="3" aria-expanded="false">
+                            
+                                <!-- child 1.1.1 -->
+                                <!-- mobile row -->
+                                <div class="row mobile-layout visible-xs visible-sm">
+                                    <div class="col-xs-1 col-xs-offset-2">
                                     </div>
                                     <div class="col-xs-8">
                                         <div class="mobile-data">
@@ -219,20 +298,14 @@
                                     </div>
                                 </div>
                                 <!-- /mobile row -->
-
+                                                            
                                 <!-- desktop row -->
-                                <div class="row desktop-layout not-active-level visible-md visible-lg">
+                                <div class="row desktop-layout visible-md visible-lg">
                                     <div class="col-sm-4">
-                                        <div class="col-sm-1 col-sm-offset-1">
-                                            <a  class="btn btn-link category-toggle" 
-                                                data-toggle-id="toggle-1-1"
-                                                aria-expanded="false" 
-                                                title="Expand">
-                                            <span class="hyicon hyicon-chevron"></span>
-                                            </a>
+                                        <div class="col-sm-1 col-sm-offset-2">
                                         </div>
-                                        <div class="col-sm-9">
-                                            <p class="primaryData"><a href="">Second Level</a></p>
+                                        <div class="col-sm-8">
+                                            <p class="primaryData"><a href="">Thrid Level</a></p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">Secondary Value</div>
@@ -259,95 +332,10 @@
                                     </div>
                                 </div>
                                 <!-- /desktop row -->
-
-                                <!-- Second Level 1.1 -->
-                                <div class="child-row not-active-level collapse" id="toggle-1-1">
-                                
-                                    <!-- child 1.1.1 -->
-                                    <div class="on-focus-row on-focus-row--last">
-
-                                        <!-- mobile row -->
-                                        <div class="row mobile-layout visible-xs visible-sm">
-                                            <div class="col-xs-1 col-xs-offset-2">
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="mobile-data">
-                                                    <span class="tree-head">Data Header</span>
-                                                    <p class="primaryData"><a href="">Second Level</a></p>
-                                                </div>
-                                                <div class="mobile-data">
-                                                    <span class="tree-head">Data Header</span> 
-                                                    <p>Secondary Value</p>
-                                                </div>
-                                                <div class="mobile-data">
-                                                    <span class="tree-head">Data Header</span> 
-                                                    <p>Secondary Value</p>
-                                                </div>
-                                                <p class="statusDataValue">
-                                                    <span>Default</span>
-                                                </p>
-                                            </div>
-                                            <div class="mobile-more-menu">
-                                                <div class="dropdown">
-                                                    <a  class="btn btn-link btn-lg dropdown-toggle" 
-                                                        role="button" 
-                                                        aria-haspopup="true" 
-                                                        aria-expanded="false" 
-                                                        data-toggle="dropdown">
-                                                    <span class="hyicon hyicon-more"></span>
-                                                    </a>
-                                                    <ul class="dropdown-menu pull-right text-left" role="menu">
-                                                        <li><a href="#">Edit Category Details</a></li>
-                                                        <li><a href="#">Add Child Category</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a >Delete Category</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /mobile row -->
-
-                                        <!-- desktop row -->
-                                        <div class="row desktop-layout visible-md visible-lg">
-                                            <div class="col-sm-4">
-                                                <div class="col-sm-1 col-sm-offset-2">
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <p class="primaryData"><a href="">Thrid Level</a></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">Secondary Value</div>
-                                            <div class="col-sm-3">Secondary Value</div>
-                                            <div class="col-sm-2">
-                                                <span class="statusDataValue">
-                                                <span>Default</span>
-                                                </span>
-                                                <div class="dropdown pull-right">
-                                                    <a  class="btn btn-link btn-lg dropdown-toggle" 
-                                                        role="button" 
-                                                        aria-haspopup="true" 
-                                                        aria-expanded="false" 
-                                                        data-toggle="dropdown">
-                                                    <span class="hyicon hyicon-more"></span>
-                                                    </a>
-                                                    <ul class="dropdown-menu pull-right text-left" role="menu">
-                                                        <li><a href="#">Edit Category Details</a></li>
-                                                        <li><a href="#">Add Child Category</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a >Delete Category</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /desktop row -->
-
-                                    </div>
-                                    <!-- /child 1.1.1 -->
-
-                                </div>
-                                <!-- /Second Level 1.1 -->
-
+                                <!-- /child 1.1.1 -->
+                            
                             </div>
+                            <!-- /Second Level 1.1 -->
                             <!-- /child 1.1 -->
 
                         </div>
@@ -357,10 +345,10 @@
                     <!-- /parent node 1 -->
                     <!-- parent node 2 -->
 
-                    <div class="y-tree-parent">
+                    <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
                     
                         <!-- mobile row -->
-                        <div class="row mobile-layout not-active-level collapse visible-xs visible-sm">
+                        <div class="row mobile-layout collapse visible-xs visible-sm">
                             <div class="col-xs-1">
                                 <a class="btn btn-link category-toggle" 
                                 title="Expand" 
@@ -404,7 +392,7 @@
                         <!-- /mobile row -->
 
                         <!-- desktop row -->
-                        <div class="row desktop-layout not-active-level collapse visible-md visible-lg">
+                        <div class="row desktop-layout collapse visible-md visible-lg">
                             <div class="col-sm-4">
                                 <div class="col-sm-1">
                                     <a  class="btn btn-link category-toggle" 
@@ -441,81 +429,77 @@
                         <!-- /desktop row -->
 
                         <!-- Second Level 2 -->
-                        <div class="collapse child-row" id="toggle-2">
+                        <div class="y-tree-row collapse child-row" id="toggle-2" data-level="2" aria-expanded="false">
                             
                             <!-- child 2.1 -->
-                            <div class="">
-                            
-                                <!-- mobile row -->
-                                <div class="row mobile-layout not-active-level visible-xs visible-sm">
-                                    <div class="col-xs-1 col-xs-offset-1">
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="mobile-data">
-                                            <span class="tree-head">Data Header</span>
-                                            <p class="primaryData"><a href="">Second Level</a></p>
-                                        </div>
-                                        <div class="mobile-data">
-                                            <span class="tree-head">Data Header</span> 
-                                            <p>Secondary Value</p>
-                                        </div>
-                                        <div class="mobile-data">
-                                            <span class="tree-head">Data Header</span> 
-                                            <p>Secondary Value</p>
-                                        </div>
-                                        <p class="statusDataValue">
-                                            <span>Default</span>
-                                        </p>
-                                    </div>
-                                    <div class="mobile-more-menu">
-                                        <div class="dropdown">
-                                            <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
-                                                aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
-                                            <span class="hyicon hyicon-more"></span>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right text-left" role="menu">
-                                                <li><a href="#">Edit Category Details</a></li>
-                                                <li><a href="#">Add Child Category</a></li>
-                                                <li class="divider"></li>
-                                                <li><a >Delete Category</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <!-- mobile row -->
+                            <div class="row mobile-layout visible-xs visible-sm">
+                                <div class="col-xs-1 col-xs-offset-1">
                                 </div>
-                                <!-- mobile row -->
-
-                                <!-- desktop row -->
-                                <div class="row desktop-layout not-active-level visible-md visible-lg">
-                                    <div class="col-sm-4">
-                                        <div class="col-sm-1 col-sm-offset-1">
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="primaryData"><a href="">Second Level</a></p>
-                                        </div>
+                                <div class="col-xs-8">
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span>
+                                        <p class="primaryData"><a href="">Second Level</a></p>
                                     </div>
-                                    <div class="col-sm-3">Secondary Value</div>
-                                    <div class="col-sm-3">Secondary Value</div>
-                                    <div class="col-sm-2">
-                                        <span class="statusDataValue">
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span> 
+                                        <p>Secondary Value</p>
+                                    </div>
+                                    <div class="mobile-data">
+                                        <span class="tree-head">Data Header</span> 
+                                        <p>Secondary Value</p>
+                                    </div>
+                                    <p class="statusDataValue">
                                         <span>Default</span>
-                                        </span>
-                                        <div class="dropdown pull-right">
-                                            <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
-                                                aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
-                                            <span class="hyicon hyicon-more"></span>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right text-left" role="menu">
-                                                <li><a href="#">Edit Category Details</a></li>
-                                                <li><a href="#">Add Child Category</a></li>
-                                                <li class="divider"></li>
-                                                <li><a >Delete Category</a></li>
-                                            </ul>
-                                        </div>
+                                    </p>
+                                </div>
+                                <div class="mobile-more-menu">
+                                    <div class="dropdown">
+                                        <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+                                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                                        <span class="hyicon hyicon-more"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right text-left" role="menu">
+                                            <li><a href="#">Edit Category Details</a></li>
+                                            <li><a href="#">Add Child Category</a></li>
+                                            <li class="divider"></li>
+                                            <li><a >Delete Category</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <!-- /desktop row -->
-
                             </div>
+                            <!-- mobile row -->
+                            
+                            <!-- desktop row -->
+                            <div class="row desktop-layout visible-md visible-lg">
+                                <div class="col-sm-4">
+                                    <div class="col-sm-1 col-sm-offset-1">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="primaryData"><a href="">Second Level</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">Secondary Value</div>
+                                <div class="col-sm-3">Secondary Value</div>
+                                <div class="col-sm-2">
+                                    <span class="statusDataValue">
+                                    <span>Default</span>
+                                    </span>
+                                    <div class="dropdown pull-right">
+                                        <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+                                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                                        <span class="hyicon hyicon-more"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right text-left" role="menu">
+                                            <li><a href="#">Edit Category Details</a></li>
+                                            <li><a href="#">Add Child Category</a></li>
+                                            <li class="divider"></li>
+                                            <li><a >Delete Category</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /desktop row -->
                             <!-- /child 2.1 -->
 
                         </div>
@@ -525,10 +509,10 @@
                     <!-- /parent node 2 -->
 
                     <!-- parent node 3 -->
-                    <div class="y-tree-parent">
+                    <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
 
                         <!-- mobile row -->
-                        <div class="row mobile-layout not-active-level collapse visible-xs visible-sm">
+                        <div class="row mobile-layout collapse visible-xs visible-sm">
                             <div class="col-xs-1">
                             </div>
                             <div class="col-xs-9">
@@ -566,7 +550,7 @@
                         <!-- /mobile row -->
 
                         <!-- dekstop row -->
-                        <div class="row desktop-layout not-active-level collapse visible-md visible-lg">
+                        <div class="row desktop-layout collapse visible-md visible-lg">
                             <div class="col-sm-4">
                                 <div class="col-sm-1">
                                 </div>
@@ -615,51 +599,87 @@
 
         <!-- tree interactivity -->
         <script>
+
             $(function(){
 
-                var expandALL;
+                //  TO DO - 
+                //  DONE - still need to figure out to keep the lowest expanded level active
+                //  DONE - rework expand/collapse all
+                //  - figure out the last row bottom padding
 
-                $('.y-tree-parent .category-toggle').on('click', function(){
+                // expand collapse individual rows
+                $('.y-tree-row .category-toggle').on('click', function(){
 
+                    var _this = $(this),
+                        toggleId            = '#' + _this.attr("data-toggle-id"),
+                        currentRow          = _this.parents('.y-tree-row'),
+                        expandCheckParent   = _this.attr('aria-expanded');
 
-                    var toggleId = '#' + $(this).attr("data-toggle-id"),
-                        expandParent = $(this).attr("aria-expanded"),
-                        allRows = $('.row.mobile-layout, .row.desktop-layout');
+                    if(expandCheckParent === 'false'){
 
-                    expandParent = !expandParent;
+                        $(toggleId).collapse('show');
+                        currentRow.attr('aria-expanded', true);
+                        _this.attr('aria-expanded', true);
 
-                    $(toggleId).collapse('toggle');
+                    } else if (expandCheckParent === 'true') {
 
-                    $(this).attr('aria-expanded', expandParent);
+                        $(toggleId).collapse('hide');
+                        _this.attr('aria-expanded', false);
 
-                    $(allRows).removeClass('active-level').addClass('not-active-level');
+                    }
 
-                    $(toggleId).find('.row').removeClass('not-active-level').addClass('active-level');
+                    setLowestRowActive();
 
-                    // console.log(toggleId, expandParent);
                 });
 
-                $('#expand-all').on('click', function(){
 
-                    $('.category-toggle').attr('aria-expanded', true);                    
-                    $('.child-row').collapse('show');
-                    $(this).addClass('hidden');
-                    $('#collapse-all').removeClass('hidden');
+                // expand collapse all rows
+                $('#expand-collapse-all').on('click', function(){
+
                     
+                    var expandCheck = $(this).attr('aria-expanded');
+
+                    if(expandCheck === 'false'){
+                        
+                        $('#expand-collapse-all, .category-toggle').attr('aria-expanded', true);
+                        $('.child-row').collapse('show');
+
+
+                    } else if(expandCheck === 'true') {
+                        
+                        $('#expand-collapse-all, .category-toggle').attr('aria-expanded', false);
+                        $('.child-row').collapse('hide');
+
+                    }
+
+                    setLowestRowActive();
+
                 });
 
-                $('#collapse-all').on('click', function(){
+                // set the lowest expanded row as active
+                function setLowestRowActive() {
+                    
+                    var allExpandedRows = $(".y-tree-row[aria-expanded='true']"),
+                        lowestRow       =   1;
 
-                    $('.category-toggle').attr('aria-expanded', false);                    
-                    $('.child-row').collapse('hide');
-                    $(this).addClass('hidden');
-                    $('#expand-all').removeClass('hidden');
+                        if (allExpandedRows.length != 0){
 
-                });
+                            lowestRow = Math.max.apply( Math, allExpandedRows.map(function() {
+                                            return parseInt( $(this).attr('data-level'), 10 )
+                                            })
+                                            .get() );
+                        }
 
-                
+                    if(lowestRow != 1){
+                        $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level--last');                        
+                    }
+
+                    $('.y-tree-row').removeClass('active-level').addClass('not-active-level');
+                    $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level');
+                }
 
             });
+
         </script>
 
     </div>

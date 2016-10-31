@@ -26,7 +26,7 @@
 //     </div>
 //     <!-- /tree header -->
 //     <!-- parent node 1 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -277,7 +277,7 @@
 //         <!-- /Second Level 1 -->
 //     </div>
 //     <!-- /parent node 1 --><!-- parent node 2 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -425,7 +425,7 @@
 //             </div><!-- /child 2.1 -->
 //         </div><!-- /Second Level 2 --></div>
 //     <!-- /parent node 2 --><!-- parent node 3 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -535,7 +535,7 @@
 //     </div>
 //     <!-- /tree header -->
 //     <!-- parent node 1 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -787,7 +787,7 @@
 //         <!-- /Second Level 1 -->
 //     </div>
 //     <!-- /parent node 1 --><!-- parent node 2 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -935,7 +935,7 @@
 //             </div><!-- /child 2.1 -->
 //         </div><!-- /Second Level 2 --></div>
 //     <!-- /parent node 2 --><!-- parent node 3 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -1045,7 +1045,7 @@
 //     </div>
 //     <!-- /tree header -->
 //     <!-- parent node 1 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -1296,7 +1296,7 @@
 //         <!-- /Second Level 1 -->
 //     </div>
 //     <!-- /parent node 1 --><!-- parent node 2 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -1444,7 +1444,7 @@
 //             </div><!-- /child 2.1 -->
 //         </div><!-- /Second Level 2 --></div>
 //     <!-- /parent node 2 --><!-- parent node 3 -->
-//     <div class="y-tree-parent">
+//     <div class="y-tree-row">
 //         <!-- mobile row -->
 //         <div class="row mobile-layout not-active-level collapse in visible-xs visible-sm">
 //             <div class="col-xs-1">
@@ -1521,13 +1521,22 @@
 .y-tree {
     color: @tree-row-text-color;
 
+    * {
+    	transition: all .25s ease;
+    }
+
     .row {  
         margin-left: 0;
         margin-right: 0;
     }
+
+    .y-tree-row{
+  //   	transition: all .25s ease;
+		// transition: margin-bottom .25s ease;
+		// transition-delay: .25s;
+    }
     
     .desktop-layout {
-    	background-color: @white;
     	border: 1px solid @body-bg;
     	margin-top: -1px;
         padding: 20px 15px 10px 15px;
@@ -1535,7 +1544,6 @@
     }
 	
     .mobile-layout {
-    	background-color: @white;
     	border: 1px solid @body-bg;
     	margin-top: -1px;
         padding: 15px;
@@ -1572,25 +1580,18 @@
         color: @tree-row-text-color;
     }
 
-    .on-focus-row { 
-    	border-top: none;
-
-        .desktop-layout, 
-        .mobile-layout {
-            background-color: @white;
-        }
-    }
-
-    .on-focus-row--last {
-        margin-bottom: 12px;
-    }
-
 	.not-active-level{
         background-color: @default-greyblue-table-row;  
     }
 
 	.active-level{
-        background-color: @white;
+        .desktop-layout, 
+        .mobile-layout {
+        	background-color: @white;
+        }
+    }
+
+    .active-level--last {
         margin-bottom: 12px;
     }
 
@@ -1603,15 +1604,6 @@
     	margin: -5px 0 0 -10px;
     }
 
-    .category-toggle.collapse,
-    .category-toggle.collapsing {
-    	display: block;
-    	height: 30px!important;
-    	width:30px;
-    	-webkit-transition: none;
-    	transition: none;
-	}
-
 	.hyicon-chevron:before{
 		font-size: 30px;
 		transition: all 0.25s ease;
@@ -1619,8 +1611,6 @@
 
 	.category-toggle[aria-expanded=true]{
 	    .hyicon-chevron:before{
-            -ms-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
 	    }
 	}
