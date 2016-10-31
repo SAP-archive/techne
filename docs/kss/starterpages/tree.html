@@ -50,9 +50,8 @@
                         <div class="row tree-head hidden-sm hidden-xs">
                         <div class="col-sm-4">
                             <div class="col-sm-1">
-                                <a  class="btn btn-link category-toggle" 
+                                <a  class="btn btn-link category-toggle expand-collapse-all" 
                                     title="Expand All" 
-                                    id="expand-collapse-all"
                                     aria-expanded="false">
                                     <span class="hyicon hyicon-chevron"></span>
                                 </a>
@@ -64,8 +63,10 @@
                         </div>
                         <div class="row tree-head visible-sm visible-xs">
                             <div class="col-xs-1">    
-                                <a class="btn btn-link category-toggle" title="Expand All">
-                                <span class="hyicon hyicon-chevron"></span>
+                                <a  class="btn btn-link category-toggle expand-collapse-all" 
+                                    title="Expand All" 
+                                    aria-expanded="false">
+                                    <span class="hyicon hyicon-chevron"></span>
                                 </a>
                             </div>
                             <div class="col-xs-9">Data Header</div>
@@ -603,10 +604,7 @@
             $(function(){
 
                 //  TO DO - 
-                //  DONE - still need to figure out to keep the lowest expanded level active
-                //  DONE - rework expand/collapse all
-                //  - figure out the last row bottom padding
-
+                //  figure out why the bottom margin transition is not smooth 
                 // expand collapse individual rows
                 $('.y-tree-row .category-toggle').on('click', function(){
 
@@ -634,7 +632,7 @@
 
 
                 // expand collapse all rows
-                $('#expand-collapse-all').on('click', function(){
+                $('.expand-collapse-all').on('click', function(){
 
                     
                     var expandCheck = $(this).attr('aria-expanded');
@@ -665,16 +663,16 @@
                         if (allExpandedRows.length != 0){
 
                             lowestRow = Math.max.apply( Math, allExpandedRows.map(function() {
-                                            return parseInt( $(this).attr('data-level'), 10 )
-                                            })
-                                            .get() );
+                                        return parseInt( $(this).attr('data-level'), 10 )
+                                        })
+                                        .get() );
                         }
 
                     if(lowestRow != 1){
                         $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level--last');                        
                     }
 
-                    $('.y-tree-row').removeClass('active-level').addClass('not-active-level');
+                    $('.y-tree-row').removeClass('active-level').addClass('inactive-level');
                     $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level');
                 }
 
