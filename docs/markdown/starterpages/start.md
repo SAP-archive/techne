@@ -18,6 +18,11 @@
                 "target": "content-frame"
             },
             {
+                "text": "Tree",
+                "path": "tree.html",
+                "target": "content-frame"
+            },
+            {
                 "text": "Details 1",
                 "path": "details-1.html",
                 "target": "content-frame"
