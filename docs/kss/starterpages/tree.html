@@ -29,7 +29,6 @@
             </div>
         </div>
 
-
         <div class="container-fluid body-content">
 
             <!-- page level help -->
@@ -603,8 +602,6 @@
 
             $(function(){
 
-                //  TO DO - 
-                //  figure out why the bottom margin transition is not smooth 
                 // expand collapse individual rows
                 $('.y-tree-row .category-toggle').on('click', function(){
 
@@ -613,15 +610,18 @@
                         currentRow          = _this.parents('.y-tree-row'),
                         expandCheckParent   = _this.attr('aria-expanded');
 
-                    if(expandCheckParent === 'false'){
+                    if( expandCheckParent === 'false' ) {
 
                         $(toggleId).collapse('show');
                         currentRow.attr('aria-expanded', true);
                         _this.attr('aria-expanded', true);
 
-                    } else if (expandCheckParent === 'true') {
+                    } else if ( expandCheckParent === 'true' ) {
 
                         $(toggleId).collapse('hide');
+                        $(toggleId).find('.y-tree-row').collapse('hide');
+                        $(toggleId).find('.category-toggle').attr('aria-expanded', false);
+                        currentRow.attr('aria-expanded', true);
                         _this.attr('aria-expanded', false);
 
                     }
@@ -637,13 +637,13 @@
                     
                     var expandCheck = $(this).attr('aria-expanded');
 
-                    if(expandCheck === 'false'){
+                    if( expandCheck === 'false' ) {
                         
                         $('#expand-collapse-all, .category-toggle').attr('aria-expanded', true);
                         $('.child-row').collapse('show');
 
 
-                    } else if(expandCheck === 'true') {
+                    } else if( expandCheck === 'true' ) {
                         
                         $('#expand-collapse-all, .category-toggle').attr('aria-expanded', false);
                         $('.child-row').collapse('hide');
@@ -660,20 +660,21 @@
                     var allExpandedRows = $(".y-tree-row[aria-expanded='true']"),
                         lowestRow       =   1;
 
-                        if (allExpandedRows.length != 0){
+                    if ( allExpandedRows.length != 0 ){
 
-                            lowestRow = Math.max.apply( Math, allExpandedRows.map(function() {
-                                        return parseInt( $(this).attr('data-level'), 10 )
-                                        })
-                                        .get() );
-                        }
-
-                    if(lowestRow != 1){
-                        $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level--last');                        
+                        lowestRow = Math.max.apply( Math, allExpandedRows.map(function() {
+                                    return parseInt( $(this).attr('data-level'), 10 )
+                                    })
+                                    .get() );
                     }
 
                     $('.y-tree-row').removeClass('active-level').addClass('inactive-level');
                     $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level');
+
+                    if( lowestRow != 1 ){
+                        $('.y-tree-row[data-level=' + lowestRow + ']').addClass('active-level--last');                        
+                    }
+
                 }
 
             });
