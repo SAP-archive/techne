@@ -1,96 +1,234 @@
-// Markup:
-// <div class="treeTable categoryTable">
-//     <!-- headers -->
-//     <div class="tablehead clearfix hidden-xs">
-//         <div class="col-sm-3 col-md-offset-1">Category Name</div>
-//         <div class="col-sm-3 ng-binding">Child Categories</div>
-//         <div class="col-sm-5 ng-binding">Linked Products</div>
-//     </div>
-//     <!-- items -->
-//     <div>
-//     <div class="mobileLayout clearfix visible-xs ">
-//     <div class="col-xs-2">
-//         <a class="btn btn-link category-toggle ">
-//             <span class="glyphicon glyphicon-chevron-down">
-//             </span>
-//         </a>
-//     </div>
-//     <div class="col-xs-7">
-//         <p class="primaryData" ><span class="categoryName">Office123</span></p>
-//         <p class="secondaryData " >6 Child Categories</p>
-//         <p class="secondaryData " >31 Products</p>
-//         <p class="statusDataValue">
-//             <span class="active ">Active</span>
-//         </p>
-//     </div>
-//     <div class="col-xs-3">
-//         <div class="dropdown pull-right">
-//             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                 <span class="hyicon-more"></span></a>
-//                 <ul class="dropdown-menu pull-right text-left" role="menu">
-//                     <li><a href="#" >Edit Category Details</a></li>
-//                     <li><a href="#">Add Child Category</a></li>
-//                     <li class="divider"></li>
-//                     <li><a >Delete Category</a></li>
-//                 </ul>
+// Tree view on initial load
+//
+// When loaded, all levels are collapsed and have a light background color, that's where the focus of the user should be at the beginning.
+//
+// <div class="y-tree">
+//     <!-- tree header -->
+//     <div class="y-tree-header">
+//         <div class="row tree-head hidden-sm hidden-xs">
+//         <div class="col-sm-4">
+//             <div class="col-sm-1">
+//                 <a class="btn btn-link category-toggle expand-collapse-all" title="Expand All" aria-expanded="false"><span class="hyicon hyicon-chevron"></span></a>
 //             </div>
+//             <div class="col-sm-10">Data Header</div>
+//         </div>
+//         <div class="col-sm-3">Data Header</div>
+//         <div class="col-sm-3">Data Header</div>
+//         </div>
+//         <div class="row tree-head visible-sm visible-xs">
+//             <div class="col-xs-1"><a class="btn btn-link category-toggle expand-collapse-all" title="Expand All" aria-expanded="false"><span class="hyicon hyicon-chevron"></span></a></div>
+//             <div class="col-xs-9">Data Header</div>
 //         </div>
 //     </div>
-//     <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
-//         <div class="col-sm-1">
-//             <a class="btn btn-link category-toggle ">
-//                 <span class="glyphicon glyphicon-chevron-down">
-//                 </span>
-//             </a>
-//         </div>
-//         <div class="col-sm-3">
-//             <p class="primaryData">
-//                 <span class="categoryName">Office123</span>
-//             </p>
-//         </div>
-//         <div class="col-sm-3 " >6 Child Categories</div>
-//         <div class="col-sm-3 " >31 Products</div>
-//         <div class="col-sm-2">
-//             <span class="statusDataValue">
-//                 <span  class="active ng-binding ">Active</span>
-//             </span>
-//             <div class="dropdown pull-right">
-//                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                     <span class="hyicon-more"></span></a>
+//     <!-- /tree header -->
+//     <!-- parent node 1 -->
+//     <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a  class="btn btn-link category-toggle"
+//                     data-toggle-id="toggle-1"
+//                     aria-expanded="false" 
+//                     title="Expand">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                         role="button" 
+//                         aria-haspopup="true" 
+//                         aria-expanded="false" 
+//                         data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
 //                     <ul class="dropdown-menu pull-right text-left" role="menu">
-//                         <li><a href="#" >Edit Category Details</a></li>
+//                         <li><a href="#">Edit Category Details</a></li>
 //                         <li><a href="#">Add Child Category</a></li>
-//                         <!-- <li class="divider"></li>
-//                         <li><a href >Add Category Above</a></li>
-//                         <li><a href >Add Category Below</a></li> -->
 //                         <li class="divider"></li>
 //                         <li><a >Delete Category</a></li>
 //                     </ul>
 //                 </div>
 //             </div>
 //         </div>
-//         <div class="subcategories-cnt ">
-//             <div class=" clearfix subcategories-list" style="clear:both;">
-//                 <div class="categoryRow  hasNoChildCategories" >
-//                 <div class="mobileLayout clearfix visible-xs ">
-//                 <div class="col-xs-2">
-//                     <a class="btn btn-link category-toggle ">
-//                         <span class="glyphicon glyphicon-chevron-down glyphicon-empty" >
-//                         </span>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a  class="btn btn-link category-toggle" 
+//                         data-toggle-id="toggle-1"
+//                         title="Expand" 
+//                         aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
 //                     </a>
 //                 </div>
-//                 <div class="col-xs-7">
-//                     <p class="primaryData" ><span class="categoryName">Notebooks &amp; pens</span></p>
-//                     <p class="secondaryData " >0 Child Categories</p>
-//                     <p class="secondaryData " >13 Products</p>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                         role="button" 
+//                         aria-haspopup="true" 
+//                         aria-expanded="false" 
+//                         data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 1 -->
+//         <div class="y-tree-row child-row collapse" id="toggle-1" data-level="2" aria-expanded="false">
+//             <!-- child 1.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                     <a  class="btn btn-link category-toggle" 
+//                         data-toggle-id="toggle-1-1"
+//                         title="Expand" 
+//                         aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
 //                     <p class="statusDataValue">
-//                         <span class="active">Active</span>
+//                         <span>Default</span>
 //                     </p>
 //                 </div>
-//                 <div class="col-xs-3">
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                             role="button" 
+//                             aria-haspopup="true" 
+//                             aria-expanded="false" 
+//                             data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a >Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                         <a  class="btn btn-link category-toggle" 
+//                             data-toggle-id="toggle-1-1"
+//                             aria-expanded="false" 
+//                             title="Expand">
+//                         <span class="hyicon hyicon-chevron"></span>
+//                         </a>
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
 //                     <div class="dropdown pull-right">
-//                         <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                             <span class="hyicon-more"></span></a>
+//                         <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                             role="button" 
+//                             aria-haspopup="true" 
+//                             aria-expanded="false" 
+//                             data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a >Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- Second Level 1.1 -->
+//             <div class="y-tree-row child-row collapse" id="toggle-1-1" data-level="3" aria-expanded="false">
+//                 <!-- child 1.1.1 -->
+//                 <!-- mobile row -->
+//                 <div class="row mobile-layout visible-xs visible-sm">
+//                     <div class="col-xs-1 col-xs-offset-2">
+//                     </div>
+//                     <div class="col-xs-8">
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span>
+//                             <p class="primaryData"><a href="">Second Level</a></p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <p class="statusDataValue">
+//                             <span>Default</span>
+//                         </p>
+//                     </div>
+//                     <div class="mobile-more-menu">
+//                         <div class="dropdown">
+//                             <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                                 role="button" 
+//                                 aria-haspopup="true" 
+//                                 aria-expanded="false" 
+//                                 data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
 //                             <ul class="dropdown-menu pull-right text-left" role="menu">
 //                                 <li><a href="#">Edit Category Details</a></li>
 //                                 <li><a href="#">Add Child Category</a></li>
@@ -100,110 +238,1339 @@
 //                         </div>
 //                     </div>
 //                 </div>
-//                 <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
-//                     <div class="col-sm-1">
-//                         <a class="btn btn-link category-toggle ">
-//                             <span class="glyphicon glyphicon-chevron-down glyphicon-empty">
-//                             </span>
-//                         </a>
+//                 <!-- /mobile row -->
+//                 <!-- desktop row -->
+//                 <div class="row desktop-layout visible-md visible-lg">
+//                     <div class="col-sm-4">
+//                         <div class="col-sm-1 col-sm-offset-2">
+//                         </div>
+//                         <div class="col-sm-8">
+//                             <p class="primaryData"><a href="">Thrid Level</a></p>
+//                         </div>
 //                     </div>
-//                     <div class="col-sm-3">
-//                         <p class="primaryData">
-//                             <span class="categoryName">Notebooks &amp; pens</span>
-//                         </p>
-//                     </div>
-//                     <div class="col-sm-3 " >0 Child Categories</div>
-//                     <div class="col-sm-3 " >13 Products</div>
+//                     <div class="col-sm-3">Secondary Value</div>
+//                     <div class="col-sm-3">Secondary Value</div>
 //                     <div class="col-sm-2">
 //                         <span class="statusDataValue">
-//                             <span class="active">Active</span>
+//                         <span>Default</span>
 //                         </span>
 //                         <div class="dropdown pull-right">
-//                             <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                                 <span class="hyicon-more"></span></a>
-//                                 <ul class="dropdown-menu pull-right text-left" role="menu">
-//                                     <li><a href="#" >Edit Category Details</a></li>
-//                                     <li><a href="#">Add Child Category</a></li>
-//                                     <li class="divider"></li>
-//                                     <li><a>Delete Category</a></li>
-//                                 </ul>
-//                             </div>
+//                             <a  class="btn btn-link btn-lg dropdown-toggle" 
+//                                 role="button" 
+//                                 aria-haspopup="true" 
+//                                 aria-expanded="false" 
+//                                 data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a >Delete Category</a></li>
+//                             </ul>
 //                         </div>
 //                     </div>
-//                     <div class="subcategories-cnt ">
-//                         <div class=" clearfix subcategories-list" style="clear:both;">
-//                         </div>
-//                         </div></div><div class="categoryRow  hasNoChildCategories" >
-//                         <div class="mobileLayout clearfix visible-xs ">
-//                         <div class="col-xs-2">
-//                             <a class="btn btn-link category-toggle ">
-//                                 <span class="glyphicon glyphicon-chevron-down glyphicon-empty">
-//                                 </span>
-//                             </a>
-//                         </div>
-//                         <div class="col-xs-7">
-//                             <p class="primaryData" ><span class="categoryName">Computer accessories</span></p>
-//                             <p class="secondaryData " >0 Child Categories</p>
-//                             <p class="secondaryData " >1 Products</p>
-//                             <p class="statusDataValue">
-//                                 <span ng-if="category.published" class="active ng-binding ">Active</span>
-//                             </p>
-//                         </div>
-//                         <div class="col-xs-3">
-//                             <div class="dropdown pull-right">
-//                                 <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                                     <span class="hyicon-more"></span></a>
-//                                     <ul class="dropdown-menu pull-right text-left" role="menu">
-//                                         <li><a href="#">Edit Category Details</a></li>
-//                                         <li><a href="#">Add Child Category</a></li>
-//                                         <li class="divider"></li>
-//                                         <li><a >Delete Category</a></li>
-//                                     </ul>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div class="desktopLayout clearfix visible-sm visible-md visible-lg ">
-//                             <div class="col-sm-1">
-//                                 <a class="btn btn-link category-toggle ">
-//                                     <span class="glyphicon glyphicon-chevron-down glyphicon-empty" >
-//                                     </span>
-//                                 </a>
-//                             </div>
-//                             <div class="col-sm-3">
-//                                 <p class="primaryData">
-//                                     <span class="categoryName ng-binding">Computer accessories</span>
-//                                 </p>
-//                             </div>
-//                             <div class="col-sm-3 " >0 Child Categories</div>
-//                             <div class="col-sm-3 " >1 Products</div>
-//                             <div class="col-sm-2">
-//                                 <span class="statusDataValue">
-//                                     <span ng-if="category.published" class="active ng-binding ">Active</span>
-//                                 </span>
-//                                 <div class="dropdown pull-right">
-//                                     <a href="" class="btn btn-link btn-lg dropdown-toggle " role="button" aria-haspopup="true" aria-expanded="false">
-//                                         <span class="hyicon-more"></span></a>
-//                                         <ul class="dropdown-menu pull-right text-left" role="menu">
-//                                             <li><a href="#">Edit Category Details</a></li>
-//                                             <li><a href="#">Add Child Category</a></li>
-//                                             <li class="divider"></li>
-//                                             <li><a class="ng-binding">Delete Category</a></li>
-//                                         </ul>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                          </div>
-//                        </div>
-//                    </div>
-//                  </div>
-//                </div> 
-//
+//                 </div>
+//                 <!-- /desktop row -->
+//                 <!-- /child 1.1.1 -->
+//             </div>
+//             <!-- /Second Level 1.1 -->
+//             <!-- /child 1.1 -->
+//         </div>
+//         <!-- /Second Level 1 -->
+//     </div>
+//     <!-- /parent node 1 -->
+//     <!-- parent node 2 -->
+//     <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a class="btn btn-link category-toggle" 
+//                 title="Expand" 
+//                 data-toggle-id="toggle-2"
+//                 aria-expanded="false">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a  class="btn btn-link category-toggle" 
+//                         data-toggle-id="toggle-2"
+//                         title="Expand" 
+//                         aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 2 -->
+//         <div class="y-tree-row collapse child-row" id="toggle-2" data-level="2" aria-expanded="false">
+//             <!-- child 2.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <p class="statusDataValue">
+//                         <span>Default</span>
+//                     </p>
+//                 </div>
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                             aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a >Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
+//                     <div class="dropdown pull-right">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                             aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a >Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- /child 2.1 -->
+//         </div>
+//         <!-- /Second Level 2 -->
+//     </div>
+//     <!-- /parent node 2 -->
+//     <!-- parent node 3 -->
+//     <div class="y-tree-row active-level" data-level="1" aria-expanded="false">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- dekstop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                         aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a >Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- desktop row -->
+//     </div>
+//     <!-- /node 3 -->
+// </div>
+// 
 // Pattern 6.1
 
-.treeTable{
-    border: 1px solid @body-bg;
 
-    .desktopLayout{
-        border-bottom: 1px solid @body-bg;
+
+
+
+// First level expanded 
+//
+// When the user expand one level, the child levels carry the light background color as the upper levels get a slightly darker background color to keep the user focused. The expanded levels also detach of the rest making it, visually, one independent entity.
+//
+// If more than one level is expanded, the deepest levels tree-wide are highlighted. Not only the recently expanded ones.
+//
+// <div class="y-tree">
+//     <!-- tree header -->
+//     <div class="y-tree-header">
+//         <div class="row tree-head hidden-sm hidden-xs">
+//         <div class="col-sm-4">
+//             <div class="col-sm-1">
+//                 <a class="btn btn-link category-toggle expand-collapse-all" title="Expand All" aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-sm-10">Data Header</div>
+//         </div>
+//         <div class="col-sm-3">Data Header</div>
+//         <div class="col-sm-3">Data Header</div>
+//         </div>
+//         <div class="row tree-head visible-sm visible-xs">
+//             <div class="col-xs-1"><a class="btn btn-link category-toggle expand-collapse-all" title="Expand All" aria-expanded="false"></span></a></div>
+//             <div class="col-xs-9">Data Header</div>
+//         </div>
+//     </div>
+//     <!-- /tree header -->
+//     <!-- parent node 1 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="true">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a class="btn btn-link category-toggle" data-toggle-id="toggle-1" aria-expanded="false" title="Expand">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a class="btn btn-link category-toggle" data-toggle-id="toggle-1" title="Expand" aria-expanded="true">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 1 -->
+//         <div class="y-tree-row child-row active-level--last inactive-level collapse in active-level" id="toggle-1" data-level="2" aria-expanded="true">
+//             <!-- child 1.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                     <a class="btn btn-link category-toggle" data-toggle-id="toggle-1-1" title="Expand" aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <p class="statusDataValue">
+//                         <span>Default</span>
+//                     </p>
+//                 </div>
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                         <a class="btn btn-link category-toggle" data-toggle-id="toggle-1-1" aria-expanded="false" title="Expand">
+//                         <span class="hyicon hyicon-chevron"></span>
+//                         </a>
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
+//                     <div class="dropdown pull-right">
+//                         <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- Second Level 1.1 -->
+//             <div class="y-tree-row child-row collapse inactive-level" id="toggle-1-1" data-level="3" aria-expanded="false">
+//                 <!-- child 1.1.1 -->
+//                 <!-- mobile row -->
+//                 <div class="row mobile-layout visible-xs visible-sm">
+//                     <div class="col-xs-1 col-xs-offset-2">
+//                     </div>
+//                     <div class="col-xs-8">
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span>
+//                             <p class="primaryData"><a href="">Second Level</a></p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <p class="statusDataValue">
+//                             <span>Default</span>
+//                         </p>
+//                     </div>
+//                     <div class="mobile-more-menu">
+//                         <div class="dropdown">
+//                             <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a>Delete Category</a></li>
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <!-- /mobile row -->
+//                 <!-- desktop row -->
+//                 <div class="row desktop-layout visible-md visible-lg">
+//                     <div class="col-sm-4">
+//                         <div class="col-sm-1 col-sm-offset-2">
+//                         </div>
+//                         <div class="col-sm-8">
+//                             <p class="primaryData"><a href="">Thrid Level</a></p>
+//                         </div>
+//                     </div>
+//                     <div class="col-sm-3">Secondary Value</div>
+//                     <div class="col-sm-3">Secondary Value</div>
+//                     <div class="col-sm-2">
+//                         <span class="statusDataValue">
+//                         <span>Default</span>
+//                         </span>
+//                         <div class="dropdown pull-right">
+//                             <a class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a>Delete Category</a></li>
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <!-- /desktop row -->
+//                 <!-- /child 1.1.1 -->
+//             </div>
+//             <!-- /Second Level 1.1 -->
+//             <!-- /child 1.1 -->
+//         </div>
+//         <!-- /Second Level 1 -->
+//     </div>
+//     <!-- /parent node 1 -->
+//     <!-- parent node 2 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="true">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a class="btn btn-link category-toggle" title="Expand" data-toggle-id="toggle-2" aria-expanded="false">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a class="btn btn-link category-toggle" data-toggle-id="toggle-2" title="Expand" aria-expanded="true">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 2 -->
+//         <div class="y-tree-row child-row active-level--last inactive-level active-level collapse in" id="toggle-2" data-level="2" aria-expanded="true">
+//             <!-- child 2.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <p class="statusDataValue">
+//                         <span>Default</span>
+//                     </p>
+//                 </div>
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
+//                     <div class="dropdown pull-right">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- /child 2.1 -->
+//         </div>
+//         <!-- /Second Level 2 -->
+//     </div>
+//     <!-- /parent node 2 -->
+//     <!-- parent node 3 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="false">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- dekstop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- desktop row -->
+//     </div>
+//     <!-- /node 3 -->
+// </div>
+// 
+// Pattern 6.2
+
+
+
+
+
+// Thrid Level Expanded 
+//
+// Note that as levels go deep in the hierarchy they are indented to the right, but only on the first column.
+//
+// Again the deepest level is highlighted here.
+//
+// Markup:
+// <div class="y-tree">
+//     <!-- tree header -->
+//     <div class="y-tree-header">
+//         <div class="row tree-head hidden-sm hidden-xs">
+//         <div class="col-sm-4">
+//             <div class="col-sm-1">
+//                 <a   class="btn btn-link category-toggle expand-collapse-all" 
+//                      title="Expand All" aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-sm-10">Data Header</div>
+//         </div>
+//         <div class="col-sm-3">Data Header</div>
+//         <div class="col-sm-3">Data Header</div>
+//         </div>
+//         <div class="row tree-head visible-sm visible-xs">
+//             <div class="col-xs-1">    
+//                 <a class="btn btn-link category-toggle expand-collapse-all" title="Expand All" aria-expanded="false">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">Data Header</div>
+//         </div>
+//     </div>
+//     <!-- /tree header -->
+//     <!-- parent node 1 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="true">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a   class="btn btn-link category-toggle" 
+//                      data-toggle-id="toggle-1" aria-expanded="false" title="Expand">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a   class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                          aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a   class="btn btn-link category-toggle" 
+//                          data-toggle-id="toggle-1" title="Expand" aria-expanded="true">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a   class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                          aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 1 -->
+//         <div class="y-tree-row child-row active-level--last inactive-level collapse in" 
+//              id="toggle-1" data-level="2" aria-expanded="true">
+//             <!-- child 1.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                     <a class="btn btn-link category-toggle" data-toggle-id="toggle-1-1" 
+//                        title="Expand" aria-expanded="false">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <p class="statusDataValue">
+//                         <span>Default</span>
+//                     </p>
+//                 </div>
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                         <a class="btn btn-link category-toggle" data-toggle-id="toggle-1-1" 
+//                            aria-expanded="true" title="Expand">
+//                         <span class="hyicon hyicon-chevron"></span>
+//                         </a>
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
+//                     <div class="dropdown pull-right">
+//                         <a class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- Second Level 1.1 -->
+//             <div class="y-tree-row child-row inactive-level active-level--last active-level collapse in" 
+//                  id="toggle-1-1" data-level="3" aria-expanded="true">
+//                 <!-- child 1.1.1 -->
+//                 <!-- mobile row -->
+//                 <div class="row mobile-layout visible-xs visible-sm">
+//                     <div class="col-xs-1 col-xs-offset-2">
+//                     </div>
+//                     <div class="col-xs-8">
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span>
+//                             <p class="primaryData"><a href="">Second Level</a></p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <div class="mobile-data">
+//                             <span class="tree-head">Data Header</span> 
+//                             <p>Secondary Value</p>
+//                         </div>
+//                         <p class="statusDataValue">
+//                             <span>Default</span>
+//                         </p>
+//                     </div>
+//                     <div class="mobile-more-menu">
+//                         <div class="dropdown">
+//                             <a class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                                aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a>Delete Category</a></li>
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <!-- /mobile row -->
+//                 <!-- desktop row -->
+//                 <div class="row desktop-layout visible-md visible-lg">
+//                     <div class="col-sm-4">
+//                         <div class="col-sm-1 col-sm-offset-2">
+//                         </div>
+//                         <div class="col-sm-8">
+//                             <p class="primaryData"><a href="">Thrid Level</a></p>
+//                         </div>
+//                     </div>
+//                     <div class="col-sm-3">Secondary Value</div>
+//                     <div class="col-sm-3">Secondary Value</div>
+//                     <div class="col-sm-2">
+//                         <span class="statusDataValue">
+//                         <span>Default</span>
+//                         </span>
+//                         <div class="dropdown pull-right">
+//                             <a class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                                aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                             <span class="hyicon hyicon-more"></span>
+//                             </a>
+//                             <ul class="dropdown-menu pull-right text-left" role="menu">
+//                                 <li><a href="#">Edit Category Details</a></li>
+//                                 <li><a href="#">Add Child Category</a></li>
+//                                 <li class="divider"></li>
+//                                 <li><a>Delete Category</a></li>
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <!-- /desktop row -->
+//                 <!-- /child 1.1.1 -->
+//             </div>
+//             <!-- /Second Level 1.1 -->
+//             <!-- /child 1.1 -->
+//         </div>
+//         <!-- /Second Level 1 -->
+//     </div>
+//     <!-- /parent node 1 -->
+//     <!-- parent node 2 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="true">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//                 <a class="btn btn-link category-toggle" title="Expand" 
+//                    data-toggle-id="toggle-2" aria-expanded="false">
+//                 <span class="hyicon hyicon-chevron"></span>
+//                 </a>
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- desktop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                     <a class="btn btn-link category-toggle" data-toggle-id="toggle-2" 
+//                        title="Expand" aria-expanded="true">
+//                     <span class="hyicon hyicon-chevron"></span>
+//                     </a>
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /desktop row -->
+//         <!-- Second Level 2 -->
+//         <div class="y-tree-row child-row active-level--last inactive-level collapse in" 
+//              id="toggle-2" data-level="2" aria-expanded="true">
+//             <!-- child 2.1 -->
+//             <!-- mobile row -->
+//             <div class="row mobile-layout visible-xs visible-sm">
+//                 <div class="col-xs-1 col-xs-offset-1">
+//                 </div>
+//                 <div class="col-xs-8">
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span>
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <div class="mobile-data">
+//                         <span class="tree-head">Data Header</span> 
+//                         <p>Secondary Value</p>
+//                     </div>
+//                     <p class="statusDataValue">
+//                         <span>Default</span>
+//                     </p>
+//                 </div>
+//                 <div class="mobile-more-menu">
+//                     <div class="dropdown">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- mobile row -->
+//             <!-- desktop row -->
+//             <div class="row desktop-layout visible-md visible-lg">
+//                 <div class="col-sm-4">
+//                     <div class="col-sm-1 col-sm-offset-1">
+//                     </div>
+//                     <div class="col-sm-9">
+//                         <p class="primaryData"><a href="">Second Level</a></p>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-3">Secondary Value</div>
+//                 <div class="col-sm-2">
+//                     <span class="statusDataValue">
+//                     <span>Default</span>
+//                     </span>
+//                     <div class="dropdown pull-right">
+//                         <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                            aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                         <span class="hyicon hyicon-more"></span>
+//                         </a>
+//                         <ul class="dropdown-menu pull-right text-left" role="menu">
+//                             <li><a href="#">Edit Category Details</a></li>
+//                             <li><a href="#">Add Child Category</a></li>
+//                             <li class="divider"></li>
+//                             <li><a>Delete Category</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//             <!-- /desktop row -->
+//             <!-- /child 2.1 -->
+//         </div>
+//         <!-- /Second Level 2 -->
+//     </div>
+//     <!-- /parent node 2 -->
+//     <!-- parent node 3 -->
+//     <div class="y-tree-row inactive-level" data-level="1" aria-expanded="false">
+//         <!-- mobile row -->
+//         <div class="row mobile-layout collapse visible-xs visible-sm">
+//             <div class="col-xs-1">
+//             </div>
+//             <div class="col-xs-9">
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span>
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <div class="mobile-data">
+//                     <span class="tree-head">Data Header</span> 
+//                     <p>Secondary Value</p>
+//                 </div>
+//                 <p class="statusDataValue">
+//                     <span>Inactive</span>
+//                 </p>
+//             </div>
+//             <div class="mobile-more-menu">
+//                 <div class="dropdown">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- /mobile row -->
+//         <!-- dekstop row -->
+//         <div class="row desktop-layout collapse visible-md visible-lg">
+//             <div class="col-sm-4">
+//                 <div class="col-sm-1">
+//                 </div>
+//                 <div class="col-sm-10">
+//                     <p class="primaryData"><a href="">First Level</a></p>
+//                 </div>
+//             </div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-3">Secondary Value</div>
+//             <div class="col-sm-2">
+//                 <span class="statusDataValue">
+//                 <span>Inactive</span>
+//                 </span>
+//                 <div class="dropdown pull-right">
+//                     <a href="" class="btn btn-link btn-lg dropdown-toggle" role="button" 
+//                        aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+//                     <span class="hyicon hyicon-more"></span>
+//                     </a>
+//                     <ul class="dropdown-menu pull-right text-left" role="menu">
+//                         <li><a href="#">Edit Category Details</a></li>
+//                         <li><a href="#">Add Child Category</a></li>
+//                         <li class="divider"></li>
+//                         <li><a>Delete Category</a></li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- desktop row -->
+//     </div>
+//     <!-- /node 3 -->
+// </div>
+//
+// Pattern 6.3
+
+.y-tree {
+    color: @tree-row-text-color;
+
+    * {
+        transition: all .25s ease;
+    }
+
+    .row {  
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .desktop-layout {
+        border: 1px solid @body-bg;
+        margin-top: -1px;
+        padding: 20px 15px 10px 15px;
+    }
+    
+    .mobile-layout {
+        border: 1px solid @body-bg;
+        margin-top: -1px;
+        padding: 15px;
+        position: relative;
+
+        .tree-head {
+            padding: inherit;
+            background: inherit;
+        }
+        
+        .mobile-data {
+            padding-bottom: 20px;
+        }
+
+        .mobile-more-menu{
+            position: absolute;
+            right: 0;
+            text:0;
+            padding:10px 20px;
+        }
+    }
+    
+    .tree-head {
+        font-size: 13px;
+        text-transform: uppercase;
+        color: @tree-head-text-color;
+        background: 0 0;
+        background-color: transparent;
+        padding: 50px 15px 15px 15px;
+    }
+
+    .primaryData {
+        font-weight: 600;
+        color: @tree-row-text-color;
+    }
+
+    .inactive-level{
+        background-color: @default-greyblue-table-row;  
+    }
+
+    .active-level{
+        .desktop-layout, 
+        .mobile-layout {
+            background-color: @white;
+        }
+    }
+
+    .active-level--last {
+        margin-bottom: 12px;
+    }
+
+    .category-toggle, 
+    .dropdown-toggle {
+        padding: 0;
+    }
+
+    .category-toggle{
+        margin: -5px 0 0 -10px;
+    }
+
+    .hyicon-chevron:before{
+        font-size: 30px;
+        transition: all 0.25s ease;
+    }
+
+    .category-toggle[aria-expanded=true]{
+        .hyicon-chevron:before{
+            transform: rotate(90deg);
+        }
     }
 }
