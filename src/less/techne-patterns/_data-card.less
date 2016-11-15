@@ -69,6 +69,92 @@
 //
 // Pattern 4.2
 
+// Grouped Cards with Section Headlines
+//
+// In some cases it is useful to group data cards on a single page with clear section/sub-section headings. Also it may be useful to nest such groups and allow the display to scale gracefully. In these cases please use this modifier to the data card component.
+//
+// Markup:
+// <div class="dataCards dataCards-grouped dataCards-singleColumn">
+//  <div class="dataCard-heading">
+//    <div class="cardRow">
+//      <h3>Section Headline</h3>
+//     </div>
+//  </div>
+//  <label class="dataCard" for="selectableCardDemo">
+//    <span class="cardRow cardRowClickable">
+//           <span class="y-table">
+//               <span class="y-table-cell dataCard-select">
+//                   <span class="checkbox">
+//                       <input type="checkbox" id="selectableCardDemo" checked />
+//                       <label for="selectableCardDemo"></label>
+//                   </span>
+//               </span>
+//               <span class="y-table-cell">
+//                   <p class="primaryData">Primary Value</p>
+//                   <p class="secondaryData">Secondary Data</p>
+//               </span>
+//           </span>
+//       </span>
+// </label>
+//   <label class="dataCard" for="selectableCardDemo2">
+//       <span class="cardRow cardRowClickable">
+//           <span class="y-table">
+//               <span class="y-table-cell dataCard-select">
+//                   <span class="checkbox">
+//                       <input type="checkbox" id="selectableCardDemo2" />
+//                       <label for="selectableCardDemo2"></label>
+//                   </span>
+//               </span>
+//               <span class="y-table-cell">
+//                   <p class="primaryData">Primary Value</p>
+//                   <p class="secondaryData">Secondary Data</p>
+//               </span>
+//           </span>
+//       </span>
+// </label>
+// </div>
+// <div class="dataCards dataCards-grouped dataCards-singleColumn">
+//  <div class="dataCard-heading">
+//    <div class="cardRow">
+//      <h3>Section 2 Headline</h3>
+//     </div>
+//  </div>
+//  <label class="dataCard" for="selectableCardDemo3">
+//    <span class="cardRow cardRowClickable">
+//           <span class="y-table">
+//               <span class="y-table-cell dataCard-select">
+//                   <span class="checkbox">
+//                       <input type="checkbox" id="selectableCardDemo3"/>
+//                       <label for="selectableCardDemo3"></label>
+//                   </span>
+//               </span>
+//               <span class="y-table-cell">
+//                   <p class="primaryData">Primary Value</p>
+//                   <p class="secondaryData">Secondary Data</p>
+//               </span>
+//           </span>
+//       </span>
+// </label>
+//   <label class="dataCard" for="selectableCardDemo4">
+//       <span class="cardRow cardRowClickable">
+//           <span class="y-table">
+//               <span class="y-table-cell dataCard-select">
+//                   <span class="checkbox">
+//                       <input type="checkbox" id="selectableCardDemo4" checked  />
+//                       <label for="selectableCardDemo4"></label>
+//                   </span>
+//               </span>
+//               <span class="y-table-cell">
+//                   <p class="primaryData">Primary Value</p>
+//                   <p class="secondaryData">Secondary Data</p>
+//               </span>
+//           </span>
+//       </span>
+// </label>
+// </div>
+//
+// Pattern 4.3
+
 .dataCards {
   display: flex;
   display: -webkit-flex; /* Safari */
@@ -91,6 +177,31 @@
 
   @media (max-width:@screen-xs-max) {
     flex-direction: column;
+  }
+
+  // Modifier for Datacard Lists with multiple sections
+  &.dataCards-grouped{
+    margin-bottom: 20px;
+    
+    .dataCard{
+      margin-bottom: 0px;
+      margin-right: 0px;
+      border-top: none !important;
+      border-right: 1px solid rgba(138, 143, 161, 0.3);
+      border-left: 1px solid rgba(138, 143, 161, 0.3);
+      box-shadow: 0 0px 0 rgba(138,143,161,.3);
+      
+      .cardRow{
+        &.cardRowClickable{
+          &:hover,
+          &:focus {
+            border-top: 1px solid rgba(138, 143, 161, 0.3);
+          }
+        }
+      }
+
+    }
+
   }
 
   &.dataCards-singleColumn{
@@ -267,6 +378,18 @@ a.dataCard{
     color: @default-red;
   }
 
+}
+
+.dataCard-heading{
+    .dataCard();
+    box-shadow: 0 0 0;
+    width: 100%!important;
+    margin-bottom: 0;
+    border-bottom: none; 
+
+    h3{
+      margin-top: 10px;
+    }
 }
 
 .dataCard-seeall{
