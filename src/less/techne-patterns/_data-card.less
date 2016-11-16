@@ -82,34 +82,30 @@
 //  </div>
 //  <label class="dataCard" for="selectableCardDemo">
 //    <span class="cardRow cardRowClickable">
-//           <span class="y-table">
-//               <span class="y-table-cell dataCard-select">
-//                   <span class="checkbox">
-//                       <input type="checkbox" id="selectableCardDemo" checked />
-//                       <label for="selectableCardDemo"></label>
-//                   </span>
+//           <span class="display-inline-block dataCard-select">
+//               <span class="checkbox">
+//                   <input type="checkbox" id="selectableCardDemo" checked />
+//                   <label for="selectableCardDemo"></label>
 //               </span>
-//               <span class="y-table-cell">
-//                   <p class="primaryData">Primary Value</p>
-//                   <p class="secondaryData">Secondary Data</p>
-//               </span>
+//           </span>
+//           <span class="display-inline-block">
+//               <p class="primaryData">Primary Value</p>
+//               <p class="secondaryData">Secondary Data</p>
 //           </span>
 //       </span>
 // </label>
 //   <label class="dataCard" for="selectableCardDemo2">
 //       <span class="cardRow cardRowClickable">
-//           <span class="y-table">
-//               <span class="y-table-cell dataCard-select">
-//                   <span class="checkbox">
-//                       <input type="checkbox" id="selectableCardDemo2" />
-//                       <label for="selectableCardDemo2"></label>
-//                   </span>
-//               </span>
-//               <span class="y-table-cell">
-//                   <p class="primaryData">Primary Value</p>
-//                   <p class="secondaryData">Secondary Data</p>
-//               </span>
-//           </span>
+//           <span class="display-inline-block dataCard-select">
+//              <span class="checkbox">
+//                  <input type="checkbox" id="selectableCardDemo2" />
+//                  <label for="selectableCardDemo2"></label>
+//              </span>
+//          </span>
+//          <span class="display-inline-block">
+//              <p class="primaryData">Primary Value</p>
+//              <p class="secondaryData">Secondary Data</p>
+//          </span>
 //       </span>
 // </label>
 // </div>
@@ -121,33 +117,29 @@
 //  </div>
 //  <label class="dataCard" for="selectableCardDemo3">
 //    <span class="cardRow cardRowClickable">
-//           <span class="y-table">
-//               <span class="y-table-cell dataCard-select">
-//                   <span class="checkbox">
-//                       <input type="checkbox" id="selectableCardDemo3"/>
-//                       <label for="selectableCardDemo3"></label>
-//                   </span>
-//               </span>
-//               <span class="y-table-cell">
-//                   <p class="primaryData">Primary Value</p>
-//                   <p class="secondaryData">Secondary Data</p>
-//               </span>
+//          <span class="display-inline-block dataCard-select">
+//              <span class="checkbox">
+//                  <input type="checkbox" id="selectableCardDemo3"/>
+//                  <label for="selectableCardDemo3"></label>
+//              </span>
+//          </span>
+//          <span class="display-inline-block">
+//              <p class="primaryData">Primary Value</p>
+//              <p class="secondaryData">Secondary Data</p>
 //           </span>
 //       </span>
 // </label>
 //   <label class="dataCard" for="selectableCardDemo4">
 //       <span class="cardRow cardRowClickable">
-//           <span class="y-table">
-//               <span class="y-table-cell dataCard-select">
-//                   <span class="checkbox">
-//                       <input type="checkbox" id="selectableCardDemo4" checked  />
-//                       <label for="selectableCardDemo4"></label>
-//                   </span>
+//           <span class="display-inline-block dataCard-select">
+//               <span class="checkbox">
+//                   <input type="checkbox" id="selectableCardDemo4" checked  />
+//                   <label for="selectableCardDemo4"></label>
 //               </span>
-//               <span class="y-table-cell">
-//                   <p class="primaryData">Primary Value</p>
-//                   <p class="secondaryData">Secondary Data</p>
-//               </span>
+//           </span>
+//           <span class="display-inline-block">
+//               <p class="primaryData">Primary Value</p>
+//               <p class="secondaryData">Secondary Data</p>
 //           </span>
 //       </span>
 // </label>
@@ -179,6 +171,15 @@
     flex-direction: column;
   }
 
+  .cardRow {
+    border-top: 1px solid transparent;
+    &.cardRowClickable {
+      &:hover, &:focus {
+        border-top: 1px solid rgba(138, 143, 161, 0.3);
+      }
+    }
+  }
+
   // Modifier for Datacard Lists with multiple sections
   &.dataCards-grouped{
     margin-bottom: 20px;
@@ -193,6 +194,8 @@
       
       .cardRow{
         &.cardRowClickable{
+          border: 1px solid transparent;
+
           &:hover,
           &:focus {
             border-top: 1px solid rgba(138, 143, 161, 0.3);
