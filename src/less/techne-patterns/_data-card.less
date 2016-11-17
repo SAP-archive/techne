@@ -174,8 +174,9 @@
   .cardRow {
     border-top: 1px solid transparent;
     &.cardRowClickable {
-      &:hover, &:focus {
-        border-top: 1px solid rgba(138, 143, 161, 0.3);
+      &:hover, 
+      &:focus {
+        border-top: 1px solid @cards-shadow-color;
       }
     }
   }
@@ -188,9 +189,9 @@
       margin-bottom: 0px;
       margin-right: 0px;
       border-top: none !important;
-      border-right: 1px solid rgba(138, 143, 161, 0.3);
-      border-left: 1px solid rgba(138, 143, 161, 0.3);
-      box-shadow: 0 0px 0 rgba(138,143,161,.3);
+      border-right: 1px solid @cards-border-color;
+      border-left: 1px solid @cards-border-color;
+      box-shadow: 0 0px 0 @cards-shadow-color;
       
       .cardRow{
         &.cardRowClickable{
@@ -198,7 +199,7 @@
 
           &:hover,
           &:focus {
-            border-top: 1px solid rgba(138, 143, 161, 0.3);
+            border-top: 1px solid @cards-shadow-color;
           }
         }
       }
@@ -239,7 +240,7 @@ a.dataCard{
   display: -ms-flexbox; /* IE10 */
   cursor: default;
   overflow: visible !important;
-  box-shadow: 0 1px 0 rgba(138, 143, 161, 0.3);
+  box-shadow: 0 1px 0 @cards-shadow-color;
   margin-bottom: 7px;
   margin-top: 0;
   transition: all 0.1s ease-in-out 0s;
@@ -321,7 +322,7 @@ a.dataCard{
       &:hover,
       &:focus {
         background-color: #fff;
-        box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
+        box-shadow: 0 3px 5px @cards-shadow-color;
         color: #555555;
         margin-bottom: 2px;
         margin-top: -2px;
@@ -392,6 +393,7 @@ a.dataCard{
 
     h3{
       margin-top: 10px;
+      font-weight: normal;
     }
 }
 
