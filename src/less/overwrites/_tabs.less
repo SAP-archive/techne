@@ -118,6 +118,7 @@
         &:active{
           border-width: 0 0 @nav-tabs-border-width-bottom;
           border-color: @nav-tabs-active-link-hover-border-color;
+          background-color: transparent;
         }
       }
     }
@@ -132,11 +133,11 @@
     		&:active{
     			color: @default-blue;
           border-width: 0 0 @nav-tabs-border-width-bottom;
-          background: #fff;
+          background-color: transparent;
     		}
         &:focus,
         &:active{
-          background: #fff;
+          background-color: transparent;
           border-color: @nav-tabs-link-active-border-color;
         }
 
@@ -240,7 +241,6 @@
 
 
 //Color States are deprecated, please remove them soon
-
 .nav-tabs-variant(has-success; transparent; @state-success-bg; @state-success-bg;);
 .nav-tabs-variant(has-info; transparent; @state-info-bg; @state-info-bg);
 .nav-tabs-variant(has-warning; transparent; @state-warning-bg; @state-warning-bg;);
@@ -248,7 +248,6 @@
 
 
 // States for Tabs
-
 .nav-tabs-variant(@state; @background; @border; @color; ) {
 
   .nav-tabs {
