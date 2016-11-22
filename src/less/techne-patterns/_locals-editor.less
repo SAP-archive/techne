@@ -307,6 +307,12 @@
     font-weight: bold;
 }
 
+.locals-editor .locals-tabs .active a:hover{
+    .caret{
+        border-top-color: @default-blue;
+    }
+}
+
 .locals-editor .locals-tabs li:not(.active){
     border-color: @default-grey-700;
 }
@@ -358,6 +364,7 @@
 .locals-tabs .locals-tabs__more-menu.active .caret,
 .locals-tabs .locals-tabs__more-menu.active .has-error .caret{
     border-color:transparent;
+    background-color: transparent;
     border-top-color: @navbar-default-bg;
 }
 
