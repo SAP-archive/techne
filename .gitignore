@@ -9,6 +9,7 @@ src/less/globals/_resource-paths.less
 
 ## IDE Specfici folders
 .idea/
+.vscode/
 
 docs/kss/*.html
 docs/kss/patterns/*.html
