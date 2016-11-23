@@ -167,8 +167,8 @@
 
 .select2-container .select2-choice .select2-arrow,
 .select2-container .select2-choice div /* 1 */ {
-  border-left: 1px solid @input-border;
-  background: @light-blue;
+  border-left: none;
+  background: none;
   text-align: center;
   width: 40px;
   line-height: 2em;
@@ -193,11 +193,15 @@
 .select2-container .select2-choice div b /* 1 */ {
   background: none;
   .caret();
+  border-top: 8px dashed;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  margin-top: 10px;
 }
 
 .select2-dropdown-open .select2-choice .select2-arrow b,
 .select2-dropdown-open .select2-choice div b /* 1 */ {
-  border-top: 0;
+  border-top: none;
   border-bottom: @caret-width-base solid;
   content: "";
 }
@@ -302,9 +306,18 @@
  * Adjust Select2's choices hover and selected styles to match Bootstrap 3's default dropdown styles.
  */
 
-.select2-results .select2-highlighted {
-  color: @dropdown-link-active-color;
-  background-color: @dropdown-link-active-bg;
+.select2-results { 
+  margin-right: 0; 
+  padding: 0;
+
+  .select2-highlighted {
+    color: @dropdown-link-active-color;
+    background-color: @dropdown-link-active-bg;
+  }
+
+  .select2-result-label {
+    padding: 3px 7px 4px 16px;
+  }
 }
 
 /**
