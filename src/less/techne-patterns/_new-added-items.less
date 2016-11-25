@@ -1,0 +1,64 @@
+// New Cards
+//
+// When adding new cards use ...
+//
+// Markup:
+// <ul class="dataCards">
+//  <li class="y-add dataCard ">
+//     <button  type="button" class="y-add-btn">
+//         <span class="hyicon hyicon-add"></span>
+//         New Button
+//     </button>
+//  </li>
+//  <li class="dataCard new-item">
+//    <div class="cardRow cardRowClickable">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can click me!
+//        </p>
+//        <span class="label label-success">
+//          Active Label
+//        </span>
+//    </div>
+//  </li>
+//  <li class="dataCard">
+//    <div class="cardRow">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can't click me, I'm static!
+//        </p>
+//          <span class="label label-default">
+//            Default Label
+//          </span>
+//    </div>
+//  </li>
+//  <li class="dataCard">
+//    <div class="cardRow cardRowDisabled">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can't click me, I'm disabled!
+//        </p>
+//        <p class="statusDataValue">
+//          <span class="active">
+//            Active
+//          </span>
+//        </p>
+//    </div>
+//  </li>
+// </ul>
+//
+// Pattern 16.1
+
+.dataCard {
+  &.new-item {
+    .cardRow, .cardRow.cardRowClickable {
+      background: @new-added-item-highlight-background;
+    }
+  }
+}
