@@ -11,7 +11,7 @@
 //         <span class="hyicon hyicon-add"></span>
 //         VALUE
 //     </button>
-//     <div class="collapse" id="expandableBtnOptions">
+//     <div class="expandable-options collapse" id="expandableBtnOptions">
 //         <div class="dropdown">
 //             <button
 //                 class="y-add-btn y-add-existing"
@@ -41,6 +41,9 @@
 // Pattern 14.1
 
 .expandable-btn-wrapper{
+    position: relative;
+    z-index: 10;
+
     .y-add-main{
         position: relative;
         transition: all 0.25s ease;
@@ -54,8 +57,6 @@
 
     .y-add-main[aria-expanded=true]{
         color: @dark-grey-800;
-        padding:10px;
-        border-bottom: none;
 
         .hyicon{
            color: @dark-grey-800;
@@ -66,6 +67,11 @@
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
+    }
+
+    .expandable-options {
+        position: absolute;
+        width: 100%;
     }
 
     .dropdown-menu{
