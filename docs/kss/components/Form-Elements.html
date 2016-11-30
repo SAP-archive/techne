@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1479832339749">
+  <link rel="stylesheet" href="../public/kss.css?t=1480522504608">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1479832339749">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1479832339749">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1480522504608">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1480522504608">
 
 
 
@@ -258,7 +258,7 @@ Focus on the action required and make it relevant to the user’s current situat
                             <div class="kss-modifier-example">
                                 <div class="checkbox">
  <input type="checkbox" id="optionsCheck1" value="optionc1" checked>
- <label for="optionsCheck1">Check me out</label>
+ <label for="optionsCheck1" class="control-label">Check me out</label>
 </div>
                             </div>
                         </div>
@@ -266,7 +266,7 @@ Focus on the action required and make it relevant to the user’s current situat
                             <div class="seperator">
                                 <pre class="code-snippet"><code data-language="html" class="html">&lt;div class=&quot;checkbox&quot;&gt;
  &lt;input type=&quot;checkbox&quot; id=&quot;optionsCheck1&quot; value=&quot;optionc1&quot; checked&gt;
- &lt;label for=&quot;optionsCheck1&quot;&gt;Check me out&lt;/label&gt;
+ &lt;label for=&quot;optionsCheck1&quot; class=&quot;control-label&quot;&gt;Check me out&lt;/label&gt;
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
@@ -284,11 +284,11 @@ Focus on the action required and make it relevant to the user’s current situat
                             <div class="kss-modifier-example">
                                 <div class="radio">
 	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	<label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
+	<label for="optionsRadios1" class="control-label">Option one is this and that&mdash;be sure to include why it's great</label>
 </div>
 <div class="radio">
 	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-	<label for="optionsRadios2">Option two can be something else and selecting it will deselect option one </label>
+	<label for="optionsRadios2" class="control-label">Option two can be something else and selecting it will deselect option one </label>
 </div>
                             </div>
                         </div>
@@ -296,18 +296,62 @@ Focus on the action required and make it relevant to the user’s current situat
                             <div class="seperator">
                                 <pre class="code-snippet"><code data-language="html" class="html">&lt;div class=&quot;radio&quot;&gt;
 	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-	&lt;label for=&quot;optionsRadios1&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
+	&lt;label for=&quot;optionsRadios1&quot; class=&quot;control-label&quot;&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;radio&quot;&gt;
 	&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; &gt;
-	&lt;label for=&quot;optionsRadios2&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
+	&lt;label for=&quot;optionsRadios2&quot; class=&quot;control-label&quot;&gt;Option two can be something else and selecting it will deselect option one &lt;/label&gt;
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="section-4.5" class="Read Only Form Elements kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">4.5</span> Read Only Form Elements</h3>
+                <section id="section-4.5" class="Custom Select kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">4.5</span> Custom Select</h3>
+
+                    <div class="kss-description">
+                        <p>Use <a href="https://select2.github.io/" target="_blank">Select2</a> for a replacement of the &quot;select&quot; control. It replace the standard &quot;select&quot; markup for custom html and adding the necesary Javascript functionality to make it stylable, accesible and keyboard friendly. Refer to <a href="https://select2.github.io/options.html" target="_blank">Select2 documentation</a> to see how to implement it.</p>
+
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                <label for="customSelect1" class="control-label">Select Print color</label>
+<select id="customSelect1" class="form-control input-lg">
+  <optgroup label="Primary">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="blue">Yellow</option>
+  </optgroup>
+  <optgroup label="Secondary">
+    <option value="blue">Orange</option>
+    <option value="blue">Green</option>
+    <option value="blue">Violet</option>
+ </optgroup>
+</select>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">&lt;label for=&quot;customSelect1&quot; class=&quot;control-label&quot;&gt;Select Print color&lt;/label&gt;
+&lt;select id=&quot;customSelect1&quot; class=&quot;form-control input-lg&quot;&gt;
+  &lt;optgroup label=&quot;Primary&quot;&gt;
+    &lt;option value=&quot;red&quot;&gt;Red&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;Blue&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;Yellow&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label=&quot;Secondary&quot;&gt;
+    &lt;option value=&quot;blue&quot;&gt;Orange&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;Green&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;Violet&lt;/option&gt;
+ &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-4.6" class="Read Only Form Elements kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">4.6</span> Read Only Form Elements</h3>
 
                     <div class="kss-description">
                         <p>Read Only Form Elements share the same styling as
@@ -398,20 +442,20 @@ within a form.</p>
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1479832339749"></script>
+<script src="../public/kss.js?t=1480522504608"></script>
 
-<script src="../public/prettify.js?t=1479832339749"></script>
-<script src="../public/js/jquery.min.js?t=1479832339749"></script>
-<script src="../public/main.js?t=1479832339749"></script>
-<script src="../public/js/bootstrap.min.js?t=1479832339749"></script>
-<script src="../public/js/select2.js?t=1479832339749"></script>
+<script src="../public/prettify.js?t=1480522504608"></script>
+<script src="../public/js/jquery.min.js?t=1480522504608"></script>
+<script src="../public/main.js?t=1480522504608"></script>
+<script src="../public/js/bootstrap.min.js?t=1480522504608"></script>
+<script src="../public/js/select2.js?t=1480522504608"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1479832339749"></script>
-<script src="../public/jquery.cookiebar.js?t=1479832339749"></script>
-<script src="../public/js/highlight.pack.min.js?t=1479832339749"></script>
+<script src="../public/js/yaas.sso.js?t=1480522504608"></script>
+<script src="../public/jquery.cookiebar.js?t=1480522504608"></script>
+<script src="../public/js/highlight.pack.min.js?t=1480522504608"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1479832339749"></script>
+<script src="../public/script.js?t=1480522504608"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
