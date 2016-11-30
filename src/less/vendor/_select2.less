@@ -193,10 +193,10 @@
 .select2-container .select2-choice div b /* 1 */ {
   background: none;
   .caret();
-  border-top: 8px dashed;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
-  margin-top: 10px;
+  border-top: @caret-width-base dashed;
+  border-right: @caret-width-base solid transparent;
+  border-left: @caret-width-base solid transparent;
+  margin-top: 12px;
 }
 
 .select2-dropdown-open .select2-choice .select2-arrow b,
@@ -206,6 +206,10 @@
   content: "";
 }
 
+.select2-container-active .select2-choice .select2-arrow b,
+.select2-container-active .select2-choice div b {
+  color: @dropdown-link-active-bg;
+}
 
 /**
  * Address Bootstrap's validation states and change Select2's border colors and focus states.
