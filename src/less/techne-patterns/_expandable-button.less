@@ -1,4 +1,6 @@
 
+// Inline layout
+//
 // Markup:
 // <div class="expandable-btn-wrapper">
 //     <button
@@ -11,7 +13,7 @@
 //         <span class="hyicon hyicon-add"></span>
 //         VALUE
 //     </button>
-//     <div class="collapse" id="expandableBtnOptions">
+//     <div class="expandable-options collapse" id="expandableBtnOptions">
 //         <div class="dropdown">
 //             <button
 //                 class="y-add-btn y-add-existing"
@@ -40,7 +42,56 @@
 //
 // Pattern 14.1
 
+// Overlay layout
+//
+// Use the modifier class ".expandable-btn-overlay" when you don't want the expanded options to affect the rest of the elements. 
+//
+// Markup:
+// <div class="expandable-btn-wrapper expandable-btn-overlay">
+//     <button
+//         class="y-add-btn y-add-main"
+//         type="button"
+//         data-toggle="collapse"
+//         data-target="#expandableBtnOptions2"
+//         aria-expanded="false"
+//         aria-controls="expandableBtnOptions">
+//         <span class="hyicon hyicon-add"></span>
+//         VALUE
+//     </button>
+//     <div class="expandable-options collapse" id="expandableBtnOptions2">
+//         <div class="dropdown">
+//             <button
+//                 class="y-add-btn y-add-existing"
+//                 type="button"
+//                 id="existingOptionsList2"
+//                 data-toggle="dropdown"
+//                 aria-haspopup="true"
+//                 aria-expanded="true">
+//                 Existing
+//                 <span class="hyicon hyicon-arrow"></span>
+//             </button>
+//             <ul class="dropdown-menu" aria-labelledby="existingOptionsList2">
+//                 <li><a href="#">Action</a></li>
+//                 <li><a href="#">Another action</a></li>
+//                 <li><a href="#">Something else here</a></li>
+//                 <li role="separator" class="divider"></li>
+//                 <li><a href="#">Separated link</a></li>
+//             </ul>
+//         </div>
+//         <button class="y-add-btn y-add-new">
+//             <span class="hyicon hyicon-add"></span>
+//             New
+//         </button>
+//     </div>
+// </div>
+//
+// Pattern 14.2
+
+
 .expandable-btn-wrapper{
+    position: relative;
+    z-index: 10;
+
     .y-add-main{
         position: relative;
         transition: all 0.25s ease;
@@ -54,8 +105,6 @@
 
     .y-add-main[aria-expanded=true]{
         color: @dark-grey-800;
-        padding:10px;
-        border-bottom: none;
 
         .hyicon{
            color: @dark-grey-800;
@@ -96,5 +145,12 @@
 
     *:focus {
         outline: none; 
+    }
+
+    &.expandable-btn-overlay {
+        .expandable-options {
+            position: absolute;
+            width: 100%;
+        }
     }
 }
