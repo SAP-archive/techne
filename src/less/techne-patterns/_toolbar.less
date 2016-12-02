@@ -434,7 +434,7 @@
 
 
 			.y-toolbar__input--transparent&{
-				-webkit-user-select: none;
+				user-select: none;
 				background: transparent;
 				border-color: transparent;
 				box-shadow: none;
@@ -572,20 +572,9 @@
 
 	@media (max-width: @y-toolbar-breakpoint) {
 		.y-toolbar{
-			display: -webkit-box;
-		    display: -moz-box;
-		    display: -ms-flexbox;
-		    display: -webkit-flex;
 		    display: flex;
-		    -webkit-box-orient: vertical;
-		    -moz-box-orient: vertical;
-		    -webkit-flex-direction: row;
-		    -ms-flex-direction: row;
+		    box-orient: vertical;
 		    flex-direction: row;
-		    -webkit-box-align: start;
-		    -moz-box-align: start;
-		    -ms-flex-align: start;
-		    -webkit-align-items: flex-start;
 		    align-items: flex-start;
 
 			 &:before{
@@ -602,19 +591,13 @@
 		}
 
 		.y-toolbar__item.y-toolbar__item-filter{
-			webkit-box-ordinal-group: 5;
-			-moz-box-ordinal-group: 5;
-			-ms-flex-order: 1;
-			-webkit-order: 1;
+			box-ordinal-group: 5;
 			order: 1;
 		}
 
 		.y-toolbar__item.y-toolbar__item-sort{
 			border-right: none;
-			webkit-box-ordinal-group: 5;
-			-moz-box-ordinal-group: 5;
-			-ms-flex-order: 2;
-			-webkit-order: 2;
+			box-ordinal-group: 5;
 			order: 2;
 			flex: 2;
 
@@ -637,10 +620,7 @@
 			flex-wrap: nowrap;
 			border-top: 1px solid @default-greyblue-500;
 
-			-webkit-box-ordinal-group: 5;
-			-moz-box-ordinal-group: 5;
-			-ms-flex-order: 5;
-			-webkit-order: 5;
+			box-ordinal-group: 5;
 			order: 5;
 
 			.y-toolbar__item{
@@ -669,10 +649,7 @@
 			width: 100%;
 			border-top: 1px solid @default-greyblue-500;
 
-			-webkit-box-ordinal-group: 5;
-			-moz-box-ordinal-group: 5;
-			-ms-flex-order: 3;
-			-webkit-order: 3;
+			box-ordinal-group: 5;
 			order: 3;
 
 
@@ -690,10 +667,7 @@
 		.y-filter-list{
 			border-top: 1px solid @default-greyblue-500;
 			border-bottom: none;
-			webkit-box-ordinal-group: 5;
-			-moz-box-ordinal-group: 5;
-			-ms-flex-order: 4;
-			-webkit-order: 4;
+			box-ordinal-group: 5;
 			order: 4;
 
 			.y-filter-list__applied{
