@@ -199,6 +199,9 @@ $( document ).ready(function(){
     // initiate jshilight
     hljs.initHighlightingOnLoad();
 
+    // initialize select
+    $("select#customSelect1").select2({ minimumResultsForSearch: Infinity });
+
 });
 
 

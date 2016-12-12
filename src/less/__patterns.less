@@ -1,0 +1,148 @@
+// Navigation
+//
+// YaaS IO uses an off-canvas navigation pattern to maximize screen real estate.
+// A “parent/child” relationship is used to control the views in the panels. The “parent” panel should contain all navigation items and the ‘child’ panel should contain the content or tooling meant for interaction.
+// It is not recommended additional panels are created or nested within the existing parent/child structure as this will put the overall flow and focus of content at risk.
+//
+// Pattern 1
+@import "./techne-patterns/_navigation.less";
+
+
+// Data Set Display
+//
+// Pattern 2
+@import "./techne-patterns/_data-set-display.less";
+
+
+// Action Bar
+//
+// The Action Bar sits at the top of an object detail page and allows for saving, cancelling, going back, and other actions upon the object. General guidelines for this pattern are as follows:
+// <ul>
+//  <li>The Action Bar sits at the top of the page </li>
+//  <li>When users come to a new/create object, the Cancel and Save are both visible and enabled.</li>
+//  <li>When there is a primary button other than Save, the Primary button should always be active (see screenshots).  There is no Cancel link in this case.</li>
+//  <li>On an object page in edit mode, before any edits have been made Cancel and Save are not visible or enabled. A user must click or tap inside a field to make visible and enable the Save and Cancel actions.</li>
+//  <li>In the new or edit scenario if a user clicks on Cancel, the form is cleared and the user is taken back to the page they came from.</li>
+//  <li>If the user leaves a page in the middle of create or edit, they should receive a confirmation dialogue asking them to confirm whether they want to leave the page without saving (see screenshot)</li>
+// </ul>
+//
+// Pattern 3
+@import "./techne-patterns/_action-bar.less";
+
+
+// Cards
+//
+// Cards are used to display information in a visual, scannable manner. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
+//
+// Pattern 4
+@import "./techne-patterns/_usercards";
+@import "./techne-patterns/_data-card.less";
+@import "./techne-patterns/_data.less";
+
+
+// Tables
+//
+// At Desktop and Tablet inflections, it is recommended to show 25 rows of data along with the <a href="/patterns/Toolbar.html">Toolbar</a>. At the Mobile inflection, it is recommended to show 10 rows of data before pagination.
+//
+// Pattern 5
+@import "./techne-patterns/_tables.less";
+
+
+// Trees
+//
+// Tree component is used to display and interact with hierarchical information. On Techné this pattern not only display the nodes names but also can have additional information for every item; think of it as a mix between a tree and a table.
+//
+// The interaction is designed to keep the user focused, highlighting the deepest level of expanded information. Refer to the <a href="../starterpages/tree.html" target="_blank">Tree Starter Page</a> to see an example of the interactivity.
+//
+// Pattern 6
+@import "./techne-patterns/_trees.less";
+
+
+// Dialogues/Modals
+//
+// <p>Modals can be used to facilitate in-context tasks, wizards, and interactive notifications. Modals can contain other components or patterns to achieve task completion. Use modals sparingly and ensure correct display in mobile devices.<p>
+// <p>When used, at a minimum a modal should have a a clear header title and a close action (X). Other buttons or actions are at the discretion of the team and task at-hand.</p>
+// <p>If there is a primary and secondary action available as part of the modal, for example, "Save" and "Cancel" these actions should follow the standard pattern guidelines where the Primary action uses the Primary Button component placed in the bottom-right corner of the modal, and to the right of the "Cancel" button link.</p>
+//
+// Pattern 7
+@import "./techne-patterns/_dialogues-modals.less";
+
+
+// Localization Editor
+//
+// The Localization Editor component is used when content needs to allow for translation into more than one locale.
+//
+// Pattern 8
+@import "./techne-patterns/_locals-editor";
+
+
+
+// Wizards
+//
+// Wizards are made up of the modal component and button and/or button link components. Use the wizard pattern when you want to guide people through a step-by-step process. Typically a wizard will have a ‘next’ and ‘previous’ action and a “Save” action at the last step.
+//
+// Pattern 9
+@import "./techne-patterns/_wizards";
+
+
+// Tours
+//
+// A “Tour” should be used when a new visitor comes to a UI module.  It gives a step-by-step explanation of what the UI Module covers and where to go to accomplish certain tasks.  The ‘Tour’ pattern uses the “Tour Bubble” UI component.
+//
+// Pattern 10
+@import "./techne-patterns/_tours";
+
+
+// Tour Bubble
+//
+// Use the Tour UI component to put together a comprehensive overview of UIs to new visitors.
+//
+// Pattern 11
+@import './techne-patterns/_popover.less';
+
+
+// Feedback Form
+//
+// Standardized feedback form pattern. Click feedback button below to open form.
+//
+// Pattern 12
+@import "./techne-patterns/_feedback-form";
+
+
+// Toolbar
+//
+// Pattern 13
+@import "./techne-patterns/_toolbar";
+
+
+// Expandable Button
+//
+// The Expandable Button allows you to design an experience that supports multiple actions from a dropdown; select an existing value or create a new value. On selection of "New" the experience may lead the user to a new page, open a modal, or expand an input field, depending on the data that needs to be displayed once a user clicks "New".
+//
+// Pattern 14
+@import "./techne-patterns/_expandable-button";
+
+
+// Product Thumbnail
+//
+// Use this pattern to show a list of product information along with pictures. This pattern is used mainly to provide a fast way to find items/products visually. Space is provided bellow the image to display the most relevant information of the product.
+//
+// Refer to the <a href="../starterpages/product-grid.html" target="_blank">Product Grid Starter Page</a> to see an example of the Product Thumbnail pattern used on a list, arranged like a Grid.
+//
+// Pattern 15
+@import "./techne-patterns/_product-thumbnail";
+
+// New Items
+//
+// When adding new items to a view, or when modifying data and the modifications are not saved yet; we recommend highlighting the new elements and modified data. To signal the user the changes are still not saved and can be lost. 
+//
+// When using Techné you can achieve this by adding the CSS class “new-item” to Cards, Table rows or Tree rows. As shown on the example bellow.
+//
+// The elements highlighted should return to their default style when the changes are sent and saved to the backend. Just remove the class “new-item”.
+//
+// Pattern 16
+@import "./techne-patterns/_new-items";
+
+
+// END PATTERNS //
+

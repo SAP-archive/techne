@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1471894668842">
+  <link rel="stylesheet" href="../public/kss.css?t=1481043362718">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1471894668842">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1471894668842">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1481043362718">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1481043362718">
 
 
 
@@ -51,22 +51,10 @@
         <ul class="nav-super">
             <li><a href="https://www.yaas.io/">Home</a></li>
             <li><a href="https://market.yaas.io">YaaS Market</a></li>
-            <li><a href="https://devportal.yaas.io" class="active">Dev Portal</a></li>
+            <li><a href="https://community.yaas.io">Community</a></li>
+            <li><a href="https://devportal.yaas.io">Dev Portal</a></li>
+            <li><a href="https://knowledge.yaas.io">Knowledge Hub</a></li>
             <li><a href="https://builder.yaas.io">Builder</a></li>
-            <li class="yg-dropdown-node js-yg-dropdown-node">
-                <a href="https://community.yaas.io">Community</a>
-                <div class="nav-super-submenu-toggle">
-                    <span class="nav-super-triangle"></span>
-                </div>
-                <ul class="yg-dropdown">
-                    <li class="yg-dropdown--menu-link">
-                        <a href="https://community.yaas.io">Co-Innovation Network</a>
-                    </li>
-                    <li class="yg-dropdown--menu-link">
-                        <a href="https://experts.hybris.com/spaces/102/index.html" target="_blank">hybris Experts</a>
-                    </li>
-                </ul>
-            </li>
             <li class="account js-yg-dropdown-node">
                 <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Account</a>
                 <div class="nav-super-submenu-toggle">
@@ -80,7 +68,6 @@
                                 <li class="profile-head">
                                 <div class="profile-details">
                                     <div class="profile-email">
-
                                     </div>
                                     <div class="profile-link">
                                         <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Profile</a>
@@ -99,7 +86,7 @@
                             <a href="https://builder.yaas.io/">Sign In</a>
                         </div>
                         <div class="register-link menu-link">
-                            <a href="https://appexchange.yaas.io/#/register/">Register</a>
+                            <a href="https://www.yaas.io/register/">Register</a>
                         </div>
 
                     </li>
@@ -135,7 +122,7 @@
                         <span class="active">Patterns</span>
                 </li>
                 <li>
-                        <a href="../starterpages/index.html" class="inactive">Starter Pages</a>
+                        <a href="../starterpages/start.html" class="inactive">Starter Pages</a>
                 </li>
                 <li>
                         <a href="../GettingStarted.html" class="inactive">Download &amp; Get Started</a>
@@ -164,7 +151,11 @@
                                     <li class="kss-menu-item"><a href="Wizards.html">Wizards</a></li>
                                     <li class="kss-menu-item"><a href="Tours.html">Tours</a></li>
                                     <li class="kss-menu-item"><a href="Tour-Bubble.html">Tour Bubble</a></li>
-                                    <li class="kss-menu-item"><a href="Feedback-Form.html">Feedback Form </a></li>
+                                    <li class="kss-menu-item"><a href="Feedback-Form.html">Feedback Form</a></li>
+                                    <li class="kss-menu-item"><a href="Toolbar.html">Toolbar</a></li>
+                                    <li class="kss-menu-item"><a href="Expandable-Button.html">Expandable Button</a></li>
+                                    <li class="kss-menu-item"><a href="Product-Thumbnail.html">Product Thumbnail</a></li>
+                                    <li class="kss-menu-item"><a href="New-Items.html">New Items</a></li>
                         </ul>
                 </nav>
             </aside>
@@ -176,18 +167,21 @@
 
 
                     <div class="kss-description">
-                        <p>The Localization component is used when any content needs to allow for translation into a multiple languages or currencies.</p>
+                        <p>The Localization Editor component is used when content needs to allow for translation into more than one locale.</p>
 
                     </div>
                 </section>
-                <section id="section-8.1" class="Locals Editor kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">8.1</span> Locals Editor</h3>
+                <section id="section-8.1" class="Usage Guidelines kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.1</span> Usage Guidelines</h3>
 
+                    <div class="kss-description">
+                        <p>The localization editor presents a tab for each locale. The default locale will always be in the first position and selected. The selected tab is presented with a blue background. All other tabs are presented with a white background. The asterisk (*) indicates the locale is required.</p>
+
+                    </div>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                Locals editor - example with two required tabs, one of them the active 
-Markup:
+                                   <label class="control-label">Field Label</label>
    <div class="form-group locals-editor">
        <div class="locals-header clearfix">
            <ul class="nav nav-tabs locals-tabs">
@@ -196,11 +190,23 @@ Markup:
                <li> <a href="" class="is-required">DE</a></li>
                <li> <a href="">FR</a></li>
                <li> <a href="">PL</a></li>
+               <li> <a href="">DA</a></li>
+               <li class="dropdown locals-tabs__more-menu">
+                 <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+                   <span class="locals-tabs__more-span">MORE</span>
+                   <span class="caret"></span>
+                 </a>
+                 <ul class="dropdown-menu locals-tabs__more-tabs">
+                   <li>
+                       <a href="" class="locals-tabs__more-tab">IT</a>
+                   </li>
+                 </ul>
+               </li>
            </ul>
        </div>
        <div class="form-group ">
-           <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-               <input name="lastName" type="text" class="form-control input-lg">
+           <div class="property" baas-form-name ng-form="innerForm" >
+               <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon"/>
            </div>
        </div>
    </div>
@@ -208,8 +214,7 @@ Markup:
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">Locals editor - example with two required tabs, one of them the active 
-Markup:
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label class=&quot;control-label&quot;&gt;Field Label&lt;/label&gt;
    &lt;div class=&quot;form-group locals-editor&quot;&gt;
        &lt;div class=&quot;locals-header clearfix&quot;&gt;
            &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
@@ -218,11 +223,23 @@ Markup:
                &lt;li&gt; &lt;a href=&quot;&quot; class=&quot;is-required&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
                &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
                &lt;li&gt; &lt;a href=&quot;&quot;&gt;PL&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
+                 &lt;a class=&quot;dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                   &lt;span class=&quot;locals-tabs__more-span&quot;&gt;MORE&lt;/span&gt;
+                   &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                 &lt;/a&gt;
+                 &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
+                   &lt;li&gt;
+                       &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab&quot;&gt;IT&lt;/a&gt;
+                   &lt;/li&gt;
+                 &lt;/ul&gt;
+               &lt;/li&gt;
            &lt;/ul&gt;
        &lt;/div&gt;
        &lt;div class=&quot;form-group &quot;&gt;
-           &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot; style=&quot;width:100%&quot;&gt;
-               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+           &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot; &gt;
+               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot; value=&quot;Men Walk On Moon&quot;/&gt;
            &lt;/div&gt;
        &lt;/div&gt;
    &lt;/div&gt;</code></pre>
@@ -230,148 +247,34 @@ Markup:
                         </div>
                     </div>
                 </section>
-                <section id="section-8.2" class="Locals Editor kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">8.2</span> Locals Editor</h3>
+                <section id="section-8.2" class="Localization Editor - MORE menu kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.2</span> Localization Editor - MORE menu</h3>
 
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                Locals editor - example with an error state tab and an active tab which is in error state
-Markup:
-   <div class="form-group locals-editor">
-   <div class="locals-header clearfix">
-       <ul class="nav nav-tabs locals-tabs">
-           <li class="active"> <a class="has-error" href="">EN</a></li>
-           <li> <a href="">BG</a></li>
-           <li> <a class="has-error is-required" href="">DE</a></li>
-           <li> <a href="">FR</a></li>
-           <li> <a href="">PL</a></li>
-       </ul>
-   </div>
-   <div class="form-group">
-       <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-           <input name="lastName" type="text" class="form-control input-lg">
-       </div>
-   </div>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">Locals editor - example with an error state tab and an active tab which is in error state
-Markup:
-   &lt;div class=&quot;form-group locals-editor&quot;&gt;
-   &lt;div class=&quot;locals-header clearfix&quot;&gt;
-       &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
-           &lt;li class=&quot;active&quot;&gt; &lt;a class=&quot;has-error&quot; href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a class=&quot;has-error is-required&quot; href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a href=&quot;&quot;&gt;PL&lt;/a&gt;&lt;/li&gt;
-       &lt;/ul&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;form-group&quot;&gt;
-       &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot; style=&quot;width:100%&quot;&gt;
-           &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
+                    <div class="kss-description">
+                        <p>The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  functions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.</p>
+
                     </div>
-                </section>
-                <section id="section-8.3" class="Locals Editor kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">8.3</span> Locals Editor</h3>
-
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                Locals editor - example more menu and error state of tab from the more menu
-Markup:
-<div class="form-group locals-editor">
-   <div class="locals-header clearfix">
-       <ul class="nav nav-tabs locals-tabs">
-           <li class="active"> <a href="">EN</a></li>
-           <li> <a href="">BG</a></li>
-           <li> <a class="has-error" href="">DE</a></li>
-           <li class="dropdown locals-tabs__more-menu">
-               <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">MORE
-                   <span class="caret"></span>
-               </a>
-               <ul class="dropdown-menu locals-tabs__more-tabs">
-                   <li>
-                       <a href="" class="locals-tabs__more-tab">IT</a>
-                   </li>
-                   <li>
-                       <a href="" class="locals-tabs__more-tab has-error">PL</a>
-                   </li>
-               </ul>
-           </li>
-       </ul>
-   </div>
-   <div class="form-group">
-       <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-           <input name="lastName" type="text" class="form-control input-lg">
-       </div>
-   </div>
-</div>
-                            </div>
-                        </div>
-                        <div class="kss-markup">
-                            <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">Locals editor - example more menu and error state of tab from the more menu
-Markup:
-&lt;div class=&quot;form-group locals-editor&quot;&gt;
-   &lt;div class=&quot;locals-header clearfix&quot;&gt;
-       &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
-           &lt;li class=&quot;active&quot;&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt; &lt;a class=&quot;has-error&quot; href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
-           &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
-               &lt;a class=&quot;dropdown-toggle has-error&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;MORE
-                   &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-               &lt;/a&gt;
-               &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
-                   &lt;li&gt;
-                       &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab&quot;&gt;IT&lt;/a&gt;
-                   &lt;/li&gt;
-                   &lt;li&gt;
-                       &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab has-error&quot;&gt;PL&lt;/a&gt;
-                   &lt;/li&gt;
-               &lt;/ul&gt;
-           &lt;/li&gt;
-       &lt;/ul&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;form-group&quot;&gt;
-       &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot; style=&quot;width:100%&quot;&gt;
-           &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-8.4" class="Locals Editor kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">8.4</span> Locals Editor</h3>
-
-                    <div class="kss-modifier-block">
-                        <div class="kss-modifier kss-modifier-original">
-                            <div class="kss-modifier-example">
-                                Locals editor - example more menu
-Markup:
+                                   <label class="control-label">Field Label</label>
    <div class="form-group locals-editor">
        <div class="locals-header clearfix">
            <ul class="nav nav-tabs locals-tabs">
-               <li class="active"> <a href="">EN</a></li>
+               <li> <a href="">EN</a></li>
                <li> <a href="">BG</a></li>
-               <li> <a class="has-error" href="">DE</a></li>
-               <li class="dropdown locals-tabs__more-menu">
-                   <a class="dropdown-toggle is-required locals-tabs__more-btn" data-toggle="dropdown" aria-expanded="false">MORE
+               <li> <a href="">DE</a></li>
+               <li> <a href="">FR</a></li>
+               <li> <a href="">DA</a></li>
+               <li> <a href="">NL</a></li>
+               <li class="dropdown locals-tabs__more-menu active">
+                   <a class="dropdown-toggle is-required locals-tabs__more-btn" 
+                      data-toggle="dropdown" aria-expanded="false">
+                       IT
                        <span class="caret"></span>
                    </a>
                    <ul class="dropdown-menu locals-tabs__more-tabs">
-                       <li>
+                       <li class="active">
                            <a href="" class="locals-tabs__more-tab">IT</a>
                        </li>
                        <li>
@@ -382,8 +285,8 @@ Markup:
            </ul>
        </div>
        <div class="form-group">
-           <div class="input-group property" baas-form-name ng-form="innerForm" style="width:100%">
-               <input name="lastName" type="text" class="form-control input-lg">
+           <div class="property" baas-form-name ng-form="innerForm" >
+               <input name="lastName" type="text" class="form-control input-lg" value="Gli uomini camminare sulla Luna">
            </div>
        </div>
    </div>
@@ -391,20 +294,24 @@ Markup:
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html">Locals editor - example more menu
-Markup:
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label class=&quot;control-label&quot;&gt;Field Label&lt;/label&gt;
    &lt;div class=&quot;form-group locals-editor&quot;&gt;
        &lt;div class=&quot;locals-header clearfix&quot;&gt;
            &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
-               &lt;li class=&quot;active&quot;&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
                &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
-               &lt;li&gt; &lt;a class=&quot;has-error&quot; href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
-               &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
-                   &lt;a class=&quot;dropdown-toggle is-required locals-tabs__more-btn&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;MORE
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;NL&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu active&quot;&gt;
+                   &lt;a class=&quot;dropdown-toggle is-required locals-tabs__more-btn&quot; 
+                      data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                       IT
                        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
                    &lt;/a&gt;
                    &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
-                       &lt;li&gt;
+                       &lt;li class=&quot;active&quot;&gt;
                            &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab&quot;&gt;IT&lt;/a&gt;
                        &lt;/li&gt;
                        &lt;li&gt;
@@ -415,11 +322,380 @@ Markup:
            &lt;/ul&gt;
        &lt;/div&gt;
        &lt;div class=&quot;form-group&quot;&gt;
-           &lt;div class=&quot;input-group property&quot; baas-form-name ng-form=&quot;innerForm&quot; style=&quot;width:100%&quot;&gt;
-               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+           &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot; &gt;
+               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot; value=&quot;Gli uomini camminare sulla Luna&quot;&gt;
            &lt;/div&gt;
        &lt;/div&gt;
    &lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-8.3" class="Displaying Localization Editor Errors kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.3</span> Displaying Localization Editor Errors</h3>
+
+                    <div class="kss-description">
+                        <p>On validation, if one or more locales has an error, display &quot;One or more locales required” in red text below the field.</p>
+<p>For unselected tabs with errors, display the tab background as white, the locale name in red text, and a red exclamation mark (!) next to locale name.</p>
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                   <label>Field Label</label>
+   <div class="form-group locals-editor">
+   <div class="locals-header clearfix">
+       <ul class="nav nav-tabs locals-tabs">
+           <li class="active"> <a href="">EN</a></li>
+           <li> <a href="">BG</a></li>
+           <li> <a class="has-error is-required" href="">DE</a></li>
+           <li> <a href="">FR</a></li>
+           <li> <a href="">PL</a></li>
+           <li> <a href="">DA</a></li>
+               <li class="dropdown locals-tabs__more-menu">
+                 <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+                   <span class="locals-tabs__more-span">MORE</span>
+                   <span class="caret"></span>
+                 </a>
+                 <ul class="dropdown-menu locals-tabs__more-tabs">
+                   <li>
+                       <a href="" class="locals-tabs__more-tab">IT</a>
+                   </li>
+                 </ul>
+               </li>
+       </ul>
+   </div>
+   <div class="form-group">
+       <div class="property" baas-form-name ng-form="innerForm" >
+           <input name="lastName" type="text" class="form-control input-lg">
+           <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+       </div>
+   </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label&gt;Field Label&lt;/label&gt;
+   &lt;div class=&quot;form-group locals-editor&quot;&gt;
+   &lt;div class=&quot;locals-header clearfix&quot;&gt;
+       &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
+           &lt;li class=&quot;active&quot;&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a class=&quot;has-error is-required&quot; href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;PL&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
+                 &lt;a class=&quot;dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                   &lt;span class=&quot;locals-tabs__more-span&quot;&gt;MORE&lt;/span&gt;
+                   &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                 &lt;/a&gt;
+                 &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
+                   &lt;li&gt;
+                       &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab&quot;&gt;IT&lt;/a&gt;
+                   &lt;/li&gt;
+                 &lt;/ul&gt;
+               &lt;/li&gt;
+       &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;form-group&quot;&gt;
+       &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot; &gt;
+           &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot;&gt;
+           &lt;span class=&quot;inline-hint-text inline-hint-text__error&quot;&gt;One or more locales required&lt;/span&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-8.4" class="Displaying Localization Editor Errors for Active Tab kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.4</span> Displaying Localization Editor Errors for Active Tab</h3>
+
+                    <div class="kss-description">
+                        <p>For a selected tab with an error, display the tab background as red and a red exclamation mark (!) next to the locale name. </p>
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                   <label>Field Label</label>
+   <div class="form-group locals-editor">
+   <div class="locals-header clearfix">
+       <ul class="nav nav-tabs locals-tabs">
+           <li> <a href="">EN</a></li>
+           <li> <a href="">BG</a></li>
+           <li class="active"> <a class="has-error is-required" href="">DE</a></li>
+           <li> <a href="">FR</a></li>
+           <li> <a href="">PL</a></li>
+           <li> <a href="">DA</a></li>
+               <li class="dropdown locals-tabs__more-menu">
+                 <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+                   <span class="locals-tabs__more-span">MORE</span>
+                   <span class="caret"></span>
+                 </a>
+                 <ul class="dropdown-menu locals-tabs__more-tabs">
+                   <li>
+                       <a href="" class="locals-tabs__more-tab">IT</a>
+                   </li>
+                 </ul>
+               </li>
+       </ul>
+   </div>
+   <div class="form-group">
+       <div class="property" baas-form-name ng-form="innerForm" >
+           <input name="lastName" type="text" class="form-control input-lg has-error">
+           <span class="inline-hint-text inline-hint-text__error">German required</span>
+       </div>
+   </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label&gt;Field Label&lt;/label&gt;
+   &lt;div class=&quot;form-group locals-editor&quot;&gt;
+   &lt;div class=&quot;locals-header clearfix&quot;&gt;
+       &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
+           &lt;li class=&quot;active&quot;&gt; &lt;a class=&quot;has-error is-required&quot; href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;PL&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
+                 &lt;a class=&quot;dropdown-toggle &quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                   &lt;span class=&quot;locals-tabs__more-span&quot;&gt;MORE&lt;/span&gt;
+                   &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                 &lt;/a&gt;
+                 &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
+                   &lt;li&gt;
+                       &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab&quot;&gt;IT&lt;/a&gt;
+                   &lt;/li&gt;
+                 &lt;/ul&gt;
+               &lt;/li&gt;
+       &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;form-group&quot;&gt;
+       &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot; &gt;
+           &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg has-error&quot;&gt;
+           &lt;span class=&quot;inline-hint-text inline-hint-text__error&quot;&gt;German required&lt;/span&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-8.5" class="Errors within the MORE MENU kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.5</span> Errors within the MORE MENU</h3>
+
+                    <div class="kss-description">
+                        <p>If the selected locale in the MORE menu position has an error, display the tab with a red background and a red exclamation mark (!) next to the locale name.</p>
+<p>If additional locales under the more menu have errors, display the locale name in red text with an exclamation next it.</p>
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                   <label>Field Label</label>
+   <div class="form-group locals-editor">
+       <div class="locals-header clearfix">
+           <ul class="nav nav-tabs locals-tabs">
+               <li> <a href="">EN</a></li>
+               <li> <a href="">BG</a></li>
+               <li> <a href="">DE</a></li>
+               <li> <a href="">FR</a></li>
+               <li> <a href="">DA</a></li>
+               <li> <a href="">NL</a></li>
+               <li class="dropdown locals-tabs__more-menu active">
+                   <a class="dropdown-toggle has-error locals-tabs__more-btn" 
+                      data-toggle="dropdown" aria-expanded="false">
+                       IT
+                       <span class="caret"></span>
+                   </a>
+                   <ul class="dropdown-menu locals-tabs__more-tabs">
+                       <li class="">
+                           <a href="" class="locals-tabs__more-tab has-error">IT</a>
+                       </li>
+                   </ul>
+               </li>
+           </ul>
+       </div>
+       <div class="form-group">
+           <div class="property" baas-form-name ng-form="innerForm">
+               <input name="lastName" type="text" class="form-control input-lg has-error" value="">
+           <span class="inline-hint-text inline-hint-text__error">Italian required</span>
+           </div>
+       </div>
+   </div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label&gt;Field Label&lt;/label&gt;
+   &lt;div class=&quot;form-group locals-editor&quot;&gt;
+       &lt;div class=&quot;locals-header clearfix&quot;&gt;
+           &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;NL&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu active&quot;&gt;
+                   &lt;a class=&quot;dropdown-toggle has-error locals-tabs__more-btn&quot; 
+                      data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                       IT
+                       &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                   &lt;/a&gt;
+                   &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
+                       &lt;li class=&quot;&quot;&gt;
+                           &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab has-error&quot;&gt;IT&lt;/a&gt;
+                       &lt;/li&gt;
+                   &lt;/ul&gt;
+               &lt;/li&gt;
+           &lt;/ul&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;form-group&quot;&gt;
+           &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
+               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg has-error&quot; value=&quot;&quot;&gt;
+           &lt;span class=&quot;inline-hint-text inline-hint-text__error&quot;&gt;Italian required&lt;/span&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-8.6" class="Errors within the MORE MENU for Selected Tab kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.6</span> Errors within the MORE MENU for Selected Tab</h3>
+
+                    <div class="kss-description">
+                        <p>If another tab is selected and the More menu has one or more locales with errors, display the More text in red on a white background with a red exclamation(!) mark next to it.</p>
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                   <label>Field Label</label>
+   <div class="form-group locals-editor">
+       <div class="locals-header clearfix">
+           <ul class="nav nav-tabs locals-tabs">
+               <li class="active"> <a href="">EN</a></li>
+               <li> <a href="">BG</a></li>
+               <li> <a href="">DE</a></li>
+               <li> <a href="">FR</a></li>
+               <li> <a href="">DA</a></li>
+               <li> <a href="">NL</a></li>
+               <li class="dropdown locals-tabs__more-menu">
+                   <a class="dropdown-toggle has-error locals-tabs__more-btn" 
+                      data-toggle="dropdown" aria-expanded="false">
+                     More
+                     <span class="caret"></span>
+                   </a>
+                   <ul class="dropdown-menu locals-tabs__more-tabs">
+                       <li class="">
+                           <a href="" class="locals-tabs__more-tab has-error">IT</a>
+                       </li>
+                   </ul>
+               </li>
+           </ul>
+       </div>
+       <div class="form-group">
+           <div class="property" baas-form-name ng-form="innerForm">
+               <input name="lastName" type="text" class="form-control input-lg" value="">
+           <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+           </div>
+       </div>
+   </div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">   &lt;label&gt;Field Label&lt;/label&gt;
+   &lt;div class=&quot;form-group locals-editor&quot;&gt;
+       &lt;div class=&quot;locals-header clearfix&quot;&gt;
+           &lt;ul class=&quot;nav nav-tabs locals-tabs&quot;&gt;
+               &lt;li class=&quot;active&quot;&gt; &lt;a href=&quot;&quot;&gt;EN&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;BG&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DE&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;FR&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;DA&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt; &lt;a href=&quot;&quot;&gt;NL&lt;/a&gt;&lt;/li&gt;
+               &lt;li class=&quot;dropdown locals-tabs__more-menu&quot;&gt;
+                   &lt;a class=&quot;dropdown-toggle has-error locals-tabs__more-btn&quot; 
+                      data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                     More
+                     &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                   &lt;/a&gt;
+                   &lt;ul class=&quot;dropdown-menu locals-tabs__more-tabs&quot;&gt;
+                       &lt;li class=&quot;&quot;&gt;
+                           &lt;a href=&quot;&quot; class=&quot;locals-tabs__more-tab has-error&quot;&gt;IT&lt;/a&gt;
+                       &lt;/li&gt;
+                   &lt;/ul&gt;
+               &lt;/li&gt;
+           &lt;/ul&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;form-group&quot;&gt;
+           &lt;div class=&quot;property&quot; baas-form-name ng-form=&quot;innerForm&quot;&gt;
+               &lt;input name=&quot;lastName&quot; type=&quot;text&quot; class=&quot;form-control input-lg&quot; value=&quot;&quot;&gt;
+           &lt;span class=&quot;inline-hint-text inline-hint-text__error&quot;&gt;One or more locales required&lt;/span&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-8.7" class="LocalizationExample kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">8.7</span> LocalizationExample</h3>
+
+                    <div class="kss-description">
+                        <h3>Visual Guidelines</h3>
+                    </div>
+                    <div class="kss-modifier-block">
+                        <div class="kss-modifier kss-modifier-original">
+                            <div class="kss-modifier-example">
+                                	<div class="text-left thumbnails">
+		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_page-level.png" title="View Full Image" href="#viewFullscreen">
+			<img src="../images/thumbnails/local_thumbnail.png" alt="single" class="img-thumbnail">
+			<p>Page level</p>
+   	</a>
+		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_field-level.png" title="View Full Image" href="#viewFullscreen">
+			<img src="../images/thumbnails/field-level_thumbnail.png" alt="multi" class="img-thumbnail">
+			<p>Field level</p>
+    	</a>
+	</div>
+</div>
+	<div class="modal fade bs-example-modal-lg" id="viewFullscreen">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div>
+        <img src="" class="showFullscreen">
+      </div>
+    </div>
+  </div>
+                            </div>
+                        </div>
+                        <div class="kss-markup">
+                            <div class="seperator">
+                                <pre class="code-snippet"><code data-language="html" class="html">	&lt;div class=&quot;text-left thumbnails&quot;&gt;
+		&lt;a class=&quot;js_fullscreen text-center&quot; data-toggle=&quot;modal&quot; data-id=&quot;../images/fullscreen/local_page-level.png&quot; title=&quot;View Full Image&quot; href=&quot;#viewFullscreen&quot;&gt;
+			&lt;img src=&quot;../images/thumbnails/local_thumbnail.png&quot; alt=&quot;single&quot; class=&quot;img-thumbnail&quot;&gt;
+			&lt;p&gt;Page level&lt;/p&gt;
+   	&lt;/a&gt;
+		&lt;a class=&quot;js_fullscreen text-center&quot; data-toggle=&quot;modal&quot; data-id=&quot;../images/fullscreen/local_field-level.png&quot; title=&quot;View Full Image&quot; href=&quot;#viewFullscreen&quot;&gt;
+			&lt;img src=&quot;../images/thumbnails/field-level_thumbnail.png&quot; alt=&quot;multi&quot; class=&quot;img-thumbnail&quot;&gt;
+			&lt;p&gt;Field level&lt;/p&gt;
+    	&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	&lt;div class=&quot;modal fade bs-example-modal-lg&quot; id=&quot;viewFullscreen&quot;&gt;
+  &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;&quot; class=&quot;showFullscreen&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -447,20 +723,20 @@ Markup:
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1471894668842"></script>
+<script src="../public/kss.js?t=1481043362718"></script>
 
-<script src="../public/prettify.js?t=1471894668842"></script>
-<script src="../public/js/jquery.min.js?t=1471894668842"></script>
-<script src="../public/main.js?t=1471894668842"></script>
-<script src="../public/js/bootstrap.min.js?t=1471894668842"></script>
-<script src="../public/js/select2.js?t=1471894668842"></script>
+<script src="../public/prettify.js?t=1481043362718"></script>
+<script src="../public/js/jquery.min.js?t=1481043362718"></script>
+<script src="../public/main.js?t=1481043362718"></script>
+<script src="../public/js/bootstrap.min.js?t=1481043362718"></script>
+<script src="../public/js/select2.js?t=1481043362718"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1471894668842"></script>
-<script src="../public/jquery.cookiebar.js?t=1471894668842"></script>
-<script src="../public/js/highlight.pack.min.js?t=1471894668842"></script>
+<script src="../public/js/yaas.sso.js?t=1481043362718"></script>
+<script src="../public/jquery.cookiebar.js?t=1481043362718"></script>
+<script src="../public/js/highlight.pack.min.js?t=1481043362718"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1471894668842"></script>
+<script src="../public/script.js?t=1481043362718"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 

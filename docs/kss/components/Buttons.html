@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1474401894360">
+  <link rel="stylesheet" href="../public/kss.css?t=1481043362752">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1474401894360">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1474401894360">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1481043362752">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1481043362752">
 
 
 
@@ -51,22 +51,10 @@
         <ul class="nav-super">
             <li><a href="https://www.yaas.io/">Home</a></li>
             <li><a href="https://market.yaas.io">YaaS Market</a></li>
-            <li><a href="https://devportal.yaas.io" class="active">Dev Portal</a></li>
+            <li><a href="https://community.yaas.io">Community</a></li>
+            <li><a href="https://devportal.yaas.io">Dev Portal</a></li>
+            <li><a href="https://knowledge.yaas.io">Knowledge Hub</a></li>
             <li><a href="https://builder.yaas.io">Builder</a></li>
-            <li class="yg-dropdown-node js-yg-dropdown-node">
-                <a href="https://community.yaas.io">Community</a>
-                <div class="nav-super-submenu-toggle">
-                    <span class="nav-super-triangle"></span>
-                </div>
-                <ul class="yg-dropdown">
-                    <li class="yg-dropdown--menu-link">
-                        <a href="https://community.yaas.io">Co-Innovation Network</a>
-                    </li>
-                    <li class="yg-dropdown--menu-link">
-                        <a href="https://experts.hybris.com/spaces/102/index.html" target="_blank">hybris Experts</a>
-                    </li>
-                </ul>
-            </li>
             <li class="account js-yg-dropdown-node">
                 <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Account</a>
                 <div class="nav-super-submenu-toggle">
@@ -80,7 +68,6 @@
                                 <li class="profile-head">
                                 <div class="profile-details">
                                     <div class="profile-email">
-
                                     </div>
                                     <div class="profile-link">
                                         <a href="https://builder.yaas.io/#/?selectedPath=%2FMy%20Profile%2FProfile">My Profile</a>
@@ -99,7 +86,7 @@
                             <a href="https://builder.yaas.io/">Sign In</a>
                         </div>
                         <div class="register-link menu-link">
-                            <a href="https://appexchange.yaas.io/#/register/">Register</a>
+                            <a href="https://www.yaas.io/register/">Register</a>
                         </div>
 
                     </li>
@@ -135,7 +122,7 @@
                         <a href="../patterns/Navigation.html" class="inactive">Patterns</a>
                 </li>
                 <li>
-                        <a href="../starterpages/index.html" class="inactive">Starter Pages</a>
+                        <a href="../starterpages/start.html" class="inactive">Starter Pages</a>
                 </li>
                 <li>
                         <a href="../GettingStarted.html" class="inactive">Download &amp; Get Started</a>
@@ -333,11 +320,11 @@ You can use this with all available btn modifier classes</p>
                         </div>
                     </div>
                 </section>
-                <section id="section-2.5" class="Segmented Buttons kss-section kss-componnet-page">
-                          <h3><span class="kss-ref">2.5</span> Segmented Buttons</h3>
+                <section id="section-2.5" class="Grouped Buttons kss-section kss-componnet-page">
+                          <h3><span class="kss-ref">2.5</span> Grouped Buttons</h3>
 
                     <div class="kss-description">
-                        <p> Segmented buttons are a horizontal control of multiple segments.
+                        <p> Grouped buttons are a horizontal control of multiple segments.
  Each segment is a button, use them to indicate that they are related.</p>
 
                     </div>
@@ -380,7 +367,7 @@ You can use this with all available btn modifier classes</p>
                     <div class="kss-modifier-block">
                         <div class="kss-modifier kss-modifier-original">
                             <div class="kss-modifier-example">
-                                 <button class="y-add-btn type="button">
+                                 <button class="y-add-btn" type="button">
    <span class="hyicon hyicon-add"></span>
    Add
  </button>
@@ -388,7 +375,7 @@ You can use this with all available btn modifier classes</p>
                         </div>
                         <div class="kss-markup">
                             <div class="seperator">
-                                <pre class="code-snippet"><code data-language="html" class="html"> &lt;button class=&quot;y-add-btn type=&quot;button&quot;&gt;
+                                <pre class="code-snippet"><code data-language="html" class="html"> &lt;button class=&quot;y-add-btn&quot; type=&quot;button&quot;&gt;
    &lt;span class=&quot;hyicon hyicon-add&quot;&gt;&lt;/span&gt;
    Add
  &lt;/button&gt;</code></pre>
@@ -408,7 +395,7 @@ You can use this with all available btn modifier classes</p>
                             <div class="kss-modifier-example">
                                 <span class="y-toggle">
   <input type="checkbox" id="toggleid"/>
-  <label for="toggleid">Labeltext (optional)</label>
+  <label for="toggleid" class="control-label">Labeltext (optional)</label>
 </span>
                             </div>
                         </div>
@@ -416,7 +403,7 @@ You can use this with all available btn modifier classes</p>
                             <div class="seperator">
                                 <pre class="code-snippet"><code data-language="html" class="html">&lt;span class=&quot;y-toggle&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;toggleid&quot;/&gt;
-  &lt;label for=&quot;toggleid&quot;&gt;Labeltext (optional)&lt;/label&gt;
+  &lt;label for=&quot;toggleid&quot; class=&quot;control-label&quot;&gt;Labeltext (optional)&lt;/label&gt;
 &lt;/span&gt;</code></pre>
                             </div>
                         </div>
@@ -434,7 +421,7 @@ You can use this with all available btn modifier classes</p>
                             <div class="kss-modifier-example">
                                 <span class="y-toggle y-toggle-lg">
   <input type="checkbox" id="toggleidlg"/>
-  <label for="toggleidlg" data-activelabel="On" data-inactivelabel="Off">Labeltext (optional)</label>
+  <label for="toggleidlg" data-activelabel="On" data-inactivelabel="Off" class="control-label">Labeltext (optional)</label>
 </span>
                             </div>
                         </div>
@@ -442,7 +429,7 @@ You can use this with all available btn modifier classes</p>
                             <div class="seperator">
                                 <pre class="code-snippet"><code data-language="html" class="html">&lt;span class=&quot;y-toggle y-toggle-lg&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;toggleidlg&quot;/&gt;
-  &lt;label for=&quot;toggleidlg&quot; data-activelabel=&quot;On&quot; data-inactivelabel=&quot;Off&quot;&gt;Labeltext (optional)&lt;/label&gt;
+  &lt;label for=&quot;toggleidlg&quot; data-activelabel=&quot;On&quot; data-inactivelabel=&quot;Off&quot; class=&quot;control-label&quot;&gt;Labeltext (optional)&lt;/label&gt;
 &lt;/span&gt;</code></pre>
                             </div>
                         </div>
@@ -452,7 +439,7 @@ You can use this with all available btn modifier classes</p>
                           <h3><span class="kss-ref">2.9</span> Back to top</h3>
 
                     <div class="kss-description">
-                        <p>Back to top button to help the user easily jump to the top of the page when scrolling a long page.</p>
+                        <p>Use the standard &apos;back to top&apos; component on infinite scroll pages or pages that have data sets longer than 25 records.</p>
 
                     </div>
                     <div class="kss-modifier-block">
@@ -491,20 +478,20 @@ You can use this with all available btn modifier classes</p>
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1474401894360"></script>
+<script src="../public/kss.js?t=1481043362752"></script>
 
-<script src="../public/prettify.js?t=1474401894360"></script>
-<script src="../public/js/jquery.min.js?t=1474401894360"></script>
-<script src="../public/main.js?t=1474401894360"></script>
-<script src="../public/js/bootstrap.min.js?t=1474401894360"></script>
-<script src="../public/js/select2.js?t=1474401894360"></script>
+<script src="../public/prettify.js?t=1481043362752"></script>
+<script src="../public/js/jquery.min.js?t=1481043362752"></script>
+<script src="../public/main.js?t=1481043362752"></script>
+<script src="../public/js/bootstrap.min.js?t=1481043362752"></script>
+<script src="../public/js/select2.js?t=1481043362752"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1474401894360"></script>
-<script src="../public/jquery.cookiebar.js?t=1474401894360"></script>
-<script src="../public/js/highlight.pack.min.js?t=1474401894360"></script>
+<script src="../public/js/yaas.sso.js?t=1481043362752"></script>
+<script src="../public/jquery.cookiebar.js?t=1481043362752"></script>
+<script src="../public/js/highlight.pack.min.js?t=1481043362752"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1474401894360"></script>
+<script src="../public/script.js?t=1481043362752"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
