@@ -4,12 +4,12 @@
 // 
 // Markup:
 // <div class="radio">
-// 	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-// 	<label for="optionsRadios1" class="control-label">Option one is this and that&mdash;be sure to include why it's great</label>
+//  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+//  <label for="optionsRadios1" class="control-label">Option one is this and that&mdash;be sure to include why it's great</label>
 // </div>
 // <div class="radio">
-// 	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-// 	<label for="optionsRadios2" class="control-label">Option two can be something else and selecting it will deselect option one </label>
+//  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
+//  <label for="optionsRadios2" class="control-label">Option two can be something else and selecting it will deselect option one </label>
 // </div>
 //
 // Component 4.4
@@ -18,66 +18,67 @@
 @radio-size: 24px;
 
 .radio{
-	position: relative;
-	padding-left: @radio-size + 10;
-	line-height: @radio-size;
+    position: relative;
+    padding-left: @radio-size + 10;
+    line-height: @radio-size;
     margin-bottom: 14px;
     min-height: @radio-size;
 
-	input{
-		opacity: 0;
-    	position: absolute!important;
+    input{
+        opacity: 0;
+        position: absolute!important;
 
-		&:checked + label{
+        &:checked + label{
 
-			&:before{
-				@radio-border-width: 8px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				content: "";
-				display: block;
-				width: @radio-size;
-				height: @radio-size ;
-				background: @light-blue-100;
-				border-radius: @radio-size/2;
-				border: @radio-border-width solid @default-blue;
-			}
+            &:before{
+                @radio-border-width: 8px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                display: block;
+                width: @radio-size;
+                height: @radio-size ;
+                background: @light-blue-100;
+                border-radius: @radio-size/2;
+                border: @radio-border-width solid @default-blue;
+            }
 
-		}
+        }
 
-		&:active + label,
-		&:focus + label {
-			&:before {
-				box-shadow: 0 0 10px @default-blue;
-				border-color:  @default-blue;
-			}
-		}
+        &:active + label,
+        &:focus + label {
+            &:before {
+                box-shadow: 0 0 10px @default-blue;
+                border-color:  @default-blue;
+            }
+        }
 
-		&:active:checked + label,
-		&:focus:checked + label {
-			&:before {
-				box-shadow: 0 0 10px @default-blue;
-			}
-		}
+        &:active:checked + label,
+        &:focus:checked + label {
+            &:before {
+                box-shadow: 0 0 10px @default-blue;
+            }
+        }
 
-	}
+    }
 
-	label{
-		padding-left: 0;
-		&:before{
-			@radio-border-width: 3px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			display: block;
-			width: @radio-size;
-			height: @radio-size ;
-			background: #fff;
-			border-radius: @radio-size/2;
-			border: @radio-border-width solid @dark-blue;
+    label{
+        padding-left: 0;
+        
+        &:before{
+            @radio-border-width: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            display: block;
+            width: @radio-size;
+            height: @radio-size ;
+            background: #fff;
+            border-radius: @radio-size/2;
+            border: @radio-border-width solid @dark-blue;
 
-		}
-	}
+        }
+    }
 }
