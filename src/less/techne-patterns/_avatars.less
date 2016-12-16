@@ -44,88 +44,105 @@
 @avatar--size: 200px;
 
 .thumbnail-shape {
-  position: relative;
-  width: @avatar--size;
-  height: auto;
-  &--circle{
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  &--rectangle{
-    background-size: contain;
-    max-width: 100%;
-  }
-  &-small {
-    width: @avatar--size/4;
-    max-height: @avatar--size/4;
+    position: relative;
+    width: @avatar--size;
     height: auto;
-  }
-  &-medium{
-    width: @avatar--size/5*2;
-    max-height: @avatar--size/5*2;
-    height: auto;
-  }
-  img, button{
-    margin: 0 auto;
-    vertical-align: middle;
-    display: block;
-  }
-  img{
-    overflow: hidden;
-  }
-  button{
-    overflow: visible;
-  }
-  .thumbnail-action-btn-wrapper button{
-    display: inline-block;
-  }
-  .spinner-wrapper{
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    .image-uploading-spinner{
-      .spinner-container1>div,
-      .spinner-container2>div,
-      .spinner-container3>div {
-        background-color: @progress-bar-uploading-image--bckg-color;
-      }
+
+    &--circle{
+        border-radius: 50%;
+        overflow: hidden;
     }
-  }
-  .thumbnail--loading-text{
-    font-size: @font-size-small;
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    width: 100%;
-    max-width: @avatar--size/2;
-    color: @default-greyblue;
-  }
+
+    &--rectangle{
+        background-size: contain;
+        max-width: 100%;
+    }
+
+    &-small {
+        width: @avatar--size/4;
+        max-height: @avatar--size/4;
+        height: auto;
+    }
+
+    &-medium{
+        width: @avatar--size/5*2;
+        max-height: @avatar--size/5*2;
+        height: auto;
+    }
+
+    img, button{
+        margin: 0 auto;
+        vertical-align: middle;
+        display: block;
+    }
+
+    img{
+        overflow: hidden;
+    }
+
+    button{
+        overflow: visible;
+    }
+
+    .thumbnail-action-btn-wrapper button{
+        display: inline-block;
+    }
+
+    .spinner-wrapper{
+        position: absolute;
+        top: 35%;
+        left: 40%;
+
+        .image-uploading-spinner{
+            .spinner-container1>div,
+            .spinner-container2>div,
+            .spinner-container3>div {
+                background-color: @progress-bar-uploading-image--bckg-color;
+            }
+        }
+    }
+
+    .thumbnail--loading-text{
+        font-size: @font-size-small;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        width: 100%;
+        max-width: @avatar--size/2;
+        color: @default-greyblue;
+    }
 }
 
 //images used for identifying the default image for various shapes
 .thumbnail--default-pic{
-  &__сircle {
-    background-image: url("/images/default_circle-pic.png");
-  }
-  &__rectangle {
-    background-image: url("/images/default_square-pic.png");
-    background-size: contain;
-  }
-  &__hexagon {
-    background-image: url("/images/default_hexagon-pic.png");
-  }
+
+    &__сircle {
+        background-image: url("/images/default_circle-pic.png");
+    }
+
+    &__rectangle {
+        background-image: url("/images/default_square-pic.png");
+        background-size: contain;
+    }
+
+    &__hexagon {
+        background-image: url("/images/default_hexagon-pic.png");
+    }
 }
 
 //images for demo purpose only
 .thumbnail{
-  &--avatar {
-    background-image: url("/images/cat-avatar.jpg");
+
+    &--avatar {
+      background-image: url("/images/cat-avatar.jpg");
   }
+
   &--package-logo {
-    background-image: url("/images/package-picture.png");
+      background-image: url("/images/package-picture.png");
   }
+
   &--org-logo {
-    background-image: url("/images/sap-hybris-logo.png");
+      background-image: url("/images/sap-hybris-logo.png");
   }
 }
 
@@ -515,5 +532,6 @@
 // </table>
 // </div>
 // </div>
+// <div class="spacer-padding-20"></div>
 //
 // Pattern 17.6.3
