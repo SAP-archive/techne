@@ -1,35 +1,100 @@
 // Avatars shapes change/upload mode
 //
 
+@avatar--size: 200px;
+
 .thumbnail-shape {
-  width: 200px;
-  height: 200px;
-  img{
+  position: relative;
+  width: @avatar--size;
+  height: auto;
+  &--circle{
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &--rectangle{
+    background-size: contain;
+    max-width: 100%;
+  }
+  &-small {
+    width: @avatar--size/4;
+    max-height: @avatar--size/4;
+    height: auto;
+  }
+  &-medium{
+    width: @avatar--size/5*2;
+    max-height: @avatar--size/5*2;
+    height: auto;
+  }
+  img, button{
     margin: 0 auto;
     vertical-align: middle;
     display: block;
+  }
+  img{
     overflow: hidden;
-
   }
   button{
     overflow: visible;
-    margin: 0 auto;
-    vertical-align: middle;
-    display: block;
+  }
+  .thumbnail-action-btn-wrapper button{
+    display: inline-block;
+  }
+  .spinner-wrapper{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    .image-uploading-spinner{
+      .spinner-container1>div,
+      .spinner-container2>div,
+      .spinner-container3>div {
+        background-color: @progress-bar-uploading-image--bckg-color;
+      }
+    }
+  }
+  .thumbnail--loading-text{
+    font-size: @font-size-small;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 100%;
+    max-width: @avatar--size/2;
+    color: @default-greyblue;
   }
 }
 
-.thumbnail-shape--circle{
-  border-radius: 50%;
-  overflow: hidden;
+//images used for identifying the default image for various shapes
+.thumbnail--default-pic{
+  &__сircle {
+    background-image: url("/images/default_circle-pic.png");
+  }
+  &__rectangle {
+    background-image: url("/images/default_square-pic.png");
+    background-size: contain;
+  }
+  &__hexagon {
+    background-image: url("/images/default_hexagon-pic.png");
+  }
+}
+
+//images for demo purpose only
+.thumbnail{
+  &--avatar {
+    background-image: url("/images/cat-avatar.jpg");
+  }
+  &--package-logo {
+    background-image: url("/images/package-picture.png");
+  }
+  &--org-logo {
+    background-image: url("/images/sap-hybris-logo.png");
+  }
 }
 
 //User Profile
 //
 // Markup:
 //<div class="thumbnail-shape">
-//  <img class="thumbnail-shape--circle" src="../images/thumbnails/default_circle-pic.png"/>
-//  <button class="btn btn-lg btn-subordinate">Upload</button>
+//  <div class=" thumbnail__img thumbnail-shape--circle thumbnail--default-pic__сircle"></div>
+//  <button class="btn btn-lg btn-link">Upload</button>
 //</div>
 //
 // Pattern 17.1
@@ -39,8 +104,8 @@
 //
 // Markup:
 //<div class="thumbnail-shape">
-//  <img src="../images/thumbnails/default_hexagon-pic.png"/>
-//  <button class="btn btn-lg btn-subordinate">Upload</button>
+//  <div class="thumbnail__img thumbnail--default-pic__rectangle"></div>
+//  <button class="btn btn-lg btn-link">Upload</button>
 //</div>
 //
 // Pattern 17.2
@@ -50,9 +115,387 @@
 //
 // Markup:
 //<div class="thumbnail-shape">
-//  <img src="../images/thumbnails/default_square-pic.png"/>
-//  <button class="btn btn-lg btn-subordinate">Upload</button>
+//  <div class="thumbnail__img thumbnail--default-pic__hexagon"></div>
+//  <button class="btn btn-link">Upload</button>
 //</div>
 //
 // Pattern 17.3
+
+
+//Uploading of the image in process
+//
+//While loading an image grey spinner with localized "Loading image..."-text should be shown
+//
+// Markup:
+//<div class="thumbnail-shape">
+//    <div class="thumbnail__img thumbnail-shape--circle thumbnail--default-pic__сircle"></div>
+//    <div class="spinner-wrapper">
+//      <div class="spinner image-uploading-spinner">
+//        <div class="spinner-container spinner-container1">
+//          <div class="spinner-circle1"></div>
+//          <div class="spinner-circle2"></div>
+//          <div class="spinner-circle3"></div>
+//          <div class="circle4"></div>
+//        </div>
+//        <div class="spinner-container spinner-container2">
+//          <div class="spinner-circle1"></div>
+//          <div class="spinner-circle2"></div>
+//          <div class="spinner-circle3"></div>
+//          <div class="circle4"></div>
+//        </div>
+//        <div class="spinner-container spinner-container3">
+//          <div class="spinner-circle1"></div>
+//          <div class="spinner-circle2"></div>
+//          <div class="spinner-circle3"></div>
+//          <div class="circle4"></div>
+//        </div>
+//      </div>
+//  </div>
+//   <p class="thumbnail--loading-text">Loading image...</p>
+//</div>
+//
+// Pattern 17.4
+
+
+//Uploaded image/avatar
+//
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail-shape--circle thumbnail--avatar"></div>
+//  <div class="thumbnail-action-btn-wrapper">
+//    <button class="btn btn-link">Upload</button>
+//    <button class="btn btn-danger">Delete Image</button>
+//  </div>
+//</div>
+//
+// Pattern 17.5
+
+
+//Pattern Usage
+//
+//Profile example
+//
+// <div class="row">
+//    <div class="col-xs-12 col-sm-5 col-md-4">
+//      <div class="thumbnail-shape center-block">
+//        <div class="thumbnail__img thumbnail-shape--circle thumbnail--avatar"></div>
+//        <div class="thumbnail-action-btn-wrapper">
+//          <button class="btn btn-link">Upload</button>
+//          <button class="btn btn-danger">Delete Image</button>
+//        </div>
+//      </div>
+//    </div>
+//    <div class="col-xs-12 col-sm-7 col-md-8">
+//    <ul class="dataCards dataCards-singleColumn list-group">
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/cat-avatar.jpg" class="thumbnail-shape-medium thumbnail-shape--circle">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"> user.name@email.com </p>
+//              <p class="secondaryData"> First name Last name </p>
+//              <span class="label label-default"> Inactive  </span>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/cat-avatar.jpg" class="thumbnail-shape-medium thumbnail-shape--circle">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"> user.name@email.com </p>
+//              <p class="secondaryData"> First name Last name </p>
+//              <span class="label label-default"> Inactive  </span>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//    </ul>
+//   </div>
+// </div>
+// <div class="row">
+//  <div class="col-xs-12 col-sm-12">
+//  <table class="table table-striped table-hover techne-table">
+//  <thead>
+//      <th></th>
+//      <th>Col 1</th>
+//      <th>Col 2</th>
+//      <th>Col 3</th>
+//   </tr>
+//  </thead>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/cat-avatar.jpg" class="thumbnail-shape-small thumbnail-shape--circle"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">test data</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/cat-avatar.jpg" class="thumbnail-shape-small thumbnail-shape--circle"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">test data</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/cat-avatar.jpg" class="thumbnail-shape-small thumbnail-shape--circle"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">test data</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//  </tbody>
+// </table>
+// </div>
+// </div>
+//
+//Package example
+//
+//
+//
+// <div class="row">
+//    <div class="col-xs-12 col-sm-5 col-md-4">
+//      <div class="thumbnail-shape center-block">
+//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--package-logo "></div>
+//        <div class="thumbnail-action-btn-wrapper">
+//          <button class="btn btn-link">Upload</button>
+//          <button class="btn btn-danger">Delete Image</button>
+//        </div>
+//      </div>
+//    </div>
+//    <div class="col-xs-12 col-sm-7 col-md-8">
+//    <ul class="dataCards dataCards-singleColumn list-group">
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/package-picture.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"> Package name</p>
+//              <p class="secondaryData"> Short description of the package</p>
+//              <span class="label label-default"> Publisher mode</span>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/package-picture.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"> Package name</p>
+//              <p class="secondaryData"> Short description of the package</p>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//    </ul>
+//   </div>
+// </div>
+// <div class="row">
+// <div class="col-xs-12 col-sm-12">
+// <table class="table table-striped table-hover techne-table">
+//  <thead>
+//      <th></th>
+//      <th>Package Name</th>
+//      <th>Company Name</th>
+//      <th class="text-right">Number of Subscriptions</th>
+//   </tr>
+//  </thead>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/package-picture.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Package Name</a>
+//          </div>
+//      </td>
+//      <td data-th="Company Name" >
+//          <div class="cellcontent">SAP Hybris</div>
+//      </td>
+//      <td data-th="Subscriptions" >
+//          <div class="cellcontent text-right">650</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/package-picture.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Package Name</a>
+//          </div>
+//      </td>
+//      <td data-th="Company Name" >
+//          <div class="cellcontent">SAP</div>
+//      </td>
+//      <td data-th="Subscriptions" >
+//          <div class="cellcontent text-right">120</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/package-picture.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Package Name</a>
+//          </div>
+//      </td>
+//      <td data-th="Company Name" >
+//          <div class="cellcontent">SAP Hybris</div>
+//      </td>
+//      <td data-th="Subscriptions" >
+//          <div class="cellcontent text-right">80</div>
+//      </td>
+//    </tr>
+//  </tbody>
+// </table>
+// </div>
+// </div>
+//
+//Organization or Project Logo example
+//
+//
+//
+// <div class="row">
+//    <div class="ccol-xs-12 col-sm-5 col-md-4">
+//      <div class="thumbnail-shape center-block">
+//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--org-logo"></div>
+//        <div class="thumbnail-action-btn-wrapper">
+//          <button class="btn btn-link">Upload</button>
+//          <button class="btn btn-danger">Delete Image</button>
+//        </div>
+//      </div>
+//    </div>
+//    <div class="col-xs-12 col-sm-7 col-md-8">
+//    <ul class="dataCards dataCards-singleColumn list-group">
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"><a href="#">Project/Org name</a></p>
+//              <p class="secondaryData"> Short description of the organization/project</p>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"><a href="#">Project/Org name</a></p>
+//              <p class="secondaryData"> Short description of the organization/project</p>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//    </ul>
+//   </div>
+// </div>
+// <div class="col-xs-12 col-sm-12">
+// <table class="table table-striped table-hover techne-table">
+//  <thead>
+//      <th></th>
+//      <th>Col 1</th>
+//      <th>Col 2</th>
+//      <th>Col 3</th>
+//   </tr>
+//  </thead>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//  </tbody>
+//  </table>
+// </div>
+//
+// Pattern 17.6
+
 
