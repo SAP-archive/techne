@@ -45,6 +45,22 @@
 			}
 
 		}
+
+		&:active + label,
+		&:focus + label {
+			&:before {
+				box-shadow: 0 0 10px @default-blue;
+				border-color:  @default-blue;
+			}
+		}
+
+		&:active:checked + label,
+		&:focus:checked + label {
+			&:before {
+				box-shadow: 0 0 10px @default-blue;
+			}
+		}
+
 	}
 
 	label{
