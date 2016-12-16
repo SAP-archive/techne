@@ -1,3 +1,43 @@
+// User Profile
+//
+// To display an image for users, like a photo or avatar: we visually displayed in a circle. As the example bellow.
+//
+// This example also describes the case when the uses have not uploaded an image or photo.
+// 
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class=" thumbnail__img thumbnail-shape--circle thumbnail--default-pic__сircle"></div>
+//  <button class="btn btn-lg btn-link">Upload</button>
+//</div>
+//
+// Pattern 17.1
+
+
+// Project/Organization image
+//
+// For displaying organization and project related images; in most cases these are logos. For that cases, we displayed them as a square. Shown below.
+//
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail--default-pic__rectangle"></div>
+//  <button class="btn btn-lg btn-link">Upload</button>
+//</div>
+//
+// Pattern 17.2
+
+
+// Package image
+//
+// Packages are a special case in YaaS and we display them as a cube, with the Hexagon shape. That’s why the default image is also a cube. Again, shown below.
+// 
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail--default-pic__hexagon"></div>
+//  <button class="btn btn-link">Upload</button>
+//</div>
+//
+// Pattern 17.3
+
 // Avatars shapes change/upload mode
 //
 
@@ -89,42 +129,10 @@
   }
 }
 
-//User Profile
-//
-// Markup:
-//<div class="thumbnail-shape">
-//  <div class=" thumbnail__img thumbnail-shape--circle thumbnail--default-pic__сircle"></div>
-//  <button class="btn btn-lg btn-link">Upload</button>
-//</div>
-//
-// Pattern 17.1
 
-
-//Project/Organization picture
+// Image Uploading indicator
 //
-// Markup:
-//<div class="thumbnail-shape">
-//  <div class="thumbnail__img thumbnail--default-pic__rectangle"></div>
-//  <button class="btn btn-lg btn-link">Upload</button>
-//</div>
-//
-// Pattern 17.2
-
-
-//Package picture
-//
-// Markup:
-//<div class="thumbnail-shape">
-//  <div class="thumbnail__img thumbnail--default-pic__hexagon"></div>
-//  <button class="btn btn-link">Upload</button>
-//</div>
-//
-// Pattern 17.3
-
-
-//Uploading of the image in process
-//
-//While loading an image grey spinner with localized "Loading image..."-text should be shown
+// When the user has selected an image, it should automatically start to upload to the server. This may be a lengthy process, to keep the user informed about the current status we then display a loading spinner and a localizable “Loading image…” text.
 //
 // Markup:
 //<div class="thumbnail-shape">
@@ -157,8 +165,12 @@
 // Pattern 17.4
 
 
-//Uploaded image/avatar
+// Uploaded image/avatar
 //
+// The image is now upload and is shown in their respective shape: Circle for users/profiles images. Square for projects/organization/etc. logos. Hexagon for packages.
+//
+// Since you already have an image we can give the option to delete that image. In this case it return to display the default image with the corresponding shape in all related places. For that we added the delete image button displayed bellow the image. Also the user can replace the current image by uploading a new one.
+// 
 // Markup:
 //<div class="thumbnail-shape">
 //  <div class="thumbnail__img thumbnail-shape--circle thumbnail--avatar"></div>
@@ -171,10 +183,15 @@
 // Pattern 17.5
 
 
-//Pattern Usage
+// Examples of usage
 //
-//Profile example
-//
+// We have prepared some visual examples of how the different images/avatars should look on different components and patterns.
+// 
+// Pattern 17.6
+
+
+// Profile example
+// 
 // <div class="row">
 //    <div class="col-xs-12 col-sm-5 col-md-4">
 //      <div class="thumbnail-shape center-block">
@@ -281,9 +298,117 @@
 // </div>
 // </div>
 //
+// Pattern 17.6.1
+
+
+// Project/Organization image example
+//
+// <div class="row">
+//    <div class="ccol-xs-12 col-sm-5 col-md-4">
+//      <div class="thumbnail-shape center-block">
+//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--org-logo"></div>
+//        <div class="thumbnail-action-btn-wrapper">
+//          <button class="btn btn-link">Upload</button>
+//          <button class="btn btn-danger">Delete Image</button>
+//        </div>
+//      </div>
+//    </div>
+//    <div class="col-xs-12 col-sm-7 col-md-8">
+//    <ul class="dataCards dataCards-singleColumn list-group">
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"><a href="#">Project/Org name</a></p>
+//              <p class="secondaryData"> Short description of the organization/project</p>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//      <li class="dataCard">
+//        <div class="cardRow">
+//          <div class="row">
+//            <div class="col-md-2 col-sm-2 col-xs-2">
+//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
+//            </div>
+//            <div class="col-md-10 col-sm-10 col-xs-10">
+//              <p class="primaryData"><a href="#">Project/Org name</a></p>
+//              <p class="secondaryData"> Short description of the organization/project</p>
+//            </div>
+//          </div>
+//        </div>
+//      </li>
+//    </ul>
+//   </div>
+// </div>
+// <div class="col-xs-12 col-sm-12">
+// <table class="table table-striped table-hover techne-table">
+//  <thead>
+//      <th></th>
+//      <th>Col 1</th>
+//      <th>Col 2</th>
+//      <th>Col 3</th>
+//   </tr>
+//  </thead>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//    <tr class="techne-table-xs-left techne-table-xs-right">
+//      <td class="techne-table-xs-left-slot">
+//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
+//      </td>
+//      <td>
+//          <div class="cellcontent">
+//              <a href="#">Organization/Project name</a>
+//          </div>
+//      </td>
+//      <td data-th="Placed At" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//      <td data-th="Customer Email" >
+//          <div class="cellcontent">test data</div>
+//      </td>
+//    </tr>
+//  </tbody>
+//  </table>
+// </div>
+//
+// Pattern 17.6.2
+
+
 //Package example
-//
-//
 //
 // <div class="row">
 //    <div class="col-xs-12 col-sm-5 col-md-4">
@@ -390,112 +515,4 @@
 // </div>
 // </div>
 //
-//Organization or Project Logo example
-//
-//
-//
-// <div class="row">
-//    <div class="ccol-xs-12 col-sm-5 col-md-4">
-//      <div class="thumbnail-shape center-block">
-//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--org-logo"></div>
-//        <div class="thumbnail-action-btn-wrapper">
-//          <button class="btn btn-link">Upload</button>
-//          <button class="btn btn-danger">Delete Image</button>
-//        </div>
-//      </div>
-//    </div>
-//    <div class="col-xs-12 col-sm-7 col-md-8">
-//    <ul class="dataCards dataCards-singleColumn list-group">
-//      <li class="dataCard">
-//        <div class="cardRow">
-//          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
-//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
-//            </div>
-//            <div class="col-md-10 col-sm-10 col-xs-10">
-//              <p class="primaryData"><a href="#">Project/Org name</a></p>
-//              <p class="secondaryData"> Short description of the organization/project</p>
-//            </div>
-//          </div>
-//        </div>
-//      </li>
-//      <li class="dataCard">
-//        <div class="cardRow">
-//          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
-//              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
-//            </div>
-//            <div class="col-md-10 col-sm-10 col-xs-10">
-//              <p class="primaryData"><a href="#">Project/Org name</a></p>
-//              <p class="secondaryData"> Short description of the organization/project</p>
-//            </div>
-//          </div>
-//        </div>
-//      </li>
-//    </ul>
-//   </div>
-// </div>
-// <div class="col-xs-12 col-sm-12">
-// <table class="table table-striped table-hover techne-table">
-//  <thead>
-//      <th></th>
-//      <th>Col 1</th>
-//      <th>Col 2</th>
-//      <th>Col 3</th>
-//   </tr>
-//  </thead>
-//    <tr class="techne-table-xs-left techne-table-xs-right">
-//      <td class="techne-table-xs-left-slot">
-//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
-//      </td>
-//      <td>
-//          <div class="cellcontent">
-//              <a href="#">Organization/Project name</a>
-//          </div>
-//      </td>
-//      <td data-th="Placed At" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//      <td data-th="Customer Email" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//    </tr>
-//    <tr class="techne-table-xs-left techne-table-xs-right">
-//      <td class="techne-table-xs-left-slot">
-//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
-//      </td>
-//      <td>
-//          <div class="cellcontent">
-//              <a href="#">Organization/Project name</a>
-//          </div>
-//      </td>
-//      <td data-th="Placed At" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//      <td data-th="Customer Email" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//    </tr>
-//    <tr class="techne-table-xs-left techne-table-xs-right">
-//      <td class="techne-table-xs-left-slot">
-//          <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-small"/>
-//      </td>
-//      <td>
-//          <div class="cellcontent">
-//              <a href="#">Organization/Project name</a>
-//          </div>
-//      </td>
-//      <td data-th="Placed At" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//      <td data-th="Customer Email" >
-//          <div class="cellcontent">test data</div>
-//      </td>
-//    </tr>
-//  </tbody>
-//  </table>
-// </div>
-//
-// Pattern 17.6
-
-
+// Pattern 17.6.3
