@@ -215,6 +215,22 @@
 }
 
 
+// Button Link
+//
+//Button Link is to be styled as a link as it's a tertiary action. Use Button  to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current page are discarded
+//
+// Markup:
+//  <button class="btn btn-lg btn-link">
+//    BUTTON LINK
+//  </button>
+//
+// Component 2.4.3
+
+.btn-link{
+  .button-variant(@btn-link-color; @btn-link-bg; @btn-link-border);
+}
+
+
 // Grouped Buttons
 //
 //  Grouped buttons are a horizontal control of multiple segments.
