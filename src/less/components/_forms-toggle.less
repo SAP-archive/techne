@@ -88,11 +88,10 @@
 // Markup:
 // <span class="y-toggle y-toggle-lg">
 //   <input type="checkbox" id="toggleidlg"/>
-//   <label for="toggleidlg" data-activelabel="On" data-inactivelabel="Off" class="control-label">Labeltext (optional)</label>
+//   <label for="toggleidlg" data-activelabel="|" data-inactivelabel="O" class="control-label">Labeltext (optional)</label>
 // </span>
 //
 // Component 2.8
-
 
   &.y-toggle-lg{
     // overwrite size
@@ -110,7 +109,7 @@
         content: attr(data-inactivelabel) "";
         font-size: 14px;
         text-align: right;
-        padding-right:  @toggle-size / 4;
+        padding-right:  @toggle-size/2;
         border-radius: @toggle-size/2;
         height: @toggle-size;
         width: @toggle-size*2.1;
@@ -132,9 +131,10 @@
         &:before{
           content: attr(data-activelabel) "";
           text-align: left;
-          padding-left:  @toggle-size / 4;
+          padding-left:  @toggle-size/1.5;
           padding-right: 0;
-          color: #fff;
+          color: @toggle-switch-color-default;
+          font-family: @font-family-dosis;
         }
         &:after {
           left: @toggle-size * 1.1 + @toggle-border-size;

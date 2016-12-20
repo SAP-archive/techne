@@ -77,6 +77,48 @@
 //
 // Pattern 8.2
 
+// Localization Editor - Static
+//
+// The localization Editor can also be used to display static information.
+//
+// Markup:
+//    <label class="control-label">Field Label</label>
+//    <div class="form-group locals-editor">
+//        <div class="locals-header clearfix">
+//            <ul class="nav nav-tabs locals-tabs">
+//                <li> <a href="">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li> <a href="">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">DA</a></li>
+//                <li> <a href="">NL</a></li>
+//                <li class="dropdown locals-tabs__more-menu active">
+//                    <a class="dropdown-toggle is-required locals-tabs__more-btn" 
+//                       data-toggle="dropdown" aria-expanded="false">
+//                        IT
+//                        <span class="caret"></span>
+//                    </a>
+//                    <ul class="dropdown-menu locals-tabs__more-tabs">
+//                        <li class="active">
+//                            <a href="" class="locals-tabs__more-tab">IT</a>
+//                        </li>
+//                        <li>
+//                            <a href="" class="locals-tabs__more-tab">PL</a>
+//                        </li>
+//                    </ul>
+//                </li>
+//            </ul>
+//        </div>
+//        <div class="form-group">
+//            <div class="property" baas-form-name ng-form="innerForm" >
+//                <p class="form-readonly-text"> Static Info</p>
+//            </div>
+//        </div>
+//    </div>
+//
+// Pattern 8.2.1
+
+
 // Displaying Localization Editor Errors
 //
 // <p>On validation, if one or more locales has an error, display "One or more locales required” in red text below the field.</p>
@@ -341,6 +383,13 @@
     background-color: @default-red;
     border-color: @default-red;
     color:  @navbar-default-bg;
+}
+
+.locals-editor .form-readonly-text {
+    padding: 14px 20px 14px 0;
+    border-top: 1px solid @default-grey-700;
+    font-size: 16px;
+    min-height: 52px;
 }
 
 .locals-tabs .has-error:before{
