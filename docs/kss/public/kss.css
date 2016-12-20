@@ -1881,6 +1881,8 @@ article section.LocalizationExample .kss-description h3 {
 .Icons.kss-section.kss-componnet-page .removelg-wrapper,
 .Icons.kss-section.kss-componnet-page .visibilityoff-wrapper,
 .Icons.kss-section.kss-componnet-page .visibilityon-wrapper,
-.Icons.kss-section.kss-componnet-page .warning-wrapper {
+.Icons.kss-section.kss-componnet-page .warning-wrapper,
+.Icons.kss-section.kss-componnet-page .feedback-wrapper,
+.Icons.kss-section.kss-componnet-page .gethelp-wrapper {
   display: none;
 }
