@@ -298,6 +298,7 @@
             $('.loading-container').css('display', 'none');
             $('#deleteImageBtn').on('click', function(){
                 $('#avatar').css('background-image', 'url(/images/default_circle-pic.png)');
+                $('#deleteImageBtn').css('display', 'none');
             });
             function readURL(input) {
                 if (input.files && input.files[0]) {
@@ -307,6 +308,7 @@
                     };
                     reader.readAsDataURL(input.files[0]);
                     $('.loading-container').hide();
+                    $('#deleteImageBtn').css('display', 'inline-block');
                 }else{
                     $('.loading-container').hide();
                 }
