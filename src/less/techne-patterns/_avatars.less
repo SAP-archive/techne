@@ -84,8 +84,11 @@
         overflow: visible;
     }
 
-    .thumbnail-action-btn-wrapper button{
-        display: inline-block;
+    .thumbnail-action-btn-wrapper {
+        margin-top: 10px;
+        button{
+            display: inline-block;
+        }
     }
 
     .spinner-wrapper{
@@ -105,7 +108,7 @@
     .thumbnail--loading-text{
         font-size: @font-size-small;
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 30%;
         width: 100%;
         max-width: @avatar--size/2;
@@ -115,7 +118,6 @@
 
 //images used for identifying the default image for various shapes
 .thumbnail--default-pic{
-
     &__сircle {
         background-image: url("/images/default_circle-pic.png");
     }
@@ -129,7 +131,22 @@
         background-image: url("/images/default_hexagon-pic.png");
     }
 }
-
+// Uploaded image/avatar
+//
+// The image is now upload and is shown in their respective shape: Circle for users/profiles images. Square for projects/organization/etc. logos. Hexagon for packages.
+//
+// Since you already have an image we can give the option to delete that image. In this case it return to display the default image with the corresponding shape in all related places. For that we added the delete image button displayed bellow the image. Also the user can replace the current image by uploading a new one.
+//
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail-shape--circle" style="background-image: url('/images/cat-avatar.jpg')"></div>
+//  <div class="thumbnail-action-btn-wrapper">
+//    <button class="btn btn-link">Upload</button>
+//    <button class="btn btn-danger">Delete Image</button>
+//  </div>
+//</div>
+//
+// Pattern 17.4
 
 
 // Image Uploading indicator
@@ -161,21 +178,7 @@
 //        </div>
 //      </div>
 //  </div>
-//   <p class="thumbnail--loading-text">Loading image...</p>
-//</div>
-//
-// Pattern 17.4
-
-
-// Uploaded image/avatar
-//
-// The image is now upload and is shown in their respective shape: Circle for users/profiles images. Square for projects/organization/etc. logos. Hexagon for packages.
-//
-// Since you already have an image we can give the option to delete that image. In this case it return to display the default image with the corresponding shape in all related places. For that we added the delete image button displayed bellow the image. Also the user can replace the current image by uploading a new one.
-// 
-// Markup:
-//<div class="thumbnail-shape">
-//  <div class="thumbnail__img thumbnail-shape--circle" style="background-image: url('/images/cat-avatar.jpg')"></div>
+//  <p class="thumbnail--loading-text">Loading image...</p>
 //  <div class="thumbnail-action-btn-wrapper">
 //    <button class="btn btn-link">Upload</button>
 //    <button class="btn btn-danger">Delete Image</button>
