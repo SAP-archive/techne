@@ -294,33 +294,40 @@
     <!-- Example of delete/upload/change of avatar -->
     <script>
         $(function(){
-            $('#imgInp').css('display', 'none');
-            $('.loading-container').css('display', 'none');
-            $('#deleteImageBtn').on('click', function(){
-                $('#avatar').css('background-image', 'url(/images/default_circle-pic.png)');
-                $('#deleteImageBtn').css('display', 'none');
+            var hiddenImgInp = $('#imgInp'),
+                loadingContainer = $('.loading-container'),
+                deleteImgButton = $('#deleteImageBtn'),
+                avatarPlaceholder = $('#avatar');
+            var hideLoading = function(){
+                loadingContainer.hide();
+            };
+            hiddenImgInp.css('display', 'none');
+            loadingContainer.css('display', 'none');
+            deleteImgButton.on('click', function(){
+                avatarPlaceholder.css('background-image', 'url(/images/default_circle-pic.png)');
+                deleteImgButton.css('display', 'none');
             });
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function (e) {
-                        $('#avatar').css('background-image', 'url('+ e.target.result + ')');
+                        avatarPlaceholder.css('background-image', 'url('+ e.target.result + ')');
                     };
                     reader.readAsDataURL(input.files[0]);
-                    $('.loading-container').hide();
-                    $('#deleteImageBtn').css('display', 'inline-block');
+                    hideLoading();
+                    deleteImgButton.css('display', 'inline-block');
                 }else{
-                    $('.loading-container').hide();
+                    hideLoading();
                 }
             }
 
-            $('#imgInp').on('change', function(){
+            hiddenImgInp.on('change', function(){
                 readURL(this);
             });
             //fake the click on default input field type="file"
-            $('#uploadImageBtn').on('click', function(){
-                $('.loading-container').show();
-                $('#imgInp').click();
+            deleteImgButton.on('click', function(){
+                loadingContainer.show();
+                hiddenImgInp.click();
             });
         });
     </script>
