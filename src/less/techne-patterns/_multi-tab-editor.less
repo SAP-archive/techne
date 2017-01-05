@@ -1,6 +1,6 @@
 // Usage Guidelines
 //
-// The localization editor presents a tab for each locale. The default locale will always be in the first position and selected. The selected tab is presented with a blue background. All other tabs are presented with a white background. The asterisk (*) indicates the locale is required.
+// The Multi-Tab editor presents a tab for each locale. The default locale will always be in the first position and selected. The selected tab is presented with a blue background. All other tabs are presented with a white background. The asterisk (*) indicates the locale is required.
 //
 // Markup:
 //    <label class="control-label">Field Label</label>
@@ -35,8 +35,7 @@
 //
 // Pattern 8.1
 
-
-// Localization Editor - MORE menu
+// MORE menu
 //
 // The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  functions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.
 //
@@ -77,9 +76,9 @@
 //
 // Pattern 8.2
 
-// Localization Editor - Static
+// Static View
 //
-// The localization Editor can also be used to display static information.
+// The Multi-tab Editor can also be used to display static information.
 //
 // Markup:
 //    <label class="control-label">Field Label</label>
@@ -119,7 +118,7 @@
 // Pattern 8.2.1
 
 
-// Displaying Localization Editor Errors
+// Displaying Errors
 //
 // <p>On validation, if one or more locales has an error, display "One or more locales required” in red text below the field.</p>
 // <p>For unselected tabs with errors, display the tab background as white, the locale name in red text, and a red exclamation mark (!) next to locale name.</p>
@@ -158,7 +157,7 @@
 //
 // Pattern 8.3
 
-// Displaying Localization Editor Errors for Active Tab
+// Displaying Errors for Active Tab
 //
 // <p>For a selected tab with an error, display the tab background as red and a red exclamation mark (!) next to the locale name. </p>
 //
@@ -196,7 +195,7 @@
 //
 // Pattern 8.4
 
-// Errors within the MORE MENU
+// Displaying Errors within the MORE MENU
 //
 // <p>If the selected locale in the MORE menu position has an error, display the tab with a red background and a red exclamation mark (!) next to the locale name.</p>
 // <p>If additional locales under the more menu have errors, display the locale name in red text with an exclamation next it.</p>
@@ -236,7 +235,7 @@
 //
 // Pattern 8.5
 
-// Errors within the MORE MENU for Selected Tab
+// Displaying Errors within the MORE MENU for Selected Tab
 //
 // <p>If another tab is selected and the More menu has one or more locales with errors, display the More text in red on a white background with a red exclamation(!) mark next to it.</p>
 //
@@ -280,18 +279,18 @@
 // <h3>Visual Guidelines</h3>
 //
 // Markup:
-// 	<div class="text-left thumbnails">
-// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_page-level.png" title="View Full Image" href="#viewFullscreen">
-// 			<img src="../images/thumbnails/local_thumbnail.png" alt="single" class="img-thumbnail">
-//			<p>Page level</p>
-//    	</a>
-// 		<a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_field-level.png" title="View Full Image" href="#viewFullscreen">
-// 			<img src="../images/thumbnails/field-level_thumbnail.png" alt="multi" class="img-thumbnail">
-//			<p>Field level</p>
-//     	</a>
-// 	</div>
+//  <div class="text-left thumbnails">
+//      <a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_page-level.png" title="View Full Image" href="#viewFullscreen">
+//          <img src="../images/thumbnails/local_thumbnail.png" alt="single" class="img-thumbnail">
+//          <p>Page level</p>
+//      </a>
+//      <a class="js_fullscreen text-center" data-toggle="modal" data-id="../images/fullscreen/local_field-level.png" title="View Full Image" href="#viewFullscreen">
+//          <img src="../images/thumbnails/field-level_thumbnail.png" alt="multi" class="img-thumbnail">
+//          <p>Field level</p>
+//      </a>
+//  </div>
 // </div>
-// 	<div class="modal fade bs-example-modal-lg" id="viewFullscreen">
+//  <div class="modal fade bs-example-modal-lg" id="viewFullscreen">
 //   <div class="modal-dialog modal-lg">
 //     <div class="modal-content">
 //       <div>
@@ -301,6 +300,7 @@
 //   </div>
 //
 // Pattern 8.7
+
 
 // Core Navigation stylings
 .nav {
@@ -460,3 +460,155 @@
 .locals-tabs .locals-tabs__more-tabs .active .locals-tabs__more-tab:not(.has-error){
     color: @default-blue;
 }
+
+
+// the following code is depricated and will be removed from future releases 
+.locals-tabs .active :not(.has-error) {
+    background-color: @default-blue;
+    border-color: @default-blue;
+    color: @navbar-default-bg;
+}
+
+.locals-tabs .active .has-error,
+.locals-tabs .active .has-error .caret {
+    background-color: @default-red;
+    border-color: @default-red;
+
+}
+
+
+.locals-tabs__more-tabs{
+    border-color: @default-grey-700;
+    background-color:  @navbar-default-bg;
+}
+
+.locals-tabs__more-menu{
+    cursor: pointer;
+}
+
+.locals-editor .locals-tabs a{
+    width: 100%;
+}
+
+.locals-editor .locals-tabs{
+    border-bottom-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs .active a,
+.locals-editor .locals-tabs .active a:hover,
+.locals-editor .locals-tabs .active a:focus{
+    font-weight: bold;
+}
+
+.locals-editor .locals-tabs .active a:hover{
+    .caret{
+        border-top-color: @default-blue;
+    }
+}
+
+.locals-editor .locals-tabs li:not(.active){
+    border-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs li:last-of-type {
+    border-right: 1px solid @default-grey-700;
+}
+
+.locals-editor .locals-tabs .locals-tabs__more-tabs li:last-of-type{
+    border-right: none;
+}
+
+.locals-editor .locals-tabs > li{
+    border-top: 1px solid @default-grey-700;
+    border-left: 1px solid @default-grey-700;
+    border-bottom: 1px solid @default-grey-700;
+}
+
+.locals-header .locals-tabs{
+    margin-bottom: 0;
+}
+
+.locals-editor .locals-tabs .active a.has-error,
+.locals-editor .locals-tabs .active a:hover .has-error,
+.locals-editor .locals-tabs .active a:focus .has-error{
+    background-color: @default-red;
+    border-color: @default-red;
+    color:  @navbar-default-bg;
+}
+
+.locals-editor .form-readonly-text {
+    padding: 14px 20px 14px 0;
+    border-top: 1px solid @default-grey-700;
+    font-size: 16px;
+    min-height: 52px;
+}
+
+.locals-tabs .has-error:before{
+    content: "! ";
+}
+
+.locals-tabs :not(.locals-tabs__more-menu) .is-required:after,
+.locals-tabs__more-menu.is-required .locals-tabs__more-span:after{
+    content: "*";
+}
+
+.locals-header .locals-tabs > :not(.active) > a.has-error:not(:hover){
+    background-color: transparent;
+    color: @state-danger-text;
+}
+
+.locals-editor .form-group{
+    margin-top: -1px;
+}
+
+.locals-tabs .locals-tabs__more-menu.active .caret,
+.locals-tabs .locals-tabs__more-menu.active .has-error .caret{
+    border-color:transparent;
+    background-color: transparent;
+    border-top-color: @navbar-default-bg;
+}
+
+.has-error{
+    border-color: @state-danger-border;
+}
+
+.locals-editor .inline-hint-text__error,
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs a.locals-tabs__more-tab.has-error{
+    color: @state-danger-text;
+}
+
+.locals-tabs .locals-tabs__more-menu .locals-tabs__more-tabs{
+    background-color: @navbar-default-bg;
+    border-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs > li.locals-tabs__more-menu{
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.locals-editor .locals-tabs > li.locals-tabs__more-menu.open{
+    border-top-color: @default-grey-700;
+    border-right-color: @default-grey-700;
+    border-bottom-color: @default-grey-700;
+}
+
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error):hover,
+.locals-tabs .active a.locals-tabs__more-tab.has-error:hover  {
+    background-color:  @navbar-default-bg;
+    font-weight: normal;
+}
+
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .locals-tabs__more-tab:not(.has-error){
+    color: @grayish;
+}
+
+.locals-tabs .locals-tabs__more-tabs .active .locals-tabs__more-tab:not(.has-error){
+    color: @default-blue;
+}
+// end depricated code 
