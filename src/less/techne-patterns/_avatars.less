@@ -84,8 +84,11 @@
         overflow: visible;
     }
 
-    .thumbnail-action-btn-wrapper button{
-        display: inline-block;
+    .thumbnail-action-btn-wrapper {
+        margin-top: 10px;
+        button{
+            display: inline-block;
+        }
     }
 
     .spinner-wrapper{
@@ -105,7 +108,7 @@
     .thumbnail--loading-text{
         font-size: @font-size-small;
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 30%;
         width: 100%;
         max-width: @avatar--size/2;
@@ -115,7 +118,6 @@
 
 //images used for identifying the default image for various shapes
 .thumbnail--default-pic{
-
     &__сircle {
         background-image: url("/images/default_circle-pic.png");
     }
@@ -129,22 +131,22 @@
         background-image: url("/images/default_hexagon-pic.png");
     }
 }
-
-//images for demo purpose only
-.thumbnail{
-
-    &--avatar {
-      background-image: url("/images/cat-avatar.jpg");
-  }
-
-  &--package-logo {
-      background-image: url("/images/package-picture.png");
-  }
-
-  &--org-logo {
-      background-image: url("/images/sap-hybris-logo.png");
-  }
-}
+// Uploaded image/avatar
+//
+// The image is now upload and is shown in their respective shape: Circle for users/profiles images. Square for projects/organization/etc. logos. Hexagon for packages.
+//
+// Since you already have an image we can give the option to delete that image. In this case it return to display the default image with the corresponding shape in all related places. For that we added the delete image button displayed bellow the image. Also the user can replace the current image by uploading a new one.
+//
+// Markup:
+//<div class="thumbnail-shape">
+//  <div class="thumbnail__img thumbnail-shape--circle" style="background-image: url('/images/cat-avatar.jpg')"></div>
+//  <div class="thumbnail-action-btn-wrapper">
+//    <button class="btn btn-link">Upload</button>
+//    <button class="btn btn-danger">Delete Image</button>
+//  </div>
+//</div>
+//
+// Pattern 17.4
 
 
 // Image Uploading indicator
@@ -176,21 +178,7 @@
 //        </div>
 //      </div>
 //  </div>
-//   <p class="thumbnail--loading-text">Loading image...</p>
-//</div>
-//
-// Pattern 17.4
-
-
-// Uploaded image/avatar
-//
-// The image is now upload and is shown in their respective shape: Circle for users/profiles images. Square for projects/organization/etc. logos. Hexagon for packages.
-//
-// Since you already have an image we can give the option to delete that image. In this case it return to display the default image with the corresponding shape in all related places. For that we added the delete image button displayed bellow the image. Also the user can replace the current image by uploading a new one.
-// 
-// Markup:
-//<div class="thumbnail-shape">
-//  <div class="thumbnail__img thumbnail-shape--circle thumbnail--avatar"></div>
+//  <p class="thumbnail--loading-text">Loading image...</p>
 //  <div class="thumbnail-action-btn-wrapper">
 //    <button class="btn btn-link">Upload</button>
 //    <button class="btn btn-danger">Delete Image</button>
@@ -212,7 +200,7 @@
 // <div class="row">
 //    <div class="col-xs-12 col-sm-5 col-md-4">
 //      <div class="thumbnail-shape center-block">
-//        <div class="thumbnail__img thumbnail-shape--circle thumbnail--avatar"></div>
+//        <div class="thumbnail__img thumbnail-shape--circle" style="background-image: url('/images/cat-avatar.jpg')"></div>
 //        <div class="thumbnail-action-btn-wrapper">
 //          <button class="btn btn-link">Upload</button>
 //          <button class="btn btn-danger">Delete Image</button>
@@ -224,7 +212,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/cat-avatar.jpg" class="thumbnail-shape-medium thumbnail-shape--circle">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
@@ -238,7 +226,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/cat-avatar.jpg" class="thumbnail-shape-medium thumbnail-shape--circle">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
@@ -260,8 +248,8 @@
 //      <th>Col 1</th>
 //      <th>Col 2</th>
 //      <th>Col 3</th>
-//   </tr>
 //  </thead>
+//  <tbody>
 //    <tr class="techne-table-xs-left techne-table-xs-right">
 //      <td class="techne-table-xs-left-slot">
 //          <img src="../images/cat-avatar.jpg" class="thumbnail-shape-small thumbnail-shape--circle"/>
@@ -323,7 +311,7 @@
 // <div class="row">
 //    <div class="ccol-xs-12 col-sm-5 col-md-4">
 //      <div class="thumbnail-shape center-block">
-//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--org-logo"></div>
+//        <div class="thumbnail__img thumbnail-shape--rectangle" style="background-image: url('/images/sap-hybris-logo.png')"></div>
 //        <div class="thumbnail-action-btn-wrapper">
 //          <button class="btn btn-link">Upload</button>
 //          <button class="btn btn-danger">Delete Image</button>
@@ -335,7 +323,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
@@ -348,7 +336,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/sap-hybris-logo.png" class="thumbnail-shape-medium">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
@@ -431,7 +419,7 @@
 // <div class="row">
 //    <div class="col-xs-12 col-sm-5 col-md-4">
 //      <div class="thumbnail-shape center-block">
-//        <div class="thumbnail__img thumbnail-shape--rectangle thumbnail--package-logo "></div>
+//        <div class="thumbnail__img thumbnail-shape--rectangle" style="background-image: url('/images/package-picture.png')"></div>
 //        <div class="thumbnail-action-btn-wrapper">
 //          <button class="btn btn-link">Upload</button>
 //          <button class="btn btn-danger">Delete Image</button>
@@ -443,7 +431,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/package-picture.png" class="thumbnail-shape-medium">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
@@ -457,7 +445,7 @@
 //      <li class="dataCard">
 //        <div class="cardRow">
 //          <div class="row">
-//            <div class="col-md-2 col-sm-2 col-xs-2">
+//            <div class="col-md-2 col-sm-2 col-xs-2 card_avatar--max-width">
 //              <img src="../images/package-picture.png" class="thumbnail-shape-medium">
 //            </div>
 //            <div class="col-md-10 col-sm-10 col-xs-10">
