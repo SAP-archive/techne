@@ -321,21 +321,35 @@
         }
     }
 
-    .multi-tabs__more-tabs{
-        border-color: @default-grey-700;
-        background-color:  @navbar-default-bg;
-
-        li:last-of-type{
-            border-right: none;
-        }
-    }
-
     .multi-tabs__more-menu{
         cursor: pointer;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+
+        +.active{
+            .caret,
+            .has-error .caret{
+                border-color:transparent;
+                background-color: transparent;
+                border-top-color: @navbar-default-bg;
+            }
+        } 
+
+        +.open{
+            border-top-color: @default-grey-700;
+            border-right-color: @default-grey-700;
+            border-bottom-color: @default-grey-700;
+        }
+
 
         .multi-tabs__more-tabs{
             background-color: @navbar-default-bg;
             border-color: @default-grey-700;
+
+            li:last-of-type{
+                border-right: none;
+            }            
         }
     }
 
@@ -352,18 +366,60 @@
             }
         } 
 
-        .active a:hover{
-            .caret{
-                border-top-color: @default-blue;
+        .active{
+
+            a{
+
+                &:hover{
+                    .caret{
+                        border-top-color: @default-blue;
+                    }
+                } 
+                
+                +.has-error,
+                &:hover .has-error,
+                &:focus .has-error{
+                    background-color: @default-red;
+                    border-color: @default-red;
+                    color:  @navbar-default-bg;
+                }
+
+                &:not(.has-error) {
+                    background-color: @default-blue;
+                    border-color: @default-blue;
+                    color: @navbar-default-bg;
+                } 
+
+                .has-error{
+                    background-color: @default-red;
+                    border-color: @default-red;
+
+                    .caret {
+                    background-color: @default-red;
+                    border-color: @default-red;
+                    }
+                }
             }
+
+            .multi-tabs__more-tab:not(.has-error),
+            a.multi-tabs__more-tab.has-error,
+            .multi-tabs__more-tab:not(.has-error):hover,
+            a.multi-tabs__more-tab.has-error:hover  {
+                background-color:  @navbar-default-bg;
+                font-weight: normal;
+            }            
+            
         }
 
-        li:not(.active){
-            border-color: @default-grey-700;
-        }
+        li{
+         
+            &:not(.active){
+                border-color: @default-grey-700;
+            }
 
-        li:last-of-type {
-            border-right: 1px solid @default-grey-700;
+            &:last-of-type {
+                border-right: 1px solid @default-grey-700;
+            }
         }
 
         > li{
@@ -372,76 +428,31 @@
             border-bottom: 1px solid @default-grey-700;
         }
 
-        > li.multi-tabs__more-menu{
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
+
+
+        .has-error:before{
+            content: "! ";
         }
 
-        > li.multi-tabs__more-menu.open{
-            border-top-color: @default-grey-700;
-            border-right-color: @default-grey-700;
-            border-bottom-color: @default-grey-700;
+        &:not(.multi-tabs__more-menu) .is-required:after,
+        .multi-tabs__more-menu.is-required .multi-tabs__more-span:after{
+            content: "*";
         }
 
 
 
-        .active a.has-error,
-        .active a:hover .has-error,
-        .active a:focus .has-error{
-            background-color: @default-red;
-            border-color: @default-red;
-            color:  @navbar-default-bg;
+        .active .multi-tabs__more-tab:not(.has-error),
+        .multi-tabs__more-tab:not(.has-error){
+            color: @grayish;
         }
 
-            .active :not(.has-error) {
-        background-color: @default-blue;
-        border-color: @default-blue;
-        color: @navbar-default-bg;
-    } 
+        .multi-tabs__more-tabs .active .multi-tabs__more-tab:not(.has-error){
+            color: @default-blue;
+        }
 
-    .active .has-error,
-    .active .has-error .caret {
-        background-color: @default-red;
-        border-color: @default-red;
-    }
-
-    .has-error:before{
-        content: "! ";
-    }
-
-    &:not(.multi-tabs__more-menu) .is-required:after,
-    .multi-tabs__more-menu.is-required .multi-tabs__more-span:after{
-        content: "*";
-    }
-
-    .multi-tabs__more-menu.active .caret,
-    .multi-tabs__more-menu.active .has-error .caret{
-        border-color:transparent;
-        background-color: transparent;
-        border-top-color: @navbar-default-bg;
-    }
-
-    .active .multi-tabs__more-tab:not(.has-error),
-    .active a.multi-tabs__more-tab.has-error,
-    .active .multi-tabs__more-tab:not(.has-error):hover,
-    .active a.multi-tabs__more-tab.has-error:hover  {
-        background-color:  @navbar-default-bg;
-        font-weight: normal;
-    }
-
-    .active .multi-tabs__more-tab:not(.has-error),
-    .multi-tabs__more-tab:not(.has-error){
-        color: @grayish;
-    }
-
-    .multi-tabs__more-tabs .active .multi-tabs__more-tab:not(.has-error){
-        color: @default-blue;
-    }
-
-    .has-error{
-        border-color: @state-danger-border;
-    }
+        .has-error{
+            border-color: @state-danger-border;
+        }
         
     }
 
