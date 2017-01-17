@@ -295,7 +295,7 @@
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            10px 20px;
+@table-cell-padding:            20px;
 //** Padding for cells in `.table-condensed`.
 @table-condensed-cell-padding:  5px;
 
@@ -344,6 +344,11 @@
 @btn-subordinate-color:          @default-greyblue-500;
 @btn-subordinate-bg:             transparent;
 @btn-subordinate-border:         darken(@btn-subordinate-bg, 5%);
+
+
+@btn-link-color:                  @link-color;
+@btn-link-bg:                     transparent;
+@btn-link-border:                 darken(@btn-subordinate-bg, 5%);;
 
 @btn-link-disabled-color:        @gray-light;
 
@@ -824,6 +829,8 @@
 @progress-bar-danger-bg:      @brand-danger;
 //** Info progress bar color
 @progress-bar-info-bg:        @brand-info;
+//** Progress bar text color
+@progress-bar-uploading-image--bckg-color:  @default-greyblue;
 
 
 //== List group

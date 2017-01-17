@@ -1870,6 +1870,19 @@ article section.LocalizationExample .kss-description h3 {
 .Icons.kss-section.kss-componnet-page .sync-wrapper,
 .Icons.kss-section.kss-componnet-page .caution-wrapper,
 .Icons.kss-section.kss-componnet-page .done-wrapper,
-.Icons.kss-section.kss-componnet-page .localization-wrapper {
+.Icons.kss-section.kss-componnet-page .localization-wrapper,
+.Icons.kss-section.kss-componnet-page .change-wrapper,
+.Icons.kss-section.kss-componnet-page .checkedlg-wrapper,
+.Icons.kss-section.kss-componnet-page .dragdroplg-wrapper,
+.Icons.kss-section.kss-componnet-page .edit-wrapper,
+.Icons.kss-section.kss-componnet-page .linked-wrapper,
+.Icons.kss-section.kss-componnet-page .noimage-wrapper,
+.Icons.kss-section.kss-componnet-page .options-wrapper,
+.Icons.kss-section.kss-componnet-page .removelg-wrapper,
+.Icons.kss-section.kss-componnet-page .visibilityoff-wrapper,
+.Icons.kss-section.kss-componnet-page .visibilityon-wrapper,
+.Icons.kss-section.kss-componnet-page .warning-wrapper,
+.Icons.kss-section.kss-componnet-page .feedback-wrapper,
+.Icons.kss-section.kss-componnet-page .gethelp-wrapper {
   display: none;
 }

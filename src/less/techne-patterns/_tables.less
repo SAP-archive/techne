@@ -250,119 +250,125 @@
 // Pattern 5.1
 
 
-.table{
-   border-collapse: separate;
+.table {
+    border-collapse: separate;
+    color: @default-greyblue;
 
-   color: @default-greyblue;
-   > thead, > tbody, > tfoot{
-      > tr{
-         > th, > td{
-            &.sticky-right{
-               text-align: right;
-            }
-            vertical-align: middle;
+    > thead, 
+    > tbody, 
+    > tfoot {
+        > tr {
+            > th, 
+            > td {
+                vertical-align: middle;
 
-            a {
-                font-weight: bold;
+                &.sticky-right{
+                    text-align: right;
+                }
+
+                a {
+                    font-weight: bold;
+                }
             }
-         }
-         > th{
-            font-size: 13px;
-            text-transform: uppercase;
-            color: @table-head-color;
-            background: @table-head-bg;
-            padding-top: 50px;
-            a{
-               color: #fff;
+
+            > th {
+                font-size: 13px;
+                text-transform: uppercase;
+                color: @table-head-color;
+                background: @table-head-bg;
+                padding-top: 50px;
+
+                a {
+                    color: #fff;
+                }
             }
-         }
-         &:last-child{
-            > th, > td{
-               border-bottom: none;
+
+            &:last-child {
+                > th, 
+                > td {
+                    border-bottom: none;
+                }
             }
-         }
-         &.active{
-            a{
-               color: #fff;
+
+            &.active {
+                a {
+                    color: #fff;
+                }
             }
-         }
-      }
-   }
+        }
+    }
 }
 
 
 
 
-.table-responsive{
+.table-responsive {
 	-webkit-overflow-scrolling: touch;
 }
 
 
 table.techne-table {
     background-color: transparent;
-    //border: 1px solid @body-bg;
 
-    tbody{
+    tbody {
         background-color: #eef3f7;
     }
+
     td {
-        cursor: pointer;
         color: @techne-typo-default;
 
-         &.no-padding{
+        &.no-padding {
             padding: 0px !important;
         }
 
-        &.techne-table-action{
-            .hyicon{
+        &.techne-table-action {
+            .hyicon {
                 font-size: 24px;
             }
         }
     }
 
-    tr{
-        &.y-add{
+    tr {
+        &.y-add {
             background: transparent !important;
             box-shadow: none;
-            > td{
+            margin-bottom: 10px;
+            
+            > td {
                 padding: 0px !important;
                 border: none;
             }
-            margin-bottom: 10px;
         }
     }
 
     @media (max-width: @screen-sm) {
 
-
         thead {
             display: none;
         }
-        td{
+
+        td {
             clear:both;
             display: block;
             border-top: none !important;
-
             /* These are technically the same, but use both */
             overflow-wrap: break-word;
             word-wrap: break-word;
-
             -ms-word-break: break-all;
             /* This is the dangerous one in WebKit, as it breaks things wherever */
             word-break: break-all;
             /* Instead use this non-standard one: */
             word-break: break-word;
-
             /* Adds a hyphen where the word breaks, if supported (No Blink) */
             hyphens: auto;
 
-            .floating-text{
+            .floating-text {
                 hyphens: none;
                 word-break: initial;
                 word-wrap: initial;
             }
 
-            &:before{
+            &:before {
                 content: attr(data-th) "";
                 width: 100%;
                 display: block;
@@ -377,7 +383,7 @@ table.techne-table {
                 font-size: 15px;
             }
 
-            &.techne-table-xs-left-slot{
+            &.techne-table-xs-left-slot {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -387,7 +393,7 @@ table.techne-table {
                 padding-left: 10px;
             }
 
-            &.techne-table-xs-right-slot{
+            &.techne-table-xs-right-slot {
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -399,45 +405,48 @@ table.techne-table {
         }
 
         tr {
-
             display: block;
             position: relative;
             box-shadow: 0 2px 3px fade(#8a8fa1, 20%);
             margin-bottom: 1px;
 
-            &.techne-table-row-clickable{
-                &:hover{
+            &.techne-table-row-clickable {
+                &:hover {
                     box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
                 }
             }
 
-            &:hover{
-
+            &:hover {
 
                 .status {
-                    &.info, &.CREATED, &.CONFIRMED, &.success, &.SHIPPED {
+                    &.info, 
+                    &.created, 
+                    &.confirmed, 
+                    &.success, 
+                    &.shipped {
                         color: #fff;
                     }
                 }
             }
-            &.techne-table-xs-left{
+
+            &.techne-table-xs-left {
                 padding-left: 50px;
             }
-            &.techne-table-xs-right{
+
+            &.techne-table-xs-right {
                 padding-right: 50px;
             }
         }
 
         // Thanks Bootstrap! That's called too specific selectors...
-         > tbody > tr {
-
+        > tbody > tr {
 
             // table-stripe overwrite
-            &:nth-child(1n){
+            &:nth-child(1n) {
                 background: #fff;
             }
 
-            &:nth-child(2n){
+            &:nth-child(2n) {
                 background: @table-cell-select-color-default;
             }
 
@@ -449,7 +458,7 @@ table.techne-table {
             > th {
                 font-size: 13px;
             }
-
+            
         }
 
     }
@@ -460,5 +469,5 @@ table.techne-table {
     table.techne-table{
         background:none;
     }
-
+    
 }
