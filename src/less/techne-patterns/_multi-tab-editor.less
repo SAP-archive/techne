@@ -3,73 +3,69 @@
 // The Multi-Tab editor presents a tab for each locale. The default locale will always be in the first position and selected. The selected tab is presented with a blue background. All other tabs are presented with a white background. The asterisk (*) indicates the locale is required.
 //
 // Markup:
-//    <label class="control-label">Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li class="active"> <a href="" class="is-required">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li> <a href="" class="is-required">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">PL</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li class="more-tab">
-//                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-//                        <span class="multi-tabs__more-span">MORE</span>
-//                        <span class="caret"></span>
-//                    </a>
-//                    <ul class="dropdown-menu">
-//                        <li><a href="">IT</a></li>
-//                        <li><a href="">PL</a></li>
-//                        <li><a href="">FR</a></li>
-//                    </ul>
-//                </li>
+// <label class="control-label">Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li class="active"> <a href="" class="is-required">EN</a></li>
+//        <li> <a href="">BG</a></li>
+//        <li> <a href="" class="is-required">DE</a></li>
+//        <li> <a href="">FR</a></li>
+//        <li> <a href="">PL</a></li>
+//        <li> <a href="">DA</a></li>
+//        <li class="more-tab">
+//            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//                <span class="multi-tabs__more-span">MORE</span>
+//                <span class="caret"></span>
+//            </a>
+//            <ul class="dropdown-menu">
+//                <li><a href="">IT</a></li>
+//                <li><a href="">PL</a></li>
+//                <li><a href="">FR</a></li>
 //            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon"/>
-//            </div>
+//        </li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm">
+//            <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon"/>
 //        </div>
 //    </div>
+// </div>
 //
 // Pattern 8.1
 
-// MORE menu
+// MORE menu selected
 //
 // The MORE menu dropdown contains additional locales. When locale is selected from the MORE menu, it displays as the active tab in place of the MORE label. The dropdown arrow displays next to the locale name to indicate it  functions as a dropdown. If any locales under the MORE menu are required, an asterisk (*) displays next to the locale name in the dropdown list.
 //
 // Markup:
-//    <label class="control-label">Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li> <a href="">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li> <a href="">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li> <a href="">NL</a></li>
-//                <li class="more-tab active">
-//                    <a class="dropdown-toggle" 
-//                       data-toggle="dropdown" aria-expanded="false">
-//                        IT
-//                        <span class="caret"></span>
-//                    </a>
-//                    <ul class="dropdown-menu">
-//                        <li><a href="">IT</a></li>
-//                        <li><a href="">PL</a></li>
-//                        <li><a href="">FR</a></li>
-//                    </ul>
-//                </li>
+// <label class="control-label">Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li> <a href="">EN</a></li>
+//        <li> <a href="">BG</a></li>
+//        <li> <a href="">DE</a></li>
+//        <li> <a href="">FR</a></li>
+//        <li> <a href="">DA</a></li>
+//        <li> <a href="">NL</a></li>
+//        <li class="more-tab active">
+//            <a class="dropdown-toggle" 
+//               data-toggle="dropdown" aria-expanded="false">
+//                IT
+//                <span class="caret"></span>
+//            </a>
+//            <ul class="dropdown-menu">
+//                <li><a href="">IT</a></li>
+//                <li><a href="">PL</a></li>
+//                <li><a href="">FR</a></li>
 //            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm" >
-//                <input name="lastName" type="text" class="form-control input-lg" value="Gli uomini camminare sulla Luna">
-//            </div>
+//        </li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm" >
+//            <input name="lastName" type="text" class="form-control input-lg" value="Gli uomini camminare sulla Luna">
 //        </div>
 //    </div>
+// </div>
 //
 // Pattern 8.2
 
@@ -78,35 +74,33 @@
 // The Multi-tab Editor can also be used to display static information.
 //
 // Markup:
-//    <label class="control-label">Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li class="active"> <a href="" class="is-required">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li> <a href="" class="is-required">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">PL</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li class="more-tab">
-//                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-//                    <span class="multi-tabs__more-span">MORE</span>
-//                    <span class="caret"></span>
-//                  </a>
-//                    <ul class="dropdown-menu">
-//                        <li><a href="">IT</a></li>
-//                        <li><a href="">PL</a></li>
-//                        <li><a href="">FR</a></li>
-//                    </ul>
-//                </li>
+// <label class="control-label">Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li class="active"> <a href="" class="is-required">EN</a></li>
+//        <li> <a href="">BG</a></li>
+//        <li> <a href="" class="is-required">DE</a></li>
+//        <li> <a href="">FR</a></li>
+//        <li> <a href="">PL</a></li>
+//        <li> <a href="">DA</a></li>
+//        <li class="more-tab">
+//          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//            <span class="multi-tabs__more-span">MORE</span>
+//            <span class="caret"></span>
+//          </a>
+//            <ul class="dropdown-menu">
+//                <li><a href="">IT</a></li>
+//                <li><a href="">PL</a></li>
+//                <li><a href="">FR</a></li>
 //            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm" >
-//                <p class="form-readonly-text"> Static Info</p>
-//            </div>
+//        </li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm" >
+//            <p class="form-readonly-text"> Static Info</p>
 //        </div>
 //    </div>
+// </div>
 //
 // Pattern 8.2.1
 
@@ -117,36 +111,34 @@
 // <p>For unselected tabs with errors, display the tab background as white, the locale name in red text, and a red exclamation mark (!) next to locale name.</p>
 //
 // Markup:
-//    <label>Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li class="active"> <a href="" class="is-required">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li> <a href="" class="has-error is-required">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">PL</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li class="more-tab">
-//                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-//                    <span class="multi-tabs__more-span">MORE</span>
-//                    <span class="caret"></span>
-//                  </a>
-//                    <ul class="dropdown-menu">
-//                        <li><a href="">IT</a></li>
-//                        <li><a href="">PL</a></li>
-//                        <li><a href="">FR</a></li>
-//                    </ul>
-//                </li>
+// <label>Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li class="active"> <a href="" class="is-required">EN</a></li>
+//        <li> <a href="">BG</a></li>
+//        <li> <a href="" class="has-error is-required">DE</a></li>
+//        <li> <a href="">FR</a></li>
+//        <li> <a href="">PL</a></li>
+//        <li> <a href="">DA</a></li>
+//        <li class="more-tab">
+//          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//            <span class="multi-tabs__more-span">MORE</span>
+//            <span class="caret"></span>
+//          </a>
+//            <ul class="dropdown-menu">
+//                <li><a href="">IT</a></li>
+//                <li><a href="">PL</a></li>
+//                <li><a href="">FR</a></li>
 //            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm" >
-//                <input name="lastName" type="text" class="form-control input-lg">
-//                <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
-//            </div>
+//        </li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm" >
+//            <input name="lastName" type="text" class="form-control input-lg">
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
 //        </div>
 //    </div>
+// </div>
 //
 // Pattern 8.3
 
@@ -155,40 +147,74 @@
 // <p>For a selected tab with an error, display the tab background as red and a red exclamation mark (!) next to the locale name. </p>
 //
 // Markup:
-//    <label>Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li> <a href="" class="is-required">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li class="active"> <a href="" class="has-error is-required">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">PL</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li class="more-tab">
-//                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-//                        <span class="multi-tabs__more-span">MORE</span>
-//                        <span class="caret"></span>
-//                    </a>
-//                    <ul class="dropdown-menu">
-//                        <li><a href="">IT</a></li>
-//                        <li><a href="">PL</a></li>
-//                        <li><a href="">FR</a></li>
-//                    </ul>
-//                </li>
-//            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm" >
-//                <input name="lastName" type="text" class="form-control input-lg has-error">
-//                <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
-//            </div>
-//        </div>
-//    </div>
+// <label>Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//     <ul class="nav nav-tabs multi-tabs">
+//         <li> <a href="" class="is-required">EN</a></li>
+//         <li> <a href="">BG</a></li>
+//         <li class="active"> <a href="" class="has-error is-required">DE</a></li>
+//         <li> <a href="">FR</a></li>
+//         <li> <a href="">PL</a></li>
+//         <li> <a href="">DA</a></li>
+//         <li class="more-tab">
+//             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//                 <span class="multi-tabs__more-span">MORE</span>
+//                 <span class="caret"></span>
+//             </a>
+//             <ul class="dropdown-menu">
+//                 <li><a href="">IT</a></li>
+//                 <li><a href="">PL</a></li>
+//                 <li><a href="">FR</a></li>
+//             </ul>
+//         </li>
+//     </ul>
+//     <div class="form-group">
+//         <div class="property" baas-form-name ng-form="innerForm" >
+//             <input name="lastName" type="text" class="form-control input-lg has-error">
+//             <span class="inline-hint-text inline-hint-text__error">German required</span>
+//         </div>
+//     </div>
+// </div>
 //
 // Pattern 8.4
 
 // Displaying Errors within the MORE MENU
+//
+// <p>If another tab is selected and the More menu has one or more locales with errors, display the More text in red on a white background with a red exclamation(!) mark next to it.</p>
+//
+// Markup:
+// <label>Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//     <ul class="nav nav-tabs multi-tabs">
+//        <li> <a href="" class="is-required">EN</a></li>
+//        <li> <a href="">BG</a></li>
+//        <li class="active"> <a href="" class="is-required">DE</a></li>
+//        <li> <a href="">FR</a></li>
+//        <li> <a href="">PL</a></li>
+//        <li> <a href="">DA</a></li>
+//        <li class="more-tab">
+//            <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">
+//                <span class="multi-tabs__more-span">MORE</span>
+//                <span class="caret"></span>
+//            </a>
+//            <ul class="dropdown-menu">
+//                <li><a href="">IT</a></li>
+//                <li><a href="" class="is-required has-error">PL</a></li>
+//                <li><a href="">FR</a></li>
+//            </ul>
+//        </li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm" >
+//            <input name="lastName" type="text" class="form-control input-lg">
+//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//        </div>
+//    </div>
+// </div>
+//
+// Pattern 8.5
+
+// Displaying Errors within the MORE MENU Selected
 //
 // <p>If the selected locale in the MORE menu position has an error, display the tab with a red background and a red exclamation mark (!) next to the locale name.</p>
 // <p>If additional locales under the more menu have errors, display the locale name in red text with an exclamation next it.</p>
@@ -198,69 +224,29 @@
 //    <div class="form-group multi-tabs-editor">
 //        <div class="multi-tabs-header clearfix">
 //            <ul class="nav nav-tabs multi-tabs">
-//                <li> <a href="">EN</a></li>
+//                <li> <a href="" class="is-required">EN</a></li>
 //                <li> <a href="">BG</a></li>
-//                <li> <a href="">DE</a></li>
+//                <li> <a href="" class="is-required">DE</a></li>
 //                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
 //                <li> <a href="">DA</a></li>
-//                <li> <a href="">NL</a></li>
-//                <li class="dropdown  active">
-//                    <a class="dropdown-toggle has-error multi-tabs__more-btn" 
-//                       data-toggle="dropdown" aria-expanded="false">
-//                        IT
+//                <li class="more-tab active">
+//                    <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">
+//                        <span class="multi-tabs__more-span">PL</span>
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu">
-//                        <li class="">
-//                            <a href="" class=" has-error">IT</a>
-//                        </li>
+//                        <li><a href="">IT</a></li>
+//                        <li class="active"><a href="" class="is-required has-error">PL</a></li>
+//                        <li><a href="">FR</a></li>
 //                    </ul>
 //                </li>
 //            </ul>
 //        </div>
 //        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg has-error" value="">
-//            <span class="inline-hint-text inline-hint-text__error">Italian required</span>
-//            </div>
-//        </div>
-//    </div>
-//
-// Pattern 8.5
-
-// Displaying Errors within the MORE MENU for Selected Tab
-//
-// <p>If another tab is selected and the More menu has one or more locales with errors, display the More text in red on a white background with a red exclamation(!) mark next to it.</p>
-//
-// Markup:
-//    <label>Field Label</label>
-//    <div class="form-group multi-tabs-editor">
-//        <div class="multi-tabs-header clearfix">
-//            <ul class="nav nav-tabs multi-tabs">
-//                <li class="active"> <a href="">EN</a></li>
-//                <li> <a href="">BG</a></li>
-//                <li> <a href="">DE</a></li>
-//                <li> <a href="">FR</a></li>
-//                <li> <a href="">DA</a></li>
-//                <li> <a href="">NL</a></li>
-//                <li class="dropdown ">
-//                    <a class="dropdown-toggle has-error multi-tabs__more-btn" 
-//                       data-toggle="dropdown" aria-expanded="false">
-//                      More
-//                      <span class="caret"></span>
-//                    </a>
-//                    <ul class="dropdown-menu">
-//                        <li class="">
-//                            <a href="" class=" has-error">IT</a>
-//                        </li>
-//                    </ul>
-//                </li>
-//            </ul>
-//        </div>
-//        <div class="form-group">
-//            <div class="property" baas-form-name ng-form="innerForm">
-//                <input name="lastName" type="text" class="form-control input-lg" value="">
-//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//            <div class="property" baas-form-name ng-form="innerForm" >
+//                <input name="lastName" type="text" class="form-control input-lg">
+//                <span class="inline-hint-text inline-hint-text__error">Polish required</span>
 //            </div>
 //        </div>
 //    </div>
@@ -349,6 +335,11 @@
                     cursor: pointer;
                 }
             }
+
+            .has-error,
+            .has-error:hover{
+                color: @state-danger-text
+            }
         }
         
         // more tab open state
@@ -365,6 +356,11 @@
                     color: @default-blue;
                     cursor: pointer;
                 }
+            }
+
+            .has-error,
+            .has-error:hover{
+                color: @state-danger-text
             }
         }
 
@@ -385,6 +381,11 @@
                 color: @white;
             }
 
+            .has-error,
+            .has-error:hover{
+                background-color: @state-danger-text;
+            }
+
             li a{
                 background-color: @white;
                 color: @navigation-links-color;
@@ -400,8 +401,15 @@
             li.active a{
                 background-color: @white;
                 color: @default-blue;
+                font-weight: bold;
             }
 
+            li.active a.has-error,
+            li.active a.has-error:hover{
+                background-color: @white;
+                color: @state-danger-text;
+                font-weight: bold;
+            }
         }
 
         // required astrisk
@@ -446,20 +454,19 @@
         min-height: 52px;
     }
 
+    // help text error
     .inline-hint-text__error{
         color: @state-danger-text;            
     }
 
+    // input error state
     input.has-error{
         border-color: @state-danger-text;
     }
-
     
-
     * {
         transition: all 0.25s ease;
     }
 
 }
-
 
