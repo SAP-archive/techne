@@ -14,20 +14,20 @@
 //                <li> <a href="">PL</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li class="more-tab">
-//                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-//                    <span class="multi-tabs__more-span">MORE</span>
-//                    <span class="caret"></span>
-//                  </a>
-//                  <ul class="dropdown-menu">
-//                    <li>
-//                        <a href="">IT</a>
-//                    </li>
-//                  </ul>
+//                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//                        <span class="multi-tabs__more-span">MORE</span>
+//                        <span class="caret"></span>
+//                    </a>
+//                    <ul class="dropdown-menu">
+//                        <li><a href="">IT</a></li>
+//                        <li><a href="">PL</a></li>
+//                        <li><a href="">FR</a></li>
+//                    </ul>
 //                </li>
 //            </ul>
 //        </div>
-//        <div class="form-group ">
-//            <div class="property" baas-form-name ng-form="innerForm" >
+//        <div class="form-group">
+//            <div class="property" baas-form-name ng-form="innerForm">
 //                <input name="lastName" type="text" class="form-control input-lg" value="Men Walk On Moon"/>
 //            </div>
 //        </div>
@@ -50,19 +50,16 @@
 //                <li> <a href="">FR</a></li>
 //                <li> <a href="">DA</a></li>
 //                <li> <a href="">NL</a></li>
-//                <li class="dropdown active">
-//                    <a class="dropdown-toggle is-required multi-tabs__more-btn" 
+//                <li class="more-tab active">
+//                    <a class="dropdown-toggle" 
 //                       data-toggle="dropdown" aria-expanded="false">
 //                        IT
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu">
-//                        <li class="active">
-//                            <a href="" class="">IT</a>
-//                        </li>
-//                        <li>
-//                            <a href="" class="">PL</a>
-//                        </li>
+//                        <li><a href="">IT</a></li>
+//                        <li><a href="">PL</a></li>
+//                        <li><a href="">FR</a></li>
 //                    </ul>
 //                </li>
 //            </ul>
@@ -85,25 +82,21 @@
 //    <div class="form-group multi-tabs-editor">
 //        <div class="multi-tabs-header clearfix">
 //            <ul class="nav nav-tabs multi-tabs">
-//                <li> <a href="">EN</a></li>
+//                <li class="active"> <a href="" class="is-required">EN</a></li>
 //                <li> <a href="">BG</a></li>
-//                <li> <a href="">DE</a></li>
+//                <li> <a href="" class="is-required">DE</a></li>
 //                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
 //                <li> <a href="">DA</a></li>
-//                <li> <a href="">NL</a></li>
-//                <li class="dropdown  active">
-//                    <a class="dropdown-toggle is-required multi-tabs__more-btn" 
-//                       data-toggle="dropdown" aria-expanded="false">
-//                        IT
-//                        <span class="caret"></span>
-//                    </a>
+//                <li class="more-tab">
+//                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//                    <span class="multi-tabs__more-span">MORE</span>
+//                    <span class="caret"></span>
+//                  </a>
 //                    <ul class="dropdown-menu">
-//                        <li class="active">
-//                            <a href="" class="">IT</a>
-//                        </li>
-//                        <li>
-//                            <a href="" class="">PL</a>
-//                        </li>
+//                        <li><a href="">IT</a></li>
+//                        <li><a href="">PL</a></li>
+//                        <li><a href="">FR</a></li>
 //                    </ul>
 //                </li>
 //            </ul>
@@ -118,7 +111,7 @@
 // Pattern 8.2.1
 
 
-// Displaying Errors
+// Displaying Errors for Inactive tab
 //
 // <p>On validation, if one or more locales has an error, display "One or more locales required” in red text below the field.</p>
 // <p>For unselected tabs with errors, display the tab background as white, the locale name in red text, and a red exclamation mark (!) next to locale name.</p>
@@ -126,34 +119,34 @@
 // Markup:
 //    <label>Field Label</label>
 //    <div class="form-group multi-tabs-editor">
-//    <div class="multi-tabs-header clearfix">
-//        <ul class="nav nav-tabs multi-tabs">
-//            <li class="active"> <a href="">EN</a></li>
-//            <li> <a href="">BG</a></li>
-//            <li> <a class="has-error is-required" href="">DE</a></li>
-//            <li> <a href="">FR</a></li>
-//            <li> <a href="">PL</a></li>
-//            <li> <a href="">DA</a></li>
-//                <li class="dropdown ">
-//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+//        <div class="multi-tabs-header clearfix">
+//            <ul class="nav nav-tabs multi-tabs">
+//                <li class="active"> <a href="" class="is-required">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li> <a href="" class="has-error is-required">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
+//                <li> <a href="">DA</a></li>
+//                <li class="more-tab">
+//                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 //                    <span class="multi-tabs__more-span">MORE</span>
 //                    <span class="caret"></span>
 //                  </a>
-//                  <ul class="dropdown-menu">
-//                    <li>
-//                        <a href="" class="">IT</a>
-//                    </li>
-//                  </ul>
+//                    <ul class="dropdown-menu">
+//                        <li><a href="">IT</a></li>
+//                        <li><a href="">PL</a></li>
+//                        <li><a href="">FR</a></li>
+//                    </ul>
 //                </li>
-//        </ul>
-//    </div>
-//    <div class="form-group">
-//        <div class="property" baas-form-name ng-form="innerForm" >
-//            <input name="lastName" type="text" class="form-control input-lg">
-//            <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//            </ul>
+//        </div>
+//        <div class="form-group">
+//            <div class="property" baas-form-name ng-form="innerForm" >
+//                <input name="lastName" type="text" class="form-control input-lg">
+//                <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//            </div>
 //        </div>
 //    </div>
-//</div>
 //
 // Pattern 8.3
 
@@ -164,34 +157,34 @@
 // Markup:
 //    <label>Field Label</label>
 //    <div class="form-group multi-tabs-editor">
-//    <div class="multi-tabs-header clearfix">
-//        <ul class="nav nav-tabs multi-tabs">
-//            <li> <a href="">EN</a></li>
-//            <li> <a href="">BG</a></li>
-//            <li class="active"> <a class="has-error is-required" href="">DE</a></li>
-//            <li> <a href="">FR</a></li>
-//            <li> <a href="">PL</a></li>
-//            <li> <a href="">DA</a></li>
-//                <li class="dropdown ">
-//                  <a class="dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
-//                    <span class="multi-tabs__more-span">MORE</span>
-//                    <span class="caret"></span>
-//                  </a>
-//                  <ul class="dropdown-menu">
-//                    <li>
-//                        <a href="" class="">IT</a>
-//                    </li>
-//                  </ul>
+//        <div class="multi-tabs-header clearfix">
+//            <ul class="nav nav-tabs multi-tabs">
+//                <li> <a href="" class="is-required">EN</a></li>
+//                <li> <a href="">BG</a></li>
+//                <li class="active"> <a href="" class="has-error is-required">DE</a></li>
+//                <li> <a href="">FR</a></li>
+//                <li> <a href="">PL</a></li>
+//                <li> <a href="">DA</a></li>
+//                <li class="more-tab">
+//                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//                        <span class="multi-tabs__more-span">MORE</span>
+//                        <span class="caret"></span>
+//                    </a>
+//                    <ul class="dropdown-menu">
+//                        <li><a href="">IT</a></li>
+//                        <li><a href="">PL</a></li>
+//                        <li><a href="">FR</a></li>
+//                    </ul>
 //                </li>
-//        </ul>
-//    </div>
-//    <div class="form-group">
-//        <div class="property" baas-form-name ng-form="innerForm" >
-//            <input name="lastName" type="text" class="form-control input-lg has-error">
-//            <span class="inline-hint-text inline-hint-text__error">German required</span>
+//            </ul>
+//        </div>
+//        <div class="form-group">
+//            <div class="property" baas-form-name ng-form="innerForm" >
+//                <input name="lastName" type="text" class="form-control input-lg has-error">
+//                <span class="inline-hint-text inline-hint-text__error">One or more locales required</span>
+//            </div>
 //        </div>
 //    </div>
-//</div>
 //
 // Pattern 8.4
 
@@ -304,167 +297,148 @@
 
 .multi-tabs-editor{
 
-    .multi-tabs-header{
+    .multi-tabs {
+        margin-bottom: 0;
+        border-bottom: none;
 
-        .multi-tabs > :not(.active) > a.has-error:not(:hover){
-            background-color: transparent;
-            color: @state-danger-text;
-        }
-    }
+        // default tab 
+        li{
+            border:1px solid @default-grey-700;
+            border-right:none;
 
-    .nav {
-        a {
-            color: @navigation-links-color;
-            &:hover {
-                color: @default-blue;
-                cursor: pointer;
-            }
-        }
-
-        .open{
             a{
-                background-color: @white;
+                margin-right: 0;
+                color: @navigation-links-color;
+
+                &:hover {
+                    color: @default-blue;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        // active tab
+        li.active{
+
+            a{
+                background-color: @default-blue;
+                color:@white;
+                font-weight: bold;
+
+            }
+
+            .has-error,
+            .had-error:hover{
+                background-color: @state-danger-text;
+                border-color: @state-danger-text;
+                color:@white;
+
             }
         }
 
+        // more tab 
         .more-tab{
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
+            border-top-color: transparent !important;
+            border-right-color: transparent !important;
+            border-bottom-color: transparent !important;
 
-        }
-    }
-
-    .dropdown-menu{
-        cursor: pointer;
-        border-top-color: transparent;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-
-        +.active{
-            .caret,
-            .has-error .caret{
-                border-color:transparent;
-                background-color: transparent;
-                border-top-color: @navbar-default-bg;
+            a{
+                &:hover{
+                    color: @default-blue;
+                    cursor: pointer;
+                }
             }
-        } 
-
-        .open{
+        }
+        
+        // more tab open state
+        .more-tab.open{
             border-top-color: @default-grey-700;
             border-right-color: @default-grey-700;
             border-bottom-color: @default-grey-700;
 
             >a{
                 background-color: @white;
+                
+                &:hover{
+                    background-color: @white;
+                    color: @default-blue;
+                    cursor: pointer;
+                }
             }
         }
 
+        // more tab active state
+        .more-tab.active{
 
-        .dropdown-menu{
-            background-color: @navbar-default-bg;
-            border-color: @default-grey-700;
-
-            li:last-of-type{
-                border-right: none;
-            }            
+            a:hover{
+                color: @white;
+            }
         }
+
+        // more tab active open state
+        .more-tab.active.open{
+            
+            a,
+            a:hover{
+                background-color: @default-blue;
+                color: @white;
+            }
+
+            li a{
+                background-color: @white;
+                color: @navigation-links-color;
+                font-weight: normal;
+
+                &:hover{
+                    background-color: @default-greyblue-200;
+                    color:@default-blue;
+
+                }
+            }
+    
+            li.active a{
+                background-color: @white;
+                color: @default-blue;
+            }
+
+        }
+
+        // required astrisk
+        .is-required:after{
+            content: " *";
+        }  
+
+        // error classes
+        .has-error,
+        .has-error:hover{
+            color: @state-danger-text;
+
+            &:before{
+                content:"! "
+            }
+        }
+
     }
 
-    .multi-tabs{
-        margin-bottom: 0;
-        border-bottom-color: @default-grey-700;
-
-        a{
-            width: 100%;
-
-            &:focus{
-                font-weight: bold;        
-            }
-        } 
-
-        .active{
-
-            a{
-                font-weight: bold;
-                &:hover{
-                    .caret{
-                        border-top-color: @default-blue;
-                    }
-                } 
-                
-                +.has-error,
-                &:hover .has-error,
-                &:focus .has-error{
-                    background-color: @default-red;
-                    border-color: @default-red;
-                    color:  @default-blue;
-                }
-
-                &:not(.has-error) {
-                    background-color: @default-blue;
-                    border-color: @default-blue;
-                    color: @navbar-default-bg;
-                } 
-
-                .has-error{
-                    background-color: @default-red;
-                    border-color: @default-red;
-
-                    .caret {
-                    background-color: @default-red;
-                    border-color: @default-red;
-                    }
-                }
-            }
-                        
-        }
+    // more menu default state
+    .dropdown-menu{
+        padding:0;
+        cursor: pointer;
+        border: none;
 
         li{
-         
-            &:not(.active){
-                border-color: @default-grey-700;
-            }
+            border-right: 1px solid @default-grey-700;
+            border-bottom: none;
 
-            &:last-of-type {
-                border-right: 1px solid @default-grey-700;
+            &:last-child{
+                border-bottom: 1px solid @default-grey-700;
             }
         }
 
-        > li{
-            border-top: 1px solid @default-grey-700;
-            border-left: 1px solid @default-grey-700;
-            border-bottom: 1px solid @default-grey-700;
-        }
-
-
-
-        .has-error:before{
-            content: "! ";
-        }
-
-        &:not(.multi-tabs__more-menu) .is-required:after,
-        .multi-tabs__more-menu.is-required .multi-tabs__more-span:after{
-            content: "*";
-        }
-
-
-
-        .active :not(.has-error),
-        :not(.has-error){
-            color: @grayish;
-        }
-
-        .dropdown-menu .active :not(.has-error){
-            color: @default-blue;
-        }
-
-        .has-error{
-            border-color: @state-danger-border;
-        }
-        
     }
 
+    // read only field
     .form-readonly-text {
         padding: 14px 20px 14px 0;
         border-top: 1px solid @default-grey-700;
@@ -472,14 +446,18 @@
         min-height: 52px;
     }
 
-    .form-group{
-        margin-top: -1px;
+    .inline-hint-text__error{
+        color: @state-danger-text;            
     }
 
-    .inline-hint-text__error,
-    .multi-tabs .active a.has-error,
-    .multi-tabs a.has-error{
-        color: @state-danger-text;
+    input.has-error{
+        border-color: @state-danger-text;
+    }
+
+    
+
+    * {
+        transition: all 0.25s ease;
     }
 
 }
