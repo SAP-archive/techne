@@ -1,7 +1,7 @@
 <div class="hyHomePage">
     <header class="main-header hyHomeHeaderMain">
         <div class="hyHomeHeader text-center">
-            <h1>SAP Hybris Techné</h1>
+            <h1>SAP Hybris Techné <sub>v1.5.4</sub></h1>
             <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design that gives teams the freedom and creativity to implement experiences from design to deployment FAST on YaaS, or anywhere they choose.</p>
             <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
         </div>
