@@ -253,6 +253,50 @@
 //
 // Pattern 8.6
 
+// Currencies Use Case 
+//
+//
+// <label class="control-label">Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li class="active"> <a href="">USD</a></li>
+//        <li> <a href="">CAD</a></li>
+//        <li> <a href="">EUR</a></li>
+//        <li> <a href="">GBP</a></li>
+//        <li> <a href="">JPY</a></li>
+//        <li> <a href="">AUD</a></li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm">
+//            <input name="lastName" type="text" class="form-control input-lg" value="100.00"/>
+//        </div>
+//    </div>
+// </div>
+//
+// Pattern 8.7
+
+// Regions Use Case 
+//
+//
+// <label class="control-label">Field Label</label>
+// <div class="form-group multi-tabs-editor">
+//    <ul class="nav nav-tabs multi-tabs">
+//        <li class="active"> <a href="">EMEA</a></li>
+//        <li> <a href="">APAC</a></li>
+//        <li> <a href="">NALA</a></li>
+//        <li> <a href="">GBP</a></li>
+//        <li> <a href="">JPY</a></li>
+//        <li> <a href="">AUD</a></li>
+//    </ul>
+//    <div class="form-group">
+//        <div class="property" baas-form-name ng-form="innerForm">
+//            <input name="lastName" type="text" class="form-control input-lg" value="100.00"/>
+//        </div>
+//    </div>
+// </div>
+//
+// Pattern 8.8
+
 // LocalizationExample
 //
 // <h3>Visual Guidelines</h3>
@@ -278,7 +322,8 @@
 //     </div>
 //   </div>
 //
-// Pattern 8.7
+// Pattern 8.9
+
 
 
 .multi-tabs-editor{
@@ -302,6 +347,9 @@
                 }
             }
 
+            &:last-child:not(.more-tab) {
+                border-right: 1px solid @default-grey-700;
+            }
         }
 
         // active tab
@@ -311,7 +359,6 @@
                 background-color: @default-blue;
                 color:@white;
                 font-weight: bold;
-
             }
 
             .has-error,
@@ -319,7 +366,6 @@
                 background-color: @state-danger-text;
                 border-color: @state-danger-text;
                 color:@white;
-
             }
         }
 
@@ -394,7 +440,6 @@
                 &:hover{
                     background-color: @default-greyblue-200;
                     color:@default-blue;
-
                 }
             }
     
@@ -443,7 +488,6 @@
                 border-bottom: 1px solid @default-grey-700;
             }
         }
-
     }
 
     // read only field
@@ -467,6 +511,5 @@
     * {
         transition: all 0.25s ease;
     }
-
 }
 
