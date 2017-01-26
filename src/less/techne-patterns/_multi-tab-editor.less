@@ -116,7 +116,7 @@
 //    <ul class="nav nav-tabs multi-tabs">
 //        <li class="active"> <a class="is-required">EN</a></li>
 //        <li> <a>BG</a></li>
-//        <li> <a class="has-error is-required">DE</a></li>
+//        <li class="has-error"> <a class="is-required">DE</a></li>
 //        <li> <a>FR</a></li>
 //        <li> <a>PL</a></li>
 //        <li> <a>DA</a></li>
@@ -152,7 +152,7 @@
 //     <ul class="nav nav-tabs multi-tabs">
 //         <li> <a class="is-required">EN</a></li>
 //         <li> <a>BG</a></li>
-//         <li class="active"> <a class="has-error is-required">DE</a></li>
+//         <li class="active has-error"> <a class="is-required">DE</a></li>
 //         <li> <a>FR</a></li>
 //         <li> <a>PL</a></li>
 //         <li> <a>DA</a></li>
@@ -192,8 +192,8 @@
 //        <li> <a>FR</a></li>
 //        <li> <a>PL</a></li>
 //        <li> <a>DA</a></li>
-//        <li class="more-tab">
-//            <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">
+//        <li class="more-tab has-error">
+//            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 //                <span class="multi-tabs__more-span">MORE</span>
 //                <span class="caret"></span>
 //            </a>
@@ -230,14 +230,14 @@
 //                <li> <a>FR</a></li>
 //                <li> <a>PL</a></li>
 //                <li> <a>DA</a></li>
-//                <li class="more-tab active">
-//                    <a class="dropdown-toggle has-error" data-toggle="dropdown" aria-expanded="false">
+//                <li class="more-tab active has-error">
+//                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 //                        <span class="multi-tabs__more-span">PL</span>
 //                        <span class="caret"></span>
 //                    </a>
 //                    <ul class="dropdown-menu">
 //                        <li><a>IT</a></li>
-//                        <li class="active"><a class="is-required has-error">PL</a></li>
+//                        <li class="active has-error"><a class="is-required">PL</a></li>
 //                        <li><a>FR</a></li>
 //                    </ul>
 //                </li>
@@ -288,7 +288,6 @@
 //        <li> <a>NALA</a></li>
 //        <li> <a>GBP</a></li>
 //        <li> <a>JPY</a></li>
-//        <li> <a>AUD</a></li>
 //    </ul>
 //    <div class="form-group">
 //        <div class="property" baas-form-name ng-form="innerForm">
@@ -366,16 +365,30 @@
                 color:@white;
                 font-weight: bold;
             }
+        }
 
-            .has-error,
-            .had-error:hover{
+        // error tab default
+        li.has-error{
+
+            a,
+            a:hover{
+                background-color: @white;
+                color: @state-danger-text;
+            }
+
+        }
+
+        // error tab active
+        li.active.has-error{
+            a,
+            a:hover{
                 background-color: @state-danger-text;
                 border-color: @state-danger-text;
-                color:@white;
+                color: @white;
             }
         }
 
-        // more tab 
+        // more tab default
         .more-tab{
             border-top-color: transparent !important;
             border-right-color: transparent !important;
@@ -387,12 +400,13 @@
                     cursor: pointer;
                 }
             }
+        }
 
-            .has-error,
-            .has-error:hover{
+        // more tab error state
+        .more-tab.has-error,
+        .more-tab.has-error:hover{
                 color: @state-danger-text
             }
-        }
         
         // more tab open state
         .more-tab.open{
@@ -409,10 +423,14 @@
                     cursor: pointer;
                 }
             }
+        }
 
-            .has-error,
-            .has-error:hover{
-                color: @state-danger-text
+        // more tab open error state
+        .more-tab.open.has-error{
+            >a,
+            >a:hover{
+                color: @state-danger-text;
+                border-color: @state-danger-text;
             }
         }
 
@@ -424,6 +442,12 @@
                 color: @white;
             }
         }
+        
+        // more tab active error state
+        .more-tab.active.has-error{
+            border-top-color: @state-danger-text !important;            
+        }
+
 
         // more tab active open state
         .more-tab.active.open{
@@ -472,21 +496,56 @@
             }
         }
 
+        // more tab active error open state
+        .more-tab.active.has-error.open{
+            a,
+            a:hover{
+                background-color: @state-danger-text;
+                border-color: @state-danger-text;
+                color: @white;
+            }
+
+            li a{
+                background-color: @white;
+                color: @navigation-links-color;
+                font-weight: normal;
+
+                &:hover{
+                    background-color: @default-greyblue-200;
+                    color:@default-blue;
+                }
+            }
+
+            li.active a{
+                background-color: @white;
+                color: @default-blue;
+                font-weight: bold;
+            }
+
+            li.active.has-error a,
+            li.active.has-error a:hover{
+                background-color: @state-danger-text;
+                color: @white;
+                font-weight: bold;
+            }
+        }
+
         // required astrisk
         .is-required:after{
             content: " *";
         }  
 
         // error classes
-        .has-error,
-        .has-error:hover{
-            color: @state-danger-text;
+        .has-error{
+            a,
+            a:hover{
+                color: @state-danger-text;
 
-            &:before{
-                content:"! "
+                &:before{
+                    content:"! "
+                }
             }
         }
-
     }
 
     // more menu default state
