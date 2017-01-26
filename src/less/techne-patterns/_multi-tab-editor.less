@@ -344,6 +344,10 @@
                 &:hover {
                     color: @default-blue;
                     cursor: pointer;
+
+                    &.drop-down-toggle {
+                        background-color: transparent;
+                    }
                 }
             }
 
@@ -412,6 +416,7 @@
 
         // more tab active state
         .more-tab.active{
+            border-top-color: @default-blue !important;
 
             a:hover{
                 color: @white;
@@ -420,11 +425,19 @@
 
         // more tab active open state
         .more-tab.active.open{
-            
+
             a,
             a:hover{
                 background-color: @default-blue;
                 color: @white;
+            }
+
+            .dropdown-menu { 
+                li {
+                    a:hover {
+                        background-color: @default-greyblue-200;
+                    }
+                }
             }
 
             .has-error,
