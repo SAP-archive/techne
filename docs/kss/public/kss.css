@@ -735,12 +735,21 @@ li.L9 {
 .toggled .footer {
   display: none!important;
 }
+.footer .footer-right {
+  padding: 0!important;
+}
 .feedback-form-wrapper .close {
   font-size: 30px;
   padding: 10px 5px;
 }
 .feedback-form-wrapper a:visited {
   color: #0486e0;
+}
+.feedback-menu--techne {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  z-index: 1;
 }
 #cookie-bar {
   display: none !important;
@@ -1883,6 +1892,8 @@ article section.LocalizationExample .kss-description h3 {
 .Icons.kss-section.kss-componnet-page .visibilityon-wrapper,
 .Icons.kss-section.kss-componnet-page .warning-wrapper,
 .Icons.kss-section.kss-componnet-page .feedback-wrapper,
-.Icons.kss-section.kss-componnet-page .gethelp-wrapper {
+.Icons.kss-section.kss-componnet-page .gethelp-wrapper,
+.Icons.kss-section.kss-componnet-page .infoon-wrapper,
+.Icons.kss-section.kss-componnet-page .lock-wrapper {
   display: none;
 }
