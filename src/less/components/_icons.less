@@ -4,6 +4,8 @@
 // Markup:
 //<span class="hyicon {$modifiers}"></span>
 //
+// <div class="icons-grid clone-wrapper"><span class="hyicon hyicon-clone"></span> .hyicon-clone</div>
+// <div class="icons-grid duplicate-wrapper"><span class="hyicon hyicon-duplicate"></span> .hyicon-duplicate</div>
 // <div class="icons-grid add-wrapper"><span class="hyicon hyicon-add"></span> .hyicon-add</div>
 // <div class="icons-grid arrow-wrapper"><span class="hyicon hyicon-arrow"></span> .hyicon-arrow</div>
 // <div class="icons-grid back-wrapper"><span class="hyicon hyicon-back"></span> .hyicon-back</div>
@@ -62,11 +64,11 @@
 
 @font-face {
   font-family: "hyicon";
-  src:url('@{hytech-path}/fonts/hyicon.eot?1485783771');
-  src:url('@{hytech-path}/fonts/hyicon.eot?#iefix1485783771') format('embedded-opentype'),
-    url('@{hytech-path}/fonts/hyicon.woff?1485783771') format('woff'),
-    url('@{hytech-path}/fonts/hyicon.ttf?1485783771') format('truetype'),
-    url('@{hytech-path}/fonts/hyicon.svg?1485783771#hyicon') format('svg');
+  src:url('@{hytech-path}/fonts/hyicon.eot?1485800525');
+  src:url('@{hytech-path}/fonts/hyicon.eot?#iefix1485800525') format('embedded-opentype'),
+    url('@{hytech-path}/fonts/hyicon.woff?1485800525') format('woff'),
+    url('@{hytech-path}/fonts/hyicon.ttf?1485800525') format('truetype'),
+    url('@{hytech-path}/fonts/hyicon.svg?1485800525#hyicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -91,6 +93,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.hyicon-clone:before {
+  content: "\e02f"
+}
+
+.hyicon-duplicate:before {
+  content: "\e030"
+}
 
 .hyicon-add:before {
   content: "\e001"
