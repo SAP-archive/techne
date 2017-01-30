@@ -501,36 +501,27 @@ body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     padding-left: 0px!important;
   }
 }
-body.has-left-nav.toggled #kss-wrapper {
-  padding-left: 265px;
-}
 body.has-left-nav #kss-nav {
   position: fixed;
   z-index: 901;
-  left: 250px;
+  left: 0;
   top: 0;
-  width: 0;
+  width: 250px;
   height: 100%;
-  margin-left: -250px;
   padding: 100px 0 0 0;
   overflow-y: auto;
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 body.has-left-nav.navbar-super-up #kss-nav {
   padding-top: 50px;
 }
 body.has-left-nav.toggled #kss-wrapper #kss-nav {
-  width: 250px;
+  left: 0!important;
   background: #27394f none repeat scroll 0 0;
+  position: absolute;
 }
 #kss-main {
   padding: 15px;
-}
-body.has-left-nav.toggled #kss-wrapper #kss-main {
-  margin-right: -250px;
 }
 /* Sidebar Styles */
 body.has-left-nav .sidebar-nav {
@@ -557,9 +548,6 @@ body.has-left-nav .sidebar-nav {
   }
   body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     background: none;
-  }
-  body.has-left-nav #kss-nav {
-    width: 250px;
   }
   body.has-left-nav.navbar-super-up #kss-nav {
     margin-top: -40px;
@@ -708,7 +696,7 @@ li.L9 {
   #kss-nav {
     display: block;
     margin: 0;
-    background: 0;
+    left: -250px !important;
     box-shadow: none;
   }
   #kss-nav nav > ul {
@@ -923,10 +911,13 @@ header.hyHomeHeaderMinor {
 .hyHomePage h3 {
   font-size: 40px;
 }
-.hyHomePage .hyHomeHeader p,
+.hyHomePage .hyHomeHeader p {
+  font-size: 15px;
+}
 .hyHomePage .hyHomeHeader a {
   font-size: 18px;
   font-family: 'Dosis';
+  box-shadow: none;
 }
 .hyHomePage .hyHomeHeader {
   color: white;
