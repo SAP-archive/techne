@@ -1885,6 +1885,14 @@ article section.LocalizationExample .kss-description h3 {
 .Icons.kss-section.kss-componnet-page .feedback-wrapper,
 .Icons.kss-section.kss-componnet-page .gethelp-wrapper,
 .Icons.kss-section.kss-componnet-page .infoon-wrapper,
-.Icons.kss-section.kss-componnet-page .lock-wrapper {
+.Icons.kss-section.kss-componnet-page .lock-wrapper,
+.Icons.kss-section.kss-componnet-page .duplicate-wrapper,
+.Icons.kss-section.kss-componnet-page .clone-wrapper,
+.Icons.kss-section.kss-componnet-page .maximize-wrapper,
+.Icons.kss-section.kss-componnet-page .minimize-wrapper,
+.Icons.kss-section.kss-componnet-page .msgdanger-wrapper,
+.Icons.kss-section.kss-componnet-page .msginfo-wrapper,
+.Icons.kss-section.kss-componnet-page .msgsuccess-wrapper,
+.Icons.kss-section.kss-componnet-page .msgwarning-wrapper {
   display: none;
 }
