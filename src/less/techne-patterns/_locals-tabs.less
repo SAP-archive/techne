@@ -1,0 +1,158 @@
+//////////////////////////////////////////////////////////////////////////////////
+// the following code is depricated with the addition of multi-tab patterns    //
+// and will be removed from future releases. It is currently included for     //
+// backwards compatibility with old version of locals editor.                //
+//////////////////////////////////////////////////////////////////////////////
+
+.locals-tabs .active :not(.has-error) {
+    background-color: @default-blue;
+    border-color: @default-blue;
+    color: @navbar-default-bg;
+}
+
+.locals-tabs .active .has-error,
+.locals-tabs .active .has-error .caret {
+    background-color: @default-red;
+    border-color: @default-red;
+
+}
+
+
+.locals-tabs__more-tabs{
+    border-color: @default-grey-700;
+    background-color:  @navbar-default-bg;
+}
+
+.locals-tabs__more-menu{
+    cursor: pointer;
+}
+
+.locals-editor .locals-tabs a{
+    width: 100%;
+}
+
+.locals-editor .locals-tabs{
+    border-bottom-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs .active a,
+.locals-editor .locals-tabs .active a:hover,
+.locals-editor .locals-tabs .active a:focus{
+    font-weight: bold;
+}
+
+.locals-editor .locals-tabs .active a:hover{
+    .caret{
+        border-top-color: @default-blue;
+    }
+}
+
+.locals-editor .locals-tabs li:not(.active){
+    border-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs li:last-of-type {
+    border-right: 1px solid @default-grey-700;
+}
+
+.locals-editor .locals-tabs .locals-tabs__more-tabs li:last-of-type{
+    border-right: none;
+}
+
+.locals-editor .locals-tabs > li{
+    border-top: 1px solid @default-grey-700;
+    border-left: 1px solid @default-grey-700;
+    border-bottom: 1px solid @default-grey-700;
+}
+
+.locals-header .locals-tabs{
+    margin-bottom: 0;
+}
+
+.locals-editor .locals-tabs .active a.has-error,
+.locals-editor .locals-tabs .active a:hover .has-error,
+.locals-editor .locals-tabs .active a:focus .has-error{
+    background-color: @default-red;
+    border-color: @default-red;
+    color:  @navbar-default-bg;
+}
+
+.locals-editor .form-readonly-text {
+    padding: 14px 20px 14px 0;
+    border-top: 1px solid @default-grey-700;
+    font-size: 16px;
+    min-height: 52px;
+}
+
+.locals-tabs .has-error:before{
+    content: "! ";
+}
+
+.locals-tabs :not(.locals-tabs__more-menu) .is-required:after,
+.locals-tabs__more-menu.is-required .locals-tabs__more-span:after{
+    content: "*";
+}
+
+.locals-header .locals-tabs > :not(.active) > a.has-error:not(:hover){
+    background-color: transparent;
+    color: @state-danger-text;
+}
+
+.locals-editor .form-group{
+    margin-top: -1px;
+}
+
+.locals-tabs .locals-tabs__more-menu.active .caret,
+.locals-tabs .locals-tabs__more-menu.active .has-error .caret{
+    border-color:transparent;
+    background-color: transparent;
+    border-top-color: @navbar-default-bg;
+}
+
+.has-error{
+    border-color: @state-danger-border;
+}
+
+.locals-editor .inline-hint-text__error,
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs a.locals-tabs__more-tab.has-error{
+    color: @state-danger-text;
+}
+
+.locals-tabs .locals-tabs__more-menu .locals-tabs__more-tabs{
+    background-color: @navbar-default-bg;
+    border-color: @default-grey-700;
+}
+
+.locals-editor .locals-tabs > li.locals-tabs__more-menu{
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.locals-editor .locals-tabs > li.locals-tabs__more-menu.open{
+    border-top-color: @default-grey-700;
+    border-right-color: @default-grey-700;
+    border-bottom-color: @default-grey-700;
+}
+
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .active a.locals-tabs__more-tab.has-error,
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error):hover,
+.locals-tabs .active a.locals-tabs__more-tab.has-error:hover  {
+    background-color:  @navbar-default-bg;
+    font-weight: normal;
+}
+
+.locals-tabs .active .locals-tabs__more-tab:not(.has-error),
+.locals-tabs .locals-tabs__more-tab:not(.has-error){
+    color: @grayish;
+}
+
+.locals-tabs .locals-tabs__more-tabs .active .locals-tabs__more-tab:not(.has-error){
+    color: @default-blue;
+}
+
+//////////////////////////
+// end depricated code //
+////////////////////////

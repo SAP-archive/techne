@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_duplicate" class="cls-1" d="M116,1030v2h6v-20H102v6h2v-4H120v16h-4Zm-22-9.67v19.33a0.379,0.379,0,0,0,.412.34h19.169a0.38,0.38,0,0,0,.413-0.34v-19.33a0.379,0.379,0,0,0-.412-0.33H94.415A0.379,0.379,0,0,0,94,1020.33Zm2,1.67h16v16H96v-16Z" transform="translate(-94 -1012)"/>
+</svg>

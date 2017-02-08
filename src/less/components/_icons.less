@@ -48,6 +48,16 @@
 // <div class="icons-grid warning-wrapper"><span class="hyicon hyicon-warning"></span> .hyicon-warning</div>
 // <div class="icons-grid feedback-wrapper"><span class="hyicon hyicon-feedback"></span> .hyicon-feedback</div>
 // <div class="icons-grid gethelp-wrapper"><span class="hyicon hyicon-gethelp"></span> .hyicon-gethelp</div>
+// <div class="icons-grid infoon-wrapper"><span class="hyicon hyicon-infoon"></span> .hyicon-infoon</div>
+// <div class="icons-grid lock-wrapper"><span class="hyicon hyicon-lock"></span> .hyicon-lock</div>
+// <div class="icons-grid clone-wrapper"><span class="hyicon hyicon-clone"></span> .hyicon-clone</div>
+// <div class="icons-grid duplicate-wrapper"><span class="hyicon hyicon-duplicate"></span> .hyicon-duplicate</div>
+// <div class="icons-grid maximize-wrapper"><span class="hyicon hyicon-maximize"></span> .hyicon-maximize</div>
+// <div class="icons-grid minimize-wrapper"><span class="hyicon hyicon-minimize"></span> .hyicon-minimize</div>
+// <div class="icons-grid msgdanger-wrapper"><span class="hyicon hyicon-msgdanger"></span> .hyicon-msgdanger</div>
+// <div class="icons-grid msginfo-wrapper"><span class="hyicon hyicon-msginfo"></span> .hyicon-msginfo</div>
+// <div class="icons-grid msgsuccess-wrapper"><span class="hyicon hyicon-msgsuccess"></span> .hyicon-msgsuccess</div>
+// <div class="icons-grid msgwarning-wrapper"><span class="hyicon hyicon-msgwarning"></span> .hyicon-msgwarning</div>
 //
 // Component 6.1
 
@@ -56,17 +66,18 @@
 // use src/less/templates/_icons.less not src/less/components/_icons.less
 // ----------------------------------------------------------------
 
+
+
 @font-face {
   font-family: "hyicon";
-  src:url('@{hytech-path}/fonts/hyicon.eot?vaoee8');
-  src:url('@{hytech-path}/fonts/hyicon.eot?#iefixvaoee8') format('embedded-opentype'),
-    url('@{hytech-path}/fonts/hyicon.woff?vaoee8') format('woff'),
-    url('@{hytech-path}/fonts/hyicon.ttf?vaoee8') format('truetype'),
-    url('@{hytech-path}/fonts/hyicon.svg?vaoee8#hyicon') format('svg');
+  src:url('@{hytech-path}/fonts/hyicon.eot?1486572753');
+  src:url('@{hytech-path}/fonts/hyicon.eot?#iefix1486572753') format('embedded-opentype'),
+    url('@{hytech-path}/fonts/hyicon.woff?1486572753') format('woff'),
+    url('@{hytech-path}/fonts/hyicon.ttf?1486572753') format('truetype'),
+    url('@{hytech-path}/fonts/hyicon.svg?1486572753#hyicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
 [class^="hyicon-"], [class*=" hyicon-"] {
   font-family: 'hyicon';
 }
@@ -263,4 +274,44 @@
 
 .hyicon-gethelp:before {
   content: "\e02c"
+}
+
+.hyicon-infoon:before {
+  content: "\e02d"
+}
+
+.hyicon-lock:before {
+  content: "\e02e"
+}
+
+.hyicon-clone:before {
+  content: "\e02f"
+}
+
+.hyicon-duplicate:before {
+  content: "\e030"
+}
+
+.hyicon-maximize:before {
+  content: "\e031"
+}
+
+.hyicon-minimize:before {
+  content: "\e032"
+}
+
+.hyicon-msgdanger:before {
+  content: "\e033"
+}
+
+.hyicon-msginfo:before {
+  content: "\e034"
+}
+
+.hyicon-msgsuccess:before {
+  content: "\e035"
+}
+
+.hyicon-msgwarning:before {
+  content: "\e036"
 }
