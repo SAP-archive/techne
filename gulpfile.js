@@ -41,48 +41,44 @@ var paths = {
     environment: 'dist'
 };
 
-// Create Iconfont
-gulp.task('iconfont',
-    function()
-    {
-        gulp.src(paths.icons_path)
-        .pipe(
-            iconfont(
-                {
-                    fontName: 'hyicon',
-                    normalize: true,
-                    centerHorizontally: true,
-                    fontHeight: 100, // IMPORTANT
-                    appendCodepoints: true
-                }
-            )
-        )
-        .on('codepoints',
-            function(codepoints, options)
-            {
-                // automatically assign a unicode value to the icon
-                codepoints.forEach(function(glyph, idx, arr) {
-                arr[idx].codepoint = glyph.codepoint.toString(16)
-                });
 
-                gulp.src('src/less/templates/_icons.less')
-                .pipe(
-                    consolidate('lodash',
-                        {
-                            glyphs: codepoints,
-                            appendCodepoints: true,
-                            fontName: 'hyicon',
-                            fontPath: "/fonts/",
-                            className: 'hyicon'
-                        }
-                    )
-                )
-                .pipe(gulp.dest('src/less/components'));
-            }
-        )
+
+
+/**
+ * Font settings
+ */
+const fontName = 'hyicon' // set name of your symbol font
+const className = 'hyicon' // set class name in your CSS
+
+// Create Iconfont
+gulp.task('iconfont', function() {
+    gulp.src(paths.icons_path)
+        .pipe(iconfont({
+            fontName,
+            formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+            normalize: true,
+            centerHorizontally: true,
+            fontHeight: 100, // IMPORTANT
+            prependUnicode: true
+        }))
+        .on('glyphs', (glyphs) => {
+          const options = {
+            className,
+            fontName,
+            fontPath: '/fonts/',
+            glyphs: glyphs.map(mapGlyphs)
+          }
+          gulp.src(`src/less/templates/_icons.less`)
+            .pipe(consolidate('lodash', options))
+            .pipe(gulp.dest('src/less/components')) // set path to export your CSS
+        })
         .pipe( gulp.dest('dist/techne/fonts/') );
     }
 );
+function mapGlyphs (glyph) {
+  return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+}
+
 
 gulp.task('setpath', function(cb) {
     gulp.src('src/less/templates/_resource-paths.less')
