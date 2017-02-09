@@ -136,7 +136,6 @@ gulp.task('less', ['setpath'] ,
 );
 
 
-
 //----ABOVE COMPLETE----
 
 
@@ -209,43 +208,7 @@ gulp.task('deploy', function(){
     .pipe(gulp.dest('docs/kss/public/js/'));
 
 
-    gulp.src(
-        [
-            './src/js/**/*.js'
-        ]
-    )
-    .pipe(concat('techne.min.js'))
-    .pipe(uglify())
-
-    .pipe(insert.append(function(){
-        var headTagAppendScript = ['\n'];
-
-
-        if(config.appendComponentCss || config.appendComponentHTML)
-        {
-            headTagAppendScript.push(";(function() {");
-                headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
-                if(config.appendComponentCss)
-                {
-                    headTagAppendScript.push("var css = document.createElement('link');");
-                    headTagAppendScript.push("css.rel = 'stylesheet';");
-                    headTagAppendScript.push("css.href = '"+ config.bower_path +"/hyTechne/dist/css/techne.min.css';");
-                    headTagAppendScript.push("headTag.appendChild(css);");
-                }
-
-                if(config.appendComponentHTML) {
-                    headTagAppendScript.push("var html = document.createElement('link');");
-                    headTagAppendScript.push("html.rel = 'import';");
-                    headTagAppendScript.push("html.href = '" + config.bower_path + "/hyTechne/dist/html/techne.html';");
-                    headTagAppendScript.push("headTag.appendChild(html);");
-                }
-
-            headTagAppendScript.push("})();");
-        }
-        return headTagAppendScript.join('\n');
-    }))
-    .pipe(gulp.dest(paths.environment+'/js/'))
-    .pipe(gulp.dest('docs/kss/public/js/'));
+ 
 
     /*
     Create the distribution zip file
