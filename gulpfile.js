@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 
 var less = require('gulp-less');
-var env = require('gulp-env');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
