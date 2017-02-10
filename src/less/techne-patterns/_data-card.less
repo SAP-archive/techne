@@ -31,6 +31,32 @@
 //    </div>
 //  </li>
 //  <li class="dataCard">
+//    <div class="cardRow cardRowClickable">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can click me!
+//        </p>
+//        <span class="label label-success">
+//          Active Label
+//        </span>
+//    </div>
+//  </li>
+//  <li class="dataCard">
+//    <div class="cardRow cardRowClickable">
+//        <p class="primaryData">
+//          Primary Value
+//        </p>
+//        <p class="secondaryData">
+//          You can click me!
+//        </p>
+//        <span class="label label-success">
+//          Active Label
+//        </span>
+//    </div>
+//  </li>
+//  <li class="dataCard">
 //    <div class="cardRow">
 //        <p class="primaryData">
 //          Primary Value
@@ -226,12 +252,10 @@ a.dataCard {
 .dataCard {
     width: 100%;
     padding: 0;
-    border: 1px solid @body-bg !important;
     background: transparent;
     display: flex;
     cursor: default;
     overflow: visible !important;
-    box-shadow: 0 1px 0 @cards-shadow-color;
     margin-bottom: 7px;
     margin-top: 0;
     transition: all 0.1s ease-in-out 0s;
@@ -291,6 +315,7 @@ a.dataCard {
     }
 
     .cardRow {
+        border: 1px solid @body-bg !important;
         height: auto;
         padding: 13px;
         background: #fff;
@@ -310,10 +335,10 @@ a.dataCard {
             &:hover,
             &:focus {
                 background-color: #fff;
-                box-shadow: 0 3px 5px @cards-shadow-color;
+                box-shadow: 0 0 10px @cards-shadow-color;
                 color: #555555;
-                margin-bottom: 2px;
                 margin-top: -2px;
+                margin-bottom: 2px;
                 z-index: 5;
 
                 & * {

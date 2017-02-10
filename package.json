@@ -1,6 +1,6 @@
 {
   "name": "techne-components",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "hybris Techne Style Guide",
   "main": "docs/index.js",
   "scripts": {

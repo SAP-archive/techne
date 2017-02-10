@@ -241,10 +241,10 @@
             <li>Concise</li>
             <li>NO PASSIVE VOICE.  Only active voice.</li>
             <li>Present tense</li>
-            <li>Avoid redundant words; redundant to themselves and to the context.</li>
+            <li>Avoid redundant words; redundant to themselves and to the context</li>
             <li>Avoid including information the user doesn't need to know or care about</li>
             <li>Lead with the most important information and focus on the user's task</li>
-            <li>Use contractions</li>
+            <li>Avoid the use of contractions</li>
             <li>Don't 'second guess' the user's intentions. Only ask for confirmation of action if action will cause root-level or irretrievable changes.</li>
         </ul>
         <!-- Table -->
@@ -287,7 +287,6 @@
         <hr>
         <h3>Punctuation &amp; Capitalization</h3>
         <ul>
-            <li>Do not use a period for single sentences</li>
             <li>Use periods for messaging with multiple sentences, or when the sentence has other punctuation. Like this one.</li>
             <li>Use initial caps</li>
             <li>Capitalize proper nouns only. Do not capitalize random words in a sentence. It IS difficult to Read.</li>
@@ -302,8 +301,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td data-th="Don't">Spell out numbers <br> <strong>i.e. five, ten, fourty-two</strong></td>
-                    <td data-th="Do">Use numeric characters <br> <strong>i.e. 5, 10, 42</strong></td>
+                    <td data-th="Don't">Spell out numbers greater than ten <br> <strong>i.e. fourty two</strong></td>
+                    <td data-th="Do">Use numeric characters for numbers greater than ten<br> <strong>i.e. 23, 57, 87</strong></td>
                 </tr>
                 <tr>
                     <td data-th="Don't">Use lower cases for labels <br> <strong>i.e. save</strong></td>
@@ -351,7 +350,7 @@
                     <td data-th="Is">
                         Package
                         <package name="">
-                        couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least 1 Service.
+                        couldn't be saved, a Package requires min. one Service.  Save unsuccessful. Add a least one Service.
                     </package></td>
                 </tr>
                 <tr>
