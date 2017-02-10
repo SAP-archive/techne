@@ -196,9 +196,6 @@ gulp.task('deploy', function(){
     gulp.src('./bower_components/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('docs/kss/public/js/'));
 
-
- 
-
     /*
     Create the distribution zip file
      */

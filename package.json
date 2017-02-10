@@ -24,9 +24,8 @@
     "gulp-iconfont": "^8.0.1",
     "gulp-kss": "0.0.2",
     "gulp-less": "2.0.1",
-    "gulp-zip": "^2.0.3",
+    "gulp-zip": "^4.0.0",
     "less-plugin-autoprefix": "^1.4.0",
-    "less-plugin-clean-css": "^1.5.0",
-    "lodash": "^3.2.0"
+    "less-plugin-clean-css": "^1.5.0"
   }
 }
