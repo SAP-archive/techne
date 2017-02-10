@@ -1,13 +1,9 @@
 var gulp = require('gulp');
 
 var less = require('gulp-less');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var cachebust = require('gulp-cache-bust');
 var concat = require('gulp-concat');
-var insert = require('gulp-insert');
 var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
@@ -101,7 +97,6 @@ gulp.task('less', ['setpath'] ,
     function()
     {
         gulp.src(paths.less)
-        //.pipe(sourcemaps.init())
         .pipe(
             less(
                 {
@@ -117,7 +112,6 @@ gulp.task('less', ['setpath'] ,
             }
         )
         //.pipe(connect.reload())
-        //.pipe(sourcemaps.write())
         .pipe(
             concat('techne.min.css')
         )
@@ -259,11 +253,8 @@ gulp.task('dist', ['iconfont', 'build']);
 gulp.task('default', [ 'build' , 'connect', 'watch']);
 
 // Rerun the task when a file changes
-gulp.task('watch',
-    function()
-    {
-        gulp.watch(paths.less_watch, ['less']);
-        gulp.watch(paths.html, ['html']);
-        gulp.watch(paths.less_watch, ['styleguide']);
-    }
-);
+gulp.task('watch', function() {
+    gulp.watch(paths.less_watch, ['less']);
+    gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.less_watch, ['styleguide']);
+});
