@@ -1,28 +1,34 @@
-// Markup:
-// <div class="product-thumbnail">
-//     <div class="product-image">
-//         <div class="img-wrapper">
-//         <span class="img-spacer"></span>
-//         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
-//         </div>
-//     </div>
-//     <div class="product-details">
-//         <div class="product-name">
-//             <a>Product Name</a>
-//         </div>
-//         <div class="product-code">
-//             000123456789000
-//         </div>
-//         <div class="product-price">
-//             <s>47.48</s>
-//             <span class="text-danger">42.48</span>
-//             <span>USD</span>
-//         </div>
-//         <div class="label label-success">Published</div>
-//     </div>
-// </div>
-//
-// Pattern 15.1
+/*
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element product-price-original">
+                <span class="product-price-amount product-price-range">47.48 - 49.48</span>
+             </span>
+             <span class="product-price-element product-price-discounted">
+                <span clipPath="product-price-amount product-price-range">40.20 - 42.48</span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Published</div>
+     </div>
+ </div>
+
+Pattern 15.1
+*/
 
 .product-grid {
     display: flex;
@@ -114,11 +120,18 @@
     .product-price {
         font-size: 15px;
         margin-bottom: 10px;
-    }
 
-    .product-price-discount {
-        .text-danger;
-        display: inline-block;
+        .product-price-element { 
+            display: block;
+         }
+
+        .product-price-original {
+            text-decoration: line-through;
+        }
+
+        .product-price-discounted {
+            .text-danger;
+        }
     }
 
     .product-out-stock {
