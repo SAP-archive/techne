@@ -1,14 +1,9 @@
 var gulp = require('gulp');
 
 var less = require('gulp-less');
-var env = require('gulp-env');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
 var gulpkss = require('gulp-kss');
 var cachebust = require('gulp-cache-bust');
 var concat = require('gulp-concat');
-var insert = require('gulp-insert');
 var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
@@ -42,48 +37,44 @@ var paths = {
     environment: 'dist'
 };
 
-// Create Iconfont
-gulp.task('iconfont',
-    function()
-    {
-        gulp.src(paths.icons_path)
-        .pipe(
-            iconfont(
-                {
-                    fontName: 'hyicon',
-                    normalize: true,
-                    centerHorizontally: true,
-                    fontHeight: 100, // IMPORTANT
-                    appendCodepoints: true
-                }
-            )
-        )
-        .on('codepoints',
-            function(codepoints, options)
-            {
-                // automatically assign a unicode value to the icon
-                codepoints.forEach(function(glyph, idx, arr) {
-                arr[idx].codepoint = glyph.codepoint.toString(16)
-                });
 
-                gulp.src('src/less/templates/_icons.less')
-                .pipe(
-                    consolidate('lodash',
-                        {
-                            glyphs: codepoints,
-                            appendCodepoints: true,
-                            fontName: 'hyicon',
-                            fontPath: "/fonts/",
-                            className: 'hyicon'
-                        }
-                    )
-                )
-                .pipe(gulp.dest('src/less/components'));
-            }
-        )
+
+
+/**
+ * Font settings
+ */
+const fontName = 'hyicon' // set name of your symbol font
+const className = 'hyicon' // set class name in your CSS
+
+// Create Iconfont
+gulp.task('iconfont', function() {
+    gulp.src(paths.icons_path)
+        .pipe(iconfont({
+            fontName,
+            formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+            normalize: true,
+            centerHorizontally: true,
+            fontHeight: 100, // IMPORTANT
+            prependUnicode: true
+        }))
+        .on('glyphs', (glyphs) => {
+          const options = {
+            className,
+            fontName,
+            fontPath: '/fonts/',
+            glyphs: glyphs.map(mapGlyphs)
+          }
+          gulp.src(`src/less/templates/_icons.less`)
+            .pipe(consolidate('lodash', options))
+            .pipe(gulp.dest('src/less/components')) // set path to export your CSS
+        })
         .pipe( gulp.dest('dist/techne/fonts/') );
     }
 );
+function mapGlyphs (glyph) {
+  return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+}
+
 
 gulp.task('setpath', function(cb) {
     gulp.src('src/less/templates/_resource-paths.less')
@@ -106,7 +97,6 @@ gulp.task('less', ['setpath'] ,
     function()
     {
         gulp.src(paths.less)
-        //.pipe(sourcemaps.init())
         .pipe(
             less(
                 {
@@ -122,7 +112,6 @@ gulp.task('less', ['setpath'] ,
             }
         )
         //.pipe(connect.reload())
-        //.pipe(sourcemaps.write())
         .pipe(
             concat('techne.min.css')
         )
@@ -134,7 +123,6 @@ gulp.task('less', ['setpath'] ,
         );
     }
 );
-
 
 
 //----ABOVE COMPLETE----
@@ -208,45 +196,6 @@ gulp.task('deploy', function(){
     gulp.src('./bower_components/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('docs/kss/public/js/'));
 
-
-    gulp.src(
-        [
-            './src/js/**/*.js'
-        ]
-    )
-    .pipe(concat('techne.min.js'))
-    .pipe(uglify())
-
-    .pipe(insert.append(function(){
-        var headTagAppendScript = ['\n'];
-
-
-        if(config.appendComponentCss || config.appendComponentHTML)
-        {
-            headTagAppendScript.push(";(function() {");
-                headTagAppendScript.push("var headTag = document.getElementsByTagName('head')[0];");
-                if(config.appendComponentCss)
-                {
-                    headTagAppendScript.push("var css = document.createElement('link');");
-                    headTagAppendScript.push("css.rel = 'stylesheet';");
-                    headTagAppendScript.push("css.href = '"+ config.bower_path +"/hyTechne/dist/css/techne.min.css';");
-                    headTagAppendScript.push("headTag.appendChild(css);");
-                }
-
-                if(config.appendComponentHTML) {
-                    headTagAppendScript.push("var html = document.createElement('link');");
-                    headTagAppendScript.push("html.rel = 'import';");
-                    headTagAppendScript.push("html.href = '" + config.bower_path + "/hyTechne/dist/html/techne.html';");
-                    headTagAppendScript.push("headTag.appendChild(html);");
-                }
-
-            headTagAppendScript.push("})();");
-        }
-        return headTagAppendScript.join('\n');
-    }))
-    .pipe(gulp.dest(paths.environment+'/js/'))
-    .pipe(gulp.dest('docs/kss/public/js/'));
-
     /*
     Create the distribution zip file
      */
@@ -301,11 +250,8 @@ gulp.task('dist', ['iconfont', 'build']);
 gulp.task('default', [ 'build' , 'connect', 'watch']);
 
 // Rerun the task when a file changes
-gulp.task('watch',
-    function()
-    {
-        gulp.watch(paths.less_watch, ['less']);
-        gulp.watch(paths.html, ['html']);
-        gulp.watch(paths.less_watch, ['styleguide']);
-    }
-);
+gulp.task('watch', function() {
+    gulp.watch(paths.less_watch, ['less']);
+    gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.less_watch, ['styleguide']);
+});
