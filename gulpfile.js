@@ -13,8 +13,11 @@ var LessPluginCleanCSS = require('less-plugin-clean-css'),
     cleancss = new LessPluginCleanCSS({ advanced: false, aggressiveMerging:true }),
     autoprefix= new LessPluginAutoPrefix({ browsers: ["Safari >= 8", "last 2 versions", "ie >= 9"] });
 
-var connect = require('gulp-connect-multi')();
+const browserSync = require('browser-sync').create();
 
+const yargs = require('yargs');
+const PRODUCTION = !!(yargs.argv.production);
+const DEVELOPMENT = !!(yargs.argv.development);
 
 var paths = {
     icons_path: 'src/icons/*.svg',
@@ -36,9 +39,6 @@ var paths = {
     ],
     environment: 'dist'
 };
-
-
-
 
 /**
  * Font settings
@@ -93,36 +93,21 @@ gulp.task('setpath', function(cb) {
 });
 
 // Complile general Less Files
-gulp.task('less', ['setpath'] ,
-    function()
-    {
-        gulp.src(paths.less)
-        .pipe(
-            less(
-                {
-                    errLogToConsole: true,
-                    plugins: [autoprefix, cleancss]
-                }
-            )
-        )
-        .on('error',
-            function(err)
-            {
-                console.log(err.message);
-            }
-        )
-        //.pipe(connect.reload())
-        .pipe(
-            concat('techne.min.css')
-        )
+gulp.task('less', ['setpath'], () => {
+    return gulp.src(paths.less)
+        .pipe(less({
+            errLogToConsole: true,
+            plugins: [autoprefix, cleancss]
+        }))
+        .on('error', (err) => {
+            console.log(err.message);
+        })
         .pipe(cachebust({
             type: 'timestamp'
         }))
-        .pipe(
-            gulp.dest( paths.environment+'/techne/css/' )
-        );
-    }
-);
+        .pipe(concat('techne.min.css'))
+        .pipe(gulp.dest( paths.environment+'/techne/css/' ))
+});
 
 
 //----ABOVE COMPLETE----
@@ -159,25 +144,37 @@ gulp.task('styleguide', function () {
     .pipe(cachebust({
         type: 'timestamp'
     }))
-    .pipe( gulp.dest('docs/kss') );
+    .pipe(gulp.dest('docs/kss') )
+    //.pipe(browserSync.stream());
+    
 
     gulp.src('./bower_components/bootstrap/fonts/**/*')
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
 });
 
 
-gulp.task('connect',
-    connect.server(
-        {
-            root: [__dirname + '/docs/kss'],
-            port: 8080,
-            livereload: true,
-            open: {
-                browser: 'none' // if not working OS X browser: 'Google Chrome'
-            }
+// Static server
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+            baseDir: __dirname + '/docs/kss'
         }
-    )
-);
+    });
+    gulp.watch(paths.less_watch, ['watch-styleguide']);
+    gulp.watch('docs/kss/public/dist/techne/css/techne.min.css').on('change', browserSync.reload);
+});
+
+// these custom tasks are here to avoid calling deploy to do this one thing
+gulp.task('watch-css', ['less'], () => {
+    //copy compiled minified CSS to docs public/dist folder
+    return gulp.src('dist/techne/css/techne.min.css')
+        .pipe(gulp.dest('docs/kss/public/dist/techne/css/'));
+});
+gulp.task('watch-styleguide', ['styleguide', 'watch-css'], () => {
+
+});
+
+
 
 gulp.task('deploy', function(){
 
@@ -230,7 +227,6 @@ gulp.task('patchgulpkss',
 );
 
 
-
 gulp.task('packagedist',
   function()
   {
@@ -247,11 +243,5 @@ gulp.task('dist', ['iconfont', 'build']);
 
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', [ 'build' , 'connect', 'watch']);
+gulp.task('default', [ 'build' , 'serve']);
 
-// Rerun the task when a file changes
-gulp.task('watch', function() {
-    gulp.watch(paths.less_watch, ['less']);
-    gulp.watch(paths.html, ['html']);
-    gulp.watch(paths.less_watch, ['styleguide']);
-});
