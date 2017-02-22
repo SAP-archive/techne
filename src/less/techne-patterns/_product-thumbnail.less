@@ -15,11 +15,8 @@ Markup:
              000123456789000
          </div>
          <div class="product-price ">
-             <span class="product-price-element product-price-original">
-                <span class="product-price-amount product-price-range">47.48 - 49.48</span>
-             </span>
-             <span class="product-price-element product-price-discounted">
-                <span clipPath="product-price-amount product-price-range">40.20 - 42.48</span>
+             <span class="product-price-element">
+                <span class="product-price-amount">40.20</span>
                 <span class="product-price-currency">USD</span>
              </span>
          </div>
@@ -28,6 +25,87 @@ Markup:
  </div>
 
 Pattern 15.1
+*/
+
+/*
+Display discounted pices
+
+The Product Tumbnail can also display disconted prices. The original price will be displayed besides the discounted price. Both price have different styles to be easily recognizable.
+
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element product-price-original">
+                <span class="product-price-amount">47.48</span>
+             </span>
+             <span class="product-price-separator">&nbsp;&mdash;&nbsp;</span>
+             <span class="product-price-element product-price-discounted">
+                <span class="product-price-amount">40.20</span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Active</div>
+     </div>
+ </div>
+
+Pattern 15.2
+*/
+
+/*
+Display a price range
+
+The Product Thumbnail Pattern can also display price ranges. By adding the class .product-price-range to the element with the class .product-price-element the price ranges will be displayed one bellow the other.
+
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element product-price-range product-price-original">
+                <span class="product-price-amount product-price-range">
+                    47.48  
+                    <span class="product-price-separator">&nbsp;&mdash;&nbsp;</span>
+                    49.48
+                </span>
+             </span>
+             <span class="product-price-element product-price-range product-price-discounted">
+                <span class="product-price-amount product-price-range">
+                    40.20
+                    <span class="product-price-separator">&nbsp;&mdash;&nbsp;</span>
+                    42.48
+                </span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Active</div>
+     </div>
+ </div>
+
+Pattern 15.3
 */
 
 .product-grid {
@@ -122,20 +200,24 @@ Pattern 15.1
         margin-bottom: 10px;
 
         .product-price-element { 
-            display: block;
-         }
 
-        .product-price-original {
-            text-decoration: line-through;
-        }
+            &.product-price-original {
+                text-decoration: line-through;
+            }
 
-        .product-price-discounted {
-            .text-danger;
+            &.product-price-discounted {
+                .text-danger;
+            }
 
-            .product-price-currency {
-                color: @techne-typo-default;
+            &.product-price-range {
+                display: block;
             }
         }
+
+        .product-price-separator { 
+            color: @default-grey;
+        }
+
     }
 
     .product-out-stock {
