@@ -151,17 +151,23 @@ body.has-left-nav .sidebar-nav {
     body.has-left-nav #kss-wrapper {
         padding-left: 265px;
     }
+    .main-content {
+        position: relative; //this is not ideal
+    }
 
     .kss-body .footer{
-      position: fixed;
-      height: 40px;
-      bottom: 0;
-      z-index: 102;
+        height: 40px;
+        position: relative;
+        display: block !important;
+        z-index: 902; //+1 over left nav (see around line 110)
+        &--starterpages {
+            bottom: 0;
+            position: absolute;
+        }
     }
 
     body.has-left-nav #kss-nav {
-        padding-top: 140px;
-        margin-top: -40px;
+        padding-top: 100px;
     }
 
     body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
@@ -169,8 +175,7 @@ body.has-left-nav .sidebar-nav {
     }
 
     body.has-left-nav.navbar-super-up #kss-nav {
-        margin-top: -40px;
-        padding-top: 100px!important;
+        padding-top: 60px !important;
     }
 
     #kss-main {
