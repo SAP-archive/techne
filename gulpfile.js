@@ -213,6 +213,12 @@ gulp.task('deploy', function(){
     gulp.src('dist/techne/**/*')
     .pipe( gulp.dest('docs/kss/public/dist/techne/') );
 
+    gulp.src([
+            './bower_components/Jcrop/css/jquery.Jcrop.min.css',
+            './bower_components/Jcrop/css/Jcrop.gif'
+        ])
+        .pipe(gulp.dest('docs/kss/public/dist/vendor/'));
+
     // gulp.src(['bower_components/bootstrap/**/*'])
     // .pipe( gulp.dest('docs/kss/bower_components/bootstrap') );
 
