@@ -49,10 +49,9 @@ Markup:
          </div>
          <div class="product-price ">
              <span class="product-price-element product-price-original">
-                <span class="product-price-amount">47.48</span>
-             </span>
+                <span class="product-price-amount">47.48</span></span>
              <span class="product-price-separator">&nbsp;</span>
-             <span class="product-price-element product-price-discounted">
+             <span class="product-price-element product-price-effective">
                 <span class="product-price-amount">40.20</span>
                 <span class="product-price-currency">USD</span>
              </span>
@@ -86,14 +85,14 @@ Markup:
          </div>
          <div class="product-price ">
              <span class="product-price-element product-price-range product-price-original">
-                <span class="product-price-amount product-price-range">
+                <span class="product-price-amount">
                     47.48  
                     <span class="product-price-separator">&nbsp;&ndash;&nbsp;</span>
                     49.48
                 </span>
              </span>
-             <span class="product-price-element product-price-range product-price-discounted">
-                <span class="product-price-amount product-price-range">
+             <span class="product-price-element product-price-range product-price-effective">
+                <span class="product-price-amount">
                     40.20
                     <span class="product-price-separator">&nbsp;&ndash;&nbsp;</span>
                     42.48
@@ -205,7 +204,7 @@ Pattern 15.3
                 text-decoration: line-through;
             }
 
-            &.product-price-discounted {
+            &.product-price-effective {
                 .text-danger;
             }
 
@@ -213,11 +212,6 @@ Pattern 15.3
                 display: block;
             }
         }
-
-        .product-price-separator { 
-            color: @default-grey;
-        }
-
     }
 
     .product-out-stock {
