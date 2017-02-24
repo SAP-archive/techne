@@ -158,7 +158,9 @@ gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: __dirname + '/docs/kss'
-        }
+        },
+        port: 8080,
+        open: DEVELOPMENT
     });
     gulp.watch(paths.less_watch, ['watch-styleguide']);
     gulp.watch('docs/kss/public/dist/techne/css/techne.min.css').on('change', browserSync.reload);
