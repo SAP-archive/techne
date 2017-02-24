@@ -189,6 +189,7 @@ gulp.task('deploy', function(){
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js',
             './bower_components/select2/select2.js',
+            './bower_components/Jcrop/js/jquery.Jcrop.min.js',
             './src/js/**/*.js'
         ]
     ).pipe(gulp.dest(paths.environment+'/js/'));
