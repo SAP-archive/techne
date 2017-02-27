@@ -188,6 +188,7 @@ gulp.task('deploy', function(){
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/bootstrap/dist/js/bootstrap.min.js',
             './bower_components/select2/select2.js',
+            './bower_components/Jcrop/js/jquery.Jcrop.min.js',
             './src/js/**/*.js'
         ]
     ).pipe(gulp.dest(paths.environment+'/js/'));
@@ -211,6 +212,12 @@ gulp.task('deploy', function(){
 
     gulp.src('dist/techne/**/*')
     .pipe( gulp.dest('docs/kss/public/dist/techne/') );
+
+    gulp.src([
+            './bower_components/Jcrop/css/jquery.Jcrop.min.css',
+            './bower_components/Jcrop/css/Jcrop.gif'
+        ])
+        .pipe(gulp.dest('docs/kss/public/dist/vendor/'));
 
     // gulp.src(['bower_components/bootstrap/**/*'])
     // .pipe( gulp.dest('docs/kss/bower_components/bootstrap') );
