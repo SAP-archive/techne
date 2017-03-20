@@ -3,24 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { LibModule } from '../lib/lib.module';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AppRoutingModule,
-
-    LibModule
+    HttpModule
+  ],
+  exports: [
+    ButtonComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class LibModule { }
