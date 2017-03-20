@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gulp": "registry:npm/gulp#4.0.0-alpha.2+20160817105618"
+  }
+}

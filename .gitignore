@@ -7,7 +7,7 @@ node_modules/*
 ## CONFIG FILES
 src/less/globals/_resource-paths.less
 
-## IDE Specfici folders
+## IDE Specific folders
 .idea/
 .vscode/
 

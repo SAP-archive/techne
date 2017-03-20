@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { LibModule } from '../lib/lib.module';
+import { TechneModule } from '../techne/techne.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { LibModule } from '../lib/lib.module';
     HttpModule,
     AppRoutingModule,
 
-    LibModule
+    TechneModule
   ],
   providers: [],
   bootstrap: [AppComponent]

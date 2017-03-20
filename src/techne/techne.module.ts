@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ButtonComponent } from './button/button.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -19,4 +19,4 @@ import { ButtonComponent } from './button/button.component';
   ],
   providers: [],
 })
-export class LibModule { }
+export class TechneModule { }
