@@ -50,7 +50,7 @@ const className = 'hyicon' // set class name in your CSS
 gulp.task('iconfont', function() {
     gulp.src(paths.icons_path)
         .pipe(iconfont({
-            fontName: fontName,
+            fontName,
             formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
             normalize: true,
             centerHorizontally: true,
