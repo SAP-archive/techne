@@ -6,7 +6,7 @@ const gulpClean = require('gulp-clean');
 import { TechneDist } from '../config';
 
 function cleanTask() {
-    gulp
+    return gulp
       .src(TechneDist, { read: false })
       .pipe(gulpClean(null));
 }

@@ -5,19 +5,20 @@ import { TechneDist, TechneSassPaths, TechneCssComponentPaths, TechneCompiledFil
 var sass = require('gulp-sass');
 var cleanCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
+var runSequence = require('run-sequence');
 
 function buildComponents() {
-    gulp
+    return gulp
         .src(TechneSassPaths)
         .pipe(sass(SassConfig).on('error', sass.logError))
-        //.pipe(cleanCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest(TechneDist));
 }
 
 gulp.task('buildComponents', buildComponents);
 
 function concatComponents() {
-    gulp
+    return gulp
         .src(TechneCssComponentPaths)
         .pipe(concat(TechneCompiledFilename))
         .pipe(gulp.dest(TechneDist));
@@ -26,5 +27,16 @@ function concatComponents() {
 gulp.task('concatComponents', concatComponents);
 
 // Main task
-gulp.task('build', ['buildComponents', 'concatComponents']);
+
+function build(callback: any) {
+    runSequence(
+        'clean', 
+        'buildComponents', 
+        'concatComponents',
+        'addBanner'
+    );
+    callback();
+}
+
+gulp.task('build', build);
 
