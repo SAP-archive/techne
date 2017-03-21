@@ -1,28 +1,111 @@
-// Markup:
-// <div class="product-thumbnail">
-//     <div class="product-image">
-//         <div class="img-wrapper">
-//         <span class="img-spacer"></span>
-//         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
-//         </div>
-//     </div>
-//     <div class="product-details">
-//         <div class="product-name">
-//             <a>Product Name</a>
-//         </div>
-//         <div class="product-code">
-//             000123456789000
-//         </div>
-//         <div class="product-price">
-//             <s>47.48</s>
-//             <span class="text-danger">42.48</span>
-//             <span>USD</span>
-//         </div>
-//         <div class="label label-success">Published</div>
-//     </div>
-// </div>
-//
-// Pattern 15.1
+/*
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element">
+                <span class="product-price-amount">40.20</span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Active</div>
+     </div>
+ </div>
+
+Pattern 15.1
+*/
+
+/*
+Display discounted prices
+
+The Product Thumbnail can also display discounted prices. The original price will be displayed beside the discounted price. Both price have different styles to be easily recognizable.
+
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element product-price-original">
+                <span class="product-price-amount">47.48</span></span>
+             <span class="product-price-separator">&nbsp;</span>
+             <span class="product-price-element product-price-effective">
+                <span class="product-price-amount">40.20</span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Active</div>
+     </div>
+ </div>
+
+Pattern 15.2
+*/
+
+/*
+Display a price range
+
+The Product Thumbnail Pattern can also display price ranges. By adding the class .product-price-range to the element with the class .product-price-element the price ranges will be displayed one below the other.
+
+Markup:
+ <div class="product-thumbnail">
+     <div class="product-image">
+         <div class="img-wrapper">
+         <span class="img-spacer"></span>
+         <img src="../images/product-thumbnail.png" class="img img-responsive full-width">
+         </div>
+     </div>
+     <div class="product-details">
+         <div class="product-name">
+             <a>Product Name</a>
+         </div>
+         <div class="product-code">
+             000123456789000
+         </div>
+         <div class="product-price ">
+             <span class="product-price-element product-price-range product-price-original">
+                <span class="product-price-amount">
+                    47.48  
+                    <span class="product-price-separator">&nbsp;&ndash;&nbsp;</span>
+                    49.48
+                </span>
+             </span>
+             <span class="product-price-element product-price-range product-price-effective">
+                <span class="product-price-amount">
+                    40.20
+                    <span class="product-price-separator">&nbsp;&ndash;&nbsp;</span>
+                    42.48
+                </span>
+                <span class="product-price-currency">USD</span>
+             </span>
+         </div>
+         <div class="label label-success">Active</div>
+     </div>
+ </div>
+
+Pattern 15.3
+*/
 
 .product-grid {
     display: flex;
@@ -114,11 +197,21 @@
     .product-price {
         font-size: 15px;
         margin-bottom: 10px;
-    }
 
-    .product-price-discount {
-        .text-danger;
-        display: inline-block;
+        .product-price-element { 
+
+            &.product-price-original {
+                text-decoration: line-through;
+            }
+
+            &.product-price-effective {
+                .text-danger;
+            }
+
+            &.product-price-range {
+                display: block;
+            }
+        }
     }
 
     .product-out-stock {

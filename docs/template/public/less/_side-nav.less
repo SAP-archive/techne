@@ -111,7 +111,6 @@ body.has-left-nav #kss-nav {
     width: 250px;
     left:0;
     top: 0;
-    width: 250px;
     height: 100%;
     padding: 100px 0 0 0;
     overflow-y: auto;
@@ -133,10 +132,6 @@ body.has-left-nav.toggled #kss-wrapper #kss-nav {
     padding: 15px;
 }
 
-body.has-left-nav.toggled #kss-wrapper #kss-main {
-    // margin-right: -250px;
-}
-
 /* Sidebar Styles */
 body.has-left-nav .sidebar-nav {
     position: absolute;
@@ -151,17 +146,23 @@ body.has-left-nav .sidebar-nav {
     body.has-left-nav #kss-wrapper {
         padding-left: 265px;
     }
+    .main-content {
+        position: relative;
+    }
 
     .kss-body .footer{
-      position: fixed;
-      height: 40px;
-      bottom: 0;
-      z-index: 102;
+        height: 40px;
+        position: relative;
+        display: block !important;
+        z-index: 902; //+1 over left nav (see around line 110)
+        &--starterpages {
+            bottom: 0;
+            position: absolute;
+        }
     }
 
     body.has-left-nav #kss-nav {
-        padding-top: 140px;
-        margin-top: -40px;
+        padding-top: 100px;
     }
 
     body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
@@ -169,8 +170,7 @@ body.has-left-nav .sidebar-nav {
     }
 
     body.has-left-nav.navbar-super-up #kss-nav {
-        margin-top: -40px;
-        padding-top: 100px!important;
+        padding-top: 60px !important;
     }
 
     #kss-main {

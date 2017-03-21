@@ -10,8 +10,7 @@
 //
 // Component 4.3
 
-@checkbox-size: 23px;
-@checkbox-border-width: 4.5px;
+@checkbox-size: 24px;
 
 .checkbox{
     position: relative;
@@ -39,12 +38,15 @@
                 height: @checkbox-size ;
                 background:  @default-blue;
                 border-radius: 0px;
-                content: "";
+                content: "\e004";
                 display: inline-block;
-                font-family: 'Glyphicons Halflings';
-                color: #fff;
+                font-family: 'hyicon';
+                font-size: 20px;
+                color: @white;
                 line-height: 15px;
-                border: @checkbox-border-width solid @default-blue;
+                border: 0 solid @default-blue;
+                border-top-width: 5px;
+                border-left-width: 2px;
             }
         }
 
@@ -83,7 +85,7 @@
             height: @checkbox-size ;
             background: #fff;
             border-radius: 0px;
-            border: @checkbox-border-width solid @dark-blue;
+            border: 3px solid @dark-blue;
         }
 
     }

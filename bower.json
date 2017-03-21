@@ -29,6 +29,7 @@
   "dependencies": {
     "bootstrap": "~3.3.2",
     "select2": "~3.5.2",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "Jcrop" : "~0.9.12"
   }
 }

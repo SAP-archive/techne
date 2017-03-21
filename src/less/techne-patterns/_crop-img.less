@@ -1,0 +1,69 @@
+.crop-img--wrapper {
+    padding-bottom: 0!important;
+    .crop-img{
+        &--table{
+            width: 100%;
+            display: table;
+            &-cell {
+                display: table-cell;
+                vertical-align: top;
+            }
+        }
+        &--original{
+            width:0;
+            height:0;
+            overflow: hidden;
+        }
+        &--source{
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .jcrop-keymgr {
+        visibility: hidden;
+    }
+    @media (max-width: 768px) {
+        .jcrop-handle {
+            border-radius: 20px;
+            width: 41px;
+            height: 41px;
+            background: @default-close-grey;
+            opacity: 0.5;
+        }
+        .jcrop-handle.ord-n,
+        .jcrop-handle.ord-w,
+        .jcrop-handle.ord-s,
+        .jcrop-handle.ord-e {
+            display: none;
+        }
+        .jcrop-dragbar {
+            display: none;
+        }
+        .jcrop-handle.ord-nw {
+            margin-left: -21px;
+            margin-top: -21px;
+        }
+        .jcrop-handle.ord-sw {
+            margin-left: -21px;
+            margin-bottom: -21px;
+        }
+        .jcrop-handle.ord-ne {
+            margin-right: -21px;
+            margin-top: -21px;
+        }
+        .jcrop-handle.ord-se {
+            margin-right: -21px;
+            margin-bottom: -21px;
+        }
+        .jcrop-vline,
+        .jcrop-hline {
+            background: #c5cdd6;
+        }
+        .jcrop-vline {
+           width: 3px !important;
+        }
+        .jcrop-hline {
+            height: 3px !important;
+        }
+    }
+}
