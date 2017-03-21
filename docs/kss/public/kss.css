@@ -324,7 +324,7 @@ a:visited {
   float: none !important;
 }
 .kss-modifier-example .product-thumbnail {
-  margin: -40px 0 0 0;
+  margin: 0;
   width: 300px;
 }
 .kss-lead {
@@ -504,9 +504,9 @@ body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
 body.has-left-nav #kss-nav {
   position: fixed;
   z-index: 901;
+  width: 250px;
   left: 0;
   top: 0;
-  width: 250px;
   height: 100%;
   padding: 100px 0 0 0;
   overflow-y: auto;
@@ -536,22 +536,27 @@ body.has-left-nav .sidebar-nav {
   body.has-left-nav #kss-wrapper {
     padding-left: 265px;
   }
+  .main-content {
+    position: relative;
+  }
   .kss-body .footer {
-    position: fixed;
     height: 40px;
+    position: relative;
+    display: block !important;
+    z-index: 902;
+  }
+  .kss-body .footer--starterpages {
     bottom: 0;
-    z-index: 102;
+    position: absolute;
   }
   body.has-left-nav #kss-nav {
-    padding-top: 140px;
-    margin-top: -40px;
+    padding-top: 100px;
   }
   body.has-left-nav.kss-sidebar-nav-mobile-only #kss-wrapper {
     background: none;
   }
   body.has-left-nav.navbar-super-up #kss-nav {
-    margin-top: -40px;
-    padding-top: 100px!important;
+    padding-top: 60px !important;
   }
   #kss-main {
     position: relative;
@@ -1784,7 +1789,7 @@ article section.LocalizationExample .kss-description h3 {
   right: 0;
   bottom: 0;
   left: 250px;
-  top: 100px;
+  top: 0;
   background-color: #e0e9f0;
   margin-bottom: 40px;
 }
