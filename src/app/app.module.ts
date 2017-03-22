@@ -11,6 +11,9 @@ import { HomeComponent } from './modules/home/home.component';
 import { GuidesComponent } from './modules/guides/guides.component';
 import { ComponentsComponent } from './modules/components/components.component';
 
+import { Four0FourComponent } from './modules/four0four/four0four.component';
+
+
 import { TechneModule } from '../techne/techne.module';
 
 @NgModule({
@@ -19,7 +22,9 @@ import { TechneModule } from '../techne/techne.module';
     NavigationComponent,
     HomeComponent,
     GuidesComponent,
-    ComponentsComponent
+    ComponentsComponent,
+
+    Four0FourComponent
   ],
   imports: [
     BrowserModule,
