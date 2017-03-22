@@ -1,0 +1,13 @@
+<nav class="hy-nav">
+    <h1 class="hy-identity">
+        <span class="hy-inidentity-name">
+            <a routerLink="/">Techne</a>
+        </span>
+    </h1>
+
+    <ul class="hy-nav-section hy-nav-options">
+        <li *ngFor="let option of mainOptions; let i = index;" class="hy-nav-option">
+            <a href="{{ option.routerLink }}">{{ option.label }}</a>
+        </li>
+    </ul>
+</nav>

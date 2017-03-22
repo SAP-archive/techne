@@ -1,0 +1,30 @@
+@import '../../system/colors';
+@import '../../system/spacing';
+
+// Techné Main Navigation
+
+.hy-nav {
+    display: flex;
+    background-color: $nav-background;
+    color: $nav-text;
+
+    a { 
+        color: $nav-text; 
+        text-decoration: none; 
+    }
+
+    @include hy-padding($narrow-spacing);
+
+    .hy-nav-section {
+        @include hy-margin-horizontal($narrow-spacing);
+    }
+
+    .hy-nav-options {
+        display: flex;
+
+        .hy-nav-option {
+            list-style: none;
+            @include hy-margin($narrow-spacing);
+        }
+    }
+}

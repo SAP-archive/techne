@@ -1,5 +1,5 @@
-## BOWER COMPONENTS
-bower_components/
+## Dist folder
+dist/*
 
 ## NODE MODULES
 node_modules/*
@@ -7,13 +7,9 @@ node_modules/*
 ## CONFIG FILES
 src/less/globals/_resource-paths.less
 
-## IDE Specfici folders
+## IDE Specific folders
 .idea/
 .vscode/
-
-docs/kss/*.html
-docs/kss/patterns/*.html
-docs/kss/components/*.html
 
 # OS generated files #
 ######################

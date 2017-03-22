@@ -1,0 +1,25 @@
+// Techné Spacing
+
+body { margin: 0; }
+
+// Narrow Padding and Margin
+
+$narrow-spacing: 10px;
+
+// Wide Padding and Margin
+
+$wide-spacing: 20px;
+
+// spancing mixings
+
+@mixin hy-padding($space) {
+    padding: $space;
+}
+
+@mixin hy-margin($space) {
+    margin: $space;
+}
+
+@mixin hy-margin-horizontal($space) {
+    margin: 0 $space 0 $space;
+}
