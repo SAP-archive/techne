@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { ButtonComponent } from './components/button/button.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
-    ButtonComponent
+    ButtonComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -15,7 +17,8 @@ import { ButtonComponent } from './components/button/button.component';
     HttpModule
   ],
   exports: [
-    ButtonComponent
+    ButtonComponent,
+    NavComponent
   ],
   providers: [],
 })

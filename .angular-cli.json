@@ -18,9 +18,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "techne/commons/grid.scss",
-        "techne/commons/spacing.scss",
-        "techne/commons/typography.scss"
+        "techne/system/grid.scss",
+        "techne/system/spacing.scss",
+        "techne/system/typography.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
