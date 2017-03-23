@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import {
-    NavComponent, 
+    MainNavigationComponent, 
+    SideNavigationComponent,
     ButtonComponent
 } from './components';
 
 @NgModule({
     declarations: [
         ButtonComponent,
-        NavComponent
+        MainNavigationComponent,
+        SideNavigationComponent
     ],
     imports: [
         BrowserModule,
@@ -20,7 +22,8 @@ import {
     ],
     exports: [
         ButtonComponent,
-        NavComponent
+        MainNavigationComponent,
+        SideNavigationComponent
     ],
     providers: [],
 })

@@ -1,14 +1,24 @@
 [
     { 
         "id": "navigation",
+        "label": "Navigation",
         "components": [
-            {  "componentId": "nav", "label": "Navigation Bar" }
+            {  "id": "mainNavigation", "label": "Main Navigation Bar" },
+            {  "id": "sideNavigation", "label": "Side Navigation Bar" }
         ]
     },
     { 
         "id": "actions",
+        "label": "Actions",
         "components": [
             {  "id": "button", "label": "Buttons" }
+        ]
+    },
+    { 
+        "id": "layout",
+        "label": "Layouts",
+        "components": [
+            {  "id": "listContent", "label": "List+Content" }
         ]
     }    
 ]

@@ -1,0 +1,32 @@
+@import '../../../system/colors';
+@import '../../../system/spacing';
+
+// Techné Main Navigation
+
+.tn-main-nav {
+    display: flex;
+    background-color: $tn-nav-background;
+    color: $tn-nav-text;
+
+    a { 
+        color: $tn-nav-text; 
+        text-decoration: none; 
+    }
+
+    .th-logo { height: 20px; vertical-align: middle; }
+
+    @include tn-padding($tn-narrow-spacing);
+
+    .tn-main-nav-section {
+        @include tn-margin-horizontal($tn-narrow-spacing);
+    }
+
+    .tn-main-nav-options {
+        display: flex;
+
+        .tn-main-nav-option {
+            list-style: none;
+            @include tn-margin($tn-narrow-spacing);
+        }
+    }
+}
