@@ -8,7 +8,7 @@
                 <span>{{ category.label }}</span>
                 <ul>
                     <li *ngFor="let component of category.components">
-                        <a [routerLink]="category.id + '/' + component.id">{{ component.label }}</a>
+                        <span>{{ component.label }}</span>
                     </li>
                 </ul>
             </li>
