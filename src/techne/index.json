@@ -2,7 +2,8 @@
     { 
         "id": "navigation",
         "components": [
-            {  "componentId": "nav", "label": "Navigation Bar" }
+            {  "componentId": "mainNavigation", "label": "Main Navigation Bar" },
+            {  "componentId": "sideNavigation", "label": "Side Navigation Bar" }
         ]
     },
     { 

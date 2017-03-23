@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './modules/navigation/navigation.component';
 import { HomeComponent } from './modules/home/home.component';
 import { GuidesComponent } from './modules/guides/guides.component';
-import { ComponentsComponent } from './modules/components/components.component';
+import { ComponentsComponent, ComponentListComponent, ComponentViewerComponent } from './modules/components';
 
 import { Four0FourComponent } from './modules/four0four/four0four.component';
 
@@ -23,6 +23,8 @@ import { TechneModule } from '../techne/techne.module';
     HomeComponent,
     GuidesComponent,
     ComponentsComponent,
+    ComponentListComponent,
+    ComponentViewerComponent,
 
     Four0FourComponent
   ],

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComponentListComponent } from './componentList'
 
 @Component({
   selector: 'guides',
