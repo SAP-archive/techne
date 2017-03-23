@@ -3,8 +3,8 @@
         "id": "navigation",
         "label": "Navigation",
         "components": [
-            {  "componentId": "mainNavigation", "label": "Main Navigation Bar" },
-            {  "componentId": "sideNavigation", "label": "Side Navigation Bar" }
+            {  "id": "mainNavigation", "label": "Main Navigation Bar" },
+            {  "id": "sideNavigation", "label": "Side Navigation Bar" }
         ]
     },
     { 
