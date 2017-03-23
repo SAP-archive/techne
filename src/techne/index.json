@@ -1,0 +1,14 @@
+[
+    { 
+        "id": "navigation",
+        "components": [
+            {  "componentId": "nav", "label": "Navigation Bar" }
+        ]
+    },
+    { 
+        "id": "actions",
+        "components": [
+            {  "id": "button", "label": "Buttons" }
+        ]
+    }    
+]

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'hy-button',
+  selector: 'tn-button',
   templateUrl: './button.html',
   styleUrls: ['./button.scss'],
   encapsulation: ViewEncapsulation.None

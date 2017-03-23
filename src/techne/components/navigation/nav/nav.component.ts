@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-  selector: 'hy-nav',
+  selector: 'tn-nav',
   templateUrl: './nav.html',
   styleUrls: ['./nav.scss'],
   encapsulation: ViewEncapsulation.None

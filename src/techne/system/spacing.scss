@@ -4,22 +4,22 @@ body { margin: 0; }
 
 // Narrow Padding and Margin
 
-$narrow-spacing: 10px;
+$tn-narrow-spacing: 10px;
 
 // Wide Padding and Margin
 
-$wide-spacing: 20px;
+$tn-wide-spacing: 20px;
 
 // spancing mixings
 
-@mixin hy-padding($space) {
+@mixin tn-padding($space) {
     padding: $space;
 }
 
-@mixin hy-margin($space) {
+@mixin tn-margin($space) {
     margin: $space;
 }
 
-@mixin hy-margin-horizontal($space) {
+@mixin tn-margin-horizontal($space) {
     margin: 0 $space 0 $space;
 }
