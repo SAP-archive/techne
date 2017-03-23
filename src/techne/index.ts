@@ -1,1 +1,1 @@
-
+export * from './techne.module';
