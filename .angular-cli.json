@@ -8,7 +8,8 @@
       "root": "src",
       "outDir": "dist/website",
       "assets": [
-        "assets"
+        { "glob": "**/*", "input": "./assets/",  "output": "./assets/" },
+        { "glob": "**/*.json", "input": "./techne/", "output": "./techne/" }
       ],
       "index": "index.html",
       "main": "main.ts",
