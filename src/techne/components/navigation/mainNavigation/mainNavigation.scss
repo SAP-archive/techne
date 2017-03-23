@@ -3,7 +3,7 @@
 
 // Techné Main Navigation
 
-.tn-nav {
+.tn-main-nav {
     display: flex;
     background-color: $tn-nav-background;
     color: $tn-nav-text;
@@ -17,14 +17,14 @@
 
     @include tn-padding($tn-narrow-spacing);
 
-    .tn-nav-section {
+    .tn-main-nav-section {
         @include tn-margin-horizontal($tn-narrow-spacing);
     }
 
-    .tn-nav-options {
+    .tn-main-nav-options {
         display: flex;
 
-        .tn-nav-option {
+        .tn-main-nav-option {
             list-style: none;
             @include tn-margin($tn-narrow-spacing);
         }
