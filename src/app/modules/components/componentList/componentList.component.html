@@ -4,10 +4,12 @@
     </section>
     <nav>
         <ul>
-            <li>
-                <span>Category</span>
+            <li *ngFor="let category of componentsList">
+                <span>{{ category.label }}</span>
                 <ul>
-                    <li>Component</li>
+                    <li *ngFor="let component of category.components">
+                        <span>{{ component.label }}</span>
+                    </li>
                 </ul>
             </li>
         </ul>
