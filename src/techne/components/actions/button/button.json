@@ -1,0 +1,18 @@
+{
+    "id": "button",
+    "label": "Button",
+    "sections": [
+        {
+            "id": "button-overview",
+            "type": "overview",
+            "title": "Button title",
+            "content": "Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue."
+        },
+        {
+            "id": "button-section2",
+            "type": "overview",
+            "title": "Button title",
+            "contentMD": true
+        }
+    ]
+}

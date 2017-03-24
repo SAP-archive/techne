@@ -9,5 +9,4 @@ import { ComponentListComponent } from './componentList'
   ]
 })
 export class ComponentsComponent {
-  pageTitle = 'Components';
 }

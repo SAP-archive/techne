@@ -5,15 +5,24 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class ComponentsService {
-    private componentsResource: string = '/techne/index.json';
+    private componentsResource: string = '/techne/';
 
     constructor(private http: Http) {}
 
-    get(): Observable<any> {
+    getComponentList(): Observable<any> {
         let components =
             this.http
-                .get(this.componentsResource)
+                .get(this.componentsResource + 'index.json')
                 .map( (res:Response) => res.json() );
         return components;
     }
+
+    getComponent(category, id: string): Observable<any> {
+        let component =
+            this.http
+                .get(this.componentsResource + 'components/' + category + '/' + id + '/' + id + '.json')
+                .map( (res:Response) => res.json() );
+        return component;
+    }
+
 }

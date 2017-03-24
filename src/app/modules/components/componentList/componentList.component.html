@@ -1,10 +1,10 @@
 <aside>
     <section>
-        Search
+        Search:
     </section>
     <nav>
         <ul>
-            <li *ngFor="let category of componentsList">
+            <li *ngFor="let category of componentList">
                 <span>{{ category.label }}</span>
                 <ul>
                     <li *ngFor="let component of category.components">

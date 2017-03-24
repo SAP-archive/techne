@@ -8,18 +8,20 @@ import { ComponentsService } from '../componentsService';
 })
 export class ComponentListComponent implements OnInit {
 
-    componentsList: any;
+    componentList: any;
 
-    constructor(private componentsService: ComponentsService) { }
+    constructor(
+        private componentsService: ComponentsService
+    ) { }
 
     ngOnInit() {
         this.loadComponentList()
     }
 
     loadComponentList() {
-        this.componentsService.get()
+        this.componentsService.getComponentList()
             .subscribe( 
-                cl => this.componentsList = cl,
+                cl => this.componentList = cl,
                 err => console.log(err)
             );
     }
