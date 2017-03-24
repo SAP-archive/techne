@@ -1,0 +1,46 @@
+{
+    "title": "Widget",
+    "type": "object",
+    "properties": {
+        "header": {
+            "type": "string",
+            "format": "text"
+        },
+        "description": {
+            "type": "string",
+            "format": "text"
+        },
+        "image": {
+            "type": "string",
+            "format": "uri"
+        },
+        "links": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 3,
+            "format": "tabs",
+            "items": {
+                "$ref": "#/definitions/link"
+            }
+        }        
+    },
+    "required": ["header","description"],
+    "definitions": {
+        "link": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "format": "text"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            }            
+        }
+    }
+}
+    
+    
+    
