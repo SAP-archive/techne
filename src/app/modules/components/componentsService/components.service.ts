@@ -25,4 +25,13 @@ export class ComponentsService {
         return component;
     }
 
+    getComponentSampleCode(category, id: string, codeFile: string): Observable<any> {
+        let component =
+            this.http
+                .get(this.componentsResource + 'components/' + category + '/' + id + '/' + codeFile)
+                .map( (res:Response) => res.text() );
+        return component;
+    }
+
+
 }

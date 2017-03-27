@@ -11,5 +11,5 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
 export class ComponentSectionComponent {
 
     @Input() section: any;
-
+    @Input() component: any;
 }

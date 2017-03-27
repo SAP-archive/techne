@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'tn-button',
-  templateUrl: './button.html',
+  template:'',
   styleUrls: ['./button.scss'],
   encapsulation: ViewEncapsulation.None
 })

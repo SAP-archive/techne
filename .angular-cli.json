@@ -1,59 +1,82 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "techne"
-  },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist/website",
-      "assets": [
-        { "glob": "**/*", "input": "./assets/",  "output": "./assets/" },
-        { "glob": "**/*.json", "input": "./techne/", "output": "./techne/" }
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
-      "tsconfig": "tsconfig.app.json",
-      "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
-      "styles": [
-        "techne/system/grid.scss",
-        "techne/system/spacing.scss",
-        "techne/system/typography.scss"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
-    }
-  ],
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
-  "lint": [
-    {
-      "project": "src/tsconfig.app.json"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "techne"
     },
-    {
-      "project": "src/tsconfig.spec.json"
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist/website",
+            "assets": [
+                {
+                    "glob": "**/*",
+                    "input": "./assets/",
+                    "output": "./assets/"
+                },
+                {
+                    "glob": "**/*.json",
+                    "input": "./techne/",
+                    "output": "./techne/"
+                },
+                {
+                    "glob": "**/*.html",
+                    "input": "./techne/",
+                    "output": "./techne/"
+                },
+                {
+                    "glob": "**/*.md",
+                    "input": "./techne/",
+                    "output": "./techne/"
+                }
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "test": "test.ts",
+            "tsconfig": "tsconfig.app.json",
+            "testTsconfig": "tsconfig.spec.json",
+            "prefix": "app",
+            "styles": [
+                "techne/system/grid.scss",
+                "techne/system/spacing.scss",
+                "techne/system/typography.scss"
+            ],
+            "stylePreprocessorOptions": {
+                "includePaths": [
+                    "techne"
+                ]
+            },
+            "scripts": [],
+            "environmentSource": "environments/environment.ts",
+            "environments": {
+                "dev": "environments/environment.ts",
+                "prod": "environments/environment.prod.ts"
+            }
+        }
+    ],
+    "e2e": {
+        "protractor": {
+            "config": "./protractor.conf.js"
+        }
     },
-    {
-      "project": "e2e/tsconfig.e2e.json"
+    "lint": [
+        {
+            "project": "src/tsconfig.app.json"
+        },
+        {
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
+        }
+    ],
+    "test": {
+        "karma": {
+            "config": "./karma.conf.js"
+        }
+    },
+    "defaults": {
+        "styleExt": "scss",
+        "component": {}
     }
-  ],
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
-  },
-  "defaults": {
-    "styleExt": "scss",
-    "component": {}
-  }
 }

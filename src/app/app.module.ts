@@ -11,7 +11,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { GuidesComponent } from './modules/guides/guides.component';
 import { 
     ComponentsComponent, ComponentsHomeComponent, ComponentListComponent, ComponentViewerComponent, ComponentsService, 
-    ComponentSectionComponent, ComponentSectionOverviewComponent } from './modules/components';
+    ComponentSectionComponent, ComponentSectionOverviewComponent, ComponentSectionSampleComponent } from './modules/components';
 
 import { Four0FourComponent } from './modules/four0four/four0four.component';
 
@@ -24,7 +24,7 @@ import { TechneModule } from '../techne/techne.module';
         HomeComponent,
         GuidesComponent,
         ComponentsComponent, ComponentsHomeComponent, ComponentListComponent, ComponentViewerComponent, 
-        ComponentSectionComponent, ComponentSectionOverviewComponent,
+        ComponentSectionComponent, ComponentSectionOverviewComponent, ComponentSectionSampleComponent,
 
         Four0FourComponent
     ],
