@@ -1,0 +1,34 @@
+body {
+  color: black; }
+
+div {
+  background-color: lightblue; }
+
+button {
+  padding: 20px 40px;
+  background-color: coral; }
+
+[class~="tn-"] {
+  outline: solid 2px rgba(255, 192, 203, 0.6); }
+
+body:before {
+  position: fixed;
+  z-index: 20000;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  content: 'default'; }
+  @media (min-width: 667px) {
+    body:before {
+      content: 'small'; } }
+  @media (min-width: 768px) {
+    body:before {
+      content: 'medium'; } }
+  @media (min-width: 1024px) {
+    body:before {
+      content: 'large'; } }
+  @media (min-width: 1248px) {
+    body:before {
+      content: 'xlarge'; } }

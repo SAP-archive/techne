@@ -1,0 +1,58 @@
+@import "styles";
+
+// DEBUG CSS
+
+[class~="tn-"] {
+	outline: solid 2px rgba(pink,0.6);
+}
+
+body:before {
+	position: fixed;
+	z-index: 20000;
+	background: rgba(black,0.2);
+	color: white;
+	bottom: 0;
+	right: 0;
+	padding: 5px;
+	content: 'default';
+	@include screen(s) {
+	  content: 'small';  
+	}
+	@include screen(m) {
+	  content: 'medium';  
+	}
+	@include screen(l) {
+	  content: 'large';  
+	}
+	@include screen(xl) {
+	  content: 'xlarge';  
+	}    
+}
+
+
+body {
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	&:before {
+	  pointer-events: none;
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  width: 100%;
+	  min-height: 100%;
+	  background-image:
+		repeating-linear-gradient(
+		  to bottom,
+		  transparent 0px,
+		  transparent $grid-unit - 1px,
+		  rgba(0,0,0,0.1) $grid-unit - 1px,
+		  rgba(0,0,0,0.1) $grid-unit
+		);
+	}
+}
+

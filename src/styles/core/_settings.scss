@@ -1,0 +1,27 @@
+//breakpoints
+$breakpoints: (
+  xs: 480px,
+  s: 667px,
+  m: 768px,
+  l: 1024px,
+  xl: 1248px,
+  xxl: 1440px
+) !default;
+
+$type: (
+  xs: 0.875rem (18/14),    //14/18
+  s: 1.125rem (24/18),     //18/24
+  reg: 1.5rem (30/24),     //24/30
+  m: 1.875rem (36/30),     //30/36
+  l: 2.8125rem (50/45),    //45/50
+  xl: 4.0625rem (60/65),   //65/60
+  xxl: 5.3125rem (80/85),  //85/80
+  xxxl: 6.25rem (95/100),  //100/95
+) !default;
+
+
+
+$color: darkgray !default;
+$color--primary: cyan !default;
+
+$background-color--app: white !default;

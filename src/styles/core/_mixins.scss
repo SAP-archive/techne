@@ -1,0 +1,40 @@
+@import "settings";
+
+@mixin clearfix() {
+  &:after {
+    content:'';
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin screen($size, $dimension: width) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-#{$dimension}: map-get($breakpoints, $size)) {
+        @content;
+    }
+  } @else {
+    @warn "Unknown `#{$size}` in $breakpoints map";
+  }
+}
+
+@mixin type($size: reg, $style: text) {
+  $list: map-get($type, reg);
+  @if map-has-key($type, $size) {
+    $list: map-get($type, $size);
+  } @else {
+    @warn "Unknown `#{$size}` in $type map";
+  }
+  font-size: nth($list, 1);
+  line-height: nth($list, 2);
+  @if $style != text {
+    @if map-has-key($fonts, $style) {
+      font-family: map-get($fonts, $style);
+    } @else {
+      @warn "Unknown `#{$style}` in $fonts map";
+    }
+  }
+  @if $style == header {
+    @include weight(light);
+  }
+}

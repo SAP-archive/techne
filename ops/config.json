@@ -9,6 +9,7 @@
     "css": {
       "src": "styles",
       "dest": "css",
+      "theme": "techne",
       "autoprefixer": {
         "browsers": ["last 3 versions"]
       },
@@ -18,7 +19,7 @@
           "./node_modules/normalize.css"
         ]
       },
-      "extensions": ["less"]
+      "extensions": ["scss"]
     },      
       
     "browserSync": {
