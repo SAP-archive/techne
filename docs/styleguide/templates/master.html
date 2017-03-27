@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+{% include "app_meta.html" %}    
+{% block css %}
+  <link rel="stylesheet" href="css/app.css">
+{% endblock %}     
+  </head>
+  <body id="app--{{ app.id }}">
+  <!--
+    ***********************************************
+    https://en.wikipedia.org/wiki/Techne
+         \
+          \
+           \\
+            \\
+             >\/7
+        _.-(6'  \
+        (=___._/` \
+             )  \ |
+            /   / |
+           /    > /
+          j    < _\
+      _.-' :      ``.
+      \ r=._\        `.
+     <`\\_  \         .`-.
+      \ r-7  `-. ._  ' .  `\
+       \`,      `-.`7  7)   )
+        \/         \|  \'  / `-._
+                   ||    .'
+                    \\  (
+                    >\  >
+                 ,.-' >.'
+                <.'_.''
+                  <'
+    Follow this project.
+	https://github.com/SAP/techne
+    ***********************************************
+  -->
+{% block header %}
+  {% include "app_header.html" %}  
+{% endblock %}  
+    <main class="app__main page--{{ page.id }}" role="main">
+      <article class="page__article">
+{% block content %}{% endblock %}     
+      </article>
+    </main>
+{% if env == "production" %}
+    <script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-15837205-2']); _gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+    </script>
+{% endif %} 
+  </body>
+</html>

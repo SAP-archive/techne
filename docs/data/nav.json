@@ -1,0 +1,34 @@
+{
+	"home": {
+		"title": "Techne",
+		"url": "index.html",
+		"id": "home"
+	},
+	"menu": [
+		{
+			"title": "Getting Started",
+			"url": "getting-started.html",
+			"id": "getting-started"
+		},
+		{
+		  "title": "Styles",
+		  "url": "styles.html",
+		  "id": "styles.html"
+		},
+		{
+		  "title": "Components",
+		  "url": "components.html",
+		  "id": "components.html"
+		},
+		{
+		  "title": "Guidelines",
+		  "url": "guidelines.html",
+		  "id": "guidelines"
+		},
+		{
+		  "title": "Tutorials",
+		  "url": "tutorials.html",
+		  "id": "tutorials"
+		}
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "name": "hy-ui",
-  "version": "1.0.0",
+  "name": "techne",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,13 @@
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-filenames": "^4.0.1",
     "gulp-less": "^3.3.0",
     "gulp-notify": "^3.0.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-nunjucks-html": "^2.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
     "path": "^0.12.7",

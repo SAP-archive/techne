@@ -1,7 +1,9 @@
 {
   "root": {
     "src": "./src",
-    "dest": "./dist"
+    "dest": "./dist",
+    "docs": "./docs",
+    "www": "./www"
   },
 
   "tasks": {

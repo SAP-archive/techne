@@ -26,12 +26,51 @@ Use case: Developer wants to use Techne as their baseline design system.
 Use case: 
 
 
+# Source
+
+
+
+
+
+# Output
+
+## Package
+
 ```
 /dist
 	/css
-		techne.css
-		techne.min.css
+		techne-all.css
+		techne-all.min.css
+		techne-core.css
+		techne-core.min.css
+		/core
+		techne-layout.css
+		techne-layout.min.css
+		/layout	
+		techne-components.css
+		techne-components.min.css
 		/components
-	/vXX
+	/v0.0.0
 		/...
+```
+
+
+## Documentation
+
+```
+/www
+	index.html
+	getting-started.html
+	components.html
+	guidelines.html
+	/img
+		...
+	/svg
+		...
+	/css
+		...
+	/js
+		...
+	...
+
 ```

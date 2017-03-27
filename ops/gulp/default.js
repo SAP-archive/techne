@@ -2,7 +2,7 @@ const gulp            = require('gulp')
 const gulpSequence    = require('gulp-sequence')
 
 const defaultTask = (cb) => {
-  gulpSequence('clean', 'css', cb)
+  gulpSequence('clean', 'css', 'docs', cb)
 }
 
 gulp.task('default', defaultTask)

@@ -32,3 +32,20 @@ body:before {
   @media (min-width: 1248px) {
     body:before {
       content: 'xlarge'; } }
+
+body {
+  position: absolute;
+  width: 100%;
+  min-height: 100%; }
+  body:before {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 19px, rgba(0, 0, 0, 0.1) 19px, rgba(0, 0, 0, 0.1) 20px); }
