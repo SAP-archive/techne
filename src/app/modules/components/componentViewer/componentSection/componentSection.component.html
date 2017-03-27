@@ -1,1 +1,4 @@
-<span>ComponentSection</span>
+<a [id]="section.id"></a>
+<div [ngSwitch]="section.type" class="tn-layout-content">
+    <component-section-overview [section]="section" *ngSwitchCase="'title-text'"></component-section-overview>
+</div>

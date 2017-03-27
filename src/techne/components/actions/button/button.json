@@ -4,7 +4,7 @@
     "sections": [
         {
             "id": "button-overview",
-            "type": "overview",
+            "type": "title-text",
             "title": "Button title",
             "content": "Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue."
         },

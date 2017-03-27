@@ -1,10 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { ComponentsService } from '../componentsService';
 
 @Component({
     selector: 'component-list',
-    templateUrl: './componentList.component.html'
+    templateUrl: './componentList.component.html',
+    styleUrls: [
+        '../../../../techne/components/navigation/sideNavigation/sideNavigation.scss'
+    ],
+    encapsulation: ViewEncapsulation.None
 })
 export class ComponentListComponent implements OnInit {
 
