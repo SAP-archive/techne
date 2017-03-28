@@ -17,6 +17,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-data": "^1.2.1",

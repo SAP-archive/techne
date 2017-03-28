@@ -1,8 +1,13 @@
 body {
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
   color: black; }
 
-div {
-  background-color: lightblue; }
+section {
+  background-color: lightblue;
+  margin-bottom: 50px;
+  padding: 10px; }
 
 button {
   padding: 20px 40px;

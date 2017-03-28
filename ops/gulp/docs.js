@@ -26,6 +26,10 @@ const docs = {
 const pkg = require('../../package.json');
 const app = require('../../docs/data/app.json');
 const nav = require('../../docs/data/nav.json');
+let page = {};
+
+let env = "development";
+let debugMode = false;
 
 
 // HELPERS
@@ -59,11 +63,12 @@ const getNavData = function(file) {
 };
 
 const getPageData = function(file) {
+
   try {
     var key = getPageKey(file);
-    var page = require(`${docs.src.data}/${key}.json`); 
- //   './' + docs.src.data + key + '.json'
+    var page = require(`../../docs/data/${key}.json`); 
     page.id = key;
+
     return { page: page };
   } catch(err) {
     console.log(err.message);
@@ -77,14 +82,11 @@ const getPageData = function(file) {
 
 
 const docsTask = () => {
-	console.log('gulp docs: starting');
+
 	
-//console.log(docs);
-//console.log(config);	
 	buildHtml();
 
 
-	console.log('gulp docs: complete');
 }
 
 
@@ -101,24 +103,14 @@ const buildHtml = () => {
 		.pipe(nunjucks({
 			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros],
 			locals: {
-				date: date
+				date: date,
+				env: env,
+				debug: debugMode
 			}
 		}))
 		.pipe(debug())
      	.pipe(gulp.dest(docs.dest.root))
-   
-    // 
 
-//   return gulp.src([docs.src.html, '!'+docs.src.includes+'*', '!'+docs.src.layouts+'*', '!'+docs.src.macros+'*'])
-//     .pipe(data(getAppData))
-//     .pipe(data(getPageData))
-//     .pipe(nunjucks({
-//       searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros],
-//       locals: {
-//         date: date
-//       }
-//     }))
-//     .pipe(gulp.dest(docs.dest.root))
 }
 
 

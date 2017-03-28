@@ -1,6 +1,6 @@
 {
+    "is_home": true,
     "title": "Home",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
-    "hero": "images/home-hero.png",
-    "is_home": true
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
+
 }

@@ -1,5 +1,8 @@
 @import "settings";
 
 body {
+	padding: 0;
+	margin: 0;
+	background-color: $background-color--app;
 	color: $color;
 }
