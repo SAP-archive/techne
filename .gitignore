@@ -1,20 +1,3 @@
-## BOWER COMPONENTS
-bower_components/
-
-## NODE MODULES
-node_modules/*
-
-## CONFIG FILES
-src/less/globals/_resource-paths.less
-
-## IDE Specfici folders
-.idea/
-.vscode/
-
-docs/kss/*.html
-docs/kss/patterns/*.html
-docs/kss/components/*.html
-
 # OS generated files #
 ######################
 .DS_Store
@@ -24,3 +7,13 @@ docs/kss/components/*.html
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+bower_components
+dist
+build
+www
+.tmp
+*.log
