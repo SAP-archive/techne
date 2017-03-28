@@ -37,9 +37,7 @@
             "testTsconfig": "tsconfig.spec.json",
             "prefix": "app",
             "styles": [
-                "techne/system/grid.scss",
-                "techne/system/spacing.scss",
-                "techne/system/typography.scss"
+                "techne/techne.scss"
             ],
             "stylePreprocessorOptions": {
                 "includePaths": [

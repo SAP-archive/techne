@@ -1,13 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { ComponentListComponent } from './componentList'
 
 @Component({
   selector: 'components',
-  templateUrl: './components.component.html',
-  styleUrls:[
-    '../../../techne/components/layouts/listContent/listContent.scss'
-  ],
-  encapsulation: ViewEncapsulation.None
+  templateUrl: './components.component.html'
 })
 export class ComponentsComponent {
 }

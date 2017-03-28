@@ -32,7 +32,7 @@ function build(callback: any) {
     runSequence(
         'clean', 
         'buildComponents', 
-        'concatComponents',
+        //'concatComponents',
         'addBanner'
     );
     callback();

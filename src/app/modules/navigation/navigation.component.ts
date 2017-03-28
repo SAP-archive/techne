@@ -1,13 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: [
-        '../../../techne/components/navigation/mainNavigation/mainNavigation.scss'
-    ],
-    encapsulation: ViewEncapsulation.None
+    templateUrl: './navigation.component.html'
 })
 export class NavigationComponent {
     mainOptions = [

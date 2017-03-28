@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
@@ -9,8 +9,7 @@ import { ComponentsService } from '../componentsService';
     templateUrl: './componentViewer.component.html',
     styles: [
         'component-viewer { width: 100% }'
-    ],
-    encapsulation: ViewEncapsulation.None
+    ]
 })
 export class ComponentViewerComponent implements OnInit {
 

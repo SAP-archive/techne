@@ -23,5 +23,8 @@ export const TechneCssComponentPaths = [
 ]
 
 export const SassConfig = {
-    outputStyle: 'compressed'
+    outputStyle: 'compressed',
+    includePaths: [
+        './src/techne'
+    ]
 }
