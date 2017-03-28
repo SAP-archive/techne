@@ -23,6 +23,8 @@ export class ComponentSectionSampleComponent {
     code: string;
     codeSample: any;
 
+    contentMDPath: any = null;
+
     constructor(
         private route: ActivatedRoute,
         private sanitizer: DomSanitizer,
@@ -34,6 +36,7 @@ export class ComponentSectionSampleComponent {
         this.componentId = this.route.snapshot.params['id'];
 
         this.loadComponentSampleCode()
+        this.instrumentSection();
     }
 
     loadComponentSampleCode() {
@@ -42,6 +45,10 @@ export class ComponentSectionSampleComponent {
             code => this.codeSample = this.sanitizer.bypassSecurityTrustHtml(this.code = code),
             err => console.log(err)
             );
+    }
+
+    instrumentSection() {
+        this.contentMDPath = '/techne/components/' + this.category + '/' + this.componentId + '/' + this.section.contentMD;
     }
 
 }

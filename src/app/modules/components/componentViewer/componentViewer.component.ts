@@ -6,10 +6,7 @@ import { ComponentsService } from '../componentsService';
 
 @Component({
     selector: 'component-viewer',
-    templateUrl: './componentViewer.component.html',
-    styles: [
-        'component-viewer { width: 100% }'
-    ]
+    templateUrl: './componentViewer.component.html'
 })
 export class ComponentViewerComponent implements OnInit {
 

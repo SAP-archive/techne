@@ -15,6 +15,8 @@ import {
 
 import { Four0FourComponent } from './modules/four0four/four0four.component';
 
+import { MarkdownModule } from 'angular2-markdown';
+
 import { TechneModule } from '../techne/techne.module';
 
 @NgModule({
@@ -34,6 +36,8 @@ import { TechneModule } from '../techne/techne.module';
         HttpModule,
 
         AppRoutingModule,
+
+        MarkdownModule.forRoot(),
 
         TechneModule
     ],

@@ -1,5 +1,10 @@
 <div class="tn-section-title"><h2>{{ section.title }}</h2></div>
-<div class="tn-section-text"><p>{{ section.content }}</p></div>
+<div class="tn-section-text">
+    <div *ngIf="section.contentMD" Markdown [path]="contentMDPath"></div>
+    <div *ngIf="section.content" >
+        {{ section.content }}
+    </div>
+</div>
 <div class="tn-section-sample">
     <p>Sample</p>
     <div [innerHTML]="codeSample">
