@@ -1,4 +1,6 @@
+@import "../theme";
+
 button {
 	padding: 20px 40px;
-	background-color: coral;
+	background-color: $color--primary;
 }

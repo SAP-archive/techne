@@ -27,6 +27,7 @@ const pkg = require('../../package.json');
 const app = require('../../docs/data/app.json');
 const nav = require('../../docs/data/nav.json');
 let page = {};
+let components = {};
 
 let env = "development";
 let debugMode = false;
@@ -63,12 +64,10 @@ const getNavData = function(file) {
 };
 
 const getPageData = function(file) {
-
   try {
     var key = getPageKey(file);
     var page = require(`../../docs/data/${key}.json`); 
     page.id = key;
-
     return { page: page };
   } catch(err) {
     console.log(err.message);
@@ -76,6 +75,23 @@ const getPageData = function(file) {
   return { page: {} };
 };
 
+
+const getComponentData = function(file) {
+	var _components = ["button"];
+  try {
+
+	for (i = 0; i < _components.length; i++) {
+		var key = _components[i];
+		var _component = require(`../../src/data/${key}.json`); 
+		components[key] = _component;
+	}
+    //console.log(components);
+    return { components: components };
+  } catch(err) {
+    console.log(err.message);
+  }
+  return { components: {} };
+};
 
 
 // TASKS
@@ -100,8 +116,9 @@ const buildHtml = () => {
 		.pipe(data(getAppData))
 		.pipe(data(getPageData))
 		.pipe(data(getNavData))
+		.pipe(data(getComponentData))
 		.pipe(nunjucks({
-			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros],
+			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros, './src/templates/'],
 			locals: {
 				date: date,
 				env: env,

@@ -26,7 +26,7 @@ const cssTask = () => {
 
 
 const cssSass = () => {
-  return gulp.src([paths.src].concat(paths.ignore))
+  return gulp.src([paths.src,...paths.ignore])
   	.pipe(debug())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(paths.dest))

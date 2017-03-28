@@ -12,4 +12,23 @@
 </section>
 
 
+
+
+	{% for item in page.components %}
+<section class="page__section">
+		<h2>{{ item }}</h2>
+		<div>
+			
+			{% include item + ".html" %}
+			
+		</div>	
+</section>
+	{% endfor %}
+
+
+
+
+
+
+
 {% endblock %}

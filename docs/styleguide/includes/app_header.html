@@ -1,7 +1,10 @@
     <header class="app__header">
       {% set home = nav.home %}
       <a href="{{ home.url }}" aria-label="{{ home.title }}" class="app__logo {{ app.id }}--" aria-selected="{{ page.is_home }}">
+      	{{ home.title }}
+        <!--
         <img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x" alt="{{ home.title }}">
+        -->
       </a>
       <nav class="app__nav primary-nav">
         <ul id="main-nav" class="navlist" role="navigation">

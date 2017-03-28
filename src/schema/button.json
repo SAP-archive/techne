@@ -1,0 +1,14 @@
+{
+ "type": "object",
+ "properties": {
+   "label": {
+     "type": "string",
+     "format": "text"
+   },
+   "action": {
+     "type": "string",
+     "format": "text"
+   }
+ },
+ "required": ["label"]
+}

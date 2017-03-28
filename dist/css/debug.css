@@ -11,7 +11,7 @@ section {
 
 button {
   padding: 20px 40px;
-  background-color: coral; }
+  background-color: blue; }
 
 [class~="tn-"] {
   outline: solid 2px rgba(255, 192, 203, 0.6); }
