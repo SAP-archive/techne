@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/platform-server": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "angular2-markdown": "^1.5.1",
     "core-js": "^2.4.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
