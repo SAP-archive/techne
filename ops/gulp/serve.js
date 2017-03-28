@@ -6,18 +6,9 @@ const handleErrors = require('./lib/handleErrors');
 const debug = require('gulp-debug');
 const browserSync = require('browser-sync').create();
 
-var server;
-
-//DATA
-
-
-// HELPERS
-
-
-// TASKS
 const serveTask = () => {
-
-
+	
+	//init server
     browserSync.init({
         server: {
             baseDir: [ config.tasks.browserSync.server.baseDir, config.root.dest ],
@@ -26,11 +17,12 @@ const serveTask = () => {
 			reloadDelay: 100
         }
     });
-  
+    
+   	//reload watch
+	browserSync.watch(`${config.tasks.browserSync.server.baseDir}/**/*.html`).on("change", browserSync.reload);
+	browserSync.watch(`${config.root.dest}/${config.tasks.css.dest}/**/*.css`).on("change", browserSync.reload);
 
 }
-
-
 
 
 gulp.task('serve', serveTask);

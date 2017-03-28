@@ -7,7 +7,6 @@
   },
 
   "tasks": {
-      
     "css": {
       "src": "styles",
       "dest": "css",
