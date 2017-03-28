@@ -13,5 +13,6 @@
 
     .tn-layout-content {
         @include tn-padding($tn-narrow-spacing); 
+        width: 100%;
     }
 }
