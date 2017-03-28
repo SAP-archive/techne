@@ -1,0 +1,20 @@
+@import 'system/grid';
+
+// Display a section with a title and an overview
+
+.tn-section-title-text {
+
+    display: block;
+    width: 100%;
+
+    .tn-section-title {
+        display: inline-block;
+        width: 49%;
+    }
+
+    .tn-section-text {
+        display: inline-block;
+        width: 50%;
+    }
+
+}

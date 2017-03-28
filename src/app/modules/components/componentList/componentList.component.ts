@@ -4,22 +4,24 @@ import { ComponentsService } from '../componentsService';
 
 @Component({
     selector: 'component-list',
-    templateUrl: './componentList.component.html'
+    templateUrl: './componentList.component.html',
 })
 export class ComponentListComponent implements OnInit {
 
-    componentsList: any;
+    componentList: any;
 
-    constructor(private componentsService: ComponentsService) { }
+    constructor(
+        private componentsService: ComponentsService
+    ) { }
 
     ngOnInit() {
         this.loadComponentList()
     }
 
     loadComponentList() {
-        this.componentsService.get()
+        this.componentsService.getComponentList()
             .subscribe( 
-                cl => this.componentsList = cl,
+                cl => this.componentList = cl,
                 err => console.log(err)
             );
     }

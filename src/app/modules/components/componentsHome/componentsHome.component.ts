@@ -1,7 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+
 @Component({
-  selector: 'tn-button', template:'',
-  styleUrls: ['./button.scss'],
+  selector: 'components',
+  templateUrl: './componentsHome.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class ButtonComponent { }
+export class ComponentsHomeComponent {
+}

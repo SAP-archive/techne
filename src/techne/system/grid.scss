@@ -1,0 +1,21 @@
+// some grid
+
+@mixin tn-grid-columns($columns...) {
+    display: grid;
+    grid-template-columns: $columns;
+}
+
+@mixin tn-grid-rows($row...) {
+    display: grid;
+    grid-template-rows: $rows;
+}
+
+@mixin tn-grid-item-columns($columStart, $columnEnd) {
+    grid-column-start: $columStart;
+    grid-column-end: $columnEnd;
+}
+
+@mixin tn-grid-item-rows($rowStart, $rowEnd) {
+    grid-row-start: $rowStart;
+    grid-column-end: $rowEnd;
+}

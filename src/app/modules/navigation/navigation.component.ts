@@ -3,10 +3,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: [
-        '../../../techne/components/navigation/mainNavigation/mainNavigation.scss'
-    ]
+    templateUrl: './navigation.component.html'
 })
 export class NavigationComponent {
     mainOptions = [

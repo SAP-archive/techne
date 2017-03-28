@@ -1,4 +1,4 @@
-@import '../../../system/spacing';
+@import 'system/spacing';
 
 
 // List + Content Navigation layout
@@ -13,5 +13,6 @@
 
     .tn-layout-content {
         @include tn-padding($tn-narrow-spacing); 
+        width: 100%;
     }
 }

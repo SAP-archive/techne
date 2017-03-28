@@ -1,0 +1,13 @@
+<div class="tn-section-title"><h2>{{ section.title }}</h2></div>
+<div class="tn-section-text"><p>{{ section.content }}</p></div>
+<div class="tn-section-sample">
+    <p>Sample</p>
+    <div [innerHTML]="codeSample">
+    </div>
+</div>
+<div class="tn-section-code">
+    <p>Code</p>
+    <pre> 
+        <code [innerHTML]="code"></code>
+    </pre>
+</div>

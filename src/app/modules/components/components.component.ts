@@ -3,11 +3,7 @@ import { ComponentListComponent } from './componentList'
 
 @Component({
   selector: 'components',
-  templateUrl: './components.component.html',
-  styleUrls:[
-    '../../../techne/components/layouts/listContent/listContent.scss'
-  ]
+  templateUrl: './components.component.html'
 })
 export class ComponentsComponent {
-  pageTitle = 'Components';
 }
