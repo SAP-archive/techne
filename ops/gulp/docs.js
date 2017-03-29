@@ -7,6 +7,10 @@ const nunjucks = require('gulp-nunjucks-html');
 const data = require('gulp-data');
 const handleErrors = require('./lib/handleErrors');
 const debug = require('gulp-debug');
+const yargs = require('yargs');
+
+let environment = require('./lib/environment')
+let debugMode = yargs.argv.debug;
 
 //DATA
 const docs = {
@@ -28,9 +32,6 @@ const app = require('../../docs/data/app.json');
 const nav = require('../../docs/data/nav.json');
 let page = {};
 let components = {};
-
-let env = "development";
-let debugMode = false;
 
 
 // HELPERS
@@ -121,7 +122,7 @@ const buildHtml = () => {
 			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros, './src/templates/'],
 			locals: {
 				date: date,
-				env: env,
+				env: environment.production ? 'production':'development',
 				debug: debugMode
 			}
 		}))

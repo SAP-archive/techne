@@ -1,5 +1,5 @@
-
 {
+  "id": "button",
 	"label": "BUTTON_LABEL",
 	"action": "BUTTON_ACTION"
 }
