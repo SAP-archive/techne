@@ -1,3 +1,5 @@
+@import "functions";
+
 //breakpoints
 $breakpoints: (
   xs: 480px,
@@ -6,6 +8,20 @@ $breakpoints: (
   l: 1024px,
   xl: 1248px,
   xxl: 1440px
+) !default;
+
+//spacing
+$spacing--base: 6px;
+
+$spacing: (
+  base: $spacing--base,   //6
+  xs: $spacing--base*2,   //12
+  s: $spacing--base*4,    //24
+  reg: $spacing--base*6,  //36
+  m: $spacing--base*8,    //48
+  l: $spacing--base*10,   //60
+  xl: $spacing--base*12,  //72
+  xxl: $spacing--base*14  //84
 ) !default;
 
 $type: (
@@ -19,9 +35,47 @@ $type: (
   xxxl: 6.25rem (95/100),  //100/95
 ) !default;
 
+$fonts: (
+  body: #{"'Helvetica Neue'", sans-serif},
+  header: #{"Times New Roman", sans-serif},
+  code: #{"Courier", sans-serif},
+) !default;
 
+//colors
+$colors: (
+    lightest: snow,
+    light: gainsboro,
+    dark: dimgray,
+    darkest: midnightblue,
+	action: fuchsia,
+	link: deepskyblue,
+    success: lawngreen,
+    warning: darkorange,
+    error: red,
+) !default;
 
-$color: darkgray !default;
-$color--primary: cyan !default;
+//baseline
+$color: color(darkest) !default;
+$background-color: color(lightest) !default;
 
-$background-color--app: white !default;
+//positioning
+$margin-bottom: map-get($spacing, reg) !default;
+
+//type
+$font-family: map-get($fonts,body) !default;
+$font-family--header: map-get($fonts,header) !default;
+$font-family--code: map-get($fonts,code) !default;
+$font-size: nth(map-get($type,s), 1) !default;
+$line-height: nth(map-get($type,s), 2) !default;
+
+//interactive
+$color--link: color(link) !default;
+$color--link-hover: color(link) !default;
+$color--button: color(dark) !default;
+$background-color--button: color(action) !default;
+
+//states
+$color--error: color(error) !default;
+$color--warning: color(warning) !default;
+$color--success: color(success) !default;
+

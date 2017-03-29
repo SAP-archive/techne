@@ -1,4 +1,32 @@
-$color: black;
-$color--primary: blue;
+@import "../core/settings";
+@import "../core/functions";
 
-$background-color--app: lightgray;
+//colors
+$colors: (
+    lightest: #ffffff,
+    light: #e0e9f0,
+    dark: #b7c1cd,
+    darkest: #313440,
+	action: #fcdf2b,
+	link: #0486e0,
+    success: #04ce26,
+    warning: #fbbb21,
+    error: #ff3b30,
+) !global;
+
+
+//baseline
+$color: color(darkest) !global;
+$background-color: color(lightest) !global;
+
+//interactive
+$color--link: color(link) !global;
+$color--link-hover: color(link) !global;
+$color--button: color(dark) !global;
+$background-color--button: color(action) !global;
+
+//states
+$color--error: color(error) !global;
+$color--warning: color(warning) !global;
+$color--success: color(success) !global;
+

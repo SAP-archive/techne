@@ -1,0 +1,13 @@
+@function color($key: reg) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @warn "Unknown `#{$key}` in $colors map";
+    @return black;
+  }
+}
+
+@function ns($str) {
+	$ns: tn-;
+    @return $ns + $str;
+}

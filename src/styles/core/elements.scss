@@ -1,8 +1,167 @@
 @import "settings";
 
+/*
+Required variables:
+	$background-color
+	$color
+
+*/
+
+$elements__headers: h1, h2, h3, h4, h5, h6;
+$elements__blocks: p, ul, ol, li, blockquote, table, figure;
+$elements__interactive: a, audio\[controls\], button, details, embed, iframe, img\[usemap\], input, keygen, label, object\[usemap\], select, textarea, video\[controls\];
+$elements__inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
+$elements__inputs--check: "input[type=radio]", "input[type=checkbox]";
+
+
+/**
+* @section Root Element
+* Default styles for root elements
+*/
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
-	padding: 0;
-	margin: 0;
-	background-color: $background-color--app;
-	color: $color;
+  margin: 0;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+/**
+* @section Header Elements
+* Default styles for header elements
+*/
+#{$elements__headers} {
+  text-rendering: optimizeLegibility;
+  margin-bottom: $margin-bottom;
+  margin-top: 0;
+}
+
+/**
+* @section Block Elements
+* Default styles for block elements
+*/
+#{$elements__blocks} {
+  margin-top: 0;
+  margin-bottom: $margin-bottom;
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+
+/**
+* @section List Elements
+* Default styles for lists
+*/
+ul, ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+/**
+* @section Phrases Elements
+* Default styles for phrase elements
+*/
+img {
+  line-height: 0;
+}
+
+a {
+  color: $color--link;
+  text-decoration: none;
+  &:hover {
+    color: $color--link-hover;
+  }
+  &:active, &:focus {
+    color: $color--link-hover;
+    outline: none;
+  }
+}
+
+/**
+* @section Table Elements
+* Default styles for table elements
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  vertical-align: top;
+}
+th {
+  text-align: left;
+}
+
+
+/**
+* @section Interactive Elements
+* Default styles for interactive elements
+*/
+
+
+/**
+* @section Button Elements
+* Default styles for button elements
+*/
+button::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+%button-reset {
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 0;
+}
+button {
+  @extend %button-reset;
+}
+
+/**
+* @section Form Elements
+* Default styles for form elements
+*/
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+legend {
+
+}
+label {
+
+}
+
+
+
+@-moz-document url-prefix() {
+  // Firefox
+  select {
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // IE10+ specific styles go here
+  select {
+    padding-right: 0;
+  }
 }

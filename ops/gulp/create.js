@@ -3,7 +3,6 @@ const del    = require('del')
 const path   = require('path')
 const config = require('../config')
 const yargs = require('yargs');
-const touch = require('touch');
 
 const fs = require('fs');
 

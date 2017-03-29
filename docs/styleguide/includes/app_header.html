@@ -6,16 +6,21 @@
         <img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x" alt="{{ home.title }}">
         -->
       </a>
-      <nav class="app__nav primary-nav">
-        <ul id="main-nav" class="navlist" role="navigation">
+      <nav class="app__nav tn-primary-nav">
+
+      
+        <ul id="main-nav" class="tn-primary-nav__list" role="navigation">
           {% set menu = nav.menu %}
           {% for item in menu %}
-          <li class="item__">
-            <a class="link__ {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+          <li class="tn-primary-nav__item">
+            <a class="tn-primary-nav__link {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
               {{ item.title }}
             </a>
           </li>
           {% endfor %}
         </ul>
+        
+        
+        
       </nav>
     </header>

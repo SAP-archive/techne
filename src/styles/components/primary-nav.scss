@@ -1,0 +1,13 @@
+@import "../core/functions";
+@import "../layout/mixins";
+
+$block: ns(primary-nav);
+%base {
+	@include navlist;
+}
+
+.#{$block}, [class*="#{&$block}"] {
+	@extend %base;
+}
+
+
