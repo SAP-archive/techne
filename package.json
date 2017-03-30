@@ -24,6 +24,7 @@
     "gulp-debug": "^3.1.0",
     "gulp-filenames": "^4.0.1",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
     "gulp-less": "^3.3.0",
     "gulp-notify": "^3.0.0",
     "gulp-nunjucks": "^3.0.0",

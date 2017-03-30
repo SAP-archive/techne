@@ -1,32 +1,49 @@
-@import "../core/settings";
+
 @import "../core/functions";
 
 //colors
 $colors: (
-    lightest: #ffffff,
-    light: #e0e9f0,
-    dark: #b7c1cd,
-    darkest: #313440,
-	action: #fcdf2b,
-	link: #0486e0,
-    success: #04ce26,
-    warning: #fbbb21,
-    error: #ff3b30,
-) !global;
+    lightest: #eef1f3,
+    light: #d7d7d7,
+    dark: #7f90a4,
+    darkest: #21262c,
+	action: #fbc100,
+	link: #006fbb,
+	accent: #009cdf,
+    success: #61bf33,
+    warning: #e96b1a,
+    error: #df1919,
+);
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
+
+$fonts: (
+  body: #{"'Open Sans'", sans-serif},
+  header: #{"Dosis", sans-serif},
+  code: #{"Courier", sans-serif},
+);
 
 
 //baseline
-$color: color(darkest) !global;
-$background-color: color(lightest) !global;
+$color: color(darkest);
+$background-color: color(lightest);
+
 
 //interactive
-$color--link: color(link) !global;
-$color--link-hover: color(link) !global;
-$color--button: color(dark) !global;
-$background-color--button: color(action) !global;
+$color--link: color(link);
+$color--link-hover: color(link);
+$color--button: color(dark);
+$background-color--button: color(action);
 
 //states
-$color--error: color(error) !global;
-$color--warning: color(warning) !global;
-$color--success: color(success) !global;
+$color--error: color(error);
+$color--warning: color(warning);
+$color--success: color(success);
 
+
+
+
+
+//this must come here to grab variables not defined in the theme
+@import "../core/settings";

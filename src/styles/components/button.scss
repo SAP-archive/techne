@@ -1,7 +1,7 @@
 @import "../theme";
 
-button {
+.button {
+	display: inline-block;
 	padding: 20px 40px;
 	background-color: $background-color--button;
-	width: 100%;
 }

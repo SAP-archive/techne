@@ -1,26 +1,31 @@
-    <header class="app__header">
-      {% set home = nav.home %}
-      <a href="{{ home.url }}" aria-label="{{ home.title }}" class="app__logo {{ app.id }}--" aria-selected="{{ page.is_home }}">
-      	{{ home.title }}
-        <!--
-        <img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x" alt="{{ home.title }}">
-        -->
-      </a>
-      <nav class="app__nav tn-primary-nav">
+	<header class="app__header" role="banner">
+	
+	<div class="tn-primary-nav">
 
-      
+		<button class="tn-primary-nav__directory" role="navigation">
+			<img src="svg/nav-icon-group.svg" height="20" alt="">{{ home.title }}
+		</button>
+ 
+      {% set home = nav.home %}
+      <a href="{{ home.url }}" aria-label="{{ home.title }}" class="tn-primary-nav__index {{ app.id }}--" aria-selected="{{ page.is_home }}">
+        <img src="svg/techne-logo.svg" height="30" alt="">{{ home.title }}
+      </a>
+     
         <ul id="main-nav" class="tn-primary-nav__list" role="navigation">
           {% set menu = nav.menu %}
           {% for item in menu %}
-          <li class="tn-primary-nav__item">
-            <a class="tn-primary-nav__link {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+          <li class="tn-primary-nav__listitem">
+            <a class="tn-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}" {% if loop.index == 2 %} aria-haspopup="true" {% endif %}>
               {{ item.title }}
             </a>
           </li>
           {% endfor %}
         </ul>
-        
-        
-        
-      </nav>
+
+
+
+	
+	</div>
+	
+
     </header>

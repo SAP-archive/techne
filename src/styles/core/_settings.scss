@@ -49,10 +49,19 @@ $colors: (
     darkest: midnightblue,
 	action: fuchsia,
 	link: deepskyblue,
+	accent: lightblue,
     success: lawngreen,
     warning: darkorange,
     error: red,
 ) !default;
+
+
+//type
+$font-family: map-get($fonts,body) !default;
+$font-family--header: map-get($fonts,header) !default;
+$font-family--code: map-get($fonts,code) !default;
+$font-size: nth(map-get($type,s), 1) !default;
+$line-height: nth(map-get($type,s), 2) !default;
 
 //baseline
 $color: color(darkest) !default;
@@ -61,12 +70,6 @@ $background-color: color(lightest) !default;
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;
 
-//type
-$font-family: map-get($fonts,body) !default;
-$font-family--header: map-get($fonts,header) !default;
-$font-family--code: map-get($fonts,code) !default;
-$font-size: nth(map-get($type,s), 1) !default;
-$line-height: nth(map-get($type,s), 2) !default;
 
 //interactive
 $color--link: color(link) !default;
@@ -78,4 +81,6 @@ $background-color--button: color(action) !default;
 $color--error: color(error) !default;
 $color--warning: color(warning) !default;
 $color--success: color(success) !default;
+
+
 

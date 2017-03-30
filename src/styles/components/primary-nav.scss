@@ -1,13 +1,71 @@
+@import "../core/mixins";
 @import "../core/functions";
 @import "../layout/mixins";
 
 $block: ns(primary-nav);
+
+
+/*
+	.primary-nav
+		.primary-nav__directory
+		.primary-nav__home
+		.primary-nav__list
+			.primary-nav__listitem
+			.primary-nav__listlink
+
+*/
+
 %base {
 	@include navlist;
+	background-color: color(accent);
+	color: color(lightest);
+	padding: 10px 30px;
 }
 
-.#{$block}, [class*="#{&$block}"] {
+//testing this - the idea is that you won't have to duplicate classes when applying a modifier
+[class*="#{&$block}--"] {
 	@extend %base;
+}
+
+.#{$block} {
+	@extend %base;
+	&__directory {
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 0 20px 0 0;
+	}
+	&__index {
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 0 20px;	
+		vertical-align: top;
+	}
+	&__list {
+		display: inline-block;
+		margin-bottom: 0;
+		[aria-selected=true] {
+			font-weight: bold;
+		}
+	}
+	&__listitem {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	&__listlink {
+		display: block;
+		padding: 0 20px;
+		&[aria-haspopup] {
+			&::after {
+				content: '';
+				@include triangle(10px, color(light), down);
+				position: relative;
+				top: 15px;
+			}
+			
+		}
+	}	
+
+	
 }
 
 
