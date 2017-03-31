@@ -42,6 +42,7 @@
 {% endblock %}  
     <main class="app__main page--{{ page.id }}" role="main">
       <article class="page__article">
+{% block nav %}{% endblock %}    
 {% block content %}{% endblock %}     
       </article>
     </main>

@@ -49,12 +49,11 @@ $colors: (
     darkest: midnightblue,
 	action: fuchsia,
 	link: deepskyblue,
-	accent: lightblue,
+	accent: skyblue,
     success: lawngreen,
     warning: darkorange,
     error: red,
 ) !default;
-
 
 //type
 $font-family: map-get($fonts,body) !default;

@@ -56,9 +56,7 @@ exports.getDocsPageData = (file) => {
 
 exports.getSrcComponentData = function(file) {
   try {
-		var key = getPageKey(file);
-		console.log(key)
-		
+	var key = getPageKey(file);
     return { components: {} };
   } catch(err) {
     console.log(err.message);

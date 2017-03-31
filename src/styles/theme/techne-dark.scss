@@ -1,4 +1,48 @@
-$color: white;
-$color--primary: orange;
+@import "../core/functions";
 
-$background-color--app: midnightblue;
+//colors
+$colors: (
+    lightest: white,
+    light: lightgray,
+    dark: darkgray,
+    darkest: black,
+	action: yellow,
+	link: blue,
+	accent: #009cdf,
+    success: #61bf33,
+    warning: #e96b1a,
+    error: #df1919,
+);
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
+
+$fonts: (
+  body: #{"'Open Sans'", sans-serif},
+  header: #{"Dosis", sans-serif},
+  code: #{"Courier", sans-serif},
+);
+
+
+//baseline
+$color: color(lightest);
+$background-color: color(darkest);
+
+
+//interactive
+$color--link: color(link);
+$color--link-hover: color(link);
+$color--button: color(dark);
+$background-color--button: color(action);
+
+//states
+$color--error: color(error);
+$color--warning: color(warning);
+$color--success: color(success);
+
+
+
+
+
+//this must come here to grab variables not defined in the theme
+@import "../core/settings";

@@ -1,0 +1,29 @@
+
+<nav class="tn-secondary-nav" style="float: left;">
+
+	{% set home = nav.home %}
+	<ul id="main-nav" class="tn-secondary-nav__list" role="navigation">
+	
+	{% set menu = page.menu %}
+	{% for item in menu %}
+		<li class="tn-secondary-nav__listitem">
+			<h2>
+				<a class="tn-secondary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+					{{ item.title }}
+				</a>
+			</h2>
+		{% set childitems = item.items %}
+			<ul>
+			{% for item in childitems %}
+				<li>
+<a href="{{ item.url }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+	</li>
+	
+	
+	{% endfor %}
+	</ul>
+
+</nav>
