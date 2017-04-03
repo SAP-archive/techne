@@ -1,13 +1,19 @@
 const gulp = require('gulp')
-const foo = require('./foo')
 
-const task = (cb) => {
-    foo.log('ghjgjhghgfhg');
-    console.log('0000');
+let environment = require('./lib/environment')
+
+const init = (cb) => {
+	console.log('hi');
 
 }
 
 
+const task = (cb) => {
+	
+	init();
+
+	
+}
 
 gulp.task('test', task)
 module.exports = task

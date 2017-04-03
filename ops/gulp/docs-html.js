@@ -54,6 +54,9 @@ const getComponentData = function(file) {
 // build static HTML files
 const buildDocs = () => {
 
+	
+
+
 
 	return gulp.src([`${docs.src.html}/**/*.html`, `!${docs.src.layouts}/**/*`, `!${docs.src.includes}/**/*`, `!${docs.src.macros}/**/*` ])
 		.pipe(data(util.getDocsAppData))
@@ -78,5 +81,5 @@ const buildDocs = () => {
 
 
 
-gulp.task('docs', buildDocs);
+gulp.task('docs-html', buildDocs);
 module.exports = buildDocs;

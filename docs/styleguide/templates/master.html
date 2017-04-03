@@ -2,8 +2,13 @@
 <html lang="en-us">
   <head>
 {% include "app_meta.html" %}    
+	{% if env == "development" %}
+	  <link rel="stylesheet" href="css/techne-all.css">
+	{% else %}
+	  <link rel="stylesheet" href="/public/css/techne-all.css">
+	{% endif %}
 {% block css %}
-  <link rel="stylesheet" href="css/techne-all.css">
+
 {% endblock %}     
   </head>
   <body id="app--{{ app.id }}">

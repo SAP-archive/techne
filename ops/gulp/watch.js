@@ -8,7 +8,7 @@ const handleErrors = require('./lib/handleErrors');
 const watchTask = () => {
 
 	//watch docs templates and component templates
-	gulp.watch([`${config.root.docs}/**/*.html`,`${config.root.src}/**/*.html`], ['docs']);
+	gulp.watch([`${config.root.docs}/**/*.html`,`${config.root.src}/**/*.html`], ['docs-html']);
 
 	//watch component styles
 	gulp.watch(`${config.root.src}/**/*.scss`, ['css']);
