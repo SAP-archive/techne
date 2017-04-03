@@ -13,7 +13,7 @@ const serveTask = () => {
         server: {
             baseDir: [ config.tasks.browserSync.server.baseDir, config.root.dest ],
             open: true,
-		    index: "components.html",
+		    index: "index.html",
 			reloadOnRestart: true,
 			reloadDelay: 100
         }
