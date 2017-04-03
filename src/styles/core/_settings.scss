@@ -69,6 +69,9 @@ $background-color: color(lightest) !default;
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;
 
+//layout
+$width--gutter: 20px;
+
 
 //interactive
 $color--link: color(link) !default;
