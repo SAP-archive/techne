@@ -9,9 +9,12 @@ const debug = require('gulp-debug');
 const rename = require("gulp-rename");
 const gulpif = require('gulp-if');
 
+let environment = require('./lib/environment')
+
 //DATA
+//src: `${config.root.src}/${config.tasks.css.src}/**/*.${config.tasks.css.extensions}`,
 const paths = {
-	src: `${config.root.src}/${config.tasks.css.src}/**/*.${config.tasks.css.extensions}`,
+	src: `${config.root.src}/${config.tasks.css.src}/*.${config.tasks.css.extensions}`,
 	ignore: [
 		`!${config.root.src}/${config.tasks.css.src}/**/_*.${config.tasks.css.extensions}`,
 		`!${config.root.src}/${config.tasks.css.src}/theme/**/*`,
@@ -22,6 +25,7 @@ const paths = {
 
 const cssTask = () => {
 	cssSass();	
+
 
 }
 

@@ -12,7 +12,7 @@ Thumbs.db
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 bower_components
-dist
+#dist
 build
 www
 .tmp

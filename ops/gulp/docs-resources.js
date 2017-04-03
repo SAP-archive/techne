@@ -19,5 +19,5 @@ const task = (cb) => {
 }
 
 
-gulp.task('resources', task)
+gulp.task('docs-resources', task)
 module.exports = task

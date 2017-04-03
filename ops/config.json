@@ -6,7 +6,8 @@
     "www": "./www"
   },
 
-  "tasks": {
+  "tasks": { 
+  
     "css": {
       "src": "styles",
       "dest": "css",
