@@ -16,5 +16,6 @@ bower_components
 build
 www
 src/vendor
+tmp
 .tmp
 *.log

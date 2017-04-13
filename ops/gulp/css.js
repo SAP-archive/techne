@@ -8,6 +8,7 @@ const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
 const rename = require("gulp-rename");
 const gulpif = require('gulp-if');
+const gulpconcat = require('gulp-concat');
 
 let environment = require('../lib/environment')
 
@@ -25,8 +26,8 @@ const paths = {
 
 const cssTask = () => {
 	cssSass();	
-
-
+	componentsSass();
+	cssConcat();
 }
 
 /*
@@ -58,6 +59,43 @@ const cssSass = () => {
 		prefix: "techne-"
 	})))
     .pipe(gulp.dest(paths.dest))
+}
+
+
+const cssConcat = () => {
+
+	var ignore = paths.ignore;
+	if (!environment.debug) {
+		ignore.push(`!${paths.ignore}`);
+		ignore.push('!src/styles/all.scss');
+		ignore.push('!src/styles/debug.scss');
+	}
+
+  return gulp.src(['src/styles/core.scss','src/styles/layout.scss','src/styles/components.scss', 'src/styles/helpers.scss'])
+  	.pipe(debug())
+    .pipe(sass().on('error', sass.logError))
+	.pipe(gulpconcat('all.css'))
+//     .pipe(gulpif(renameFile, rename({
+// 		prefix: "techne-"
+// 	})))
+    .pipe(gulp.dest('./tmp'))
+    
+    
+}
+
+
+
+const componentsSass = () => {
+
+	var  ignore = paths.ignore;
+	if (!environment.debug) {
+		ignore.push(`!${paths.ignore}`);
+	}
+
+  return gulp.src(['src/styles/core/*', 'src/styles/layout/*' , 'src/styles/components/*'])
+//  	.pipe(debug())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./tmp'))
 }
 
 

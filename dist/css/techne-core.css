@@ -17,10 +17,10 @@ html {
 
 body {
   margin: 0;
-  background-color: snow;
+  background-color: #eef1f3;
   -webkit-font-smoothing: antialiased;
-  color: midnightblue;
-  font-family: 'Helvetica Neue', sans-serif;
+  color: #21262c;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -59,12 +59,12 @@ img {
   line-height: 0; }
 
 a {
-  color: deepskyblue;
+  color: #006fbb;
   text-decoration: none; }
   a:hover {
-    color: deepskyblue; }
+    color: #006fbb; }
   a:active, a:focus {
-    color: deepskyblue;
+    color: #006fbb;
     outline: none; }
 
 /**

@@ -14,15 +14,11 @@ $colors: (
     error: #df1919,
 );
 
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
-
 $fonts: (
   body: #{"'Open Sans'", sans-serif},
   header: #{"Dosis", sans-serif},
   code: #{"Courier", sans-serif},
 );
-
 
 //baseline
 $color: color(lightest);

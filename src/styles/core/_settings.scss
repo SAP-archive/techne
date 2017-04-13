@@ -24,6 +24,7 @@ $spacing: (
   xxl: $spacing--base*14  //84
 ) !default;
 
+//type
 $type: (
   -2: 0.75rem (18/12),	//12/18
   -1: 0.875rem (18/14),	//14/18
@@ -36,25 +37,27 @@ $type: (
   6: 3.75rem (60/66), 	//60/66
 ) !default;
 
+//fonts
 $fonts: (
-  body: #{"'Helvetica Neue'", sans-serif},
-  header: #{"Times New Roman", sans-serif},
+  body: #{"'Open Sans'", sans-serif},
+  header: #{"Dosis", sans-serif},
   code: #{"Courier", sans-serif},
 ) !default;
 
 //colors
 $colors: (
-    lightest: snow,
-    light: gainsboro,
-    dark: dimgray,
-    darkest: midnightblue,
-	action: fuchsia,
-	link: deepskyblue,
-	accent: skyblue,
-    success: lawngreen,
-    warning: darkorange,
-    error: red,
+    lightest: #eef1f3,
+    light: #d7d7d7,
+    dark: #7f90a4,
+    darkest: #21262c,
+	action: #fbc100,
+	link: #006fbb,
+	accent: #009cdf,
+    success: #61bf33,
+    warning: #e96b1a,
+    error: #df1919,
 ) !default;
+
 
 //type
 $font-family: map-get($fonts,body) !default;
@@ -80,6 +83,5 @@ $background-color--button: color(action) !default;
 $color--error: color(error) !default;
 $color--warning: color(warning) !default;
 $color--success: color(success) !default;
-
 
 

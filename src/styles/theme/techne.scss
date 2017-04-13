@@ -14,9 +14,6 @@ $colors: (
     error: #df1919,
 );
 
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
-
 $fonts: (
   body: #{"'Open Sans'", sans-serif},
   header: #{"Dosis", sans-serif},
@@ -24,10 +21,23 @@ $fonts: (
 );
 
 
+$type: (
+  -2: 0.75rem (18/12),	//12/18
+  -1: 0.875rem (18/14),	//14/18
+  0: 1rem (24/16),     	//16/24
+  1: 1rem (24/20),   	//20/24
+  2: 2rem (30/24),   	//24/30
+  3: 3rem (36/32),		//32/36
+  4: 4rem (48/40),  	//40/48
+  5: 5rem (54/48),  	//48/54
+  6: 6rem (60/66), 	//60/66
+);
+
+
+
 //baseline
 $color: color(darkest);
 $background-color: color(lightest);
-
 
 //interactive
 $color--link: color(link);
@@ -41,8 +51,6 @@ $color--warning: color(warning);
 $color--success: color(success);
 
 
-
-
-
-//this must come here to grab variables not defined in the theme
-@import "../core/settings";
+// 
+// //this must come here to grab variables not defined in the theme
+// @import "../core/settings";

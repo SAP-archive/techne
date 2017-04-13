@@ -1,4 +1,28 @@
 /*
+	Techne uses the `techne` theme by default
+		with variables in `core/settings`
+		- Individual component files are compiled with default settings
+		- The full compiled library uses default settings
+	Another theme can be enabled by creating a custom version of this file
+		within your own project.
+		- The selected theme should be the first import (you can create your own too)
+		- With additional import following (using bower)
+		- All functions, mixins, and helpers will pick up the new theme variables
+
+		@import "bower_components/techne/src/themes/dark"
+		@import "bower_components/techne/src/core"
+		@import "bower_components/techne/src/layout"
+		@import "bower_components/techne/src/helpers"
+		@import "bower_components/techne/src/components/button"
+		...additional project styles
+
+	Themes can be created easily by defining the variable you want to override,
+		leaving others in place. See example theme `theme/foo` which only defines
+		fonts and colors
+*/
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
+/*
 Required variables:
 	$background-color
 	$color
@@ -120,6 +144,9 @@ fieldset {
 @-moz-document url-prefix() {}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   select {
     padding-right: 0; } }
+
+.grid {
+  background-color: snow; }
 
 .button {
   display: inline-block;
@@ -257,10 +284,10 @@ fieldset {
   font-family: 'Helvetica Neue', sans-serif; }
 
 .has-font-family-header {
-  font-family: Times New Roman, sans-serif; }
+  font-family: 'Times New Roman', serif; }
 
 .has-font-family-code {
-  font-family: Courier, sans-serif; }
+  font-family: Courier, monospace; }
 
 .has-background-image {
   background-repeat: no-repeat;
@@ -301,3 +328,16 @@ fieldset {
 
 .has-background-color-error {
   background-color: red !important; }
+
+/*
+optional
+@import "bower_component/techne/src/themes/dark"
+
+tehcne is core settings
+@import "bower_component/techne/src/core"
+@import "bower_component/techne/src/layout"
+@import "bower_component/techne/src/components/button"
+@import "bower_component/techne/src/components/helpers"
+
+
+*/

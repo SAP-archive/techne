@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  	"build": "",
-  	"start": "gulp",
+    "build": "",
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-data": "^1.2.1",
     "gulp-debug": "^3.1.0",
     "gulp-filenames": "^4.0.1",
