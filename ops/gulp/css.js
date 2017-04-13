@@ -26,8 +26,8 @@ const paths = {
 
 const cssTask = () => {
 	cssSass();	
-	componentsSass();
-	cssConcat();
+	//componentsSass();
+	//cssConcat();
 }
 
 /*
@@ -72,7 +72,7 @@ const cssConcat = () => {
 	}
 
   return gulp.src(['src/styles/core.scss','src/styles/layout.scss','src/styles/components.scss', 'src/styles/helpers.scss'])
-  	.pipe(debug())
+//  	.pipe(debug())
     .pipe(sass().on('error', sass.logError))
 	.pipe(gulpconcat('all.css'))
 //     .pipe(gulpif(renameFile, rename({

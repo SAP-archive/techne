@@ -41,10 +41,10 @@ html {
 
 body {
   margin: 0;
-  background-color: snow;
+  background-color: #eef1f3;
   -webkit-font-smoothing: antialiased;
-  color: midnightblue;
-  font-family: 'Helvetica Neue', sans-serif;
+  color: #21262c;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -83,12 +83,12 @@ img {
   line-height: 0; }
 
 a {
-  color: deepskyblue;
+  color: #006fbb;
   text-decoration: none; }
   a:hover {
-    color: deepskyblue; }
+    color: #006fbb; }
   a:active, a:focus {
-    color: deepskyblue;
+    color: #006fbb;
     outline: none; }
 
 /**
@@ -146,12 +146,12 @@ fieldset {
     padding-right: 0; } }
 
 .grid {
-  background-color: snow; }
+  background-color: #eef1f3; }
 
 .button {
   display: inline-block;
   padding: 20px 40px;
-  background-color: fuchsia; }
+  background-color: #fbc100; }
 
 /*
 	.primary-nav
@@ -166,8 +166,8 @@ fieldset {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: skyblue;
-  color: snow;
+  background-color: #009cdf;
+  color: #eef1f3;
   padding: 10px 30px; }
   [class*="tn-primary-nav--"] [aria-selected=true], .tn-primary-nav [aria-selected=true] {
     cursor: default; }
@@ -212,7 +212,7 @@ fieldset {
     width: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid gainsboro;
+    border-top: 5px solid #d7d7d7;
     position: relative;
     top: 15px; }
 
@@ -281,13 +281,13 @@ fieldset {
   line-height: 0.90909; }
 
 .has-font-family-body {
-  font-family: 'Helvetica Neue', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 .has-font-family-header {
-  font-family: 'Times New Roman', serif; }
+  font-family: Dosis, sans-serif; }
 
 .has-font-family-code {
-  font-family: Courier, monospace; }
+  font-family: Courier, sans-serif; }
 
 .has-background-image {
   background-repeat: no-repeat;
@@ -300,44 +300,31 @@ fieldset {
   background-attachment: fixed; }
 
 .has-background-color-lightest {
-  background-color: snow !important; }
+  background-color: #eef1f3 !important; }
 
 .has-background-color-light {
-  background-color: gainsboro !important; }
+  background-color: #d7d7d7 !important; }
 
 .has-background-color-dark {
-  background-color: dimgray !important; }
+  background-color: #7f90a4 !important; }
 
 .has-background-color-darkest {
-  background-color: midnightblue !important; }
+  background-color: #21262c !important; }
 
 .has-background-color-action {
-  background-color: fuchsia !important; }
+  background-color: #fbc100 !important; }
 
 .has-background-color-link {
-  background-color: deepskyblue !important; }
+  background-color: #006fbb !important; }
 
 .has-background-color-accent {
-  background-color: skyblue !important; }
+  background-color: #009cdf !important; }
 
 .has-background-color-success {
-  background-color: lawngreen !important; }
+  background-color: #61bf33 !important; }
 
 .has-background-color-warning {
-  background-color: darkorange !important; }
+  background-color: #e96b1a !important; }
 
 .has-background-color-error {
-  background-color: red !important; }
-
-/*
-optional
-@import "bower_component/techne/src/themes/dark"
-
-tehcne is core settings
-@import "bower_component/techne/src/core"
-@import "bower_component/techne/src/layout"
-@import "bower_component/techne/src/components/button"
-@import "bower_component/techne/src/components/helpers"
-
-
-*/
+  background-color: #df1919 !important; }

@@ -6,9 +6,9 @@
 
 ## Serve it locally
 
-`gulp`
+`npm start`
 
-The documentation website is served from the `www` directory with a special request handler for `dist` directory (see browserSync `server.baseDir` opt in `ops/gulp/serve.js`)
+The documentation website is served from the `www` directory.
 
 ## Build production
 
