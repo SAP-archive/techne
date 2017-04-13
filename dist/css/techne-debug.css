@@ -258,3 +258,6 @@ fieldset {
 
 .has-background-color-error {
   background-color: #df1919 !important; }
+
+[class~="tn-"] {
+  outline: solid 2px rgba(255, 192, 203, 0.6); }

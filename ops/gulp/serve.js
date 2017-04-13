@@ -2,7 +2,7 @@ const config = require('../config');
 if(!config.tasks.js) { return }
 
 const gulp = require('gulp');
-const handleErrors = require('./lib/handleErrors');
+const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
 const browserSync = require('browser-sync').create();
 
@@ -21,7 +21,7 @@ const serveTask = () => {
     
    	//reload watch
 	browserSync.watch(`${config.tasks.browserSync.server.baseDir}/**/*.html`).on("change", browserSync.reload);
-	browserSync.watch(`${config.root.dest}/${config.tasks.css.dest}/**/*.css`).on("change", browserSync.reload);
+	browserSync.watch(`${config.tasks.browserSync.server.baseDir}/css/**/*.css`).on("change", browserSync.reload);
 
 }
 

@@ -1,0 +1,33 @@
+@import "../core/mixins";
+
+.is-phone {
+  white-space: nowrap;
+}
+
+.has-scroll {
+  overflow: scroll;
+}
+.has-position-relative {
+  position: relative;
+}
+.has-text-align-center {
+  text-align: center !important;
+}
+
+.is-smallscreen-only {
+  display: none;
+  @include screen(m) {
+    display: initial;
+  }
+}
+.is-largescreen-only {
+  @include screen(m) {
+    display: none;
+  }
+}
+.is-print-only {
+  display: none !important;
+  @include print {
+    display: initial !important;
+  }
+}

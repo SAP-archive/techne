@@ -18,6 +18,12 @@
   }
 }
 
+@mixin print() {
+	@media print {
+		@content;
+	}
+}
+
 @mixin type($size: reg, $style: text) {
   $list: map-get($type, reg);
   @if map-has-key($type, $size) {

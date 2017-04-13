@@ -1,0 +1,67 @@
+.is-phone {
+  white-space: nowrap; }
+
+.has-scroll {
+  overflow: scroll; }
+
+.has-position-relative {
+  position: relative; }
+
+.has-text-align-center {
+  text-align: center !important; }
+
+.is-smallscreen-only {
+  display: none; }
+  @media (min-width: 768px) {
+    .is-smallscreen-only {
+      display: initial; } }
+
+@media (min-width: 768px) {
+  .is-largescreen-only {
+    display: none; } }
+
+.is-print-only {
+  display: none !important; }
+  @media print {
+    .is-print-only {
+      display: initial !important; } }
+
+.has-background-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+.has-background-fixed {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.has-background-color-lightest {
+  background-color: snow !important; }
+
+.has-background-color-light {
+  background-color: gainsboro !important; }
+
+.has-background-color-dark {
+  background-color: dimgray !important; }
+
+.has-background-color-darkest {
+  background-color: midnightblue !important; }
+
+.has-background-color-action {
+  background-color: fuchsia !important; }
+
+.has-background-color-link {
+  background-color: deepskyblue !important; }
+
+.has-background-color-accent {
+  background-color: skyblue !important; }
+
+.has-background-color-success {
+  background-color: lawngreen !important; }
+
+.has-background-color-warning {
+  background-color: darkorange !important; }
+
+.has-background-color-error {
+  background-color: red !important; }

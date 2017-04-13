@@ -15,5 +15,6 @@ bower_components
 #dist
 build
 www
+src/vendor
 .tmp
 *.log

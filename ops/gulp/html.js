@@ -9,7 +9,7 @@ const yargs = require('yargs')
 const debug = require('gulp-debug')
 const gulpif = require('gulp-if')
 
-let environment = require('./lib/environment')
+let environment = require('../lib/environment')
 let debugMode = yargs.argv.debug;
 
 //DATA

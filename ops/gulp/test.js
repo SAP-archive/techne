@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 
-let environment = require('./lib/environment')
+let environment = require('../lib/environment')
 
 const init = (cb) => {
 	console.log('hi');

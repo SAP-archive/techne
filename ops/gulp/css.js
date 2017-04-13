@@ -4,12 +4,12 @@ if(!config.tasks.js) { return }
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const path = require('path');
-const handleErrors = require('./lib/handleErrors');
+const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
 const rename = require("gulp-rename");
 const gulpif = require('gulp-if');
 
-let environment = require('./lib/environment')
+let environment = require('../lib/environment')
 
 //DATA
 //src: `${config.root.src}/${config.tasks.css.src}/**/*.${config.tasks.css.extensions}`,
@@ -17,9 +17,9 @@ const paths = {
 	src: `${config.root.src}/${config.tasks.css.src}/*.${config.tasks.css.extensions}`,
 	ignore: [
 		`!${config.root.src}/${config.tasks.css.src}/**/_*.${config.tasks.css.extensions}`,
-		`!${config.root.src}/${config.tasks.css.src}/theme/**/*`,
-		`!${config.root.src}/${config.tasks.css.src}/debug.${config.tasks.css.extensions}`
+		`!${config.root.src}/${config.tasks.css.src}/theme/**/*`
 	],
+	debug: `${config.root.src}/${config.tasks.css.src}/debug.${config.tasks.css.extensions}`,
 	dest: `${config.root.dest}/${config.tasks.css.dest}`
 }
 
@@ -45,6 +45,12 @@ var renameFile = function (file) {
 }
 
 const cssSass = () => {
+
+	var  ignore = paths.ignore;
+	if (!environment.debug) {
+		ignore.push(`!${paths.ignore}`);
+	}
+
   return gulp.src([paths.src,...paths.ignore])
   	.pipe(debug())
     .pipe(sass().on('error', sass.logError))

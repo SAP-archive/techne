@@ -4,13 +4,13 @@ if(!config.tasks.js) { return }
 const gulp = require('gulp');
 const nunjucks = require('gulp-nunjucks-html');
 const data = require('gulp-data');
-const handleErrors = require('./lib/handleErrors');
+const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
 const yargs = require('yargs');
 
-const util = require('./lib/data');
+const util = require('../lib/data');
 
-let environment = require('./lib/environment')
+let environment = require('../lib/environment')
 let debugMode = yargs.argv.debug;
 
 //DATA

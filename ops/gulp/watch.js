@@ -2,7 +2,7 @@ const config = require('../config');
 if(!config.tasks.js) { return }
 
 const gulp = require('gulp');
-const handleErrors = require('./lib/handleErrors');
+const handleErrors = require('../lib/handleErrors');
 
 
 const watchTask = () => {
@@ -12,6 +12,9 @@ const watchTask = () => {
 
 	//watch component styles
 	gulp.watch(`${config.root.src}/**/*.scss`, ['css']);
+	
+	//update docs styles
+	gulp.watch(`${config.root.dest}/css/**/*.css`, ['docs-css']);
 
 }
 

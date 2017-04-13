@@ -25,14 +25,15 @@ $spacing: (
 ) !default;
 
 $type: (
-  xs: 0.875rem (18/14),    //14/18
-  s: 1.125rem (24/18),     //18/24
-  reg: 1.5rem (30/24),     //24/30
-  m: 1.875rem (36/30),     //30/36
-  l: 2.8125rem (50/45),    //45/50
-  xl: 4.0625rem (60/65),   //65/60
-  xxl: 5.3125rem (80/85),  //85/80
-  xxxl: 6.25rem (95/100),  //100/95
+  -2: 0.75rem (18/12),    //12/18
+  -1: 0.875rem (18/14),    //14/18
+  0: 1.125rem (24/18),     //18/24
+  1: 1.5rem (30/24),     //24/30
+  2: 1.875rem (36/30),     //30/36
+  3: 2.8125rem (50/45),    //45/50
+  4: 4.0625rem (60/65),   //65/60
+  5: 5.3125rem (80/85),  //85/80
+  6: 6.25rem (95/100),  //100/95
 ) !default;
 
 $fonts: (
@@ -59,8 +60,8 @@ $colors: (
 $font-family: map-get($fonts,body) !default;
 $font-family--header: map-get($fonts,header) !default;
 $font-family--code: map-get($fonts,code) !default;
-$font-size: nth(map-get($type,s), 1) !default;
-$line-height: nth(map-get($type,s), 2) !default;
+$font-size: nth(map-get($type,0), 1) !default;
+$line-height: nth(map-get($type,0), 2) !default;
 
 //baseline
 $color: color(darkest) !default;
@@ -68,7 +69,6 @@ $background-color: color(lightest) !default;
 
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;
-
 
 //interactive
 $color--link: color(link) !default;
