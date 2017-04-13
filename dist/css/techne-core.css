@@ -21,8 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   color: midnightblue;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.33333; }
+  font-size: 1rem;
+  line-height: 1.5; }
 
 /**
 * @section Header Elements

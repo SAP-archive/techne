@@ -52,7 +52,7 @@ const cssSass = () => {
 	}
 
   return gulp.src([paths.src,...paths.ignore])
-  	.pipe(debug())
+//  	.pipe(debug())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(renameFile, rename({
 		prefix: "techne-"

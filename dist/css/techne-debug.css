@@ -8,8 +8,6 @@ Required variables:
 * @section Root Element
 * Default styles for root elements
 */
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
 html {
   box-sizing: border-box;
   min-height: 100%; }
@@ -23,8 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   color: midnightblue;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.33333; }
+  font-size: 1rem;
+  line-height: 1.5; }
 
 /**
 * @section Header Elements
@@ -126,7 +124,7 @@ fieldset {
 .button {
   display: inline-block;
   padding: 20px 40px;
-  background-color: #fbc100; }
+  background-color: fuchsia; }
 
 /*
 	.primary-nav
@@ -141,8 +139,8 @@ fieldset {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #009cdf;
-  color: #eef1f3;
+  background-color: skyblue;
+  color: snow;
   padding: 10px 30px; }
   [class*="tn-primary-nav--"] [aria-selected=true], .tn-primary-nav [aria-selected=true] {
     cursor: default; }
@@ -187,7 +185,7 @@ fieldset {
     width: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #d7d7d7;
+    border-top: 5px solid gainsboro;
     position: relative;
     top: 15px; }
 
@@ -219,6 +217,51 @@ fieldset {
     .is-print-only {
       display: initial !important; } }
 
+.is-type-down-2 {
+  font-size: 0.75rem;
+  line-height: 1.5; }
+
+.is-type-down-1 {
+  font-size: 0.875rem;
+  line-height: 1.28571; }
+
+.is-type-default {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.is-type-up-1 {
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+.is-type-up-2 {
+  font-size: 1.5rem;
+  line-height: 1.25; }
+
+.is-type-up-3 {
+  font-size: 2rem;
+  line-height: 1.125; }
+
+.is-type-up-4 {
+  font-size: 2.5rem;
+  line-height: 1.2; }
+
+.is-type-up-5 {
+  font-size: 3rem;
+  line-height: 1.125; }
+
+.is-type-up-6 {
+  font-size: 3.75rem;
+  line-height: 0.90909; }
+
+.has-font-family-body {
+  font-family: 'Helvetica Neue', sans-serif; }
+
+.has-font-family-header {
+  font-family: Times New Roman, sans-serif; }
+
+.has-font-family-code {
+  font-family: Courier, sans-serif; }
+
 .has-background-image {
   background-repeat: no-repeat;
   background-position: center;
@@ -230,34 +273,34 @@ fieldset {
   background-attachment: fixed; }
 
 .has-background-color-lightest {
-  background-color: #eef1f3 !important; }
+  background-color: snow !important; }
 
 .has-background-color-light {
-  background-color: #d7d7d7 !important; }
+  background-color: gainsboro !important; }
 
 .has-background-color-dark {
-  background-color: #7f90a4 !important; }
+  background-color: dimgray !important; }
 
 .has-background-color-darkest {
-  background-color: #21262c !important; }
+  background-color: midnightblue !important; }
 
 .has-background-color-action {
-  background-color: #fbc100 !important; }
+  background-color: fuchsia !important; }
 
 .has-background-color-link {
-  background-color: #006fbb !important; }
+  background-color: deepskyblue !important; }
 
 .has-background-color-accent {
-  background-color: #009cdf !important; }
+  background-color: skyblue !important; }
 
 .has-background-color-success {
-  background-color: #61bf33 !important; }
+  background-color: lawngreen !important; }
 
 .has-background-color-warning {
-  background-color: #e96b1a !important; }
+  background-color: darkorange !important; }
 
 .has-background-color-error {
-  background-color: #df1919 !important; }
+  background-color: red !important; }
 
 [class~="tn-"] {
   outline: solid 2px rgba(255, 192, 203, 0.6); }

@@ -26,6 +26,51 @@
     .is-print-only {
       display: initial !important; } }
 
+.is-type-down-2 {
+  font-size: 0.75rem;
+  line-height: 1.5; }
+
+.is-type-down-1 {
+  font-size: 0.875rem;
+  line-height: 1.28571; }
+
+.is-type-default {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.is-type-up-1 {
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+.is-type-up-2 {
+  font-size: 1.5rem;
+  line-height: 1.25; }
+
+.is-type-up-3 {
+  font-size: 2rem;
+  line-height: 1.125; }
+
+.is-type-up-4 {
+  font-size: 2.5rem;
+  line-height: 1.2; }
+
+.is-type-up-5 {
+  font-size: 3rem;
+  line-height: 1.125; }
+
+.is-type-up-6 {
+  font-size: 3.75rem;
+  line-height: 0.90909; }
+
+.has-font-family-body {
+  font-family: 'Helvetica Neue', sans-serif; }
+
+.has-font-family-header {
+  font-family: Times New Roman, sans-serif; }
+
+.has-font-family-code {
+  font-family: Courier, sans-serif; }
+
 .has-background-image {
   background-repeat: no-repeat;
   background-position: center;

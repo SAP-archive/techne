@@ -12,8 +12,8 @@ const task = (cb) => {
 	//assets are served from dist file when running locally
 	//if(environment.production) {
 
-	  return gulp.src('./dist/css/*.css')
-		  .pipe(debug())
+	  return gulp.src(['./dist/css/techne-all.css','./dist/css/techne-debug.css'])
+		  //.pipe(debug())
 		  .pipe(gulp.dest('./www/css'));
 
 	//}

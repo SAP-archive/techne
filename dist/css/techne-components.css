@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,500,600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
 .button {
   display: inline-block;
   padding: 20px 40px;
-  background-color: #fbc100; }
+  background-color: fuchsia; }
 
 /*
 	.primary-nav
@@ -18,8 +16,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #009cdf;
-  color: #eef1f3;
+  background-color: skyblue;
+  color: snow;
   padding: 10px 30px; }
   [class*="tn-primary-nav--"] [aria-selected=true], .tn-primary-nav [aria-selected=true] {
     cursor: default; }
@@ -64,6 +62,6 @@
     width: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #d7d7d7;
+    border-top: 5px solid gainsboro;
     position: relative;
     top: 15px; }

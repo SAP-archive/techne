@@ -1,0 +1,41 @@
+{% extends 'master.html' %}
+
+
+{% block nav %}
+	{% include "page_nav.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+
+<section class="page__section">
+
+	<h1 class="page__title">{{ page.title }}</h1>
+	<p>
+	{{ page.intro }}
+	</p>
+
+</section>
+
+
+
+
+	{% for item in page.components %}
+<section class="page__section">
+		<h2>{{ item }}</h2>
+		<div>
+			
+			{% include item + ".html" %}
+			
+		</div>	
+</section>
+	{% endfor %}
+
+
+
+
+
+
+
+{% endblock %}

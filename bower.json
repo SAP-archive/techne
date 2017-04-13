@@ -17,6 +17,8 @@
   ],
   "devDependencies": {
     "strong-css": "^0.0.7",
-    "normalize-css": "^6.0.0"
+    "normalize-css": "^6.0.0",
+    "bootstrap": "v4.0.0-alpha.6",
+    "bourbon": "^4.3.4"
   }
 }
