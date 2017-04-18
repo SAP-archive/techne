@@ -46,16 +46,16 @@ $fonts: (
 
 //colors
 $colors: (
+	brand: #009cdf,
+	action: #fbc100,
+	link: #006fbb,
+    success: #61bf33,
+    warning: #e96b1a,
+    error: #df1919,
     lightest: #eef1f3,
     light: #d7d7d7,
     dark: #7f90a4,
     darkest: #21262c,
-	action: #fbc100,
-	link: #006fbb,
-	accent: #009cdf,
-    success: #61bf33,
-    warning: #e96b1a,
-    error: #df1919,
 ) !default;
 
 
