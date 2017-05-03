@@ -1,0 +1,26 @@
+.testing{
+    color: green; 
+
+    &__class{
+        color: green;
+    }
+
+    &__class2{
+        color: green;
+    }
+
+    &__class3{
+        color: green;
+    }
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; 
+}
