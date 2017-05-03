@@ -18,7 +18,7 @@ $block: ns(primary-nav);
 
 %base {
 	@include navlist;
-	background-color: color(accent);
+	background-color: color(brand);
 	color: color(lightest);
 	padding: 10px 30px;
 }
@@ -38,7 +38,7 @@ $block: ns(primary-nav);
 	&__index {
 		display: inline-block;
 		margin-bottom: 0;
-		padding: 0 20px;	
+		padding: 0 20px;
 		vertical-align: top;
 	}
 	&__list {
@@ -62,11 +62,9 @@ $block: ns(primary-nav);
 				position: relative;
 				top: 15px;
 			}
-			
+
 		}
-	}	
+	}
 
-	
+
 }
-
-
