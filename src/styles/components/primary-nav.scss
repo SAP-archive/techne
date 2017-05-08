@@ -30,27 +30,24 @@ $block: ns(primary-nav);
 
 .#{$block} {
 	@extend %base;
-	&__directory {
+	&__directory, &__index, &__list, &__listitem {
 		display: inline-block;
 		margin-bottom: 0;
+	}
+	&__directory {
 		padding: 0 20px 0 0;
 	}
 	&__index {
-		display: inline-block;
-		margin-bottom: 0;
 		padding: 0 20px;
 		vertical-align: top;
 	}
 	&__list {
-		display: inline-block;
-		margin-bottom: 0;
 		[aria-selected=true] {
 			font-weight: bold;
 		}
 	}
 	&__listitem {
-		display: inline-block;
-		margin-bottom: 0;
+
 	}
 	&__listlink {
 		display: block;
