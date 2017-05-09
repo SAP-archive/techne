@@ -28,10 +28,10 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="../public/kss.css?t=1490116357118">
+  <link rel="stylesheet" href="../public/kss.css?t=1494351535552">
   <link rel="stylesheet" type="text/css" href="https://www.yaas.io/globalresources/v3/css/global.min.css">
-  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1490116357118">
-  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1490116357118">
+  <link rel="stylesheet" href="../public/dist/techne/css/techne.min.css?t=1494351535552">
+  <link rel="stylesheet" href="../public/css/highlightjs-techne.css?t=1494351535552">
 
 
 
@@ -260,7 +260,7 @@
 </div>
 
 <!-- feedback button -->
-<div class="feedback-menu feedback-menu--techne feedback-affix"  style="display: none;">
+<div class="feedback-menu feedback-menu--techne feedback-affix" style="display: none;">
   <span class="hyicon hyicon-feedback button-icon" data-toggle="modal" data-target="#feedbackModal"></span>
 </div>
 
@@ -269,20 +269,20 @@
   <div id="feedbackPlaceholder"></div>
 </div>
 <!-- SCRIPTS -->
-<script src="../public/kss.js?t=1490116357118"></script>
+<script src="../public/kss.js?t=1494351535552"></script>
 
-<script src="../public/prettify.js?t=1490116357118"></script>
-<script src="../public/js/jquery.min.js?t=1490116357118"></script>
-<script src="../public/main.js?t=1490116357118"></script>
-<script src="../public/js/bootstrap.min.js?t=1490116357118"></script>
-<script src="../public/js/select2.js?t=1490116357118"></script>
+<script src="../public/prettify.js?t=1494351535552"></script>
+<script src="../public/js/jquery.min.js?t=1494351535552"></script>
+<script src="../public/main.js?t=1494351535552"></script>
+<script src="../public/js/bootstrap.min.js?t=1494351535552"></script>
+<script src="../public/js/select2.js?t=1494351535552"></script>
 <script src="https://builder.yaas.io/sso/yaasAuth.js"></script>
-<script src="../public/js/yaas.sso.js?t=1490116357118"></script>
-<script src="../public/jquery.cookiebar.js?t=1490116357118"></script>
-<script src="../public/js/highlight.pack.min.js?t=1490116357118"></script>
+<script src="../public/js/yaas.sso.js?t=1494351535552"></script>
+<script src="../public/jquery.cookiebar.js?t=1494351535552"></script>
+<script src="../public/js/highlight.pack.min.js?t=1494351535552"></script>
 
 <!--<script src="public/jquery-ui.js"></script>-->
-<script src="../public/script.js?t=1490116357118"></script>
+<script src="../public/script.js?t=1494351535552"></script>
 <!--<script src="public/super-nav.js"></script>-->
 
 
@@ -306,7 +306,7 @@
 
   <!-- feedback script -->
   <script type="text/javascript">
-    $('#feedbackPlaceholder').load("https://feedback.yaas.io/form/basic", function(response, status, xhr){
+    $('#feedbackPlaceholder').load("https://api.eu.yaas.io/hybris/feedback/v1/form/basic", function(response, status, xhr){
       if(xhr.status === 200){
         $('.feedback-affix').show();
       }
@@ -323,24 +323,30 @@
   </script>
   <!-- /cookie bar -->
 
-  <!-- google analytics -->
-  <script type="text/javascript">
-    $(document).ready(function(){
-      sendYaaSAnalytics([
-          {
-            "id": "UA-56768310-10",
-            "name": "techne"
-          },
-          {
-            "id": "UA-56768310-7",
-            "name": "yaas"
-          }
-        ],
-        {
-          "pageview": true,
-          "exception": true
-        });
-    });
-  </script>
+  <!-- Google Tag Manager -->
+  <script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+            new Date().getTime(), event: 'gtm.js'      
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WT45HML');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analitics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56768310-10', 'auto');
+        ga('send', 'pageview');
+    </script>    
+    <!-- End Google Analytics -->
+
   </body>
 </html>
