@@ -15,6 +15,13 @@
         ]
     },
     { 
+        "id": "grid",
+        "label": "Grid",
+        "components": [
+            {  "id": "mainGrid", "label": "Main Grid" }
+        ]
+    },
+    { 
         "id": "layout",
         "label": "Layouts",
         "components": [

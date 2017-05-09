@@ -7,9 +7,6 @@ import { ComponentsService } from '../../../componentsService';
 @Component({
     selector: 'component-section-sample',
     templateUrl: './componentSectionSample.component.html',
-    styleUrls: [
-        '../../../../../../techne/components/layouts/sections/sections.scss'
-    ],
     encapsulation: ViewEncapsulation.None
 })
 export class ComponentSectionSampleComponent {
@@ -22,6 +19,7 @@ export class ComponentSectionSampleComponent {
 
     code: string;
     codeSample: any;
+    codeData: any;
 
     contentMDPath: any = null;
 
@@ -35,7 +33,7 @@ export class ComponentSectionSampleComponent {
         this.category = this.route.snapshot.params['category'];
         this.componentId = this.route.snapshot.params['id'];
 
-        this.loadComponentSampleCode()
+        this.loadComponentSampleCode();
         this.instrumentSection();
     }
 
