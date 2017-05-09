@@ -65,7 +65,8 @@
                 </p>
                 <hr>
                 <h3>NPM Install</h3>
-                <p>We don't currently support a NPM install.</p>
+                <p>Techne is also avialable as a NPM package. You can install with the following command in terminal or command prompt:</p>
+                <p><code>npm install techne</code></p>
             </div>
         </div>
     </section>

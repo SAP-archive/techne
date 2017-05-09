@@ -244,6 +244,11 @@ gulp.task('packagedist',
   }
 );
 
+// seperate task to copy file in kss
+gulp.task('copyToKss', function(){
+    gulp.src('./dist/techne/**/*')
+    .pipe( gulp.dest('./docs/kss/public/dist/techne/') );
+});
 
 gulp.task('build', ['less', 'patchgulpkss', 'styleguide', 'packagedist', 'deploy']);
 

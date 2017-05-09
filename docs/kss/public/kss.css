@@ -1796,6 +1796,7 @@ article section.LocalizationExample .kss-description h3 {
 @media (max-width: 768px) {
   #content.starterpages {
     left: 0;
+    top: 100px;
   }
 }
 .kss-main.starterpages {

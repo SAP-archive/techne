@@ -283,7 +283,7 @@
 </div>
 
 <!-- feedback button -->
-<div class="feedback-menu feedback-menu--techne feedback-affix"  style="display: none;">
+<div class="feedback-menu feedback-menu--techne feedback-affix" style="display: none;">
   <span class="hyicon hyicon-feedback button-icon" data-toggle="modal" data-target="#feedbackModal"></span>
 </div>
 
@@ -334,7 +334,7 @@
 
   <!-- feedback script -->
   <script type="text/javascript">
-    $('#feedbackPlaceholder').load("https://feedback.yaas.io/form/basic", function(response, status, xhr){
+    $('#feedbackPlaceholder').load("https://api.eu.yaas.io/hybris/feedback/v1/form/basic", function(response, status, xhr){
       if(xhr.status === 200){
         $('.feedback-affix').show();
       }
