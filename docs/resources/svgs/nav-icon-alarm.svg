@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="821.917 2477.917 20.167 19.333">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="icon-alarm" transform="translate(812 2475)">
+    <path id="Path_69" data-name="Path 69" class="cls-1" d="M17.167,13.833V9.25a7.081,7.081,0,0,0-4.618-6.632,2.5,2.5,0,0,0-4.935,0A7.078,7.078,0,0,0,3,9.25v4.583a2.5,2.5,0,0,1-2.5,2.5H19.667A2.5,2.5,0,0,1,17.167,13.833Z" transform="translate(9.917 2.917)"/>
+    <path id="Path_70" data-name="Path 70" class="cls-1" d="M14,19.5a2.5,2.5,0,0,1-5,0" transform="translate(8.5 -0.25)"/>
+  </g>
+</svg>

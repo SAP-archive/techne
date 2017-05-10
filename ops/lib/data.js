@@ -7,18 +7,50 @@ var getPageKey = (file) => {
   return filePath.replace(/\.[^/.]+$/, "");
 }
 
-
+// var setDocsAppData = () => {
+//   try {
+//     let app = require('../../docs/data/app.json');
+//     //return { app: app };
+//     return app;
+//   } catch(err) {
+//     console.log(err.message);
+//   }
+//   return {};
+// }
+//
+//
+// let app = setDocsAppData();
 
 // reads and outputs the app.json file
 exports.getDocsAppData = () => {
   try {
     let app = require('../../docs/data/app.json');
-    return { app: app };
+    //return { app: app };
+    return app;
   } catch(err) {
     console.log(err.message);
   }
-  return { app: {} };
+  return {};
 }
+
+exports.setDocsAppNavSelectedItem = (app) => {
+  try {
+    console.log(app.nav.menu);
+    //modifies app data to set menu states for each item
+    var selectedId = getPageKey(file);
+    app.nav.menu.forEach(function (obj) {
+      obj.selected = obj.id === selectedId || selectedId.indexOf(obj.id) !== -1;
+    });
+    console.log(app.nav.menu);
+    return app;
+
+  } catch(err) {
+    console.log(err.message);
+  }
+  return {};
+
+}
+
 
 // reads and outputs the nav.json file
 // adds 'selected' property based on page id, e.g., if 'styles.html' is being generated then 'selected' is set to true for styles.html nav.menu object
@@ -62,8 +94,5 @@ exports.getSrcComponentData = function(file) {
     console.log(err.message);
   }
   return { components: {} };
-  
+
 };
-
-
-
