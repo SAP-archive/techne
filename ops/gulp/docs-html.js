@@ -4,8 +4,9 @@ const data = require('gulp-data');
 const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
 const yargs = require('yargs');
+const requireDir = require('require-dir')
 
-const util = require('../lib/data');
+const docsData = require('../lib/data');
 
 let environment = require('../lib/environment')
 let debugMode = yargs.argv.debug;
@@ -25,58 +26,39 @@ const docs = {
 	}
 }
 
-
-let components = {};
-const getComponentData = function(file) {
-    var _components = ["button"];
-    try {
-        for (i = 0; i < _components.length; i++) {
-            var key = _components[i];
-            var _component = require(`../../src/data/${key}.json`);
-            components[key] = _component;
-        }
-        console.log(components);
-        return { components: components };
-    } catch(err) {
-        console.log(err.message);
-    }
-    return { components: {} };
-};
-
-
-
-
-// TASKS
-// build static HTML files
+/*
+compiles nunjucks templates
+    serves as primitive controller to inject data into templates
+    app = app.json data file
+    page = <page_key>.json data file
+    components = src/data/<component>.json data files (assembled above)
+*/
 const buildDocs = () => {
-    //main app data is set here, but it is modified below with each HTML file to set the selected item
-    let app = util.getDocsAppData();
-
-console.log(app.nav.menu);
-
+    //these simply create the objects for the templates
+    const setAppData = function(file) {
+        var app = docsData.getDocsAppData(file);
+        return { app: app }
+    };
+    const setPageData = function(file) {
+        var page = docsData.getDocsPageData(file);
+        return { page: page }
+    };
+    //only process main HTML files, not includes, templates, or macros
 	return gulp.src([`${docs.src.html}/**/*.html`, `!${docs.src.layouts}/**/*`, `!${docs.src.includes}/**/*`, `!${docs.src.macros}/**/*` ])
-		//.pipe(data(app))
-        .pipe(data(util.setDocsAppNavSelectedItem(app)))
-		//.pipe(data(util.getDocsNavData))
-		.pipe(data(util.getDocsPageData))
-		.pipe(data(getComponentData))
-		//.pipe(data(util.getSrcComponentData))
+        .pipe(data(setPageData))
+        .pipe(data(setAppData))
 		.pipe(nunjucks({
 			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros, './src/templates/'],
 			locals: {
+                components: docsData.getDocsComponentData(),
 				date: new Date(),
 				env: environment.production ? 'production':'development',
 				debug: debugMode
 			}
 		}))
 		.pipe(debug())
-    .pipe(gulp.dest(docs.dest.root))
-
-
-
+        .pipe(gulp.dest(docs.dest.root))
 }
-
-
 
 gulp.task('docs-html', buildDocs);
 module.exports = buildDocs;

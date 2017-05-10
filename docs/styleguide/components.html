@@ -25,10 +25,17 @@
 <section class="page__section">
 		<h2>{{ item }}</h2>
 		<div>
-			
-			{% include item + ".html" %}
-			
-		</div>	
+
+            {% set code %}
+                {% include item + ".html" %}
+            {% endset %}
+            {{ code }}
+            <pre>
+            {{ code|e }}
+            </pre>
+
+
+		</div>
 </section>
 	{% endfor %}
 
