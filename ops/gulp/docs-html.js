@@ -9,10 +9,9 @@ const requireDir = require('require-dir')
 const docsData = require('../lib/data');
 
 let environment = require('../lib/environment')
-let debugMode = yargs.argv.debug;
 
 //DATA
-const docs = {
+const paths = {
 	src: {
 		root: './docs',
 		data: './docs/data',
@@ -44,20 +43,20 @@ const buildDocs = () => {
         return { page: page }
     };
     //only process main HTML files, not includes, templates, or macros
-	return gulp.src([`${docs.src.html}/**/*.html`, `!${docs.src.layouts}/**/*`, `!${docs.src.includes}/**/*`, `!${docs.src.macros}/**/*` ])
+	return gulp.src([`${paths.src.html}/**/*.html`, `!${paths.src.layouts}/**/*`, `!${paths.src.includes}/**/*`, `!${paths.src.macros}/**/*` ])
         .pipe(data(setPageData))
         .pipe(data(setAppData))
 		.pipe(nunjucks({
-			searchPaths: [docs.src.layouts, docs.src.includes, docs.src.macros, './src/templates/'],
+			searchPaths: [paths.src.layouts, paths.src.includes, paths.src.macros, './src/templates/'],
 			locals: {
                 components: docsData.getDocsComponentData(),
 				date: new Date(),
 				env: environment.production ? 'production':'development',
-				debug: debugMode
+				debug: environment.debug
 			}
 		}))
-		.pipe(debug())
-        .pipe(gulp.dest(docs.dest.root))
+		//.pipe(debug())
+        .pipe(gulp.dest(paths.dest.root))
 }
 
 gulp.task('docs-html', buildDocs);

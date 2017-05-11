@@ -1,15 +1,22 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 
-const config = require('../config')
-let environment = require('../lib/environment')
+let environment = require('../lib/environment');
 
-const debug = require('gulp-debug');
-
-const task = (cb) => {
- 	return gulp.src(['./dist/css/techne-all.css','./dist/css/techne-debug.css'])
-		.pipe(gulp.dest('./www/css'));
+const paths = {
+	src: !environment.production ? './tmp/css' : './dist/css',
+	dest: './www/css'
 }
 
-gulp.task('docs-css', ['css'], task)
-module.exports = task
+let techneCss = environment.production ? 'techne-all.min.css' : 'techne-all.css';
+let debugSrc = environment.debug ? [`${paths.src}/techne-debug.css`] : [];
+
+const task = (cb) => {
+
+    return gulp.src([`${paths.src}/${techneCss}`,...debugSrc])
+		.pipe(gulp.dest(paths.dest));
+
+}
+
+gulp.task('docs-css', task);
+module.exports = task;

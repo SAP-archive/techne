@@ -1,7 +1,10 @@
 # Code
 This directory holds the source code for Techne and should include everything needed to generate `bower` and `node` packages.
 
-As a general rule, nothing should be built or compiled into `src`, a notable exception being the icons CSS and associated fonts.
+As a general rule, nothing should be built or compiled into `src`, with two notable exceptions:
+
+1. Icons CSS and associated fonts into `__`
+2. Bower components into `vendor`
 
 - This directory should be packaged.
 - Output CSS and dependencies to `dist`

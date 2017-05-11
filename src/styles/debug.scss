@@ -1,72 +1,24 @@
 @import "all";
 
-// DEBUG CSS
+/*
+DEBUG CSS
+To serve this file, start the project with `npm start -- --debug`
+It is sometimes useful to add a border, background-color, etc. when writing CSS
+Using this file will ensure that debug rules will do not accidently get included for production.
+*/
 
-[class~="tn-"] {
-	outline: solid 2px rgba(pink,0.6);
+/*
+//EXAMPLE: add a baseline grid
+$grid-unit: 20px;
+main:before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 2000;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.2;
+    background-size: 100% $grid-unit;
+    background-image: linear-gradient(to bottom, black 0%, transparent percentage(1px / $grid-unit), transparent 100%);
 }
-
-
-
-
-
-div {
-	//@include type(-2);
-}
-
-// 
-// body:before {
-// 	position: fixed;
-// 	z-index: 20000;
-// 	background: rgba(black,0.2);
-// 	color: white;
-// 	bottom: 0;
-// 	right: 0;
-// 	padding: 5px;
-// 	content: 'default';
-// 	@include screen(s) {
-// 	  content: 'small';  
-// 	}
-// 	@include screen(m) {
-// 	  content: 'medium';  
-// 	}
-// 	@include screen(l) {
-// 	  content: 'large';  
-// 	}
-// 	@include screen(xl) {
-// 	  content: 'xlarge';  
-// 	}    
-// }
-
-$grid-unit: 12px;
-
-// body {
-// 	display: block;
-// //	opacity: 0.4;
-// 	position: absolute;
-// 	z-index: 2000;
-// 	width: 100%;
-// 	min-height: 100%;
-// 	&:before {
-// 	  pointer-events: none;
-// 	  content: '';
-// 	  display: block;
-// 	  position: absolute;
-// 	z-index: 2000;
-// 	  top: 0;
-// 	  left: 0;
-// 	  bottom: 0;
-// 	  right: 0;
-// 	  width: 100%;
-// 	  min-height: 100%;
-// 	  background-image:
-// 		repeating-linear-gradient(
-// 		  to bottom,
-// 		  transparent 0px,
-// 		  transparent $grid-unit - 1px,
-// 		  rgba(0,0,0,0.1) $grid-unit - 1px,
-// 		  rgba(0,0,0,0.1) $grid-unit
-// 		);
-// 	}
-//}
-
+*/
