@@ -3,11 +3,11 @@
     "src": "./src",
     "dest": "./dist",
     "docs": "./docs",
-    "www": "./www"
+    "www": "./www",
+    "dev": "./dev"
   },
-
   "tasks": { 
-  
+
     "css": {
       "src": "styles",
       "dest": "css",
@@ -22,8 +22,8 @@
         ]
       },
       "extensions": ["scss"]
-    },      
-      
+    },
+
     "browserSync": {
       "server": {
         "baseDir": "./www"

@@ -1,18 +1,18 @@
 	<header class="app__header" role="banner">
-	
+
 	<div class="tn-primary-nav">
 
 		<button class="tn-primary-nav__directory" role="navigation">
 			<img src="svg/nav-icon-group.svg" height="20" alt="">{{ home.title }}
 		</button>
- 
-      {% set home = nav.home %}
+
+      {% set home = app.nav.home %}
       <a href="{{ home.url }}" aria-label="{{ home.title }}" class="tn-primary-nav__index {{ app.id }}--" aria-selected="{{ page.is_home }}">
         <img src="svg/techne-logo.svg" height="30" alt="">{{ home.title }}
       </a>
-     
+
         <ul id="main-nav" class="tn-primary-nav__list" role="navigation">
-          {% set menu = nav.menu %}
+          {% set menu = app.nav.menu %}
           {% for item in menu %}
           <li class="tn-primary-nav__listitem">
             <a class="tn-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}" {% if loop.index == 2 %} aria-haspopup="true" {% endif %}>
@@ -24,8 +24,8 @@
 
 
 
-	
+
 	</div>
-	
+
 
     </header>

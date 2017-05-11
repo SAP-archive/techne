@@ -1,10 +1,44 @@
 {
-  "name": "Techne",
-  "id": "techne",
-  "namespace": "tn",
-  "meta": {
-    "title": "Techne",
-    "description": "",   
-    "typekit": ""  
-  }
+    "name": "Techne",
+    "id": "techne",
+    "namespace": "tn",
+    "meta": {
+        "title": "Techne",
+        "description": "",
+        "typekit": ""
+    },
+    "nav": {
+    	"home": {
+    		"title": "Techne",
+    		"url": "index.html",
+    		"id": "home"
+    	},
+    	"menu": [
+    		{
+    			"title": "Getting Started",
+    			"url": "getting-started.html",
+    			"id": "getting-started"
+    		},
+    		{
+    		  "title": "Styles",
+    		  "url": "styles.html",
+    		  "id": "styles"
+    		},
+    		{
+    		  "title": "Components",
+    		  "url": "components.html",
+    		  "id": "components"
+    		},
+    		{
+    		  "title": "Guidelines",
+    		  "url": "guidelines.html",
+    		  "id": "guidelines"
+    		},
+    		{
+    		  "title": "Tutorials",
+    		  "url": "tutorials.html",
+    		  "id": "tutorials"
+    		}
+      ]
+    }
 }
