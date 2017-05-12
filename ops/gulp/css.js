@@ -3,6 +3,8 @@ if(!config.tasks.js) { return }
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const gulpAutoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 const path = require('path');
 const handleErrors = require('../lib/handleErrors');
 const debug = require('gulp-debug');
@@ -10,7 +12,7 @@ const rename = require("gulp-rename");
 const gulpif = require('gulp-if');
 const gulpconcat = require('gulp-concat');
 
-let environment = require('../lib/environment')
+let environment = require('../lib/environment');
 
 //DATA
 //src: `${config.root.src}/${config.tasks.css.src}/**/*.${config.tasks.css.extensions}`,
@@ -25,7 +27,7 @@ const paths = {
 }
 
 const cssTask = () => {
-	cssSass();	
+	cssSass();
 	//componentsSass();
 	//cssConcat();
 }
@@ -58,9 +60,16 @@ const cssSass = () => {
     .pipe(gulpif(renameFile, rename({
 		prefix: "techne-"
 	})))
-    .pipe(gulp.dest(paths.dest))
-}
-
+	.pipe(gulpAutoprefixer({
+		browsers: ['last 2 versions'],
+		cascade: false
+	}))
+	//.pipe(gulpif(environment.production,cleanCSS()))
+	//.pipe(gulpif(environment.production,rename({
+	//	suffix: '.min'
+	//})))
+    .pipe(gulp.dest(paths.dest));
+};
 
 const cssConcat = () => {
 
@@ -72,21 +81,13 @@ const cssConcat = () => {
 	}
 
   return gulp.src(['src/styles/core.scss','src/styles/layout.scss','src/styles/components.scss', 'src/styles/helpers.scss'])
-//  	.pipe(debug())
+  	//.pipe(debug())
     .pipe(sass().on('error', sass.logError))
 	.pipe(gulpconcat('all.css'))
-//     .pipe(gulpif(renameFile, rename({
-// 		prefix: "techne-"
-// 	})))
     .pipe(gulp.dest('./tmp'))
-    
-    
-}
-
-
+};
 
 const componentsSass = () => {
-
 	var  ignore = paths.ignore;
 	if (!environment.debug) {
 		ignore.push(`!${paths.ignore}`);
@@ -96,7 +97,7 @@ const componentsSass = () => {
 //  	.pipe(debug())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./tmp'))
-}
+};
 
 
 gulp.task('css', cssTask);
