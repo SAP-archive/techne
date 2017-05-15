@@ -9,10 +9,12 @@ Required variables:
 * Default styles for root elements
 */
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 100%; }
 
 *, *:before, *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 body {
@@ -96,6 +98,8 @@ input[type="submit"]::-moz-focus-inner {
 
 button {
   -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   outline: 0;
@@ -103,6 +107,9 @@ button {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;

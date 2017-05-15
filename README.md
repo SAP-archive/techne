@@ -1,4 +1,7 @@
-# 2.0 
+# 2.0
+
+Prerequisites:
+node > v.7.0
 
 ## Up and running
 
