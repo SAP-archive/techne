@@ -12,24 +12,24 @@
 			.primary-nav__listlink
 
 */
-[class*="tn-primary-nav--"], .tn-primary-nav {
+.tn-primary-nav {
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: #009cdf;
   color: #eef1f3;
   padding: 10px 30px; }
-  [class*="tn-primary-nav--"] [aria-selected=true], .tn-primary-nav [aria-selected=true] {
+  .tn-primary-nav [aria-selected=true] {
     cursor: default; }
-  [class*="tn-primary-nav--"] a, .tn-primary-nav a {
+  .tn-primary-nav a {
     color: inherit; }
-  [class*="tn-primary-nav--"] [aria-hidden=true], .tn-primary-nav [aria-hidden=true] {
+  .tn-primary-nav [aria-hidden=true] {
     display: none; }
-  [class*="tn-primary-nav--"]:after, .tn-primary-nav:after {
+  .tn-primary-nav:after {
     content: '';
     display: table;
     clear: both; }
-  [class*="tn-primary-nav--"] li, .tn-primary-nav li {
+  .tn-primary-nav li {
     float: left; }
 
 .tn-primary-nav__directory, .tn-primary-nav__index, .tn-primary-nav__list, .tn-primary-nav__listitem {
