@@ -1,12 +1,9 @@
 const gulp   = require('gulp')
 const del    = require('del')
-const path   = require('path')
-const config = require('../config')
 
-
-const cleanTask = (cb) => {
-	return del([path.join(config.root.www, '/**/*')]);
+const task = (cb) => {
+    return del(['./www/**/*']);
 }
 
-gulp.task('docs-clean', cleanTask);
-module.exports = cleanTask
+gulp.task('docs-clean', task);
+module.exports = task
