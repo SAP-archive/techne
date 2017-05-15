@@ -12,10 +12,11 @@ Thumbs.db
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 bower_components
-#dist
 build
 www
 src/vendor
 tmp
 .tmp
 *.log
+dist/css/techne-debug.min.css
+dist/css/techne-debug.css

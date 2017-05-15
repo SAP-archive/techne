@@ -1,16 +1,13 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-{% include "app_meta.html" %}    
-	{% if debug %}
-	  <link rel="stylesheet" href="css/techne-debug.css">
-	{% else %}
-    <link rel="stylesheet" href="css/techne-all.css">
-  {% endif %}
-	  <link rel="stylesheet" href="css/techne-styleguide.css">
+{% include "app_meta.html" %}
+	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == "production" %}.min{% endif %}.css">
+
+    <link rel="stylesheet" href="css/techne-styleguide.css">
 {% block css %}
 
-{% endblock %}     
+{% endblock %}
   </head>
   <body id="app--{{ app.id }}">
   <!--
@@ -44,12 +41,12 @@
     ***********************************************
   -->
 {% block header %}
-  {% include "app_header.html" %}  
-{% endblock %}  
+  {% include "app_header.html" %}
+{% endblock %}
     <main class="app__main page--{{ page.id }}" role="main">
       <article class="page__article">
-{% block nav %}{% endblock %}    
-{% block content %}{% endblock %}     
+{% block nav %}{% endblock %}
+{% block content %}{% endblock %}
       </article>
     </main>
 {% if env == "production" %}
@@ -62,6 +59,6 @@ _gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
     </script>
-{% endif %} 
+{% endif %}
   </body>
 </html>

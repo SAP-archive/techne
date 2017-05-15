@@ -25,14 +25,14 @@ const paths = {
 }
 
 const cssTask = () => {
-	cssSass();	
+	cssSass();
 	//componentsSass();
 	//cssConcat();
 }
 
 /*
-Only top-level files should be prefixed, 
-	individual components files can retain their simple names, i.e., 
+Only top-level files should be prefixed,
+	individual components files can retain their simple names, i.e.,
 
 	dist/css/techne-all.css
 	dist/css/techne-core.css
@@ -40,7 +40,7 @@ Only top-level files should be prefixed,
 */
 
 var renameFile = function (file) {
-	//ignore files in core, layout, components dirs 
+	//ignore files in core, layout, components dirs
 	var matches = file.path.indexOf('/src/styles/core/') == -1 && file.path.indexOf('/src/styles/layout/') == -1 && file.path.indexOf('/src/styles/components/') == -1;
 	return matches;
 }
@@ -79,8 +79,8 @@ const cssConcat = () => {
 // 		prefix: "techne-"
 // 	})))
     .pipe(gulp.dest('./tmp'))
-    
-    
+
+
 }
 
 
