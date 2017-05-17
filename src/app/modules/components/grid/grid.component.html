@@ -1,3 +1,5 @@
 <div class="tn-grid">
-    <h1>test</h1>
+    <div class="tn-grid-cell tn-grid-cell-size-x-1 tn-grid-cell-size-y-1" *ngFor="let cell of gridCells; let i = index">
+        {{ cell.gridIndex }}
+    </div>
 </div>
