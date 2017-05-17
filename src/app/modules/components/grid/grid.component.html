@@ -1,5 +1,10 @@
 <div class="tn-grid">
-    <div class="tn-grid-cell tn-grid-cell-size-x-1 tn-grid-cell-size-y-1" *ngFor="let cell of gridCells; let i = index">
-        {{ cell.gridIndex }}
+    <div class="tn-grid-cell tn-grid-cell-size-x-1" *ngFor="let cell of gridCells; let i = index">
+        <div class="tn-grid-cell-content">
+            <p>
+                {{ cell.gridIndex }} 
+                Fusce dapibus, tellus ac cursus commodo.
+            </p>
+        </div>
     </div>
 </div>

@@ -1,17 +1,19 @@
 @import 'system/spacing';
+@import 'system/responsive';
 
 // Main Grid
 
 $tn-grid-base: 10;
 $tn-grid-base-width: 100;
-$tn-grid-base-width-units: ($tn-grid-base-width)px;
+$tn-grid-base-width-units: $tn-grid-base-width * 1px;
 
 $tn-grid-cells-count-normal: $tn-grid-base;
 
 $tn-grid-cell-size: #{$tn-grid-base * 1%};
 $tn-grid-cell-size-x-min: $tn-grid-base-width-units;
+$tn-grid-cell-size-y-min: $tn-grid-base-width-units;
 
-$tn-grid-cell-border-size: 0;
+$tn-grid-cell-border-size: 1;
 $tn-grid-cell-border-size-units: $tn-grid-cell-border-size * 1px;
 
 $tn-grid-cell-border-total-x: $tn-grid-cell-border-size * 2;
@@ -22,14 +24,27 @@ $tn-grid-total-min-width-units: $tn-grid-total-min-width * 1px;
 .tn-grid { 
     min-width: $tn-grid-total-min-width-units;
 
-
     .tn-grid-cell {
+        box-sizing: border-box;
         float: left;
         width: $tn-grid-cell-size;
         min-width: $tn-grid-cell-size-x-min;
-        height: $tn-grid-cell-size;
+        height: $tn-grid-cell-size-y-min;
+        position: relative;
+
+        padding: 10px;
 
         border: $tn-grid-cell-border-size-units solid #fefefe;
+
+        overflow: hidden;
+
+        &:hover {
+            background-color: white;
+        }
+
+        .tn-grid-cell-content {
+            overflow: hidden;
+        }
     }
 
     @for $i from 1 through $tn-grid-cells-count-normal {
@@ -44,4 +59,11 @@ $tn-grid-total-min-width-units: $tn-grid-total-min-width * 1px;
         }
     }
 
+    @media screen and (max-width: $tn-phone-break) {
+        min-width: 100%;
+
+        .tn-grid-cell {
+            width: 50%;
+        }
+    }
 }

@@ -1,5 +1,7 @@
 @import 'system/colors';
 @import 'system/spacing';
+@import 'system/responsive';
+
 
 // Techné Main Navigation
 
@@ -27,6 +29,10 @@
         .tn-main-nav-option {
             list-style: none;
             @include tn-margin($tn-narrow-spacing);
+        }
+
+        @media screen and (max-width: $tn-phone-break) {
+            display: none;
         }
     }
 }
