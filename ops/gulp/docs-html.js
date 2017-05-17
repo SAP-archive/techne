@@ -18,7 +18,8 @@ const paths = {
 		html: './docs/styleguide',
 		layouts: './docs/styleguide/templates',
 		includes: './docs/styleguide/includes',
-		macros: './docs/styleguide/macros'
+		macros: './docs/styleguide/macros',
+        components: './src/templates'
 	},
 	dest: {
 		root: './www'
@@ -47,7 +48,7 @@ const buildDocs = () => {
         .pipe(data(setPageData))
         .pipe(data(setAppData))
 		.pipe(nunjucks({
-			searchPaths: [paths.src.layouts, paths.src.includes, paths.src.macros, './src/templates/'],
+			searchPaths: [paths.src.layouts, paths.src.includes, paths.src.macros, './src/templates'],
 			locals: {
                 components: docsData.getDocsComponentData(),
 				date: new Date(),

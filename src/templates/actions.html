@@ -1,0 +1,21 @@
+<!--
+BUTTON:
+    element="button",
+    modifier="",
+    label="" (required),
+    action="",
+    role=""
+-->
+{% macro button(
+    _element="button",
+    modifier="",
+    label="BUTTON_LABEL",
+    action="",
+    role="") %}
+    {% if action and _element == 'a' %}{% set href = action %}{% endif %}
+
+<{{_element}}{% if href %} href="{{ href }}"{% endif %} class="tn-button{{ '--' + modifier if modifier }}"{% if role %} role="{{ role }}"{% endif %}>
+    {{ label }}{% if modifier == 'upload' %} <input type="file">{% endif %}
+</{{_element}}>
+
+{% endmacro %}

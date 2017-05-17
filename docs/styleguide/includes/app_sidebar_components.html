@@ -1,0 +1,34 @@
+
+<div class="docs-app__sidebar">
+
+
+    <nav class="docs-secondary-nav">
+
+    	<ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
+
+    	{% set menu = app.sidebar.components %}
+    	{% for item in menu %}
+    		<li class="docs-secondary-nav__listitem">
+    			<h2>
+    				{{ item.title }}
+    			</h2>
+    		{% set childitems = item.items %}
+    			<ul>
+    			{% for item in childitems %}
+    				<li>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+    				</li>
+    			{% endfor %}
+    			</ul>
+    	</li>
+
+
+    	{% endfor %}
+    	</ul>
+
+    </nav>
+
+
+
+
+</div>
