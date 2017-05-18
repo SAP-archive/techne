@@ -3,43 +3,36 @@
 
 // Main Grid
 
-$tn-grid-base: 10;
-$tn-grid-base-width: 100;
-$tn-grid-base-width-units: $tn-grid-base-width * 1px;
+$tn-grid-base: 12;
 
-$tn-grid-cells-count-normal: $tn-grid-base;
+$tn-grid-cell-min-width: 100px;
+$tn-grid-cell-min-height: 100px;
 
-$tn-grid-cell-size: #{$tn-grid-base * 1%};
-$tn-grid-cell-size-x-min: $tn-grid-base-width-units;
-$tn-grid-cell-size-y-min: $tn-grid-base-width-units;
+$tn-grid-total-min-width: $tn-grid-base * $tn-grid-cell-min-width;
 
-$tn-grid-cell-border-size: 1;
-$tn-grid-cell-border-size-units: $tn-grid-cell-border-size * 1px;
+$tn-grid-cell-size: 100% / $tn-grid-base;
 
-$tn-grid-cell-border-total-x: $tn-grid-cell-border-size * 2;
-
-$tn-grid-total-min-width: $tn-grid-base * $tn-grid-base-width;
-$tn-grid-total-min-width-units: $tn-grid-total-min-width * 1px;
+$tn-grid-cell-border-size: 1px;
 
 .tn-grid { 
-    min-width: $tn-grid-total-min-width-units;
+    min-width: $tn-grid-total-min-width;
 
     .tn-grid-cell {
         box-sizing: border-box;
         float: left;
         width: $tn-grid-cell-size;
-        min-width: $tn-grid-cell-size-x-min;
-        height: $tn-grid-cell-size-y-min;
+        min-width: $tn-grid-cell-min-width;
+        min-height: $tn-grid-cell-min-height;
         position: relative;
 
         padding: 10px;
 
-        border: $tn-grid-cell-border-size-units solid #fefefe;
+        border: $tn-grid-cell-border-size solid #f0f0f0;
 
         overflow: hidden;
 
         &:hover {
-            background-color: white;
+            background-color: #fcfcfc;
         }
 
         .tn-grid-cell-content {
@@ -47,15 +40,15 @@ $tn-grid-total-min-width-units: $tn-grid-total-min-width * 1px;
         }
     }
 
-    @for $i from 1 through $tn-grid-cells-count-normal {
+    @for $i from 1 through $tn-grid-base {
         .tn-grid-cell-size-x-#{$i} {
-            width: calc(#{$tn-grid-cell-size} * #{$i} - #{$tn-grid-cell-border-size} * 2);
+            width: $tn-grid-cell-size * $i;
         }
     }
 
-    @for $i from 1 through $tn-grid-cells-count-normal {
+    @for $i from 1 through $tn-grid-base {
         .tn-grid-cell-size-y-#{$i} {
-            height: calc(#{$tn-grid-cell-size} * #{$i});
+            height: $tn-grid-cell-min-height * $i;
         }
     }
 
