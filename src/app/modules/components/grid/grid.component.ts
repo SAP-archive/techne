@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class GridComponent {
     gridColumns: number = 12;
-    gridRows: number = 10;
+    gridRows: number = 6;
     gridCells = [];
 
     gridComponents = [
@@ -14,14 +14,6 @@ export class GridComponent {
     ]
 
     constructor() {
-        /*
-        for (var i = 0; i < (this.gridColumns * this.gridColumns); i++) {
-            this.gridCells.push(
-                { gridIndex: i + 1 }
-            );
-        }
-        */
-
         this.randomizeGrid();
     }
 
@@ -33,12 +25,9 @@ export class GridComponent {
         var currentRowHeight = 0;
 
         for (var i = 0; i < this.gridRows; i++) {
-            currentRowHeight = Math.floor(Math.random() * 5) + 1;
+            currentRowHeight = 1; //Math.floor(Math.random() * 5) + 1;
             while (sum < this.gridColumns) {
-                if (sum < this.gridColumns - 1)
-                    currentCellWidth = Math.floor(Math.random() * ((this.gridColumns - 2) - sum)) + 2;
-                else
-                    currentCellWidth = 1;
+                currentCellWidth = Math.floor(Math.random() * ((this.gridColumns - 1) - sum)) + 1;
                 sum +=  currentCellWidth;
                 this.gridCells.push(
                     { width: currentCellWidth, height: currentRowHeight }

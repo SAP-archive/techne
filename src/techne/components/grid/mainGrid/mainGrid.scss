@@ -21,15 +21,13 @@ $tn-grid-cell-border-size: 1px;
         box-sizing: border-box;
         float: left;
         width: $tn-grid-cell-size;
-        min-width: $tn-grid-cell-min-width;
-        min-height: $tn-grid-cell-min-height;
+        height: $tn-grid-cell-min-height;
         position: relative;
+        overflow: hidden;
 
         padding: 10px;
 
         border: $tn-grid-cell-border-size solid #f0f0f0;
-
-        overflow: hidden;
 
         &:hover {
             background-color: #fcfcfc;
@@ -52,11 +50,24 @@ $tn-grid-cell-border-size: 1px;
         }
     }
 
+
+    @media screen and (max-width: $tn-tablet-break) {
+        min-width: 100%;
+    }
+
     @media screen and (max-width: $tn-phone-break) {
         min-width: 100%;
 
         .tn-grid-cell {
             width: 50%;
         }
+
+        @for $i from 6 through $tn-grid-base {
+            .tn-grid-cell-size-x-#{$i} {
+                width: 100%;
+            }
+        }
+
     }
+
 }

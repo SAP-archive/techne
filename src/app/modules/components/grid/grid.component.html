@@ -1,11 +1,11 @@
 <div class="tn-grid">
 
-    <div class="tn-grid-cell tn-grid-cell-size-x-{{ cell.width }} tn-grid-cell-size-y-{{ cell.height }}" *ngFor="let cell of gridCells; let i = index">
+    <div class="tn-grid-cell tn-grid-cell-size-x-{{ cell.width }} tn-grid-cell-size-y-{{ cell.height }}32" *ngFor="let cell of gridCells; let i = index">
 
         <div class="tn-grid-cell-content" [ngSwitch]="cell.component.type">
 
-            <p *ngSwitchDefault>
-                {{ i + 1 }}
+            <p>
+                {{ i + 1 }} - {{ cell.width }}x{{ cell.height }}
             </p>
 
             <div *ngSwitchCase="'random'">
