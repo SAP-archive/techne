@@ -6,15 +6,30 @@ import { Component } from '@angular/core';
 })
 export class GridComponent {
     gridColumns: number = 12;
-    gridRows: number = 6;
-    gridCells = [];
+    gridRows: number = 12;
+    gridCells: any[] = [];
 
-    gridComponents = [
-        { type: 'random' }
-    ]
+    gridIsRandom: boolean = true;
+
+    gridEmptyComponent: any = { component: { type: 'empty' } };
+
+    gridComponents: any[] = [
+        [
+            { width: 2, height: 1, component: { type: this.gridIsRandom ? 'random' : 'empty' } },
+            { width: 8, height: 1, component: { type: 'chart' } },
+            { width: 2, height: 1, component: { type: 'single-metric' } }
+        ],
+        [
+            { width: 8, height: 1, component: { type: 'chart' } },
+            { width: 2, height: 1, component: { type: 'single-metric' } }
+        ]
+    ];
 
     constructor() {
-        this.randomizeGrid();
+        if (this.gridIsRandom)
+            this.randomizeGrid();
+        else
+            this.assignComponents();
     }
 
     randomizeGrid() {
@@ -26,23 +41,30 @@ export class GridComponent {
 
         for (var i = 0; i < this.gridRows; i++) {
             currentRowHeight = 1; //Math.floor(Math.random() * 5) + 1;
+            this.gridCells.push([]);
             while (sum < this.gridColumns) {
                 currentCellWidth = Math.floor(Math.random() * ((this.gridColumns - 1) - sum)) + 1;
                 sum +=  currentCellWidth;
-                this.gridCells.push(
+                this.gridCells[i].push(
                     { width: currentCellWidth, height: currentRowHeight }
                 );
             }
             sum = 0;
         }
 
-        this.assignComponents();
+        this.assignRandomComponents();
+    }
+
+    assignRandomComponents() {
+        for (let i in this.gridCells) 
+            for (let j in this.gridCells[i]) {
+                this.gridCells[i][j].component = this.gridEmptyComponent.component;
+            }
     }
 
     assignComponents() {
-        for (let i in this.gridCells) {
-            this.gridCells[i].component = this.gridComponents[i] || { type: 'empty' };
-        }
+        this.gridCells = this.gridComponents;
     }
+
 }
 

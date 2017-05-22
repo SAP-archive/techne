@@ -1,17 +1,21 @@
 <div class="tn-grid">
 
-    <div class="tn-grid-cell tn-grid-cell-size-x-{{ cell.width }} tn-grid-cell-size-y-{{ cell.height }}32" *ngFor="let cell of gridCells; let i = index">
+    <div class="tn-grid-row" *ngFor="let row of gridCells; let i = index">
 
-        <div class="tn-grid-cell-content" [ngSwitch]="cell.component.type">
+        <div class="tn-grid-cell tn-grid-cell-size-x-{{ cell.width }} tn-grid-cell-size-y-{{ cell.height }}32" *ngFor="let cell of row; let j = index">
 
-            <p>
-                {{ i + 1 }} - {{ cell.width }}x{{ cell.height }}
-            </p>
+            <div class="tn-grid-cell-content" [ngSwitch]="cell.component.type">
 
-            <div *ngSwitchCase="'random'">
-                <button (click)="randomizeGrid()" class="tn-button">
+                <p>
+                    {{ j + 1 }} - {{ cell.width }}x{{ cell.height }}
+                </p>
+
+                <div *ngSwitchCase="'random'">
+                    <button (click)="randomizeGrid()" class="tn-button">
                     Ramdomize
                 </button>
+                </div>
+
             </div>
 
         </div>

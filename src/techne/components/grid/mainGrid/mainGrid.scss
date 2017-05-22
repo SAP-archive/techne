@@ -17,6 +17,17 @@ $tn-grid-cell-border-size: 1px;
 .tn-grid { 
     min-width: $tn-grid-total-min-width;
 
+    .tn-grid-row {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: $tn-grid-cell-border-size solid #f0f0f0;
+
+        @media screen and (max-width: $tn-phone-break) {
+            border: none;
+        }
+    }
+
+
     .tn-grid-cell {
         box-sizing: border-box;
         float: left;
@@ -27,10 +38,14 @@ $tn-grid-cell-border-size: 1px;
 
         padding: 10px;
 
-        border: $tn-grid-cell-border-size solid #f0f0f0;
+        border-right: $tn-grid-cell-border-size solid #f0f0f0;
 
         &:hover {
             background-color: #fcfcfc;
+        }
+
+        &:last-child {
+            border-right: none;
         }
 
         .tn-grid-cell-content {
@@ -58,13 +73,20 @@ $tn-grid-cell-border-size: 1px;
     @media screen and (max-width: $tn-phone-break) {
         min-width: 100%;
 
-        .tn-grid-cell {
-            width: 50%;
+        .tn-grid-row {
+            border-bottom: $tn-grid-cell-border-size solid #f0f0f0;
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
 
-        @for $i from 6 through $tn-grid-base {
-            .tn-grid-cell-size-x-#{$i} {
-                width: 100%;
+        .tn-grid-cell {
+            width: 100%;
+            border-bottom: $tn-grid-cell-border-size solid #f0f0f0;
+
+            &:last-child {
+                border-bottom: none;
             }
         }
 
