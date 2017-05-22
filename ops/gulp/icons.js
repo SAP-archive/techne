@@ -8,10 +8,12 @@ const task = (cb) => {
     .pipe(svgSprite({
         selector: "hyicon-%f",
         common: "hyicon",
-        templates: { scss: true }
+        svg: { sprite: "icons.svg" },
+        cssFile: "icons.css",
+        preview: {sprite: "icons.html"}
     }))
     .pipe(gulp.dest("./src/icons"));
 }
 
-gulp.task('hyicon', task);
+gulp.task('icons', task);
 module.exports = task;

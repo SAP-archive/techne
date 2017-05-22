@@ -4,15 +4,15 @@ Icons are generated using SVG files in the *raw-svg* folder and converting them 
 
 ## Generated Files 
 
-The generated files include `css folder`, `svg folder` and `sprite.html`. Please do not modify these files as any changes made here will be erased once the gulp task for generating icons is executed.
+The generated files include `css folder`, `svg folder` and `icons-preview.html`. Please do not modify these files as any changes made here will be erased once the gulp task for generating icons is executed.
 
 ## Gulp Task 
 
-Gulp task for generating icons is under `ops/gulp/icons.js`. To generate icons, use the command `gulp hyicon`. The task will generate `svg/sprite.svg`, `css/sprite.css`, `css/sprite.scss` and `sprite.html` 
+Gulp task for generating icons is under `ops/gulp/icons.js`. To generate icons, use the command `gulp icons`. The task will generate `icons.svg`, `icons.css`, and `icons.html` 
 
 ## Adding New Icons 
 
-To add a new icon, simply drop an SVG file under raw-svg folder and run the gulp task `gulp hyicon`. All the icons will be generated and it should appear in sprite.html as a preview. 
+To add a new icon, simply drop an SVG file under raw-svg folder and run the gulp task `gulp icons`. All the icons will be generated and it should appear in icons.html as a preview. 
 
 Requirements for new icon -
 
