@@ -2,10 +2,14 @@
 <html lang="en-us">
   <head>
 {% include "app_meta.html" %}
-	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == "production" %}.min{% endif %}.css">
+	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
 
     <link rel="stylesheet" href="css/techne-styleguide.css">
 {% block css %}
+
+{% endblock %}
+      <script src="js/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.js"></script>
+{% block js %}
 
 {% endblock %}
   </head>

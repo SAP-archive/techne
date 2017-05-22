@@ -21,6 +21,9 @@ const task = () => {
 	//update styleguide styles
 	gulp.watch([`./docs/styleguide/styles/*.scss`], ['docs-styleguide']);
 
+	//watch docs js
+	gulp.watch([`./src/scripts/*.js`,`./ops/gulp/*.js`], ['docs-js']);
+
 }
 
 gulp.task('dev-watch', task);
