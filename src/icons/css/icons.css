@@ -6,13 +6,9 @@
     content:' ';
     vertical-align:middle;
     display: inline-block;
-    background-image: url("../icons.svg");
+    background-image: url("icons.svg");
     background-repeat: no-repeat;
     background-size: 13.2em 712.8em;
-}
-
-.no-svg .hyicon:before {
-    background-image: url("../icons.png");
 }
 
 
