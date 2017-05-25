@@ -38,6 +38,11 @@
 				  "id": "bar"
 				}
 			]
+		},
+		{
+			"title": "icons",
+			"url": "icons.html",
+			"id": "icons"
 		}
   ]
 

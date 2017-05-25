@@ -5,7 +5,7 @@ let environment = require('../lib/environment');
 
 const task = (cb) => {
 
-    gulpSequence('pkg-build', 'docs-clean', ['docs-resources', 'docs-html', 'docs-css', 'docs-styleguide'], cb);
+    gulpSequence('pkg-build', 'docs-clean', ['docs-resources', 'docs-html', 'docs-css', 'docs-styleguide', 'icons-build'], cb);
 
 }
 
