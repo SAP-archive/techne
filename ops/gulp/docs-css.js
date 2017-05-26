@@ -12,7 +12,6 @@ let techneCss = environment.production ? 'techne-all.min.css' : 'techne-all.css'
 let debugSrc = environment.debug ? [`${paths.src}/techne-debug.css`] : [];
 
 const task = (cb) => {
-
     return gulp.src([`${paths.src}/${techneCss}`,...debugSrc])
 		.pipe(gulp.dest(paths.dest));
 

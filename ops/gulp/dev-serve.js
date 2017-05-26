@@ -14,6 +14,7 @@ const task = () => {
     });
 	browserSync.watch(`./www/**/*.html`).on('change', browserSync.reload);
 	browserSync.watch(`./www/css/**/*.css`).on('change', browserSync.reload);
+	browserSync.watch(`./www/js/**/*.js`).on('change', browserSync.reload);
 }
 
 gulp.task('dev-serve', task);

@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
 {% include "app_meta.html" %}
-	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == "production" %}.min{% endif %}.css">
+	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
 
     <link rel="stylesheet" href="css/techne-styleguide.css">
 {% block css %}
@@ -61,5 +61,9 @@ _gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
 })();
     </script>
 {% endif %}
+<script src="js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
+{% block js %}
+
+{% endblock %}
   </body>
 </html>
