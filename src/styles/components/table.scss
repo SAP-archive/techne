@@ -1,0 +1,64 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+$block: ns(table);
+
+/*!
+    .tn-table
+        .tn-table__row, tn-table__row--stripe | .is-active
+        .tn-table__cell
+*/
+
+// TABLE
+//     - not-striped
+
+
+
+.#{$block} {
+    //BASE
+    //set all BLOCK reset and baseline styles
+    @include reset;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: color(light);
+
+    //VARIANTS
+    //each variant MUST extend base block
+    // &--modifier {
+    //     @extend .#{$block};
+    // }
+
+
+    //ELEMENTS
+    &__row {
+        //BASE
+        //set element baseline styles
+
+        //VARIANTS
+        //each variant MUST extend element block
+        &--stripe {
+            //@extend .#{$block}__row;
+            background: color(lightest);
+        }
+        //STATES
+        // &.is-active {
+        //     background: color(brand);
+        // }
+
+    }
+    &__cell {
+        //BASE
+        //set element baseline styles
+        vertical-align: top;
+        text-align: left;
+
+        //VARIANTS
+        //each variant MUST extend element block
+        // &--modifier {
+        //     @extend .#{$block}__cell;
+        // }
+    }
+
+
+}

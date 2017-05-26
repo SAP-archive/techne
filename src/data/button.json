@@ -1,5 +1,13 @@
 {
-  "id": "button",
+    "id": "button",
+    "name": "Button",
 	"label": "BUTTON_LABEL",
-	"action": "BUTTON_ACTION"
+	"action": "BUTTON_ACTION",
+    "modifiers": [
+        "primary", "secondary", "upload", "link", "add"
+    ],
+    "data": {
+        "label": "BUTTON_LABEL"
+    }
+
 }

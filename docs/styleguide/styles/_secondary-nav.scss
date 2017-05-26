@@ -1,0 +1,27 @@
+
+.docs-secondary-nav {
+
+    &__list {
+        [aria-selected=true] {
+            font-weight: bold;
+        }
+    }
+    &__listitem {
+
+    }
+    &__listlink {
+        display: block;
+        padding: 0 20px;
+        &[aria-haspopup] {
+            &::after {
+                content: '';
+                //@include triangle(10px, color(light), down);
+                position: relative;
+                top: 15px;
+            }
+
+        }
+    }
+
+
+}

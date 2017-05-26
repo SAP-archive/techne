@@ -1,3 +1,8 @@
+@mixin reset() {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}
 
 @mixin clearfix() {
   &:after {
@@ -45,6 +50,19 @@
 }
 
 
+@mixin weight($weight: reg) {
+    @if $weight == light {
+        font-weight: 300;
+    } @else if $weight == reg {
+        font-weight: 400;
+    } @else if $weight == med {
+        font-weight: 500;
+    } @else if $weight == semi {
+        font-weight: 600;
+    } @else if $weight == bold {
+        font-weight: 700;
+    }
+}
 
 //Taken from https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_triangle.scss
 @mixin triangle($size, $color, $direction) {

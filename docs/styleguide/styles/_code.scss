@@ -1,0 +1,32 @@
+//code example
+
+.docs-code {
+    &__header {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    &__markup {
+        white-space: pre-wrap;
+        font-family: monospace;
+        font-size: 12px;
+        line-height: 16px;
+        position: relative;
+        display: block;
+        &::before {
+            $grid-unit: 16px;
+
+            content: '';
+            position: absolute;
+            display: block;
+            z-index: 2000;
+            min-height: 100%;
+            min-width: 100%;
+            opacity: 0.5;
+            background-size: 100% $grid-unit;
+            background-image: linear-gradient(to bottom, red 0%, transparent percentage(1px / $grid-unit), transparent 100%);
+
+        }
+    }
+
+
+}

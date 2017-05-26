@@ -1,0 +1,12 @@
+{% macro code(html) %}
+<code>{{ html | e }}</code>
+{% endmacro %}
+
+{% macro example(html) %}
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">{{ html | e | trim }}</code>
+</aside>
+{% endmacro %}
