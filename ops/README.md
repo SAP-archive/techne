@@ -61,10 +61,3 @@ Local development requires a server and includes watch tasks which auto-compiles
 ### Individual tasks
 * `gulp dev-serve` initializes BrowserSync and watches `www` for changes
 * `gulp dev-watch` kicks off compilation tasks when `src` files change
-
-
-### Short-hand commands
-* `gulp build` build the package and the docs.
-* `gulp build --production` build the package and the docs for production.
-
-* `gulp clean` clean all destination folders used generated with `gulp build`. It also accept the parameter `--production` to clean the production folders.
