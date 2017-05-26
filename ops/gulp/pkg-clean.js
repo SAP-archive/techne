@@ -12,7 +12,7 @@ const paths = {
 }
 
 const task = (cb) => {
-    return del([`./${paths.dest}/**/*`]);
+    return del([`./${paths.dest}/`]);
 }
 
 gulp.task('pkg-clean', task);
