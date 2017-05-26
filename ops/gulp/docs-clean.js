@@ -1,10 +1,8 @@
-const config = require('../config');
-
 const gulp = require('gulp');
 const del = require('del');
 
 const task = (cb) => {
-    return del([config.root.www]);
+    return del(['./www/**/*']);
 }
 
 gulp.task('docs-clean', task);
