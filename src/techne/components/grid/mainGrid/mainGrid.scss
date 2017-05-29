@@ -27,7 +27,6 @@ $tn-grid-cell-border-size: 1px;
         }
     }
 
-
     .tn-grid-cell {
         box-sizing: border-box;
         float: left;
@@ -65,7 +64,6 @@ $tn-grid-cell-border-size: 1px;
         }
     }
 
-
     @media screen and (max-width: $tn-tablet-break) {
         min-width: 100%;
     }
@@ -75,10 +73,6 @@ $tn-grid-cell-border-size: 1px;
 
         .tn-grid-row {
             border-bottom: $tn-grid-cell-border-size solid #f0f0f0;
-
-            &:last-child {
-                border-bottom: none;
-            }
         }
 
         .tn-grid-cell {
