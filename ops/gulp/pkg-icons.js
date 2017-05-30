@@ -5,5 +5,5 @@ const task = (cb) => {
     gulpSequence('generateIcons','copyIconsSvg', 'copyIconsCss', cb);
 }
 
-gulp.task('icons', task);
+gulp.task('pkg-icons', task);
 module.exports = task;
