@@ -2,26 +2,9 @@
     "title": "Components",
     "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
     "components": [
-    	"button"
+    	"button", "table"
     ],
 	"menu": [
-		{
-			"title": "Alerts",
-			"url": "#alerts",
-			"id": "alerts",
-			"items": [
-				{
-					"title": "Foo",
-					"url": "#",
-					"id": "foo"
-				},
-				{
-				  "title": "Bar",
-				  "url": "#",
-				  "id": "bar"
-				}
-			]
-		},
 		{
 			"title": "Buttons",
 			"url": "#buttons",
@@ -43,6 +26,11 @@
 			"title": "icons",
 			"url": "icons.html",
 			"id": "icons"
+		},
+        {
+			"title": "Table",
+			"url": "tables.html",
+			"id": "tables"
 		}
   ]
 

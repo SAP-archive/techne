@@ -8,8 +8,57 @@
         "typekit": ""
     },
     "nav": {
+        "yaas": [
+            {
+    			"title": "Home",
+    			"url": "#",
+    			"id": "yaas-home"
+    		},
+            {
+    			"title": "YaaS Market",
+    			"url": "#",
+    			"id": "yaas-market"
+    		},
+            {
+    			"title": "Community",
+    			"url": "#",
+    			"id": "yaas-community"
+    		},
+            {
+    			"title": "Dev Portal",
+    			"url": "#",
+    			"id": "yaas-devportal"
+    		},
+            {
+    			"title": "Knowledge Hub",
+    			"url": "#",
+    			"id": "yaas-devportal"
+    		},
+            {
+    			"title": "Builder",
+    			"url": "#",
+    			"id": "yaas-builder"
+    		},
+            {
+    			"title": "My Account",
+    			"url": "#",
+    			"id": "yaas-my-account",
+                "subnav": [
+                    {
+            			"title": "Sign In",
+            			"url": "#",
+            			"id": "yaas-signin"
+            		},
+                    {
+            			"title": "Register",
+            			"url": "#",
+            			"id": "yaas-register"
+            		}
+                ]
+    		}
+        ],
     	"home": {
-    		"title": "Techne",
+    		"title": "Home",
     		"url": "index.html",
     		"id": "home"
     	},
@@ -40,5 +89,31 @@
     		  "id": "tutorials"
     		}
       ]
-    }
+  },
+  "sidebar": {
+      "components": [
+  		{
+  			"title": "Actions",
+            "items": [
+                {
+                    "title": "Buttons",
+                    "url": "buttons.html",
+                    "id": "buttons"
+                }
+            ]
+  		},
+          {
+  			"title": "Collections",
+            "items": [
+                {
+                    "title": "Tables",
+                    "url": "tables.html",
+                    "id": "tables"
+                }
+
+            ]
+  		}
+    ]
+
+  }
 }

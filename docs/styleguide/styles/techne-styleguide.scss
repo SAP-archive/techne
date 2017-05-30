@@ -1,26 +1,35 @@
-.testing{
-    color: green;
+@import 'mixins';
+@import 'primary-nav';
+@import 'code';
 
-    &__class{
-        color: green;
+p, ul {
+    margin-bottom: 20px;
+}
+//namespace docs
+.docs-app {
+
+    &__header {
+        background-color: lightblue;
+        height: 100px;
+    }
+    &__main {
+        display: flex;
+        min-height: calc(100vh -  60px);
     }
 
-    &__class2{
-        color: green;
+    &__sidebar {
+        padding: 20px;
+        background: midnightblue;
+        color: white;
+        a {
+            color: white;
+        }
+
     }
 
-    &__class3{
-        color: green;
-    }
 }
 
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
-}
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.docs-page {
+    max-width: 1000px;
+    padding: 20px;
 }
