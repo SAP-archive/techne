@@ -1,8 +1,8 @@
 const gulp = require('gulp');
-const gulpSequence = require('gulp-sequence');
 
 const task = (cb) => {
-    gulpSequence('generateIcons','copyIconsSvg', 'copyIconsCss', cb);
+    return gulp.src('./src/styles/icons/**.*')
+		.pipe(gulp.dest('./dist/css/'));
 }
 
 gulp.task('pkg-icons', task);
