@@ -1,11 +1,8 @@
 @import "settings";
 
-/*
-Required variables:
-	$background-color
-	$color
-
-*/
+// Required variables:
+// 	$background-color
+// 	$color
 
 $elements__headers: h1, h2, h3, h4, h5, h6;
 $elements__blocks: p, ul, ol, li, blockquote, table, figure;
@@ -13,14 +10,13 @@ $elements__interactive: a, audio\[controls\], button, details, embed, iframe, im
 $elements__inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
 $elements__inputs--check: "input[type=radio]", "input[type=checkbox]";
 
-
-/**
+/*!
 * @section Root Element
 * Default styles for root elements
 */
 html {
-  box-sizing: border-box;
-  min-height: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -75,32 +71,32 @@ img {
   line-height: 0;
 }
 
-a {
-  color: $color--link;
-  text-decoration: none;
-  &:hover {
-    color: $color--link-hover;
-  }
-  &:active, &:focus {
-    color: $color--link-hover;
-    outline: none;
-  }
-}
+// a {
+//   color: $color--link;
+//   text-decoration: none;
+//   &:hover {
+//     color: $color--link-hover;
+//   }
+//   &:active, &:focus {
+//     color: $color--link-hover;
+//     outline: none;
+//   }
+// }
 
 /**
 * @section Table Elements
 * Default styles for table elements
 */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  vertical-align: top;
-}
-th {
-  text-align: left;
-}
+// table {
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+// td, th {
+//   vertical-align: top;
+// }
+// th {
+//   text-align: left;
+// }
 
 
 /**
@@ -109,7 +105,7 @@ th {
 */
 
 
-/**
+/*!
 * @section Button Elements
 * Default styles for button elements
 */
@@ -118,23 +114,23 @@ input[type="submit"]::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-%button-reset {
-  -webkit-font-smoothing: antialiased;
-  appearance: none;
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  padding: 0;
-}
-button {
-  @extend %button-reset;
-}
+// %button-reset {
+//   -webkit-font-smoothing: antialiased;
+//   appearance: none;
+//   background-color: transparent;
+//   outline: 0;
+//   border: 0;
+//   display: inline-block;
+//   text-decoration: none;
+//   cursor: pointer;
+//   user-select: none;
+//   vertical-align: middle;
+//   white-space: nowrap;
+//   padding: 0;
+// }
+// button {
+//   @extend %button-reset;
+// }
 
 /**
 * @section Form Elements

@@ -1,0 +1,64 @@
+.yaas-signature-nav {
+
+
+}
+
+.docs-primary-nav, .yaas-signature-nav {
+    @include clearfix;
+    &__directory, &__index, &__list, &__listitem {
+        display: inline-block;
+        margin-bottom: 0;
+        float: left;
+    }
+    &__directory {
+        padding: 0 20px 0 0;
+    }
+    &__index {
+
+        padding: 0 20px;
+        vertical-align: top;
+    }
+    &__list {
+        float: left;
+        [aria-selected=true] {
+            font-weight: bold;
+        }
+    }
+    &__listitem {
+        &[aria-haspopup] {
+            position: relative;
+        }
+
+    }
+    &__listlink {
+        display: block;
+        padding: 0 20px;
+        &[aria-haspopup] {
+            &::after {
+                content: '';
+                //@include triangle(10px, color(light), down);
+                position: relative;
+                top: 15px;
+            }
+
+        }
+    }
+    //subnavs
+    &__subnav-list {
+        position: absolute;
+    }
+    //behaviors
+    [aria-haspopup] {
+        .yaas-signature-nav__subnav-list {
+            display: none;
+        }
+        &:hover {
+            .yaas-signature-nav__subnav-list {
+                display: block;
+            }
+        }
+    }
+
+
+
+}

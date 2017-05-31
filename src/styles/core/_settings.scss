@@ -2,53 +2,53 @@
 
 //breakpoints
 $breakpoints: (
-  xs: 480px,
-  s: 667px,
-  m: 768px,
-  l: 1024px,
-  xl: 1248px,
-  xxl: 1440px
+    xs: 480px,
+    s: 667px,
+    m: 768px,
+    l: 1024px,
+    xl: 1248px,
+    xxl: 1440px
 ) !default;
 
 //spacing
 $spacing--base: 6px;
 
 $spacing: (
-  base: $spacing--base,   //6
-  xs: $spacing--base*2,   //12
-  s: $spacing--base*4,    //24
-  reg: $spacing--base*6,  //36
-  m: $spacing--base*8,    //48
-  l: $spacing--base*10,   //60
-  xl: $spacing--base*12,  //72
-  xxl: $spacing--base*14  //84
+    base: $spacing--base,   //6
+    xs: $spacing--base*2,   //12
+    s: $spacing--base*4,    //24
+    reg: $spacing--base*6,  //36
+    m: $spacing--base*8,    //48
+    l: $spacing--base*10,   //60
+    xl: $spacing--base*12,  //72
+    xxl: $spacing--base*14  //84
 ) !default;
 
 //type
 $type: (
-  -2: 0.75rem (18/12),	//12/18
-  -1: 0.875rem (18/14),	//14/18
-  0: 1rem (24/16),     	//16/24
-  1: 1.25em (24/20),   	//20/24
-  2: 1.5rem (30/24),   	//24/30
-  3: 2rem (36/32),		//32/36
-  4: 2.5rem (48/40),  	//40/48
-  5: 3rem (54/48),  	//48/54
-  6: 3.75rem (60/66), 	//60/66
+    -2: 0.75rem (18/12),	//12/18
+    -1: 0.875rem (18/14),	//14/18
+    0: 1rem (24/16),     	//16/24
+    1: 1.25em (24/20),   	//20/24
+    2: 1.5rem (30/24),   	//24/30
+    3: 2rem (36/32),		//32/36
+    4: 2.5rem (48/40),  	//40/48
+    5: 3rem (54/48),  	//48/54
+    6: 3.75rem (60/66), 	//60/66
 ) !default;
 
 //fonts
 $fonts: (
-  body: #{"'Open Sans'", sans-serif},
-  header: #{"Dosis", sans-serif},
-  code: #{"Courier", sans-serif},
+    body: #{"'Open Sans'", sans-serif},
+    header: #{"Dosis", sans-serif},
+    code: #{"Courier", sans-serif},
 ) !default;
 
 //colors
 $colors: (
-	brand: #009cdf,
-	action: #fbc100,
-	link: #006fbb,
+    brand: #009cdf,
+    action: #fbc100,
+    link: #006fbb,
     success: #61bf33,
     warning: #e96b1a,
     error: #df1919,
@@ -83,5 +83,3 @@ $background-color--button: color(action) !default;
 $color--error: color(error) !default;
 $color--warning: color(warning) !default;
 $color--success: color(success) !default;
-
-

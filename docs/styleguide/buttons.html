@@ -1,0 +1,99 @@
+{% extends 'master.html' %}
+{% import "format.html" as format %}
+
+<!-- set component data from src/data -->
+{% set component = components.button %}
+{% set key = component.id %}
+<!-- import component template from src/templates -->
+{% from "actions.html" import button as button %}
+
+{% block nav %}
+	{% include "app_sidebar_components.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+    <p>
+    {{ page.intro }}
+    </p>
+
+    <!-- START BASE COMPONENT EXAMPLES -->
+    <h2>Base component</h2>
+    <h3 id="base">.tn-{{ key }} <a href="#base">#</a></h3>
+    <strong>Since 1.0</strong>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ button() }}
+    {% endset %}
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+    <p><strong>Note:</strong> Any element can be used as a button, add attribute {{ format.code('role="button"') }} to maintain accessibility.</p>
+
+    <hr>
+
+    <h2>Usage</h2>
+    <p>
+    Block class<br>
+    <strong>.tn-button</strong>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Property</td>
+                <td>Type</td>
+                <td>Required</td>
+                <td>Options</td>
+                <td>Restrictions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Label</th>
+                <td>String</td>
+                <td>True</td>
+                <td></td>
+                <td>&lt; 40 characters</td>
+            </tr>
+            <tr>
+                <th>Modifier</th>
+                <td>String</td>
+                <td>False</td>
+                <td>{{ component.modifiers | join(', ') }}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+
+
+    {% if modifier %}<h2>Variants</h2>{% endif %}
+    <!-- START MODIFIED COMPONENT EXAMPLES -->
+    {% for modifier in component.modifiers %}
+        <h3 id="{{ modifier }}">.tn-button--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            {{ page.variants[modifier].description }}
+        </p>
+        <!-- output the component example and the code snippet -->
+        {% set example %}
+            {% if modifier == 'upload' %}
+                {{ button(_element='span', modifier=modifier, label='Upload') }}
+            {% else %}
+                {{ button(modifier=modifier) }}
+            {% endif %}
+        {% endset %}
+        <p>{{ example }}</p>
+        <p>
+            {{ format.example(example) }}
+        </p>
+    {% endfor %}
+
+
+{% endblock %}

@@ -9,7 +9,7 @@
 
 {% endblock %}
   </head>
-  <body id="app--{{ app.id }}">
+  <body id="docs-app--{{ app.id }}">
   <!--
     ***********************************************
     https://en.wikipedia.org/wiki/Techne
@@ -43,11 +43,12 @@
 {% block header %}
   {% include "app_header.html" %}
 {% endblock %}
-    <main class="app__main page--{{ page.id }}" role="main">
-      <article class="page__article">
-{% block nav %}{% endblock %}
+    <main class="docs-app__main" role="main">
+
+        {% block nav %}{% endblock %}
+        <article class="docs-app__page docs-page docs-page--{{ page.id }}">
 {% block content %}{% endblock %}
-      </article>
+        </article>
     </main>
 {% if env == "production" %}
     <script>

@@ -1,31 +1,56 @@
-	<header class="app__header" role="banner">
+<header class="docs-app__header" role="banner">
 
-	<div class="tn-primary-nav">
+    <div class="yaas-signature-nav">
+        {% set signav = app.nav.yaas %}
+        {% set home = signav[0] %}
+        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
+            <img src="svg/logo-yaas.svg" height="30" alt="YaaS">YaaS
+        </a>
 
-		<button class="tn-primary-nav__directory" role="navigation">
-			<img src="svg/nav-icon-group.svg" height="20" alt="">{{ home.title }}
-		</button>
-
-      {% set home = app.nav.home %}
-      <a href="{{ home.url }}" aria-label="{{ home.title }}" class="tn-primary-nav__index {{ app.id }}--" aria-selected="{{ page.is_home }}">
-        <img src="svg/techne-logo.svg" height="30" alt="">{{ home.title }}
-      </a>
-
-        <ul id="main-nav" class="tn-primary-nav__list" role="navigation">
-          {% set menu = app.nav.menu %}
-          {% for item in menu %}
-          <li class="tn-primary-nav__listitem">
-            <a class="tn-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}" {% if loop.index == 2 %} aria-haspopup="true" {% endif %}>
-              {{ item.title }}
-            </a>
-          </li>
-          {% endfor %}
+        <ul class="yaas-signature-nav__list" role="navigation">
+        {% for item in signav %}
+            <li class="yaas-signature-nav__listitem"{{ ' aria-haspopup="true" aria-controls="' + item.id + '-subnav"' if item.subnav }}>
+                <a class="yaas-signature-nav__listlink {{ item.id }}--" href="{{ item.url }}" >
+                    {{ item.title }}
+                </a>
+                {% if item.subnav %}
+                    {% set subnav = item.subnav %}
+                    <ul class="yaas-signature-nav__subnav-list" id="{{ item.id }}-subnav">
+                    {% for subitem in subnav %}
+                        <li class="yaas-signature-nav__subnav-listitem">
+                            <a class="yaas-signature-nav__subnav-listlink {{ subitem.id }}--" href="{{ subitem.url }}">
+                                {{ subitem.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
         </ul>
 
+        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
+            <img src="svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+        </a>
+    </div>
 
+    <div class="docs-primary-nav">
+        <ul class="docs-primary-nav__list" role="navigation">
+            {% set home = app.nav.home %}
+            <li class="docs-primary-nav__listitem">
+                <a href="{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
+                    {{ home.title }}
+                </a>
+            </li>
+            {% set menu = app.nav.menu %}
+            {% for item in menu %}
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+                        {{ item.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 
-
-	</div>
-
-
-    </header>
+</header>
