@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/website",
+    "public": "www",
     "rewrites": [
       {
         "source": "**",
