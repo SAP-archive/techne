@@ -29,6 +29,10 @@ export const SassConfig = {
     ]
 }
 
+export const MinimizeRenameConfig = {
+    suffix: ".min"
+}
+
 export const CleanCSSConfig = {
     level: {
         1: {
