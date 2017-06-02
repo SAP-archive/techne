@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 
 const task = (cb) => {
-    return gulp.src('./src/styles/icons/**.*')
+    return gulp.src(['./src/styles/icons/**.css','./src/styles/icons/**.svg' ])
 		.pipe(gulp.dest('./dist/css/'));
 }
 
