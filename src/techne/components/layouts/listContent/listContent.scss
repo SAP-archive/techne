@@ -1,18 +1,8 @@
 @import 'system/spacing';
 
-
 // List + Content Navigation layout
 
 .tn-layout-list-content {
     display: flex;
     flex-direction: row;
-
-    .tn-layout-list {
-        @include tn-padding($tn-narrow-spacing);        
-    }
-
-    .tn-layout-content {
-        @include tn-padding($tn-narrow-spacing); 
-        width: 100%;
-    }
 }

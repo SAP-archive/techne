@@ -1,31 +1,104 @@
 [
+    {
+        "id": "structure",
+        "label": "Structure",
+        "components": [
+            { "id": "grid", "label": "Grid" },
+            { "id": "panels", "label": "Panels" },
+            { "id": "spacing", "label": "Spacing" },
+            { "id": "layouts", "label": "Layouts" }
+        ]
+    },
+    {
+        "id": "colors",
+        "label": "Colors",
+        "components": [
+            { "id": "mainColors", "label": "Main Colors" },
+            { "id": "themes", "label": "Themes" }
+        ]
+    },
+    {
+        "id": "typography",
+        "label": "Typography",
+        "components": [
+            { "id": "headings", "label": "Headings" },
+            { "id": "helpText", "label": "Help Text" },
+            { "id": "content", "label": "Content" }
+        ]
+    },
+    {
+        "id": "containers",
+        "label": "Containers",
+        "components": [
+            { "id": "card", "label": "Cards" },
+            { "id": "productThumbnail", "label": "Product Thumbnail" },
+            { "id": "images", "label": "Images/Avatars" }
+        ]
+    },
+    {
+        "id": "collections",
+        "label": "Collections",
+        "components": [
+            { "id": "list", "label": "List" },
+            { "id": "table", "label": "Table" },
+            { "id": "tree", "label": "Tree" },
+            { "id": "cards", "label": "Cards" },
+            { "id": "productGrid", "label": "Product Grid" }
+        ]
+    },
+    {
+        "id": "actions",
+        "label": "Actions",
+        "components": [
+            { "id": "button", "label": "Buttons" },
+            { "id": "links", "label": "Links" },
+            { "id": "contextualMenu", "label": "Contextual Menu" },
+            { "id": "expandableButton", "label": "Expandable Button" }
+        ]
+    },
+    {
+        "id": "modals",
+        "label": "Modals",
+        "components": [
+            { "id": "informationModal", "label": "Information Modal" },
+            { "id": "decisionModal", "label": "Decision Modal" },
+            { "id": "formModal", "label": "Form Modal" }
+        ]
+    },
+    {
+        "id": "forms",
+        "label": "Forms",
+        "components": [
+            { "id": "inputs", "label": "Inputs" },
+            { "id": "textareas", "label": "Textareas" },
+            { "id": "checkboxes", "label": "Check boxes" },
+            { "id": "dropdown", "label": "Dropdown" },
+            { "id": "multitapEditor", "label": "Multi-tap Editor" }
+        ]
+    },
     { 
         "id": "navigation",
         "label": "Navigation",
         "components": [
-            {  "id": "mainNavigation", "label": "Main Navigation Bar" },
-            {  "id": "sideNavigation", "label": "Side Navigation Bar" }
+            {  "id": "mainNavigation", "label": "Main Bar" },
+            {  "id": "sideNavigation", "label": "Side Bar" },
+            {  "id": "tabs", "label": "Tabs" },
+            {  "id": "actionBar", "label": "Action Bar" },
+            {  "id": "toolBar", "label": "Tool Bar" },
+            {  "id": "pagination", "label": "Pagination" }
         ]
     },
     { 
-        "id": "actions",
-        "label": "Actions",
+        "id": "guidanceIndicators",
+        "label": "Guidance & Indicators",
         "components": [
-            {  "id": "button", "label": "Buttons" }
+            {  "id": "tooltip", "label": "Tooltip" },
+            {  "id": "loadingIndicators", "label": "Loading Indicators" },
+            {  "id": "icons", "label": "Icons" },
+            {  "id": "alerts", "label": "Alerts" },
+            {  "id": "tours", "label": "Tours" },
+            {  "id": "wizards", "label": "wizards" },
+            {  "id": "statusIndicators", "label": "Status Indicators" }
         ]
-    },
-    { 
-        "id": "grid",
-        "label": "Grid",
-        "components": [
-            {  "id": "mainGrid", "label": "Main Grid" }
-        ]
-    },
-    { 
-        "id": "layout",
-        "label": "Layouts",
-        "components": [
-            {  "id": "listContent", "label": "List+Content" }
-        ]
-    }    
+    }
 ]

@@ -5,4 +5,35 @@
 
 .tn-side-nav {
     font-size: .9em;
+    width: 250px;
+    background-color: #27394f;
+    color: white; 
+    position: relative;
+    height: 100%;
+
+    ul, ol {
+        margin-bottom: 20px;
+        list-style: none;
+
+        .tn-side-nav-header {
+            color: #8a8fa1;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tn-side-nav-option {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    a { 
+        color: white; 
+        text-decoration: none; 
+
+        &:hover {
+            color: blue;
+        }
+    }
 }
