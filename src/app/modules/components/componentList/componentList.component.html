@@ -5,7 +5,7 @@
                 <span class="tn-side-nav-header">{{ category.label }}</span>
                 <ul>
                     <li *ngFor="let component of category.components" class="tn-side-nav-option">
-                        <a [routerLink]="category.id + '/' + component.id">{{ component.label }}</a>
+                        <a [routerLink]="category.id + '/' + component.id" routerLinkActive="tn-side-nav-option-active">{{ component.label }}</a>
                     </li>
                 </ul>
             </li>

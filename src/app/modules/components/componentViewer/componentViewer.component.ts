@@ -29,14 +29,13 @@ export class ComponentViewerComponent implements OnInit {
 
         this.route.params
             .switchMap(
-                (params: Params) => this.componentsService.getComponent(params['category'], params['id'])
+            (params: Params) => this.componentsService.getComponent(params['category'], params['id'])
             )
             .subscribe(
-                cp => {
-                    this.component = cp
-                    this.sections = this.component.sections;
-                },
-                err => alert(err)
+            cp => {
+                this.component = cp
+                this.sections = this.component.sections;
+            }
             );
 
         //this.loadComponent(this.category, this.componentId);
@@ -45,8 +44,7 @@ export class ComponentViewerComponent implements OnInit {
     loadComponent(category, id: string) {
         this.componentsService.getComponent(category, id)
             .subscribe(
-            cp => this.component = cp,
-            err => console.log(err)
+            cp => this.component = cp
             );
     }
 

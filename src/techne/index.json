@@ -13,7 +13,7 @@
         "id": "colors",
         "label": "Colors",
         "components": [
-            { "id": "mainColors", "label": "Main Colors" },
+            { "id": "colors", "label": "Colors" },
             { "id": "themes", "label": "Themes" }
         ]
     },

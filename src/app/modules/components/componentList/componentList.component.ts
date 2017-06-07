@@ -21,8 +21,7 @@ export class ComponentListComponent implements OnInit {
     loadComponentList() {
         this.componentsService.getComponentList()
             .subscribe( 
-                cl => this.componentList = cl,
-                err => console.log(err)
+                cl => this.componentList = cl
             );
     }
 

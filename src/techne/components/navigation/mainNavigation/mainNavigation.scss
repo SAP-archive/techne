@@ -2,16 +2,15 @@
 @import 'system/spacing';
 @import 'system/responsive';
 
-
 // Techné Main Navigation
 
 .tn-main-nav {
     display: flex;
-    background-color: $tn-nav-background;
-    color: $tn-nav-text;
+    background-color: $tn-color-default-light;
+    color: white;
 
     a { 
-        color: $tn-nav-text; 
+        color: white; 
         text-decoration: none; 
     }
 

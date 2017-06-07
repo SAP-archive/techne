@@ -3,15 +3,31 @@
 // Main Colors
 
 
-// Body main colors
+$tn-color-default: #006fbb !default;
+$tn-color-default-light: lighten($tn-color-default, 10%);
+$tn-color-default-dark: darken($tn-color-default, 10%);
 
-$tn-body-text: #313440;
-$tn-body-background: #fff;
+$tn-color-accent: #F0AB00 !default;
+$tn-color-accent-light: lighten($tn-color-accent, 10%);
+$tn-color-accent-dark: darken($tn-color-accent, 10%);
 
-// Main Nav Colors
-$tn-nav-background: #0486e0;
-$tn-nav-text: #e0e9f0;
+$tn-color-neutral: #21262c !default;
+$tn-color-neutral-lightest: lighten($tn-color-neutral, 60%);
+$tn-color-neutral-light: lighten($tn-color-neutral, 20%);
+$tn-color-neutral-dark: darken($tn-color-neutral, 10%);
 
+// Colors Debug
+.tn-debug-color-default { background-color: $tn-color-default;  }
+.tn-debug-color-default-light { background-color: $tn-color-default-light;  }
+.tn-debug-color-default-dark { background-color: $tn-color-default-dark;  }
 
-// Main color defaults
-body { color: $tn-body-text; background-color: $tn-body-background; }
+.tn-debug-color-accent { background-color: $tn-color-accent;  }
+.tn-debug-color-accent-light { background-color: $tn-color-accent-light;  }
+.tn-debug-color-accent-dark { background-color: $tn-color-accent-dark;  }
+
+.tn-debug-color-neutral { background-color: $tn-color-neutral;  }
+.tn-debug-color-neutral-lightest { background-color: $tn-color-neutral-lightest;  }
+.tn-debug-color-neutral-light { background-color: $tn-color-neutral-light;  }
+.tn-debug-color-neutral-dark { background-color: $tn-color-neutral-dark;  }
+
+body { color: $tn-color-neutral; }

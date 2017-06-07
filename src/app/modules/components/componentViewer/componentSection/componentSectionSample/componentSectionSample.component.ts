@@ -40,7 +40,6 @@ export class ComponentSectionSampleComponent {
     }
 
     ngAfterViewInit() {        
-        console.log(this.el);
     }
 
     loadComponentSampleCode() {

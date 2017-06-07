@@ -6,24 +6,31 @@
 .tn-side-nav {
     font-size: .9em;
     width: 250px;
-    background-color: #27394f;
+    background-color: $tn-color-default-dark;
     color: white; 
     position: relative;
     height: 100%;
+    padding: 20px;
 
     ul, ol {
-        margin-bottom: 20px;
+        margin: 0 0 20px 0;
         list-style: none;
 
+        ul, ol { padding-left: 10px; }
+
         .tn-side-nav-header {
-            color: #8a8fa1;
-            font-size: 1.2em;
+            color: $tn-color-neutral-lightest;
+            font-size: 1.4em;
             margin-bottom: 10px;
             display: block;
         }
 
         .tn-side-nav-option {
             margin-bottom: 5px;
+        }
+        
+        .tn-side-nav-option-active {
+            color: $tn-color-default-light;
         }
 
     }
@@ -33,7 +40,7 @@
         text-decoration: none; 
 
         &:hover {
-            color: blue;
+            color: $tn-color-accent-light;
         }
     }
 }
