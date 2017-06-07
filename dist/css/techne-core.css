@@ -1,3 +1,7 @@
+/*!
+* @section Root Element
+* Default styles for root elements
+*/
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -55,51 +59,13 @@ ul {
 img {
   line-height: 0
 }
-a {
-  color: #006fbb;
-  text-decoration: none
-}
-a:hover {
-  color: #006fbb
-}
-a:active,
-a:focus {
-  color: #006fbb;
-  outline: 0
-}
-table {
-  border-collapse: collapse;
-  width: 100%
-}
-td,
-th {
-  vertical-align: top
-}
-th {
-  text-align: left
-}
+/*!
+* @section Button Elements
+* Default styles for button elements
+*/
 button::-moz-focus-inner,
 input[type=submit]::-moz-focus-inner {
   border: 0;
-  padding: 0
-}
-button {
-  -webkit-font-smoothing: antialiased;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
   padding: 0
 }
 fieldset {

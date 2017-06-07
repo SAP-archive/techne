@@ -112,7 +112,18 @@
                 }
 
             ]
-  		}
+  		},
+          {
+            "title": "Indicators",
+            "items": [
+                {
+                    "title": "Icons",
+                    "url": "icons.html",
+                    "id": "icons"
+                }
+
+            ]
+        }
     ]
 
   }
