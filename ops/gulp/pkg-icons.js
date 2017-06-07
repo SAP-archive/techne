@@ -1,8 +1,16 @@
 const gulp = require('gulp');
 
+let environment = require('../lib/environment');
+
+const paths = {
+	src: './src/styles/icons',
+	dest: !environment.production ? 'tmp/css' : 'dist/css'
+}
+
 const task = (cb) => {
-    return gulp.src(['./src/styles/icons/**.css','./src/styles/icons/**.svg' ])
-		.pipe(gulp.dest('./dist/css/'));
+    let prefix = 'techne';
+    return gulp.src([`${paths.src}/*.svg`])
+		.pipe(gulp.dest(paths.dest));
 }
 
 gulp.task('pkg-icons', task);

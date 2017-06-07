@@ -1,0 +1,23 @@
+
+<!-- find original template at https://github.com/shakyShane/gulp-svg-sprites/blob/master/tmpl/preview.html -->
+<style>
+	.demo-icon-wrapper{
+		padding: 20px;
+	}
+	.demo-icon-wrapper span{
+		float: left;
+		margin-right: 20px;
+		display: inline-block;
+	}
+</style>
+
+<div class="demo-icon-wrapper">
+
+      <% _.forEach(svg, function(svgItem) {  %>
+    	<span class="hyicon <%= svgItem.name %>"></span>
+
+
+
+      <% });  %>
+
+</div>
