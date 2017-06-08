@@ -11,7 +11,7 @@
             <li *ngFor="let option of options; let i = index" class="tn-tabs-option" [ngClass]="{ 'tn-tabs-option-selected': optionSelected == i }"><a (click)="selectOption(i)"> {{ option.label }} </a></li>
         </ul>
         <div [ngSwitch]="optionSelected" class="tn-tabs-container">
-            <div *ngSwitchCase="0" class="tn-section-sample">
+            <div *ngSwitchCase="0" class="tn-section-rendered">
                 <div [innerHTML]="codeSample">
                 </div>
             </div>

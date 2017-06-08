@@ -14,19 +14,24 @@
         h2 {
             font-size: 1.5em;
             font-weight: normal;
+            margin-top: 0;
         }
     }
 
     .tn-section-samples {
         flex: 2;
-        padding: 20px;
+        //padding: 20px;
 
-        .tn-section-sample {
+        .tn-section-rendered {
             padding: 20px;
 
             div {
                 width: 100%;
              }
+        }
+
+        .tn-section-code {
+            padding: 20px;
         }
     }
 
