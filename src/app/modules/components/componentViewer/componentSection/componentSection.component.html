@@ -1,5 +1,5 @@
 <a [id]="section.id"></a>
 <div [ngSwitch]="section.type">
-    <component-section-overview [section]="section" *ngSwitchCase="'title-text'"></component-section-overview>
-    <component-section-sample [section]="section" [component]="component" *ngSwitchCase="'sample'"></component-section-sample>
+    <component-section-overview [section]="section" *ngSwitchCase="'title-text'" class="tn-section-{{ section.type }}"></component-section-overview>
+    <component-section-sample [section]="section" [component]="component" *ngSwitchCase="'sample'" class="tn-section-{{ section.type }}"></component-section-sample>
 </div>

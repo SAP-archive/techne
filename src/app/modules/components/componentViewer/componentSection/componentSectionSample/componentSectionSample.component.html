@@ -1,18 +1,27 @@
-<div class="tn-section-title"><h2>{{ section.title }} {{ section.data }}  </h2></div>
-<div class="tn-section-text">
+<div class="tn-section-overview">
+    <h2>{{ section.title }} {{ section.data }} </h2>
     <div *ngIf="section.contentMD" Markdown [path]="contentMDPath"></div>
-    <div *ngIf="section.content" >
+    <div *ngIf="section.content">
         {{ section.content }}
     </div>
 </div>
-<div class="tn-section-sample">
-    <p>Sample</p>
-    <div [innerHTML]="codeSample">
+<div class="tn-section-samples">
+    <div class="tn-tabs">
+        <ul class="tn-tabs-options">
+            <li *ngFor="let option of options; let i = index" class="tn-tabs-option"><a (click)="selectOption(i)"> {{ option.label }} </a></li>
+        </ul>
+        <div [ngSwitch]="optionSelected" class="tn-tabs-container">
+            <div *ngSwitchCase="0" class="tn-section-sample">
+                <p>Sample</p>
+                <div [innerHTML]="codeSample">
+                </div>
+            </div>
+            <div *ngSwitchCase="1" class="tn-section-code">
+                <p>Code</p>
+                <pre>
+                <code class="html"> {{ code }} </code>
+            </pre>
+            </div>
+        </div>
     </div>
-</div>
-<div class="tn-section-code">
-    <p>Code</p>
-    <pre>
-        <code class="html"> {{ code }} </code>
-    </pre>
 </div>

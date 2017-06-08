@@ -2,28 +2,27 @@
 
 // Display a section with a title and an overview
 
-.tn-section-title-text {
+.tn-section-sample {
     display: flex;
     border-bottom: 1px solid $tn-color-neutral-lightest;
-    width: 100%;
 
-    .tn-section-title {
-        width: 400px; 
+    .tn-section-overview {
+        width: 440px; 
         padding: 40px;
+        border-right: 1px solid $tn-color-neutral-lightest;
 
-        h1 {
-            font-size: 2em;
+        h2 {
+            font-size: 1.5em;
             font-weight: normal;
         }
     }
 
-    .tn-section-text {
+    .tn-section-samples {
         flex: 2;
         padding: 40px;
 
-        p {
-            line-height: 1.5em;
-        }
+        
+
     }
 
 }

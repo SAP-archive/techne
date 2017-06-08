@@ -24,6 +24,12 @@ export class ComponentSectionSampleComponent {
 
     contentMDPath: any = null;
 
+    options: any[] = [
+        { id: 'sample', label: 'Sample' },
+        { id: 'code', label: 'Code' }
+    ];
+    optionSelected = 0;
+
     constructor(
         private route: ActivatedRoute,
         private sanitizer: DomSanitizer,
@@ -54,4 +60,7 @@ export class ComponentSectionSampleComponent {
         this.contentMDPath = '/techne/components/' + this.category + '/' + this.componentId + '/' + this.section.contentMD;
     }
 
+    selectOption(index) {
+        this.optionSelected = index;
+    }
 }
