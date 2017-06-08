@@ -50,6 +50,7 @@
 
     &.tn-card-with-media {
         display: flex;
+        flex-direction: row;
         padding: 0;
 
         .tn-card-media {
@@ -71,6 +72,20 @@
         .tn-card-content {
             flex: 2;
             padding: 40px;
+            box-sizing: border-box;
+        }
+
+        &.tn-card-vertical {
+            max-width: 350px;
+            width: auto;
+
+            flex-direction: column;
+
+            .tn-card-media {
+                min-width: 348px;
+                min-height: 350px;
+            }
         }
     }
+
 }
