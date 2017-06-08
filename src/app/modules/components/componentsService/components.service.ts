@@ -32,7 +32,7 @@ export class ComponentsService {
             this.http
                 .get(this.componentsResource + 'components/' + category + '/' + id + '/' + id + '.json')
                 .map( (res:Response) => res.json() )
-                .catch( (err: Response) => Observable.of(this.emptyComponent));
+                .catch( (err: Response) => Observable.of(this.getEmptyComponent(id)));
         return component;
     }
 
@@ -44,5 +44,10 @@ export class ComponentsService {
         return component;
     }
 
+    getEmptyComponent(id: string) {
+        var emptyComponent = this.emptyComponent;
+        emptyComponent.sections[0].title = id;
 
+        return emptyComponent;
+    }
 }

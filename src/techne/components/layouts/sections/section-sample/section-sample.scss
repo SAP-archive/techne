@@ -19,10 +19,15 @@
 
     .tn-section-samples {
         flex: 2;
-        padding: 40px;
+        padding: 20px;
 
-        
+        .tn-section-sample {
+            padding: 20px;
 
+            div {
+                width: 100%;
+             }
+        }
     }
 
 }

@@ -1,0 +1,26 @@
+@import 'system/colors';
+
+// Tabs
+
+.tn-tabs {
+
+    .tn-tabs-options {
+        list-style: none;
+        border-bottom: 1px solid $tn-color-neutral-lightest;
+        padding: 0;
+        margin: 0;
+
+        .tn-tabs-option {
+            display: inline-block;
+            padding: .5em 1em;
+            cursor: pointer;
+            color: $tn-color-default;
+
+            &.tn-tabs-option-selected {
+                background-color: $tn-color-default-dark;
+                color: white;
+            }
+        }
+    }
+
+}
