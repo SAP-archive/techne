@@ -1,0 +1,16 @@
+.tn-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .tn-card {
+        margin: 10px;
+    }
+
+    &.tn-cards-4-columns {
+        .tn-card {
+            min-width: 345px;
+            max-width: 23%;
+        }
+    }
+}

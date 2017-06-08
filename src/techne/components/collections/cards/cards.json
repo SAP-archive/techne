@@ -1,0 +1,36 @@
+{
+    "id": "card",
+    "label": "Cards",
+    "sections": [
+        {
+            "id": "card-overview",
+            "type": "title-text",
+            "title": "Cards Collection",
+            "content": "Cards are used to display a collection of cards of representing the same information. Optimized for scanneability and findability."
+        },
+        {
+            "id": "card-default",
+            "type": "sample",
+            "wide": true,
+            "title": "Standard cards collection",
+            "contentMD": "cards.default.md",
+            "markup": "cards.default.html"
+        },
+        {
+            "id": "card-default",
+            "type": "sample",
+            "wide": true,
+            "title": "Standard cards collection - 4 columns",
+            "contentMD": "cards.4columns.md",
+            "markup": "cards.4columns.html"
+        },
+        {
+            "id": "card-default",
+            "type": "sample",
+            "wide": true,
+            "title": "Cards with media collection",
+            "contentMD": "cards.media.md",
+            "markup": "cards.media.html"
+        }
+    ]
+}

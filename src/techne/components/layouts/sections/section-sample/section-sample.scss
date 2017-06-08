@@ -4,6 +4,7 @@
 
 .tn-section-sample {
     display: flex;
+    flex-direction: row;
     border-bottom: 1px solid $tn-color-neutral-lightest;
 
     .tn-section-overview {
@@ -42,5 +43,15 @@
             line-height: 1.8em;
         }
     }
+
+    &.tn-section-vertical {
+        flex-direction: column;
+
+        .tn-section-overview {
+            width: 100%;
+            padding-bottom: 0;
+        }
+    }
+
 
 }

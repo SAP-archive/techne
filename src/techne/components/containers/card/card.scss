@@ -4,7 +4,7 @@
     padding: 40px;
     border: 1px solid $tn-color-neutral-lighter;
     min-width: 370px;
-    max-width: 500px;
+    max-width: 460px;
     box-sizing: border-box;
 
     &:hover {
@@ -40,8 +40,14 @@
         display: block;
     }
 
+    &.tn-card-static {
+        .tn-card-primary-info, .tn-card-secondary-info, .tn-card-label {
+            color: $tn-color-neutral;
+        }
+    }
+
     &.tn-card-disabled {
-        background-color: $tn-color-neutral-lightest;
+        background-color: lighten($tn-color-neutral-lightest, 2%);
 
         .tn-card-primary-info, .tn-card-secondary-info, .tn-card-label {
             color: $tn-color-neutral-light;

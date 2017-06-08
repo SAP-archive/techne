@@ -1,0 +1,1 @@
+This is a sample of a Cards collection where the cards have space to display some media or images.
