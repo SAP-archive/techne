@@ -5,4 +5,8 @@
 .tn-layout-list-content {
     display: flex;
     flex-direction: row;
+
+    .tn-layout-content {
+        width: 100%
+    }
 }

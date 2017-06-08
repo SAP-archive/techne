@@ -12,9 +12,14 @@ $tn-color-accent-light: lighten($tn-color-accent, 10%);
 $tn-color-accent-dark: darken($tn-color-accent, 10%);
 
 $tn-color-neutral: #21262c !default;
-$tn-color-neutral-lightest: lighten($tn-color-neutral, 60%);
+$tn-color-neutral-lightest: lighten($tn-color-neutral, 70%);
 $tn-color-neutral-light: lighten($tn-color-neutral, 20%);
 $tn-color-neutral-dark: darken($tn-color-neutral, 10%);
+
+$tn-color-positive: #18C407;
+.tn-color-positive {
+    color: $tn-color-positive;
+}
 
 // Colors Debug
 .tn-debug-color-default { background-color: $tn-color-default;  }

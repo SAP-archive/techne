@@ -20,10 +20,10 @@
 
     .tn-section-samples {
         flex: 2;
-        //padding: 20px;
+        padding: 40px;
 
         .tn-section-rendered {
-            padding: 20px;
+            padding: 40px;
 
             div {
                 width: 100%;
@@ -31,7 +31,10 @@
         }
 
         .tn-section-code {
-            padding: 20px;
+            padding: 40px;
+            font-family: monospace;
+            font-size: 1.2em;
+            line-height: 1.8em;
         }
     }
 

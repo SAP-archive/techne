@@ -7,9 +7,9 @@
 </div>
 <div class="tn-section-samples">
     <div class="tn-tabs">
-        <ul class="tn-tabs-options">
-            <li *ngFor="let option of options; let i = index" class="tn-tabs-option" [ngClass]="{ 'tn-tabs-option-selected': optionSelected == i }"><a (click)="selectOption(i)"> {{ option.label }} </a></li>
-        </ul>
+        <div class="tn-tabs-options">
+            <a *ngFor="let option of options; let i = index" (click)="selectOption(i)" [ngClass]="{ 'tn-tabs-option-selected': optionSelected == i }" class="tn-tabs-option"> {{ option.label }} </a>
+        </div>
         <div [ngSwitch]="optionSelected" class="tn-tabs-container">
             <div *ngSwitchCase="0" class="tn-section-rendered">
                 <div [innerHTML]="codeSample">

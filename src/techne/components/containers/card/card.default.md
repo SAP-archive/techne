@@ -1,0 +1,1 @@
+The **Standard Card** is the simplest way to represent concise information.

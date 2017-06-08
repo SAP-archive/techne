@@ -1,0 +1,48 @@
+@import 'system/colors';
+
+.tn-card {
+    padding: 40px;
+    border: 1px solid $tn-color-neutral-lightest;
+    min-width: 370px;
+    max-width: 500px;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: $tn-color-default-light;
+        box-shadow: 0 0 5px $tn-color-neutral-lightest;
+        cursor: pointer;
+    }
+
+    &:hover.tn-card-static, &:hover.tn-card-disabled {
+        border-color: $tn-color-neutral-lightest;
+        box-shadow: none;
+        cursor: default;
+    }
+
+    .tn-card-primary-info {
+        font-size: 1em;
+        font-weight: bold;
+        color: $tn-color-default-light;
+        margin: 0;
+    }
+
+    .tn-card-secondary-info {
+        margin: 10px 0 0 0;
+        color: $tn-color-neutral;
+        font-size: .8em;
+    }
+
+    .tn-card-label {
+        margin: 30px 0 0 0;
+        font-size: .8em;
+        display: block;
+    }
+
+    &.tn-card-disabled {
+        background-color: #FAFBFD;
+
+        .tn-card-primary-info, .tn-card-secondary-info, .tn-card-label {
+            color: $tn-color-neutral;
+        }
+    }
+}
