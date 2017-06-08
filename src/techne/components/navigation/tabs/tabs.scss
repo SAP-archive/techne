@@ -6,7 +6,7 @@
 
     .tn-tabs-options {
         list-style: none;
-        border-bottom: 1px solid $tn-color-neutral-lightest;
+        border-bottom: 1px solid $tn-color-neutral-lighter;
         padding: 0;
         margin: 0;
 
@@ -17,8 +17,9 @@
             color: $tn-color-default;
 
             &.tn-tabs-option-selected {
-                background-color: $tn-color-default-dark;
-                color: white;
+                background-color: $tn-color-neutral-lighter;
+                cursor: default;
+                color: $tn-color-neutral;
             }
         }
     }

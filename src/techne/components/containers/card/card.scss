@@ -2,19 +2,19 @@
 
 .tn-card {
     padding: 40px;
-    border: 1px solid $tn-color-neutral-lightest;
+    border: 1px solid $tn-color-neutral-lighter;
     min-width: 370px;
     max-width: 500px;
     box-sizing: border-box;
 
     &:hover {
         border-color: $tn-color-default-light;
-        box-shadow: 0 0 5px $tn-color-neutral-lightest;
+        box-shadow: 0 0 5px $tn-color-neutral-lighter;
         cursor: pointer;
     }
 
     &:hover.tn-card-static, &:hover.tn-card-disabled {
-        border-color: $tn-color-neutral-lightest;
+        border-color: $tn-color-neutral-lighter;
         box-shadow: none;
         cursor: default;
     }
@@ -27,7 +27,7 @@
     }
 
     .tn-card-secondary-info {
-        margin: 10px 0 0 0;
+        margin: 5px 0 0 0;
         color: $tn-color-neutral;
         font-size: .8em;
     }
@@ -35,14 +35,42 @@
     .tn-card-label {
         margin: 30px 0 0 0;
         font-size: .8em;
+        font-weight: bold;
+        letter-spacing: .05em;
         display: block;
     }
 
     &.tn-card-disabled {
-        background-color: #FAFBFD;
+        background-color: $tn-color-neutral-lightest;
 
         .tn-card-primary-info, .tn-card-secondary-info, .tn-card-label {
-            color: $tn-color-neutral;
+            color: $tn-color-neutral-light;
+        }
+    }
+
+    &.tn-card-with-media {
+        display: flex;
+        padding: 0;
+
+        .tn-card-media {
+            flex: 1;
+            position: relative;
+            min-width: 175px;
+            min-height: 175px;
+
+            .tn-card-media-container {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $tn-color-neutral-lightest;
+            }
+        }
+
+        .tn-card-content {
+            flex: 2;
+            padding: 40px;
         }
     }
 }

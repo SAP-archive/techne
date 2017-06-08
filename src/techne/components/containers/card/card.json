@@ -11,23 +11,30 @@
         {
             "id": "card-default",
             "type": "sample",
-            "title": "Standard card",
+            "title": "Standard",
             "contentMD": "card.default.md",
             "markup": "card.default.html"
         },
         {
             "id": "card-static",
             "type": "sample",
-            "title": "Static card",
+            "title": "Static",
             "contentMD": "card.static.md",
             "markup": "card.static.html"
         },
         {
             "id": "card-disabled",
             "type": "sample",
-            "title": "Disabled card",
+            "title": "Disabled",
             "contentMD": "card.disabled.md",
             "markup": "card.disabled.html"
+        },
+        {
+            "id": "card-disabled",
+            "type": "sample",
+            "title": "Media",
+            "contentMD": "card.media.md",
+            "markup": "card.media.html"
         }
     ]
 }
