@@ -1,4 +1,45 @@
 <!--
+CARD:
+    CONTENT ___
+    title="", (string)
+    description="", (string)
+    label="", (string | optional)
+    media="", (url | optional)
+    mediaAlt="", (string | optional)
+
+    TYPE ___
+    modifier="", (string | optional)
+
+    STATES ___
+    mediaFill=false (boolean | optional)
+-->
+{% macro card(
+    title="",
+    description="",
+    label="",
+    modifier="",
+    media="",
+    mediaAlt="",
+    mediaFill=false) %}
+    <div class="tn-card{{ '--' + modifier if modifier }}">{% if media %}
+        <div class="tn-card__media{{ '--fill' if mediaFill }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
+        </div>{% endif %}
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                {{ title }}
+            </h2>
+            <p class="tn-card__description">
+                {{ description }}
+            </p>
+            <p class="tn-card__label">
+                {{ label }}
+            </p>
+        </div>
+    </div>
+{% endmacro %}
+
+
+<!--
 TABLE:
     header="", (array | optional)
     row="", (array)

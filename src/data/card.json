@@ -1,0 +1,19 @@
+{
+	"id": "card",
+    "name": "Card",
+    "modifiers": [
+        "media"
+    ],
+    "data": {
+        "title": "CARD_HEADER",
+        "description": "CARD_DESCRIPTION",
+        "label": "CARD_LABEL",
+        "media": {
+            "alt": "CARD_MEDIA_ALT",
+            "icon": "http://via.placeholder.com/73x73",
+            "image": "http://via.placeholder.com/370x370"
+        }
+
+
+    }
+}

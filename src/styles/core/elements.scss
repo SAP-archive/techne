@@ -71,17 +71,17 @@ img {
   line-height: 0;
 }
 
-// a {
-//   color: $color--link;
-//   text-decoration: none;
-//   &:hover {
-//     color: $color--link-hover;
-//   }
-//   &:active, &:focus {
-//     color: $color--link-hover;
-//     outline: none;
-//   }
-// }
+a {
+  color: $color--link;
+  text-decoration: none;
+  &:hover {
+    color: $color--link-hover;
+  }
+  &:active, &:focus {
+    color: $color--link-hover;
+    outline: none;
+  }
+}
 
 /**
 * @section Table Elements

@@ -2,20 +2,16 @@
 @import "../core/mixins";
 @import "../core/functions";
 
-$block: ns(table);
-
 /*!
     .tn-table
-        .tn-table__row, tn-table__row--stripe | .is-active
+        .tn-table__row+(--stripe)
         .tn-table__cell
 */
 
 // TABLE
 //     - not-striped
 
-
-
-.#{$block} {
+.tn-table {
     //BASE
     //set all BLOCK reset and baseline styles
     @include reset;
@@ -26,7 +22,7 @@ $block: ns(table);
     //VARIANTS
     //each variant MUST extend base block
     // &--modifier {
-    //     @extend .#{$block};
+    //     @extend .tn-table;
     // }
 
 
@@ -38,7 +34,7 @@ $block: ns(table);
         //VARIANTS
         //each variant MUST extend element block
         &--stripe {
-            //@extend .#{$block}__row;
+            @extend .tn-table__row !optional;
             background: color(lightest);
         }
         //STATES
@@ -56,7 +52,7 @@ $block: ns(table);
         //VARIANTS
         //each variant MUST extend element block
         // &--modifier {
-        //     @extend .#{$block}__cell;
+        //     @extend .tn-table__cell;
         // }
     }
 

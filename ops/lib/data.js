@@ -70,13 +70,14 @@ exports.getDocsComponentData = () => {
 
 
 
-/// WIP for individial code snippets
+/// individual code snippets
 exports.getSrcComponentData = function(file) {
     try {
         var key = getPageKey(file);
-        return { components: {} };
+        var component = require(`../../src/data/${key}.json`);
+        return component;
     } catch(err) {
         console.log(err.message);
     }
-    return { components: {} };
+    return {};
 };
