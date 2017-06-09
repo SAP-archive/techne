@@ -22,7 +22,7 @@
         }
 
         .tn-side-nav-header {
-            color: $tn-color-neutral-lighter;
+            color: $tn-color-neutral-light;
             font-size: 1.4em;
             margin-bottom: 10px;
             display: block;
@@ -32,14 +32,14 @@
             margin-bottom: 5px;
         }
         
-        .tn-side-nav-option-active {
-            color: $tn-color-default-light;
+        .tn-side-nav-option-selected {
+            color: $tn-color-neutral-lightest;
         }
 
     }
 
     a { 
-        color: white; 
+        color: $tn-color-neutral-lighter; 
         text-decoration: none; 
 
         &:hover {

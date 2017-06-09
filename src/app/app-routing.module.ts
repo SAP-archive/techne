@@ -13,6 +13,7 @@ const routes: Routes = [
     {
         path: 'components', component: ComponentsComponent,
         children: [
+            { path: '', component: ComponentsHomeComponent },
             { path: ':category/:id', component: ComponentViewerComponent }
         ]
     },

@@ -1,13 +1,13 @@
 <nav class="tn-main-nav">
     <h1 class="tn-identity">
-        <img src="/assets/techne-logo.svg" class="th-logo" />
+        <img src="/assets/techne-logo.svg" class="tn-logo" />
         <span class="tn-inidentity-name">
-            <a routerLink="/">Techne</a>
+            <a routerLink="/">TECHNE</a>
         </span>
     </h1>
 
     <ul class="tn-main-nav-section tn-main-nav-options">
-        <li *ngFor="let option of mainOptions; let i = index;" class="tn-main-nav-option">
+        <li *ngFor="let option of mainOptions; let i = index;" routerLinkActive="tn-main-nav-option-selected" class="tn-main-nav-option">
             <a routerLink="{{ option.routerLink }}">{{ option.label }}</a>
         </li>
     </ul>

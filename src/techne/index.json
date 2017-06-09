@@ -97,7 +97,7 @@
             {  "id": "icons", "label": "Icons" },
             {  "id": "alerts", "label": "Alerts" },
             {  "id": "tours", "label": "Tours" },
-            {  "id": "wizards", "label": "wizards" },
+            {  "id": "wizards", "label": "Wizards" },
             {  "id": "statusIndicators", "label": "Status Indicators" }
         ]
     }

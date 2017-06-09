@@ -14,8 +14,6 @@
         text-decoration: none; 
     }
 
-    .th-logo { height: 20px; vertical-align: middle; }
-
     @include tn-padding($tn-narrow-spacing);
 
     .tn-main-nav-section {
@@ -27,11 +25,38 @@
 
         .tn-main-nav-option {
             list-style: none;
-            @include tn-margin($tn-narrow-spacing);
+            @include tn-margin-horizontal($tn-wide-spacing);
+            font-size: 1.2em;
+
+            a {
+                color: $tn-color-neutral-lighter;
+            }
+
+            &.tn-main-nav-option-selected {
+                a {
+                    color: $tn-color-neutral-lightest;
+                }
+            }
         }
 
         @media screen and (max-width: $tn-phone-break) {
             display: none;
         }
+    }
+}
+
+.tn-identity {
+    margin: 0 0 0 1.5em;
+
+    .tn-logo {
+        height: 30px; 
+        vertical-align: middle;
+    }
+
+    .tn-inidentity-name {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0 0 0 .2em;
+        vertical-align: middle;
     }
 }

@@ -1,1 +1,21 @@
-<h2>Components 2</h2>
+<div class="tn-section-title-text">
+    <div class="tn-section-title">
+        <h1>Components</h1>
+    </div>
+    <div class="tn-section-text">
+        <p>Components are ready to use HTML/CSS Snippets.</p>
+    </div>
+</div>
+
+<div *ngFor="let category of componentList" class="tn-section-sample">
+    <div class="tn-section-overview">
+        <h2>{{ category.label }} </h2>
+    </div>
+    <div class="tn-section-samples">
+        <div class="tn-cards">
+            <div *ngFor="let component of category.components" [routerLink]="category.id + '/' + component.id" class="tn-card">
+                <h5 class="tn-card-primary-info">{{ component.label }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
