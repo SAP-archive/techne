@@ -43,17 +43,28 @@ const buildDocs = () => {
         var page = docsData.getDocsPageData(file);
         return { page: page }
     };
+    const setLinkPath = (file) => {
+        //TODO: improve this to avoid hardcoding directories
+        var isSecondLevel = false;
+        if (file.path.includes('/components/')) {
+            isSecondLevel = true;
+        }
+        var linkpath = isSecondLevel ? '../' : '';
+        return { linkpath: linkpath }
+    }
+
     //only process main HTML files, not includes, templates, or macros
 	return gulp.src([`${paths.src.html}/**/*.html`, `!${paths.src.layouts}/**/*`, `!${paths.src.includes}/**/*`, `!${paths.src.macros}/**/*` ])
         .pipe(data(setPageData))
         .pipe(data(setAppData))
+        .pipe(data(setLinkPath))
 		.pipe(nunjucks({
-			searchPaths: [paths.src.layouts, paths.src.includes, paths.src.macros, './src/templates'],
+			searchPaths: [paths.src.layouts, paths.src.includes, paths.src.macros, paths.src.components],
 			locals: {
                 components: docsData.getDocsComponentData(),
 				date: new Date(),
 				env: environment.production ? 'production':'development',
-				debug: environment.debug
+				debug: environment.debug,
 			}
 		}))
 		//.pipe(debug())

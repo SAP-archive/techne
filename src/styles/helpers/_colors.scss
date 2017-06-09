@@ -1,0 +1,9 @@
+@import "../core/settings";
+
+$ns: ns();
+
+@each $key, $value in $colors {
+  .#{$ns}is-color-#{$key} {
+    color: $value;
+  }
+}

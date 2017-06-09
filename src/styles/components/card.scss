@@ -1,0 +1,57 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+    card structure
+    .tn-card
+        .tn-card__media+(--fill)
+        .tn-card__content
+            .tn-card__header, .tn-card__description, .tn-card__label
+*/
+
+.tn-card {
+    @include reset;
+    //LOCAL VARS
+    $tn-card-color-border: color(light) !default;
+    $tn-card-color-link: color(action) !default;
+    $tn-card-color-link: $color--link !default;
+    $tn-card-padding: 40px !default;
+    $tn-card-media-width: 75px !default;
+
+    display: flex;
+    border: solid 1px $tn-card-color-border;
+
+    //ELEMENTS
+    &__media {
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: $tn-card-media-width;
+        margin: $tn-card-padding 0 $tn-card-padding $tn-card-padding;
+
+        //ELEMENT MODIFIERS
+        &--fill {
+            @extend .tn-card__media;
+            margin: 0;
+            width: $tn-card-media-width + $tn-card-padding;
+            background-size: cover;
+        }
+
+    }
+
+    &__content {
+        padding: $tn-card-padding;
+    }
+
+    &__header {
+
+    }
+    &__description {
+
+    }
+    &__label {
+
+    }
+
+
+}
