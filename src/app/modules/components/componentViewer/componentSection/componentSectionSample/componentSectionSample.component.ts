@@ -2,6 +2,9 @@ import { Component, ViewEncapsulation, Input, ElementRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
+import 'prismjs';
+
+
 import { ComponentsService } from '../../../componentsService';
 
 @Component({

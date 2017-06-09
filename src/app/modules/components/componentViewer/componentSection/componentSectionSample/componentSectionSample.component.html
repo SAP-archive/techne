@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div *ngSwitchCase="1" class="tn-section-code">
-                <pre><code class="html">{{ code }}</code></pre>
+                <handy-syntax-highlighter [language]="'html'" [content]="code"></handy-syntax-highlighter>
             </div>
         </div>
     </div>

@@ -37,7 +37,9 @@
             "testTsconfig": "tsconfig.spec.json",
             "prefix": "app",
             "styles": [
-                "techne/techne.scss"
+                "techne/techne.scss",
+
+                "../extra/prismjs/prism-vs.css"
             ],
             "stylePreprocessorOptions": {
                 "includePaths": [
@@ -45,7 +47,6 @@
                 ]
             },
             "scripts": [
-                "../node_modules/highlight.js/lib/highlight.js"
             ],
             "environmentSource": "environments/environment.ts",
             "environments": {

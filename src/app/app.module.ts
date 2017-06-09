@@ -17,6 +17,7 @@ import {
 import { Four0FourComponent } from './modules/four0four/four0four.component';
 
 import { MarkdownModule } from 'angular2-markdown';
+import { Ng2HandySyntaxHighlighterModule } from 'ng2-handy-syntax-highlighter';
 
 
 import { TechneModule } from '../techne/techne.module';
@@ -42,6 +43,7 @@ import { TechneModule } from '../techne/techne.module';
         AppRoutingModule,
 
         MarkdownModule.forRoot(),
+        Ng2HandySyntaxHighlighterModule,
 
         TechneModule
     ],
