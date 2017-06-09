@@ -30,11 +30,16 @@
 
             a {
                 color: $tn-color-neutral-lighter;
+
+                &:hover {
+                    color: $tn-color-accent;
+                }
             }
 
             &.tn-main-nav-option-selected {
                 a {
                     color: $tn-color-neutral-lightest;
+                    cursor: default;
                 }
             }
         }
