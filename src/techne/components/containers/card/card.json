@@ -42,6 +42,13 @@
             "title": "Media - Vertical",
             "contentMD": "card.media.vertical.md",
             "markup": "card.media.vertical.html"
+        },
+        {
+            "id": "card-see-also",
+            "type": "sample",
+            "title": "Media - Vertical",
+            "contentMD": "card.media.vertical.md",
+            "markup": "card.media.vertical.html"
         }
     ]
 }
