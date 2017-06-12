@@ -22,6 +22,12 @@ $block: ns(button);
 //     - add
 
 .#{$block} {
+    //SETTINGS
+    $button-background-color: $background-color--button;
+    $button-background-color-primary: color(accent);
+    $button-background-color-secondary: color(brand);
+    $button-color-inverse: color(lightest);
+
     //BASE
     //set all reset and baseline block styles
     @include reset;
@@ -37,26 +43,27 @@ $block: ns(button);
     white-space: nowrap;
     align-items: flex-start;
     padding: 20px 40px;
-    background-color: $background-color--button;
+    background-color: $button-background-color;
 
     //VARIANTS
     //each variant MUST extend base block
     &--primary {
         @extend .#{$block};
+        background-color: $button-background-color-primary;
     }
     &--secondary {
         @extend .#{$block};
-        background-color: color(link);
-        color: color(lightest);
+        background-color: $button-background-color-secondary;
+        color: $button-color-inverse;
     }
     &--link {
         @extend .#{$block};
-        background-color: color(lightest);
+        background-color: $button-color-inverse;
     }
     &--upload {
         @extend .#{$block};
-        background-color: color(link);
-        color: color(lightest);
+        background-color: $button-background-color-secondary;
+        color: $button-color-inverse;
         position: relative;
         overflow: hidden;
         [type="file"] {
@@ -72,8 +79,6 @@ $block: ns(button);
         @extend .#{$block};
         @include weight(bold);
         width: 100%;
-        background-color: color(light);
-        color: color(link);
         &::before {
             @include type(3);
             @include weight(reg);
