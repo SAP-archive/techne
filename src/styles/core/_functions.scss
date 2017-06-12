@@ -7,7 +7,7 @@
   }
 }
 
-@function ns($str) {
+@function ns($str: "") {
 	$ns: tn-;
     @return $ns + $str;
 }

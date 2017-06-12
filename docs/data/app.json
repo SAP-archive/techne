@@ -97,7 +97,7 @@
             "items": [
                 {
                     "title": "Buttons",
-                    "url": "buttons.html",
+                    "url": "components/buttons.html",
                     "id": "buttons"
                 }
             ]
@@ -106,8 +106,13 @@
   			"title": "Collections",
             "items": [
                 {
+                    "title": "Cards",
+                    "url": "components/cards.html",
+                    "id": "cards"
+                },
+                {
                     "title": "Tables",
-                    "url": "tables.html",
+                    "url": "components/tables.html",
                     "id": "tables"
                 }
 
@@ -118,7 +123,7 @@
             "items": [
                 {
                     "title": "Icons",
-                    "url": "icons.html",
+                    "url": "components/icons.html",
                     "id": "icons"
                 }
 

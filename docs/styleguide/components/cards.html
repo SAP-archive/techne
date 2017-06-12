@@ -1,0 +1,118 @@
+{% extends 'master.html' %}
+{% import "format.html" as format %}
+
+<!-- set component data from src/data -->
+{% set component = components.card %}
+{% set key = component.id %}
+{% set c = component.data %}
+
+<!-- import component template from src/templates -->
+{% from "collections.html" import card as card %}
+
+{% block nav %}
+	{% include "app_sidebar_components.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+    <p>
+    {{ page.intro }}
+    </p>
+
+    <h2>Structure</h2>
+    <pre>
+.tn-{{ key }}
+    .tn-card__media?+(--fill)
+    .tn-card__content
+        .tn-card__header
+        .tn-card__description
+        .tn-card__label?
+
+    </pre>
+
+
+    <!-- START BASE COMPONENT EXAMPLES -->
+    <h2 id="base">Common card <a href="#base">#</a></h2>
+
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                title=c.title,
+                description=c.description,
+                label=c.label
+            ) }}
+    {% endset %}
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+    <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                title=c.title,
+                description=c.description,
+                label=c.label,
+                media=c.media.icon,
+                mediaAlt=c.media.alt
+            ) }}
+    {% endset %}
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+
+    <h3 id="media">Include .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                title=c.title,
+                description=c.description,
+                label=c.label,
+                media=c.media.image,
+                mediaAlt=c.media.alt,
+                mediaFill=true
+            ) }}
+    {% endset %}
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+
+
+
+
+
+    <!-- {% if modifier %}<h2>Variants</h2>{% endif %}
+
+    {% for modifier in component.modifiers %}
+        <h3 id="{{ modifier }}">.tn-{{ key }}--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+
+            {{ page.variants[modifier].description }}
+        </p>
+
+        {% set example %}
+            {{ card(
+                    title=c.title,
+                    description=c.description,
+                    label=c.label,
+                    modifier=modifier,
+                    media='path/to/file.jpg'
+                ) }}
+        {% endset %}
+        <p>{{ example }}</p>
+        <p>
+            {{ format.example(example) }}
+        </p>
+
+    {% endfor %} -->
+
+
+
+{% endblock %}

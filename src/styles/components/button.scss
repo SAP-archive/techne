@@ -2,10 +2,9 @@
 @import "../core/mixins";
 @import "../core/functions";
 
-$block: ns(button);
+/*!
 
-/*! */
-
+*/
 
 // BUTTON
 //     - primary
@@ -21,7 +20,7 @@ $block: ns(button);
 //         - next
 //     - add
 
-.#{$block} {
+.tn-button {
     //BASE
     //set all reset and baseline block styles
     @include reset;
@@ -42,19 +41,19 @@ $block: ns(button);
     //VARIANTS
     //each variant MUST extend base block
     &--primary {
-        @extend .#{$block};
+        @extend .tn-button;
     }
     &--secondary {
-        @extend .#{$block};
+        @extend .tn-button;
         background-color: color(link);
         color: color(lightest);
     }
     &--link {
-        @extend .#{$block};
+        @extend .tn-button;
         background-color: color(lightest);
     }
     &--upload {
-        @extend .#{$block};
+        @extend .tn-button;
         background-color: color(link);
         color: color(lightest);
         position: relative;
@@ -69,7 +68,7 @@ $block: ns(button);
         }
     }
     &--add {
-        @extend .#{$block};
+        @extend .tn-button;
         @include weight(bold);
         width: 100%;
         background-color: color(light);
