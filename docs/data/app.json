@@ -91,29 +91,28 @@
       ]
   },
   "sidebar": {
-      "components": [
-  		{
-  			"title": "Actions",
-            "items": [
-                {
-                    "title": "Buttons",
-                    "url": "buttons.html",
-                    "id": "buttons"
-                }
-            ]
-  		},
-          {
-  			"title": "Collections",
-            "items": [
-                {
-                    "title": "Tables",
-                    "url": "tables.html",
-                    "id": "tables"
-                }
+	  "components": [
+		{
+			"title": "Actions",
+			"items": [
+				{
+					"title": "Buttons",
+					"url": "buttons.html",
+					"id": "buttons"
+				}
+			]
+		},
+		  {
+			"title": "Collections",
+			"items": [
+				{
+					"title": "Tables",
+					"url": "tables.html",
+					"id": "tables"
+				}
 
-            ]
-  		}
-    ]
-
+			]
+		}
+	  ]
   }
 }

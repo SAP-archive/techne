@@ -3,14 +3,15 @@
     <div class="yaas-signature-nav">
         {% set signav = app.nav.yaas %}
         {% set home = signav[0] %}
-        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
-            <img src="svg/logo-yaas.svg" height="30" alt="YaaS">YaaS
+        <a href="{{ home.url }}" class="yaas-signature-nav__index domain">
+            <img src="svg/logo-yaas.svg" class="domain-logo" alt="YaaS">
+            <span class="logo-text">YAAS</span>
         </a>
 
         <ul class="yaas-signature-nav__list" role="navigation">
         {% for item in signav %}
             <li class="yaas-signature-nav__listitem"{{ ' aria-haspopup="true" aria-controls="' + item.id + '-subnav"' if item.subnav }}>
-                <a class="yaas-signature-nav__listlink {{ item.id }}--" href="{{ item.url }}" >
+                <a class="yaas-signature-nav__listlink " href="{{ item.url }}" >
                     {{ item.title }}
                 </a>
                 {% if item.subnav %}
@@ -18,7 +19,7 @@
                     <ul class="yaas-signature-nav__subnav-list" id="{{ item.id }}-subnav">
                     {% for subitem in subnav %}
                         <li class="yaas-signature-nav__subnav-listitem">
-                            <a class="yaas-signature-nav__subnav-listlink {{ subitem.id }}--" href="{{ subitem.url }}">
+                            <a class="yaas-signature-nav__subnav-listlink" href="{{ subitem.url }}">
                                 {{ subitem.title }}
                             </a>
                         </li>
@@ -29,12 +30,21 @@
         {% endfor %}
         </ul>
 
-        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
-            <img src="svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+        <a href="{{ home.url }}" class="yaas-signature-nav__index brand {{ home.id }}--">
+            <img src="svg/logo-hybris.svg" class="brand-logo" alt="SAP Hybris">
+        </a>
+        <!-- mobile navigation -->
+        <a href="#" class="primary-nav--toggle">
+            <span class="primary-nav-triangle"></span>
         </a>
     </div>
 
     <div class="docs-primary-nav">
+        <a id="menu-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
         <ul class="docs-primary-nav__list" role="navigation">
             {% set home = app.nav.home %}
             <li class="docs-primary-nav__listitem">
@@ -45,7 +55,7 @@
             {% set menu = app.nav.menu %}
             {% for item in menu %}
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+                    <a class="docs-primary-nav__listlink" href="{{ item.url }}" aria-selected="{{ item.selected }}">
                         {{ item.title }}
                     </a>
                 </li>

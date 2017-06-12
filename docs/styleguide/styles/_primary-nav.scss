@@ -1,9 +1,129 @@
+@import'variables';
+
 .yaas-signature-nav {
+    background: $dark-blue-700;
+    color: $white;
+    text-align: center;
+    overflow: visible;
+    display: block;
+    li{
+        a{
+            padding: 13px 12px;
+            display: block;
+            color: $dark-grey;
+            font-weight: bold;
+            font-family: "Dosis",sans-serif;
+            @media (max-width: 1049px) and (min-width: 741px){
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+        &:hover a{
+            color: $white;
+            background-color: $default-blue-500;
+        }
+    }
+    .domain{
+        float: left;
+        display: block;
+        padding-right: 15px;
+        height: $primary-nav--height;
+        .domain-logo{
+            padding: 5px 10px 10px;
+            margin-top: 5px;
+            width: 46px;
+            height: 44px;
+            line-height: $primary-nav--height;
+        }
+        .logo-text{
+            font-size: 16px;
+            line-height: $primary-nav--height;
+            display: inline-block;
+            letter-spacing: .025em;
+            vertical-align: top;
+            font-family: $font-family-dosis;
+            color: $default-blue;
+        }
+    }
+    &__list{
+        border-left: 2px dotted $dark-grey;
+    }
+    #yaas-my-account-subnav{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,.3);
+        min-width: 150px;
+        text-align: left;
+        li{
+            margin-bottom: 0;
+            border-top: 1px solid $light-grey-200;
+            &:first-child{
+                border-top: none;
+            }
+            a{
+                background-color: $white;
+                color:  $default-blue;
+            }
+            &:hover a{
+                background-color: $default-blue;
+                color: $white;
+            }
+        }
+    }
+    .primary-nav--toggle{
+        visibility: hidden;
+        opacity: 0;
+        float: right;
+        height: $primary-nav--height;
+        width: $primary-nav--height;
+        display: block;
+        background: $dark-blue-800;
+        position: relative;
+        transition: background-color .2s ease-in-out;
+        span:before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            top: 50%;
+            left: 50%;
+            height: 0;
+            margin-left: -9px;
+            margin-top: -10px;
+            border-color: $dark-blue-800 transparent transparent;
+            border-style: solid;
+            border-width: 9px;
+            border-radius: 3px;
+        }
+        .primary-nav-triangle{
+            position: absolute;
+            display: block;
+            width: 0;
+            top: 50%;
+            left: 50%;
+            height: 0;
+            margin-left: -11px;
+            margin-top: -4px;
+            border-color: $grey transparent transparent;
+            border-style: solid;
+            border-width: 11px;
+            border-radius: 5px;
+        }
 
 
+    }
+}
+.docs-primary-nav{
+    background: $default-blue;
+    color: $white;
+    overflow: hidden;
+    height: 50px;
+    width: 100%;
 }
 
 .docs-primary-nav, .yaas-signature-nav {
+    font-family: $font-family-dosis;
     @include clearfix;
     &__directory, &__index, &__list, &__listitem {
         display: inline-block;
@@ -14,8 +134,7 @@
         padding: 0 20px 0 0;
     }
     &__index {
-
-        padding: 0 20px;
+        padding: 0 10px;
         vertical-align: top;
     }
     &__list {
@@ -28,19 +147,16 @@
         &[aria-haspopup] {
             position: relative;
         }
-
     }
     &__listlink {
         display: block;
-        padding: 0 20px;
+        padding: 14px;
         &[aria-haspopup] {
             &::after {
                 content: '';
-                //@include triangle(10px, color(light), down);
                 position: relative;
                 top: 15px;
             }
-
         }
     }
     //subnavs
@@ -58,7 +174,146 @@
             }
         }
     }
-
-
-
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+    .brand{
+        float: right;
+        display: block;
+        height: $primary-nav--height;
+        .brand-logo {
+            padding: 10px;
+            height: $primary-nav--height;
+        }
+        @media(max-width: 860px) and (min-width: 0){
+            display: none;
+        }
+    }
 }
+
+//media queries for the mobile view
+@media (max-width: 740px) and (min-width: 0){
+    .yaas-signature-nav__list{
+        border-top: 1px solid #808fa1;
+        display: none!important;
+        width: 100%;
+        position: absolute;
+        top: $primary-nav--height;
+        z-index: 1001;
+        border-left: 0 none;
+        &.open{
+            display: block!important;
+            height: auto;
+        }
+        li{
+            border-bottom: 1px solid #223245;
+            line-height: 20px;
+            display: block;
+            position: relative;
+            font-size: 17px;
+            padding: 0;
+            float: none;
+            text-align: left;
+            margin-top: 0;
+            a{
+                color: #808fa1;
+                background: #27394f;
+                text-decoration: none;
+                padding: 20px;
+                display: block;
+            }
+        }
+    }
+    .docs-primary-nav__list{
+        display: none!important;
+    }
+    .primary-nav--toggle{
+        visibility: visible !important;
+        opacity: 1 !important;
+        &.active{
+            background: $default-blue;
+            .primary-nav-triangle{
+                border-color: transparent transparent $white;
+                margin-top: -15px;
+                &:before {
+                    border-color: transparent transparent $default-blue;
+                    margin-top: -8px;
+                    margin-left: -9px;
+                }
+            }
+        }
+    }
+    .yaas-signature-nav__index.brand{
+        display: none !important;
+    }
+}
+//burger icon on mobile
+#menu-toggle{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    padding: 14px;
+    .icon-bar {
+        background: none repeat scroll 0 0 #233243;
+        height: 2px;
+        transform: none;
+        width: 23px;
+        border-radius: 1px;
+        display: block;
+        margin-top: 4px;
+        transition: all 0.5s ease;
+    }
+    &.open{
+        .icon-bar:nth-child(2n+1) {
+            transform: rotate(-45deg);
+        }
+        .icon-bar {
+            position: absolute;
+            margin-top: 8px;
+            transform: rotate(45deg);
+        }
+    }
+    @media(max-width: 740px) and (min-width: 0){
+        display: inline-block;
+    }
+}
+
+.mobile-left-side-navigation{
+    display: none;
+    background: $dark-blue-700 none repeat scroll 0 0;
+    position: absolute;
+    z-index: 901;
+    width: 250px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 100px 0 0 0;
+    overflow-y: auto;
+    transition: all 0.4s ease-out;
+    ul{
+        padding-top: 50px;
+        li{
+            display: inline-block;
+            width: 100%;
+            a{
+                color: $light-grey-100;
+                display: block;
+                padding: 10px 15px 10px 31px;
+                text-decoration: none;
+                font-size: 15px;
+                &:hover, &[aria-selected=true] {
+                    color: $default-blue;
+                }
+            }
+        }
+    }
+    &.open{
+        display: block;
+    }
+}
+
+
+
+
+
