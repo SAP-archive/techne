@@ -45,7 +45,7 @@
         },
         {
             "id": "card-see-also",
-            "type": "sample",
+            "type": "see-also",
             "title": "Media - Vertical",
             "contentMD": "card.media.vertical.md",
             "markup": "card.media.vertical.html"
