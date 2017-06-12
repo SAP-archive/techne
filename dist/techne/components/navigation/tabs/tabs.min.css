@@ -1,0 +1,7 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+.tn-color-positive{color:#18c407}.tn-debug-color-default{background-color:#006fbb}.tn-debug-color-default-light{background-color:#008dee}.tn-debug-color-default-dark{background-color:#005188}.tn-debug-color-accent{background-color:#f0ab00}.tn-debug-color-accent-light{background-color:#ffc024}.tn-debug-color-accent-dark{background-color:#bd8700}.tn-debug-color-neutral{background-color:#21262c}.tn-debug-color-neutral-lightest{background-color:#f4f5f6}.tn-debug-color-neutral-light{background-color:#7c8b9d}.tn-debug-color-neutral-dark{background-color:#0b0d0f}body{color:#21262c}.tn-tabs .tn-tabs-options{list-style:none;border-bottom:1px solid #d4d9de;padding:0;margin:0}.tn-tabs .tn-tabs-options .tn-tabs-option{display:inline-block;padding:.5em 1em;cursor:pointer;color:#006fbb}.tn-tabs .tn-tabs-options .tn-tabs-option.tn-tabs-option-selected{background-color:#f4f5f6;cursor:default;color:#21262c}

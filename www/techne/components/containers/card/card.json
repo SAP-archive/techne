@@ -1,0 +1,54 @@
+{
+    "id": "card",
+    "label": "Card",
+    "sections": [
+        {
+            "id": "card-overview",
+            "type": "title-text",
+            "title": "Card",
+            "content": "Cards are used to display information in a visual, scannable manner. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system."
+        },
+        {
+            "id": "card-default",
+            "type": "sample",
+            "title": "Standard",
+            "contentMD": "card.default.md",
+            "markup": "card.default.html"
+        },
+        {
+            "id": "card-static",
+            "type": "sample",
+            "title": "Static",
+            "contentMD": "card.static.md",
+            "markup": "card.static.html"
+        },
+        {
+            "id": "card-disabled",
+            "type": "sample",
+            "title": "Disabled",
+            "contentMD": "card.disabled.md",
+            "markup": "card.disabled.html"
+        },
+        {
+            "id": "card-with-media",
+            "type": "sample",
+            "title": "Media",
+            "contentMD": "card.media.md",
+            "markup": "card.media.html"
+        },
+        {
+            "id": "card-with-media-vertical",
+            "type": "sample",
+            "title": "Media - Vertical",
+            "contentMD": "card.media.vertical.md",
+            "markup": "card.media.vertical.html"
+        },
+        {
+            "id": "card-see-also",
+            "type": "see-also",
+            "title": "Media - Vertical",
+            "contentMD": "card.media.vertical.md",
+            "markup": "card.media.vertical.html"
+        }
+    ]
+}

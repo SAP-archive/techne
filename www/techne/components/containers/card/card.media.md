@@ -1,0 +1,1 @@
+This type of cards can display images and other media as part of the content.

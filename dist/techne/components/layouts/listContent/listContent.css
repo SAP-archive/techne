@@ -1,0 +1,9 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+body { margin: 0; }
+.tn-layout-list-content { display: flex; flex-direction: row; }
+.tn-layout-list-content .tn-layout-content { width: 100%; }

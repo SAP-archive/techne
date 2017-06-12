@@ -1,0 +1,9 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+.tn-cards { display: flex; flex-direction: row; flex-wrap: wrap; }
+.tn-cards .tn-card { margin: 10px; }
+.tn-cards.tn-cards-4-columns .tn-card { min-width: 345px; max-width: 23%; }

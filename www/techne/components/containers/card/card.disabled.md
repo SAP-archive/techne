@@ -1,0 +1,1 @@
+Is used when the card element cannot be clicked or perform any action.

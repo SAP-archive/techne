@@ -1,0 +1,1 @@
+Used when the card element is only used to display infomation and there is not clickable.

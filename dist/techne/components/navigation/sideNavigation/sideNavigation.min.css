@@ -1,0 +1,7 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+.tn-color-positive{color:#18c407}.tn-debug-color-default{background-color:#006fbb}.tn-debug-color-default-light{background-color:#008dee}.tn-debug-color-default-dark{background-color:#005188}.tn-debug-color-accent{background-color:#f0ab00}.tn-debug-color-accent-light{background-color:#ffc024}.tn-debug-color-accent-dark{background-color:#bd8700}.tn-debug-color-neutral{background-color:#21262c}.tn-debug-color-neutral-lightest{background-color:#f4f5f6}.tn-debug-color-neutral-light{background-color:#7c8b9d}.tn-debug-color-neutral-dark{background-color:#0b0d0f}body{color:#21262c;margin:0}.tn-side-nav{font-size:.9em;width:220px;background-color:#005188;color:#fff;position:relative;height:100%;padding:40px}.tn-side-nav ol,.tn-side-nav ul{margin:0 0 20px;list-style:none;padding-left:0}.tn-side-nav ol ol,.tn-side-nav ol ul,.tn-side-nav ul ol,.tn-side-nav ul ul{padding-left:10px}.tn-side-nav ol .tn-side-nav-header,.tn-side-nav ul .tn-side-nav-header{color:#7c8b9d;font-size:1.4em;margin-bottom:10px;display:block}.tn-side-nav ol .tn-side-nav-option,.tn-side-nav ul .tn-side-nav-option{margin-bottom:5px}.tn-side-nav ol .tn-side-nav-option-selected,.tn-side-nav ul .tn-side-nav-option-selected{color:#f4f5f6}.tn-side-nav a{color:#d4d9de;text-decoration:none}.tn-side-nav a:hover{color:#ffc024}
