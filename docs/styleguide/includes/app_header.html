@@ -45,7 +45,7 @@
             {% set menu = app.nav.menu %}
             {% for item in menu %}
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.selected }}">
+                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id or item.id === page.section }}">
                         {{ item.title }}
                     </a>
                 </li>
