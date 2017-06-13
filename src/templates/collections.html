@@ -23,7 +23,7 @@ CARD:
     mediaAlt="",
     mediaFill=false,
     disabled=false) %}
-    <div class="tn-card{{ '--' + modifier if modifier }}{{ ' is-disabled' if disabled }}"{{ ' role="button"' if button }}>{% if media %}
+    <div class="tn-card{{ '--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>{% if media %}
         <div class="tn-card__media{{ '--fill' if mediaFill }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
         </div>{% endif %}
         <div class="tn-card__content">
@@ -34,7 +34,7 @@ CARD:
                 {{ description }}
             </p>
             <p class="tn-card__label">
-                {{ label }}
+                <span class="tn-has-color-success">{{ label }}</span>
             </p>
         </div>
     </div>

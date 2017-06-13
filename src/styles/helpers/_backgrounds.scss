@@ -1,17 +1,19 @@
 @import "../core/settings";
 
-.has-background-image {
+$ns: ns();
+
+.#{$ns}has-background-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
-.has-background-fixed {
+.#{$ns}has-background-fixed {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 @each $key, $value in $colors {
-  .has-background-color-#{$key} {
+  .#{$ns}has-background-color-#{$key} {
     background-color: $value !important;
 //     $saturation: saturation($value) / 100%;
 //     @if $saturation > 0.5 {

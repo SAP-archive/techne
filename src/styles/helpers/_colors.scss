@@ -1,9 +1,10 @@
 @import "../core/settings";
+@import "../core/functions";
 
 $ns: ns();
 
 @each $key, $value in $colors {
-  .#{$ns}is-color-#{$key} {
+  .#{$ns}has-color-#{$key} {
     color: $value;
   }
 }

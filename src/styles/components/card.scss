@@ -9,8 +9,9 @@
         .tn-card__content
             .tn-card__header, .tn-card__description, .tn-card__label
 */
+$block: ns(card);
 
-.tn-card {
+.#{$block} {
     @include reset;
     //LOCAL VARS
     $tn-card-color-border: color(light) !default;
@@ -18,35 +19,14 @@
     $tn-card-time-hover: 0.2s;
     $tn-card-shadow-hover: 0px 0px 5px 5px rgba(138,143,138,0.2);
     $tn-card-padding: 40px !default;
+    $tn-card-width: 500px !default;
     $tn-card-media-width: 75px !default;
 
     $tn-card-color-link: $color--link !default;
 
-
     display: flex;
+    max-width: $tn-card-width;
     border: solid 1px $tn-card-color-border;
-
-    &--static {
-        @extend .tn-card;
-    }
-
-    //EFFECTS *******************************************
-    transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
-    &:hover:not([class*="--static"], .is-disabled) {
-        border-color: $tn-card-color-link;
-        box-shadow: $tn-card-shadow-hover;
-    }
-    //STATES *******************************************
-    &.is-disabled {
-        background-color: $tn-card-color-disabled;
-        * {
-            color: color(dark);
-        }
-    }
-
-
-
-
 
     //ELEMENTS
     &__media {
@@ -57,7 +37,7 @@
 
         //ELEMENT MODIFIERS
         &--fill {
-            @extend .tn-card__media;
+            @extend .#{$block}__media;
             margin: 0;
             width: $tn-card-media-width + $tn-card-padding;
             background-size: cover;
@@ -71,16 +51,47 @@
 
     &__header {
         color: $tn-card-color-link;
+        font-size: 18px;
+        line-height: 22/18;
+        margin-bottom: 10px;
+        background-color: pink;
     }
     &__description {
-
+        font-size: 13px;
+        line-height: 19/13;
+        margin-bottom: 30px;
+        background-color: pink;
     }
     &__label {
-
+        font-size: 12px;
+        line-height: 14/12;
+        text-transform: uppercase;
+        background-color: pink;
     }
 
 
 
+    //MODIFICATIONS
+    &--static {
+        @extend .#{$block};
+        .#{$block}__header {
+            color: $color;
+        }
+    }
+
+    //EFFECTS *******************************************
+    transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
+    &:hover:not([class*="--static"], .is-disabled, [aria-disabled="true"]) {
+        border-color: $tn-card-color-link;
+        box-shadow: $tn-card-shadow-hover;
+    }
+    //STATES *******************************************
+    &[aria-disabled="true"], &.is-disabled {
+        background-color: $tn-card-color-disabled;
+        * {
+            color: color(dark);
+        }
+    }
 
 
 

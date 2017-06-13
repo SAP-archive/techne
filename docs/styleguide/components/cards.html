@@ -38,9 +38,9 @@
     <!-- output the component example and the code snippet -->
     {% set example %}
         {{ card(
-                title=c.title,
-                description=c.description,
-                label=c.label
+                title="Primary Value",
+                description="Secondary Value",
+                label="Label"
             ) }}
     {% endset %}
     <p>{{ example }}</p>
@@ -62,8 +62,8 @@
 
 </p>
 
-<h3 id="disabled">Disabled card<br> .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
-<p>State: Disabled</p>
+<h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
+<p>State: Disabled, this class/attribute can be toggled with JS </p>
 <p>
     {{ card(
             button=false,
@@ -72,10 +72,10 @@
             label=c.label,
             disabled=true
         ) }}
-
-
 </p>
-
+<p>A11Y NOTE:
+    Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+</p>
 
 
 <hr>
@@ -97,27 +97,6 @@
     <p>
         {{ format.example(example) }}
     </p>
-
-
-    <h3 id="media">Include .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                title=c.title,
-                description=c.description,
-                label=c.label,
-                media=c.media.image,
-                mediaAlt=c.media.alt,
-                mediaFill=true
-            ) }}
-    {% endset %}
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-
-
 
 
 
