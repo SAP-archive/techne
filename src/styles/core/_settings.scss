@@ -68,7 +68,7 @@ $line-height: nth(map-get($type,0), 2) !default;
 
 //baseline
 $color: color(darkest) !default;
-$background-color: color(lightest) !default;
+$background-color: white !default;
 
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;

@@ -18,10 +18,12 @@ CARD:
     description="",
     label="",
     modifier="",
+    button="true",
     media="",
     mediaAlt="",
-    mediaFill=false) %}
-    <div class="tn-card{{ '--' + modifier if modifier }}">{% if media %}
+    mediaFill=false,
+    disabled=false) %}
+    <div class="tn-card{{ '--' + modifier if modifier }}{{ ' is-disabled' if disabled }}"{{ ' role="button"' if button }}>{% if media %}
         <div class="tn-card__media{{ '--fill' if mediaFill }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
         </div>{% endif %}
         <div class="tn-card__content">
