@@ -48,6 +48,40 @@
         {{ format.example(example) }}
     </p>
 
+<h3 id="static">Static card<br> .tn-{{ key }}--static <a href="#static">#</a></h3>
+<p>Modified: Has no hover effect</p>
+<p>
+    {{ card(
+            modifier="static",
+            button=false,
+            title=c.title,
+            description=c.description,
+            label=c.label
+        ) }}
+
+
+</p>
+
+<h3 id="disabled">Disabled card<br> .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
+<p>State: Disabled</p>
+<p>
+    {{ card(
+            button=false,
+            title=c.title,
+            description=c.description,
+            label=c.label,
+            disabled=true
+        ) }}
+
+
+</p>
+
+
+
+<hr>
+
+
+
     <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
     {% set example %}

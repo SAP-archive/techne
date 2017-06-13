@@ -4,7 +4,7 @@
 
 /*!
     card structure
-    .tn-card
+    .tn-card+(--static)+(.is-disabled)
         .tn-card__media+(--fill)
         .tn-card__content
             .tn-card__header, .tn-card__description, .tn-card__label
@@ -14,13 +14,39 @@
     @include reset;
     //LOCAL VARS
     $tn-card-color-border: color(light) !default;
-    $tn-card-color-link: color(action) !default;
-    $tn-card-color-link: $color--link !default;
+    $tn-card-color-disabled: color(lightest) !default;
+    $tn-card-time-hover: 0.2s;
+    $tn-card-shadow-hover: 0px 0px 5px 5px rgba(138,143,138,0.2);
     $tn-card-padding: 40px !default;
     $tn-card-media-width: 75px !default;
 
+    $tn-card-color-link: $color--link !default;
+
+
     display: flex;
     border: solid 1px $tn-card-color-border;
+
+    &--static {
+        @extend .tn-card;
+    }
+
+    //EFFECTS *******************************************
+    transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
+    &:hover:not([class*="--static"], .is-disabled) {
+        border-color: $tn-card-color-link;
+        box-shadow: $tn-card-shadow-hover;
+    }
+    //STATES *******************************************
+    &.is-disabled {
+        background-color: $tn-card-color-disabled;
+        * {
+            color: color(dark);
+        }
+    }
+
+
+
+
 
     //ELEMENTS
     &__media {
@@ -44,7 +70,7 @@
     }
 
     &__header {
-
+        color: $tn-card-color-link;
     }
     &__description {
 
@@ -52,6 +78,11 @@
     &__label {
 
     }
+
+
+
+
+
 
 
 }
