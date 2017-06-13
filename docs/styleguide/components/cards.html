@@ -27,8 +27,7 @@
     .tn-card__content
         .tn-card__header
         .tn-card__description
-        .tn-card__label?
-
+        .tn-card__status?
     </pre>
 
 
@@ -39,7 +38,7 @@
     {% set example %}
         {{ card(
                 title="Primary Value",
-                description="Secondary Value",
+                description="Secondary Value aute irure dolor in reprehenderit in voluptate",
                 label='Label'
             ) }}
     {% endset %}
@@ -50,30 +49,44 @@
 
 <h3 id="static">Static card<br> .tn-{{ key }}--static <a href="#static">#</a></h3>
 <p>Modified: Has no hover effect</p>
-<p>
+{% set example %}
     {{ card(
             modifier="static",
             button=false,
-            title="Lorem ipsum dolor",
-            description="Tenetur quam placeat numquam repellendus obcaecati molestias voluptatibus dolorum ut.",
+            title="Lorem ipsum dolor quam placeat numquam repellendus",
+            description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
             label='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
         ) }}
+{% endset %}
+<p>
+    {{ example }}
+</p>
+<p>
+    {{ format.example(example) }}
 </p>
 
 <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
 <p>State: Disabled, this class/attribute can be toggled with JS </p>
-<p>
+{% set example %}
     {{ card(
             button=true,
             title='Repellendus obcaecati molestias',
-            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-            label='Label',
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
+            label='<span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>',
             disabled=true
         ) }}
+{% endset %}
+<p>
+    {{ example }}
 </p>
 <p>A11Y NOTE:
     Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
 </p>
+<p>
+    {{ format.example(example) }}
+</p>
+
+
 
 
 
