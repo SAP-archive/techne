@@ -46,9 +46,9 @@ $fonts: (
 
 //colors
 $colors: (
-    brand: #009cdf,
-    action: #fbc100,
-    link: #006fbb,
+    brand: #006fbb,
+    accent: #fbc100,
+    action: #009cdf,
     success: #61bf33,
     warning: #e96b1a,
     error: #df1919,
@@ -74,10 +74,10 @@ $background-color: color(lightest) !default;
 $margin-bottom: map-get($spacing, reg) !default;
 
 //interactive
-$color--link: color(link) !default;
-$color--link-hover: color(link) !default;
+$color--link: color(action) !default;
+$color--link-hover: color(action) !default;
 $color--button: color(dark) !default;
-$background-color--button: color(action) !default;
+$background-color--button: color(light) !default;
 
 //states
 $color--error: color(error) !default;
