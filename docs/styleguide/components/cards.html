@@ -22,8 +22,8 @@
 
     <h2>Structure</h2>
     <pre>
-.tn-{{ key }}
-    .tn-card__media?+(--fill)
+.tn-{{ key }}+(--static)+(.is-disabled|[aria-disabled=true])
+    .tn-card__media?
     .tn-card__content
         .tn-card__header
         .tn-card__description
@@ -40,7 +40,7 @@
         {{ card(
                 title="Primary Value",
                 description="Secondary Value",
-                label="Label"
+                label='Label'
             ) }}
     {% endset %}
     <p>{{ example }}</p>
@@ -54,22 +54,20 @@
     {{ card(
             modifier="static",
             button=false,
-            title=c.title,
-            description=c.description,
-            label=c.label
+            title="Lorem ipsum dolor",
+            description="Tenetur quam placeat numquam repellendus obcaecati molestias voluptatibus dolorum ut.",
+            label='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
         ) }}
-
-
 </p>
 
 <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
 <p>State: Disabled, this class/attribute can be toggled with JS </p>
 <p>
     {{ card(
-            button=false,
-            title=c.title,
-            description=c.description,
-            label=c.label,
+            button=true,
+            title='Repellendus obcaecati molestias',
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+            label='Label',
             disabled=true
         ) }}
 </p>
@@ -78,21 +76,20 @@
 </p>
 
 
-<hr>
-
 
 
     <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
     {% set example %}
         {{ card(
-                title=c.title,
-                description=c.description,
-                label=c.label,
+                title='Asperiores doloribus id dolore',
+                description='Consectetur adipisicing elit',
+                label='Cumque itaque',
                 media=c.media.icon,
                 mediaAlt=c.media.alt
             ) }}
     {% endset %}
+
     <p>{{ example }}</p>
     <p>
         {{ format.example(example) }}
