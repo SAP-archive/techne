@@ -7,11 +7,15 @@ var getPageKey = (file) => {
   var filePath = path.basename(file.path);
   return filePath.replace(/\.[^/.]+$/, "");
 }
+var getPageDirectory = (file) => {
+  var filePath = path.dirname(file.path);
+  return filePath.match(/\/([^\/]+)\/?$/)[1];
+ }
+
 
 var setDocsAppData = () => {
   try {
     let app = require('../../docs/data/app.json');
-    //return { app: app };
     return app;
   } catch(err) {
     console.log(err.message);
@@ -28,18 +32,6 @@ reads and outputs the app.json file
     to set a selected property for each nav item
 */
 exports.getDocsAppData = (file) => {
-    if (!file) {
-        return app;
-    }
-    try {
-        //modifies app data to set menu states for each item
-        var selectedId = getPageKey(file);
-        app.nav.menu.forEach(function (obj) {
-            obj.selected = obj.id === selectedId || selectedId.indexOf(obj.id) !== -1;
-        });
-    } catch(err) {
-        console.log(err.message);
-    }
     return app;
 }
 

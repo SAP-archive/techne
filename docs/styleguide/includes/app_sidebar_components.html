@@ -5,7 +5,6 @@
     <nav class="docs-secondary-nav">
 
     	<ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
-
     	{% set menu = app.sidebar.components %}
     	{% for item in menu %}
     		<li class="docs-secondary-nav__listitem">
@@ -16,7 +15,7 @@
     			<ul>
     			{% for item in childitems %}
     				<li>
-                        <a href="{{ linkpath }}{{ item.url }}">{{ item.title }}</a>
+                        <a href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id }}">{{ item.title }}</a>
     				</li>
     			{% endfor %}
     			</ul>
