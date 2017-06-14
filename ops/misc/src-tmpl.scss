@@ -1,0 +1,66 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+    __COMPONENT_ID__ structure
+    .tn-__COMPONENT_ID__+(--no-border)
+        .tn-__COMPONENT_ID____content+()
+        .tn-__COMPONENT_ID____title+()
+*/
+$block: ns(__COMPONENT_ID__);
+
+.#{$block} {
+    //LOCAL VARS (set all vars used in component, always include !default)
+    $tn-__COMPONENT_ID__-color-border: color(light) !default;
+    $tn-__COMPONENT_ID__-color-border-content: color(dark) !default;
+    $tn-__COMPONENT_ID__-color-selected: color(brand) !default;
+
+    //BLOCK BASE *******************************************
+    //set all BLOCK reset and baseline styles
+    @include reset;
+    border: solid 1px $tn-__COMPONENT_ID__-color-border;
+
+
+    //BLOCK MODIFIERS ************
+    //each mod MUST extend base block so devs can use a single class and get all base styles for free
+    &--no-border {
+        @extend .#{$block} !optional;
+        border-color: transparent;
+    }
+
+
+    //ELEMENTS *******************************************
+    //set all ELEMENT baseline styles
+    &__content {
+        border: solid 1px $tn-__COMPONENT_ID__-color-border;
+
+
+        //ELEMENT MODIFIERS ************
+        //each mod MUST extend the element base
+        &--no-border {
+            @extend .#{$block}__content !optional;
+            border-color: transparent;
+        }
+
+    }
+    &__title {
+
+
+    }
+
+
+    //STATES *******************************************
+    //these classes and attributes can be modified by scripts
+    &.is-disabled,
+    &[disabled] {
+        opacity: 0.5;
+    }
+    &[aria-selected="true"] {
+        border-color: $tn-__COMPONENT_ID__-color-selected;
+    }
+
+
+
+
+}

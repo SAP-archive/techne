@@ -1,0 +1,51 @@
+{% extends 'master.html' %}
+{% import 'format.html' as format %}
+{% from '__COMPONENT_ID__.html' import __COMPONENT_ID__ %}
+
+<!-- set component data from src/data -->
+{% set component = components["__COMPONENT_ID__"] %}
+{% set key = component.id %}
+{% set data = component.data %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+    <p>
+    {{ page.intro }}
+    </p>
+
+    <!-- START BASE COMPONENT EXAMPLES -->
+    <h2>__COMPONENT_NAME__</h2>
+    <h3 id="base">.tn-{{ key }} <a href="#base">#</a></h3>
+
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ __COMPONENT_METHOD__(
+                label = data.label,
+                description = data.description
+        )}}
+    {% endset %}
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+    <!-- START MODIFIED COMPONENT EXAMPLES -->
+    {% for modifier in component.modifiers %}
+        <h2>__COMPONENT_NAME__ {{ modifier | capitalize }}</h2>
+        <h3 id="{{ modifier }}">.tn-button--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
+        <!-- output the component example and the code snippet -->
+        {% set example %}
+            {{ __COMPONENT_ID__(
+                    label = data.label,
+                    description = data.description,
+                    modifier = data.modifier
+            )}}
+        {% endset %}
+        <p>{{ example }}</p>
+        <p>
+            {{ format.example(example) }}
+        </p>
+    {% endfor %}
+
+{% endblock %}

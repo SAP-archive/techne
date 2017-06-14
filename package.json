@@ -39,6 +39,7 @@
     "gulp-nunjucks": "^3.0.0",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^2.6.0",
