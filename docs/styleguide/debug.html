@@ -2,21 +2,6 @@
 
 {% block content %}
 
-{% set c = components[] %}
-
-<pre>
-    {{ c | dump(4) }}
-</pre>
-<!-- import component template from src/templates -->
-{% from "tmpl.html" import zack %}
-
-{{ zack(
-        label = c.label,
-        description = c.description
-)}}
-
-{% include "tmpl.html"  %}
-
 
 <h1 class="is-type-up-6 has-font-family-header">Plaid consequat veniam cronut roof party</h1>
 <h2 class="is-type-up-5">Plaid consequat veniam cronut roof party</h2>
