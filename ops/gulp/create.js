@@ -25,23 +25,6 @@ const paths = {
 
 const createTask = (cb) => {
 
-<<<<<<< HEAD
-  if (!componentName) {
-    return;
-  }
-
-  fs.writeFile(`${paths.src}/data/${componentName}.json`, `{\n\t"id": "${componentName}"\n}`, function (err) {
-    if (err) return console.log(err);
-  });
-
-  fs.writeFile(`${paths.src}/styles/components/${componentName}.scss`, `.${componentName} {\n\n}`, function (err) {
-    if (err) return console.log(err);
-  });
-
-  fs.writeFile(`${paths.src}/templates/${componentName}.html`, `{% set ${componentName} = components.${componentName} %}\n{{ ${componentName} }}`, function (err) {
-    if (err) return console.log(err);
-  });
-=======
     if (!componentId) {
         return;
     }
@@ -79,7 +62,6 @@ const createTask = (cb) => {
         .pipe(gulpreplace('__COMPONENT_NAME__',componentName))
         .pipe(gulpreplace('__COMPONENT_METHOD__',componentMethod))
         .pipe(gulp.dest(`${paths.dest.docs}/styleguide/components`));
->>>>>>> #683 adds component templates
 
     //json
     gulp.src(`${paths.src}/docs-tmpl.json`)
