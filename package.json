@@ -31,6 +31,7 @@
     "gulp-debug": "^3.1.0",
     "gulp-eslint": "^3.0.1",
     "gulp-filenames": "^4.0.1",
+    "gulp-footer": "^1.0.5",
     "gulp-if": "^2.0.2",
     "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^3.2.0",

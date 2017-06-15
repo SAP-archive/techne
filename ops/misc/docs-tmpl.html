@@ -36,10 +36,10 @@
         <h3 id="{{ modifier }}">.tn-button--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
         <!-- output the component example and the code snippet -->
         {% set example %}
-            {{ __COMPONENT_ID__(
+            {{ __COMPONENT_METHOD__(
                     label = data.label,
                     description = data.description,
-                    modifier = data.modifier
+                    modifier = modifier
             )}}
         {% endset %}
         <p>{{ example }}</p>

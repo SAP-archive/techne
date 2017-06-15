@@ -1,7 +1,9 @@
 {
     "id": "__COMPONENT_ID__",
     "name": "__COMPONENT_NAME__",
-    "modifiers": [],
+    "modifiers": [
+        "no-border"
+    ],
     "data": {
         "label": "__COMPONENT_NAME__ Label",
         "description": "__COMPONENT_NAME__ Description"
