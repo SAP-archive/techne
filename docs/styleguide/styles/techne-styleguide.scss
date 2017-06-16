@@ -1,7 +1,9 @@
+@import 'variables';
 @import 'mixins';
 @import 'primary-nav';
 @import 'secondary-nav';
 @import 'code';
+@import 'footer';
 
 p, ul {
     margin-bottom: 20px;
@@ -10,24 +12,29 @@ p, ul {
 .docs-app {
 
     &__header {
-        background-color: lightblue;
-        height: 100px;
+        background-color: $default-blue;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        transition: .4s;
+        transform: translateZ(0);
+        backface-visibility: hidden;
     }
     &__main {
+        margin-top: 115px;
         display: flex;
-        min-height: calc(100vh -  60px);
+        min-height: calc(100vh -  155px);
     }
 
     &__sidebar {
         padding: 20px;
-        background: midnightblue;
-        color: white;
+        color: $white;
         a {
-            color: white;
+            color: currentColor;
         }
-
     }
-
 }
 
 .docs-page {

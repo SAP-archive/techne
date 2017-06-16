@@ -3,14 +3,16 @@
     <div class="yaas-signature-nav">
         {% set signav = app.nav.yaas %}
         {% set home = signav[0] %}
-        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
-            <img src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="YaaS">YaaS
+
+        <a href="{{ home.url }}" class="yaas-signature-nav__index domain {{ home.id }}--">
+            <img src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="YaaS">
+            <span class="logo-text">YAAS</span>
         </a>
 
-        <ul class="yaas-signature-nav__list" role="navigation">
+        <ul id="yaas-primary-nav" class="yaas-signature-nav__list" role="navigation" aria-hidden="true">
         {% for item in signav %}
             <li class="yaas-signature-nav__listitem"{{ ' aria-haspopup="true" aria-controls="' + item.id + '-subnav"' if item.subnav }}>
-                <a class="yaas-signature-nav__listlink {{ item.id }}--" href="{{ item.url }}" >
+                <a class="yaas-signature-nav__listlink " href="{{ item.url }}" >
                     {{ item.title }}
                 </a>
                 {% if item.subnav %}
@@ -18,7 +20,7 @@
                     <ul class="yaas-signature-nav__subnav-list" id="{{ item.id }}-subnav">
                     {% for subitem in subnav %}
                         <li class="yaas-signature-nav__subnav-listitem">
-                            <a class="yaas-signature-nav__subnav-listlink {{ subitem.id }}--" href="{{ subitem.url }}">
+                            <a class="yaas-signature-nav__subnav-listlink" href="{{ subitem.url }}">
                                 {{ subitem.title }}
                             </a>
                         </li>
@@ -29,13 +31,30 @@
         {% endfor %}
         </ul>
 
-        <a href="{{ linkpath }}{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
+        <a href="{{ linkpath }}{{ home.url }}" class="yaas-signature-nav__index brand {{ home.id }}--">
             <img src="{{ linkpath }}svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
+        <!-- mobile navigation -->
+        <button href="#" class="primary-nav--toggle"
+                data-js="menu-toggle"
+                aria-label="Toggle Primary Nav"
+                aria-controls="yaas-primary-nav"
+                aria-expanded="false">
+                <span class="primary-nav-triangle"></span>
+        </button>
     </div>
 
     <div class="docs-primary-nav">
-        <ul class="docs-primary-nav__list" role="navigation">
+        <button id="menu-toggle"
+                data-js="menu-toggle"
+                aria-label="Toggle Left Nav"
+                aria-controls="mobile-left-side-navigation"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+        </button>
+        <ul class="docs-primary-nav__list" role="navigation" aria-hidden="false">
             {% set home = app.nav.home %}
             <li class="docs-primary-nav__listitem">
                 <a href="{{ linkpath }}{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
@@ -45,7 +64,7 @@
             {% set menu = app.nav.menu %}
             {% for item in menu %}
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id or item.id === page.section }}">
+                    <a class="docs-primary-nav__listlink" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id or item.id === page.section }}">
                         {{ item.title }}
                     </a>
                 </li>
