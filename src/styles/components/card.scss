@@ -1,7 +1,6 @@
 @import "../core/settings";
 @import "../core/mixins";
 @import "../core/functions";
-
 /*!
     card structure
     .tn-card+(--static)+(.is-disabled)
@@ -9,8 +8,8 @@
         .tn-card__content
             .tn-card__header, .tn-card__description, .tn-card__label
 */
+//set component name using namespace function, then use #{$block} below
 $block: ns(card);
-
 .#{$block} {
     @include reset;
     //LOCAL VARS
@@ -21,20 +20,16 @@ $block: ns(card);
     $tn-card-padding: 40px !default;
     $tn-card-width: 500px !default;
     $tn-card-media-width: 75px !default;
-
     $tn-card-color-link: $color--link !default;
-
     display: flex;
     max-width: $tn-card-width;
     border: solid 1px $tn-card-color-border;
-
     //ELEMENTS
     &__media {
         background-repeat: no-repeat;
         background-position: top center;
         min-width: $tn-card-media-width;
         margin: $tn-card-padding 0 $tn-card-padding $tn-card-padding;
-
         //ELEMENT MODIFIERS
         &--fill {
             @extend .#{$block}__media;
@@ -42,15 +37,11 @@ $block: ns(card);
             width: $tn-card-media-width + $tn-card-padding;
             background-size: cover;
         }
-
     }
-
     &__content {
         padding: ($tn-card-padding - 5px) $tn-card-padding;
         width: 100%;
     }
-
-
     &__header {
         color: $tn-card-color-link;
         font-size: 18px;
@@ -87,12 +78,8 @@ $block: ns(card);
             &:nth-child(2) {
                 @include weight(semi);
             }
-
         }
     }
-
-
-
     //MODIFICATIONS
     &--static {
         @extend .#{$block};
@@ -101,7 +88,6 @@ $block: ns(card);
             color: $color;
         }
     }
-
     //EFFECTS *******************************************
     &[role="button"] {
         cursor: pointer;
@@ -119,8 +105,4 @@ $block: ns(card);
             color: color(dark);
         }
     }
-
-
-
-
 }

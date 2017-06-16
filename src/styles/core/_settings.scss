@@ -1,5 +1,8 @@
 @import "functions";
 
+//library namespace
+$namespace: tn !default;
+
 //breakpoints
 $breakpoints: (
     xs: 480px,
@@ -57,7 +60,6 @@ $colors: (
     dark: #7f90a4,
     darkest: #21262c,
 ) !default;
-
 
 //type
 $font-family: map-get($fonts,body) !default;

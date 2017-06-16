@@ -1,7 +1,6 @@
 @import "../core/settings";
-
+//set namespace using function to avoid hardcoding it
 $ns: ns();
-
 .#{$ns}has-background-image {
   background-repeat: no-repeat;
   background-position: center;
@@ -15,9 +14,5 @@ $ns: ns();
 @each $key, $value in $colors {
   .#{$ns}has-background-color-#{$key} {
     background-color: $value !important;
-//     $saturation: saturation($value) / 100%;
-//     @if $saturation > 0.5 {
-//       color: color(white);
-//     }
   }
 }
