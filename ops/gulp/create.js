@@ -18,10 +18,6 @@ const paths = {
     }
 }
 
-const paths = {
-	src: './src'
-}
-
 const createTask = (cb) => {
 
     if (!componentId) {
