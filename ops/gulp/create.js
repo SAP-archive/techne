@@ -60,7 +60,7 @@ const createTask = (cb) => {
         .pipe(replace('__COMPONENT_ID__',componentId))
         .pipe(replace('__COMPONENT_NAME__',componentName))
         .pipe(replace('__COMPONENT_METHOD__',componentMethod))
-        .pipe(gulp.dest(`${paths.dest.docs}/styleguide`));
+        .pipe(gulp.dest(`${paths.dest.docs}/styleguide/components`));
 
     //json
     gulp.src(`${paths.src}/docs-tmpl.json`)
