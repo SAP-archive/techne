@@ -1,0 +1,108 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+/*!
+    card structure
+    .tn-card+(--static)+(.is-disabled)
+        .tn-card__media+(--fill)
+        .tn-card__content
+            .tn-card__header, .tn-card__description, .tn-card__label
+*/
+//set component name using namespace function, then use #{$block} below
+$block: ns(card);
+.#{$block} {
+    @include reset;
+    //LOCAL VARS
+    $tn-card-color-border: color(light) !default;
+    $tn-card-color-disabled: color(lightest) !default;
+    $tn-card-time-hover: 0.2s;
+    $tn-card-shadow-hover: 0px 0px 5px 5px rgba(138,143,138,0.2);
+    $tn-card-padding: 40px !default;
+    $tn-card-width: 500px !default;
+    $tn-card-media-width: 75px !default;
+    $tn-card-color-link: $color--link !default;
+    display: flex;
+    max-width: $tn-card-width;
+    border: solid 1px $tn-card-color-border;
+    //ELEMENTS
+    &__media {
+        background-repeat: no-repeat;
+        background-position: top center;
+        min-width: $tn-card-media-width;
+        margin: $tn-card-padding 0 $tn-card-padding $tn-card-padding;
+        //ELEMENT MODIFIERS
+        &--fill {
+            @extend .#{$block}__media;
+            margin: 0;
+            width: $tn-card-media-width + $tn-card-padding;
+            background-size: cover;
+        }
+    }
+    &__content {
+        padding: ($tn-card-padding - 5px) $tn-card-padding;
+        width: 100%;
+    }
+    &__header {
+        color: $tn-card-color-link;
+        font-size: 18px;
+        line-height: (22/18);
+        @include weight(semi);
+        margin-bottom: 3px;
+    }
+    &__description {
+        font-size: 13px;
+        line-height: (19/13);
+        margin-bottom: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__label {
+        font-size: 12px;
+        line-height: (14/12);
+        text-transform: uppercase;
+        @include weight(bold);
+        //TDOD: this is not very flexible
+        & > * {
+            &:first-child::after {
+                content: "|";
+                display: inline-block;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:last-child::after {
+                content: "";
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:nth-child(2) {
+                @include weight(semi);
+            }
+        }
+    }
+    //MODIFICATIONS
+    &--static {
+        @extend .#{$block};
+        cursor: default;
+        .#{$block}__header {
+            color: $color;
+        }
+    }
+    //EFFECTS *******************************************
+    &[role="button"] {
+        cursor: pointer;
+    }
+    transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
+    &:hover:not([class*="--static"], .is-disabled, [aria-disabled="true"]) {
+        border-color: $tn-card-color-link;
+        box-shadow: $tn-card-shadow-hover;
+    }
+    //STATES *******************************************
+    &[aria-disabled="true"], &.is-disabled {
+        background-color: $tn-card-color-disabled;
+        cursor: default;
+        * {
+            color: color(dark);
+        }
+    }
+}

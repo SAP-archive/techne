@@ -4,7 +4,7 @@
         {% set signav = app.nav.yaas %}
         {% set home = signav[0] %}
         <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
-            <img src="svg/logo-yaas.svg" height="30" alt="YaaS">YaaS
+            <img src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="YaaS">YaaS
         </a>
 
         <ul class="yaas-signature-nav__list" role="navigation">
@@ -29,8 +29,8 @@
         {% endfor %}
         </ul>
 
-        <a href="{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
-            <img src="svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+        <a href="{{ linkpath }}{{ home.url }}" class="yaas-signature-nav__index {{ home.id }}--">
+            <img src="{{ linkpath }}svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
     </div>
 
@@ -38,14 +38,14 @@
         <ul class="docs-primary-nav__list" role="navigation">
             {% set home = app.nav.home %}
             <li class="docs-primary-nav__listitem">
-                <a href="{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
+                <a href="{{ linkpath }}{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
                     {{ home.title }}
                 </a>
             </li>
             {% set menu = app.nav.menu %}
             {% for item in menu %}
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+                    <a class="docs-primary-nav__listlink {{ item.id }}--" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id or item.id === page.section }}">
                         {{ item.title }}
                     </a>
                 </li>
