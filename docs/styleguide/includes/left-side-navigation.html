@@ -1,0 +1,20 @@
+<div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
+    <nav>
+        <ul>
+            {% set home = app.nav.home %}
+            <li class="docs-primary-nav__listitem">
+                <a href="{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
+                    {{ home.title }}
+                </a>
+            </li>
+            {% set menu = app.nav.menu %}
+            {% for item in menu %}
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+                    {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

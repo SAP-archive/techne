@@ -1,5 +1,6 @@
 @import'variables';
 $footer--height: 40px;
+$font-size--footer: 15px;
 
 .footer{
     font-family: $font-family-dosis;
@@ -35,7 +36,7 @@ $footer--height: 40px;
 
 @media (max-width: 740px) {
     .footer {
-        height: $footer--height*2;
+        height: 90px;
         z-index: 902;
         .footer-left, .footer-right {
             float: none !important;

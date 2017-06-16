@@ -43,30 +43,13 @@
 {% block header %}
   {% include "app_header.html" %}
 {% endblock %}
+{% block navigation %}
+  {% include "left-side-navigation.html" %}
+{% endblock %}
     <main class="docs-app__main container-fluid" role="main">
-        <div class="mobile-left-side-navigation">
-            <aside>
-                <ul>
-                    {% set home = app.nav.home %}
-                    <li class="docs-primary-nav__listitem">
-                        <a href="{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
-                            {{ home.title }}
-                        </a>
-                    </li>
-                    {% set menu = app.nav.menu %}
-                    {% for item in menu %}
-                    <li class="docs-primary-nav__listitem">
-                        <a class="docs-primary-nav__listlink" href="{{ item.url }}" aria-selected="{{ item.selected }}">
-                            {{ item.title }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </aside>
-        </div>
         {% block nav %}{% endblock %}
         <article class="docs-app__page docs-page docs-page--{{ page.id }}">
-{% block content %}{% endblock %}
+            {% block content %}{% endblock %}
         </article>
     </main>
 
@@ -85,7 +68,7 @@ _gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
 })();
     </script>
 {% endif %}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
 {% block js %}
 

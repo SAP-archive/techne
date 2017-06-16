@@ -1,13 +1,15 @@
 
 $(document).ready(function(){
-    var primaryNavigationDropdown = $('.yaas-signature-nav__list');
-    $('.primary-nav--toggle').on('click', function(){
-        $(this).toggleClass('active');
-        $(primaryNavigationDropdown).toggleClass('open');
-    });
+    //function to open and close hidden navigations on mobile
+    $('[data-js="menu-toggle"]').on('click', function(){
+        var findToggleSubmenu = $(this).attr('aria-controls');
+        var hiddenNavigationElement = $('#' + findToggleSubmenu);
+        var ariaHiddenSubMenuToggleValue = hiddenNavigationElement.attr('aria-hidden');
 
-    $('#menu-toggle').on('click', function(){
-        $(this).toggleClass('open');
-        $('.mobile-left-side-navigation').toggleClass('open');
-    })
+        if (ariaHiddenSubMenuToggleValue === 'true'){
+            hiddenNavigationElement.attr('aria-hidden', 'false');
+        }else{
+            hiddenNavigationElement.attr('aria-hidden', 'true');
+        }
+    });
 });

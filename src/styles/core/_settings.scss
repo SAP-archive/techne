@@ -1,4 +1,3 @@
-@import "variables";
 @import "functions";
 
 //breakpoints
@@ -47,16 +46,16 @@ $fonts: (
 
 //colors
 $colors: (
-    brand: $default-blue,
-    action: $default-yellow,
-    link: $dark-blue,
-    success: $default-green,
-    warning: $default-orange,
-    error: $default-red,
-    lightest: $light-grey-100,
-    light: $default-grey,
-    dark: $dark-grey,
-    darkest: $dark-grey-800,
+    brand: #006fbb,
+    accent: #fbc100,
+    action: #009cdf,
+    success: #61bf33,
+    warning: #e96b1a,
+    error: #df1919,
+    lightest: #eef1f3,
+    light: #d7d7d7,
+    dark: #7f90a4,
+    darkest: #21262c,
 ) !default;
 
 
@@ -75,10 +74,10 @@ $background-color: color(lightest) !default;
 $margin-bottom: map-get($spacing, reg) !default;
 
 //interactive
-$color--link: color(link) !default;
-$color--link-hover: color(link) !default;
+$color--link: color(action) !default;
+$color--link-hover: color(action) !default;
 $color--button: color(dark) !default;
-$background-color--button: color(action) !default;
+$background-color--button: color(light) !default;
 
 //states
 $color--error: color(error) !default;
