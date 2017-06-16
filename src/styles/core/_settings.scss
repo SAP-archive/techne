@@ -1,5 +1,8 @@
 @import "functions";
 
+//library namespace
+$namespace: tn !default;
+
 //breakpoints
 $breakpoints: (
     xs: 480px,
@@ -58,7 +61,6 @@ $colors: (
     darkest: #21262c,
 ) !default;
 
-
 //type
 $font-family: map-get($fonts,body) !default;
 $font-family--header: map-get($fonts,header) !default;
@@ -68,7 +70,7 @@ $line-height: nth(map-get($type,0), 2) !default;
 
 //baseline
 $color: color(darkest) !default;
-$background-color: color(lightest) !default;
+$background-color: white !default;
 
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;

@@ -3,8 +3,9 @@
     <div class="yaas-signature-nav">
         {% set signav = app.nav.yaas %}
         {% set home = signav[0] %}
-        <a href="{{ home.url }}" class="yaas-signature-nav__index domain">
-            <img src="svg/logo-yaas.svg" class="domain-logo" alt="YaaS">
+
+        <a href="{{ home.url }}" class="yaas-signature-nav__index domain {{ home.id }}--">
+            <img src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="YaaS">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -30,8 +31,8 @@
         {% endfor %}
         </ul>
 
-        <a href="{{ home.url }}" class="yaas-signature-nav__index brand {{ home.id }}--">
-            <img src="svg/logo-hybris.svg" class="brand-logo" alt="SAP Hybris">
+        <a href="{{ linkpath }}{{ home.url }}" class="yaas-signature-nav__index brand {{ home.id }}--">
+            <img src="{{ linkpath }}svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
@@ -56,14 +57,14 @@
         <ul class="docs-primary-nav__list" role="navigation" aria-hidden="false">
             {% set home = app.nav.home %}
             <li class="docs-primary-nav__listitem">
-                <a href="{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
+                <a href="{{ linkpath }}{{ home.url }}" class="docs-primary-nav__listlink {{ home.id }}--" aria-selected="{{ page.is_home }}">
                     {{ home.title }}
                 </a>
             </li>
             {% set menu = app.nav.menu %}
             {% for item in menu %}
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="{{ item.url }}" aria-selected="{{ item.selected }}">
+                    <a class="docs-primary-nav__listlink" href="{{ linkpath }}{{ item.url }}" aria-selected="{{ item.id === page.id or item.id === page.section }}">
                         {{ item.title }}
                     </a>
                 </li>

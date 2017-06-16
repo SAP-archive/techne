@@ -1,4 +1,5 @@
 {
+    "section": "components",
     "title": "Buttons",
     "intro": "Buttons are used to indicate and initiate actions. They are used in many other components.",
     "variants": {

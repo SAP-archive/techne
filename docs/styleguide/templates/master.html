@@ -2,9 +2,9 @@
 <html lang="en-us">
   <head>
 {% include "app_meta.html" %}
-	<link rel="stylesheet" href="css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
+	<link rel="stylesheet" href="{{ linkpath }}css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
 
-    <link rel="stylesheet" href="css/techne-styleguide.css">
+    <link rel="stylesheet" href="{{ linkpath }}css/techne-styleguide.css">
 {% block css %}
 
 {% endblock %}
@@ -46,7 +46,7 @@
 {% block navigation %}
   {% include "left-side-navigation.html" %}
 {% endblock %}
-    <main class="docs-app__main container-fluid" role="main">
+    <main class="docs-app__main" role="main">
         {% block nav %}{% endblock %}
         <article class="docs-app__page docs-page docs-page--{{ page.id }}">
             {% block content %}{% endblock %}
@@ -69,7 +69,7 @@ _gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
     </script>
 {% endif %}
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
+    <script src="{{ linkpath }}js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
 {% block js %}
 
 {% endblock %}

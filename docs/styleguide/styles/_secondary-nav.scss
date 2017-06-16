@@ -3,7 +3,7 @@
 .docs-secondary-nav {
 
     &__list {
-        [aria-selected=true] {
+        [aria-selected="true"] {
             font-weight: bold;
         }
     }
