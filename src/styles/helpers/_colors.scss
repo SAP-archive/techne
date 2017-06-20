@@ -1,9 +1,0 @@
-@import "../core/settings";
-@import "../core/functions";
-//set namespace using function to avoid hardcoding it
-$ns: ns();
-@each $key, $value in $colors {
-  .#{$ns}has-color-#{$key} {
-    color: $value;
-  }
-}
