@@ -1,32 +1,27 @@
-{% extends 'master.html' %}
-
-
-{% block nav %}
-	{% include "app_sidebar_components.html" %}
-{% endblock %}
-
-
+{% extends 'secondary.html' %}
 
 {% block content %}
 
-	<h1>{{ page.title }}</h1>
-	<p>
-	{{ page.intro }}
-	</p>
+<section class="docs-section">
 
 
 
 
+    <ul>
+    	{% for item in page.components %}
+        <li>
+    		— <a href="components/{{ components[item].id }}s.html"> {{ components[item].name }}s </a>
+        </li>
 
-<ul>
-	{% for item in page.components %}
-    <li>
-		— {{ components[item].name }}
-    </li>
+
+    	{% endfor %}
+    </ul>
 
 
-	{% endfor %}
-</ul>
+
+
+</section>
+
 
 
 

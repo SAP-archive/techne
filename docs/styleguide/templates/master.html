@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
-{% include "app_meta.html" %}
-	<link rel="stylesheet" href="{{ linkpath }}css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
-
-    <link rel="stylesheet" href="{{ linkpath }}css/techne-styleguide.css">
-{% block css %}
-
-{% endblock %}
-  </head>
-  <body id="docs-app--{{ app.id }}">
+    <head>
+        {% include "app_meta.html" %}
+	    <link rel="stylesheet" href="{{ linkpath }}css/techne-{% if debug %}debug{% else %}all{% endif %}{% if env == 'production' %}.min{% endif %}.css">
+        <link rel="stylesheet" href="{{ linkpath }}css/techne-styleguide.css">
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body id="docs-app--{{ app.id }}">
   <!--
     ***********************************************
     https://en.wikipedia.org/wiki/Techne
@@ -40,38 +38,33 @@
 	https://github.com/SAP/techne
     ***********************************************
   -->
-{% block header %}
-  {% include "app_header.html" %}
-{% endblock %}
-{% block navigation %}
-  {% include "left-side-navigation.html" %}
-{% endblock %}
-    <main class="docs-app__main" role="main">
-        {% block nav %}{% endblock %}
-        <article class="docs-app__page docs-page docs-page--{{ page.id }}">
-            {% block content %}{% endblock %}
-        </article>
-    </main>
+        {% block header %}
+            {% include "app_header.html" %}
+        {% endblock %}
+        {% include "left-side-navigation.html" %}
+        <main class="docs-app__main" role="main">
+            {% block sidebar %}
+            {% endblock %}
+            <article class="docs-app__page docs-page docs-page--{{ page.id }}">
+                {% block title %}
+                {% endblock %}
+                {% block content %}
+                {% endblock %}
+            </article>
+        </main>
+        {% block footer %}
+            {% include "footer.html" %}
+        {% endblock %}
 
-{% block footer %}
-    {% include "footer.html" %}
-{% endblock %}
-
-{% if env == "production" %}
-    <script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-    </script>
-{% endif %}
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="{{ linkpath }}js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
-{% block js %}
-
-{% endblock %}
+        {% if env == "production" %}
+            <script>
+                //GA
+                //Cookie
+            </script>
+        {% endif %}
+        <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="{{ linkpath }}js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
+        {% block js %}
+        {% endblock %}
   </body>
 </html>

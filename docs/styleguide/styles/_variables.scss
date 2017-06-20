@@ -1,10 +1,38 @@
 //all variable related to Web site techne.yaas.io and techne library overwrites should be located here
 
+//breakpoints
+$breakpoints: (
+    xs: 480px,
+    s: 667px,
+    m: 768px,
+    l: 1024px,
+    xl: 1248px,
+    xxl: 1440px
+) !default;
+
+$ui-side-padding: 40px;
+$ui-grid-gutter: 17px;
+$margin-bottom: 40px;
+
+//type
+$type: (
+    45: 45px (55/45),
+    18: 18px (24/18),
+    0: 16px (24/16),
+) !default;
+
+//fonts
+$fonts: (
+    body: #{"'Open Sans'", sans-serif},
+    header: #{"Dosis", sans-serif},
+    code: #{"Courier", sans-serif},
+) !default;
+//fonts
+$font-family-dosis: 'Dosis', sans-serif;
+
 //size
 $primary-nav--height: 50px;
 
-//fonts
-$font-family-dosis: 'Dosis', sans-serif;
 
 //colors
 //
@@ -19,4 +47,3 @@ $default-blue: #0486e0;
 $default-blue-500: #0368ae;
 $dark-blue-700: #27394f;
 $dark-blue-800: #1e2c3b;
-
