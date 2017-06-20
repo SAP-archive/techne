@@ -22,7 +22,7 @@
 
     <h2>Structure</h2>
     <pre>
-.tn-{{ key }}+(--static)+(.is-disabled|[aria-disabled=true])
+.tn-{{ key }}+(--readonly)+(.is-disabled|[aria-disabled=true])
     .tn-card__media?
     .tn-card__content
         .tn-card__header
@@ -39,7 +39,7 @@
         {{ card(
                 title="Primary Value",
                 description="Secondary Value aute irure dolor in reprehenderit in voluptate",
-                label='Label'
+                status='Status'
             ) }}
     {% endset %}
     <p>{{ example }}</p>
@@ -47,15 +47,15 @@
         {{ format.example(example) }}
     </p>
 
-<h3 id="static">Static card<br> .tn-{{ key }}--static <a href="#static">#</a></h3>
+<h3 id="static">Readonly card<br> .tn-{{ key }}--readonly <a href="#readonly">#</a></h3>
 <p>Modified: Has no hover effect</p>
 {% set example %}
     {{ card(
-            modifier="static",
+            modifier="readonly",
             button=false,
             title="Lorem ipsum dolor quam placeat numquam repellendus",
             description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
-            label='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
+            status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
         ) }}
 {% endset %}
 <p>
@@ -72,7 +72,7 @@
             button=true,
             title='Repellendus obcaecati molestias',
             description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
-            label='<span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>',
+            status='<span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>',
             disabled=true
         ) }}
 {% endset %}
@@ -97,7 +97,7 @@
         {{ card(
                 title='Asperiores doloribus id dolore',
                 description='Consectetur adipisicing elit',
-                label='Cumque itaque',
+                status='Cumque itaque',
                 media=c.media.icon,
                 mediaAlt=c.media.alt
             ) }}
@@ -124,7 +124,7 @@
             {{ card(
                     title=c.title,
                     description=c.description,
-                    label=c.label,
+                    status=c.status,
                     modifier=modifier,
                     media='path/to/file.jpg'
                 ) }}
