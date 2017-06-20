@@ -1,0 +1,494 @@
+.yaas-signature-nav {
+  background: #27394f;
+  color: #fff;
+  text-align: center;
+  overflow: visible;
+  display: block;
+}
+
+.yaas-signature-nav li a {
+  padding: 13px 12px;
+  display: block;
+  color: #7f90a4;
+  font-weight: bold;
+  font-family: "Dosis",sans-serif;
+}
+
+@media (max-width: 1049px) and (min-width: 741px) {
+  .yaas-signature-nav li a {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.yaas-signature-nav li:hover a {
+  color: #fff;
+  background-color: #0368ae;
+}
+
+.yaas-signature-nav .domain {
+  float: left;
+  display: block;
+  padding-right: 15px;
+  height: 50px;
+}
+
+.yaas-signature-nav .domain .domain-logo {
+  padding: 5px 10px 10px;
+  margin-top: 5px;
+  width: 46px;
+  height: 44px;
+  line-height: 50px;
+}
+
+.yaas-signature-nav .domain .logo-text {
+  font-size: 16px;
+  line-height: 50px;
+  display: inline-block;
+  letter-spacing: .025em;
+  vertical-align: top;
+  font-family: "Dosis", sans-serif;
+  color: #0486e0;
+}
+
+.yaas-signature-nav__list {
+  border-left: 2px dotted #7f90a4;
+}
+
+.yaas-signature-nav #yaas-my-account-subnav {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  text-align: left;
+}
+
+.yaas-signature-nav #yaas-my-account-subnav li {
+  margin-bottom: 0;
+  border-top: 1px solid #d4d7dc;
+}
+
+.yaas-signature-nav #yaas-my-account-subnav li:first-child {
+  border-top: none;
+}
+
+.yaas-signature-nav #yaas-my-account-subnav li a {
+  background-color: #fff;
+  color: #0486e0;
+}
+
+.yaas-signature-nav #yaas-my-account-subnav li:hover a {
+  background-color: #0486e0;
+  color: #fff;
+}
+
+.yaas-signature-nav .primary-nav--toggle {
+  visibility: hidden;
+  opacity: 0;
+  float: right;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background: #1e2c3b;
+  position: relative;
+  transition: background-color .2s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.yaas-signature-nav .primary-nav--toggle span:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  margin-left: -9px;
+  margin-top: -10px;
+  border-color: #1e2c3b transparent transparent;
+  border-style: solid;
+  border-width: 9px;
+  border-radius: 3px;
+}
+
+.yaas-signature-nav .primary-nav--toggle .primary-nav-triangle {
+  position: absolute;
+  display: block;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  margin-left: -11px;
+  margin-top: -4px;
+  border-color: #808fa1 transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  border-radius: 5px;
+}
+
+.docs-primary-nav {
+  background: #0486e0;
+  color: #fff;
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+}
+
+.docs-primary-nav, .yaas-signature-nav {
+  font-family: "Dosis", sans-serif;
+}
+
+.docs-primary-nav:after, .yaas-signature-nav:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.docs-primary-nav__directory, .docs-primary-nav__index, .docs-primary-nav__list, .docs-primary-nav__listitem, .yaas-signature-nav__directory, .yaas-signature-nav__index, .yaas-signature-nav__list, .yaas-signature-nav__listitem {
+  display: inline-block;
+  margin-bottom: 0;
+  float: left;
+}
+
+.docs-primary-nav__directory, .yaas-signature-nav__directory {
+  padding: 0 20px 0 0;
+}
+
+.docs-primary-nav__index, .yaas-signature-nav__index {
+  padding: 0 10px;
+  vertical-align: top;
+}
+
+.docs-primary-nav__list, .yaas-signature-nav__list {
+  float: left;
+}
+
+.docs-primary-nav__list [aria-selected=true], .yaas-signature-nav__list [aria-selected=true] {
+  font-weight: bold;
+}
+
+.docs-primary-nav__listitem[aria-haspopup], .yaas-signature-nav__listitem[aria-haspopup] {
+  position: relative;
+}
+
+.docs-primary-nav__listlink, .yaas-signature-nav__listlink {
+  display: block;
+  padding: 14px;
+}
+
+.docs-primary-nav__listlink[aria-haspopup]::after, .yaas-signature-nav__listlink[aria-haspopup]::after {
+  content: '';
+  position: relative;
+  top: 15px;
+}
+
+.docs-primary-nav__subnav-list, .yaas-signature-nav__subnav-list {
+  position: absolute;
+}
+
+.docs-primary-nav [aria-haspopup] .yaas-signature-nav__subnav-list, .yaas-signature-nav [aria-haspopup] .yaas-signature-nav__subnav-list {
+  display: none;
+}
+
+.docs-primary-nav [aria-haspopup]:hover .yaas-signature-nav__subnav-list, .yaas-signature-nav [aria-haspopup]:hover .yaas-signature-nav__subnav-list {
+  display: block;
+}
+
+.docs-primary-nav a, .yaas-signature-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.docs-primary-nav .brand, .yaas-signature-nav .brand {
+  float: right;
+  display: block;
+  height: 50px;
+}
+
+.docs-primary-nav .brand .brand-logo, .yaas-signature-nav .brand .brand-logo {
+  padding: 10px;
+  height: 50px;
+}
+
+@media (max-width: 860px) and (min-width: 0) {
+  .docs-primary-nav .brand, .yaas-signature-nav .brand {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) and (min-width: 0) {
+  .yaas-signature-nav__list {
+    border-top: 1px solid #808fa1;
+    display: none !important;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    z-index: 1001;
+    border-left: 0 none;
+  }
+  .yaas-signature-nav__list[aria-hidden="false"] {
+    display: block !important;
+    height: auto;
+  }
+  .yaas-signature-nav__list li {
+    border-bottom: 1px solid #223245;
+    line-height: 20px;
+    display: block;
+    position: relative;
+    font-size: 17px;
+    padding: 0;
+    float: none;
+    text-align: left;
+    margin-top: 0;
+  }
+  .yaas-signature-nav__list li a {
+    color: #808fa1;
+    background: #27394f;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+  }
+  .docs-primary-nav__list {
+    display: none !important;
+  }
+  .primary-nav--toggle {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .primary-nav--toggle[aria-expanded="true"] {
+    background: #0486e0;
+  }
+  .primary-nav--toggle[aria-expanded="true"] .primary-nav-triangle {
+    border-color: transparent transparent #fff;
+    margin-top: -15px;
+  }
+  .primary-nav--toggle[aria-expanded="true"] .primary-nav-triangle:before {
+    border-color: transparent transparent #0486e0;
+    margin-top: -8px;
+    margin-left: -9px;
+  }
+  .yaas-signature-nav__index.brand {
+    display: none !important;
+  }
+}
+
+#menu-toggle {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  padding: 14px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#menu-toggle .icon-bar {
+  background: none repeat scroll 0 0 #233243;
+  height: 2px;
+  transform: none;
+  width: 23px;
+  border-radius: 1px;
+  display: block;
+  margin-top: 4px;
+  transition: all 0.5s ease;
+}
+
+#menu-toggle[aria-hidden="true"] .icon-bar:nth-child(2n+1) {
+  transform: rotate(-45deg);
+}
+
+#menu-toggle[aria-hidden="true"] .icon-bar {
+  position: absolute;
+  margin-top: 8px;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 740px) and (min-width: 0) {
+  #menu-toggle {
+    display: inline-block;
+  }
+}
+
+.mobile-left-side-navigation {
+  display: none;
+  background: #27394f none repeat scroll 0 0;
+  position: absolute;
+  z-index: 901;
+  width: 250px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 100px 0 0 0;
+  overflow-y: auto;
+  transition: all 0.4s ease-out;
+}
+
+.mobile-left-side-navigation ul {
+  padding-top: 50px;
+}
+
+.mobile-left-side-navigation ul li {
+  display: inline-block;
+  width: 100%;
+}
+
+.mobile-left-side-navigation ul li a {
+  color: #dbe3eb;
+  display: block;
+  padding: 10px 15px 10px 31px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.mobile-left-side-navigation ul li a:hover, .mobile-left-side-navigation ul li a[aria-selected=true] {
+  color: #0486e0;
+}
+
+.mobile-left-side-navigation[aria-hidden="false"] {
+  display: block;
+}
+
+.docs-secondary-nav__list [aria-selected="true"] {
+  font-weight: bold;
+}
+
+.docs-secondary-nav__listlink {
+  display: block;
+  padding: 0 20px;
+}
+
+.docs-secondary-nav__listlink[aria-haspopup]::after {
+  content: '';
+  position: relative;
+  top: 15px;
+}
+
+.docs-code__header {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.docs-code__markup {
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  display: block;
+}
+
+.docs-code__markup::before {
+  content: '';
+  position: absolute;
+  display: block;
+  z-index: 2000;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.5;
+  background-size: 100% 16px;
+  background-image: linear-gradient(to bottom, red 0%, transparent 6.25%, transparent 100%);
+}
+
+.footer {
+  font-family: "Dosis", sans-serif;
+  font-size: 15px;
+  width: 100%;
+  background: #27394f;
+  vertical-align: bottom;
+  position: relative;
+  display: block !important;
+  height: 1px;
+}
+
+.footer-right {
+  float: right;
+  display: block;
+  padding: 0 !important;
+}
+
+.footer-left {
+  float: left;
+  display: block;
+  opacity: .7;
+}
+
+.footer-item {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 10px 10px 3px;
+  color: #fff;
+}
+
+.footer a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 740px) {
+  .footer {
+    height: 90px;
+    z-index: 902;
+  }
+  .footer .footer-left, .footer .footer-right {
+    float: none !important;
+    padding: 0;
+    clear: both;
+    text-align: center;
+  }
+  .footer .footer-right {
+    border-bottom: 1px solid #1e2c3b;
+  }
+  .footer .footer-item {
+    display: inline-block !important;
+    float: none !important;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 740px) {
+  .footer {
+    height: 40px;
+    position: relative;
+    display: block !important;
+  }
+}
+
+p, ul {
+  margin-bottom: 20px;
+}
+
+.docs-app__header {
+  background-color: #0486e0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  transition: .4s;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.docs-app__main {
+  margin-top: 115px;
+  display: flex;
+  min-height: calc(100vh -  155px);
+}
+
+.docs-app__sidebar {
+  padding: 20px;
+  color: #fff;
+  background-color: #27394f;
+}
+
+.docs-app__sidebar a {
+  color: currentColor;
+}
+
+.docs-page {
+  max-width: 1000px;
+  padding: 20px;
+}

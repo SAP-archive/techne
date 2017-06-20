@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+<meta charset="utf-8">
+<!--[if IE]><![endif]-->
+<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+<meta name="copyright" content="2017">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Techne</title>
+
+	<link rel="stylesheet" href="../css/techne-all.min.css">
+
+    <link rel="stylesheet" href="../css/techne-styleguide.css">
+
+
+
+  </head>
+  <body id="docs-app--techne">
+  <!--
+    ***********************************************
+    https://en.wikipedia.org/wiki/Techne
+         \
+          \
+           \\
+            \\
+             >\/7
+        _.-(6'  \
+        (=___._/` \
+             )  \ |
+            /   / |
+           /    > /
+          j    < _\
+      _.-' :      ``.
+      \ r=._\        `.
+     <`\\_  \         .`-.
+      \ r-7  `-. ._  ' .  `\
+       \`,      `-.`7  7)   )
+        \/         \|  \'  / `-._
+                   ||    .'
+                    \\  (
+                    >\  >
+                 ,.-' >.'
+                <.'_.''
+                  <'
+    Follow this project.
+	https://github.com/SAP/techne
+    ***********************************************
+  -->
+
+  <header class="docs-app__header" role="banner">
+
+    <div class="yaas-signature-nav">
+        
+        
+
+        <a href="#" class="yaas-signature-nav__index domain yaas-home--">
+            <img src="../svg/logo-yaas.svg" height="30" alt="YaaS">
+            <span class="logo-text">YAAS</span>
+        </a>
+
+        <ul id="yaas-primary-nav" class="yaas-signature-nav__list" role="navigation" aria-hidden="true">
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    Home
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    YaaS Market
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    Community
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    Dev Portal
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    Knowledge Hub
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    Builder
+                </a>
+                
+            </li>
+        
+            <li class="yaas-signature-nav__listitem" aria-haspopup="true" aria-controls="yaas-my-account-subnav">
+                <a class="yaas-signature-nav__listlink " href="#" >
+                    My Account
+                </a>
+                
+                    
+                    <ul class="yaas-signature-nav__subnav-list" id="yaas-my-account-subnav">
+                    
+                        <li class="yaas-signature-nav__subnav-listitem">
+                            <a class="yaas-signature-nav__subnav-listlink" href="#">
+                                Sign In
+                            </a>
+                        </li>
+                    
+                        <li class="yaas-signature-nav__subnav-listitem">
+                            <a class="yaas-signature-nav__subnav-listlink" href="#">
+                                Register
+                            </a>
+                        </li>
+                    
+                    </ul>
+                
+            </li>
+        
+        </ul>
+
+        <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
+            <img src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+        </a>
+        <!-- mobile navigation -->
+        <button href="#" class="primary-nav--toggle"
+                data-js="menu-toggle"
+                aria-label="Toggle Primary Nav"
+                aria-controls="yaas-primary-nav"
+                aria-expanded="false">
+                <span class="primary-nav-triangle"></span>
+        </button>
+    </div>
+
+    <div class="docs-primary-nav">
+        <button id="menu-toggle"
+                data-js="menu-toggle"
+                aria-label="Toggle Left Nav"
+                aria-controls="mobile-left-side-navigation"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+        </button>
+        <ul class="docs-primary-nav__list" role="navigation" aria-hidden="false">
+            
+            <li class="docs-primary-nav__listitem">
+                <a href="../index.html" class="docs-primary-nav__listlink home--" aria-selected="">
+                    Home
+                </a>
+            </li>
+            
+            
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink" href="../getting-started.html" aria-selected="false">
+                        Getting Started
+                    </a>
+                </li>
+            
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink" href="../styles.html" aria-selected="false">
+                        Styles
+                    </a>
+                </li>
+            
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink" href="../components.html" aria-selected="true">
+                        Components
+                    </a>
+                </li>
+            
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink" href="../guidelines.html" aria-selected="false">
+                        Guidelines
+                    </a>
+                </li>
+            
+                <li class="docs-primary-nav__listitem">
+                    <a class="docs-primary-nav__listlink" href="../tutorials.html" aria-selected="false">
+                        Tutorials
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+</header>
+
+
+
+  <div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
+    <nav>
+        <ul>
+            
+            <li class="docs-primary-nav__listitem">
+                <a href="index.html" class="docs-primary-nav__listlink home--" aria-selected="">
+                    Home
+                </a>
+            </li>
+            
+            
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="getting-started.html" aria-selected="">
+                    Getting Started
+                </a>
+            </li>
+            
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="styles.html" aria-selected="">
+                    Styles
+                </a>
+            </li>
+            
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="components.html" aria-selected="">
+                    Components
+                </a>
+            </li>
+            
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="guidelines.html" aria-selected="">
+                    Guidelines
+                </a>
+            </li>
+            
+            <li class="docs-primary-nav__listitem">
+                <a class="docs-primary-nav__listlink" href="tutorials.html" aria-selected="">
+                    Tutorials
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <main class="docs-app__main" role="main">
+        
+	
+<div class="docs-app__sidebar">
+
+
+    <nav class="docs-secondary-nav">
+
+    	<ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
+    	
+    	
+    		<li class="docs-secondary-nav__listitem">
+    			<h2>
+    				Actions
+    			</h2>
+    		
+    			<ul>
+    			
+    				<li>
+                        <a href="../components/buttons.html" aria-selected="false">Buttons</a>
+    				</li>
+    			
+    			</ul>
+    	</li>
+
+
+    	
+    		<li class="docs-secondary-nav__listitem">
+    			<h2>
+    				Collections
+    			</h2>
+    		
+    			<ul>
+    			
+    				<li>
+                        <a href="../components/cards.html" aria-selected="true">Cards</a>
+    				</li>
+    			
+    				<li>
+                        <a href="../components/tables.html" aria-selected="false">Tables</a>
+    				</li>
+    			
+    			</ul>
+    	</li>
+
+
+    	
+    		<li class="docs-secondary-nav__listitem">
+    			<h2>
+    				Indicators
+    			</h2>
+    		
+    			<ul>
+    			
+    				<li>
+                        <a href="../components/icons.html" aria-selected="false">Icons</a>
+    				</li>
+    			
+    			</ul>
+    	</li>
+
+
+    	
+    	</ul>
+
+    </nav>
+
+
+
+
+</div>
+
+
+        <article class="docs-app__page docs-page docs-page--cards">
+            
+
+    <h1>Cards</h1>
+    <p>
+    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
+    </p>
+
+    <h2>Structure</h2>
+    <pre>
+.tn-card+(--static)+(.is-disabled|[aria-disabled=true])
+    .tn-card__media?
+    .tn-card__content
+        .tn-card__header
+        .tn-card__description
+        .tn-card__status?
+    </pre>
+
+
+    <!-- START BASE COMPONENT EXAMPLES -->
+    <h2 id="base">Common card <a href="#base">#</a></h2>
+
+    <!-- output the component example and the code snippet -->
+    
+    <p>
+        
+    <div class="tn-card" role="button">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Primary Value
+            </h2>
+            <p class="tn-card__description">
+                Secondary Value aute irure dolor in reprehenderit in voluptate
+            </p>
+            <p class="tn-card__label">
+                Label
+            </p>
+        </div>
+    </div>
+
+    </p>
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Primary Value
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Secondary Value aute irure dolor in reprehenderit in voluptate
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__label&quot;&gt;
+                Label
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+    </p>
+
+<h3 id="static">Static card<br> .tn-card--static <a href="#static">#</a></h3>
+<p>Modified: Has no hover effect</p>
+
+<p>
+    
+    
+    <div class="tn-card--static">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Lorem ipsum dolor quam placeat numquam repellendus
+            </h2>
+            <p class="tn-card__description">
+                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+            </p>
+            <p class="tn-card__label">
+                <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
+            </p>
+        </div>
+    </div>
+
+
+</p>
+<p>
+    
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card--static&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Lorem ipsum dolor quam placeat numquam repellendus
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__label&quot;&gt;
+                &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+</p>
+
+<h3 id="disabled">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
+<p>State: Disabled, this class/attribute can be toggled with JS </p>
+
+<p>
+    
+    
+    <div class="tn-card" aria-disabled="true" role="button">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Repellendus obcaecati molestias
+            </h2>
+            <p class="tn-card__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+            </p>
+            <p class="tn-card__label">
+                <span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>
+            </p>
+        </div>
+    </div>
+
+
+</p>
+<p>A11Y NOTE:
+    Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+</p>
+<p>
+    
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; aria-disabled=&quot;true&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Repellendus obcaecati molestias
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__label&quot;&gt;
+                &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;&lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+</p>
+
+
+
+
+
+
+    <h3 id="media">Include .tn-card__media<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    
+
+    <p>
+        
+    <div class="tn-card" role="button">
+        <div class="tn-card__media" style="background-image: url(http://via.placeholder.com/73x73)" aria-label="CARD_MEDIA_ALT">
+        </div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Asperiores doloribus id dolore
+            </h2>
+            <p class="tn-card__description">
+                Consectetur adipisicing elit
+            </p>
+            <p class="tn-card__label">
+                Cumque itaque
+            </p>
+        </div>
+    </div>
+
+    </p>
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(http://via.placeholder.com/73x73)&quot; aria-label=&quot;CARD_MEDIA_ALT&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Asperiores doloribus id dolore
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Consectetur adipisicing elit
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__label&quot;&gt;
+                Cumque itaque
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+    </p>
+
+
+
+    <!-- 
+
+    
+        <h3 id="media">.tn-card--media <a href="#media">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+
+            
+        </p>
+
+        
+        <p>
+            
+    <div class="tn-card--media" role="button">
+        <div class="tn-card__media" style="background-image: url(path/to/file.jpg)" aria-label="">
+        </div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                CARD_HEADER
+            </h2>
+            <p class="tn-card__description">
+                CARD_DESCRIPTION
+            </p>
+            <p class="tn-card__label">
+                CARD_LABEL
+            </p>
+        </div>
+    </div>
+
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card--media&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(path/to/file.jpg)&quot; aria-label=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                CARD_HEADER
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                CARD_DESCRIPTION
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__label&quot;&gt;
+                CARD_LABEL
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+        </p>
+
+     -->
+
+
+
+
+        </article>
+    </main>
+
+
+    <footer class="footer">
+    <div class="footer-right">
+        <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
+        <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
+    </div>
+    <div class="footer-left">
+        <a href="http://www.sap.com/about/legal/copyright.html" target="_blank" class="footer-item">Copyright</a>
+        <a href="http://www.sap.com/about/legal/impressum.html" target="_blank" class="footer-item">Legal Disclosure</a>
+        <a href="https://www.yaas.io/terms-of-use.html" class="footer-item">Terms of Use</a>
+        <a href="http://www.sap.com/about/legal/privacy.html" target="_blank" class="footer-item">Privacy</a>
+    </div>
+</footer>
+
+
+
+    <script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+    </script>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/techne-styleguide.min.js"></script>
+
+
+
+  </body>
+</html>
