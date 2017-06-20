@@ -21,7 +21,7 @@ Each output has a `build` task that chains the tasks together. Individual tasks 
 ### For local development
 `gulp pkg-build` builds to `tmp`
 
-> Local development has no dependency on `dist`. It only needs to be built for releases and deployments._
+> Local development has no dependency on `dist`. It only needs to be built for releases and deployments.
 
 ### Individual tasks
 * `gulp pkg-clean` removes the contents of `dist` (production mode) or `tmp`
@@ -61,3 +61,24 @@ Local development requires a server and includes watch tasks which auto-compiles
 ### Individual tasks
 * `gulp dev-serve` initializes BrowserSync and watches `www` for changes
 * `gulp dev-watch` kicks off compilation tasks when `src` files change
+
+
+# Contributing components
+Each component requires several files in order to generate it and make it available on the website. A script is available to generate these files.
+
+`gulp create --component COMPONENT-ID --page PAGE-ID`
+
+> For example, "card" may be the component where "cards" is the page.
+
+## The files
+Assuming "foo" is the component and "foos" is the page, the following are created:
+* `src/styles/foo.scss` is a SASS template with an example BEM structure, includes sample elements and states
+* `src/styles/components.scss` is appended with the file above
+* `src/data/foo.json` defines data and modifiers (i.e., a primitive schema) for the component
+* `src/templates/foo.html` is Nunjucks macro with a basic constructor
+* `docs/styleguide/foos.html` extends the master template, imports above macro to output the base component and any modified versions
+* `docs/data/foos.json` defines data for the page itself (i.e,, page title, description)
+
+> All template files are stored in `ops/misc`.
+
+Run `npm start`. navigate to `localhost:3000/foos.html` to see the page.
