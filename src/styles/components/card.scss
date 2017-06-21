@@ -3,7 +3,7 @@
 @import "../core/functions";
 /*!
     card structure
-    .tn-card+(--static)+(.is-disabled)
+    .tn-card+(--readonly)+(.is-disabled)
         .tn-card__media+(--fill)
         .tn-card__content
             .tn-card__header, .tn-card__description, .tn-card__label
@@ -14,9 +14,10 @@ $block: ns(card);
     @include reset;
     //LOCAL VARS
     $tn-card-color-border: color(light) !default;
-    $tn-card-color-disabled: color(lightest) !default;
+    $tn-card-color-disabled: #63758b !default;
+    $tn-card-background-color-disabled: #f9fbfc !default;
     $tn-card-time-hover: 0.2s;
-    $tn-card-shadow-hover: 0px 0px 5px 5px rgba(138,143,138,0.2);
+    $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4);
     $tn-card-padding: 40px !default;
     $tn-card-width: 500px !default;
     $tn-card-media-width: 75px !default;
@@ -57,7 +58,7 @@ $block: ns(card);
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &__label {
+    &__status {
         font-size: 12px;
         line-height: (14/12);
         text-transform: uppercase;
@@ -81,7 +82,7 @@ $block: ns(card);
         }
     }
     //MODIFICATIONS
-    &--static {
+    &--readonly {
         @extend .#{$block};
         cursor: default;
         .#{$block}__header {
@@ -93,16 +94,16 @@ $block: ns(card);
         cursor: pointer;
     }
     transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
-    &:hover:not([class*="--static"], .is-disabled, [aria-disabled="true"]) {
+    &:hover:not([class*="--readonly"], .is-disabled, [aria-disabled="true"]) {
         border-color: $tn-card-color-link;
         box-shadow: $tn-card-shadow-hover;
     }
     //STATES *******************************************
     &[aria-disabled="true"], &.is-disabled {
-        background-color: $tn-card-color-disabled;
+        background-color: $tn-card-background-color-disabled;
         cursor: default;
         * {
-            color: color(dark);
+            color: $tn-card-color-disabled;
         }
     }
 }

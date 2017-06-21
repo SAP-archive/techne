@@ -15,7 +15,7 @@
 
     <h2>Structure</h2>
     <pre>
-.tn-{{ key }}+(--static)+(.is-disabled|[aria-disabled=true])
+.tn-{{ key }}+(--readonly)+(.is-disabled|[aria-disabled=true])
     .tn-card__media?
     .tn-card__content
         .tn-card__header
@@ -34,7 +34,7 @@
         {{ card(
                 title="Primary Value",
                 description="Secondary Value aute irure dolor in reprehenderit in voluptate",
-                label='Label'
+                status='Status'
             ) }}
     {% endset %}
     <p>{{ example }}</p>
@@ -96,7 +96,7 @@
         {{ card(
                 title='Asperiores doloribus id dolore',
                 description='Consectetur adipisicing elit',
-                label='Cumque itaque',
+                status='Cumque itaque',
                 media=c.media.icon,
                 mediaAlt=c.media.alt
             ) }}
@@ -108,5 +108,6 @@
     </p>
 
 </div>
+
 
 {% endblock %}

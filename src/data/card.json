@@ -7,7 +7,7 @@
     "data": {
         "title": "CARD_HEADER",
         "description": "CARD_DESCRIPTION",
-        "label": "CARD_LABEL",
+        "status": "CARD_STATUS",
         "media": {
             "alt": "CARD_MEDIA_ALT",
             "icon": "http://via.placeholder.com/73x73",
