@@ -1,0 +1,94 @@
+// .flow
+//   .flow__box--{total-cols}-{span-cols}
+
+$box-gutter: $ui-grid-gutter;
+
+// COLUMNS
+%flow {
+    @include clearfix;
+    margin-bottom: $margin-bottom;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include screen(m) {
+        [class*="docs-flow__box"] {
+            float: left;
+            margin-right: $box-gutter;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.center-- {
+                //this can only be used when there is a single container
+                float: none;
+                margin: 0 auto;
+            }
+            &.reverse-- {
+                float: right;
+                margin-left: $box-gutter;
+                margin-right: 0;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.docs-flow,
+.docs-flow--reverse {
+    @extend %flow;
+}
+//reverse order (right to left)
+.docs-flow--reverse {
+    @include screen(m) {
+        [class*="docs-flow__box"] {
+            float: right;
+            margin-left: $box-gutter;
+            margin-right: 0;
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+      }
+}
+
+// FLOW BOXES
+//set base column widths for 2-12 cols
+//everything stacks under screen(m)
+
+@include screen(m) {
+    @for $i from 2 through 12 {
+        [class*="docs-flow__box--#{$i}"] {
+            width:
+            calc(
+                (100% -
+                    (#{$box-gutter} * #{$i - 1})
+                )/
+                    #{$i}
+            );
+        }
+    }
+    @for $i from 3 through 12 {
+        .docs-flow__box {
+            @for $j from 2 through $i {
+                &--#{$i}-#{$j} {
+                    width:
+                    calc(
+                        (
+                            (
+                                (100% -
+                                    (#{$box-gutter} * #{$i - 1})
+                                    )/
+                                    #{$i}
+                                    )
+                                * #{$j}
+                            )
+                            +
+                            (
+                                #{$box-gutter}*#{$j - 1}
+                        )
+                    );
+                }
+            }
+        }
+    }
+}

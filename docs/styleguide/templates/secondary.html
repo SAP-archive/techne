@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+{% block sidebar %}
+    {% if page.section === 'components' or page.id === 'components' %}
+        {% include "app_sidebar_components.html" %}
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+<header class="docs-section docs-flow docs-page__header">
+    <h1 class="docs-page__title docs-flow__box--12-5">
+        {{ page.title }}
+    </h1>
+    <p class="docs-page__intro docs-flow__box--12-7">
+        {{ page.intro }}
+    </p>
+</header>
+{% endblock %}

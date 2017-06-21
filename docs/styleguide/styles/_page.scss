@@ -1,0 +1,15 @@
+.docs-page {
+    &__header {
+        background-color: #ebf0f6;
+        padding-top: 95px;
+        height: 240px;
+        max-height: 240px;
+    }
+
+    &__title {
+        @include type(45, header);
+    }
+    &__intro {
+        @include type(18);
+    }
+}
