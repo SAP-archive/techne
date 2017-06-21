@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
-<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 <!--[if IE]><![endif]-->
 <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
 <meta name="copyright" content="2017">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techne</title>
 
-	<link rel="stylesheet" href="../css/techne-all.min.css">
-
-    <link rel="stylesheet" href="../css/techne-styleguide.css">
-
-
-
-  </head>
-  <body id="docs-app--techne">
+	    <link rel="stylesheet" href="../css/techne-all.min.css">
+        <link rel="stylesheet" href="../css/techne-styleguide.css">
+        
+        
+    </head>
+    <body id="docs-app--techne">
   <!--
     ***********************************************
     https://en.wikipedia.org/wiki/Techne
@@ -46,8 +44,8 @@
 	https://github.com/SAP/techne
     ***********************************************
   -->
-
-  <header class="docs-app__header" role="banner">
+        
+            <header class="docs-app__header" role="banner">
 
     <div class="yaas-signature-nav">
         
@@ -195,9 +193,8 @@
 
 </header>
 
-
-
-  <div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
+        
+        <div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
     <nav>
         <ul>
             
@@ -241,91 +238,86 @@
         </ul>
     </nav>
 </div>
-
-    <main class="docs-app__main" role="main">
-        
-	
-<div class="docs-app__sidebar">
-
-
+        <main class="docs-app__main" role="main">
+            
+    
+        <div class="docs-app__sidebar">
+    
     <nav class="docs-secondary-nav">
-
-    	<ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
-    	
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Actions
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+        <ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
+        
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Actions
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/buttons.html" aria-selected="false">Buttons</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Collections
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Collections
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/cards.html" aria-selected="true">Cards</a>
-    				</li>
-    			
-    				<li>
+                    </li>
+                
+                    <li>
                         <a href="../components/tables.html" aria-selected="false">Tables</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Indicators
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Indicators
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/icons.html" aria-selected="false">Icons</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    	</ul>
-
+                    </li>
+                
+                </ul>
+        </li>
+        
+        </ul>
     </nav>
-
-
-
 
 </div>
 
+    
 
-        <article class="docs-app__page docs-page docs-page--cards">
-            
-
-    <h1>Cards</h1>
-    <p>
-    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
+            <article class="docs-app__page docs-page docs-page--cards">
+                
+<header class="docs-section docs-flow docs-page__header">
+    <h1 class="docs-page__title docs-flow__box--12-5">
+        Cards
+    </h1>
+    <p class="docs-page__intro docs-flow__box--12-7">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
     </p>
+</header>
+
+                
+
+<div class="docs-section">
 
     <h2>Structure</h2>
     <pre>
-.tn-card+(--static)+(.is-disabled|[aria-disabled=true])
+.tn-card+(--readonly)+(.is-disabled|[aria-disabled=true])
     .tn-card__media?
     .tn-card__content
         .tn-card__header
@@ -333,6 +325,8 @@
         .tn-card__status?
     </pre>
 
+</div>
+<div class="docs-section">
 
     <!-- START BASE COMPONENT EXAMPLES -->
     <h2 id="base">Common card <a href="#base">#</a></h2>
@@ -349,8 +343,8 @@
             <p class="tn-card__description">
                 Secondary Value aute irure dolor in reprehenderit in voluptate
             </p>
-            <p class="tn-card__label">
-                Label
+            <p class="tn-card__status">
+                Status
             </p>
         </div>
     </div>
@@ -370,8 +364,8 @@
             &lt;p class=&quot;tn-card__description&quot;&gt;
                 Secondary Value aute irure dolor in reprehenderit in voluptate
             &lt;/p&gt;
-            &lt;p class=&quot;tn-card__label&quot;&gt;
-                Label
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                Status
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;</code>
@@ -379,12 +373,15 @@
 
     </p>
 
-<h3 id="static">Static card<br> .tn-card--static <a href="#static">#</a></h3>
-<p>Modified: Has no hover effect</p>
+</div>
+<div class="docs-section">
 
-<p>
+    <h3 id="static">Static card<br> .tn-card--static <a href="#static">#</a></h3>
+    <p>Modified: Has no hover effect</p>
     
-    
+    <p>
+        
+        
     <div class="tn-card--static">
         <div class="tn-card__content">
             <h2 class="tn-card__header">
@@ -393,16 +390,16 @@
             <p class="tn-card__description">
                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
             </p>
-            <p class="tn-card__label">
-                <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
+            <p class="tn-card__status">
+                
             </p>
         </div>
     </div>
 
-
-</p>
-<p>
     
+    </p>
+    <p>
+        
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
@@ -415,21 +412,24 @@
             &lt;p class=&quot;tn-card__description&quot;&gt;
                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
             &lt;/p&gt;
-            &lt;p class=&quot;tn-card__label&quot;&gt;
-                &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;</code>
 </aside>
 
-</p>
+    </p>
 
-<h3 id="disabled">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
-<p>State: Disabled, this class/attribute can be toggled with JS </p>
+</div>
+<div class="docs-section">
 
-<p>
+    <h3 id="disabled">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
+    <p>State: Disabled, this class/attribute can be toggled with JS </p>
     
-    
+    <p>
+        
+        
     <div class="tn-card" aria-disabled="true" role="button">
         <div class="tn-card__content">
             <h2 class="tn-card__header">
@@ -438,19 +438,19 @@
             <p class="tn-card__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
             </p>
-            <p class="tn-card__label">
-                <span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>
+            <p class="tn-card__status">
+                
             </p>
         </div>
     </div>
 
-
-</p>
-<p>A11Y NOTE:
-    Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-</p>
-<p>
     
+    </p>
+    <p>A11Y NOTE:
+        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+    </p>
+    <p>
+        
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
@@ -463,19 +463,17 @@
             &lt;p class=&quot;tn-card__description&quot;&gt;
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
             &lt;/p&gt;
-            &lt;p class=&quot;tn-card__label&quot;&gt;
-                &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;&lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;</code>
 </aside>
 
-</p>
+    </p>
 
-
-
-
-
+</div>
+<div class="docs-section">
 
     <h3 id="media">Include .tn-card__media<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
@@ -493,7 +491,7 @@
             <p class="tn-card__description">
                 Consectetur adipisicing elit
             </p>
-            <p class="tn-card__label">
+            <p class="tn-card__status">
                 Cumque itaque
             </p>
         </div>
@@ -516,7 +514,7 @@
             &lt;p class=&quot;tn-card__description&quot;&gt;
                 Consectetur adipisicing elit
             &lt;/p&gt;
-            &lt;p class=&quot;tn-card__label&quot;&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
                 Cumque itaque
             &lt;/p&gt;
         &lt;/div&gt;
@@ -525,73 +523,14 @@
 
     </p>
 
+</div>
 
 
-    <!-- 
 
-    
-        <h3 id="media">.tn-card--media <a href="#media">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-
-            
-        </p>
-
+            </article>
+        </main>
         
-        <p>
-            
-    <div class="tn-card--media" role="button">
-        <div class="tn-card__media" style="background-image: url(path/to/file.jpg)" aria-label="">
-        </div>
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                CARD_HEADER
-            </h2>
-            <p class="tn-card__description">
-                CARD_DESCRIPTION
-            </p>
-            <p class="tn-card__label">
-                CARD_LABEL
-            </p>
-        </div>
-    </div>
-
-        </p>
-        <p>
-            
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card--media&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(path/to/file.jpg)&quot; aria-label=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                CARD_HEADER
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                CARD_DESCRIPTION
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__label&quot;&gt;
-                CARD_LABEL
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
-</aside>
-
-        </p>
-
-     -->
-
-
-
-
-        </article>
-    </main>
-
-
-    <footer class="footer">
+            <footer class="footer">
     <div class="footer-right">
         <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
         <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
@@ -604,22 +543,17 @@
     </div>
 </footer>
 
+        
 
-
-    <script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-    </script>
-
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../js/techne-styleguide.min.js"></script>
-
-
-
+        
+            <script>
+                //GA
+                //Cookie
+            </script>
+        
+        <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../js/techne-styleguide.min.js"></script>
+        
+        
   </body>
 </html>

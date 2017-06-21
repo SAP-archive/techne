@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
-<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 <!--[if IE]><![endif]-->
 <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
 <meta name="copyright" content="2017">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techne</title>
 
-	<link rel="stylesheet" href="../css/techne-all.min.css">
-
-    <link rel="stylesheet" href="../css/techne-styleguide.css">
-
-
-
-  </head>
-  <body id="docs-app--techne">
+	    <link rel="stylesheet" href="../css/techne-all.min.css">
+        <link rel="stylesheet" href="../css/techne-styleguide.css">
+        
+        
+    </head>
+    <body id="docs-app--techne">
   <!--
     ***********************************************
     https://en.wikipedia.org/wiki/Techne
@@ -46,8 +44,8 @@
 	https://github.com/SAP/techne
     ***********************************************
   -->
-
-  <header class="docs-app__header" role="banner">
+        
+            <header class="docs-app__header" role="banner">
 
     <div class="yaas-signature-nav">
         
@@ -195,9 +193,8 @@
 
 </header>
 
-
-
-  <div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
+        
+        <div id="mobile-left-side-navigation" class="mobile-left-side-navigation" aria-hidden="true">
     <nav>
         <ul>
             
@@ -241,87 +238,91 @@
         </ul>
     </nav>
 </div>
-
-    <main class="docs-app__main" role="main">
-        
-	
-<div class="docs-app__sidebar">
-
-
+        <main class="docs-app__main" role="main">
+            
+    
+        <div class="docs-app__sidebar">
+    
     <nav class="docs-secondary-nav">
-
-    	<ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
-    	
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Actions
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+        <ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
+        
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Actions
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/buttons.html" aria-selected="true">Buttons</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Collections
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Collections
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/cards.html" aria-selected="false">Cards</a>
-    				</li>
-    			
-    				<li>
+                    </li>
+                
+                    <li>
                         <a href="../components/tables.html" aria-selected="false">Tables</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    		<li class="docs-secondary-nav__listitem">
-    			<h2>
-    				Indicators
-    			</h2>
-    		
-    			<ul>
-    			
-    				<li>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Indicators
+                </h2>
+            
+                <ul>
+                
+                    <li>
                         <a href="../components/icons.html" aria-selected="false">Icons</a>
-    				</li>
-    			
-    			</ul>
-    	</li>
-
-
-    	
-    	</ul>
-
+                    </li>
+                
+                </ul>
+        </li>
+        
+        </ul>
     </nav>
-
-
-
 
 </div>
 
+    
 
-        <article class="docs-app__page docs-page docs-page--buttons">
-            
-
-    <h1>Buttons</h1>
-    <p>
-    Buttons are used to indicate and initiate actions. They are used in many other components.
+            <article class="docs-app__page docs-page docs-page--buttons">
+                
+<header class="docs-section docs-flow docs-page__header">
+    <h1 class="docs-page__title docs-flow__box--12-5">
+        Buttons
+    </h1>
+    <p class="docs-page__intro docs-flow__box--12-7">
+        Buttons are used to indicate and initiate actions. They are used in many other components.
     </p>
+</header>
+
+                
+
+<div class="docs-section">
+
+
+    <h2>Structure</h2>
+    <pre>
+.tn-button+(--primary,--secondary,--upload,--link,--add)+(.is-disabled|[aria-disabled=true])
+    </pre>
+
+</div>
+<div class="docs-section">
 
     <!-- START BASE COMPONENT EXAMPLES -->
     <h2>Base component</h2>
@@ -355,49 +356,13 @@
 <code>role=&quot;button&quot;</code>
  to maintain accessibility.</p>
 
-    <hr>
-
-    <h2>Usage</h2>
-    <p>
-    Block class<br>
-    <strong>.tn-button</strong>
-    </p>
-
-    <table>
-        <thead>
-            <tr>
-                <td>Property</td>
-                <td>Type</td>
-                <td>Required</td>
-                <td>Options</td>
-                <td>Restrictions</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Label</th>
-                <td>String</td>
-                <td>True</td>
-                <td></td>
-                <td>&lt; 40 characters</td>
-            </tr>
-            <tr>
-                <th>Modifier</th>
-                <td>String</td>
-                <td>False</td>
-                <td>primary, secondary, upload, link, add</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <hr>
-
+</div>
 
     
     <!-- START MODIFIED COMPONENT EXAMPLES -->
     
+    <div class="docs-section">
+
         <h3 id="primary">.tn-button--primary <a href="#primary">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -430,7 +395,10 @@
 </aside>
 
         </p>
+    </div>
     
+    <div class="docs-section">
+
         <h3 id="secondary">.tn-button--secondary <a href="#secondary">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -463,7 +431,10 @@
 </aside>
 
         </p>
+    </div>
     
+    <div class="docs-section">
+
         <h3 id="upload">.tn-button--upload <a href="#upload">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -496,7 +467,10 @@
 </aside>
 
         </p>
+    </div>
     
+    <div class="docs-section">
+
         <h3 id="link">.tn-button--link <a href="#link">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -529,7 +503,10 @@
 </aside>
 
         </p>
+    </div>
     
+    <div class="docs-section">
+
         <h3 id="add">.tn-button--add <a href="#add">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -562,15 +539,15 @@
 </aside>
 
         </p>
+    </div>
     
 
 
 
-        </article>
-    </main>
-
-
-    <footer class="footer">
+            </article>
+        </main>
+        
+            <footer class="footer">
     <div class="footer-right">
         <a href="https://devportal.yaas.io/overview/helpandsupport/index.html" target="_blank" class="footer-item">Help</a>
         <a href="http://status.yaas.io" target="_blank" class="footer-item">YaaS Status</a>
@@ -583,22 +560,17 @@
     </div>
 </footer>
 
+        
 
-
-    <script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-00000000-0']); _gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-    </script>
-
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../js/techne-styleguide.min.js"></script>
-
-
-
+        
+            <script>
+                //GA
+                //Cookie
+            </script>
+        
+        <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../js/techne-styleguide.min.js"></script>
+        
+        
   </body>
 </html>
