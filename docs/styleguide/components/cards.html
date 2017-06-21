@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'secondary.html' %}
 {% import "format.html" as format %}
 
 <!-- set component data from src/data -->
@@ -9,16 +9,9 @@
 <!-- import component template from src/templates -->
 {% from "collections.html" import card as card %}
 
-{% block nav %}
-	{% include "app_sidebar_components.html" %}
-{% endblock %}
-
 {% block content %}
 
-    <h1>{{ page.title }}</h1>
-    <p>
-    {{ page.intro }}
-    </p>
+<div class="docs-section">
 
     <h2>Structure</h2>
     <pre>
@@ -30,6 +23,8 @@
         .tn-card__status?
     </pre>
 
+</div>
+<div class="docs-section">
 
     <!-- START BASE COMPONENT EXAMPLES -->
     <h2 id="base">Common card <a href="#base">#</a></h2>
@@ -47,49 +42,53 @@
         {{ format.example(example) }}
     </p>
 
-<h3 id="static">Readonly card<br> .tn-{{ key }}--readonly <a href="#readonly">#</a></h3>
-<p>Modified: Has no hover effect</p>
-{% set example %}
-    {{ card(
-            modifier="readonly",
-            button=false,
-            title="Lorem ipsum dolor quam placeat numquam repellendus",
-            description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
-            status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
-        ) }}
-{% endset %}
-<p>
-    {{ example }}
-</p>
-<p>
-    {{ format.example(example) }}
-</p>
+</div>
+<div class="docs-section">
 
-<h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
-<p>State: Disabled, this class/attribute can be toggled with JS </p>
-{% set example %}
-    {{ card(
-            button=true,
-            title='Repellendus obcaecati molestias',
-            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
-            status='<span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>',
-            disabled=true
-        ) }}
-{% endset %}
-<p>
-    {{ example }}
-</p>
-<p>A11Y NOTE:
-    Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-</p>
-<p>
-    {{ format.example(example) }}
-</p>
+    <h3 id="static">Static card<br> .tn-{{ key }}--static <a href="#static">#</a></h3>
+    <p>Modified: Has no hover effect</p>
+    {% set example %}
+        {{ card(
+                modifier="static",
+                button=false,
+                title="Lorem ipsum dolor quam placeat numquam repellendus",
+                description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
+                label='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
+            ) }}
+    {% endset %}
+    <p>
+        {{ example }}
+    </p>
+    <p>
+        {{ format.example(example) }}
+    </p>
 
+</div>
+<div class="docs-section">
 
+    <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
+    <p>State: Disabled, this class/attribute can be toggled with JS </p>
+    {% set example %}
+        {{ card(
+                button=true,
+                title='Repellendus obcaecati molestias',
+                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
+                label='<span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>',
+                disabled=true
+            ) }}
+    {% endset %}
+    <p>
+        {{ example }}
+    </p>
+    <p>A11Y NOTE:
+        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+    </p>
+    <p>
+        {{ format.example(example) }}
+    </p>
 
-
-
+</div>
+<div class="docs-section">
 
     <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
@@ -108,34 +107,7 @@
         {{ format.example(example) }}
     </p>
 
-
-
-    <!-- {% if modifier %}<h2>Variants</h2>{% endif %}
-
-    {% for modifier in component.modifiers %}
-        <h3 id="{{ modifier }}">.tn-{{ key }}--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-
-            {{ page.variants[modifier].description }}
-        </p>
-
-        {% set example %}
-            {{ card(
-                    title=c.title,
-                    description=c.description,
-                    status=c.status,
-                    modifier=modifier,
-                    media='path/to/file.jpg'
-                ) }}
-        {% endset %}
-        <p>{{ example }}</p>
-        <p>
-            {{ format.example(example) }}
-        </p>
-
-    {% endfor %} -->
-
+</div>
 
 
 {% endblock %}

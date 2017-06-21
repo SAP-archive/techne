@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'secondary.html' %}
 {% import "format.html" as format %}
 
 <!-- set component data from src/data -->
@@ -7,16 +7,10 @@
 <!-- import component template from src/templates -->
 {% from "collections.html" import table as table %}
 
-{% block nav %}
-	{% include "app_sidebar_components.html" %}
-{% endblock %}
 
 {% block content %}
 
-    <h1>{{ page.title }}</h1>
-    <p>
-    {{ page.intro }}
-    </p>
+<div class="docs-section">
 
     <!-- START BASE COMPONENT EXAMPLES -->
     <h2>Base component</h2>
@@ -31,10 +25,14 @@
         {{ format.example(example) }}
     </p>
 
+</div>
 
     {% if modifier %}<h2>Variants</h2>{% endif %}
     <!-- START MODIFIED COMPONENT EXAMPLES -->
     {% for modifier in component.modifiers %}
+
+    <div class="docs-section">
+        
         <h3 id="{{ modifier }}">.tn-{{ key }}__row--{{ modifier }} <a href="#{{ modifier }}">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
@@ -50,6 +48,7 @@
             {{ format.example(example) }}
         </p>
 
+    </div>
     {% endfor %}
 
 
