@@ -47,7 +47,7 @@ $block: ns(card);
         color: $tn-card-color-link;
         font-size: 18px;
         line-height: (22/18);
-        @include weight(semi);
+        @include tn-weight(semi);
         margin-bottom: 3px;
     }
     &__description {
@@ -62,7 +62,7 @@ $block: ns(card);
         font-size: 12px;
         line-height: (14/12);
         text-transform: uppercase;
-        @include weight(bold);
+        @include tn-weight(bold);
         //TDOD: this is not very flexible
         & > * {
             &:first-child::after {
@@ -77,7 +77,7 @@ $block: ns(card);
                 padding-right: 0;
             }
             &:nth-child(2) {
-                @include weight(semi);
+                @include tn-weight(semi);
             }
         }
     }

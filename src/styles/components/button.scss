@@ -77,11 +77,11 @@ $block: ns(button);
     }
     &--add {
         @extend .#{$block};
-        @include weight(bold);
+        @include tn-weight(bold);
         width: 100%;
         &::before {
-            @include type(3);
-            @include weight(reg);
+            @include tn-type(3);
+            @include tn-weight(reg);
             content: "+";
         }
     }
