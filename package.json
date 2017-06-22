@@ -20,6 +20,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
