@@ -1,0 +1,15 @@
+language: node_js
+node_js: 
+  - 7
+install:
+ - npm install
+ - npm install gulp -g
+script:
+ - gulp docs-build --production
+after_success:
+ - git config --global user.name "Travis CI Test"
+ - git config --global user.email "test@test.com"
+ - gulp deploy
+branches:
+  only: 
+    - v2.0
