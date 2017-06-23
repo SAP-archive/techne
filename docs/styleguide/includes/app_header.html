@@ -5,7 +5,7 @@
         {% set home = signav[0] %}
 
         <a href="{{ home.url }}" class="yaas-signature-nav__index domain {{ home.id }}--">
-            <img src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="YaaS">
+            <img class="domain-logo" src="{{ linkpath }}svg/logo-yaas.svg" height="30" alt="Techne">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -32,7 +32,7 @@
         </ul>
 
         <a href="{{ linkpath }}{{ home.url }}" class="yaas-signature-nav__index brand {{ home.id }}--">
-            <img src="{{ linkpath }}svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+            <img class="brand-logo" src="{{ linkpath }}svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
