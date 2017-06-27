@@ -1,5 +1,5 @@
 language: node_js
-node_js: 
+node_js:
   - 7
 install:
  - npm install
@@ -7,9 +7,13 @@ install:
 script:
  - gulp docs-build --production
 after_success:
+ - openssl aes-256-cbc -K $encrypted_f38ec6afcde3_key -iv $encrypted_f38ec6afcde3_iv -in deploy-key.enc -out deploy-key -d
+ - chmod 600 deploy-key
+ - eval `ssh-agent -s`
+ - ssh-add deploy-key
  - git config --global user.name "Travis CI Test"
  - git config --global user.email "test@test.com"
  - gulp deploy
 branches:
-  only: 
+  only:
     - v2.0
