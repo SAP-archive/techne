@@ -15,7 +15,7 @@ const paths = {
 
 const task = (cb) => {
 
-    return gulp.src([`${paths.src}/*.css`])
+    return gulp.src([`${paths.src}/**/*.css`])
         .pipe(debug())
         .pipe(cleanCSS({
             level: {
