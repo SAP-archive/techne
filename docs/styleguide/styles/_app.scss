@@ -24,7 +24,8 @@
         width: 264px;
         padding: 20px;
         color: $white;
-        background-color: #233243;
+        background-color: $dark-blue-700;
+        font-family: $font-family-dosis;
         a {
             color: currentColor;
         }

@@ -1,21 +1,24 @@
 @import'variables';
 
 .yaas-signature-nav {
+    font-size: 17px;
+    font-weight: normal;
     background: $dark-blue-700;
     color: $white;
     text-align: center;
     overflow: visible;
     display: block;
+    height: $primary-nav--height;
     li{
+        margin-top: 8px;
         a{
-            padding: 13px 12px;
+            padding: 6px 20px 12px;
             display: block;
             color: $dark-grey;
-            font-weight: bold;
             font-family: "Dosis",sans-serif;
-            @media (max-width: 1049px) and (min-width: 741px){
-                padding-left: 6px;
-                padding-right: 6px;
+            font-weight: 300;
+            @media (max-width: 1048px) and (min-width: 741px){
+                padding: 6px 10px 12px;
             }
         }
         &:hover a{
@@ -28,6 +31,7 @@
         display: block;
         padding-right: 15px;
         height: $primary-nav--height;
+        cursor: pointer;
         .domain-logo{
             padding: 5px 10px 10px;
             margin-top: 5px;
@@ -42,11 +46,18 @@
             letter-spacing: .025em;
             vertical-align: top;
             font-family: $font-family-dosis;
-            color: $default-blue;
+                    font-weight: 300;
+            color: $white;
+        }
+        &:hover{
+            background: transparent;
+            .logo-text{
+                color: $dark-blue-600;
+            }
         }
     }
     &__list{
-        border-left: 2px dotted $dark-grey;
+        border-left: 2px dotted $dark-grey-500;
     }
     #yaas-my-account-subnav{
         position: absolute;
@@ -57,6 +68,7 @@
         text-align: left;
         li{
             margin-bottom: 0;
+            margin-top: 0;
             border-top: 1px solid $light-grey-200;
             &:first-child{
                 border-top: none;
@@ -64,6 +76,7 @@
             a{
                 background-color: $white;
                 color:  $default-blue;
+                padding: 20px 15px 15px;
             }
             &:hover a{
                 background-color: $default-blue;
@@ -72,12 +85,10 @@
         }
     }
     .primary-nav--toggle{
-        visibility: hidden;
-        opacity: 0;
+        display: none;
         float: right;
         height: $primary-nav--height;
         width: $primary-nav--height;
-        display: block;
         background: $dark-blue-800;
         position: relative;
         transition: background-color .2s ease-in-out;
@@ -118,8 +129,8 @@
     background: $default-blue;
     color: $white;
     overflow: hidden;
-    height: 50px;
-    width: 100%;
+    height: $primary-nav--height;
+    //width: 100%;
 }
 
 .docs-primary-nav, .yaas-signature-nav {
@@ -134,13 +145,12 @@
         padding: 0 20px 0 0;
     }
     &__index {
-        padding: 0 10px;
         vertical-align: top;
     }
     &__list {
         float: left;
         [aria-selected=true] {
-            font-weight: bold;
+            color: $white;
         }
     }
     &__listitem {
@@ -151,6 +161,7 @@
     &__listlink {
         display: block;
         padding: 14px;
+        line-height: 1.45em;
         &[aria-haspopup] {
             &::after {
                 content: '';
@@ -167,6 +178,7 @@
     [aria-haspopup] {
         .yaas-signature-nav__subnav-list {
             display: none;
+            width: 230px;
         }
         &:hover {
             .yaas-signature-nav__subnav-list {
@@ -176,18 +188,24 @@
     }
     a{
         text-decoration: none;
-        color: $white;
+        color: #a4c8f0;
+        &:hover{
+            background-color: #0376c6;
+        }
     }
     .brand{
         float: right;
         display: block;
-        height: $primary-nav--height;
+        width: 160px;
         .brand-logo {
             padding: 10px;
             height: $primary-nav--height;
         }
-        @media(max-width: 860px) and (min-width: 0){
+        @media(max-width: 949px) and (min-width: 0){
             display: none;
+        }
+        &:hover{
+            background: transparent;
         }
     }
 }
@@ -231,6 +249,7 @@
     .primary-nav--toggle{
         visibility: visible !important;
         opacity: 1 !important;
+        display: block !important;
         &[aria-expanded="true"]{
             background: $default-blue;
             .primary-nav-triangle{
@@ -258,7 +277,7 @@
     border: none;
     outline: none;
     .icon-bar {
-        background: none repeat scroll 0 0 #233243;
+        background: none repeat scroll 0 0 $dark-blue-900;
         height: 2px;
         transform: none;
         width: 23px;
@@ -266,6 +285,9 @@
         display: block;
         margin-top: 4px;
         transition: all 0.5s ease;
+    }
+    &:hover .icon-bar{
+        background-color: $white;
     }
     &[aria-hidden="true"]{
         .icon-bar:nth-child(2n+1) {
@@ -315,8 +337,3 @@
         display: block;
     }
 }
-
-
-
-
-

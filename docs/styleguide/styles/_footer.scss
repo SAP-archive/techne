@@ -36,7 +36,7 @@ $font-size--footer: 15px;
 
 @media (max-width: 740px) {
     .footer {
-        height: 90px;
+        height: 100%;
         z-index: 902;
         .footer-left, .footer-right {
             float: none !important;
