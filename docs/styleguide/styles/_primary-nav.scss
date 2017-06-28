@@ -16,6 +16,7 @@
             display: block;
             color: $dark-grey;
             font-family: "Dosis",sans-serif;
+            font-weight: 300;
             @media (max-width: 1048px) and (min-width: 741px){
                 padding: 6px 10px 12px;
             }
@@ -45,6 +46,7 @@
             letter-spacing: .025em;
             vertical-align: top;
             font-family: $font-family-dosis;
+                    font-weight: 300;
             color: $white;
         }
         &:hover{
@@ -128,7 +130,7 @@
     color: $white;
     overflow: hidden;
     height: $primary-nav--height;
-    width: 100%;
+    //width: 100%;
 }
 
 .docs-primary-nav, .yaas-signature-nav {
