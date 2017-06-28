@@ -17,8 +17,7 @@
             color: $dark-grey;
             font-family: "Dosis",sans-serif;
             @media (max-width: 1048px) and (min-width: 741px){
-                padding-left: 6px;
-                padding-right: 6px;
+                padding: 6px 10px 12px;
             }
         }
         &:hover a{
@@ -31,6 +30,7 @@
         display: block;
         padding-right: 15px;
         height: $primary-nav--height;
+        cursor: pointer;
         .domain-logo{
             padding: 5px 10px 10px;
             margin-top: 5px;
@@ -39,8 +39,7 @@
             line-height: $primary-nav--height;
         }
         .logo-text{
-            font-size: 17px;
-            font-weight: 700;
+            font-size: 16px;
             line-height: $primary-nav--height;
             display: inline-block;
             letter-spacing: .025em;
@@ -50,6 +49,9 @@
         }
         &:hover{
             background: transparent;
+            .logo-text{
+                color: $dark-blue-600;
+            }
         }
     }
     &__list{
@@ -64,7 +66,7 @@
         text-align: left;
         li{
             margin-bottom: 0;
-            margin-top: 8px;
+            margin-top: 0;
             border-top: 1px solid $light-grey-200;
             &:first-child{
                 border-top: none;
@@ -72,6 +74,7 @@
             a{
                 background-color: $white;
                 color:  $default-blue;
+                padding: 20px 15px 15px;
             }
             &:hover a{
                 background-color: $default-blue;
@@ -156,6 +159,7 @@
     &__listlink {
         display: block;
         padding: 14px;
+        line-height: 1.45em;
         &[aria-haspopup] {
             &::after {
                 content: '';
@@ -172,6 +176,7 @@
     [aria-haspopup] {
         .yaas-signature-nav__subnav-list {
             display: none;
+            width: 230px;
         }
         &:hover {
             .yaas-signature-nav__subnav-list {
@@ -189,7 +194,7 @@
     .brand{
         float: right;
         display: block;
-        height: $primary-nav--height;
+        width: 160px;
         .brand-logo {
             padding: 10px;
             height: $primary-nav--height;
@@ -278,6 +283,9 @@
         display: block;
         margin-top: 4px;
         transition: all 0.5s ease;
+    }
+    &:hover .icon-bar{
+        background-color: $white;
     }
     &[aria-hidden="true"]{
         .icon-bar:nth-child(2n+1) {
