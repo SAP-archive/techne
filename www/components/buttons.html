@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techne</title>
 
-	    <link rel="stylesheet" href="css/techne-all.min.css">
-        <link rel="stylesheet" href="css/techne-styleguide.css">
+	    <link rel="stylesheet" href="../css/techne-all.min.css">
+        <link rel="stylesheet" href="../css/techne-styleguide.css">
         
         
     </head>
@@ -52,7 +52,7 @@
         
 
         <a href="#" class="yaas-signature-nav__index domain yaas-home--">
-            <img class="domain-logo" src="svg/logo-yaas.svg" alt="Techne">
+            <img src="../svg/logo-yaas.svg" height="30" alt="YaaS">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -126,8 +126,8 @@
         
         </ul>
 
-        <a href="#" class="yaas-signature-nav__index brand yaas-home--">
-            <img class="brand-logo" src="svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+        <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
+            <img src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
@@ -152,38 +152,38 @@
         <ul class="docs-primary-nav__list" role="navigation" aria-hidden="false">
             
             <li class="docs-primary-nav__listitem">
-                <a href="index.html" class="docs-primary-nav__listlink home--" aria-selected="">
+                <a href="../index.html" class="docs-primary-nav__listlink home--" aria-selected="">
                     Home
                 </a>
             </li>
             
             
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="getting-started.html" aria-selected="false">
+                    <a class="docs-primary-nav__listlink" href="../getting-started.html" aria-selected="false">
                         Getting Started
                     </a>
                 </li>
             
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="styles.html" aria-selected="true">
+                    <a class="docs-primary-nav__listlink" href="../styles.html" aria-selected="false">
                         Styles
                     </a>
                 </li>
             
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="components.html" aria-selected="false">
+                    <a class="docs-primary-nav__listlink" href="../components.html" aria-selected="true">
                         Components
                     </a>
                 </li>
             
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="guidelines.html" aria-selected="false">
+                    <a class="docs-primary-nav__listlink" href="../guidelines.html" aria-selected="false">
                         Guidelines
                     </a>
                 </li>
             
                 <li class="docs-primary-nav__listitem">
-                    <a class="docs-primary-nav__listlink" href="tutorials.html" aria-selected="false">
+                    <a class="docs-primary-nav__listlink" href="../tutorials.html" aria-selected="false">
                         Tutorials
                     </a>
                 </li>
@@ -241,141 +241,306 @@
         <main class="docs-app__main" role="main">
             
     
+        <div class="docs-app__sidebar">
+    
+    <nav class="docs-secondary-nav">
+        <ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
+        
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Actions
+                </h2>
+            
+                <ul>
+                
+                    <li>
+                        <a href="../components/buttons.html" aria-selected="true">Buttons</a>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Collections
+                </h2>
+            
+                <ul>
+                
+                    <li>
+                        <a href="../components/cards.html" aria-selected="false">Cards</a>
+                    </li>
+                
+                    <li>
+                        <a href="../components/tables.html" aria-selected="false">Tables</a>
+                    </li>
+                
+                </ul>
+        </li>
+        
+            <li class="docs-secondary-nav__listitem">
+                <h2>
+                    Indicators
+                </h2>
+            
+                <ul>
+                
+                    <li>
+                        <a href="../components/icons.html" aria-selected="false">Icons</a>
+                    </li>
+                
+                </ul>
+        </li>
+        
+        </ul>
+    </nav>
 
-            <article class="docs-app__page docs-page docs-page--styles">
+</div>
+
+    
+
+            <article class="docs-app__page docs-page docs-page--buttons">
                 
 <header class="docs-section docs-flow docs-page__header">
     <h1 class="docs-page__title docs-flow__box--12-5">
-        Styles
+        Buttons
     </h1>
     <p class="docs-page__intro docs-flow__box--12-7">
-        Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.
+        Buttons are used to indicate and initiate actions. They are used in many other components.
     </p>
 </header>
 
                 
 
+<div class="docs-section">
 
 
-<section class="docs-section">
+    <h2>Structure</h2>
+    <pre>
+.tn-button+(--primary,--secondary,--upload,--link,--add)+(.is-disabled|[aria-disabled=true])
+    </pre>
 
+</div>
+<div class="docs-section">
 
-
-
-    <h1>Type</h1>
-
+    <!-- START BASE COMPONENT EXAMPLES -->
+    <h2>Base component</h2>
+    <h3 id="base">.tn-button <a href="#base">#</a></h3>
+    <strong>Since 1.0</strong>
+    <!-- output the component example and the code snippet -->
+    
+    <p>
+        
     
 
-        <span><strong>Mixin:</strong> <code>@type(5)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-plus-5</code></span>
-        <h1 class="tn-is-type-plus-5">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(4)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-plus-4</code></span>
-        <h1 class="tn-is-type-plus-4">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(3)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-plus-3</code></span>
-        <h1 class="tn-is-type-plus-3">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(2)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-plus-2</code></span>
-        <h1 class="tn-is-type-plus-2">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(1)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-plus-1</code></span>
-        <h1 class="tn-is-type-plus-1">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(0)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-base</code></span>
-        <h1 class="tn-is-type-base">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(-1)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-minus-1</code></span>
-        <h1 class="tn-is-type-minus-1">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(-2)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-minus-2</code></span>
-        <h1 class="tn-is-type-minus-2">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
-
-        <span><strong>Mixin:</strong> <code>@type(-3)</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type-minus-3</code></span>
-        <h1 class="tn-is-type-minus-3">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    
+<button class="tn-button">
+    BUTTON_LABEL
+</button>
 
 
-
-<!--
-    <p class="is-type-default">
-    Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse Vice cred authentic chillwave artisan cold-pressed gluten-free. Slow-carb squid street art Williamsburg.
     </p>
-    <p class="is-type-default">
-    Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse Vice cred authentic chillwave artisan cold-pressed gluten-free. Slow-carb squid street art Williamsburg.
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;button class=&quot;tn-button&quot;&gt;
+    BUTTON_LABEL
+&lt;/button&gt;</code>
+</aside>
+
     </p>
-    <small class="is-type-down-1">Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse</small>
-    <address class="is-type-down-2">Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse</address>
- -->
+    <p><strong>Note:</strong> Any element can be used as a button, add attribute 
+<code>role=&quot;button&quot;</code>
+ to maintain accessibility.</p>
 
-
-
-
-</section>
-
-<section class="docs-section">
-
-    <h1>Fonts</h1>
+</div>
 
     
+    <!-- START MODIFIED COMPONENT EXAMPLES -->
+    
+    <div class="docs-section">
 
-        <span>
-            <strong>Class:</strong> <code>.tn-has-font-family-header</code>
-        </span>
-        <p class="tn-has-font-family-header">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
-
+        <h3 id="primary">.tn-button--primary <a href="#primary">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.
+        </p>
+        <!-- output the component example and the code snippet -->
+        
+        <p>
+            
+                
     
 
-        <span>
-            <strong>Class:</strong> <code>.tn-has-font-family-body</code>
-        </span>
-        <p class="tn-has-font-family-body">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+<button class="tn-button--primary">
+    BUTTON_LABEL
+</button>
 
+
+            
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;button class=&quot;tn-button--primary&quot;&gt;
+    BUTTON_LABEL
+&lt;/button&gt;</code>
+</aside>
+
+        </p>
+    </div>
+    
+    <div class="docs-section">
+
+        <h3 id="secondary">.tn-button--secondary <a href="#secondary">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
+        </p>
+        <!-- output the component example and the code snippet -->
+        
+        <p>
+            
+                
     
 
-        <span>
-            <strong>Class:</strong> <code>.tn-has-font-family-code</code>
-        </span>
-        <p class="tn-has-font-family-code">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+<button class="tn-button--secondary">
+    BUTTON_LABEL
+</button>
 
+
+            
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;button class=&quot;tn-button--secondary&quot;&gt;
+    BUTTON_LABEL
+&lt;/button&gt;</code>
+</aside>
+
+        </p>
+    </div>
+    
+    <div class="docs-section">
+
+        <h3 id="upload">.tn-button--upload <a href="#upload">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            Input Type File needs special markup to get skinned in a proper way. You can use this with all available btn modifier classes
+        </p>
+        <!-- output the component example and the code snippet -->
+        
+        <p>
+            
+                
     
 
+<span class="tn-button--upload">
+    Upload <input type="file">
+</span>
 
-</section>
+
+            
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;span class=&quot;tn-button--upload&quot;&gt;
+    Upload &lt;input type=&quot;file&quot;&gt;
+&lt;/span&gt;</code>
+</aside>
+
+        </p>
+    </div>
+    
+    <div class="docs-section">
+
+        <h3 id="link">.tn-button--link <a href="#link">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            Button Link is to be styled as a link as it's a tertiary action. Use Button to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current page are discarded
+        </p>
+        <!-- output the component example and the code snippet -->
+        
+        <p>
+            
+                
+    
+
+<button class="tn-button--link">
+    BUTTON_LABEL
+</button>
+
+
+            
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;button class=&quot;tn-button--link&quot;&gt;
+    BUTTON_LABEL
+&lt;/button&gt;</code>
+</aside>
+
+        </p>
+    </div>
+    
+    <div class="docs-section">
+
+        <h3 id="add">.tn-button--add <a href="#add">#</a></h3>
+        <strong>Since 1.0</strong>
+        <p>
+            <!-- pulled from page content data at docs/data -->
+            Lorem ipsum
+        </p>
+        <!-- output the component example and the code snippet -->
+        
+        <p>
+            
+                
+    
+
+<button class="tn-button--add">
+    BUTTON_LABEL
+</button>
+
+
+            
+        </p>
+        <p>
+            
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;button class=&quot;tn-button--add&quot;&gt;
+    BUTTON_LABEL
+&lt;/button&gt;</code>
+</aside>
+
+        </p>
+    </div>
+    
 
 
 
@@ -404,7 +569,7 @@
             </script>
         
         <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/techne-styleguide.min.js"></script>
+        <script src="../js/techne-styleguide.min.js"></script>
         
         
   </body>

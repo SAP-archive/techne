@@ -332,8 +332,7 @@
   width: 264px;
   padding: 20px;
   color: #fff;
-  background-color: #27394f;
-  font-family: "Dosis", sans-serif;
+  background-color: #233243;
 }
 
 .docs-app__sidebar a {
@@ -365,31 +364,25 @@
 }
 
 .yaas-signature-nav {
-  font-size: 17px;
-  font-weight: normal;
   background: #27394f;
   color: #fff;
   text-align: center;
   overflow: visible;
   display: block;
-  height: 50px;
-}
-
-.yaas-signature-nav li {
-  margin-top: 8px;
 }
 
 .yaas-signature-nav li a {
-  padding: 6px 20px 12px;
+  padding: 13px 12px;
   display: block;
   color: #7f90a4;
+  font-weight: bold;
   font-family: "Dosis",sans-serif;
-  font-weight: 300;
 }
 
-@media (max-width: 1048px) and (min-width: 741px) {
+@media (max-width: 1049px) and (min-width: 741px) {
   .yaas-signature-nav li a {
-    padding: 6px 10px 12px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
@@ -403,7 +396,6 @@
   display: block;
   padding-right: 15px;
   height: 50px;
-  cursor: pointer;
 }
 
 .yaas-signature-nav .domain .domain-logo {
@@ -421,20 +413,11 @@
   letter-spacing: .025em;
   vertical-align: top;
   font-family: "Dosis", sans-serif;
-  font-weight: 300;
-  color: #fff;
-}
-
-.yaas-signature-nav .domain:hover {
-  background: transparent;
-}
-
-.yaas-signature-nav .domain:hover .logo-text {
-  color: #035995;
+  color: #0486e0;
 }
 
 .yaas-signature-nav__list {
-  border-left: 2px dotted #3e4d60;
+  border-left: 2px dotted #7f90a4;
 }
 
 .yaas-signature-nav #yaas-my-account-subnav {
@@ -448,7 +431,6 @@
 
 .yaas-signature-nav #yaas-my-account-subnav li {
   margin-bottom: 0;
-  margin-top: 0;
   border-top: 1px solid #d4d7dc;
 }
 
@@ -459,7 +441,6 @@
 .yaas-signature-nav #yaas-my-account-subnav li a {
   background-color: #fff;
   color: #0486e0;
-  padding: 20px 15px 15px;
 }
 
 .yaas-signature-nav #yaas-my-account-subnav li:hover a {
@@ -468,10 +449,12 @@
 }
 
 .yaas-signature-nav .primary-nav--toggle {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   float: right;
   height: 50px;
   width: 50px;
+  display: block;
   background: #1e2c3b;
   position: relative;
   transition: background-color .2s ease-in-out;
@@ -515,6 +498,7 @@
   color: #fff;
   overflow: hidden;
   height: 50px;
+  width: 100%;
 }
 
 .docs-primary-nav, .yaas-signature-nav {
@@ -538,6 +522,7 @@
 }
 
 .docs-primary-nav__index, .yaas-signature-nav__index {
+  padding: 0 10px;
   vertical-align: top;
 }
 
@@ -546,7 +531,7 @@
 }
 
 .docs-primary-nav__list [aria-selected=true], .yaas-signature-nav__list [aria-selected=true] {
-  color: #fff;
+  font-weight: bold;
 }
 
 .docs-primary-nav__listitem[aria-haspopup], .yaas-signature-nav__listitem[aria-haspopup] {
@@ -556,7 +541,6 @@
 .docs-primary-nav__listlink, .yaas-signature-nav__listlink {
   display: block;
   padding: 14px;
-  line-height: 1.45em;
 }
 
 .docs-primary-nav__listlink[aria-haspopup]::after, .yaas-signature-nav__listlink[aria-haspopup]::after {
@@ -571,7 +555,6 @@
 
 .docs-primary-nav [aria-haspopup] .yaas-signature-nav__subnav-list, .yaas-signature-nav [aria-haspopup] .yaas-signature-nav__subnav-list {
   display: none;
-  width: 230px;
 }
 
 .docs-primary-nav [aria-haspopup]:hover .yaas-signature-nav__subnav-list, .yaas-signature-nav [aria-haspopup]:hover .yaas-signature-nav__subnav-list {
@@ -580,17 +563,13 @@
 
 .docs-primary-nav a, .yaas-signature-nav a {
   text-decoration: none;
-  color: #a4c8f0;
-}
-
-.docs-primary-nav a:hover, .yaas-signature-nav a:hover {
-  background-color: #0376c6;
+  color: #fff;
 }
 
 .docs-primary-nav .brand, .yaas-signature-nav .brand {
   float: right;
   display: block;
-  width: 160px;
+  height: 50px;
 }
 
 .docs-primary-nav .brand .brand-logo, .yaas-signature-nav .brand .brand-logo {
@@ -598,14 +577,10 @@
   height: 50px;
 }
 
-@media (max-width: 949px) and (min-width: 0) {
+@media (max-width: 860px) and (min-width: 0) {
   .docs-primary-nav .brand, .yaas-signature-nav .brand {
     display: none;
   }
-}
-
-.docs-primary-nav .brand:hover, .yaas-signature-nav .brand:hover {
-  background: transparent;
 }
 
 @media (max-width: 740px) and (min-width: 0) {
@@ -646,7 +621,6 @@
   .primary-nav--toggle {
     visibility: visible !important;
     opacity: 1 !important;
-    display: block !important;
   }
   .primary-nav--toggle[aria-expanded="true"] {
     background: #0486e0;
@@ -684,10 +658,6 @@
   display: block;
   margin-top: 4px;
   transition: all 0.5s ease;
-}
-
-#menu-toggle:hover .icon-bar {
-  background-color: #fff;
 }
 
 #menu-toggle[aria-hidden="true"] .icon-bar:nth-child(2n+1) {
@@ -824,7 +794,7 @@
 
 @media (max-width: 740px) {
   .footer {
-    height: 100%;
+    height: 90px;
     z-index: 902;
   }
   .footer .footer-left, .footer .footer-right {

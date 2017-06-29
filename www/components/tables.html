@@ -52,7 +52,7 @@
         
 
         <a href="#" class="yaas-signature-nav__index domain yaas-home--">
-            <img class="domain-logo" src="../svg/logo-yaas.svg" alt="Techne">
+            <img src="../svg/logo-yaas.svg" height="30" alt="YaaS">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -127,7 +127,7 @@
         </ul>
 
         <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
-            <img class="brand-logo" src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+            <img src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
@@ -255,7 +255,7 @@
                 <ul>
                 
                     <li>
-                        <a href="../components/buttons.html" aria-selected="true">Buttons</a>
+                        <a href="../components/buttons.html" aria-selected="false">Buttons</a>
                     </li>
                 
                 </ul>
@@ -273,7 +273,7 @@
                     </li>
                 
                     <li>
-                        <a href="../components/tables.html" aria-selected="false">Tables</a>
+                        <a href="../components/tables.html" aria-selected="true">Tables</a>
                     </li>
                 
                 </ul>
@@ -300,14 +300,14 @@
 
     
 
-            <article class="docs-app__page docs-page docs-page--buttons">
+            <article class="docs-app__page docs-page docs-page--tables">
                 
 <header class="docs-section docs-flow docs-page__header">
     <h1 class="docs-page__title docs-flow__box--12-5">
-        Buttons
+        Tables
     </h1>
     <p class="docs-page__intro docs-flow__box--12-7">
-        Buttons are used to indicate and initiate actions. They are used in many other components.
+        Tables are used to pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
     </p>
 </header>
 
@@ -315,230 +315,190 @@
 
 <div class="docs-section">
 
-
-    <h2>Structure</h2>
-    <pre>
-.tn-button+(--primary,--secondary,--upload,--link,--add)+(.is-disabled|[aria-disabled=true])
-    </pre>
-
-</div>
-<div class="docs-section">
-
     <!-- START BASE COMPONENT EXAMPLES -->
     <h2>Base component</h2>
-    <h3 id="base">.tn-button <a href="#base">#</a></h3>
+    <h3 id="base">.tn-table <a href="#base">#</a></h3>
     <strong>Since 1.0</strong>
     <!-- output the component example and the code snippet -->
     
     <p>
-        
-    
 
-<button class="tn-button">
-    BUTTON_LABEL
-</button>
-
-
-    </p>
+<table class="tn-table">
+    <thead>
+        <tr class="tn-table__row">
+            <th class="tn-table__cell">COL 1<th>
+            <th class="tn-table__cell">COL 2<th>
+            <th class="tn-table__cell">COL 3<th>
+            <th class="tn-table__cell">COL 4<th>
+            <th class="tn-table__cell">COL 5<th>
+            <th class="tn-table__cell">COL 6<th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+    </tbody>
+</table>
+</p>
     <p>
         
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;button class=&quot;tn-button&quot;&gt;
-    BUTTON_LABEL
-&lt;/button&gt;</code>
+    <code class="docs-code__markup">&lt;table class=&quot;tn-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;tn-table__row&quot;&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 1&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 2&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 3&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 4&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 5&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 6&lt;th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr class=&quot;tn-table__row&quot;&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Pellentesque metus lacus commodo&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Eget justo ut rutrum&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Varius&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Nunc&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Sed non rhoncus risu&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;&lt;img src=&quot;http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png&quot; alt=&quot;&quot;&gt;&lt;td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
 </aside>
 
     </p>
-    <p><strong>Note:</strong> Any element can be used as a button, add attribute 
-<code>role=&quot;button&quot;</code>
- to maintain accessibility.</p>
 
 </div>
 
     
     <!-- START MODIFIED COMPONENT EXAMPLES -->
     
-    <div class="docs-section">
 
-        <h3 id="primary">.tn-button--primary <a href="#primary">#</a></h3>
+    <div class="docs-section">
+        
+        <h3 id="stripe">.tn-table__row--stripe <a href="#stripe">#</a></h3>
         <strong>Since 1.0</strong>
         <p>
             <!-- pulled from page content data at docs/data -->
-            The primary button should be used for the primary record actions on the page and is generally found in the upper right quadrant of the actionable area, usually the tool bar, i.e. “Save”.
+            
         </p>
         <!-- output the component example and the code snippet -->
         
         <p>
-            
-                
-    
 
-<button class="tn-button--primary">
-    BUTTON_LABEL
-</button>
-
-
-            
-        </p>
+<table class="tn-table">
+    <thead>
+        <tr class="tn-table__row">
+            <th class="tn-table__cell">COL 1<th>
+            <th class="tn-table__cell">COL 2<th>
+            <th class="tn-table__cell">COL 3<th>
+            <th class="tn-table__cell">COL 4<th>
+            <th class="tn-table__cell">COL 5<th>
+            <th class="tn-table__cell">COL 6<th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tn-table__row--stripe">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row--stripe">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+        <tr class="tn-table__row">
+            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
+            <td class="tn-table__cell">Eget justo ut rutrum<td>
+            <td class="tn-table__cell">Varius<td>
+            <td class="tn-table__cell">Nunc<td>
+            <td class="tn-table__cell">Sed non rhoncus risu<td>
+            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
+        </tr>
+    </tbody>
+</table>
+</p>
         <p>
             
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;button class=&quot;tn-button--primary&quot;&gt;
-    BUTTON_LABEL
-&lt;/button&gt;</code>
+    <code class="docs-code__markup">&lt;table class=&quot;tn-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;tn-table__row&quot;&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 1&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 2&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 3&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 4&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 5&lt;th&gt;
+            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 6&lt;th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr class=&quot;tn-table__row--stripe&quot;&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Pellentesque metus lacus commodo&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Eget justo ut rutrum&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Varius&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Nunc&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;Sed non rhoncus risu&lt;td&gt;
+            &lt;td class=&quot;tn-table__cell&quot;&gt;&lt;img src=&quot;http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png&quot; alt=&quot;&quot;&gt;&lt;td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
 </aside>
 
         </p>
-    </div>
-    
-    <div class="docs-section">
 
-        <h3 id="secondary">.tn-button--secondary <a href="#secondary">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-            <!-- pulled from page content data at docs/data -->
-            The secondary button should be used for any secondary, but important, actions on the page and is generally found in the upper right quadrant of the actionable area besides the “Save” primary button. Examples include “Add” in a popover or “Invite” in Team Management.
-        </p>
-        <!-- output the component example and the code snippet -->
-        
-        <p>
-            
-                
-    
-
-<button class="tn-button--secondary">
-    BUTTON_LABEL
-</button>
-
-
-            
-        </p>
-        <p>
-            
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;button class=&quot;tn-button--secondary&quot;&gt;
-    BUTTON_LABEL
-&lt;/button&gt;</code>
-</aside>
-
-        </p>
-    </div>
-    
-    <div class="docs-section">
-
-        <h3 id="upload">.tn-button--upload <a href="#upload">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-            <!-- pulled from page content data at docs/data -->
-            Input Type File needs special markup to get skinned in a proper way. You can use this with all available btn modifier classes
-        </p>
-        <!-- output the component example and the code snippet -->
-        
-        <p>
-            
-                
-    
-
-<span class="tn-button--upload">
-    Upload <input type="file">
-</span>
-
-
-            
-        </p>
-        <p>
-            
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;span class=&quot;tn-button--upload&quot;&gt;
-    Upload &lt;input type=&quot;file&quot;&gt;
-&lt;/span&gt;</code>
-</aside>
-
-        </p>
-    </div>
-    
-    <div class="docs-section">
-
-        <h3 id="link">.tn-button--link <a href="#link">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-            <!-- pulled from page content data at docs/data -->
-            Button Link is to be styled as a link as it's a tertiary action. Use Button to denote discard updates to the current form or action and return to the immediate previous state/page/form. Cancel is NOT 'Clear' but the end result is the same in that any updates to the current page are discarded
-        </p>
-        <!-- output the component example and the code snippet -->
-        
-        <p>
-            
-                
-    
-
-<button class="tn-button--link">
-    BUTTON_LABEL
-</button>
-
-
-            
-        </p>
-        <p>
-            
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;button class=&quot;tn-button--link&quot;&gt;
-    BUTTON_LABEL
-&lt;/button&gt;</code>
-</aside>
-
-        </p>
-    </div>
-    
-    <div class="docs-section">
-
-        <h3 id="add">.tn-button--add <a href="#add">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-            <!-- pulled from page content data at docs/data -->
-            Lorem ipsum
-        </p>
-        <!-- output the component example and the code snippet -->
-        
-        <p>
-            
-                
-    
-
-<button class="tn-button--add">
-    BUTTON_LABEL
-</button>
-
-
-            
-        </p>
-        <p>
-            
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;button class=&quot;tn-button--add&quot;&gt;
-    BUTTON_LABEL
-&lt;/button&gt;</code>
-</aside>
-
-        </p>
     </div>
     
 

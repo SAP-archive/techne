@@ -52,7 +52,7 @@
         
 
         <a href="#" class="yaas-signature-nav__index domain yaas-home--">
-            <img class="domain-logo" src="../svg/logo-yaas.svg" alt="Techne">
+            <img src="../svg/logo-yaas.svg" height="30" alt="YaaS">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -127,7 +127,7 @@
         </ul>
 
         <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
-            <img class="brand-logo" src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+            <img src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
@@ -269,11 +269,11 @@
                 <ul>
                 
                     <li>
-                        <a href="../components/cards.html" aria-selected="false">Cards</a>
+                        <a href="../components/cards.html" aria-selected="true">Cards</a>
                     </li>
                 
                     <li>
-                        <a href="../components/tables.html" aria-selected="true">Tables</a>
+                        <a href="../components/tables.html" aria-selected="false">Tables</a>
                     </li>
                 
                 </ul>
@@ -300,14 +300,14 @@
 
     
 
-            <article class="docs-app__page docs-page docs-page--tables">
+            <article class="docs-app__page docs-page docs-page--cards">
                 
 <header class="docs-section docs-flow docs-page__header">
     <h1 class="docs-page__title docs-flow__box--12-5">
-        Tables
+        Cards
     </h1>
     <p class="docs-page__intro docs-flow__box--12-7">
-        Tables are used to pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
     </p>
 </header>
 
@@ -315,192 +315,215 @@
 
 <div class="docs-section">
 
+    <h2>Structure</h2>
+    <pre>
+.tn-card+(--readonly)+(.is-disabled|[aria-disabled=true])
+    .tn-card__media?
+    .tn-card__content
+        .tn-card__header
+        .tn-card__description
+        .tn-card__status?
+    </pre>
+
+</div>
+<div class="docs-section">
+
     <!-- START BASE COMPONENT EXAMPLES -->
-    <h2>Base component</h2>
-    <h3 id="base">.tn-table <a href="#base">#</a></h3>
-    <strong>Since 1.0</strong>
+    <h2 id="base">Common card <a href="#base">#</a></h2>
+
     <!-- output the component example and the code snippet -->
     
     <p>
+        
+    <div class="tn-card" role="button">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Primary Value
+            </h2>
+            <p class="tn-card__description">
+                Secondary Value aute irure dolor in reprehenderit in voluptate
+            </p>
+            <p class="tn-card__status">
+                Status
+            </p>
+        </div>
+    </div>
 
-<table class="tn-table">
-    <thead>
-        <tr class="tn-table__row">
-            <th class="tn-table__cell">COL 1<th>
-            <th class="tn-table__cell">COL 2<th>
-            <th class="tn-table__cell">COL 3<th>
-            <th class="tn-table__cell">COL 4<th>
-            <th class="tn-table__cell">COL 5<th>
-            <th class="tn-table__cell">COL 6<th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-    </tbody>
-</table>
-</p>
+    </p>
     <p>
         
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;table class=&quot;tn-table&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr class=&quot;tn-table__row&quot;&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 1&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 2&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 3&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 4&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 5&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 6&lt;th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class=&quot;tn-table__row&quot;&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Pellentesque metus lacus commodo&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Eget justo ut rutrum&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Varius&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Nunc&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Sed non rhoncus risu&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;&lt;img src=&quot;http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png&quot; alt=&quot;&quot;&gt;&lt;td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Primary Value
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Secondary Value aute irure dolor in reprehenderit in voluptate
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                Status
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
 </aside>
 
     </p>
 
 </div>
+<div class="docs-section">
+
+    <h3 id="static">Read only card<br> .tn-card--readonly <a href="#static">#</a></h3>
+    <p>Modified: Has no hover effect</p>
+    
+    <p>
+        
+        
+    <div class="tn-card--readonly">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Lorem ipsum dolor quam placeat numquam repellendus
+            </h2>
+            <p class="tn-card__description">
+                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
+            </p>
+        </div>
+    </div>
 
     
-    <!-- START MODIFIED COMPONENT EXAMPLES -->
-    
-
-    <div class="docs-section">
+    </p>
+    <p>
         
-        <h3 id="stripe">.tn-table__row--stripe <a href="#stripe">#</a></h3>
-        <strong>Since 1.0</strong>
-        <p>
-            <!-- pulled from page content data at docs/data -->
-            
-        </p>
-        <!-- output the component example and the code snippet -->
-        
-        <p>
-
-<table class="tn-table">
-    <thead>
-        <tr class="tn-table__row">
-            <th class="tn-table__cell">COL 1<th>
-            <th class="tn-table__cell">COL 2<th>
-            <th class="tn-table__cell">COL 3<th>
-            <th class="tn-table__cell">COL 4<th>
-            <th class="tn-table__cell">COL 5<th>
-            <th class="tn-table__cell">COL 6<th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tn-table__row--stripe">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row--stripe">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-        <tr class="tn-table__row">
-            <td class="tn-table__cell">Pellentesque metus lacus commodo<td>
-            <td class="tn-table__cell">Eget justo ut rutrum<td>
-            <td class="tn-table__cell">Varius<td>
-            <td class="tn-table__cell">Nunc<td>
-            <td class="tn-table__cell">Sed non rhoncus risu<td>
-            <td class="tn-table__cell"><img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png" alt=""><td>
-        </tr>
-    </tbody>
-</table>
-</p>
-        <p>
-            
 <aside class="docs-code">
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;table class=&quot;tn-table&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr class=&quot;tn-table__row&quot;&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 1&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 2&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 3&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 4&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 5&lt;th&gt;
-            &lt;th class=&quot;tn-table__cell&quot;&gt;COL 6&lt;th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class=&quot;tn-table__row--stripe&quot;&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Pellentesque metus lacus commodo&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Eget justo ut rutrum&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Varius&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Nunc&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;Sed non rhoncus risu&lt;td&gt;
-            &lt;td class=&quot;tn-table__cell&quot;&gt;&lt;img src=&quot;http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png&quot; alt=&quot;&quot;&gt;&lt;td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card--readonly&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Lorem ipsum dolor quam placeat numquam repellendus
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
 </aside>
 
-        </p>
+    </p>
 
-    </div>
+</div>
+<div class="docs-section">
+
+    <h3 id="disabled">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
+    <p>State: Disabled, this class/attribute can be toggled with JS </p>
     
+    <p>
+        
+        
+    <div class="tn-card" aria-disabled="true" role="button">
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Repellendus obcaecati molestias
+            </h2>
+            <p class="tn-card__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+            </p>
+            <p class="tn-card__status">
+                <span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>
+            </p>
+        </div>
+    </div>
+
+    
+    </p>
+    <p>A11Y NOTE:
+        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+    </p>
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; aria-disabled=&quot;true&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Repellendus obcaecati molestias
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;&lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+    </p>
+
+</div>
+<div class="docs-section">
+
+    <h3 id="media">Include .tn-card__media<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    
+
+    <p>
+        
+    <div class="tn-card" role="button">
+        <div class="tn-card__media" style="background-image: url(http://via.placeholder.com/73x73)" aria-label="CARD_MEDIA_ALT">
+        </div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                Asperiores doloribus id dolore
+            </h2>
+            <p class="tn-card__description">
+                Consectetur adipisicing elit
+            </p>
+            <p class="tn-card__status">
+                Cumque itaque
+            </p>
+        </div>
+    </div>
+
+    </p>
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(http://via.placeholder.com/73x73)&quot; aria-label=&quot;CARD_MEDIA_ALT&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tn-card__content&quot;&gt;
+            &lt;h2 class=&quot;tn-card__header&quot;&gt;
+                Asperiores doloribus id dolore
+            &lt;/h2&gt;
+            &lt;p class=&quot;tn-card__description&quot;&gt;
+                Consectetur adipisicing elit
+            &lt;/p&gt;
+            &lt;p class=&quot;tn-card__status&quot;&gt;
+                Cumque itaque
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code>
+</aside>
+
+    </p>
+
+</div>
 
 
 

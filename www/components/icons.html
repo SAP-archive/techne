@@ -52,7 +52,7 @@
         
 
         <a href="#" class="yaas-signature-nav__index domain yaas-home--">
-            <img class="domain-logo" src="../svg/logo-yaas.svg" alt="Techne">
+            <img src="../svg/logo-yaas.svg" height="30" alt="YaaS">
             <span class="logo-text">YAAS</span>
         </a>
 
@@ -127,7 +127,7 @@
         </ul>
 
         <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
-            <img class="brand-logo" src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
+            <img src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
         <!-- mobile navigation -->
         <button href="#" class="primary-nav--toggle"
@@ -269,7 +269,7 @@
                 <ul>
                 
                     <li>
-                        <a href="../components/cards.html" aria-selected="true">Cards</a>
+                        <a href="../components/cards.html" aria-selected="false">Cards</a>
                     </li>
                 
                     <li>
@@ -287,7 +287,7 @@
                 <ul>
                 
                     <li>
-                        <a href="../components/icons.html" aria-selected="false">Icons</a>
+                        <a href="../components/icons.html" aria-selected="true">Icons</a>
                     </li>
                 
                 </ul>
@@ -300,228 +300,310 @@
 
     
 
-            <article class="docs-app__page docs-page docs-page--cards">
+            <article class="docs-app__page docs-page docs-page--icons">
                 
 <header class="docs-section docs-flow docs-page__header">
     <h1 class="docs-page__title docs-flow__box--12-5">
-        Cards
+        Icons
     </h1>
     <p class="docs-page__intro docs-flow__box--12-7">
-        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
+        some intro test to icons.
     </p>
 </header>
 
                 
 
-<div class="docs-section">
 
-    <h2>Structure</h2>
-    <pre>
-.tn-card+(--readonly)+(.is-disabled|[aria-disabled=true])
-    .tn-card__media?
-    .tn-card__content
-        .tn-card__header
-        .tn-card__description
-        .tn-card__status?
-    </pre>
+<div class="docs-section">
+	
+<!-- find original template at https://github.com/shakyShane/gulp-svg-sprites/blob/master/tmpl/preview.html -->
+<style>
+	.demo-icon-wrapper{
+		padding: 20px;
+	}
+	.demo-icon-wrapper span{
+		float: left;
+		margin-right: 20px;
+		display: inline-block;
+	}
+</style>
+
+<div class="demo-icon-wrapper">
+
+      
+    	<span class="hyicon hyicon-add"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-addlg"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-arrow"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-back"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-caution"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-change"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-checked"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-checkedlg"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-chevron"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-clone"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-close"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-collapse"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-combinedview"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-customize"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-delete"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-done"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-dragdrop"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-dragdroplg"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-duplicate"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-edit"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-expand"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-feedback"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-filter"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-filterremove"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-gethelp"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-grid"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-helpoff"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-helpon"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-info"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-infoon"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-library"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-linked"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-list"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-localization"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-lock"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-maximize"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-minimize"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-more"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-msgdanger"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-msginfo"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-msgsuccess"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-msgwarning"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-noimage"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-options"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-remove"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-removelg"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-restrictions"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-search"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-sort"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-sync"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-top"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-visibilityoff"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-visibilityon"></span>
+
+
+
+      
+    	<span class="hyicon hyicon-warning"></span>
+
+
+
+      
 
 </div>
-<div class="docs-section">
 
-    <!-- START BASE COMPONENT EXAMPLES -->
-    <h2 id="base">Common card <a href="#base">#</a></h2>
-
-    <!-- output the component example and the code snippet -->
-    
-    <p>
-        
-    <div class="tn-card" role="button">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Primary Value
-            </h2>
-            <p class="tn-card__description">
-                Secondary Value aute irure dolor in reprehenderit in voluptate
-            </p>
-            <p class="tn-card__status">
-                Status
-            </p>
-        </div>
-    </div>
-
-    </p>
-    <p>
-        
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Primary Value
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Secondary Value aute irure dolor in reprehenderit in voluptate
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                Status
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
-</aside>
-
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="static">Read only card<br> .tn-card--readonly <a href="#static">#</a></h3>
-    <p>Modified: Has no hover effect</p>
-    
-    <p>
-        
-        
-    <div class="tn-card--readonly">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Lorem ipsum dolor quam placeat numquam repellendus
-            </h2>
-            <p class="tn-card__description">
-                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
-            </p>
-            <p class="tn-card__status">
-                <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
-            </p>
-        </div>
-    </div>
-
-    
-    </p>
-    <p>
-        
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card--readonly&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Lorem ipsum dolor quam placeat numquam repellendus
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
-</aside>
-
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="disabled">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
-    <p>State: Disabled, this class/attribute can be toggled with JS </p>
-    
-    <p>
-        
-        
-    <div class="tn-card" aria-disabled="true" role="button">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Repellendus obcaecati molestias
-            </h2>
-            <p class="tn-card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
-            </p>
-            <p class="tn-card__status">
-                <span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>
-            </p>
-        </div>
-    </div>
-
-    
-    </p>
-    <p>A11Y NOTE:
-        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-    </p>
-    <p>
-        
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; aria-disabled=&quot;true&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Repellendus obcaecati molestias
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;&lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
-</aside>
-
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="media">Include .tn-card__media<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    
-
-    <p>
-        
-    <div class="tn-card" role="button">
-        <div class="tn-card__media" style="background-image: url(http://via.placeholder.com/73x73)" aria-label="CARD_MEDIA_ALT">
-        </div>
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Asperiores doloribus id dolore
-            </h2>
-            <p class="tn-card__description">
-                Consectetur adipisicing elit
-            </p>
-            <p class="tn-card__status">
-                Cumque itaque
-            </p>
-        </div>
-    </div>
-
-    </p>
-    <p>
-        
-<aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(http://via.placeholder.com/73x73)&quot; aria-label=&quot;CARD_MEDIA_ALT&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Asperiores doloribus id dolore
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Consectetur adipisicing elit
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                Cumque itaque
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
-</aside>
-
-    </p>
 
 </div>
 
