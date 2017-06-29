@@ -33,6 +33,10 @@ export class ComponentSectionSampleComponent {
     ];
     optionSelected = 0;
 
+    settings: any = {
+        compact: false
+    }
+
     constructor(
         private route: ActivatedRoute,
         private sanitizer: DomSanitizer,
@@ -66,4 +70,9 @@ export class ComponentSectionSampleComponent {
     selectOption(index) {
         this.optionSelected = index;
     }
+
+    toggleSpacing(index) {
+        this.settings.compact = !this.settings.compact;
+    }
+
 }

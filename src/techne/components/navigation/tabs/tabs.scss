@@ -1,4 +1,5 @@
 @import 'system/colors';
+@import 'system/colors';
 
 // Tabs
 
@@ -20,6 +21,25 @@
                 background-color: $tn-color-neutral-lightest;
                 cursor: default;
                 color: $tn-color-neutral;
+            }
+        }
+
+        .tn-side-actions { 
+            float: right;
+
+            .tn-action {
+                cursor: pointer;
+                margin: 0 tn-get-spacing("normal", 1);
+                color: $tn-color-neutral-lighter;
+
+                &.tn-selected {
+                    color: $tn-color-neutral-dark;
+                }
+
+                &:hover {
+                    color: $tn-color-default;
+                }
+
             }
         }
     }

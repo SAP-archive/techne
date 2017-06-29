@@ -12,10 +12,13 @@
     <div class="tn-tabs">
         <div class="tn-tabs-options">
             <a *ngFor="let option of options; let i = index" (click)="selectOption(i)" [ngClass]="{ 'tn-tabs-option-selected': optionSelected == i }" class="tn-tabs-option"> {{ option.label }} </a>
+            <div class="tn-side-actions">
+                <a class="tn-action" (click)="toggleSpacing()" [ngClass]="{ 'tn-selected': settings.compact }" title="Toggle class='tn-compact'"><i class="material-icons">photo_size_select_small</i></a>
+            </div>
         </div>
         <div [ngSwitch]="optionSelected" class="tn-tabs-container">
             <div *ngSwitchCase="0" class="tn-section-rendered">
-                <div [innerHTML]="codeSample">
+                <div [innerHTML]="codeSample" [ngClass]="{ 'tn-compact': settings.compact }">
                 </div>
             </div>
             <div *ngSwitchCase="1" class="tn-section-code">
