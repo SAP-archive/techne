@@ -1,6 +1,6 @@
 ## Dist folder
 ##dist/*
-##www/*
+www/*
 
 ## NODE MODULES
 node_modules/*
