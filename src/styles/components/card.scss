@@ -74,22 +74,22 @@ $block: ns(card);
         text-transform: uppercase;
         @include tn-weight(bold);
         //TDOD: this is not very flexible
-        & > * {
-            &:first-child::after {
-                content: "|";
-                display: inline-block;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            &:last-child::after {
-                content: "";
-                padding-left: 0;
-                padding-right: 0;
-            }
-            &:nth-child(2) {
-                @include tn-weight(semi);
-            }
-        }
+        // & > * {
+        //     &:first-child::after {
+        //         content: "|";
+        //         display: inline-block;
+        //         padding-left: 10px;
+        //         padding-right: 10px;
+        //     }
+        //     &:last-child::after {
+        //         content: "";
+        //         padding-left: 0;
+        //         padding-right: 0;
+        //     }
+        //     &:nth-child(2) {
+        //         @include tn-weight(semi);
+        //     }
+        // }
     }
     //MODIFICATIONS
     &--button,
