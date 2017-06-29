@@ -39,7 +39,8 @@
             "styles": [
                 "techne/techne.scss",
 
-                "../extra/prismjs/prism-vs.css"
+                "../extra/prismjs/prism-vs.css",
+                "../node_modules/github-markdown-css/github-markdown.css"
             ],
             "stylePreprocessorOptions": {
                 "includePaths": [

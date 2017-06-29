@@ -1,1 +1,0 @@
-The cards can also have a more compact layout with 4 columns instead of 3.

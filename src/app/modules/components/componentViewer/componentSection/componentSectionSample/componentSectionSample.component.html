@@ -3,7 +3,7 @@
         {{ section.title }} {{ section.data }} 
         <a [routerLink]="[]" [fragment]="section.id">#</a>
     </h2>
-    <div *ngIf="section.contentMD" Markdown [path]="contentMDPath"></div>
+    <div *ngIf="section.contentMD" Markdown [path]="contentMDPath" class="markdown-body"></div>
     <div *ngIf="section.content">
         {{ section.content }}
     </div>
