@@ -9,6 +9,11 @@
             "outDir": "www",
             "assets": [
                 {
+                    "glob": "favicon.ico",
+                    "input": "./",
+                    "output": "./"
+                },
+                {
                     "glob": "**/*",
                     "input": "./assets/",
                     "output": "./assets/"
