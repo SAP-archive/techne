@@ -26,11 +26,16 @@
 
         .tn-side-actions { 
             float: right;
-
+            user-select: none;
+            
             .tn-action {
                 cursor: pointer;
                 margin: 0 tn-get-spacing("normal", 1);
                 color: $tn-color-neutral-lighter;
+
+                .material-icons {
+                    font-size: 2em;
+                }
 
                 &.tn-selected {
                     color: $tn-color-neutral-dark;

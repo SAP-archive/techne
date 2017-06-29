@@ -101,10 +101,28 @@
 
 .tn-compact .tn-card {
      @include tn-padding("compact", 4);
+     width: 300px;
 
      &.tn-card-with-media {
-         padding: 0;
+        width: 200px;
+        max-width: 200px;
+        padding: 0;
 
+        .tn-card-media {
+            min-width: 80px;
+            min-height: 80px;
+        }
+
+        &.tn-card-vertical {
+            width: 200px;
+
+            flex-direction: column;
+
+            .tn-card-media {
+                min-width: 200px;
+                min-height: 200px;
+            }
+        }
         .tn-card-content {
             @include tn-padding("compact", 4);
         }

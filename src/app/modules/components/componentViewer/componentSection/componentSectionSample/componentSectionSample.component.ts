@@ -11,7 +11,6 @@ import { ComponentsService } from '../../../componentsService';
     selector: 'component-section-sample',
     templateUrl: './componentSectionSample.component.html',
     encapsulation: ViewEncapsulation.None //,
-    //directives: [Codeblock, Haml]
 })
 export class ComponentSectionSampleComponent {
 

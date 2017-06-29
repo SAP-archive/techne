@@ -41,7 +41,7 @@
         @include tn-padding("normal", 4);
 
         .tn-section-rendered {
-            @include tn-padding("normal", 4);
+            padding: tn-get-spacing("normal", 4) 0;
 
             div {
                 width: 100%;
@@ -49,7 +49,7 @@
         }
 
         .tn-section-code {
-            @include tn-padding("normal", 4);
+            padding: tn-get-spacing("normal", 4) 0;
             font-family: monospace;
             font-size: 1.2em;
             line-height: 1.8em;
