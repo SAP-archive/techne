@@ -28,7 +28,8 @@ $block: ns(card);
     //ELEMENTS
     &__media {
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position: center center;
+        background-size: cover;
         min-width: $tn-card-media-width;
         margin: $tn-card-padding 0 $tn-card-padding $tn-card-padding;
         //ELEMENT MODIFIERS
@@ -38,13 +39,22 @@ $block: ns(card);
             width: $tn-card-media-width + $tn-card-padding;
             background-size: cover;
         }
+        &--round {
+            @extend .#{$block}__media;
+            border-radius: 50%;
+        }
+        &--hex {
+            //TEST ****
+            @extend .#{$block}__media;
+            mask: url("data:image/svg+xml;utf8,#{'<svg width="75" height="75" viewBox="0 0 81 93" xmlns="http://www.w3.org/2000/svg"><title>hex</title><g fill="#000" fill-rule="evenodd"><path d="M79.609 23.056l.391.225v45.934L40 92.28 0 69.215V23.28L.477 23l38.645 21.925a2 2 0 0 0 1.975 0l38.512-21.869z"/><path d="M40.092 0l40.092 23.416-39.087 22.195a2 2 0 0 1-1.975 0L0 23.417 40.092 0z" fill-opacity=".6"/></g></svg>'}")  center center / contain;
+        }
     }
     &__content {
         padding: ($tn-card-padding - 5px) $tn-card-padding;
         width: 100%;
     }
     &__header {
-        color: $tn-card-color-link;
+        color: $color;
         font-size: 18px;
         line-height: (22/18);
         @include tn-weight(semi);
@@ -82,28 +92,31 @@ $block: ns(card);
         }
     }
     //MODIFICATIONS
-    &--readonly {
+    &--button,
+    &[role="button"] {
         @extend .#{$block};
         cursor: default;
         .#{$block}__header {
-            color: $color;
+            color: $tn-card-color-link;
         }
     }
     //EFFECTS *******************************************
+    &--button,
     &[role="button"] {
         cursor: pointer;
+        transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
+        &:hover:not([class*="--readonly"], .is-disabled, [aria-disabled="true"]) {
+            border-color: $tn-card-color-link;
+            box-shadow: $tn-card-shadow-hover;
+        }
     }
-    transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
-    &:hover:not([class*="--readonly"], .is-disabled, [aria-disabled="true"]) {
-        border-color: $tn-card-color-link;
-        box-shadow: $tn-card-shadow-hover;
-    }
+
     //STATES *******************************************
     &[aria-disabled="true"], &.is-disabled {
         background-color: $tn-card-background-color-disabled;
         cursor: default;
         * {
-            color: $tn-card-color-disabled;
+            color: $tn-card-color-disabled !important;
         }
     }
 }
