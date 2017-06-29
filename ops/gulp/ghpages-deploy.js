@@ -5,5 +5,5 @@ var ghPages = require('gulp-gh-pages');
 gulp.task('deploy', function() {
     
   return gulp.src('./www/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({remoteUrl:'git@github.com:SAP/techne.git'}));
 });
