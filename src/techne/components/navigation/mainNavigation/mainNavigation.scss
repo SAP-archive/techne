@@ -6,6 +6,7 @@
 
 .tn-main-nav {
     display: flex;
+    @include tn-padding("normal", 1);
     background-color: $tn-color-default-light;
     color: white;
 
@@ -14,18 +15,13 @@
         text-decoration: none; 
     }
 
-    @include tn-padding($tn-narrow-spacing);
-
-    .tn-main-nav-section {
-        @include tn-margin-horizontal($tn-narrow-spacing);
-    }
-
     .tn-main-nav-options {
         display: flex;
+        @include tn-margin-horizontal("normal", 2);
 
         .tn-main-nav-option {
             list-style: none;
-            @include tn-margin-horizontal($tn-wide-spacing);
+            @include tn-margin-horizontal("normal", 2);
             font-size: 1.2em;
 
             a {
@@ -65,3 +61,17 @@
         vertical-align: middle;
     }
 }
+
+// Spacing Compact
+.tn-compact .tn-main-nav {
+    @include tn-padding("compact", 1);
+}
+
+.tn-compact .tn-main-nav {
+    @include tn-margin-horizontal("compact", 2);
+}
+
+.tn-compact .tn-main-nav-option {
+    @include tn-margin-horizontal("compact", 2);
+}    
+

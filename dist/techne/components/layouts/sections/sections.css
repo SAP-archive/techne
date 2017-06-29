@@ -9,18 +9,9 @@
 .tn-section-title-text .tn-section-title h1 { font-size: 2.2em; font-weight: 700; }
 .tn-section-title-text .tn-section-text { flex: 2; padding: 40px; }
 .tn-section-title-text .tn-section-text p { line-height: 1.5em; max-width: 700px; }
+.tn-compact .tn-section-text, .tn-compact .tn-section-title { padding: 20px; }
 .tn-color-positive { color: #18C407; }
-.tn-debug-color-default { background-color: #006FBB; }
-.tn-debug-color-default-light { background-color: #008DEE; }
-.tn-debug-color-default-dark { background-color: #005188; }
-.tn-debug-color-accent { background-color: #F0AB00; }
-.tn-debug-color-accent-light { background-color: #FFC024; }
-.tn-debug-color-accent-dark { background-color: #BD8700; }
-.tn-debug-color-neutral { background-color: #21262C; }
-.tn-debug-color-neutral-lightest { background-color: #F4F5F6; }
-.tn-debug-color-neutral-light { background-color: #7C8B9D; }
-.tn-debug-color-neutral-dark { background-color: #0B0D0F; }
-body { color: #21262C; }
+body.tn-app { margin: 0; }
 .tn-section-sample { display: flex; flex-direction: row; border-bottom: 1px solid #F4F5F6; }
 .tn-section-sample .tn-section-overview { width: 440px; padding: 40px; }
 .tn-section-sample .tn-section-overview h2 { font-size: 1.8em; font-weight: 400; margin-top: 0; }
@@ -34,3 +25,4 @@ body { color: #21262C; }
 .tn-section-sample .tn-section-samples .tn-section-code pre[class*=language-] { margin: 0; padding: 0; border: none; }
 .tn-section-sample.tn-section-vertical { flex-direction: column; }
 .tn-section-sample.tn-section-vertical .tn-section-overview { width: 100%; padding-bottom: 0; }
+.tn-compact .tn-section-overview, .tn-compact .tn-section-samples, .tn-compact .tn-section-samples .tn-section-code, .tn-compact .tn-section-samples .tn-section-rendered { padding: 20px; }

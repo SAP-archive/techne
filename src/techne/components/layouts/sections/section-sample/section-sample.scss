@@ -1,4 +1,5 @@
 @import 'system/colors';
+@import 'system/spacing';
 
 // Display a section with a title and an overview
 
@@ -9,7 +10,7 @@
 
     .tn-section-overview {
         width: 440px; 
-        padding: 40px;
+        @include tn-padding("normal", 4);
 
         h2 {
             font-size: 1.8em;
@@ -37,10 +38,10 @@
 
     .tn-section-samples {
         flex: 2;
-        padding: 40px;
+        @include tn-padding("normal", 4);
 
         .tn-section-rendered {
-            padding: 40px;
+            @include tn-padding("normal", 4);
 
             div {
                 width: 100%;
@@ -48,7 +49,7 @@
         }
 
         .tn-section-code {
-            padding: 40px;
+            @include tn-padding("normal", 4);
             font-family: monospace;
             font-size: 1.2em;
             line-height: 1.8em;
@@ -70,5 +71,23 @@
         }
     }
 
+}
+
+// Spacing compact
+
+.tn-compact .tn-section-overview {
+    @include tn-padding("compact", 4);
+}
+
+.tn-compact .tn-section-samples {
+    @include tn-padding("compact", 4);
+
+    .tn-section-rendered {
+        @include tn-padding("compact", 4);
+    }
+
+    .tn-section-code {
+        @include tn-padding("compact", 4);
+    }
 
 }

@@ -1,4 +1,5 @@
 @import 'system/colors';
+@import 'system/spacing';
 
 // Display a section with a title and an overview
 
@@ -9,7 +10,7 @@
 
     .tn-section-title {
         width: 400px; 
-        padding: 40px;
+        @include tn-padding("normal", 4);
 
         h1 {
             font-size: 2.2em;
@@ -19,6 +20,7 @@
 
     .tn-section-text {
         flex: 2;
+        @include tn-padding("normal", 4);
         padding: 40px;
 
         p {
@@ -28,3 +30,11 @@
     }
 
 }
+
+.tn-compact .tn-section-title { 
+    @include tn-padding("compact", 4);
+ }
+
+ .tn-compact .tn-section-text {
+    @include tn-padding("compact", 4);
+ }

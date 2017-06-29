@@ -4,7 +4,7 @@
     https://github.com/SAP/techne
     License: Apache License 2.0
 */
-body { margin: 0; }
+body.tn-app { margin: 0; }
 .tn-grid { min-width: 1200px; }
 .tn-grid .tn-grid-row { display: flex; flex-wrap: wrap; border-bottom: 1px solid #F0F0F0; }
 @media screen and (max-width:575px) { .tn-grid .tn-grid-row { border: none; } }

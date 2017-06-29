@@ -5,22 +5,12 @@
     License: Apache License 2.0
 */
 .tn-color-positive { color: #18C407; }
-.tn-debug-color-default { background-color: #006FBB; }
-.tn-debug-color-default-light { background-color: #008DEE; }
-.tn-debug-color-default-dark { background-color: #005188; }
-.tn-debug-color-accent { background-color: #F0AB00; }
-.tn-debug-color-accent-light { background-color: #FFC024; }
-.tn-debug-color-accent-dark { background-color: #BD8700; }
-.tn-debug-color-neutral { background-color: #21262C; }
-.tn-debug-color-neutral-lightest { background-color: #F4F5F6; }
-.tn-debug-color-neutral-light { background-color: #7C8B9D; }
-.tn-debug-color-neutral-dark { background-color: #0B0D0F; }
-body { color: #21262C; }
+body.tn-app { margin: 0; }
 .tn-card { padding: 40px; border: 1px solid #D4D9DE; min-width: 370px; max-width: 460px; box-sizing: border-box; }
 .tn-card:hover { border-color: #008DEE; box-shadow: 0 0 5px #D4D9DE; cursor: pointer; }
 .tn-card:hover.tn-card-disabled, .tn-card:hover.tn-card-static { border-color: #D4D9DE; box-shadow: none; cursor: default; }
 .tn-card .tn-card-primary-info { font-size: 1em; font-weight: 700; color: #008DEE; margin: 0; }
-.tn-card .tn-card-secondary-info { margin: 5px 0 0; color: #21262C; font-size: .8em; }
+.tn-card .tn-card-secondary-info { margin: 10px 0 0; color: #21262C; font-size: .8em; }
 .tn-card .tn-card-label { margin: 30px 0 0; font-size: .8em; font-weight: 700; letter-spacing: .05em; display: block; }
 .tn-card.tn-card-static .tn-card-label, .tn-card.tn-card-static .tn-card-primary-info, .tn-card.tn-card-static .tn-card-secondary-info { color: #21262C; }
 .tn-card.tn-card-disabled { background-color: #F9FAFB; }
@@ -31,3 +21,8 @@ body { color: #21262C; }
 .tn-card.tn-card-with-media .tn-card-content { flex: 2; padding: 40px; box-sizing: border-box; }
 .tn-card.tn-card-with-media.tn-card-vertical { max-width: 350px; width: auto; flex-direction: column; }
 .tn-card.tn-card-with-media.tn-card-vertical .tn-card-media { min-width: 348px; min-height: 350px; }
+.tn-compact .tn-card { padding: 20px; }
+.tn-compact .tn-card.tn-card-with-media { padding: 0; }
+.tn-compact .tn-card-content, .tn-compact .tn-card.tn-card-with-media .tn-card-content { padding: 20px; }
+.tn-compact .tn-card-secondary-info { margin: 5px 0 0; }
+.tn-compact .tn-card-label { margin: 15px 0 0; }

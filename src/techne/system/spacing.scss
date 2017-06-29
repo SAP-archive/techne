@@ -1,25 +1,25 @@
 // Techné Spacing
+// 
 
-body { margin: 0; }
+body.tn-app { margin: 0; }
 
-// Narrow Padding and Margin
+$tn-base-spacings: (
+    normal: 10px,
+    compact: 5px
+);
 
-$tn-narrow-spacing: 10px;
-
-// Wide Padding and Margin
-
-$tn-wide-spacing: 20px;
-
-// spancing mixings
-
-@mixin tn-padding($space) {
-    padding: $space;
+@function tn-get-spacing($spacing: "normal", $multiple: 1){
+  @return map-get($tn-base-spacings, $spacing) * $multiple;
 }
 
-@mixin tn-margin($space) {
-    margin: $space;
+@mixin tn-padding($spacing: "normal", $multiple: 1) {
+    padding: tn-get-spacing($spacing, $multiple);
 }
 
-@mixin tn-margin-horizontal($space) {
-    margin: 0 $space 0 $space;
+@mixin tn-margin($spacing: "normal", $multiple: 1) {
+    margin: tn-get-spacing($spacing, $multiple);
+}
+
+@mixin tn-margin-horizontal($spacing: "normal", $multiple: 1) {
+    margin: 0 tn-get-spacing($spacing, $multiple) 0 tn-get-spacing($spacing, $multiple);
 }

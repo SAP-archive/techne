@@ -5,21 +5,10 @@
     License: Apache License 2.0
 */
 .tn-color-positive { color: #18C407; }
-.tn-debug-color-default { background-color: #006FBB; }
-.tn-debug-color-default-light { background-color: #008DEE; }
-.tn-debug-color-default-dark { background-color: #005188; }
-.tn-debug-color-accent { background-color: #F0AB00; }
-.tn-debug-color-accent-light { background-color: #FFC024; }
-.tn-debug-color-accent-dark { background-color: #BD8700; }
-.tn-debug-color-neutral { background-color: #21262C; }
-.tn-debug-color-neutral-lightest { background-color: #F4F5F6; }
-.tn-debug-color-neutral-light { background-color: #7C8B9D; }
-.tn-debug-color-neutral-dark { background-color: #0B0D0F; }
-body { color: #21262C; margin: 0; }
-.tn-main-nav { display: flex; background-color: #008DEE; color: #FFFFFF; padding: 10px; }
+body.tn-app { margin: 0; }
+.tn-main-nav { display: flex; padding: 10px; background-color: #008DEE; color: #FFFFFF; }
 .tn-main-nav a { color: #FFFFFF; text-decoration: none; }
-.tn-main-nav .tn-main-nav-section { margin: 0 10px; }
-.tn-main-nav .tn-main-nav-options { display: flex; }
+.tn-main-nav .tn-main-nav-options { display: flex; margin: 0 20px; }
 .tn-main-nav .tn-main-nav-options .tn-main-nav-option { list-style: none; margin: 0 20px; font-size: 1.2em; }
 .tn-main-nav .tn-main-nav-options .tn-main-nav-option a { color: #D4D9DE; }
 .tn-main-nav .tn-main-nav-options .tn-main-nav-option a:hover { color: #F0AB00; }
@@ -28,3 +17,5 @@ body { color: #21262C; margin: 0; }
 .tn-identity { margin: 0 0 0 1.5em; }
 .tn-identity .tn-logo { height: 30px; vertical-align: middle; }
 .tn-identity .tn-inidentity-name { font-size: 1.5em; font-weight: 400; margin: 0 0 0 .2em; vertical-align: middle; }
+.tn-compact .tn-main-nav { padding: 5px; margin: 0 10px; }
+.tn-compact .tn-main-nav-option { margin: 0 10px; }
