@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const gulpif = require('gulp-if');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 
@@ -19,17 +20,18 @@ const task = (cb) => {
     let prefix = 'techne';
 
     return gulp.src(`${paths.src}/*`)
-        //.pipe(debug())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-    		browsers: ['last 2 versions'],
-    		cascade: true
-    	}))
-        .pipe(cleanCSS())
-        .pipe(rename({
-            prefix: `${prefix}-`
-        }))
-        .pipe(gulp.dest(paths.dest))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulpif(environment.production, autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: true
+    })))
+    .pipe(gulpif(environment.production, cleanCSS({
+        format: 'beautify'
+    })))
+    .pipe(rename({
+        prefix: `${prefix}-`
+    }))
+    .pipe(gulp.dest(paths.dest))
 
 }
 

@@ -1,5 +1,8 @@
-@charset "UTF-8";
-/*! SAP Hybris — Techne */
+/*!
+ * Techne v2.0
+ * Copyright (c) 2017 SAP SE or an SAP affiliate company.
+ * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+ */
 @import url(//fonts.googleapis.com/css?family=Dosis:400,500,600);
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600);
 /*!
@@ -19,12 +22,12 @@ html {
 }
 body {
   margin: 0;
-  background-color: #eef1f3;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   color: #21262c;
   font-family: 'Open Sans',sans-serif;
   font-size: 1rem;
-  line-height: 1.5
+  line-height: 1.375
 }
 h1,
 h2,
@@ -63,6 +66,18 @@ ul {
 img {
   line-height: 0
 }
+a {
+  color: #009cdf;
+  text-decoration: none
+}
+a:hover {
+  color: #009cdf
+}
+a:active,
+a:focus {
+  color: #009cdf;
+  outline: 0
+}
 /*!
 * @section Button Elements
 * Default styles for button elements
@@ -94,7 +109,7 @@ fieldset {
 .tn-button--secondary,
 .tn-button--upload {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.375;
   color: #21262c;
   font-smoothing: antialiased;
   -webkit-appearance: none;
@@ -115,6 +130,9 @@ fieldset {
   -ms-flex-align: start;
   align-items: flex-start;
   padding: 20px 40px;
+  background-color: #d7d7d7
+}
+.tn-button--primary {
   background-color: #fbc100
 }
 .tn-button--secondary {
@@ -140,13 +158,12 @@ fieldset {
 }
 .tn-button--add {
   font-weight: 700;
-  width: 100%;
-  background-color: #d7d7d7;
-  color: #006fbb
+  width: 100%
 }
 .tn-button--add::before {
-  font-size: 2rem;
-  line-height: 1.125;
+  font-size: 1.625rem;
+  line-height: 1.23077;
+  font-weight: 600;
   font-weight: 400;
   content: "+"
 }
@@ -157,7 +174,7 @@ fieldset {
 */
 .tn-table {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.375;
   color: #21262c;
   border-collapse: collapse;
   width: 100%;
@@ -169,6 +186,108 @@ fieldset {
 .tn-table__cell {
   vertical-align: top;
   text-align: left
+}
+/*!
+    card structure
+    .tn-card+(--readonly)+(.is-disabled)
+        .tn-card__media+(--fill)
+        .tn-card__content
+            .tn-card__header, .tn-card__description, .tn-card__label
+*/
+.tn-card,
+.tn-card--readonly {
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #21262c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  border: solid 1px #d7d7d7;
+  -webkit-transition: border-color .2s,-webkit-box-shadow .2s;
+  transition: border-color .2s,-webkit-box-shadow .2s;
+  transition: border-color .2s,box-shadow .2s;
+  transition: border-color .2s,box-shadow .2s,-webkit-box-shadow .2s
+}
+.tn-card__media,
+.tn-card__media--fill {
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-width: 75px;
+  margin: 40px 0 40px 40px
+}
+.tn-card__media--fill {
+  margin: 0;
+  width: 115px;
+  background-size: cover
+}
+.tn-card__content {
+  padding: 35px 40px;
+  width: 100%
+}
+.tn-card__header {
+  color: #009cdf;
+  font-size: 18px;
+  line-height: 1.22222;
+  font-weight: 600;
+  margin-bottom: 3px
+}
+.tn-card__description {
+  font-size: 13px;
+  line-height: 1.46154;
+  margin-bottom: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.tn-card__status {
+  font-size: 12px;
+  line-height: 1.16667;
+  text-transform: uppercase;
+  font-weight: 700
+}
+.tn-card__status > :first-child::after {
+  content: "|";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px
+}
+.tn-card__status > :last-child::after {
+  content: "";
+  padding-left: 0;
+  padding-right: 0
+}
+.tn-card__status > :nth-child(2) {
+  font-weight: 600
+}
+.tn-card--readonly {
+  cursor: default
+}
+.tn-card--readonly .tn-card__header {
+  color: #21262c
+}
+.tn-card[role=button],
+[role=button].tn-card--readonly {
+  cursor: pointer
+}
+.tn-card--readonly:hover:not([class*="--readonly"]):not(.is-disabled):not([aria-disabled=true]),
+.tn-card:hover:not([class*="--readonly"]):not(.is-disabled):not([aria-disabled=true]) {
+  border-color: #009cdf;
+  -webkit-box-shadow: 0 0 5px 0 rgba(138,143,161,.4);
+  box-shadow: 0 0 5px 0 rgba(138,143,161,.4)
+}
+.is-disabled.tn-card--readonly,
+.tn-card.is-disabled,
+.tn-card[aria-disabled=true],
+[aria-disabled=true].tn-card--readonly {
+  background-color: #f9fbfc;
+  cursor: default
+}
+.is-disabled.tn-card--readonly *,
+.tn-card.is-disabled *,
+.tn-card[aria-disabled=true] *,
+[aria-disabled=true].tn-card--readonly * {
+  color: #63758b
 }
 .hyicon {
   font-size: 10px
@@ -451,121 +570,133 @@ fieldset {
   width: 13.2em;
   height: 13.2em
 }
-.is-phone {
-  white-space: nowrap
+.tn--text-transform-none {
+  text-transform: none!important
 }
-.has-scroll {
-  overflow: scroll
-}
-.has-position-relative {
-  position: relative
-}
-.has-text-align-center {
-  text-align: center!important
-}
-.is-smallscreen-only {
-  display: none
-}
-@media (min-width:768px) {
-  .is-smallscreen-only {
-    display: initial
-  }
-}
-@media (min-width:768px) {
-  .is-largescreen-only {
-    display: none
-  }
-}
-.is-print-only {
-  display: none!important
-}
-@media print {
-  .is-print-only {
-    display: initial!important
-  }
-}
-.is-type-down-2 {
+.tn-is-type-minus-3 {
   font-size: .75rem;
-  line-height: 1.5
+  line-height: 1.33333;
+  font-weight: 700;
+  text-transform: uppercase
 }
-.is-type-down-1 {
+.tn-is-type-minus-2 {
+  font-size: .8125rem;
+  line-height: 1.38462;
+  font-weight: 400
+}
+.tn-is-type-minus-1 {
   font-size: .875rem;
-  line-height: 1.28571
+  line-height: 1.42857;
+  font-weight: 400
 }
-.is-type-default {
+.tn-is-type-base {
   font-size: 1rem;
-  line-height: 1.5
+  line-height: 1.375;
+  font-weight: 400
 }
-.is-type-up-1 {
-  font-size: 1.25em;
-  line-height: 1.2
+.tn-is-type-plus-1 {
+  font-size: 1.125em;
+  line-height: 1.33333;
+  font-weight: 600
 }
-.is-type-up-2 {
-  font-size: 1.5rem;
-  line-height: 1.25
+.tn-is-type-plus-2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600
 }
-.is-type-up-3 {
-  font-size: 2rem;
-  line-height: 1.125
+.tn-is-type-plus-3 {
+  font-size: 1.625rem;
+  line-height: 1.23077;
+  font-weight: 600
 }
-.is-type-up-4 {
-  font-size: 2.5rem;
-  line-height: 1.2
+.tn-is-type-plus-4 {
+  font-size: 2.1875rem;
+  line-height: 1.2;
+  font-family: Dosis,sans-serif;
+  font-weight: 700
 }
-.is-type-up-5 {
-  font-size: 3rem;
-  line-height: 1.125
+.tn-is-type-plus-5 {
+  font-size: 2.8125rem;
+  line-height: 1.11111;
+  font-family: Dosis,sans-serif;
+  font-weight: 600
 }
-.is-type-up-6 {
-  font-size: 3.75rem;
-  line-height: .90909
-}
-.has-font-family-body {
+.tn-has-font-family-body {
   font-family: 'Open Sans',sans-serif
 }
-.has-font-family-header {
+.tn-has-font-family-header {
   font-family: Dosis,sans-serif
 }
-.has-font-family-code {
+.tn-has-font-family-code {
   font-family: Courier,sans-serif
 }
-.has-background-image {
+.tn-has-color-brand {
+  color: #006fbb
+}
+.tn-has-color-accent {
+  color: #fbc100
+}
+.tn-has-color-action {
+  color: #009cdf
+}
+.tn-has-color-success {
+  color: #61bf33
+}
+.tn-has-color-warning {
+  color: #e96b1a
+}
+.tn-has-color-error {
+  color: #df1919
+}
+.tn-has-color-lightest {
+  color: #eef1f3
+}
+.tn-has-color-light {
+  color: #d7d7d7
+}
+.tn-has-color-dark {
+  color: #7f90a4
+}
+.tn-has-color-darkest {
+  color: #21262c
+}
+.tn-has-background-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain
 }
-.has-background-fixed {
+.tn-has-background-fixed {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed
 }
-.has-background-color-brand {
-  background-color: #009cdf!important
-}
-.has-background-color-action {
-  background-color: #fbc100!important
-}
-.has-background-color-link {
+.tn-has-background-color-brand {
   background-color: #006fbb!important
 }
-.has-background-color-success {
+.tn-has-background-color-accent {
+  background-color: #fbc100!important
+}
+.tn-has-background-color-action {
+  background-color: #009cdf!important
+}
+.tn-has-background-color-success {
   background-color: #61bf33!important
 }
-.has-background-color-warning {
+.tn-has-background-color-warning {
   background-color: #e96b1a!important
 }
-.has-background-color-error {
+.tn-has-background-color-error {
   background-color: #df1919!important
 }
-.has-background-color-lightest {
+.tn-has-background-color-lightest {
   background-color: #eef1f3!important
 }
-.has-background-color-light {
+.tn-has-background-color-light {
   background-color: #d7d7d7!important
 }
-.has-background-color-dark {
+.tn-has-background-color-dark {
   background-color: #7f90a4!important
 }
-.has-background-color-darkest {
+.tn-has-background-color-darkest {
   background-color: #21262c!important
 }
