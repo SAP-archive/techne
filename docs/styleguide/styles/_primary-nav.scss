@@ -15,8 +15,9 @@
             padding: 6px 20px 12px;
             display: block;
             color: $dark-grey;
-            font-family: "Dosis", sans-serif;
-            @media (max-width: 1048px) and (min-width: 741px) {
+            font-family: "Dosis",sans-serif;
+            font-weight: 300;
+            @media (max-width: 1048px) and (min-width: 741px){
                 padding: 6px 10px 12px;
             }
         }
@@ -160,7 +161,6 @@
     height: $primary-nav--height;
     width: 100%;
     font-weight: 500;
-
 }
 
 .docs-primary-nav, .yaas-signature-nav {
