@@ -2,87 +2,117 @@
 
 .yaas-signature-nav {
     font-size: 17px;
-    font-weight: normal;
+    font-weight: 500;
     background: $dark-blue-700;
     color: $white;
     text-align: center;
     overflow: visible;
     display: block;
     height: $primary-nav--height;
-    li{
+    li {
         margin-top: 8px;
-        a{
+        a {
             padding: 6px 20px 12px;
             display: block;
             color: $dark-grey;
-            font-family: "Dosis",sans-serif;
-            @media (max-width: 1048px) and (min-width: 741px){
+            font-family: "Dosis", sans-serif;
+            @media (max-width: 1048px) and (min-width: 741px) {
                 padding: 6px 10px 12px;
             }
         }
-        &:hover a{
+        &:hover a {
             color: $white;
             background-color: $default-blue-500;
         }
+        &:last-child {
+            //disable hover state on mobile
+            @media(max-width: 740px) {
+                &:hover > ul {
+                    display: none !important;
+                }
+                ul[aria-hidden="true"]{
+                    display: block !important;
+                }
+                .primary-nav--toggle {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                }
+                #yaas-my-account-subnav {
+                    width: 100%;
+                    box-shadow: none;
+                    li{
+                        border-bottom: 1px solid $light-grey-200;
+                        &:last-child {
+                            border-top: none;
+                            border-bottom: 1px solid $dark-grey-400;
+                        }
+                    }
+                }
+            }
+        }
+
+        #yaas-my-account-subnav {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .3);
+            min-width: 150px;
+            text-align: left;
+            li {
+                margin-bottom: 0;
+                margin-top: 0;
+                border-top: 1px solid $light-grey-200;
+                &:first-child {
+                    border-top: none;
+                }
+                a {
+                    background-color: $white;
+                    color: $default-blue;
+                    padding: 20px 15px 15px;
+                }
+                &:hover a {
+                    background-color: $default-blue;
+                    color: $white;
+                }
+            }
+        }
     }
-    .domain{
+    &__list {
+        border-left: 2px dotted $dark-grey-500;
+    }
+    .domain {
         float: left;
         display: block;
         padding-right: 15px;
         height: $primary-nav--height;
         cursor: pointer;
-        .domain-logo{
+        .domain-logo {
             padding: 5px 10px 10px;
             margin-top: 5px;
             width: 46px;
             height: 44px;
             line-height: $primary-nav--height;
         }
-        .logo-text{
+        .logo-text {
             font-size: 16px;
             line-height: $primary-nav--height;
             display: inline-block;
             letter-spacing: .025em;
             vertical-align: top;
             font-family: $font-family-dosis;
+            font-weight: 800;
             color: $white;
         }
-        &:hover{
+        &:hover {
             background: transparent;
-            .logo-text{
+            .logo-text {
                 color: $dark-blue-600;
             }
         }
     }
-    &__list{
-        border-left: 2px dotted $dark-grey-500;
-    }
-    #yaas-my-account-subnav{
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        box-shadow: 0 3px 6px 0 rgba(0,0,0,.3);
-        min-width: 150px;
-        text-align: left;
-        li{
-            margin-bottom: 0;
-            margin-top: 0;
-            border-top: 1px solid $light-grey-200;
-            &:first-child{
-                border-top: none;
-            }
-            a{
-                background-color: $white;
-                color:  $default-blue;
-                padding: 20px 15px 15px;
-            }
-            &:hover a{
-                background-color: $default-blue;
-                color: $white;
-            }
-        }
-    }
-    .primary-nav--toggle{
+    .primary-nav--toggle {
         display: none;
         float: right;
         height: $primary-nav--height;
@@ -92,7 +122,7 @@
         transition: background-color .2s ease-in-out;
         border: none;
         outline: none;
-        span:before{
+        span:before {
             content: '';
             position: absolute;
             display: block;
@@ -107,7 +137,7 @@
             border-width: 9px;
             border-radius: 3px;
         }
-        .primary-nav-triangle{
+        .primary-nav-triangle {
             position: absolute;
             display: block;
             width: 0;
@@ -129,6 +159,8 @@
     overflow: hidden;
     height: $primary-nav--height;
     width: 100%;
+    font-weight: 500;
+
 }
 
 .docs-primary-nav, .yaas-signature-nav {
@@ -188,13 +220,14 @@
         text-decoration: none;
         color: #a4c8f0;
         &:hover{
-            background-color: #0376c6;
+            background-color: $default-blue-300;
         }
     }
     .brand{
         float: right;
         display: block;
         width: 160px;
+        height: $primary-nav--height;
         .brand-logo {
             padding: 10px;
             height: $primary-nav--height;
@@ -218,13 +251,12 @@
         top: $primary-nav--height;
         z-index: 1001;
         border-left: 0 none;
-        &[aria-hidden="false"]{
+        &[aria-hidden="true"]{
             display: block!important;
             height: auto;
         }
         li{
-            border-bottom: 1px solid #223245;
-            line-height: 20px;
+            border-bottom: 1px solid $dark-grey-400;
             display: block;
             position: relative;
             font-size: 17px;
@@ -234,10 +266,15 @@
             margin-top: 0;
             a{
                 color: #808fa1;
-                background: #27394f;
+                background: $dark-blue-700;
                 text-decoration: none;
                 padding: 20px;
                 display: block;
+                line-height: 20px;
+                font-weight: bold;
+            }
+            &:hover a{
+                background-color: $dark-grey-400;
             }
         }
     }
@@ -287,7 +324,7 @@
     &:hover .icon-bar{
         background-color: $white;
     }
-    &[aria-hidden="true"]{
+    &[aria-expanded="true"]{
         .icon-bar:nth-child(2n+1) {
             transform: rotate(-45deg);
         }

@@ -8,8 +8,10 @@ $(document).ready(function(){
 
         if (ariaHiddenSubMenuToggleValue === 'true'){
             hiddenNavigationElement.attr('aria-hidden', 'false');
+            $(this).attr('aria-expanded', 'false');
         }else{
             hiddenNavigationElement.attr('aria-hidden', 'true');
+            $(this).attr('aria-expanded', 'true');
         }
     });
 });
