@@ -1,8 +1,8 @@
 <!--
 CARD:
     CONTENT ___
-    title="", (string)
-    description="", (string)
+    title="", (string | optional)
+    description="", (string | optional)
     status="", (string | optional)
     media="", (url | optional)
     mediaAlt="", (string | optional)
@@ -11,31 +11,40 @@ CARD:
     modifier="", (string | optional)
 
     STATES ___
-    mediaFill=false (boolean | optional)
+    mediaShape=false (string | optional)
 -->
 {% macro card(
     title="",
     description="",
     status="",
     modifier="",
-    button="true",
+    button=false,
     media="",
     mediaAlt="",
-    mediaFill=false,
-    disabled=false) %}
-    <div class="tn-card{{ '--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>{% if media %}
-        <div class="tn-card__media{{ '--fill' if mediaFill }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
-        </div>{% endif %}
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                {{ title }}
-            </h2>
-            <p class="tn-card__description">
-                {{ description }}
-            </p>
-            <p class="tn-card__status">
-                {{ status }}
-            </p>
-        </div>
+    mediaShape="",
+    disabled=false,
+    body="") %}
+<div class="tn-card{{ '--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
+    {%- if media %}
+    <div class="tn-card__media{{ '--'+mediaShape if mediaShape }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
     </div>
+    {%- endif %}
+    <div class="tn-card__content">
+    {%- if body -%}
+        {{ body }}
+    {%- else %}
+        <h2 class="tn-card__header">
+            {{ title }}
+        </h2>
+        <p class="tn-card__description">
+            {{ description }}
+        </p>
+        {%- if status %}
+        <p class="tn-card__status">
+            {{ status }}
+        </p>
+        {%- endif -%}
+    {%- endif %}
+    </div>
+</div>
 {% endmacro %}
