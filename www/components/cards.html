@@ -326,28 +326,30 @@
     </pre>
 
 </div>
+
+
 <div class="docs-section">
 
     <!-- START BASE COMPONENT EXAMPLES -->
-    <h2 id="base">Common card <a href="#base">#</a></h2>
+    <h2 id="base">Common card <br> .tn-card <a href="#base">#</a></h2>
 
     <!-- output the component example and the code snippet -->
     
     <p>
         
-    <div class="tn-card" role="button">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Primary Value
-            </h2>
-            <p class="tn-card__description">
-                Secondary Value aute irure dolor in reprehenderit in voluptate
-            </p>
-            <p class="tn-card__status">
-                Status
-            </p>
-        </div>
+<div class="tn-card">
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Primary Value
+        </h2>
+        <p class="tn-card__description">
+            Secondary Value aute irure dolor in reprehenderit in voluptate
+        </p>
+        <p class="tn-card__status">
+            Status
+        </p>
     </div>
+</div>
 
     </p>
     <p>
@@ -356,19 +358,19 @@
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Primary Value
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Secondary Value aute irure dolor in reprehenderit in voluptate
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                Status
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot;&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Primary Value
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Secondary Value aute irure dolor in reprehenderit in voluptate
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            Status
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </aside>
 
     </p>
@@ -376,25 +378,25 @@
 </div>
 <div class="docs-section">
 
-    <h3 id="static">Read only card<br> .tn-card--readonly <a href="#static">#</a></h3>
-    <p>Modified: Has no hover effect</p>
+    <h3 id="static">Button card<br> .tn-card[role="button"] or .tn-card--button <a href="#static">#</a></h3>
+    <p>Modified: Includes hover effect</p>
     
     <p>
         
         
-    <div class="tn-card--readonly">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Lorem ipsum dolor quam placeat numquam repellendus
-            </h2>
-            <p class="tn-card__description">
-                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
-            </p>
-            <p class="tn-card__status">
-                <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
-            </p>
-        </div>
+<div class="tn-card--button" role="button">
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Lorem ipsum dolor quam placeat numquam repellendus
+        </h2>
+        <p class="tn-card__description">
+            Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+        </p>
+        <p class="tn-card__status">
+            <span class="tn-has-color-success">Voluptate quis adipisci sit</span>
+        </p>
     </div>
+</div>
 
     
     </p>
@@ -404,19 +406,19 @@
     <h1 class="docs-code__header">
         Code:
     </h1>
-    <code class="docs-code__markup">&lt;div class=&quot;tn-card--readonly&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Lorem ipsum dolor quam placeat numquam repellendus
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card--button&quot; role=&quot;button&quot;&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Lorem ipsum dolor quam placeat numquam repellendus
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            &lt;span class=&quot;tn-has-color-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </aside>
 
     </p>
@@ -430,19 +432,19 @@
     <p>
         
         
-    <div class="tn-card" aria-disabled="true" role="button">
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Repellendus obcaecati molestias
-            </h2>
-            <p class="tn-card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
-            </p>
-            <p class="tn-card__status">
-                <span>Voluptate quis adipisci sit</span><span>Voluptate quis adipisci sit</span>
-            </p>
-        </div>
+<div class="tn-card" aria-disabled="true" role="button">
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Repellendus obcaecati molestias
+        </h2>
+        <p class="tn-card__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+        </p>
+        <p class="tn-card__status">
+            <span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>
+        </p>
     </div>
+</div>
 
     
     </p>
@@ -456,18 +458,18 @@
         Code:
     </h1>
     <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; aria-disabled=&quot;true&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Repellendus obcaecati molestias
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;&lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Repellendus obcaecati molestias
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt; | &lt;span&gt;Voluptate quis adipisci sit&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </aside>
 
     </p>
@@ -478,24 +480,24 @@
     <h3 id="media">Include .tn-card__media<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
     
-
+<!-- -->
     <p>
         
-    <div class="tn-card" role="button">
-        <div class="tn-card__media" style="background-image: url(http://via.placeholder.com/73x73)" aria-label="CARD_MEDIA_ALT">
-        </div>
-        <div class="tn-card__content">
-            <h2 class="tn-card__header">
-                Asperiores doloribus id dolore
-            </h2>
-            <p class="tn-card__description">
-                Consectetur adipisicing elit
-            </p>
-            <p class="tn-card__status">
-                Cumque itaque
-            </p>
-        </div>
+<div class="tn-card" role="button">
+    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="CARD_MEDIA_ALT">
     </div>
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Asperiores doloribus id dolore
+        </h2>
+        <p class="tn-card__description">
+            Consectetur adipisicing elit
+        </p>
+        <p class="tn-card__status">
+            <span class="tn-has-color-success">Cumque itaque</span>
+        </p>
+    </div>
+</div>
 
     </p>
     <p>
@@ -505,25 +507,75 @@
         Code:
     </h1>
     <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot; role=&quot;button&quot;&gt;
-        &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(http://via.placeholder.com/73x73)&quot; aria-label=&quot;CARD_MEDIA_ALT&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;tn-card__content&quot;&gt;
-            &lt;h2 class=&quot;tn-card__header&quot;&gt;
-                Asperiores doloribus id dolore
-            &lt;/h2&gt;
-            &lt;p class=&quot;tn-card__description&quot;&gt;
-                Consectetur adipisicing elit
-            &lt;/p&gt;
-            &lt;p class=&quot;tn-card__status&quot;&gt;
-                Cumque itaque
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code>
+    &lt;div class=&quot;tn-card__media&quot; style=&quot;background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)&quot; aria-label=&quot;CARD_MEDIA_ALT&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Asperiores doloribus id dolore
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Consectetur adipisicing elit
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            &lt;span class=&quot;tn-has-color-success&quot;&gt;Cumque itaque&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
 </aside>
 
     </p>
 
 </div>
+
+
+<div class="docs-section">
+
+    <h3 id="alt">Include .tn-card<a href="#alt">#</a></h3>
+    <p>Cards can also be used with custom content</p>
+    <!-- output the component example and the code snippet -->
+    
+    
+
+    <p>
+        
+<div class="tn-card">
+    <div class="tn-card__content">
+        <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
+        <p>Consectetur adipisicing</p>
+        <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
+        <p>Lorem ipsum</p>
+    </div>
+</div>
+
+    </p>
+    <p>
+        
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code:
+    </h1>
+    <code class="docs-code__markup">&lt;div class=&quot;tn-card&quot;&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-is-type-minus-2&quot;&gt;Client I.D.&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-is-type-minus-2&quot;&gt;Client Secret&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-is-type-minus-2&quot;&gt;Creation Date&lt;/span&gt;
+        &lt;p&gt;Consectetur adipisicing&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-is-type-minus-2&quot;&gt;Tenant (Project Identifier)&lt;/span&gt;
+        &lt;p&gt;Lorem ipsum&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+</aside>
+
+    </p>
+
+</div>
+
 
 
 
