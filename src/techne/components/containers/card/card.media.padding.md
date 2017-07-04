@@ -1,0 +1,1 @@
+Depending of your UI style you can add a padding around the images on the Media part of the card.

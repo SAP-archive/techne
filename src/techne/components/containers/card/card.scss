@@ -73,6 +73,7 @@
             position: relative;
             min-width: 175px;
             min-height: 175px;
+            border-right: 1px solid $tn-color-neutral-lighter;
 
             .tn-card-media-container {
                 position: absolute;
@@ -85,6 +86,15 @@
                 background-size: cover;
                 background-position: center center;
             }
+
+            &.tn-card-media-padding .tn-card-media-container {
+                top: tn-get-spacing("normal", 2);
+                bottom: tn-get-spacing("normal", 2);
+                left: tn-get-spacing("normal", 2);
+                right: tn-get-spacing("normal", 2);
+                width: calc(100% - #{tn-get-spacing("normal", 4)});
+            }
+
         }
 
         .tn-card-content {
@@ -102,6 +112,7 @@
             .tn-card-media {
                 min-width: 348px;
                 min-height: 350px;
+                border-bottom: 1px solid $tn-color-neutral-lighter;
             }
         }
     }
@@ -122,6 +133,14 @@
         .tn-card-media {
             min-width: 80px;
             min-height: 80px;
+
+            &.tn-card-media-padding .tn-card-media-container {
+                    top: tn-get-spacing("compact", 2);
+                    bottom: tn-get-spacing("compact", 2);
+                    left: tn-get-spacing("compact", 2);
+                    right: tn-get-spacing("compact", 2);
+                    width: calc(100% - #{tn-get-spacing("compact", 4)});
+            }
         }
 
         &.tn-card-vertical {
@@ -137,6 +156,7 @@
         .tn-card-content {
             @include tn-padding("compact", 4);
         }
+
     }
 
 }

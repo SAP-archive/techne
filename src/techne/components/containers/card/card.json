@@ -37,6 +37,13 @@
             "markup": "card.media.html"
         },
         {
+            "id": "card-with-media-padding",
+            "type": "sample",
+            "title": "Media with padding",
+            "contentMD": "card.media.padding.md",
+            "markup": "card.media.padding.html"
+        },
+        {
             "id": "card-with-media-vertical",
             "type": "sample",
             "title": "Media - Vertical",
