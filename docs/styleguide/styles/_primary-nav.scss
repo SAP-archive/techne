@@ -9,6 +9,7 @@
     overflow: visible;
     display: block;
     height: $primary-nav--height;
+    transition: .4s;
     li {
         margin-top: 8px;
         a {
@@ -16,7 +17,7 @@
             display: block;
             color: $dark-grey;
             font-family: "Dosis",sans-serif;
-            font-weight: 300;
+            font-weight: 500;
             @media (max-width: 1048px) and (min-width: 741px){
                 padding: 6px 10px 12px;
             }
@@ -31,7 +32,7 @@
                 &:hover > ul {
                     display: none !important;
                 }
-                ul[aria-hidden="true"]{
+                ul[aria-hidden="false"]{
                     display: block !important;
                 }
                 .primary-nav--toggle {
@@ -82,6 +83,10 @@
     }
     &__list {
         border-left: 2px dotted $dark-grey-500;
+    }
+    &-slideout{
+        transition: all .4s ease;
+        margin-top: -50px;
     }
     .domain {
         float: left;
@@ -218,7 +223,7 @@
     }
     a{
         text-decoration: none;
-        color: #a4c8f0;
+        color: $light-blue-400;
         &:hover{
             background-color: $default-blue-300;
         }
@@ -244,14 +249,14 @@
 //media queries for the mobile view
 @media (max-width: 740px) and (min-width: 0){
     .yaas-signature-nav__list{
-        border-top: 1px solid #808fa1;
+        border-top: 1px solid $grey;
         display: none!important;
         width: 100%;
         position: absolute;
         top: $primary-nav--height;
         z-index: 1001;
         border-left: 0 none;
-        &[aria-hidden="true"]{
+        &[aria-hidden="false"]{
             display: block!important;
             height: auto;
         }
@@ -265,7 +270,7 @@
             text-align: left;
             margin-top: 0;
             a{
-                color: #808fa1;
+                color: $grey;
                 background: $dark-blue-700;
                 text-decoration: none;
                 padding: 20px;

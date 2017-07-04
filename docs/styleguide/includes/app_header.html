@@ -17,7 +17,7 @@
                 </a>
                 {% if item.subnav %}
                     {% set subnav = item.subnav %}
-                    <ul class="yaas-signature-nav__subnav-list" id="{{ item.id }}-subnav" role="navigation" aria-hidden="false">
+                    <ul class="yaas-signature-nav__subnav-list" id="{{ item.id }}-subnav" role="navigation" aria-hidden="true">
                         {% for subitem in subnav %}
                             <li class="yaas-signature-nav__subnav-listitem">
                                 <a class="yaas-signature-nav__subnav-listlink" href="{{ subitem.url }}">
@@ -28,7 +28,7 @@
                     </ul>
                     {% if item.id == "yaas-my-account" %}
                     <!-- mobile My Account navigation -->
-                    <button href="#" class="primary-nav--toggle my-account-test"
+                    <button href="#" class="primary-nav--toggle"
                             data-js="menu-toggle"
                             aria-label="Toggle My Account dropdown"
                             aria-controls="yaas-my-account-subnav"
