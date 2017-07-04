@@ -10,7 +10,7 @@ export const TechneSourceBanner =
     '    License: Apache License 2.0\n' +
     '*/\n';
 
-export const TechneDist = join(__dirname, '../../dist/techne' /* , TechneVersion */);
+export const TechneDist = join(__dirname, '../../dist/' /* , TechneVersion */);
 
 export const TechneCompiledFilename = 'techne.min.css';
 

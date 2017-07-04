@@ -1,7 +1,0 @@
-/*
-    SAP Techné version 2.0.0-alpha
-    https://techne.yaas.io | techne@sap.com
-    https://github.com/SAP/techne
-    License: Apache License 2.0
-*/
-.tn-color-positive{color:#18c407}body.tn-app{margin:0}.tn-section-sample{display:flex;flex-direction:row;border-bottom:1px solid #f4f5f6}.tn-section-sample .tn-section-overview{width:440px;padding:40px}.tn-section-sample .tn-section-overview h2{font-size:1.8em;font-weight:400;margin-top:0}.tn-section-sample .tn-section-overview h2 a{display:none;text-decoration:none;color:#7c8b9d}.tn-section-sample .tn-section-overview h2:hover a{display:inline-block}.tn-section-sample .tn-section-overview p{margin-bottom:20px;line-height:1.5em}.tn-section-sample .tn-section-samples{flex:2;padding:40px}.tn-section-sample .tn-section-samples .tn-section-rendered{padding:40px}.tn-section-sample .tn-section-samples .tn-section-rendered div{width:100%}.tn-section-sample .tn-section-samples .tn-section-code{padding:40px;font-family:monospace;font-size:1.2em;line-height:1.8em}.tn-section-sample .tn-section-samples .tn-section-code pre[class*=language-]{margin:0;padding:0;border:none}.tn-section-sample.tn-section-vertical{flex-direction:column}.tn-section-sample.tn-section-vertical .tn-section-overview{width:100%;padding-bottom:0}.tn-compact .tn-section-overview,.tn-compact .tn-section-samples,.tn-compact .tn-section-samples .tn-section-code,.tn-compact .tn-section-samples .tn-section-rendered{padding:20px}

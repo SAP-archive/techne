@@ -1,0 +1,15 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+.tn-color-positive { color: #18C407; }
+.tn-tabs .tn-tabs-options { list-style: none; border-bottom: 1px solid #D4D9DE; padding: 0; margin: 0; }
+.tn-tabs .tn-tabs-options .tn-tabs-option { display: inline-block; padding: .5em 1em; cursor: pointer; color: #006FBB; }
+.tn-tabs .tn-tabs-options .tn-tabs-option.tn-tabs-option-selected { background-color: #F4F5F6; cursor: default; color: #21262C; }
+.tn-tabs .tn-tabs-options .tn-side-actions { float: right; user-select: none; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action { cursor: pointer; margin: 0 tn-get-spacing('normal', 1); color: #D4D9DE; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action .material-icons { font-size: 2em; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action.tn-selected { color: #0B0D0F; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action:hover { color: #006FBB; }

@@ -1,0 +1,125 @@
+/*
+    SAP Techné version 2.0.0-alpha
+    https://techne.yaas.io | techne@sap.com
+    https://github.com/SAP/techne
+    License: Apache License 2.0
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+body { font-family: 'Open Sans',non-serif; }
+h1 { font-size: 15px; }
+p { margin: 0; }
+.tn-layout-list-content { display: flex; flex-direction: row; }
+.tn-layout-list-content .tn-layout-content { width: 100%; }
+.tn-top-section { display: flex; border-bottom: 1px solid #F4F5F6; width: 100%; }
+.tn-top-section .tn-section-title { width: 400px; padding: 40px; }
+.tn-top-section .tn-section-title h1 { font-size: 2.2em; font-weight: 700; }
+.tn-top-section .tn-section-text { flex: 2; padding: 40px; }
+.tn-top-section .tn-section-text p { line-height: 1.5em; max-width: 700px; }
+.tn-compact .tn-section-text, .tn-compact .tn-section-title { padding: 20px; }
+.tn-section { display: flex; flex-direction: row; border-bottom: 1px solid #F4F5F6; }
+.tn-section .tn-section-overview { width: 440px; padding: 40px; }
+.tn-section .tn-section-overview h2 { font-size: 1.8em; font-weight: 400; margin-top: 0; }
+.tn-section .tn-section-overview h2 a { display: none; text-decoration: none; color: #7C8B9D; }
+.tn-section .tn-section-overview h2:hover a { display: inline-block; }
+.tn-section .tn-section-overview p { margin-bottom: 20px; line-height: 1.5em; }
+.tn-section .tn-section-samples { flex: 2; padding: 40px; }
+.tn-section .tn-section-samples .tn-section-rendered { padding: 40px 0; }
+.tn-section .tn-section-samples .tn-section-rendered div { width: 100%; }
+.tn-section .tn-section-samples .tn-section-code { padding: 40px 0; font-family: monospace; font-size: 1.2em; line-height: 1.8em; }
+.tn-section .tn-section-samples .tn-section-code pre[class*=language-] { margin: 0; padding: 0; border: none; }
+.tn-section.tn-section-vertical { flex-direction: column; }
+.tn-section.tn-section-vertical .tn-section-overview { width: 100%; padding-bottom: 0; }
+.tn-compact .tn-section-overview, .tn-compact .tn-section-samples, .tn-compact .tn-section-samples .tn-section-code, .tn-compact .tn-section-samples .tn-section-rendered { padding: 20px; }
+.tn-card { padding: 40px; border: 1px solid #D4D9DE; min-width: 370px; max-width: 460px; box-sizing: border-box; }
+.tn-card:hover { border-color: #9C27CD; box-shadow: 0 0 5px #D4D9DE; cursor: pointer; }
+.tn-card:hover.tn-card-disabled, .tn-card:hover.tn-card-static { border-color: #D4D9DE; box-shadow: none; cursor: default; }
+.tn-card .tn-card-primary-info { font-size: 1em; font-weight: 700; color: #9C27CD; margin: 0; line-height: 1em; max-height: 2em; overflow: hidden; text-overflow: ellipsis; }
+.tn-card .tn-card-secondary-info { margin: 5px 0 0; color: #21262C; font-size: .8em; line-height: 1em; max-height: 1em; overflow: hidden; text-overflow: ellipsis; }
+.tn-card .tn-card-label { margin: 30px 0 0; font-size: .8em; font-weight: 700; letter-spacing: .05em; display: block; }
+.tn-card.tn-card-static .tn-card-label, .tn-card.tn-card-static .tn-card-primary-info, .tn-card.tn-card-static .tn-card-secondary-info { color: #21262C; }
+.tn-card.tn-card-disabled { background-color: #F9FAFB; }
+.tn-card.tn-card-disabled .tn-card-label, .tn-card.tn-card-disabled .tn-card-primary-info, .tn-card.tn-card-disabled .tn-card-secondary-info { color: #7C8B9D; }
+.tn-card.tn-card-with-media { display: flex; flex-direction: row; padding: 0; }
+.tn-card.tn-card-with-media .tn-card-media { flex: 1; position: relative; min-width: 175px; min-height: 175px; border-right: 1px solid #D4D9DE; }
+.tn-card.tn-card-with-media .tn-card-media .tn-card-media-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: #F4F5F6; background-repeat: no-repeat; background-size: cover; background-position: center center; }
+.tn-card.tn-card-with-media .tn-card-media.tn-card-media-padding .tn-card-media-container { top: 20px; bottom: 20px; left: 20px; right: 20px; width: calc(100% - 40px); }
+.tn-card.tn-card-with-media .tn-card-content { flex: 2; padding: 40px; box-sizing: border-box; }
+.tn-card.tn-card-with-media.tn-card-vertical { max-width: 350px; width: auto; flex-direction: column; }
+.tn-card.tn-card-with-media.tn-card-vertical .tn-card-media { min-width: 348px; min-height: 350px; border-bottom: 1px solid #D4D9DE; }
+.tn-compact .tn-card { padding: 20px; width: 300px; }
+.tn-compact .tn-card.tn-card-with-media { width: 200px; max-width: 200px; padding: 0; }
+.tn-compact .tn-card.tn-card-with-media .tn-card-media { min-width: 80px; min-height: 80px; }
+.tn-compact .tn-card.tn-card-with-media .tn-card-media.tn-card-media-padding .tn-card-media-container { top: 10px; bottom: 10px; left: 10px; right: 10px; width: calc(100% - 20px); }
+.tn-compact .tn-card.tn-card-with-media.tn-card-vertical { width: 200px; flex-direction: column; }
+.tn-compact .tn-card.tn-card-with-media.tn-card-vertical .tn-card-media { min-width: 200px; min-height: 200px; }
+.tn-compact .tn-card-content, .tn-compact .tn-card.tn-card-with-media .tn-card-content { padding: 20px; }
+.tn-compact .tn-card-secondary-info { margin: 5px 0 0; }
+.tn-compact .tn-card-label { margin: 15px 0 0; }
+.tn-cards { display: flex; flex-direction: row; flex-wrap: wrap; }
+.tn-cards .tn-card { margin: 10px; }
+.tn-cards.tn-cards-4-columns .tn-card { min-width: 345px; max-width: 23%; }
+.tn-button { color: #0000FF; }
+.tn-main-nav { display: flex; padding: 10px; background-color: #9C27CD; color: #FFFFFF; }
+.tn-main-nav a { color: #FFFFFF; text-decoration: none; }
+.tn-main-nav .tn-main-nav-options { display: flex; margin: 0 20px; }
+.tn-main-nav .tn-main-nav-options .tn-main-nav-option { list-style: none; margin: 0 20px; font-size: 1.2em; }
+.tn-main-nav .tn-main-nav-options .tn-main-nav-option a { color: #D4D9DE; }
+.tn-main-nav .tn-main-nav-options .tn-main-nav-option a:hover { color: #0277BD; }
+.tn-main-nav .tn-main-nav-options .tn-main-nav-option.tn-main-nav-option-selected a { color: #F4F5F6; cursor: default; }
+@media screen and (max-width:575px) { .tn-main-nav .tn-main-nav-options { display: none; } }
+.tn-identity { margin: 0 0 0 1.5em; }
+.tn-identity .tn-logo { height: 30px; vertical-align: middle; }
+.tn-identity .tn-inidentity-name { font-size: 1.5em; font-weight: 400; margin: 0 0 0 .2em; vertical-align: middle; }
+.tn-compact .tn-main-nav { padding: 5px; margin: 0 10px; }
+.tn-compact .tn-main-nav-option { margin: 0 10px; }
+.tn-side-nav { font-size: .9em; width: 220px; background-color: #5A1777; color: #FFFFFF; position: relative; height: 100%; padding: 30px; }
+.tn-side-nav ol, .tn-side-nav ul { margin: 0 0 20px; list-style: none; padding-left: 0; }
+.tn-side-nav ol ol, .tn-side-nav ol ul, .tn-side-nav ul ol, .tn-side-nav ul ul { padding-left: 10px; }
+.tn-side-nav ol .tn-side-nav-header, .tn-side-nav ul .tn-side-nav-header { color: #7C8B9D; font-size: 1.4em; margin-bottom: 10px; display: block; }
+.tn-side-nav ol .tn-side-nav-option, .tn-side-nav ul .tn-side-nav-option { margin-bottom: 5px; }
+.tn-side-nav ol .tn-side-nav-option-selected, .tn-side-nav ul .tn-side-nav-option-selected { color: #F4F5F6; }
+.tn-side-nav a { color: #D4D9DE; text-decoration: none; }
+.tn-side-nav a:hover { color: #0397EF; }
+.tn-color-positive { color: #18C407; }
+.tn-tabs .tn-tabs-options { list-style: none; border-bottom: 1px solid #D4D9DE; padding: 0; margin: 0; }
+.tn-tabs .tn-tabs-options .tn-tabs-option { display: inline-block; padding: .5em 1em; cursor: pointer; color: #7B1FA2; }
+.tn-tabs .tn-tabs-options .tn-tabs-option.tn-tabs-option-selected { background-color: #F4F5F6; cursor: default; color: #21262C; }
+.tn-tabs .tn-tabs-options .tn-side-actions { float: right; user-select: none; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action { cursor: pointer; margin: 0 10px; color: #D4D9DE; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action .material-icons { font-size: 2em; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action.tn-selected { color: #0B0D0F; }
+.tn-tabs .tn-tabs-options .tn-side-actions .tn-action:hover { color: #7B1FA2; }
+body.tn-app { margin: 0; }
+.tn-grid { min-width: 1200px; }
+.tn-grid .tn-grid-row { display: flex; flex-wrap: wrap; border-bottom: 1px solid #F0F0F0; }
+@media screen and (max-width:575px) { .tn-grid .tn-grid-row { border: none; } }
+.tn-grid .tn-grid-cell { box-sizing: border-box; float: left; width: 8.33333%; height: 100px; position: relative; overflow: hidden; padding: 10px; border-right: 1px solid #F0F0F0; }
+.tn-grid .tn-grid-cell:hover { background-color: #FCFCFC; }
+.tn-grid .tn-grid-cell:last-child { border-right: none; }
+.tn-grid .tn-grid-cell .tn-grid-cell-content { overflow: hidden; }
+.tn-grid .tn-grid-cell-size-x-1 { width: 8.33333%; }
+.tn-grid .tn-grid-cell-size-x-2 { width: 16.66667%; }
+.tn-grid .tn-grid-cell-size-x-3 { width: 25%; }
+.tn-grid .tn-grid-cell-size-x-4 { width: 33.33333%; }
+.tn-grid .tn-grid-cell-size-x-5 { width: 41.66667%; }
+.tn-grid .tn-grid-cell-size-x-6 { width: 50%; }
+.tn-grid .tn-grid-cell-size-x-7 { width: 58.33333%; }
+.tn-grid .tn-grid-cell-size-x-8 { width: 66.66667%; }
+.tn-grid .tn-grid-cell-size-x-9 { width: 75%; }
+.tn-grid .tn-grid-cell-size-x-10 { width: 83.33333%; }
+.tn-grid .tn-grid-cell-size-x-11 { width: 91.66667%; }
+.tn-grid .tn-grid-cell-size-x-12 { width: 100%; }
+.tn-grid .tn-grid-cell-size-y-1 { height: 100px; }
+.tn-grid .tn-grid-cell-size-y-2 { height: 200px; }
+.tn-grid .tn-grid-cell-size-y-3 { height: 300px; }
+.tn-grid .tn-grid-cell-size-y-4 { height: 400px; }
+.tn-grid .tn-grid-cell-size-y-5 { height: 500px; }
+.tn-grid .tn-grid-cell-size-y-6 { height: 600px; }
+.tn-grid .tn-grid-cell-size-y-7 { height: 700px; }
+.tn-grid .tn-grid-cell-size-y-8 { height: 800px; }
+.tn-grid .tn-grid-cell-size-y-9 { height: 900px; }
+.tn-grid .tn-grid-cell-size-y-10 { height: 1000px; }
+.tn-grid .tn-grid-cell-size-y-11 { height: 1100px; }
+.tn-grid .tn-grid-cell-size-y-12 { height: 1200px; }
+@media screen and (max-width:1024px) { .tn-grid { min-width: 100%; } }
+@media screen and (max-width:575px) { .tn-grid { min-width: 100%; }.tn-grid .tn-grid-row { border-bottom: 1px solid #F0F0F0; }.tn-grid .tn-grid-cell { width: 100%; border-bottom: 1px solid #F0F0F0; }.tn-grid .tn-grid-cell:last-child { border-bottom: none; } }
