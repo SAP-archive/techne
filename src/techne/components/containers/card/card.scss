@@ -25,12 +25,20 @@
         font-weight: bold;
         color: $tn-color-default-light;
         margin: 0;
+        line-height: 1em;
+        max-height: 2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .tn-card-secondary-info {
         margin: tn-get-spacing("normal", 0.5) 0 0 0;
         color: $tn-color-neutral;
         font-size: .8em;
+        line-height: 1em;
+        max-height: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .tn-card-label {
@@ -73,6 +81,9 @@
                 left: 0;
                 right: 0;
                 background-color: $tn-color-neutral-lightest;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
             }
         }
 
