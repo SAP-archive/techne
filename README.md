@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/SAP/techne.svg?branch=v2.0)](https://travis-ci.org/SAP/techne)
+
+
 # 2.0
 
 Techne 2.0 is a design system and pattern library package. This project packages the library for `npm` and `bower` and generates the documentation as a static website.

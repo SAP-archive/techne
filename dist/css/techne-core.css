@@ -15,12 +15,12 @@ html {
 }
 body {
   margin: 0;
-  background-color: #eef1f3;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   color: #21262c;
   font-family: 'Open Sans',sans-serif;
   font-size: 1rem;
-  line-height: 1.5
+  line-height: 1.375
 }
 h1,
 h2,
@@ -58,6 +58,18 @@ ul {
 }
 img {
   line-height: 0
+}
+a {
+  color: #009cdf;
+  text-decoration: none
+}
+a:hover {
+  color: #009cdf
+}
+a:active,
+a:focus {
+  color: #009cdf;
+  outline: 0
 }
 /*!
 * @section Button Elements

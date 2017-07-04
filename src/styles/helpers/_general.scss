@@ -42,26 +42,3 @@ $ns: ns();
 // }
 //
 //
-//
-// @each $key, $value in $type {
-// 	@if $key > 0 {
-// 	  .is-type-up-#{$key} {
-// 		@include type($key);
-// 	  }
-// 	} @else if $key < 0 {
-// 	  .is-type-down#{$key} {
-// 		@include type($key);
-// 	  }
-// 	} @else {
-// 	  .is-type-default {
-// 		@include type($key);
-// 	  }
-// 	}
-// }
-//
-//
-// @each $key, $value in $fonts {
-//   .has-font-family-#{$key} {
-// 	font-family: $value;
-//   }
-// }

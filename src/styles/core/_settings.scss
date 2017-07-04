@@ -29,15 +29,15 @@ $spacing: (
 
 //type
 $type: (
-    -2: 0.75rem (18/12),	//12/18
-    -1: 0.875rem (18/14),	//14/18
-    0: 1rem (24/16),     	//16/24
-    1: 1.25em (24/20),   	//20/24
-    2: 1.5rem (30/24),   	//24/30
-    3: 2rem (36/32),		//32/36
-    4: 2.5rem (48/40),  	//40/48
-    5: 3rem (54/48),  	//48/54
-    6: 3.75rem (60/66), 	//60/66
+    -3: 0.75rem (16/12) body bold uppercase,	//12/16
+    -2: 0.8125rem (18/13) body reg none,	//13/18
+    -1: 0.875rem (20/14) body reg none,	//14/18
+    0: 1rem (22/16) body reg none,     	//16/22
+    1: 1.125em (24/18) body semi none,   	//18/24
+    2: 1.25rem (26/20) body semi none,   	//20/26
+    3: 1.625rem (32/26) body semi none,	//26/32
+    4: 2.1875rem (42/35) header bold none,	//35/42
+    5: 2.8125rem (50/45) header semi none,   //45/50
 ) !default;
 
 //fonts
