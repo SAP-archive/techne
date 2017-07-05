@@ -100,27 +100,37 @@
                 
             </li>
         
-            <li class="yaas-signature-nav__listitem" aria-haspopup="true" aria-controls="yaas-my-account-subnav">
+            <li class="yaas-signature-nav__listitem" aria-haspopup="true" >
                 <a class="yaas-signature-nav__listlink " href="#" >
                     My Account
                 </a>
                 
                     
-                    <ul class="yaas-signature-nav__subnav-list" id="yaas-my-account-subnav">
-                    
-                        <li class="yaas-signature-nav__subnav-listitem">
-                            <a class="yaas-signature-nav__subnav-listlink" href="#">
-                                Sign In
-                            </a>
-                        </li>
-                    
-                        <li class="yaas-signature-nav__subnav-listitem">
-                            <a class="yaas-signature-nav__subnav-listlink" href="#">
-                                Register
-                            </a>
-                        </li>
-                    
+                    <ul class="yaas-signature-nav__subnav-list" id="yaas-my-account-subnav" role="navigation" aria-hidden="true">
+                        
+                            <li class="yaas-signature-nav__subnav-listitem">
+                                <a class="yaas-signature-nav__subnav-listlink" href="#">
+                                    Sign In
+                                </a>
+                            </li>
+                        
+                            <li class="yaas-signature-nav__subnav-listitem">
+                                <a class="yaas-signature-nav__subnav-listlink" href="#">
+                                    Register
+                                </a>
+                            </li>
+                        
                     </ul>
+                    
+                    <!-- mobile My Account navigation -->
+                    <button href="#" class="primary-nav--toggle"
+                            data-js="menu-toggle"
+                            aria-label="Toggle My Account dropdown"
+                            aria-controls="yaas-my-account-subnav"
+                            aria-expanded="false">
+                        <span class="primary-nav-triangle"></span>
+                    </button>
+                    
                 
             </li>
         
@@ -129,7 +139,7 @@
         <a href="../#" class="yaas-signature-nav__index brand yaas-home--">
             <img class="brand-logo" src="../svg/logo-hybris.svg" height="30" alt="SAP Hybris">
         </a>
-        <!-- mobile navigation -->
+        <!-- mobile top navigation -->
         <button href="#" class="primary-nav--toggle"
                 data-js="menu-toggle"
                 aria-label="Toggle Primary Nav"

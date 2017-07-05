@@ -310,7 +310,6 @@
 }
 
 .docs-app__header {
-  background-color: #0486e0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -366,13 +365,14 @@
 
 .yaas-signature-nav {
   font-size: 17px;
-  font-weight: normal;
+  font-weight: 500;
   background: #27394f;
   color: #fff;
   text-align: center;
   overflow: visible;
   display: block;
   height: 50px;
+  transition: .4s;
 }
 
 .yaas-signature-nav li {
@@ -384,7 +384,7 @@
   display: block;
   color: #7f90a4;
   font-family: "Dosis",sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media (max-width: 1048px) and (min-width: 741px) {
@@ -396,6 +396,71 @@
 .yaas-signature-nav li:hover a {
   color: #fff;
   background-color: #0368ae;
+}
+
+@media (max-width: 740px) {
+  .yaas-signature-nav li:last-child:hover > ul {
+    display: none !important;
+  }
+  .yaas-signature-nav li:last-child ul[aria-hidden="false"] {
+    display: block !important;
+  }
+  .yaas-signature-nav li:last-child .primary-nav--toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .yaas-signature-nav li:last-child #yaas-my-account-subnav {
+    width: 100%;
+    box-shadow: none;
+  }
+  .yaas-signature-nav li:last-child #yaas-my-account-subnav li {
+    border-bottom: 1px solid #d4d7dc;
+  }
+  .yaas-signature-nav li:last-child #yaas-my-account-subnav li:last-child {
+    border-top: none;
+    border-bottom: 1px solid #223245;
+  }
+}
+
+.yaas-signature-nav li #yaas-my-account-subnav {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  text-align: left;
+}
+
+.yaas-signature-nav li #yaas-my-account-subnav li {
+  margin-bottom: 0;
+  margin-top: 0;
+  border-top: 1px solid #d4d7dc;
+}
+
+.yaas-signature-nav li #yaas-my-account-subnav li:first-child {
+  border-top: none;
+}
+
+.yaas-signature-nav li #yaas-my-account-subnav li a {
+  background-color: #fff;
+  color: #0486e0;
+  padding: 20px 15px 15px;
+}
+
+.yaas-signature-nav li #yaas-my-account-subnav li:hover a {
+  background-color: #0486e0;
+  color: #fff;
+}
+
+.yaas-signature-nav__list {
+  border-left: 2px dotted #3e4d60;
+}
+
+.yaas-signature-nav-slideout {
+  transition: all .4s ease;
+  margin-top: -50px;
 }
 
 .yaas-signature-nav .domain {
@@ -421,7 +486,7 @@
   letter-spacing: .025em;
   vertical-align: top;
   font-family: "Dosis", sans-serif;
-  font-weight: 300;
+  font-weight: 800;
   color: #fff;
 }
 
@@ -431,40 +496,6 @@
 
 .yaas-signature-nav .domain:hover .logo-text {
   color: #035995;
-}
-
-.yaas-signature-nav__list {
-  border-left: 2px dotted #3e4d60;
-}
-
-.yaas-signature-nav #yaas-my-account-subnav {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
-  min-width: 150px;
-  text-align: left;
-}
-
-.yaas-signature-nav #yaas-my-account-subnav li {
-  margin-bottom: 0;
-  margin-top: 0;
-  border-top: 1px solid #d4d7dc;
-}
-
-.yaas-signature-nav #yaas-my-account-subnav li:first-child {
-  border-top: none;
-}
-
-.yaas-signature-nav #yaas-my-account-subnav li a {
-  background-color: #fff;
-  color: #0486e0;
-  padding: 20px 15px 15px;
-}
-
-.yaas-signature-nav #yaas-my-account-subnav li:hover a {
-  background-color: #0486e0;
-  color: #fff;
 }
 
 .yaas-signature-nav .primary-nav--toggle {
@@ -515,6 +546,8 @@
   color: #fff;
   overflow: hidden;
   height: 50px;
+  width: 100%;
+  font-weight: 500;
 }
 
 .docs-primary-nav, .yaas-signature-nav {
@@ -591,6 +624,7 @@
   float: right;
   display: block;
   width: 160px;
+  height: 50px;
 }
 
 .docs-primary-nav .brand .brand-logo, .yaas-signature-nav .brand .brand-logo {
@@ -624,7 +658,6 @@
   }
   .yaas-signature-nav__list li {
     border-bottom: 1px solid #223245;
-    line-height: 20px;
     display: block;
     position: relative;
     font-size: 17px;
@@ -639,6 +672,11 @@
     text-decoration: none;
     padding: 20px;
     display: block;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  .yaas-signature-nav__list li:hover a {
+    background-color: #223245;
   }
   .docs-primary-nav__list {
     display: none !important;
@@ -690,11 +728,11 @@
   background-color: #fff;
 }
 
-#menu-toggle[aria-hidden="true"] .icon-bar:nth-child(2n+1) {
+#menu-toggle[aria-expanded="true"] .icon-bar:nth-child(2n+1) {
   transform: rotate(-45deg);
 }
 
-#menu-toggle[aria-hidden="true"] .icon-bar {
+#menu-toggle[aria-expanded="true"] .icon-bar {
   position: absolute;
   margin-top: 8px;
   transform: rotate(45deg);
