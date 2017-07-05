@@ -10,6 +10,8 @@
         @include type(45, header);
     }
     &__intro {
-        @include type(18);
+        @include type(24);
+        @include weight(semi);
+        font-style: italic;
     }
 }
