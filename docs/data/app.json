@@ -57,6 +57,9 @@
                 ]
     		}
         ],
+		"account": {
+
+		},
     	"home": {
     		"title": "Home",
     		"url": "index.html",
