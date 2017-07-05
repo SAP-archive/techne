@@ -70,7 +70,7 @@ export class ComponentSectionSampleComponent {
         this.optionSelected = index;
     }
 
-    toggleSpacing(index) {
+    toggleSpacing() {
         this.settings.compact = !this.settings.compact;
     }
 

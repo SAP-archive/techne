@@ -1,0 +1,26 @@
+{
+    "id": "spacing",
+    "label": "Spacing",
+    "sections": [
+        {
+            "id": "spacing-overview",
+            "type": "title-text",
+            "title": "Spacing",
+            "content": "The Spacing system permit to increase or decrease the information density on a given screen. The components will decrease paddings and margins to make room for more components in the same screen real state. "
+        },
+        {
+            "id": "spacing-default",
+            "type": "sample",
+            "title": "Default",
+            "contentMD": "spacing.default.md",
+            "markup": "spacing.default.html"
+        },
+        {
+            "id": "spacing-compact",
+            "type": "sample",
+            "title": "Compact",
+            "contentMD": "spacing.compact.md",
+            "markup": "spacing.compact.html"
+        }
+    ]
+}
