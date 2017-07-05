@@ -12,136 +12,142 @@
 {% block content %}
 
 <div class="docs-section">
-
-    <h2>Structure</h2>
-    <pre>
+    <div class="docs-flow">
+        <div class="docs-flow__box--3-1">
+            <h2>Structure</h2>
+        </div>
+        <div class="docs-flow__box--3-2">    
+            <pre>
 .tn-{{ key }}+(--readonly)+(.is-disabled|[aria-disabled=true])
     .tn-card__media?
     .tn-card__content
         .tn-card__header
         .tn-card__description
         .tn-card__status?
-    </pre>
-
+            </pre>
+        </div>    
+    </div>    
 </div>
-
 
 <div class="docs-section">
-
-    <!-- START BASE COMPONENT EXAMPLES -->
-    <h2 id="base">Common card <br> .tn-{{ key }} <a href="#base">#</a></h2>
-
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                title="Primary Value",
-                description="Secondary Value aute irure dolor in reprehenderit in voluptate",
-                status='Status'
-            ) }}
-    {% endset %}
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--3-1">
+            <!-- START BASE COMPONENT EXAMPLES -->
+            <h2 id="base">Common card <br> .tn-{{ key }} <a href="#base">#</a></h2>        
+        </div>
+        <div class="docs-flow__box--3-2">
+            <!-- output the component example and the code snippet -->
+            {% set example %}
+                {{ card(
+                        title="Primary Value",
+                        description="Secondary Value aute irure dolor in reprehenderit in voluptate",
+                        status='Status'
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
 </div>
-<div class="docs-section">
-
-    <h3 id="static">Button card<br> .tn-{{ key }}[role="button"] or .tn-{{ key }}--button <a href="#static">#</a></h3>
-    <p>Modified: Includes hover effect</p>
-    {% set example %}
-        {{ card(
-                modifier="button",
-                button=true,
-                title="Lorem ipsum dolor quam placeat numquam repellendus",
-                description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
-                status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
-            ) }}
-    {% endset %}
-    <p>
-        {{ example }}
-    </p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
-    <p>State: Disabled, this class/attribute can be toggled with JS </p>
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Repellendus obcaecati molestias',
-                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
-                status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
-                disabled=true
-            ) }}
-    {% endset %}
-    <p>
-        {{ example }}
-    </p>
-    <p>A11Y NOTE:
-        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-    </p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Asperiores doloribus id dolore',
-                description='Consectetur adipisicing elit',
-                status='<span class="tn-has-color-success">Cumque itaque</span>',
-                media=c.media.icon,
-                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                mediaAlt=c.media.alt
-            ) }}
-    {% endset %}
-<!-- -->
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-</div>
-
 
 <div class="docs-section">
-
-    <h3 id="alt">Include .tn-{{ key }}<a href="#alt">#</a></h3>
-    <p>Cards can also be used with custom content</p>
-    <!-- output the component example and the code snippet -->
-    {% set body %}
-        <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
-        <p>*******************</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
-        <p>*******************</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
-        <p>Consectetur adipisicing</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
-        <p>Lorem ipsum</p>
-    {%- endset %}
-    {% set example %}
-        {{ card(
-                body=body
-            ) }}
-    {% endset %}
-
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--3-1">
+            <h3 id="static">Button card<br> .tn-{{ key }}[role="button"] or .tn-{{ key }}--button <a href="#static">#</a></h3>
+        </div>
+        <div class="docs-flow__box--3-2">
+            <p>Modified: Includes hover effect</p>
+            {% set example %}
+                {{ card(
+                        modifier="button",
+                        button=true,
+                        title="Lorem ipsum dolor quam placeat numquam repellendus",
+                        description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
+                        status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
 </div>
 
+<div class="docs-section">  
+    <div class="docs-flow">
+        <div class="docs-flow__box--3-1">
+            <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
+        </div>
+        <div class="docs-flow__box--3-2">
+            <p>State: Disabled, this class/attribute can be toggled with JS </p>
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Repellendus obcaecati molestias',
+                        description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
+                        status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
+                        disabled=true
+                    ) }}
+            {% endset %}
+            <p> {{ example }} </p> 
+            <p>A11Y NOTE: Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+            </p>            
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
+</div>
 
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box-3-1">
+            <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>        
+        </div>
+        <div class="docs-flow__box-3-2">
+            <!-- output the component example and the code snippet -->
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-success">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>    
+    <p> {{ format.example(example) }} </p>
+</div>
+
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-folow__box-3-1">
+            <h3 id="alt">Include .tn-{{ key }}<a href="#alt">#</a></h3>
+        </div>
+        <div class="docs-folow__box-3-1">
+            <p>Cards can also be used with custom content</p>
+            <!-- output the component example and the code snippet -->
+            {% set body %}
+                <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
+                <p>*******************</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
+                <p>*******************</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
+                <p>Consectetur adipisicing</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
+                <p>Lorem ipsum</p>
+            {%- endset %}
+            {% set example %}
+                {{ card(
+                        body=body
+                    ) }}
+            {% endset %}
+
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
+</div>
 
 {% endblock %}

@@ -10,7 +10,9 @@
 @import 'secondary-nav';
 @import 'code';
 @import 'footer';
+@import './node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 p, ul {
     margin-bottom: 20px;
 }
+
