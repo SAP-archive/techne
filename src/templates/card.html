@@ -6,6 +6,7 @@ CARD:
     status="", (string | optional)
     media="", (url | optional)
     mediaAlt="", (string | optional)
+    actions="", (string | optional)
 
     TYPE ___
     modifier="", (string | optional)
@@ -23,6 +24,7 @@ CARD:
     mediaAlt="",
     mediaModifier="",
     disabled=false,
+    actions="",
     body="") %}
 <div class="tn-card{{ ' tn-card--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
     {%- if media %}
@@ -46,5 +48,10 @@ CARD:
         {%- endif -%}
     {%- endif %}
     </div>
+    {%- if actions %}
+    <div class="tn-card__actions">
+        {{ actions }}
+    </div>
+    {%- endif %}
 </div>
 {% endmacro %}

@@ -15,15 +15,18 @@
 
     <h2>Structure</h2>
     <pre>
-.tn-{{ key }}+(--readonly)+(.is-disabled|[aria-disabled=true])
-    .tn-card__media?
+.tn-{{ key }}+(--button,--vertical)+(.is-disabled|[aria-disabled=true])
+    .tn-card__media+(--round,--fill)?
     .tn-card__content
-        .tn-card__header
-        .tn-card__description
+        .tn-card__header?
+        .tn-card__description?
         .tn-card__status?
+    .tn-card__actions?
     </pre>
 
 </div>
+
+
 
 
 <div class="docs-section">
@@ -90,6 +93,30 @@
     </p>
 
 </div>
+
+
+<div class="docs-section">
+
+    <h3 id="actions">Actions card<br> Include .tn-{{ key }}__actions <a href="#actions">#</a></h3>
+    {% set example %}
+        {{ card(
+                modifier="button",
+                title="Lorem ipsum dolor quam placeat numquam repellendus",
+                description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
+                status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>',
+                actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-plus-1">•••</span></div>'
+            ) }}
+    {% endset %}
+    <p>
+        {{ example }}
+    </p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+</div>
+
+
 <div class="docs-section">
 
     <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
@@ -198,7 +225,8 @@
     {%- endset %}
     {% set example %}
         {{ card(
-                body=body
+                body=body,
+                actions='<a href="#alt" class="tn-has-type-plus-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>'
             ) }}
     {% endset %}
 

@@ -3,11 +3,13 @@
 @import "../core/functions";
 /*!
     card structure
-    .tn-card+(--readonly)+(.is-disabled)
-        .tn-card__media+(--fill)
+    .tn-card+(--button,--vertical)+(.is-disabled|[aria-disabled=true])
+        .tn-card__media+(--round,--fill)
         .tn-card__content
-            .tn-card__header, .tn-card__description, .tn-card__label
+            .tn-card__header, .tn-card__description, .tn-card__status
+        .tn-card__actions
 */
+
 //set component name using namespace function, then use #{$block} below
 $block: ns(card);
 .#{$block} {
@@ -38,7 +40,7 @@ $block: ns(card);
     &--button,
     &[role="button"] {
         cursor: default;
-        .#{$block}__media {
+        .#{$block}__header {
             color: $tn-card-color-link;
         }
     }
@@ -89,7 +91,9 @@ $block: ns(card);
     }
     &__content {
         padding: ($tn-card-padding - 5px) $tn-card-padding;
-        width: 100%;
+        max-width: 100%;
+        flex: 1;
+        overflow: hidden;
     }
     &__header {
         color: $color;
@@ -103,6 +107,7 @@ $block: ns(card);
         line-height: (19/13);
         margin-bottom: 25px;
         white-space: nowrap;
+        max-width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -128,5 +133,10 @@ $block: ns(card);
         //         @include tn-weight(semi);
         //     }
         // }
+    }
+    &__actions {
+        padding: $tn-card-padding $tn-card-padding/2;
+        //width: 200px;
+        //flex-basis: 200px;
     }
 }
