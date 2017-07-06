@@ -111,6 +111,28 @@
         {{ format.example(example) }}
     </p>
 
+
+    <h3 id="media">Include .tn-{{ key }}__media--round<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                button=true,
+                title='Asperiores doloribus id dolore',
+                description='Consectetur adipisicing elit',
+                status='<span class="tn-has-color-success">Cumque itaque</span>',
+                media=c.media.icon,
+                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                mediaAlt=c.media.alt,
+                mediaShape="round"
+            ) }}
+    {% endset %}
+<!-- -->
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+
 </div>
 
 
