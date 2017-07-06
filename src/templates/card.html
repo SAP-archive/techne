@@ -21,12 +21,12 @@ CARD:
     button=false,
     media="",
     mediaAlt="",
-    mediaShape="",
+    mediaModifier="",
     disabled=false,
     body="") %}
-<div class="tn-card{{ '--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
+<div class="tn-card{{ ' tn-card--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
     {%- if media %}
-    <div class="tn-card__media{{ '--'+mediaShape if mediaShape }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
+    <div class="tn-card__media{{ ' tn-card__media--'+mediaModifier if mediaModifier }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
     </div>
     {%- endif %}
     <div class="tn-card__content">

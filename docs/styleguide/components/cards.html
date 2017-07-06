@@ -112,7 +112,7 @@
     </p>
 
 
-    <h3 id="media">Include .tn-{{ key }}__media--round<a href="#media">#</a></h3>
+    <h3 id="media">Modify to .tn-{{ key }}__media--round<a href="#media">#</a></h3>
     <!-- output the component example and the code snippet -->
     {% set example %}
         {{ card(
@@ -123,7 +123,28 @@
                 media=c.media.icon,
                 media="https://techne.yaas.io/images/product-thumbnail-wide.png",
                 mediaAlt=c.media.alt,
-                mediaShape="round"
+                mediaModifier="round"
+            ) }}
+    {% endset %}
+<!-- -->
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+
+    <h3 id="media">Modify to .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                button=true,
+                title='Asperiores doloribus id dolore',
+                description='Consectetur adipisicing elit',
+                status='<span class="tn-has-color-success">Cumque itaque</span>',
+                media=c.media.icon,
+                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                mediaAlt=c.media.alt,
+                mediaModifier="fill"
             ) }}
     {% endset %}
 <!-- -->
@@ -135,10 +156,34 @@
 
 </div>
 
+<div class="docs-section">
+
+    <h3 id="media">.tn-{{ key }}--vertical<a href="#media">#</a></h3>
+    <p>Ideal for displaying products</p>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+        {{ card(
+                button=true,
+                modifier="vertical",
+                title='Asperiores doloribus id dolore',
+                description='Consectetur adipisicing elit',
+                status='<span class="tn-has-color-success">Cumque itaque</span>',
+                media=c.media.icon,
+                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                mediaAlt=c.media.alt
+            ) }}
+    {% endset %}
+<!-- -->
+    <p>{{ example }}</p>
+    <p>
+        {{ format.example(example) }}
+    </p>
+
+</div>
 
 <div class="docs-section">
 
-    <h3 id="alt">Include .tn-{{ key }}<a href="#alt">#</a></h3>
+    <h3 id="alt">Custom .tn-{{ key }}<a href="#alt">#</a></h3>
     <p>Cards can also be used with custom content</p>
     <!-- output the component example and the code snippet -->
     {% set body %}
