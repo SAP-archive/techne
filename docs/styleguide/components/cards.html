@@ -11,10 +11,14 @@
 
 {% block content %}
 
+<!-- component structure -->
 <div class="docs-section">
-
-    <h2>Structure</h2>
-    <pre>
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h2 class="docs-section--section-header">Structure</h2>        
+        </div>
+        <div class="docs-flow__box--12-7">
+            <pre>
 .tn-{{ key }}+(--button,--vertical)+(.is-disabled|[aria-disabled=true])
     .tn-card__media+(--round,--fill)?
     .tn-card__content
@@ -22,34 +26,34 @@
         .tn-card__description?
         .tn-card__status?
     .tn-card__actions?
-    </pre>
-
+            </pre>
+        </div>
+    </div>
 </div>
 
 
-
-
-<div class="docs-section">
-
-    <!-- START BASE COMPONENT EXAMPLES -->
-    <h2 id="base">Common card <br> .tn-{{ key }} <a href="#base">#</a></h2>
-
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                title="Primary Value",
-                description="Secondary Value aute irure dolor in reprehenderit in voluptate",
-                status='Status'
-            ) }}
-    {% endset %}
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+<!-- base component example -->
+<div class="docs-section">    
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h2 id="base" class="docs-section--section-header">Common card <br> .tn-{{ key }} <a href="#base">#</a></h2>
+        </div>
+        <div class="docs-flow__box--12-7">
+            {% set example %}
+                {{ card(
+                        title="Primary Value",
+                        description="Secondary Value aute irure dolor in reprehenderit in voluptate",
+                        status='Status'
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>        
+        </div>
+    </div>    
+    <p> {{ format.example(example) }} </p>
 </div>
-<div class="docs-section">
 
+<!-- static button -->
+<div class="docs-section">
     <h3 id="static">Button card<br> .tn-{{ key }}[role="button"] or .tn-{{ key }}--button <a href="#static">#</a></h3>
     <p>Modified: Includes hover effect</p>
     {% set example %}
