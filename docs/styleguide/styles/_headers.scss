@@ -1,0 +1,18 @@
+.docs-header {
+
+    &--h2{
+        @include type(46);
+        margin-bottom: 10px;    
+    }
+
+    &--h3{
+        @include type(34);
+        margin-bottom: 20px;    
+
+    }
+
+    &--h4{
+        @include type(22);
+        margin-bottom: 50px;    
+    }
+}
