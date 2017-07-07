@@ -23,4 +23,9 @@
         @extend %app-section;
         margin-bottom: 150px;
     }
+
+    &--section-header{
+        @include type(46);
+        margin-bottom: 10px;    
+    }
 }

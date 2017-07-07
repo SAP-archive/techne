@@ -4,14 +4,17 @@
         padding-top: 95px;
         height: 240px;
         max-height: 240px;
+        margin-bottom: 100px;
     }
 
     &__title {
-        @include type(45, header);
+        @include type(60, header);
     }
+
     &__intro {
         @include type(24);
         @include weight(semi);
         font-style: italic;
     }
+
 }
