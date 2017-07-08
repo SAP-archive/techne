@@ -4,27 +4,24 @@
 //set namespace using function to avoid hardcoding it
 $ns: ns();
 @each $key, $value in $type {
-	@if $key > 0 {
-	  .#{$ns}is-type-#{$key} {
-		@include tn-type($key);
-	  }
-	}
-    @else if $key < 0 {
-	  .#{$ns}is-type-minus#{$key} {
-		@include tn-type($key);
-	  }
-	}
-    @else {
-	  .#{$ns}is-type-base,
-      .#{$ns}is-type-#{$key} {
-		@include tn-type($key);
-	  }
-	}
+    @if $key > 0 {
+        .#{$ns}is-type-#{$key} {
+            @include tn-type($key);
+        }
+    } @else if $key < 0 {
+        .#{$ns}is-type-minus#{$key} {
+            @include tn-type($key);
+        }
+    } @else {
+        .#{$ns}is-type-base,
+        .#{$ns}is-type-#{$key} {
+            @include tn-type($key);
+        }
+    }
 }
 
-
 @each $key, $value in $fonts {
-  .#{$ns}has-font-family-#{$key} {
-	font-family: $value;
-  }
+    .#{$ns}has-font-family-#{$key} {
+        font-family: $value;
+    }
 }

@@ -11,7 +11,7 @@
     @return $ns + $str;
 }
 
-//color-new
+
 @function tn-color($type: text, $shade: 1) {
     $_map: $tn-colors;
     //check type

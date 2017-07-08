@@ -7,7 +7,7 @@
 {% set type = page.type[i] %}
 
     <p><strong>{{i}}</strong> — {{ "Dosis" if type[2] == "header" else "Open Sans" }} {{ type[3] | capitalize }}{{ "bold" if type[2] == "semi" }} {{ type[0] }}px | Line-height {{ type[1] }}px</p>
-    <p class="tn-is-type{{ '-minus' if i < 0 }}{{ '-plus' if i > 0 }}-{{ i | abs if i != 0 else 'base' }}">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    <p class="tn-is-type{{ '-minus' if i < 0 }}-{{ i | abs if i != 0 else 'base' }}">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
 
 {% endfor %}
 
