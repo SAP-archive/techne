@@ -5,7 +5,7 @@
 $ns: ns();
 @each $key, $value in $type {
 	@if $key > 0 {
-	  .#{$ns}is-type-plus-#{$key} {
+	  .#{$ns}is-type-#{$key} {
 		@include tn-type($key);
 	  }
 	}
@@ -15,7 +15,8 @@ $ns: ns();
 	  }
 	}
     @else {
-	  .#{$ns}is-type-base {
+	  .#{$ns}is-type-base,
+      .#{$ns}is-type-#{$key} {
 		@include tn-type($key);
 	  }
 	}

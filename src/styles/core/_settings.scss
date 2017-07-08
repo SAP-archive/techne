@@ -33,7 +33,7 @@ $type: (
     -2: 0.8125rem (18/13) body reg none,	//13/18
     -1: 0.875rem (20/14) body reg none,	//14/18
     0: 1rem (22/16) body reg none,     	//16/22
-    1: 1.125em (24/18) body semi none,   	//18/24
+    1: 1.125rem (24/18) body semi none,   	//18/24
     2: 1.25rem (26/20) body semi none,   	//20/26
     3: 1.625rem (32/26) body semi none,	//26/32
     4: 2.1875rem (42/35) header bold none,	//35/42
@@ -59,6 +59,38 @@ $colors: (
     light: #d7d7d7,
     dark: #7f90a4,
     darkest: #21262c,
+) !default;
+
+$tn-colors: (
+    brand: (
+        1: red,
+        2: yellow,
+    ),
+    text: (
+        1: black,
+        2: gray,
+        3: skyblue,
+    ),
+    inverse: (
+        1: white,
+        2: gray,
+        3: lightgray,
+    ),
+    action: (
+        1: blue,
+        2: purple,
+        3: darkblue,
+    ),
+    neutral: (
+        1: pink,
+        2: aqua,
+        3: purple
+    ),
+    status: (
+        success: #61bf33,
+        warning: #e96b1a,
+        error: #df1919
+    )
 ) !default;
 
 //type

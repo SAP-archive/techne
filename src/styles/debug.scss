@@ -22,3 +22,8 @@ main:before {
     background-image: linear-gradient(to bottom, black 0%, transparent percentage(1px / $grid-unit), transparent 100%);
 }
 */
+
+body {
+    background: tn-color(text);
+    color: tn-color(inverse);
+}

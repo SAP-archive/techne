@@ -1,5 +1,16 @@
 {
     "title": "Styles",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "type": {
+        "-3": [ 12, 16, "body", "bold", "uppercase" ],
+        "-2": [ 13, 18, "body", "reg", "none" ],
+        "-1": [ 14, 18, "body", "reg", "none" ],
+        "0": [ 16, 22, "body", "reg", "none" ],
+        "1": [ 18, 24, "body", "semi", "none" ],
+        "2": [ 20, 26, "body", "semi", "none" ],
+        "3": [ 26, 32, "header", "semi", "none" ],
+        "4":  [ 35, 42, "header", "bold", "none" ],
+        "5": [ 45, 50, "header", "semi", "none" ]
+    }
 
 }
