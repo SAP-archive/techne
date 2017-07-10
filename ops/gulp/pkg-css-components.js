@@ -11,7 +11,7 @@ let environment = require('../lib/environment');
 
 const paths = {
 	src: './src/styles/components',
-	dest: './dist/css/components'
+	dest: './dist/components'
 }
 
 const task = (cb) => {

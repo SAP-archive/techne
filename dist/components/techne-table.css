@@ -9,9 +9,12 @@
   color: #21262c;
   border-collapse: collapse;
   width: 100%;
-  background-color: #d7d7d7; }
-  .tn-table__row--stripe {
-    background: #eef1f3; }
-  .tn-table__cell {
-    vertical-align: top;
-    text-align: left; }
+  background-color: #d7d7d7
+}
+.tn-table__row--stripe {
+  background: #eef1f3
+}
+.tn-table__cell {
+  vertical-align: top;
+  text-align: left
+}
