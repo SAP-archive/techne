@@ -15,7 +15,7 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h2 class="docs-section--section-header">Structure</h2>        
+            <h2 class="docs-header--h2">Structure</h2>        
         </div>
         <div class="docs-flow__box--12-7">
             <pre>
@@ -31,12 +31,11 @@
     </div>
 </div>
 
-
 <!-- base component example -->
 <div class="docs-section">    
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h2 id="base" class="docs-section--section-header">Common card <br> .tn-{{ key }} <a href="#base">#</a></h2>
+            <h3 id="base" class="docs-header--h3">Common card <br> .tn-{{ key }} <a href="#base">#</a></h3>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
@@ -54,191 +53,201 @@
 
 <!-- static button -->
 <div class="docs-section">
-    <h3 id="static">Button card<br> .tn-{{ key }}[role="button"] or .tn-{{ key }}--button <a href="#static">#</a></h3>
-    <p>Modified: Includes hover effect</p>
-    {% set example %}
-        {{ card(
-                modifier="button",
-                button=true,
-                title="Lorem ipsum dolor quam placeat numquam repellendus",
-                description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
-                status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
-            ) }}
-    {% endset %}
-    <p>
-        {{ example }}
-    </p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-</div>
-<div class="docs-section">
-
-    <h3 id="disabled">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
-    <p>State: Disabled, this class/attribute can be toggled with JS </p>
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Repellendus obcaecati molestias',
-                description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
-                status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
-                disabled=true
-            ) }}
-    {% endset %}
-    <p>
-        {{ example }}
-    </p>
-    <p>A11Y NOTE:
-        Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-    </p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="static" class="docs-header--h3">Button card<br> .tn-{{ key }}[role="button"] or .tn-{{ key }}--button <a href="#static">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            <p>Modified: Includes hover effect</p>
+            {% set example %}
+                {{ card(
+                        modifier="button",
+                        button=true,
+                        title="Lorem ipsum dolor quam placeat numquam repellendus",
+                        description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
+                        status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
+                    ) }}
+            {% endset %}
+            <p>
+                {{ example }}
+            </p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p> 
 </div>
 
-
 <div class="docs-section">
-
-    <h3 id="actions">Actions card<br> Include .tn-{{ key }}__actions <a href="#actions">#</a></h3>
-    {% set example %}
-        {{ card(
-                modifier="button",
-                title="Lorem ipsum dolor quam placeat numquam repellendus",
-                description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
-                status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>',
-                actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-plus-1">•••</span></div>'
-            ) }}
-    {% endset %}
-    <p>
-        {{ example }}
-    </p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="disabled" class="docs-header--h3">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>            
+        </div>
+        <div class="docs-flow__box--12-7">
+            <p>State: Disabled, this class/attribute can be toggled with JS </p>
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Repellendus obcaecati molestias',
+                        description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
+                        status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
+                        disabled=true
+                    ) }}
+            {% endset %}
+            <p>
+                {{ example }}
+            </p>
+            <p>A11Y NOTE:
+                Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
+            </p> 
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p> 
 </div>
 
 
 <div class="docs-section">
-
-    <h3 id="media">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Asperiores doloribus id dolore',
-                description='Consectetur adipisicing elit',
-                status='<span class="tn-has-color-success">Cumque itaque</span>',
-                media=c.media.icon,
-                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                mediaAlt=c.media.alt
-            ) }}
-    {% endset %}
-<!-- -->
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-
-    <h3 id="media">Modify to .tn-{{ key }}__media--round<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Asperiores doloribus id dolore',
-                description='Consectetur adipisicing elit',
-                status='<span class="tn-has-color-success">Cumque itaque</span>',
-                media=c.media.icon,
-                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                mediaAlt=c.media.alt,
-                mediaModifier="round"
-            ) }}
-    {% endset %}
-<!-- -->
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-
-    <h3 id="media">Modify to .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                button=true,
-                title='Asperiores doloribus id dolore',
-                description='Consectetur adipisicing elit',
-                status='<span class="tn-has-color-success">Cumque itaque</span>',
-                media=c.media.icon,
-                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                mediaAlt=c.media.alt,
-                mediaModifier="fill"
-            ) }}
-    {% endset %}
-<!-- -->
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="actions" class="docs-header--h3">Actions card<br> Include .tn-{{ key }}__actions <a href="#actions">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            {% set example %}
+                {{ card(
+                        modifier="button",
+                        title="Lorem ipsum dolor quam placeat numquam repellendus",
+                        description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
+                        status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>',
+                        actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-plus-1">•••</span></div>'
+                    ) }}
+            {% endset %}
+        <p> {{ example }} </p> </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
 </div>
 
 <div class="docs-section">
-
-    <h3 id="media">.tn-{{ key }}--vertical<a href="#media">#</a></h3>
-    <p>Ideal for displaying products</p>
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-        {{ card(
-                button=true,
-                modifier="vertical",
-                title='Asperiores doloribus id dolore',
-                description='Consectetur adipisicing elit',
-                status='<span class="tn-has-color-success">Cumque itaque</span>',
-                media=c.media.icon,
-                media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                mediaAlt=c.media.alt
-            ) }}
-    {% endset %}
-<!-- -->
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
-
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+             <h3 id="media" class="docs-header--h3">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-success">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
 </div>
 
 <div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="media" class="docs-header--h3">Modify to .tn-{{ key }}__media--round<a href="#media">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-success">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt,
+                        mediaModifier="round"
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
+</div>
 
-    <h3 id="alt">Custom .tn-{{ key }}<a href="#alt">#</a></h3>
-    <p>Cards can also be used with custom content</p>
-    <!-- output the component example and the code snippet -->
-    {% set body %}
-        <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
-        <p>*******************</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
-        <p>*******************</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
-        <p>Consectetur adipisicing</p>
-        <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
-        <p>Lorem ipsum</p>
-    {%- endset %}
-    {% set example %}
-        {{ card(
-                body=body,
-                actions='<a href="#alt" class="tn-has-type-plus-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>'
-            ) }}
-    {% endset %}
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="media" class="docs-header--h3">Modify to .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            {% set example %}
+                {{ card(
+                        button=true,
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-success">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt,
+                        mediaModifier="fill"
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
+</div>
 
-    <p>{{ example }}</p>
-    <p>
-        {{ format.example(example) }}
-    </p>
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="media" class="docs-header--h3">.tn-{{ key }}--vertical<a href="#media">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-7">
+            <p>Ideal for displaying products</p>
+            {% set example %}
+                {{ card(
+                        button=true,
+                        modifier="vertical",
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-success">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt
+                    ) }}
+            {% endset %}
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
+</div>
 
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="alt" class="docs-header--h3">Custom .tn-{{ key }}<a href="#alt">#</a></h3>
+        </div>
+        <div class="docs-flow__box--12-5">
+            <p>Cards can also be used with custom content</p>
+            {% set body %}
+                <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
+                <p>*******************</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
+                <p>*******************</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
+                <p>Consectetur adipisicing</p>
+                <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
+                <p>Lorem ipsum</p>
+            {%- endset %}
+            {% set example %}
+                {{ card(
+                        body=body,
+                        actions='<a href="#alt" class="tn-has-type-plus-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>'
+                    ) }}
+            {% endset %}
+
+            <p>{{ example }}</p>
+        </div>
+    </div>
+    <p> {{ format.example(example) }} </p>
 </div>
 
 
