@@ -18,8 +18,9 @@ const task = (cb) => {
 
     //compile individual component files
     let prefix = 'techne';
+    var componentsList = [`${paths.src}/card.scss`]
 
-    return gulp.src(`${paths.src}/*`)
+    return gulp.src(componentsList)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(environment.production, autoprefixer({
         browsers: ['last 2 versions'],
@@ -28,9 +29,9 @@ const task = (cb) => {
     .pipe(gulpif(environment.production, cleanCSS({
         format: 'beautify'
     })))
-    .pipe(rename({
-        prefix: `${prefix}-`
-    }))
+    // .pipe(rename({
+    //     prefix: `${prefix}-`
+    // }))
     .pipe(gulp.dest(paths.dest))
 
 }

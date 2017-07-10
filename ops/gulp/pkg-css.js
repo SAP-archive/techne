@@ -18,14 +18,14 @@ const paths = {
 const task = (cb) => {
 
     let prefix = 'techne';
-    let techneCss = environment.production ? `${paths.src}/*.scss` : `${paths.src}/all.scss`;
+    let techneCss = `${paths.src}/all.scss`;//environment.production ? `${paths.src}/*.scss` : `${paths.src}/all.scss`;
     if (environment.debug) {
         techneCss = `${paths.src}/debug.scss`;
     }
     let ignoreGlobs = ['!./src/styles/**/_*','!./src/styles/theme/**/*'];
 
     var isAllCss = function (file) {
-      return file.path.includes('-all') ;
+      return file.path.includes('all') ;
     }
 
     return gulp.src([techneCss,...ignoreGlobs])
@@ -38,9 +38,9 @@ const task = (cb) => {
         .pipe(gulpif(environment.production, cleanCSS({
             format: 'beautify'
         })))
-        .pipe(rename({
-            prefix: `${prefix}-`
-        }))
+        // .pipe(rename({
+        //     prefix: `${prefix}-`
+        // }))
         .pipe(gulpif(isAllCss, rename({
             basename: prefix
         })))
