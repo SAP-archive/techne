@@ -41,7 +41,7 @@ The components can be used without loading the whole library. Take a look at the
 ```
 
 For example, to use only the cards
-```
+```html
 <link href="node_modules/techne/components/card.min.css" rel="stylesheet" />
 ````
 
