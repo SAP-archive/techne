@@ -15,7 +15,7 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h2 class="docs-header--h2">Structure</h2>        
+            <h2 class="docs-header--h2">Structure</h2>
         </div>
         <div class="docs-flow__box--12-7">
             <pre>
@@ -32,7 +32,7 @@
 </div>
 
 <!-- base component example -->
-<div class="docs-section">    
+<div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
             <h3 id="base" class="docs-header--h3">Common card <br> .tn-{{ key }} <a href="#base">#</a></h3>
@@ -45,9 +45,9 @@
                         status='Status'
                     ) }}
             {% endset %}
-            <p>{{ example }}</p>        
+            <p>{{ example }}</p>
         </div>
-    </div>    
+    </div>
     <p> {{ format.example(example) }} </p>
 </div>
 
@@ -65,7 +65,7 @@
                         button=true,
                         title="Lorem ipsum dolor quam placeat numquam repellendus",
                         description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
-                        status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>'
+                        status='<span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>'
                     ) }}
             {% endset %}
             <p>
@@ -73,13 +73,13 @@
             </p>
         </div>
     </div>
-    <p> {{ format.example(example) }} </p> 
+    <p> {{ format.example(example) }} </p>
 </div>
 
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="disabled" class="docs-header--h3">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>            
+            <h3 id="disabled" class="docs-header--h3">Disabled card<br> .tn-{{ key }}[aria-disabled="true"] or .tn-{{ key }}.is-disabled <a href="#disabled">#</a></h3>
         </div>
         <div class="docs-flow__box--12-7">
             <p>State: Disabled, this class/attribute can be toggled with JS </p>
@@ -97,10 +97,10 @@
             </p>
             <p>A11Y NOTE:
                 Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
-            </p> 
+            </p>
         </div>
     </div>
-    <p> {{ format.example(example) }} </p> 
+    <p> {{ format.example(example) }} </p>
 </div>
 
 
@@ -115,8 +115,8 @@
                         modifier="button",
                         title="Lorem ipsum dolor quam placeat numquam repellendus",
                         description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
-                        status='<span class="tn-has-color-success">Voluptate quis adipisci sit</span>',
-                        actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-plus-1">•••</span></div>'
+                        status='<span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>',
+                        actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-1">•••</span></div>'
                     ) }}
             {% endset %}
         <p> {{ example }} </p> </div>
@@ -228,13 +228,13 @@
         <div class="docs-flow__box--12-5">
             <p>Cards can also be used with custom content</p>
             {% set body %}
-                <span class="tn-has-color-dark tn-is-type-minus-2">Client I.D.</span>
+                <span class="tn-has-color-dark tn-has-type-minus-2">Client I.D.</span>
                 <p>*******************</p>
-                <span class="tn-has-color-dark tn-is-type-minus-2">Client Secret</span>
+                <span class="tn-has-color-dark tn-has-type-minus-2">Client Secret</span>
                 <p>*******************</p>
-                <span class="tn-has-color-dark tn-is-type-minus-2">Creation Date</span>
+                <span class="tn-has-color-dark tn-has-type-minus-2">Creation Date</span>
                 <p>Consectetur adipisicing</p>
-                <span class="tn-has-color-dark tn-is-type-minus-2">Tenant (Project Identifier)</span>
+                <span class="tn-has-color-dark tn-has-type-minus-2">Tenant (Project Identifier)</span>
                 <p>Lorem ipsum</p>
             {%- endset %}
             {% set example %}
