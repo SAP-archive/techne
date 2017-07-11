@@ -20,3 +20,5 @@ tmp
 *.log
 dist/css/techne-debug.min.css
 dist/css/techne-debug.css
+dist/techne-debug.min.css
+dist/techne-debug.css

@@ -9,14 +9,13 @@ const debug = require('gulp-debug');
 let environment = require('../lib/environment');
 
 const paths = {
-	src: './dist/css',
-	dest: './dist/css'
+	src: './dist',
+	dest: './dist'
 }
 
 const task = (cb) => {
 
     return gulp.src([`${paths.src}/**/*.css`])
-        .pipe(debug())
         .pipe(cleanCSS({
             level: {
                 1: {
