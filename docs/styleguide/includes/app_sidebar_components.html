@@ -3,12 +3,15 @@
 {% block nav %}
     <nav class="docs-secondary-nav">
         <ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
-        {% set menu = app.sidebar.components %}
-        {% for item in menu %}
+
+            <li class="docs-secondary-nav__header">{{page.title }}</li>
+
+            {% set menu = app.sidebar.components %}
+            {% for item in menu %}
             <li class="docs-secondary-nav__listitem">
-                <h2>
+                <span class="docs-secondary-nav__listitem-header">
                     {{ item.title }}
-                </h2>
+                </span>
             {% set childitems = item.items %}
                 <ul>
                 {% for item in childitems %}

@@ -18,14 +18,18 @@
         display: flex;
         min-height: calc(100vh -  100px);
         width: 100%;
+        .docs-page--index{
+            margin-left: 0;
+        }
     }
 
     &__sidebar {
         width: 264px;
-        padding: 20px;
         color: $white;
         background-color: $dark-blue-700;
         font-family: $font-family-dosis;
+        position: fixed;
+        height: 100%;
         a {
             color: currentColor;
         }
@@ -33,5 +37,9 @@
     &__page {
         flex: 1;
         padding-bottom: 100px;
+        margin-left: 264px;
+
+
     }
+
 }
