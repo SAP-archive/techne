@@ -2,57 +2,18 @@
 
 {% block content %}
 
-
-
 <section class="docs-section">
 
+{% include 'colors.html' %}
 
+</section>
+<hr>
+<section class="docs-section">
 
-
-    <h1>Type</h1>
-
-    {% for i in [-3,-2,-1,0,1,2,3,4,5] | reverse %}
-
-        <span><strong>Mixin:</strong> <code>@type({{i}})</code>
-            <br>
-            <strong>Class:</strong> <code>.tn-is-type{{ '-minus' if i < 0 }}{{ '-plus' if i > 0 }}-{{ i | abs if i != 0 else 'base' }}</code></span>
-        <h1 class="tn-is-type{{ '-minus' if i < 0 }}{{ '-plus' if i > 0 }}-{{ i | abs if i != 0 else 'base' }}">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
-
-    {% endfor %}
-
-
-
-<!--
-    <p class="is-type-default">
-    Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse Vice cred authentic chillwave artisan cold-pressed gluten-free. Slow-carb squid street art Williamsburg.
-    </p>
-    <p class="is-type-default">
-    Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse Vice cred authentic chillwave artisan cold-pressed gluten-free. Slow-carb squid street art Williamsburg.
-    </p>
-    <small class="is-type-down-1">Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse</small>
-    <address class="is-type-down-2">Plaid consequat veniam cronut roof party selfies mumblecore put a bird on it master cleanse</address>
- -->
-
-
-
+{% include 'type.html' %}
 
 </section>
 
-<section class="docs-section">
-
-    <h1>Fonts</h1>
-
-    {% for i in ['header', 'body', 'code'] %}
-
-        <span>
-            <strong>Class:</strong> <code>.tn-has-font-family-{{ i }}</code>
-        </span>
-        <p class="tn-has-font-family-{{ i }}">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
-
-    {% endfor %}
-
-
-</section>
 
 
 {% endblock %}
