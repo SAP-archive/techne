@@ -4,11 +4,11 @@ const sass = require('gulp-sass');
 let environment = require('../lib/environment');
 
 const paths = {
-	src: !environment.production ? './tmp/css' : './dist/css',
+	src: !environment.production ? './tmp/css' : './dist',
 	dest: './www/css'
 }
 
-let techneCss = environment.production ? 'techne-all.min.css' : 'techne-all.css';
+let techneCss = environment.production ? 'techne.min.css' : 'techne.css';
 let debugSrc = environment.debug ? [`${paths.src}/techne-debug.css`] : [];
 
 const task = (cb) => {
