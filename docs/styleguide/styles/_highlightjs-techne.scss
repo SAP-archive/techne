@@ -1,0 +1,107 @@
+//colors
+$highlightjs-white: white;
+$highlightjs-black: black;
+$highlightjs-color_japanese_laurel_approx: #008000;
+$highlightjs-color_monza_approx: #cc1212;
+$highlightjs-color_pickled_bluewood_approx: #2d4056;
+$highlightjs-color_lochmara_approx: #1186c2;
+$highlightjs-color_eastern_blue_approx: #2b91af;
+$highlightjs-gray: #808080;
+$highlightjs-color_malachite_approx: #04b63a;
+$highlightjs-color_cerulean_approx: #00b0e8;
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: $highlightjs-white;
+  color: $highlightjs-black;
+
+  .hljs-tag{
+    display: block;
+  }
+}
+.hljs-comment {
+  color: $highlightjs-color_japanese_laurel_approx;
+}
+.hljs-quote {
+  color: $highlightjs-color_japanese_laurel_approx;
+}
+.hljs-variable {
+  color: $highlightjs-color_japanese_laurel_approx;
+}
+.hljs-keyword {
+  color: $highlightjs-color_monza_approx;
+}
+.hljs-selector-tag {
+  color: $highlightjs-color_monza_approx;
+}
+.hljs-built_in {
+  color: $highlightjs-color_monza_approx;
+}
+.hljs-name {
+  color: $highlightjs-color_monza_approx;
+}
+.hljs-tag {
+  color: $highlightjs-color_pickled_bluewood_approx;
+}
+.hljs-string {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-title {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-section {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-attribute {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-literal {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-template-tag {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-template-variable {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-type {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-addition {
+  color: $highlightjs-color_lochmara_approx;
+}
+.hljs-deletion {
+  color: $highlightjs-color_eastern_blue_approx;
+}
+.hljs-selector-attr {
+  color: $highlightjs-color_eastern_blue_approx;
+}
+.hljs-selector-pseudo {
+  color: $highlightjs-color_eastern_blue_approx;
+}
+.hljs-meta {
+  color: $highlightjs-color_eastern_blue_approx;
+}
+.hljs-doctag {
+  color: $highlightjs-gray;
+}
+.hljs-attr {
+  color: $highlightjs-color_malachite_approx;
+}
+.hljs-symbol {
+  color: $highlightjs-color_cerulean_approx;
+}
+.hljs-bullet {
+  color: $highlightjs-color_cerulean_approx;
+}
+.hljs-link {
+  color: $highlightjs-color_cerulean_approx;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
