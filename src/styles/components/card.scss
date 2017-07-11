@@ -15,11 +15,13 @@ $block: ns(card);
 .#{$block} {
     @include reset;
     //LOCAL VARS
-    $tn-card-color-border: color(light) !default;
-    $tn-card-color-disabled: #63758b !default;
-    $tn-card-background-color-disabled: #f9fbfc !default;
-    $tn-card-time-hover: 0.2s;
-    $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4);
+    $tn-card-color-border: tn-color(neutral,2) !default;
+    $tn-card-color-disabled: tn-color(text,3) !default;
+    $tn-card-background-color: tn-color(inverse) !default;
+    $tn-card-background-color-disabled: tn-color(neutral,1) !default;
+    $tn-card-background-color-hover: $tn-card-background-color !default;
+    $tn-card-time-hover: 0.2s !default;
+    $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
     $tn-card-padding: 40px !default;
     $tn-card-width: 500px !default;
     $tn-card-media-width: 75px !default;
@@ -27,6 +29,7 @@ $block: ns(card);
     display: flex;
     max-width: $tn-card-width;
     border: solid 1px $tn-card-color-border;
+    background-color: $tn-card-background-color;
     &--vertical {
         width: 370px;
         display: block;
@@ -49,8 +52,9 @@ $block: ns(card);
     &[role="button"] {
         cursor: pointer;
         transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
-        &:hover:not([class*="--readonly"], .is-disabled, [aria-disabled="true"]) {
+        &:hover:not(.is-disabled, [aria-disabled="true"]) {
             border-color: $tn-card-color-link;
+            background-color: $tn-card-background-color;
             box-shadow: $tn-card-shadow-hover;
         }
     }
@@ -97,14 +101,11 @@ $block: ns(card);
     }
     &__header {
         color: $color;
-        font-size: 18px;
-        line-height: (22/18);
-        @include tn-weight(semi);
-        margin-bottom: 3px;
+        @include tn-type(1);
+        margin-bottom: 1px;
     }
     &__description {
-        font-size: 13px;
-        line-height: (19/13);
+        @include tn-type(-2);
         margin-bottom: 25px;
         white-space: nowrap;
         max-width: 100%;
@@ -112,27 +113,7 @@ $block: ns(card);
         text-overflow: ellipsis;
     }
     &__status {
-        font-size: 12px;
-        line-height: (14/12);
-        text-transform: uppercase;
-        @include tn-weight(bold);
-        //TDOD: this is not very flexible
-        // & > * {
-        //     &:first-child::after {
-        //         content: "|";
-        //         display: inline-block;
-        //         padding-left: 10px;
-        //         padding-right: 10px;
-        //     }
-        //     &:last-child::after {
-        //         content: "";
-        //         padding-left: 0;
-        //         padding-right: 0;
-        //     }
-        //     &:nth-child(2) {
-        //         @include tn-weight(semi);
-        //     }
-        // }
+        @include tn-type(-3);
     }
     &__actions {
         padding: $tn-card-padding $tn-card-padding/2;
