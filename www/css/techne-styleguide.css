@@ -1,3 +1,4 @@
+@import url(./node_modules/bootstrap/dist/css/bootstrap.min.css);
 .docs-section:after, .docs-section--extra-bottom-padding:after {
   content: '';
   display: table;
@@ -309,6 +310,30 @@
   }
 }
 
+.docs-header--h2 {
+  font-size: 46px;
+  line-height: 1.22222;
+  font-family: Dosis, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.docs-header--h3 {
+  font-size: 34px;
+  line-height: 1;
+  font-family: Dosis, sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.docs-header--h4 {
+  font-size: 22px;
+  line-height: 1;
+  font-family: Dosis, sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
 .docs-app__header {
   position: fixed;
   width: 100%;
@@ -349,18 +374,21 @@
   padding-top: 95px;
   height: 240px;
   max-height: 240px;
+  margin-bottom: 100px;
 }
 
 .docs-page__title {
-  font-size: 45px;
-  line-height: 1.22222;
+  font-size: 60px;
+  line-height: 1;
   font-family: Dosis, sans-serif;
   font-weight: 600;
 }
 
 .docs-page__intro {
-  font-size: 18px;
-  line-height: 1.33333;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .yaas-signature-nav {
