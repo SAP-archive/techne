@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'sections';
 @import 'flow'; //layout
+@import 'headers'; //layout
 
 @import 'app';
 @import 'page';
@@ -10,7 +11,9 @@
 @import 'secondary-nav';
 @import 'code';
 @import 'footer';
+@import './node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 p, ul {
     margin-bottom: 20px;
 }
+
