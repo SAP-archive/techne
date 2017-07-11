@@ -1,0 +1,51 @@
+@import "../core/functions";
+
+//fonts
+$fonts: (
+    body: #{Arial, Helvetica, sans-serif},
+    header: #{Arial, Helvetica, sans-serif},
+    code: #{"Courier", sans-serif},
+) !default;
+
+
+$tn-colors: (
+    brand: (
+        1: #b4cbe1,
+        2: #27394f,
+    ),
+    text: (
+        1: #21262c,
+        2: #7f90a4,
+        3: #63758b,
+    ),
+    inverse: (
+        1: #ffffff,
+        2: #f6f8f9,
+        3: #eef1f3,
+    ),
+    action: (
+        1: #479acc,
+        2: #00a5ec,
+        3: #0093d1,
+    ),
+    neutral: (
+        1: #f9fbfc,
+        2: #f7f7f7,
+        3: #ccdaeb
+    ),
+    status: (
+        success: #619b62,
+        warning: #e96b1a,
+        error: #df1919
+    )
+) !default;
+
+//baseline
+
+body {
+    background: url(../bkgd-fiori@2x.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+$tn-card-background-color-hover: tn-color(neutral,2);

@@ -16,7 +16,7 @@ const task = () => {
 	gulp.watch([`./src/**/*.scss`], ['pkg-css']);
 
 	//update docs styles
-	gulp.watch([`${paths.dest}/css/**/techne-all.css`, `${paths.dest}/css/**/techne-debug.css`], ['docs-css']);
+	gulp.watch([`${paths.dest}/css/**/techne.css`, `${paths.dest}/css/**/techne-debug.css`], ['docs-css']);
 
 	//update styleguide styles
 	gulp.watch([`./docs/styleguide/styles/**/*.scss`], ['docs-styleguide']);
