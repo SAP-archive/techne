@@ -1,18 +1,34 @@
+@import "../core/functions";
+
 //colors
-$colors: (
-    lightest: white,
-    light: lightgray,
-    dark: darkgray,
-    darkest: black,
-	action: yellow,
-	link: blue,
-	accent: #009cdf,
-    success: #61bf33,
-    warning: #e96b1a,
-    error: #df1919,
+$tn-colors: (
+    brand: (
+        1: #ef8e47,
+        2: #d7c6b1,
+    ),
+    text: (
+        1: #ded9d3,
+        2: #7f6f5c,
+        3: #9b8a75,
+    ),
+    inverse: (
+        1: #000000,
+        2: #090706,
+        3: #110e0c,
+    ),
+    action: (
+        1: #1ba6e9,
+        2: #e45916,
+        3: #e86b30,
+    ),
+    neutral: (
+        1: #060403,
+        2: #282828,
+        3: #332515
+    ),
+    status: (
+        success: #61bf33,
+        warning: #e96b1a,
+        error: #df1919
+    )
 );
-
-//baseline
-$color: color(lightest);
-$background-color: color(darkest);
-

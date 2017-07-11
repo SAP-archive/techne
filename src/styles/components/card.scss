@@ -17,7 +17,9 @@ $block: ns(card);
     //LOCAL VARS
     $tn-card-color-border: color(light) !default;
     $tn-card-color-disabled: #63758b !default;
+    $tn-card-background-color: tn-color(inverse) !default;
     $tn-card-background-color-disabled: #f9fbfc !default;
+    $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-time-hover: 0.2s;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4);
     $tn-card-padding: 40px !default;
@@ -27,6 +29,7 @@ $block: ns(card);
     display: flex;
     max-width: $tn-card-width;
     border: solid 1px $tn-card-color-border;
+    background-color: $tn-card-background-color;
     &--vertical {
         width: 370px;
         display: block;
@@ -51,6 +54,7 @@ $block: ns(card);
         transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
         &:hover:not([class*="--readonly"], .is-disabled, [aria-disabled="true"]) {
             border-color: $tn-card-color-link;
+            background-color: $tn-card-background-color-hover;
             box-shadow: $tn-card-shadow-hover;
         }
     }
