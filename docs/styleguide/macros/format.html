@@ -4,11 +4,10 @@
 
 {% macro example(html) %}
 <aside class="docs-code">
-    <h1 class="docs-code__header">
-        Code:
-    </h1>
+    <h4 class="docs-code__header">
+        Code <span class="docs-code__version-tag">Since V2.1.4</span>
+    </h4>
     <pre><code class="html">{{ html | e | trim }}</code></pre>
-    <!-- <code class="docs-code__markup"></code> -->
 </aside>
 {% endmacro %}
 
