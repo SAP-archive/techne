@@ -3,20 +3,34 @@
 .docs-code {
     //display: none;
     &__header {
-        
         margin-bottom: 10px;
-
-
+        font-size: 17px;
+        position: relative;
     }
+
     &__version-pill{
         font-size: 10px;
+        font-weight: bold;
         color: $white;
-        padding-bottom: 2px;
+        padding: 4px 6px;
         display: inline-block;
         border-radius: 10px;
         background-color: $dark-grey;
+        margin-left: 10px;
+        position: absolute;
+        top: 2px;
 
     }
+
+    &__copy-code{
+        position: absolute;
+        right: 0;
+        top: 2px;
+        color: $link-blue;
+        font-size: 14px;
+
+    }
+
     &__markup {
         white-space: pre-wrap;
         font-family: monospace;
@@ -24,6 +38,7 @@
         line-height: 16px;
         position: relative;
         display: block;
+
         &::before {
             $grid-unit: 16px;
 
@@ -40,5 +55,8 @@
         }
     }
 
+    pre{
+        white-space:pre-wrap;
+    }
 
 }
