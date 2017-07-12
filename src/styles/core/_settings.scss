@@ -101,19 +101,19 @@ $font-size: nth(map-get($type,0), 1) !default;
 $line-height: nth(map-get($type,0), 2) !default;
 
 //baseline
-$color: color(darkest) !default;
-$background-color: white !default;
+$color: tn-color(text) !default;
+$background-color: tn-color(inverse) !default;
 
 //positioning
 $margin-bottom: map-get($spacing, reg) !default;
 
 //interactive
-$color--link: color(action) !default;
-$color--link-hover: color(action) !default;
-$color--button: color(dark) !default;
-$background-color--button: color(light) !default;
+$color--link: tn-color(action) !default;
+$color--link-hover: tn-color(action) !default;
+$color--button: tn-color(text,2) !default;
+$background-color--button: tn-color(neutral,1) !default;
 
 //states
-$color--error: color(error) !default;
-$color--warning: color(warning) !default;
-$color--success: color(success) !default;
+$color--error: tn-color(status,error) !default;
+$color--warning: tn-color(status,warning) !default;
+$color--success: tn-color(status,success) !default;

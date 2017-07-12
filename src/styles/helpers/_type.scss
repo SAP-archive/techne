@@ -1,20 +1,21 @@
 @import "../core/settings";
 @import "../core/mixins";
 @import "../core/functions";
+
 //set namespace using function to avoid hardcoding it
 $ns: ns();
 @each $key, $value in $type {
     @if $key > 0 {
-        .#{$ns}is-type-#{$key} {
+        .#{$ns}has-type-#{$key} {
             @include tn-type($key);
         }
     } @else if $key < 0 {
-        .#{$ns}is-type-minus#{$key} {
+        .#{$ns}has-type-minus#{$key} {
             @include tn-type($key);
         }
     } @else {
-        .#{$ns}is-type-base,
-        .#{$ns}is-type-#{$key} {
+        .#{$ns}has-type-base,
+        .#{$ns}has-type-#{$key} {
             @include tn-type($key);
         }
     }
