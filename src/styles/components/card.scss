@@ -28,7 +28,9 @@ $block: ns(card);
     $tn-card-color-link: $color--link !default;
     display: flex;
     max-width: $tn-card-width;
-    border: solid 1px $tn-card-color-border;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $tn-card-color-border;
     background-color: $tn-card-background-color;
     &--vertical {
         width: 370px;
@@ -52,7 +54,7 @@ $block: ns(card);
     &[role="button"] {
         cursor: pointer;
         transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
-        &:hover:not(.is-disabled, [aria-disabled="true"]) {
+        &:hover {
             border-color: $tn-card-color-link;
             background-color: $tn-card-background-color;
             box-shadow: $tn-card-shadow-hover;
@@ -61,7 +63,9 @@ $block: ns(card);
 
     //STATES *******************************************
     &[aria-disabled="true"], &.is-disabled {
-        background-color: $tn-card-background-color-disabled;
+        background-color: $tn-card-background-color-disabled !important;
+        border-color: $tn-card-color-border !important;
+        box-shadow: none !important;
         cursor: default;
         * {
             color: $tn-card-color-disabled !important;
