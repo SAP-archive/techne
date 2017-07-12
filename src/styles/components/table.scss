@@ -21,7 +21,7 @@ $block: ns(table);
     @include reset;
     border-collapse: collapse;
     width: 100%;
-    background-color: color(light);
+    background-color: tn-color(neutral);
 
     //VARIANTS
     //each variant MUST extend base block
@@ -39,7 +39,7 @@ $block: ns(table);
         //each variant MUST extend element block
         &--stripe {
             //@extend .#{$block}__row;
-            background: color(lightest);
+            background: tn-color(neutral,2);
         }
         //STATES
         // &.is-active {

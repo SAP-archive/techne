@@ -23,10 +23,10 @@ $block: ns(button);
 
 .#{$block} {
     //SETTINGS
-    $button-background-color: $background-color--button;
-    $button-background-color-primary: color(accent);
-    $button-background-color-secondary: color(brand);
-    $button-color-inverse: color(lightest);
+    $button-background-color: $background-color--button !default;
+    $button-background-color-primary: tn-color(action) !default;
+    $button-background-color-secondary: tn-color(action,2) !default;
+    $button-color-inverse: tn-color(inverse) !default;
 
     //BASE
     //set all reset and baseline block styles
