@@ -3,17 +3,19 @@
 .docs-code {
     //display: none;
     &__header {
-        @extend .docs-header--h4;
+        
         margin-bottom: 10px;
 
 
     }
-    &__version-tag{
+    &__version-pill{
         font-size: 10px;
-        color: red;
+        color: $white;
         padding-bottom: 2px;
         display: inline-block;
         border-radius: 10px;
+        background-color: $dark-grey;
+
     }
     &__markup {
         white-space: pre-wrap;
