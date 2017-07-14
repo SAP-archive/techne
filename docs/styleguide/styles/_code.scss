@@ -28,7 +28,9 @@
         top: 2px;
         color: $link-blue;
         font-size: 14px;
-
+        background: url('/svg/icon-copy.svg') no-repeat top right;
+        padding-right:20px;
+        cursor: pointer;
     }
 
     &__markup {
