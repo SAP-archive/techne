@@ -14,7 +14,10 @@
   display: -ms-flexbox;
   display: flex;
   max-width: 500px;
-  border: solid 1px #d7d7d7
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d7d7d7;
+  background-color: #fff
 }
 .tn-card--vertical {
   width: 370px;
@@ -41,15 +44,19 @@
   transition: border-color .2s,box-shadow .2s;
   transition: border-color .2s,box-shadow .2s,-webkit-box-shadow .2s
 }
-.tn-card--button:hover:not([class*="--readonly"],.is-disabled,[aria-disabled=true]),
-.tn-card[role=button]:hover:not([class*="--readonly"],.is-disabled,[aria-disabled=true]) {
+.tn-card--button:hover,
+.tn-card[role=button]:hover {
   border-color: #009cdf;
+  background-color: #fff;
   -webkit-box-shadow: 0 0 5px 0 rgba(138,143,161,.4);
   box-shadow: 0 0 5px 0 rgba(138,143,161,.4)
 }
 .tn-card.is-disabled,
 .tn-card[aria-disabled=true] {
-  background-color: #f9fbfc;
+  background-color: #f9fbfc!important;
+  border-color: #d7d7d7!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
   cursor: default
 }
 .tn-card.is-disabled *,
@@ -88,25 +95,26 @@
 }
 .tn-card__header {
   color: #21262c;
-  font-size: 18px;
-  line-height: 1.22222;
+  font-size: 1.125rem;
+  line-height: 1.33333;
   font-weight: 600;
-  margin-bottom: 3px
+  margin-bottom: 1px
 }
 .tn-card__description {
-  font-size: 13px;
-  line-height: 1.46154;
-  margin-bottom: 25px;
+  font-size: .8125rem;
+  line-height: 1.38462;
+  font-weight: 400;
+  margin-bottom: 24px;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis
 }
 .tn-card__status {
-  font-size: 12px;
-  line-height: 1.16667;
-  text-transform: uppercase;
-  font-weight: 700
+  font-size: .75rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  text-transform: uppercase
 }
 .tn-card__actions {
   padding: 40px 20px

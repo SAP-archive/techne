@@ -15,6 +15,8 @@ $block: ns(card);
 .#{$block} {
     @include reset;
     //LOCAL VARS
+    $tn-card-width: 500px !default;
+    $tn-card-media-width: 75px !default;
     $tn-card-color-border: tn-color(neutral,2) !default;
     $tn-card-color-disabled: tn-color(text,3) !default;
     $tn-card-background-color: tn-color(inverse) !default;
@@ -22,9 +24,7 @@ $block: ns(card);
     $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-time-hover: 0.2s !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
-    $tn-card-padding: 40px !default;
-    $tn-card-width: 500px !default;
-    $tn-card-media-width: 75px !default;
+    $tn-card-padding: tn-space(l,true) !default;
     $tn-card-color-link: $color--link !default;
     display: flex;
     max-width: $tn-card-width;
@@ -72,7 +72,6 @@ $block: ns(card);
         }
     }
 
-
     //ELEMENTS
     &__media {
         background-repeat: no-repeat;
@@ -110,7 +109,7 @@ $block: ns(card);
     }
     &__description {
         @include tn-type(-2);
-        margin-bottom: 25px;
+        margin-bottom: tn-space(reg);
         white-space: nowrap;
         max-width: 100%;
         overflow: hidden;

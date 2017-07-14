@@ -12,6 +12,37 @@
 }
 
 
+//space helper
+@function tn-modify-space_($size) {
+    $_size: $size;
+    @if $tn-space-modify == compact {
+        $_size: $_size / 2;
+    }
+    @return $_size;
+}
+
+//accepts size key or increment, modify enables on tn-space-modifier
+@function tn-space($size: reg, $modifiable: false) {
+    $_map: $tn-spacing;
+    //set base
+    $_size: map-get($_map, base);
+    @if type-of($size) == number {
+        //multiply
+        $_size: $_size * $size;
+    } @else {
+        @if map-has-key($_map, $size) {
+            $_size: map-get($_map, $size);
+        } @else {
+            @warn "Invalid $size of `#{$size}`. Valid $size values are #{map-keys($_map)}. Returning default `#{$_size}`.";
+        }
+    }
+    @if $modifiable {
+        $_size: tn-modify-space_($_size);
+    }
+    @return $_size;
+}
+
+
 @function tn-color($type: text, $shade: 1) {
     $_map: $tn-colors;
     //check type

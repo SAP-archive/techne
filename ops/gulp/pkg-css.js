@@ -19,6 +19,7 @@ const task = (cb) => {
 
     let prefix = 'techne';
     let techneCss = `${paths.src}/all.scss`;//environment.production ? `${paths.src}/*.scss` : `${paths.src}/all.scss`;
+    let helpersCss = `${paths.src}/helpers.scss`;
     if (environment.debug) {
         techneCss = `${paths.src}/debug.scss`;
     }
@@ -28,7 +29,7 @@ const task = (cb) => {
       return file.path.includes('all') ;
     }
 
-    return gulp.src([techneCss,...ignoreGlobs])
+    return gulp.src([techneCss,helpersCss,...ignoreGlobs])
         .pipe(gulpif(environment.development, sourcemaps.init()))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulpif(environment.production, autoprefixer({
