@@ -14,16 +14,32 @@ $(document).ready(function(){
             $(this).attr('aria-expanded', 'false');
         }
     });
-
-    // Clipboard JS
+ 
     hljs.initHighlightingOnLoad();
+    
+    // Clipboard JS
     new Clipboard('.docs-code__copy-code');
 
-    var copyLink = $('.docs-code__copy-code');
+    var copyLink = $('.docs-code__copy-code'),
+        expandLink = $('.docs-code__lines--expand');
     
     copyLink.on('click', function(){
         $(this).siblings('.docs-code__notice').fadeIn('fast').delay(1000).fadeOut('fast');
     });
+
+    expandLink.on('click', function(){ 
+        $(this).closest('.docs-code').find('.docs-code__markup').toggleClass('docs-code__auto-height');
+        console.log( $(this).closest('.docs-code').find('.docs-code__markup') );
+    });
+
+    $('.docs-code').each(function(){
+        var _this = $(this);
+        var codeCount = _this.find('code').html().split(/\n/).length - 3;
+        _this.find('.docs-code__lines--count').text(codeCount);
+
+    });
+
+
 
 });
 

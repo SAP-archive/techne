@@ -45,13 +45,22 @@
         cursor: pointer;
     }
 
-    &__markup {
+    &__markup { 
         white-space: pre-wrap;
         font-family: monospace;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
         position: relative;
         display: block;
+        background: $white;
+        // background-image: linear-gradient(transparent 50%,YELLOW 50%);
+        background-size: 16px 16px;
+        background-origin: content-box;
+        max-height: 50px;
+        overflow: hidden;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
 
         &::before {
             $grid-unit: 16px;
@@ -63,10 +72,16 @@
             min-height: 100%;
             min-width: 100%;
             opacity: 0.5;
-            background-size: 100% $grid-unit;
-            background-image: linear-gradient(to bottom, red 0%, transparent percentage(1px / $grid-unit), transparent 100%);
+            // background-size: 100% $grid-unit;
+            // background-image: linear-gradient(to bottom, red 0%, transparent percentage(1px / $grid-unit), transparent 100%);
 
         }
+    }
+
+    &__auto-height{
+        max-height: none;
+        transition: max-height 0.25s ease-in;
+
     }
 
     &__lines { 
@@ -76,6 +91,7 @@
 
         &--expand{
             color: $link-blue;
+            cursor: pointer;
         }
 
         &--chevron{
