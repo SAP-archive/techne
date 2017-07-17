@@ -67,13 +67,9 @@ https://github.com/SAP/techne
 {% endif %}
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="{{ linkpath }}js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-      new Clipboard('.docs-code__copy-code');
-    </script>
+    <script src="{{ linkpath }}js/techne-styleguide{% if env == 'production' %}.min{% endif %}.js"></script>
 
     {% block js %}
     {% endblock %}

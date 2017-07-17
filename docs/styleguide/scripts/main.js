@@ -15,6 +15,16 @@ $(document).ready(function(){
         }
     });
 
+    // Clipboard JS
+    hljs.initHighlightingOnLoad();
+    new Clipboard('.docs-code__copy-code');
+
+    var copyLink = $('.docs-code__copy-code');
+    
+    copyLink.on('click', function(){
+        $(this).siblings('.docs-code__notice').fadeIn('fast').delay(1000).fadeOut('fast');
+    });
+
 });
 
 var previousScroll = 0,
@@ -32,3 +42,4 @@ $(window).scroll(function () {
     }
     previousScroll = currentScroll;
 });
+
