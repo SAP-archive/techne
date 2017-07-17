@@ -8,7 +8,7 @@
         position: relative;
     }
 
-    &__version-pill{
+    &__version-pill {
         font-size: 10px;
         font-weight: bold;
         color: $white;
@@ -22,7 +22,7 @@
 
     }
 
-    &__notice{
+    &__notice {
         position: absolute;
         right: 25px;
         top: -25px;
@@ -34,7 +34,7 @@
         display: none;
     }
 
-    &__copy-code{
+    &__copy-code {
         position: absolute;
         right: 0;
         top: 2px;
@@ -68,6 +68,22 @@
 
         }
     }
+
+    &__lines { 
+        display: block;
+        text-align: right;
+        font-size: 14px;
+
+        &--expand{
+            color: $link-blue;
+        }
+
+        &--chevron{
+            @include chevron (.6rem, .6rem, .09rem, bottom);
+        }
+
+    }
+
 
     pre{
         white-space:pre-wrap;

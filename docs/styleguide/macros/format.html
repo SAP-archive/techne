@@ -11,6 +11,13 @@
         <span class="docs-code__copy-code" data-clipboard-text="{{ html | e | trim }}">Copy Source Code </span>
     </h1>
     <pre><code class="html">{{ html | e | trim }}</code></pre>
+    <span class="docs-code__lines">
+        ... xx more lines of code | 
+        <span class="docs-code__lines--expand">
+            Show All 
+            <span class="docs-code__lines--chevron"></span>
+        </span>
+    </span>
 </aside>
 {% endmacro %}
 
