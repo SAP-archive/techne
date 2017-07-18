@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'sections';
 @import 'flow'; //layout
+@import 'headers'; //layout
 
 @import 'app';
 @import 'page';
@@ -14,3 +15,4 @@
 p, ul {
     margin-bottom: 20px;
 }
+

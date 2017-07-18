@@ -11,28 +11,24 @@ let environment = require('../lib/environment');
 
 const paths = {
 	src: './src/styles/components',
-	dest: './dist/css/components'
+	dest: './dist/components'
 }
 
 const task = (cb) => {
 
     //compile individual component files
-    let prefix = 'techne';
+    var componentsList = [`${paths.src}/card.scss`]
 
-    return gulp.src(`${paths.src}/*`)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(environment.production, autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: true
-    })))
-    .pipe(gulpif(environment.production, cleanCSS({
-        format: 'beautify'
-    })))
-    .pipe(rename({
-        prefix: `${prefix}-`
-    }))
-    .pipe(gulp.dest(paths.dest))
-
+    return gulp.src(componentsList)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: true
+        }))
+        .pipe(cleanCSS({
+            format: 'beautify'
+        }))
+        .pipe(gulp.dest(paths.dest))
 }
 
 gulp.task('pkg-css-components', task);

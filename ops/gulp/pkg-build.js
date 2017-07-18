@@ -5,9 +5,9 @@ let environment = require('../lib/environment');
 const task = (cb) => {
 
     if (environment.production) {
-        gulpSequence('pkg-clean', 'pkg-css', 'pkg-icons', 'pkg-css-components', 'pkg-css-minify', cb)
+        gulpSequence('pkg-clean', 'pkg-css', 'pkg-css-components', 'pkg-css-minify', cb)
     } else {
-        gulpSequence('pkg-clean', 'pkg-css', 'pkg-icons', 'pkg-css-components', cb)
+        gulpSequence('pkg-clean', 'pkg-css', 'pkg-icons', cb)
     }
 
 }

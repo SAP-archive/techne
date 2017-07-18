@@ -1,5 +1,60 @@
 {
     "title": "Styles",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "type": {
+        "-3": [ 12, 16, "body", "bold", "uppercase" ],
+        "-2": [ 13, 18, "body", "reg", "none" ],
+        "-1": [ 14, 18, "body", "reg", "none" ],
+        "0": [ 16, 22, "body", "reg", "none" ],
+        "1": [ 18, 24, "body", "semi", "none" ],
+        "2": [ 20, 26, "body", "semi", "none" ],
+        "3": [ 26, 32, "header", "semi", "none" ],
+        "4":  [ 35, 42, "header", "bold", "none" ],
+        "5": [ 45, 50, "header", "semi", "none" ]
+    },
+    "colors": {
+        "brand": {
+        	"1": "#006fbb",
+        	"2": "#27394f"
+        },
+        "text": {
+        	"1": "#21262c",
+        	"2": "#7f90a4",
+        	"3": "#63758b"
+        },
+        "inverse": {
+        	"1": "#ffffff",
+        	"2": "#f6f8f9",
+        	"3": "#eef1f3"
+        },
+        "action": {
+        	"1": "#009cdf",
+        	"2": "#00a5ec",
+        	"3": "#0093d1"
+        },
+        "neutral": {
+        	"1": "#f9fbfc",
+        	"2": "#d7d7d7",
+        	"3": "#ccdaeb"
+        },
+        "status": {
+        	"success": "#61bf33",
+        	"warning": "#e96b1a",
+        	"error": "#df1919"
+        }
+    },
+    "spacing": {
+        "base": 4,
+        "sizes": [
+            [ "xs", 2 ],
+            [ "s", 4 ],
+            [ "reg", 6 ],
+            [ "m", 8 ],
+            [ "l", 10 ],
+            [ "xl", 25 ],
+            [ "xxl", 37 ]
+        ]
+
+    }
 
 }

@@ -1,0 +1,58 @@
+<h1>Colors</h1>
+
+<h2>Group</h2>
+{% for color, shades in page.colors %}
+
+<h3>{{ color }}</h3>
+
+<div style="display: flex;">
+    {% for shade, hex in shades %}
+
+        <div style="width: 200px; border: solid 1px black;">
+            <div class="tn-has-background-color-{{ color }}-{{ shade }}" style="height: 100px;"></div>
+            <p>{{ shade }} — {{ hex }}</p>
+        </div>
+
+    {% endfor %}
+</div>
+
+{% endfor %}
+
+<h2>Function</h2>
+<h3><code>@function tn-color($type: text, $shade: 1)</code></h3>
+
+<p>Example:<br>
+<pre>
+.foo {
+    color: tn-color(action,2);
+    background-color: tn-color(neutral);
+}
+</pre>
+</p>
+
+
+
+
+
+<h2>Helpers</h2>
+<p>These classes are also available.</p>
+
+<h3>Text</h3>
+{% for color, shades in page.colors %}
+    {% for shade, hex in shades %}
+    <p>
+        <code>.tn-has-color-{{ color }}-{{ shade }}{% if shade == 1 %}, .tn-has-color-{{ color }}{% endif %}</code>
+        <br>
+    </p>
+    {% endfor %}
+{% endfor %}
+
+<h3>Backgrounds</h3>
+{% for color, shades in page.colors %}
+    {% for shade, hex in shades %}
+    <p>
+        <code>.tn-has-background-color-{{ color }}-{{ shade }}{% if shade == 1 %}, .tn-has-background-color-{{ color }}{% endif %}</code>
+        <br>
+    </p>
+    {% endfor %}
+{% endfor %}
