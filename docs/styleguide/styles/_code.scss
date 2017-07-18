@@ -53,18 +53,13 @@
         position: relative;
         display: block;
         background: $white;
-        // background-image: linear-gradient(transparent 50%,YELLOW 50%);
-        background-size: 16px 16px;
-        background-origin: content-box;
         max-height: 50px;
         overflow: hidden;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
-
+        background-image: repeating-linear-gradient(180deg, $code-strip-dark, $code-strip-dark 17px, $code-strip-light 17px, $code-strip-light 32px);
 
         &::before {
-            $grid-unit: 16px;
-
             content: '';
             position: absolute;
             display: block;
@@ -72,9 +67,6 @@
             min-height: 100%;
             min-width: 100%;
             opacity: 0.5;
-            // background-size: 100% $grid-unit;
-            // background-image: linear-gradient(to bottom, red 0%, transparent percentage(1px / $grid-unit), transparent 100%);
-
         }
     }
 
