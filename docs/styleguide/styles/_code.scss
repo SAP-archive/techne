@@ -19,7 +19,6 @@
         margin-left: 10px;
         position: absolute;
         top: 2px;
-
     }
 
     &__notice {
@@ -45,6 +44,19 @@
         cursor: pointer;
     }
 
+    &__tips{
+        color: $dark-grey;
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    &__css-class{
+        background: $css-class-bg;
+        color: $css-class-color;
+        display: inline-block;
+        padding: 3px 5px;
+        font-style: normal;
+    }
     &__markup { 
         white-space: pre-wrap;
         font-family: monospace;
@@ -58,6 +70,8 @@
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
         background-image: repeating-linear-gradient(180deg, $code-strip-dark, $code-strip-dark 17px, $code-strip-light 17px, $code-strip-light 32px);
+        margin: 20px -40px;
+        padding: 0 40px;
 
         &::before {
             content: '';
@@ -73,7 +87,6 @@
     &__auto-height{
         max-height: none;
         transition: max-height 0.25s ease-in;
-
     }
 
     &__lines { 
@@ -97,7 +110,6 @@
                 top:0.56rem;
             }
         }
-
     }
 
 
