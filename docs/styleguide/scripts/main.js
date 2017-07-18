@@ -30,6 +30,12 @@ $(document).ready(function(){
     expandLink.on('click', function(){ 
         $(this).closest('.docs-code').find('.docs-code__markup').toggleClass('docs-code__auto-height');
         console.log( $(this).closest('.docs-code').find('.docs-code__markup') );
+
+        $(this).html(function(i, v){
+            return v === 'Show Less <span class="docs-code__lines--chevron-up"></span>' ? 'Show All <span class="docs-code__lines--chevron-down"></span>' : 'Show Less <span class="docs-code__lines--chevron-up"></span>'
+        });
+
+        $('.docs-code__lines--label').toggle();
     });
 
     $('.docs-code').each(function(){
@@ -38,8 +44,6 @@ $(document).ready(function(){
         _this.find('.docs-code__lines--count').text(codeCount);
 
     });
-
-
 
 });
 

@@ -94,8 +94,16 @@
             cursor: pointer;
         }
 
-        &--chevron{
+        &--chevron-down{
             @include chevron (.6rem, .6rem, .09rem, bottom);
+        }
+
+        &--chevron-up{
+            @include chevron (.6rem, .6rem, .09rem, top);
+
+            &::before{
+                top:0.56rem;
+            }
         }
 
     }
