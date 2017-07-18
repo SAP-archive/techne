@@ -21,13 +21,13 @@ const task = (cb) => {
 
     return gulp.src(componentsList)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulpif(autoprefixer({
+        .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: true
-        })))
-        .pipe(gulpif(cleanCSS({
+        }))
+        .pipe(cleanCSS({
             format: 'beautify'
-        })))
+        }))
         .pipe(gulp.dest(paths.dest))
 }
 
