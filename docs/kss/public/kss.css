@@ -1899,6 +1899,11 @@ article section.LocalizationExample .kss-description h3 {
 .Icons.kss-section.kss-componnet-page .msgdanger-wrapper,
 .Icons.kss-section.kss-componnet-page .msginfo-wrapper,
 .Icons.kss-section.kss-componnet-page .msgsuccess-wrapper,
-.Icons.kss-section.kss-componnet-page .msgwarning-wrapper {
+.Icons.kss-section.kss-componnet-page .msgwarning-wrapper,
+.Icons.kss-section.kss-componnet-page .commerce-wrapper,
+.Icons.kss-section.kss-componnet-page .commercelg-wrapper,
+.Icons.kss-section.kss-componnet-page .unpowered-wrapper,
+.Icons.kss-section.kss-componnet-page .optionssm-wrapper,
+.Icons.kss-section.kss-componnet-page .globe-wrapper {
   display: none;
 }
