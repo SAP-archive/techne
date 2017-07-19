@@ -189,6 +189,7 @@
         }
     }
     &__listitem {
+        font-family: $font-family-dosis !important;
         &[aria-haspopup] {
             position: relative;
         }
@@ -346,8 +347,8 @@
 
 .mobile-left-side-navigation{
     display: none;
+    position: fixed;
     background: $dark-blue-700 none repeat scroll 0 0;
-    position: absolute;
     z-index: 901;
     width: 250px;
     left: 0;

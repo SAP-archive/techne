@@ -3,5 +3,45 @@
     "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
     "components": [
     	"button", "table", "card", "icon"
-    ]
+    ],
+    "sidebar": {
+        "components": [
+            {
+                "title": "Actions",
+                "items": [
+                    {
+                        "title": "Buttons",
+                        "url": "components/buttons.html",
+                        "id": "buttons"
+                    }
+                ]
+            },
+            {
+                "title": "Collections",
+                "items": [
+                    {
+                        "title": "Cards",
+                        "url": "components/cards.html",
+                        "id": "cards"
+                    },
+                    {
+                        "title": "Tables",
+                        "url": "components/tables.html",
+                        "id": "tables"
+                    }
+                ]
+            },
+            {
+                "title": "Indicators",
+                "items": [
+                    {
+                        "title": "Icons",
+                        "url": "components/icons.html",
+                        "id": "icons"
+                    }
+
+                ]
+            }
+        ]
+    }
 }

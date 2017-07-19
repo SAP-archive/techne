@@ -1,5 +1,37 @@
 {
     "title": "Guidelines",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
-
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "sidebar": {
+        "components": [
+            {
+                "items": [
+                    {
+                        "title": "Spirit & Vision",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Design Principles",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Visual System",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Tone & Voice",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Accessibility",
+                        "url": "",
+                        "id": ""
+                    }
+                ]
+            }
+        ]
+    }
 }

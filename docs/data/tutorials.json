@@ -1,5 +1,47 @@
 {
     "title": "Tutorials",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
-
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "sidebar": {
+        "components": [
+            {
+                "items": [
+                    {
+                        "title": "Cards",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Details 1",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Details 2",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Empty Page",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Product Grid",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Table",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Tree",
+                        "url": "",
+                        "id": ""
+                    }
+                ]
+            }
+        ]
+    }
 }

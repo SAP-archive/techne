@@ -1,9 +1,7 @@
 {% extends 'master.html' %}
 
 {% block sidebar %}
-    {% if page.section === 'components' or page.id === 'components' %}
         {% include "app_sidebar_components.html" %}
-    {% endif %}
 {% endblock %}
 
 {% block title %}
