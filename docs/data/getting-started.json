@@ -1,5 +1,37 @@
 {
     "title": "Getting Started",
-    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate."
-
+    "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "sidebar": {
+        "components": [
+            {
+                "items": [
+                    {
+                        "title": "Getting Started",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Starter Pages",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Design Resources",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Contribute",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "url": "",
+                        "id": ""
+                    }
+                ]
+            }
+        ]
+    }
 }

@@ -92,45 +92,5 @@
     		  "id": "tutorials"
     		}
         ]
-    },
-    "sidebar": {
-        "components": [
-      		{
-      			"title": "Actions",
-                "items": [
-                    {
-                        "title": "Buttons",
-                        "url": "components/buttons.html",
-                        "id": "buttons"
-                    }
-                ]
-      		},
-            {
-      			"title": "Collections",
-                "items": [
-                    {
-                        "title": "Cards",
-                        "url": "components/cards.html",
-                        "id": "cards"
-                    },
-                    {
-                        "title": "Tables",
-                        "url": "components/tables.html",
-                        "id": "tables"
-                    }
-                ]
-            },
-            {
-                "title": "Indicators",
-                "items": [
-                    {
-                        "title": "Icons",
-                        "url": "components/icons.html",
-                        "id": "icons"
-                    }
-
-                ]
-            }
-        ]
     }
 }

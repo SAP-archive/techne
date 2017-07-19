@@ -4,9 +4,9 @@
     <nav class="docs-secondary-nav">
         <ul id="main-nav" class="docs-secondary-nav__list" role="navigation">
 
-            <li class="docs-secondary-nav__header">{{page.title }}</li>
+            <li class="docs-secondary-nav__header">{{page.title}}</li>
 
-            {% set menu = app.sidebar.components %}
+            {% set menu = page.sidebar.components %}
             {% for item in menu %}
             <li class="docs-secondary-nav__listitem">
                 <span class="docs-secondary-nav__listitem-header">

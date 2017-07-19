@@ -1,6 +1,70 @@
 {
     "title": "Styles",
     "intro": "Sed pretium massa sed ipsum rhoncus venenatis. Suspendisse ultricies lectus at nisl rutrum vulputate.",
+    "sidebar": {
+        "components": [
+            {
+                "title": "Colors",
+                "items": [
+                    {
+                      "title": "Group",
+                      "url": "",
+                      "id": ""
+                    },
+                    {
+                      "title": "Function",
+                      "url": "",
+                      "id": ""
+                    },
+                    {
+                      "title": "Helpers",
+                      "url": "",
+                      "id": "tables"
+                    }
+                ]
+            },
+            {
+                "title": "Type",
+                "items": [
+                    {
+                        "title": "Sizes",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Mixins",
+                        "url": "",
+                        "id": ""
+                    },
+                    {
+                        "title": "Helpers",
+                        "url": "",
+                        "id": "tables"
+                    }
+                ]
+            },
+            {
+                "title": "Spacing",
+                "items": [
+                    {
+                      "title": "Sizes",
+                      "url": "",
+                      "id": ""
+                    },
+                    {
+                      "title": "Function",
+                      "url": "",
+                      "id": ""
+                    },
+                    {
+                      "title": "Function",
+                      "url": "",
+                      "id": ""
+                    }
+                ]
+            }
+        ]
+    },
     "type": {
         "-3": [ 12, 16, "body", "bold", "uppercase" ],
         "-2": [ 13, 18, "body", "reg", "none" ],
