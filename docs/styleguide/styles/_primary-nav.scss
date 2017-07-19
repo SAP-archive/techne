@@ -189,6 +189,7 @@
         }
     }
     &__listitem {
+        font-family: $font-family-dosis !important;
         &[aria-haspopup] {
             position: relative;
         }
