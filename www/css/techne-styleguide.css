@@ -349,23 +349,43 @@
   display: flex;
   min-height: calc(100vh -  100px);
   width: 100%;
+  background-color: #27394f;
+}
+
+.docs-app__main .docs-page--index {
+  margin-left: 0;
 }
 
 .docs-app__sidebar {
   width: 264px;
-  padding: 20px;
   color: #fff;
   background-color: #27394f;
   font-family: "Dosis", sans-serif;
+  position: fixed;
+  height: 100%;
 }
 
 .docs-app__sidebar a {
   color: currentColor;
 }
 
+@media (max-width: 740px) and (min-width: 0) {
+  .docs-app__sidebar {
+    display: none;
+  }
+}
+
 .docs-app__page {
   flex: 1;
   padding-bottom: 100px;
+  margin-left: 264px;
+  background-color: #fff;
+}
+
+@media (max-width: 740px) and (min-width: 0) {
+  .docs-app__page {
+    margin-left: 0;
+  }
 }
 
 .docs-page__header {
@@ -609,6 +629,10 @@
   color: #fff;
 }
 
+.docs-primary-nav__listitem, .yaas-signature-nav__listitem {
+  font-family: "Dosis", sans-serif !important;
+}
+
 .docs-primary-nav__listitem[aria-haspopup], .yaas-signature-nav__listitem[aria-haspopup] {
   position: relative;
 }
@@ -773,8 +797,8 @@
 
 .mobile-left-side-navigation {
   display: none;
+  position: fixed;
   background: #27394f none repeat scroll 0 0;
-  position: absolute;
   z-index: 901;
   width: 250px;
   left: 0;
@@ -810,8 +834,52 @@
   display: block;
 }
 
+.docs-secondary-nav__header {
+  color: #8a8fa1;
+  background: #1e2c3b;
+  padding: 24px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+
 .docs-secondary-nav__list [aria-selected="true"] {
   font-weight: bold;
+}
+
+.docs-secondary-nav__listitem {
+  margin-bottom: 0;
+}
+
+.docs-secondary-nav__listitem-header {
+  font-size: 20px;
+  color: #8a8fa1;
+  padding: 12px 12px 0 24px;
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.docs-secondary-nav__listitem > ul {
+  padding-left: 12px;
+}
+
+.docs-secondary-nav__listitem > ul > li {
+  margin-bottom: 0;
+}
+
+.docs-secondary-nav__listitem > ul > li > a {
+  color: #dbe3eb;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding: 2px 24px 2px 12px;
+  margin: 15px 30px 15px 12px;
+}
+
+.docs-secondary-nav__listitem > ul > li > a:hover {
+  color: #0486e0;
 }
 
 .docs-secondary-nav__listlink {
