@@ -3,6 +3,7 @@
 @import 'sections';
 @import 'flow'; //layout
 @import 'headers'; //layout
+@import 'chevron'; 
 
 @import 'app';
 @import 'page';
@@ -11,6 +12,7 @@
 @import 'secondary-nav';
 @import 'code';
 @import 'footer';
+@import 'highlightjs-techne'; 
 
 p, ul {
     margin-bottom: 20px;

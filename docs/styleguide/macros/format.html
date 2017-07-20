@@ -5,8 +5,20 @@
 {% macro example(html) %}
 <aside class="docs-code">
     <h1 class="docs-code__header">
-        Code:
+        Code 
+        <span class="docs-code__version-pill">Since V0.0.0</span>
+        <span class="docs-code__notice">Copied to Clipboard!</span>
+        <span class="docs-code__copy-code" data-clipboard-text="{{ html | e | trim }}">Copy Source Code </span>
     </h1>
-    <code class="docs-code__markup">{{ html | e | trim }}</code>
+    <span class="docs-code__tips">
+        Use the extension   <span class="docs-code__css-class">.dataCards-singleColumn</span>    to enable Single Column card layouts.
+    </span>
+    <pre class="docs-code__markup"><code class="html">{{ html | e | trim }}</code></pre>
+    <span class="docs-code__lines">
+        <span class="docs-code__lines--label">... <span class="docs-code__lines--count"></span> more lines of code | </span>
+        <span class="docs-code__lines--expand">Show All <span class="docs-code__lines--chevron-down"></span></span>
+    </span>
 </aside>
 {% endmacro %}
+
+
