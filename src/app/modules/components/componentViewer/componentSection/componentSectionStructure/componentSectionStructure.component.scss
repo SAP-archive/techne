@@ -1,0 +1,35 @@
+
+.element-level { 
+    display: block;
+    margin-bottom: 4px;
+}
+
+.element-name {
+    display: inline-block;
+    border: 1px solid silver;
+    margin-right: 6px; 
+
+    .element-identifier { 
+        display: inline-block;
+        padding: 2px 4px;
+     }
+
+    .element-tags {
+        display: block;
+        padding: 2px;
+
+        .element-tag {
+            padding: 2px 6px;
+            font-size: .6em;
+            text-transform: uppercase;
+            color: white;
+            background: silver;
+            margin-right: 2px;
+            letter-spacing: 1px;
+
+            &:last-child { 
+                margin-right: 0;
+            }
+        }
+    }
+}

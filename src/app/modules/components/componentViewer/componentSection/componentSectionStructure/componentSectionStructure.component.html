@@ -1,0 +1,17 @@
+<div class="tn-section-overview">
+    <h2>
+        Structure
+        <a pageScroll pageScrollAdjustHash="true" [href]="'#structure'">#</a>
+    </h2>
+</div>
+<div class="tn-section-samples">
+    <div *ngFor="let level of structure; let i = index" [ngStyle]="{ 'margin-left':  i * 24 + 'px' }" class="element-level">
+        <a *ngFor="let element of level" class="element-name">
+            <span *ngIf="element.className" class="element-identifier">.{{ element.className }}</span>
+            <span *ngIf="element.parameter" class="element-identifier">{{ element.parameter }}</span>
+            <span class="element-tags">
+                <span *ngFor="let tag of element.tags" class="element-tag">{{ tag }}</span>
+            </span>
+        </a>
+    </div>
+</div>

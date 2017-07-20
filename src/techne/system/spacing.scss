@@ -4,8 +4,8 @@
 body.tn-app { margin: 0; }
 
 $tn-base-spacings: (
-    normal: 10px,
-    compact: 5px
+    normal: 8px,
+    compact: 4px
 );
 
 @function tn-get-spacing($spacing: "normal", $multiple: 1){

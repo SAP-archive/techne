@@ -2,4 +2,5 @@
 <div [ngSwitch]="section.type">
     <component-section-overview [section]="section" *ngSwitchCase="'title-text'" class="tn-top-section"></component-section-overview>
     <component-section-sample [section]="section" [component]="component" *ngSwitchCase="'sample'" [ngClass]="{ 'tn-section-vertical': section.wide }" class="tn-section"></component-section-sample>
+    <component-section-structure [section]="section" [component]="component" *ngSwitchCase="'structure'" class="tn-section"></component-section-structure>
 </div>
