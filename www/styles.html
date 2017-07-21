@@ -314,15 +314,15 @@ https://github.com/SAP/techne
                 <ul>
                 
                     <li>
-                        <a href="" aria-selected="false">Sizes</a>
+                        <a href="#spacing" aria-selected="false">Sizes</a>
                     </li>
                 
                     <li>
-                        <a href="" aria-selected="false">Function</a>
+                        <a href="#spacing-function" aria-selected="false">Function</a>
                     </li>
                 
                     <li>
-                        <a href="" aria-selected="false">Function</a>
+                        <a href="#spacing-helpers" aria-selected="false">Helpers</a>
                     </li>
                 
                 </ul>
@@ -347,7 +347,7 @@ https://github.com/SAP/techne
 
             
 
-<section class="docs-section">
+<section class="docs-section" id="colors">
 
 <h1>Colors</h1>
 
@@ -743,7 +743,7 @@ https://github.com/SAP/techne
 
 </section>
 <hr>
-<section class="docs-section">
+<section class="docs-section" id="type">
 
 
 
@@ -950,52 +950,48 @@ Mofify the font-weight independently.
 
 </section>
 <hr>
-<section class="docs-section">
+<section class="docs-section" id="spacing">
 
 
 
 <h1>Spacing</h1>
 
-<h2>Sizes</h2>
+<h2 id="spacing-sizes">Sizes</h2>
 
-<p>All heights and widths are calulated from a base unit.</p>
+<p>All heights and widths are calculated from a base unit.</p>
 
 
 
 <p><strong>4px | base</strong></p>
-<div style="height: 4px; background-color: pink;" class="has-background-color-text"></div>
+<div style="height: 4px;" class="tn-has-background-color-neutral-3"></div>
 
 
-    
+    <br>
     <p><strong>8px | xs</strong></p>
-    <div style="height: 8px; background-color: pink;" class="has-background-color-text"></div>
+    <div style="height: 8px;" class="tn-has-background-color-neutral-3"></div>
 
-    
-    <p><strong>16px | s</strong></p>
-    <div style="height: 16px; background-color: pink;" class="has-background-color-text"></div>
+    <br>
+    <p><strong>12px | s</strong></p>
+    <div style="height: 12px;" class="tn-has-background-color-neutral-3"></div>
 
-    
-    <p><strong>24px | reg</strong></p>
-    <div style="height: 24px; background-color: pink;" class="has-background-color-text"></div>
+    <br>
+    <p><strong>20px | reg</strong></p>
+    <div style="height: 20px;" class="tn-has-background-color-neutral-3"></div>
 
-    
-    <p><strong>32px | m</strong></p>
-    <div style="height: 32px; background-color: pink;" class="has-background-color-text"></div>
+    <br>
+    <p><strong>40px | m</strong></p>
+    <div style="height: 40px;" class="tn-has-background-color-neutral-3"></div>
 
-    
-    <p><strong>40px | l</strong></p>
-    <div style="height: 40px; background-color: pink;" class="has-background-color-text"></div>
+    <br>
+    <p><strong>100px | l</strong></p>
+    <div style="height: 100px;" class="tn-has-background-color-neutral-3"></div>
 
-    
-    <p><strong>100px | xl</strong></p>
-    <div style="height: 100px; background-color: pink;" class="has-background-color-text"></div>
-
-    
-    <p><strong>148px | xxl</strong></p>
-    <div style="height: 148px; background-color: pink;" class="has-background-color-text"></div>
+    <br>
+    <p><strong>148px | xl</strong></p>
+    <div style="height: 148px;" class="tn-has-background-color-neutral-3"></div>
 
 
-<h2>Function</h2>
+<h2 id="spacing-function">Function</h2>
 
 <h3><code>tn-space($size, $modifiable)</code></h3>
 <p>Accepts either keyword or increments for size. The second argument indicates whether the value is modifiable based on the <code>$tn-space-modify</code> feature flag.</p>
@@ -1003,7 +999,7 @@ Mofify the font-weight independently.
 <pre>
 .foo {
     height: tn-space(20); //80px
-    padding: tn-space(l); //40px
+    padding: tn-space(m); //40px
 }
 </pre>
 </p>
@@ -1013,7 +1009,7 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
 <p>Example:<br>
 <pre>
 .bar {
-    padding: tn-space(l,true); //20px
+    padding: tn-space(m,true); //20px
 }
 </pre>
 <table>
@@ -1024,7 +1020,7 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
     </tr>
     <tr>
         <td>$size</td>
-        <td>-base,xs,s,reg (default),m,l,xl,xxl</td>
+        <td>base,xs,s,reg (default),m,l,xl</td>
     </tr>
     <tr>
         <td>$modifiable</td>
@@ -1033,8 +1029,8 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
 </table>
 
 
-<h2>Helpers</h2>
-<p>These classes are also available for overridng margins and padding. Use sparingly.</p>
+<h2 id="spacing-helpers">Helpers</h2>
+<p>These classes are also available for overriding margins and padding. Use sparingly.</p>
 
 
 <p><code>
@@ -1131,20 +1127,6 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
         , .has-margin-bottom-xl, .has-padding-bottom-xl
     
         , .has-margin-left-xl, .has-padding-left-xl
-    
-    </code></p>
-
-    
-    <p><code>
-    
-    
-         .has-margin-top-xxl, .has-padding-top-xxl
-    
-        , .has-margin-right-xxl, .has-padding-right-xxl
-    
-        , .has-margin-bottom-xxl, .has-padding-bottom-xxl
-    
-        , .has-margin-left-xxl, .has-padding-left-xxl
     
     </code></p>
 
