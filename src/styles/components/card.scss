@@ -32,6 +32,7 @@ $block: ns(card);
     border-width: 1px;
     border-color: $tn-card-color-border;
     background-color: $tn-card-background-color;
+    //MODIFICATIONS
     &--vertical {
         width: 370px;
         display: block;
@@ -41,12 +42,28 @@ $block: ns(card);
             margin: 0;
         }
     }
-    //MODIFICATIONS
     &--button,
     &[role="button"] {
         cursor: default;
         .#{$block}__header {
             color: $tn-card-color-link;
+        }
+    }
+    &--compact {
+        .#{$block}__media {
+            margin: $tn-card-padding/2 0 $tn-card-padding/2 $tn-card-padding/2;
+            &--fill {
+                margin: 0;
+                width: $tn-card-media-width + $tn-card-padding*3/2;
+            }
+        }
+        .#{$block}__content {
+            padding: $tn-card-padding/2 $tn-card-padding/2;
+        }
+        @at-root &.#{$block}--vertical {
+            .#{$block}__media {
+                margin: 0;
+            }
         }
     }
     //EFFECTS *******************************************
@@ -97,7 +114,7 @@ $block: ns(card);
         }
     }
     &__content {
-        padding: ($tn-card-padding - 5px) $tn-card-padding;
+        padding: ($tn-card-padding) $tn-card-padding;
         max-width: 100%;
         flex: 1;
         overflow: hidden;
