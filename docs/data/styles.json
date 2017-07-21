@@ -48,17 +48,17 @@
                 "items": [
                     {
                       "title": "Sizes",
-                      "url": "",
+                      "url": "#spacing",
                       "id": ""
                     },
                     {
                       "title": "Function",
-                      "url": "",
+                      "url": "#spacing-function",
                       "id": ""
                     },
                     {
-                      "title": "Function",
-                      "url": "",
+                      "title": "Helpers",
+                      "url": "#spacing-helpers",
                       "id": ""
                     }
                 ]
@@ -111,12 +111,11 @@
         "base": 4,
         "sizes": [
             [ "xs", 2 ],
-            [ "s", 4 ],
-            [ "reg", 6 ],
-            [ "m", 8 ],
-            [ "l", 10 ],
-            [ "xl", 25 ],
-            [ "xxl", 37 ]
+            [ "s", 3 ],
+            [ "reg", 5 ],
+            [ "m", 10 ],
+            [ "l", 25 ],
+            [ "xl", 37 ]
         ]
 
     }

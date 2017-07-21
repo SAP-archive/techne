@@ -2,22 +2,22 @@
 
 <h1>Spacing</h1>
 
-<h2>Sizes</h2>
+<h2 id="spacing-sizes">Sizes</h2>
 
-<p>All heights and widths are calulated from a base unit.</p>
+<p>All heights and widths are calculated from a base unit.</p>
 
 {% set spacing = page.spacing %}
 {% set base = spacing.base %}
 <p><strong>{{ base }}px | base</strong></p>
-<div style="height: {{ base }}px; background-color: pink;" class="has-background-color-text"></div>
+<div style="height: {{ base }}px;" class="tn-has-background-color-neutral-3"></div>
 
 {% for item in spacing.sizes %}
-    {% set size = item[1] * base %}
+    {% set size = item[1] * base %}<br>
     <p><strong>{{size}}px | {{ item[0] }}</strong></p>
-    <div style="height: {{ size }}px; background-color: pink;" class="has-background-color-text"></div>
+    <div style="height: {{ size }}px;" class="tn-has-background-color-neutral-3"></div>
 {% endfor %}
 
-<h2>Function</h2>
+<h2 id="spacing-function">Function</h2>
 
 <h3><code>tn-space($size, $modifiable)</code></h3>
 <p>Accepts either keyword or increments for size. The second argument indicates whether the value is modifiable based on the <code>$tn-space-modify</code> feature flag.</p>
@@ -25,7 +25,7 @@
 <pre>
 .foo {
     height: tn-space(20); //80px
-    padding: tn-space(l); //40px
+    padding: tn-space(m); //40px
 }
 </pre>
 </p>
@@ -35,7 +35,7 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
 <p>Example:<br>
 <pre>
 .bar {
-    padding: tn-space(l,true); //20px
+    padding: tn-space(m,true); //20px
 }
 </pre>
 <table>
@@ -46,7 +46,7 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
     </tr>
     <tr>
         <td>$size</td>
-        <td>-base,xs,s,reg (default),m,l,xl,xxl</td>
+        <td>base,xs,s,reg (default),m,l,xl</td>
     </tr>
     <tr>
         <td>$modifiable</td>
@@ -55,8 +55,8 @@ If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be 
 </table>
 
 
-<h2>Helpers</h2>
-<p>These classes are also available for overridng margins and padding. Use sparingly.</p>
+<h2 id="spacing-helpers">Helpers</h2>
+<p>These classes are also available for overriding margins and padding. Use sparingly.</p>
 
 {% set sides = ["top", "right", "bottom", "left"] %}
 <p><code>
