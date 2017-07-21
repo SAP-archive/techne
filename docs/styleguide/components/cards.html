@@ -17,7 +17,7 @@
         <div class="docs-flow__box--12-5">
             <h3 id="base" class="docs-header--h3">Common card <a href="#base">#</a></h3>
             <p class="docs-code__tips">
-                Include the base class <span class="docs-code__css-class">.tn-{{ key }}</span>    on all cards.
+                Include the base class <span class="docs-code__css-class">.tn-{{ key }}</span> on all cards.
             </p>
             <p>
                 The common card is static and non-interactive. It is an adaptable container well-suited to present collection items.
@@ -78,48 +78,57 @@
                 Add the ARIA attribute <span class="docs-code__css-class">aria-disabled="true"</span> or class <span class="docs-code__css-class">.is-disabled</span>.
             </p>
             <p>Toggle the ARIA attribute or the class name to switch the interactive state of any card.</p>
-            <p><i>
-                <strong>Accessibility:</strong>
-                Use 'aria-disabled' when the control is interactive but not currently available, e.g., an Edit Mode is enabled in a view which enables the control. The class 'is-disabled' is approriate when state is presentational and interactivity is not expected, e.g., an item is discontinued and will not have a click event.
-            </i>
-
-
+            <p>
+                <i>
+                    <strong>Accessibility:</strong>
+                    Use 'aria-disabled' when the control is interactive but not currently available, e.g., an Edit Mode is enabled in a view which enables the control. The class 'is-disabled' is approriate when state is presentational and interactivity is not expected, e.g., an item is discontinued and will not have a click event.
+                </i>
             </p>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        button=true,
-                        title='Repellendus obcaecati molestias',
-                        description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
-                        status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
-                        disabled=true
-                    ) }}
+                    button=true,
+                    title='Repellendus obcaecati molestias',
+                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit aute irure dolor in reprehenderit in voluptate',
+                    status='<span>Voluptate quis adipisci sit</span> | <span>Voluptate quis adipisci sit</span>',
+                    disabled=true
+                ) }}
             {% endset %}
             <p>
                 {{ example }}
             </p>
-
         </div>
     </div>
     <p> {{ format.example(example) }} </p>
 </div>
 
-
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="actions" class="docs-header--h3">Actions card<br> Include .tn-{{ key }}__actions <a href="#actions">#</a></h3>
+            <h3 id="actions" class="docs-header--h3">Actions card <a href="#actions">#</a></h3>
+            <p class="docs-code__tips">
+                Include additional element <span class="docs-code__css-class"> .tn-{{ key }}__actions</span>.
+            </p>
+            <p>
+                If a card has more than one action, an additional container can be added after the content container.
+            </p>
+            <p>
+                <i>
+                    <strong>Accessibility:</strong>
+                    The AIRA role of "button" should <strong>not</strong> be used in this case since the entire card is not interactive.
+                </i>
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        modifier="button",
-                        title="Lorem ipsum dolor quam placeat numquam repellendus",
-                        description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
-                        status='<span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>',
-                        actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-1">•••</span></div>'
-                    ) }}
+                    modifier="button",
+                    title="Lorem ipsum dolor quam placeat numquam repellendus",
+                    description="Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut.",
+                    status='<span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>',
+                    actions='<div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-1">•••</span></div>'
+                ) }}
             {% endset %}
         <p> {{ example }} </p> </div>
     </div>
@@ -129,19 +138,25 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-             <h3 id="media" class="docs-header--h3">Include .tn-{{ key }}__media<a href="#media">#</a></h3>
+             <h3 id="media" class="docs-header--h3">Media card<a href="#media">#</a></h3>
+             <p class="docs-code__tips">
+                 Include additional element <span class="docs-code__css-class">.tn-{{ key }}__media</span>.
+             </p>
+             <p>
+                An additional container can be added before the content container to include an image with the card.
+             </p>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        button=true,
-                        title='Asperiores doloribus id dolore',
-                        description='Consectetur adipisicing elit',
-                        status='<span class="tn-has-color-success">Cumque itaque</span>',
-                        media=c.media.icon,
-                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                        mediaAlt=c.media.alt
-                    ) }}
+                    button=true,
+                    title='Asperiores doloribus id dolore',
+                    description='Consectetur adipisicing elit',
+                    status='<span class="tn-has-color-success">Cumque itaque</span>',
+                    media=c.media.icon,
+                    media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                    mediaAlt=c.media.alt
+                ) }}
             {% endset %}
             <p>{{ example }}</p>
         </div>
@@ -152,20 +167,23 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">Modify to .tn-{{ key }}__media--round<a href="#media">#</a></h3>
+            <h3 id="media-round" class="docs-header--h3">Media card with round image <a href="#media-round">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-{{ key }}__media--round</span> to media element.
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        button=true,
-                        title='Asperiores doloribus id dolore',
-                        description='Consectetur adipisicing elit',
-                        status='<span class="tn-has-color-success">Cumque itaque</span>',
-                        media=c.media.icon,
-                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                        mediaAlt=c.media.alt,
-                        mediaModifier="round"
-                    ) }}
+                    button=true,
+                    title='Asperiores doloribus id dolore',
+                    description='Consectetur adipisicing elit',
+                    status='<span class="tn-has-color-success">Cumque itaque</span>',
+                    media=c.media.icon,
+                    media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                    mediaAlt=c.media.alt,
+                    mediaModifier="round"
+                ) }}
             {% endset %}
             <p>{{ example }}</p>
         </div>
@@ -176,20 +194,23 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">Modify to .tn-{{ key }}__media--fill<a href="#media">#</a></h3>
+            <h3 id="media-fill" class="docs-header--h3">Media card with filled image <a href="#media-fill">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-{{ key }}__media--fill</span> to media element.
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        button=true,
-                        title='Asperiores doloribus id dolore',
-                        description='Consectetur adipisicing elit',
-                        status='<span class="tn-has-color-success">Cumque itaque</span>',
-                        media=c.media.icon,
-                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                        mediaAlt=c.media.alt,
-                        mediaModifier="fill"
-                    ) }}
+                    button=true,
+                    title='Asperiores doloribus id dolore',
+                    description='Consectetur adipisicing elit',
+                    status='<span class="tn-has-color-success">Cumque itaque</span>',
+                    media=c.media.icon,
+                    media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                    mediaAlt=c.media.alt,
+                    mediaModifier="fill"
+                ) }}
             {% endset %}
             <p>{{ example }}</p>
         </div>
@@ -200,21 +221,24 @@
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">.tn-{{ key }}--vertical<a href="#media">#</a></h3>
-        </div>
-        <div class="docs-flow__box--12-7">
+            <h3 id="media-vertical" class="docs-header--h3">Vertical media card<a href="#media-vertical">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-{{ key }}--vertical</span> to base element.
+            </p>
             <p>Ideal for displaying products</p>
+        </div>
+        <div class="docs-flow__box--12-7">
             {% set example %}
                 {{ card(
-                        button=true,
-                        modifier="vertical",
-                        title='Asperiores doloribus id dolore',
-                        description='Consectetur adipisicing elit',
-                        status='<span class="tn-has-color-success">Cumque itaque</span>',
-                        media=c.media.icon,
-                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                        mediaAlt=c.media.alt
-                    ) }}
+                    button=true,
+                    modifier="vertical",
+                    title='Asperiores doloribus id dolore',
+                    description='Consectetur adipisicing elit',
+                    status='<span class="tn-has-color-success">Cumque itaque</span>',
+                    media=c.media.icon,
+                    media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                    mediaAlt=c.media.alt
+                ) }}
             {% endset %}
             <p>{{ example }}</p>
         </div>
@@ -226,18 +250,18 @@
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
             <h3 id="alt" class="docs-header--h3">Custom .tn-{{ key }}<a href="#alt">#</a></h3>
+            <p>Cards can also be used with custom content</p>
         </div>
         <div class="docs-flow__box--12-7">
-            <p>Cards can also be used with custom content</p>
             {% set body %}
-                <span class="tn-has-color-dark tn-has-type-minus-2">Client I.D.</span>
-                <p>*******************</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Client Secret</span>
-                <p>*******************</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Creation Date</span>
-                <p>Consectetur adipisicing</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Tenant (Project Identifier)</span>
-                <p>Lorem ipsum</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Client I.D.</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Client Secret</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Creation Date</span>
+        <p>Consectetur adipisicing</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Tenant (Project Identifier)</span>
+        <p>Lorem ipsum</p>
             {%- endset %}
             {% set example %}
                 {{ card(
@@ -259,22 +283,39 @@
         <div class="docs-flow__box--12-5">
             <h3 id="compact" class="docs-header--h3">Compact cards <a href="#compact">#</a></h3>
             <p class="docs-code__tips">
-                Add class <span class="docs-code__css-class">.tn-{{ key }}--compact</span>.
+                Add modifier class <span class="docs-code__css-class">.tn-{{ key }}--compact</span> to base element.
             </p>
             <p>
-                Each card has a compact mode which may be used with high-density interfaces
+                Each card has a compact mode which may be used with high-density interfaces.
             </p>
         </div>
         <div class="docs-flow__box--12-7">
 <p>
+                {% set example %}
                 {{ card(
                         compact=true,
                         button=true,
-                        title="Lorem ipsum dolor quam placeat numquam repellendus",
+                        title="Lorem ipsum dolor numquam repellendus",
                         description="Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.",
                         status='<span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>'
                     ) }}
+                    {% endset %}
+                    {{ example }}
 </p>
+            <p>
+                {{ card(
+                    compact=true,
+                        button=true,
+                        title='Asperiores doloribus id dolore',
+                        description='Consectetur adipisicing elit',
+                        status='<span class="tn-has-color-status-warning">Cumque itaque</span>',
+                        media=c.media.icon,
+                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
+                        mediaAlt=c.media.alt,
+                        mediaModifier="round"
+                    ) }}
+
+            </p>
             <p>
                 {{ card(
                     compact=true,
@@ -289,23 +330,10 @@
                     ) }}
 
             </p>
-            <p>
-                {{ card(
-                    compact=true,
-                        button=true,
-                        title='Asperiores doloribus id dolore',
-                        description='Consectetur adipisicing elit',
-                        status='<span class="tn-has-color-success">Cumque itaque</span>',
-                        media=c.media.icon,
-                        media="https://techne.yaas.io/images/product-thumbnail-wide.png",
-                        mediaAlt=c.media.alt,
-                        mediaModifier="fill"
-                    ) }}
 
-            </p>
         </div>
     </div>
-
+<p> {{ format.example(example) }} </p>
 </div>
 
 

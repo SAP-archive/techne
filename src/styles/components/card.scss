@@ -95,6 +95,7 @@ $block: ns(card);
         background-position: center center;
         background-size: cover;
         min-width: $tn-card-media-width;
+        min-height: $tn-card-media-width;
         margin: $tn-card-padding 0 $tn-card-padding $tn-card-padding;
         //ELEMENT MODIFIERS
         &--fill {
