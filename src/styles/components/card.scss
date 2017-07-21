@@ -24,7 +24,7 @@ $block: ns(card);
     $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-time-hover: 0.2s !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
-    $tn-card-padding: tn-space(l,true) !default;
+    $tn-card-padding: tn-space(m,true) !default;
     $tn-card-color-link: $color--link !default;
     display: flex;
     max-width: $tn-card-width;
@@ -109,7 +109,7 @@ $block: ns(card);
     }
     &__description {
         @include tn-type(-2);
-        margin-bottom: tn-space(reg);
+        margin-bottom: tn-space(s);
         white-space: nowrap;
         max-width: 100%;
         overflow: hidden;
