@@ -1,0 +1,22 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+$block: ns(ui);
+
+/*! */
+
+.#{$block} {
+    $tn-ui-header-height: 100px;
+
+    &__header {
+        background: red;
+        height: $tn-ui-header-height;
+    }
+    &__app {
+        background: gray;
+        height: calc(100vh - #{$tn-ui-header-height});
+        overflow: scroll;
+    }
+
+}
