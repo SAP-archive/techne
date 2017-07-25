@@ -63,7 +63,7 @@ export class ComponentSectionSampleComponent {
     }
 
     instrumentSection() {
-        this.contentMDPath = '/techne/components/' + this.category + '/' + this.componentId + '/' + this.section.contentMD;
+        this.contentMDPath = '/data/components/' + this.category + '/' + this.componentId + '/' + this.section.contentMD;
     }
 
     selectOption(index) {

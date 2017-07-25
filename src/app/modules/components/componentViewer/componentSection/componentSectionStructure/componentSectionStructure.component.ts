@@ -42,7 +42,7 @@ export class ComponentSectionSampleStructureComponent {
 
     selectElement(element) {
         this.selectedElement = element.id;
-        this.selectedElementDescriptionUrl = element.contentMD ? '/techne/components/' + this.category + '/' + this.componentId + '/structure/' + element.contentMD : '';
+        this.selectedElementDescriptionUrl = element.contentMD ? '/data/components/' + this.category + '/' + this.componentId + '/structure/' + element.contentMD : '';
     }
 
 }
