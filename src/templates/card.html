@@ -19,6 +19,7 @@ CARD:
     description="",
     status="",
     modifier="",
+    compact=false,
     button=false,
     media="",
     mediaAlt="",
@@ -26,7 +27,7 @@ CARD:
     disabled=false,
     actions="",
     body="") %}
-<div class="tn-card{{ ' tn-card--' + modifier if modifier }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
+<div class="tn-card{{ ' tn-card--' + modifier if modifier }}{{ ' tn-card--compact' if compact }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
     {%- if media %}
     <div class="tn-card__media{{ ' tn-card__media--'+mediaModifier if mediaModifier }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
     </div>
