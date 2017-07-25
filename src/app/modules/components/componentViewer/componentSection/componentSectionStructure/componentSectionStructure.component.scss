@@ -1,30 +1,37 @@
 
+
+.elements {
+    width: 50%;
+}
+
 .element-level { 
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .element-name {
     display: inline-block;
-    border: 1px solid silver;
-    margin-right: 6px; 
+    padding: 4px 12px;
+
+    &:hover {
+        background-color: #f4f5f6;
+        cursor: pointer;
+    }
 
     .element-identifier { 
         display: inline-block;
-        padding: 2px 4px;
+        font-family: monospace;
+        font-size: 15px;
      }
 
     .element-tags {
         display: block;
-        padding: 2px;
+        line-height: 100%;
 
         .element-tag {
-            padding: 2px 6px;
             font-size: .6em;
             text-transform: uppercase;
-            color: white;
-            background: silver;
-            margin-right: 2px;
+            margin-right: 12px;
             letter-spacing: 1px;
 
             &:last-child { 
@@ -32,4 +39,13 @@
             }
         }
     }
+}
+
+.selected-element-description {
+    padding: 0 24px;
+}
+
+.see-example-link {
+    color: blue;
+    font-weight: bold;
 }

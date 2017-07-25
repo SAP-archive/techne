@@ -16,6 +16,11 @@
             padding: .5em 1em;
             cursor: pointer;
             color: $tn-color-default;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: $tn-color-neutral-lightest;
+            }
 
             &.tn-tabs-option-selected {
                 background-color: $tn-color-neutral-lightest;
@@ -47,6 +52,20 @@
 
             }
         }
+    }
+
+    &.tn-tabs-vertical {
+        display: flex;
+        flex-direction: row;
+
+        .tn-tabs-options {
+            border-bottom: none;
+            border-right: 1px solid $tn-color-neutral-lighter;
+        }
+
+        .tn-tabs-container {
+        }
+
     }
 
 }

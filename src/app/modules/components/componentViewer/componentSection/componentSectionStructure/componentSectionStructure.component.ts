@@ -18,6 +18,9 @@ export class ComponentSectionSampleStructureComponent {
 
     structure: any;
 
+    selectedElement: string;
+    selectedElementDescriptionUrl: string;
+
     @Input() section: any;
     @Input() component: any;
 
@@ -37,7 +40,9 @@ export class ComponentSectionSampleStructureComponent {
     ngAfterViewInit() {        
     }
 
-    selectOption(index) {
+    selectElement(element) {
+        this.selectedElement = element.id;
+        this.selectedElementDescriptionUrl = element.contentMD ? '/techne/components/' + this.category + '/' + this.componentId + '/structure/' + element.contentMD : '';
     }
 
 }

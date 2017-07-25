@@ -20,9 +20,6 @@ import { MarkdownModule } from 'angular2-markdown';
 import { Ng2HandySyntaxHighlighterModule } from 'ng2-handy-syntax-highlighter';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
-
-import { TechneModule } from '../techne/techne.module';
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -46,9 +43,7 @@ import { TechneModule } from '../techne/techne.module';
 
         MarkdownModule.forRoot(),
         Ng2HandySyntaxHighlighterModule,
-        Ng2PageScrollModule.forRoot(),
-
-        TechneModule
+        Ng2PageScrollModule.forRoot()
     ],
     providers: [
         ComponentsService

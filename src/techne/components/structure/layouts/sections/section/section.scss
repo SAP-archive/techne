@@ -8,8 +8,7 @@
     flex-direction: row;
     border-bottom: 1px solid $tn-color-neutral-lightest;
 
-    .tn-section-overview {
-        width: 440px; 
+    .tn-section-overview, .tn-section-content {
         @include tn-padding("normal", 4);
 
         h2 {
@@ -34,6 +33,14 @@
             margin-bottom: 20px;
             line-height: 1.5em; 
         }
+    }
+
+    .tn-section-overview {
+        width: 440px; 
+    }
+
+    .tn-section-content {
+        width: 100%; 
     }
 
     .tn-section-samples {
@@ -78,6 +85,11 @@
 .tn-compact .tn-section-overview {
     @include tn-padding("compact", 4);
 }
+
+.tn-compact .tn-section-content {
+    @include tn-padding("compact", 4);
+}
+
 
 .tn-compact .tn-section-samples {
     @include tn-padding("compact", 4);

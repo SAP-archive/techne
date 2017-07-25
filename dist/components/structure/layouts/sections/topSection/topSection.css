@@ -7,7 +7,7 @@
 .tn-color-positive { color: #18C407; }
 body.tn-app { margin: 0; }
 .tn-top-section { display: flex; border-bottom: 1px solid #F4F5F6; width: 100%; }
-.tn-top-section .tn-section-title { width: 400px; padding: 32px; }
+.tn-top-section .tn-section-title { width: 430px; padding: 32px; }
 .tn-top-section .tn-section-title h1 { font-size: 2.2em; font-weight: 700; }
 .tn-top-section .tn-section-text { flex: 2; padding: 40px; }
 .tn-top-section .tn-section-text p { line-height: 1.5em; max-width: 700px; }

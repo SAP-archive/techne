@@ -3,25 +3,25 @@
     "label": "Card",
     "sections": [
         {
-            "id": "card-overview",
-            "type": "title-text",
-            "title": "Card",
-            "content": "Cards are used to display information in a easy way to scan visually. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system."
-        },
-        {
             "id": "card-structure",
             "type": "structure",
             "structure": [
                 [
-                    { "id": "card-default", "className": "tn-card", "tags": ["mandatory"] },
-                    { "id": "card-static", "className": "tn-card-static", "tags": ["modifier"] },
+                    { "id": "card-default", "className": "tn-card", "tags": ["mandatory"], "contentMD": "card.default.md" },
+                    { "id": "card-static", "className": "tn-card-static", "tags": ["modifier"], "contentMD": "card.static.md" },
                     { "id": "card-disabled", "className": "tn-card-disabled", "tags": ["modifier"] },
-                    { "id": "card-disabled", "parameter": "aria-disabled=true", "tags": ["parameter", "accesibility"] }
+                    { "id": "card-disabled", "parameterName": "aria-disabled", "parameterValue": "true", "tags": ["parameter", "accesibility"] }
                 ],
                 [
                     { "id": "card-with-media", "className": "tn-card-media" }
                 ]
             ]
+        },
+        {
+            "id": "card-overview",
+            "type": "title-text",
+            "title": "Card",
+            "content": "Cards are used to display information in a easy way to scan visually. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system."
         },
         {
             "id": "card-default",
@@ -72,5 +72,5 @@
             "contentMD": "card.media.vertical.md",
             "markup": "card.media.vertical.html"
         }
-    ]
+   ]
 }

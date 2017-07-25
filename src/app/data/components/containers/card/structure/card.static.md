@@ -1,0 +1,1 @@
+This class will remove all clickable visual indicators.

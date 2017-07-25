@@ -20,18 +20,18 @@
                 },
                 {
                     "glob": "**/*.json",
-                    "input": "./techne/",
-                    "output": "./techne/"
+                    "input": "./app/data/",
+                    "output": "./data/"
                 },
                 {
                     "glob": "**/*.html",
-                    "input": "./techne/",
-                    "output": "./techne/"
+                    "input": "./app/data/",
+                    "output": "./data/"
                 },
                 {
                     "glob": "**/*.md",
-                    "input": "./techne/",
-                    "output": "./techne/"
+                    "input": "./app/data/",
+                    "output": "./data/"
                 }
             ],
             "index": "index.html",

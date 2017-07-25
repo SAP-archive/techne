@@ -1,0 +1,77 @@
+@import 'system/colors';
+@import 'system/spacing';
+@import 'system/responsive';
+
+// Techné Main Navigation
+
+.tn-main-nav {
+    display: flex;
+    @include tn-padding("normal", 1);
+    background-color: $tn-color-default-light;
+    color: white;
+
+    a { 
+        color: white; 
+        text-decoration: none; 
+    }
+
+    .tn-main-nav-options {
+        display: flex;
+        @include tn-margin-horizontal("normal", 2);
+
+        .tn-main-nav-option {
+            list-style: none;
+            @include tn-margin-horizontal("normal", 2);
+            font-size: 1.2em;
+
+            a {
+                color: $tn-color-neutral-lighter;
+
+                &:hover {
+                    color: $tn-color-accent;
+                }
+            }
+
+            &.tn-main-nav-option-selected {
+                a {
+                    color: $tn-color-neutral-lightest;
+                    cursor: default;
+                }
+            }
+        }
+
+        @media screen and (max-width: $tn-phone-break) {
+            display: none;
+        }
+    }
+}
+
+.tn-identity {
+    margin: 0 0 0 1.5em;
+
+    .tn-logo {
+        height: 30px; 
+        vertical-align: middle;
+    }
+
+    .tn-inidentity-name {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0 0 0 .2em;
+        vertical-align: middle;
+    }
+}
+
+// Spacing Compact
+.tn-compact .tn-main-nav {
+    @include tn-padding("compact", 1);
+}
+
+.tn-compact .tn-main-nav {
+    @include tn-margin-horizontal("compact", 2);
+}
+
+.tn-compact .tn-main-nav-option {
+    @include tn-margin-horizontal("compact", 2);
+}    
+

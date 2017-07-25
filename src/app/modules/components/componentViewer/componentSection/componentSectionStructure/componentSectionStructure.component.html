@@ -1,17 +1,29 @@
-<div class="tn-section-overview">
-    <h2>
-        Structure
-        <a pageScroll pageScrollAdjustHash="true" [href]="'#structure'">#</a>
-    </h2>
-</div>
-<div class="tn-section-samples">
-    <div *ngFor="let level of structure; let i = index" [ngStyle]="{ 'margin-left':  i * 24 + 'px' }" class="element-level">
-        <a *ngFor="let element of level" class="element-name">
-            <span *ngIf="element.className" class="element-identifier">.{{ element.className }}</span>
-            <span *ngIf="element.parameter" class="element-identifier">{{ element.parameter }}</span>
-            <span class="element-tags">
-                <span *ngFor="let tag of element.tags" class="element-tag">{{ tag }}</span>
-            </span>
-        </a>
+    <div class="tn-section-content">
+        <h2>
+            Structure
+            <a pageScroll pageScrollAdjustHash="true" [href]="'#structure'">#</a>
+        </h2>
+
+        <div class="tn-tabs tn-tabs-vertical">
+            <div class="tn-tabs-options elements">
+                <div *ngFor="let level of structure; let i = index" [ngStyle]="{ 'margin-left':  i * 24 + 'px' }" class="element-level">
+                    <a *ngFor="let element of level" (click)="selectElement(element)" class="tn-tabs-option element-name" [ngClass]="{ 'tn-tabs-option-selected': selectedElement == element.id }">
+                        <span *ngIf="element.className" class="element-identifier">
+                            <span class="token attr-value">.{{ element.className }}</span>
+                        </span>
+                        <span *ngIf="element.parameterName" class="element-identifier">
+                            <span class="token attr-name">{{ element.parameterName }}</span><span class="token punctuation">="</span><span class="token attr-value">{{ element.parameterValue }}</span><span class="token punctuation">"</span>
+                        </span>
+                        <span class="element-tags">
+                            <span *ngFor="let tag of element.tags" class="element-tag">{{ tag }}</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div *ngIf="selectedElementDescriptionUrl" class="tn-tabs-container selected-element-description">
+                <div *ngIf="selectedElementDescriptionUrl" Markdown [path]="selectedElementDescriptionUrl" class="markdown-body"></div>
+                <br/>
+                <a pageScroll [href]="'#' + selectedElement" class="see-example-link"> See example </a>
+            </div>
+        </div>
     </div>
-</div>

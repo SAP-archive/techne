@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class ComponentsService {
-    private componentsResource: string = '/techne/';
+    private componentsResource: string = '/data/';
 
     private emptyComponent = {
         sections : [

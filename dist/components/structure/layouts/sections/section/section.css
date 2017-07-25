@@ -7,11 +7,13 @@
 .tn-color-positive { color: #18C407; }
 body.tn-app { margin: 0; }
 .tn-section { display: flex; flex-direction: row; border-bottom: 1px solid #F4F5F6; }
-.tn-section .tn-section-overview { width: 440px; padding: 32px; }
-.tn-section .tn-section-overview h2 { font-size: 1.8em; font-weight: 400; margin-top: 0; }
-.tn-section .tn-section-overview h2 a { display: none; text-decoration: none; color: #7C8B9D; }
-.tn-section .tn-section-overview h2:hover a { display: inline-block; }
-.tn-section .tn-section-overview p { margin-bottom: 20px; line-height: 1.5em; }
+.tn-section .tn-section-content, .tn-section .tn-section-overview { padding: 32px; }
+.tn-section .tn-section-content h2, .tn-section .tn-section-overview h2 { font-size: 1.8em; font-weight: 400; margin-top: 0; }
+.tn-section .tn-section-content h2 a, .tn-section .tn-section-overview h2 a { display: none; text-decoration: none; color: #7C8B9D; }
+.tn-section .tn-section-content h2:hover a, .tn-section .tn-section-overview h2:hover a { display: inline-block; }
+.tn-section .tn-section-content p, .tn-section .tn-section-overview p { margin-bottom: 20px; line-height: 1.5em; }
+.tn-section .tn-section-overview { width: 440px; }
+.tn-section .tn-section-content { width: 100%; }
 .tn-section .tn-section-samples { flex: 2; padding: 32px; }
 .tn-section .tn-section-samples .tn-section-rendered { padding: 32px 0; }
 .tn-section .tn-section-samples .tn-section-rendered div { width: 100%; }
@@ -19,4 +21,4 @@ body.tn-app { margin: 0; }
 .tn-section .tn-section-samples .tn-section-code pre[class*=language-] { margin: 0; padding: 0; border: none; }
 .tn-section.tn-section-vertical { flex-direction: column; }
 .tn-section.tn-section-vertical .tn-section-overview { width: 100%; padding-bottom: 0; }
-.tn-compact .tn-section-overview, .tn-compact .tn-section-samples, .tn-compact .tn-section-samples .tn-section-code, .tn-compact .tn-section-samples .tn-section-rendered { padding: 16px; }
+.tn-compact .tn-section-content, .tn-compact .tn-section-overview, .tn-compact .tn-section-samples, .tn-compact .tn-section-samples .tn-section-code, .tn-compact .tn-section-samples .tn-section-rendered { padding: 16px; }
