@@ -275,37 +275,23 @@ https://github.com/SAP/techne
         Cards
     </h1>
     <p class="docs-page__intro docs-flow__box--12-7">
-        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risu.
+        Cards are used to display information in a visual, scannable manner. Use in scenarios when users want to associate an image with data, such as a Project or Site, or in association with user accounts where it is helpful to associate an image with a person using the system.
     </p>
 </header>
 
             
 
-<!-- component structure -->
-<div class="docs-section">
-    <div class="docs-flow">
-        <div class="docs-flow__box--12-5">
-            <h2 class="docs-header--h2">Structure</h2>
-        </div>
-        <div class="docs-flow__box--12-7">
-            <pre>
-.tn-card+(--button,--vertical)+(.is-disabled|[aria-disabled=true])
-    .tn-card__media+(--round,--fill)?
-    .tn-card__content
-        .tn-card__header?
-        .tn-card__description?
-        .tn-card__status?
-    .tn-card__actions?
-            </pre>
-        </div>
-    </div>
-</div>
-
 <!-- base component example -->
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="base" class="docs-header--h3">Common card <br> .tn-card <a href="#base">#</a></h3>
+            <h3 id="base" class="docs-header--h3">Common card <a href="#base">#</a></h3>
+            <p class="docs-code__tips">
+                Include the base class <span class="docs-code__css-class">.tn-card</span> on all cards.
+            </p>
+            <p>
+                The common card is static and non-interactive. It is an adaptable container well-suited to present collection items.
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             
@@ -372,14 +358,22 @@ https://github.com/SAP/techne
  </p>
 </div>
 
-<!-- static button -->
+<!-- button -->
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="static" class="docs-header--h3">Button card<br> .tn-card[role="button"] or .tn-card--button <a href="#static">#</a></h3>
+            <h3 id="button" class="docs-header--h3">Button card <a href="#button">#</a></h3>
+            <p class="docs-code__tips">
+                Add the ARIA attribute <span class="docs-code__css-class">role="button"</span> or class <span class="docs-code__css-class">.tn-card--button</span>.
+            </p>
+            <p>
+                The button card includes hover effects and uses link colors to indicate interactivity.
+            </p>
+            <p>
+                <i><strong>Accessibility:</strong> The ARIA role of "button" is appropriate when a the entire card is clickable.</i>
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
-            <p>Modified: Includes hover effect</p>
             
             <p>
                 
@@ -449,10 +443,19 @@ https://github.com/SAP/techne
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="disabled" class="docs-header--h3">Disabled card<br> .tn-card[aria-disabled="true"] or .tn-card.is-disabled <a href="#disabled">#</a></h3>
+            <h3 id="disabled" class="docs-header--h3">Disabled card <a href="#disabled">#</a></h3>
+            <p class="docs-code__tips">
+                Add the ARIA attribute <span class="docs-code__css-class">aria-disabled="true"</span> or class <span class="docs-code__css-class">.is-disabled</span>.
+            </p>
+            <p>Toggle the ARIA attribute or the class name to switch the interactive state of any card.</p>
+            <p>
+                <i>
+                    <strong>Accessibility:</strong>
+                    Use 'aria-disabled' when the control is interactive but not currently available, e.g., an Edit Mode is enabled in a view which enables the control. The class 'is-disabled' is approriate when state is presentational and interactivity is not expected, e.g., an item is discontinued and will not have a click event.
+                </i>
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
-            <p>State: Disabled, this class/attribute can be toggled with JS </p>
             
             <p>
                 
@@ -472,9 +475,6 @@ https://github.com/SAP/techne
 </div>
 
             
-            </p>
-            <p>A11Y NOTE:
-                Use 'aria-disabled' when the control is interactive yet it is not currently available. The class 'is-disabled` is more approriate when the state is presentational and interactivity is not necessarily expected.
             </p>
         </div>
     </div>
@@ -522,11 +522,22 @@ https://github.com/SAP/techne
  </p>
 </div>
 
-
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="actions" class="docs-header--h3">Actions card<br> Include .tn-card__actions <a href="#actions">#</a></h3>
+            <h3 id="actions" class="docs-header--h3">Actions card <a href="#actions">#</a></h3>
+            <p class="docs-code__tips">
+                Include additional element <span class="docs-code__css-class"> .tn-card__actions</span>.
+            </p>
+            <p>
+                If a card has more than one action, an additional container can be added after the content container.
+            </p>
+            <p>
+                <i>
+                    <strong>Accessibility:</strong>
+                    The AIRA role of "button" should <strong>not</strong> be used in this case since the entire card is not interactive.
+                </i>
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             
@@ -604,7 +615,13 @@ https://github.com/SAP/techne
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-             <h3 id="media" class="docs-header--h3">Include .tn-card__media<a href="#media">#</a></h3>
+             <h3 id="media" class="docs-header--h3">Media card<a href="#media">#</a></h3>
+             <p class="docs-code__tips">
+                 Include additional element <span class="docs-code__css-class">.tn-card__media</span>.
+             </p>
+             <p>
+                An additional container can be added before the content container to include an image with the card.
+             </p>
         </div>
         <div class="docs-flow__box--12-7">
             
@@ -680,7 +697,10 @@ https://github.com/SAP/techne
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">Modify to .tn-card__media--round<a href="#media">#</a></h3>
+            <h3 id="media-round" class="docs-header--h3">Media card with round image <a href="#media-round">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-card__media--round</span> to media element.
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             
@@ -756,7 +776,10 @@ https://github.com/SAP/techne
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">Modify to .tn-card__media--fill<a href="#media">#</a></h3>
+            <h3 id="media-fill" class="docs-header--h3">Media card with filled image <a href="#media-fill">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-card__media--fill</span> to media element.
+            </p>
         </div>
         <div class="docs-flow__box--12-7">
             
@@ -832,10 +855,13 @@ https://github.com/SAP/techne
 <div class="docs-section">
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
-            <h3 id="media" class="docs-header--h3">.tn-card--vertical<a href="#media">#</a></h3>
+            <h3 id="media-vertical" class="docs-header--h3">Vertical media card<a href="#media-vertical">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-card--vertical</span> to base element.
+            </p>
+            <p>Ideal for displaying products</p>
         </div>
         <div class="docs-flow__box--12-7">
-            <p>Ideal for displaying products</p>
             
             <p>
                 
@@ -910,9 +936,9 @@ https://github.com/SAP/techne
     <div class="docs-flow">
         <div class="docs-flow__box--12-5">
             <h3 id="alt" class="docs-header--h3">Custom .tn-card<a href="#alt">#</a></h3>
+            <p>Cards can also be used with custom content</p>
         </div>
         <div class="docs-flow__box--12-7">
-            <p>Cards can also be used with custom content</p>
             
             
 
@@ -920,14 +946,14 @@ https://github.com/SAP/techne
                 
 <div class="tn-card">
     <div class="tn-card__content">
-                <span class="tn-has-color-dark tn-has-type-minus-2">Client I.D.</span>
-                <p>*******************</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Client Secret</span>
-                <p>*******************</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Creation Date</span>
-                <p>Consectetur adipisicing</p>
-                <span class="tn-has-color-dark tn-has-type-minus-2">Tenant (Project Identifier)</span>
-                <p>Lorem ipsum</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Client I.D.</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Client Secret</span>
+        <p>*******************</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Creation Date</span>
+        <p>Consectetur adipisicing</p>
+        <span class="tn-has-color-dark tn-has-type-minus-2">Tenant (Project Identifier)</span>
+        <p>Lorem ipsum</p>
     </div>
     <div class="tn-card__actions">
         <a href="#alt" class="tn-has-type-plus-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>
@@ -945,14 +971,14 @@ https://github.com/SAP/techne
         <span class="docs-code__notice">Copied to Clipboard!</span>
         <span class="docs-code__copy-code" data-clipboard-text="&lt;div class=&quot;tn-card&quot;&gt;
     &lt;div class=&quot;tn-card__content&quot;&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client I.D.&lt;/span&gt;
-                &lt;p&gt;*******************&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client Secret&lt;/span&gt;
-                &lt;p&gt;*******************&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Creation Date&lt;/span&gt;
-                &lt;p&gt;Consectetur adipisicing&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Tenant (Project Identifier)&lt;/span&gt;
-                &lt;p&gt;Lorem ipsum&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client I.D.&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client Secret&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Creation Date&lt;/span&gt;
+        &lt;p&gt;Consectetur adipisicing&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Tenant (Project Identifier)&lt;/span&gt;
+        &lt;p&gt;Lorem ipsum&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;tn-card__actions&quot;&gt;
         &lt;a href=&quot;#alt&quot; class=&quot;tn-has-type-plus-1 tn-has-font-family-header&quot;&gt;GENERATE ACCESS TOKEN&lt;/a&gt;
@@ -964,14 +990,14 @@ https://github.com/SAP/techne
     </span>
     <pre class="docs-code__markup"><code class="html">&lt;div class=&quot;tn-card&quot;&gt;
     &lt;div class=&quot;tn-card__content&quot;&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client I.D.&lt;/span&gt;
-                &lt;p&gt;*******************&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client Secret&lt;/span&gt;
-                &lt;p&gt;*******************&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Creation Date&lt;/span&gt;
-                &lt;p&gt;Consectetur adipisicing&lt;/p&gt;
-                &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Tenant (Project Identifier)&lt;/span&gt;
-                &lt;p&gt;Lorem ipsum&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client I.D.&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Client Secret&lt;/span&gt;
+        &lt;p&gt;*******************&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Creation Date&lt;/span&gt;
+        &lt;p&gt;Consectetur adipisicing&lt;/p&gt;
+        &lt;span class=&quot;tn-has-color-dark tn-has-type-minus-2&quot;&gt;Tenant (Project Identifier)&lt;/span&gt;
+        &lt;p&gt;Lorem ipsum&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;tn-card__actions&quot;&gt;
         &lt;a href=&quot;#alt&quot; class=&quot;tn-has-type-plus-1 tn-has-font-family-header&quot;&gt;GENERATE ACCESS TOKEN&lt;/a&gt;
@@ -984,6 +1010,128 @@ https://github.com/SAP/techne
 </aside>
  </p>
 </div>
+
+
+<!-- button -->
+<div class="docs-section">
+    <div class="docs-flow">
+        <div class="docs-flow__box--12-5">
+            <h3 id="compact" class="docs-header--h3">Compact cards <a href="#compact">#</a></h3>
+            <p class="docs-code__tips">
+                Add modifier class <span class="docs-code__css-class">.tn-card--compact</span> to base element.
+            </p>
+            <p>
+                Each card has a compact mode which may be used with high-density interfaces.
+            </p>
+        </div>
+        <div class="docs-flow__box--12-7">
+<p>
+                
+                    
+                
+<div class="tn-card tn-card--compact" role="button">
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Lorem ipsum dolor numquam repellendus
+        </h2>
+        <p class="tn-card__description">
+            Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+        </p>
+        <p class="tn-card__status">
+            <span class="tn-has-color-status-success">Voluptate quis adipisci sit</span>
+        </p>
+    </div>
+</div>
+
+                    
+</p>
+            <p>
+                
+<div class="tn-card tn-card--compact" role="button">
+    <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="CARD_MEDIA_ALT">
+    </div>
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Asperiores doloribus id dolore
+        </h2>
+        <p class="tn-card__description">
+            Consectetur adipisicing elit
+        </p>
+        <p class="tn-card__status">
+            <span class="tn-has-color-status-warning">Cumque itaque</span>
+        </p>
+    </div>
+</div>
+
+
+            </p>
+            <p>
+                
+<div class="tn-card tn-card--vertical tn-card--compact" role="button">
+    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="CARD_MEDIA_ALT">
+    </div>
+    <div class="tn-card__content">
+        <h2 class="tn-card__header">
+            Asperiores doloribus id dolore
+        </h2>
+        <p class="tn-card__description">
+            Consectetur adipisicing elit
+        </p>
+        <p class="tn-card__status">
+            <span class="tn-has-color-success">Cumque itaque</span>
+        </p>
+    </div>
+</div>
+
+
+            </p>
+
+        </div>
+    </div>
+<p> 
+<aside class="docs-code">
+    <h1 class="docs-code__header">
+        Code 
+        <span class="docs-code__version-pill">Since V0.0.0</span>
+        <span class="docs-code__notice">Copied to Clipboard!</span>
+        <span class="docs-code__copy-code" data-clipboard-text="&lt;div class=&quot;tn-card tn-card--compact&quot; role=&quot;button&quot;&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Lorem ipsum dolor numquam repellendus
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            &lt;span class=&quot;tn-has-color-status-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;">Copy Source Code </span>
+    </h1>
+    <span class="docs-code__tips">
+        Use the extension   <span class="docs-code__css-class">.dataCards-singleColumn</span>    to enable Single Column card layouts.
+    </span>
+    <pre class="docs-code__markup"><code class="html">&lt;div class=&quot;tn-card tn-card--compact&quot; role=&quot;button&quot;&gt;
+    &lt;div class=&quot;tn-card__content&quot;&gt;
+        &lt;h2 class=&quot;tn-card__header&quot;&gt;
+            Lorem ipsum dolor numquam repellendus
+        &lt;/h2&gt;
+        &lt;p class=&quot;tn-card__description&quot;&gt;
+            Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.
+        &lt;/p&gt;
+        &lt;p class=&quot;tn-card__status&quot;&gt;
+            &lt;span class=&quot;tn-has-color-status-success&quot;&gt;Voluptate quis adipisci sit&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <span class="docs-code__lines">
+        <span class="docs-code__lines--label">... <span class="docs-code__lines--count"></span> more lines of code | </span>
+        <span class="docs-code__lines--expand">Show All <span class="docs-code__lines--chevron-down"></span></span>
+    </span>
+</aside>
+ </p>
+</div>
+
 
 
 
