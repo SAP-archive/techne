@@ -1,0 +1,43 @@
+@import "../core/settings";
+@import "../core/functions";
+@import "../core/mixins";
+//@import "flow";
+
+
+
+$block: ns(col);
+
+/*! */
+
+$tn-col-width-gutter: tn-space(reg) !default;
+%col- {
+    background: white;
+    height: 100px;
+    float: left;
+    margin-right: $tn-col-width-gutter;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.#{$block} {
+    @for $i from 1 through 12 {
+        &-#{$i} {
+            @extend %col-;
+            width: calc(
+                (
+                    (
+                        (100% -
+                            (#{$tn-col-width-gutter} * #{12 - 1})
+                            )/
+                            #{12}
+                            )
+                        * #{$i}
+                    )
+                    +
+                    ( #{$tn-col-width-gutter}*#{$i - 1} )
+            );
+        }
+    }
+
+
+}

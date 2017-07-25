@@ -8,34 +8,38 @@
 {% endblock %}
 </head>
 <body class="tn-ui tn-ui--{{ app.id }}">
-    <header class="tn-ui__header">
-        //signature nav goes here (Fiori shell bar)
 
-    </header>
+
+    <div class="tn-ui__header">
+        .tn-ui__header
+
+    </div>
     <div class="tn-ui__app">
 
-
-
-        <nav class="tn-app__navigation">
-            //optional side nav
+        <nav class="tn-ui__navigation">
+            .tn-ui__navigation
 
         </nav>
-        <div class="tn-app__view">
-            //main app area
+        <main class="tn-ui__main">
+
+
+            <!-- //main app area -->
 
             {% block content %}
+
             {% endblock %}
 
 
 
-        </div>
-
+        </main>
 
 
     </div>
 
+    <!-- <div class="tn-ui__footer">
+        //optional footer
 
-
+    </div> -->
 
 
 

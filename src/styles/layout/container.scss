@@ -1,6 +1,23 @@
 @import "../core/settings";
 @import "../core/functions";
+@import "../core/mixins";
 
-.grid {
-	background-color: color(lightest);
+.container {
+    @include clearfix;
+	background-color: color(brand);
+    padding: 0 $tn-ui-padding;
+    max-width: $tn-ui-max-width;
+    margin-bottom: $margin-bottom;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &--fluid {
+        max-width: 100%;
+    }
+    &--bleed {
+        padding: 0;
+    }
+    &--centered {
+        margin: 0 auto;
+    }
 }

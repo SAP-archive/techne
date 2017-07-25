@@ -13,7 +13,7 @@ $ns: ns();
   }
 }
 
-@mixin screen($size, $dimension: width) {
+@mixin at-media($size, $dimension: width) {
   @if map-has-key($breakpoints, $size) {
     @media (min-#{$dimension}: map-get($breakpoints, $size)) {
         @content;

@@ -5,12 +5,11 @@ $namespace: tn !default;
 
 //breakpoints
 $breakpoints: (
-    xs: 480px,
-    s: 667px,
-    m: 768px,
-    l: 1024px,
-    xl: 1248px,
-    xxl: 1440px
+    xs: 320px,
+    s: 768px,
+    m: 1024px,
+    l: 1440px,
+    xl: 1580px,
 ) !default;
 
 //spacing
@@ -94,6 +93,11 @@ $tn-colors: (
 
 //features
 $tn-space-modify: normal !default; //normal, compact
+
+//ui
+$tn-ui-padding: tn-space(m) !default;
+$tn-ui-max-width: map-get($breakpoints,xl) !default;
+
 
 //type
 $font-family: map-get($fonts,body) !default;
