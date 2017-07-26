@@ -25,7 +25,7 @@ $block: ns(card);
     $tn-card-time-hover: 0.2s !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
     $tn-card-padding: tn-space(m,true) !default;
-    $tn-card-color-link: $color--link !default;
+    $tn-card-color-link: $tn-color--link !default;
     display: flex;
     max-width: $tn-card-width;
     border-style: solid;
@@ -79,7 +79,8 @@ $block: ns(card);
     }
 
     //STATES *******************************************
-    &[aria-disabled="true"], &.is-disabled {
+    &[aria-disabled="true"],
+    &.is-disabled {
         background-color: $tn-card-background-color-disabled !important;
         border-color: $tn-card-color-border !important;
         box-shadow: none !important;
@@ -109,10 +110,6 @@ $block: ns(card);
         &--round {
             border-radius: 50%;
         }
-        &--hex {
-            //TEST ****
-            mask: url("data:image/svg+xml;utf8,#{'<svg width="75" height="75" viewBox="0 0 81 93" xmlns="http://www.w3.org/2000/svg"><title>hex</title><g fill="#000" fill-rule="evenodd"><path d="M79.609 23.056l.391.225v45.934L40 92.28 0 69.215V23.28L.477 23l38.645 21.925a2 2 0 0 0 1.975 0l38.512-21.869z"/><path d="M40.092 0l40.092 23.416-39.087 22.195a2 2 0 0 1-1.975 0L0 23.417 40.092 0z" fill-opacity=".6"/></g></svg>'}")  center center / contain;
-        }
     }
     &__content {
         padding: ($tn-card-padding) $tn-card-padding;
@@ -121,7 +118,7 @@ $block: ns(card);
         overflow: hidden;
     }
     &__header {
-        color: $color;
+        color: $tn-color;
         @include tn-type(1);
         margin-bottom: 1px;
     }

@@ -4,7 +4,7 @@
 
 //set namespace using function to avoid hardcoding it
 $ns: ns();
-@each $key, $value in $type {
+@each $key, $value in $tn-type {
     @if $key > 0 {
         .#{$ns}has-type-#{$key} {
             @include tn-type($key);
@@ -21,7 +21,7 @@ $ns: ns();
     }
 }
 
-@each $key, $value in $fonts {
+@each $key, $value in $tn-fonts {
     .#{$ns}has-font-family-#{$key} {
         font-family: $value;
     }

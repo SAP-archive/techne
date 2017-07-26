@@ -7,7 +7,7 @@
     }
 }
 @function ns($str: "") {
-	$ns: #{$namespace}-;
+	$ns: #{$tn-namespace}-;
     @return $ns + $str;
 }
 
