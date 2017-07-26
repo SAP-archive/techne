@@ -9,34 +9,27 @@ $block: ns(ui);
 .#{$block} {
     $tn-ui-header-height: 60px !default;
     $tn-ui-header-fixed: true !default;
+    $tn-ui-header-background-color: tn-color(brand) !default;
+    $tn-ui-sidebar-background-color: tn-color(brand,2) !default;
 
     &__header {
-        background: red;
+        background: $tn-ui-header-background-color;
         width: 100%;
         height: $tn-ui-header-height;
         position: tn-if($tn-ui-header-fixed, fixed static);
         top: 0;
     }
     &__app {
-        background: gray;
         margin-top: tn-if($tn-ui-header-fixed, $tn-ui-header-height 0);
         height: tn-if($tn-ui-header-fixed, calc(100vh - #{$tn-ui-header-height}) 100vh);
         overflow: scroll;
         display: flex;
-
     }
-    &__navigation {
-        width: 200px;
-        background: yellow;
+    &__sidebar {
+        background: $tn-ui-sidebar-background-color;
     }
-
     &__main {
-        background: lightgray;
         flex: 1;
     }
-    &__footer {
-
-    }
-
 
 }

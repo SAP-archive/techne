@@ -1,43 +1,41 @@
 @import "../core/settings";
 @import "../core/functions";
 @import "../core/mixins";
-//@import "flow";
 
 
 
 $block: ns(col);
 
 /*! */
-
-$tn-col-width-gutter: tn-space(reg) !default;
-%col- {
+[class*="#{$block}"] {
     background: white;
-    height: 100px;
-    float: left;
-    margin-right: $tn-col-width-gutter;
-    &:last-child {
-        margin-right: 0;
+    @include tn-at-media(m) {
+        height: 100px;
+        float: left;
+        margin-right: $tn-width--gutter;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 .#{$block} {
-    @for $i from 1 through 12 {
-        &-#{$i} {
-            @extend %col-;
-            width: calc(
-                (
+    @include tn-at-media(m) {
+        @for $i from 1 through 12 {
+            &-#{$i} {
+                width: calc(
                     (
-                        (100% -
-                            (#{$tn-col-width-gutter} * #{12 - 1})
-                            )/
-                            #{12}
-                            )
-                        * #{$i}
-                    )
-                    +
-                    ( #{$tn-col-width-gutter}*#{$i - 1} )
-            );
+                        (
+                            (100% -
+                                (#{$tn-width--gutter} * #{12 - 1})
+                                )/
+                                #{12}
+                                )
+                            * #{$i}
+                        )
+                        +
+                        ( #{$tn-width--gutter}*#{$i - 1} )
+                );
+            }
         }
     }
-
-
 }

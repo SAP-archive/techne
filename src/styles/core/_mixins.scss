@@ -13,13 +13,13 @@ $ns: ns();
   }
 }
 
-@mixin at-media($size, $dimension: width) {
-  @if map-has-key($breakpoints, $size) {
-    @media (min-#{$dimension}: map-get($breakpoints, $size)) {
+@mixin tn-at-media($size, $dimension: width) {
+  @if map-has-key($tn-breakpoints, $size) {
+    @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {
         @content;
     }
   } @else {
-    @warn "Unknown `#{$size}` in $breakpoints map";
+    @warn "Unknown `#{$size}` in $tn-breakpoints map";
   }
 }
 
