@@ -8,7 +8,6 @@ $block: ns(col);
 
 /*! */
 [class*="#{$block}"] {
-    background: white;
     @include tn-at-media(m) {
         height: 100px;
         float: left;
