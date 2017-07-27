@@ -1,0 +1,53 @@
+@import 'card';
+
+.tn-compact .tn-card {
+     @include tn-padding("compact", 4);
+     width: 300px;
+
+     &.tn-card-with-media {
+        width: 200px;
+        max-width: 200px;
+        padding: 0;
+
+        .tn-card-media {
+            min-width: 80px;
+            min-height: 80px;
+
+            &.tn-card-media-padding .tn-card-media-container {
+                    top: tn-get-spacing("compact", 2);
+                    bottom: tn-get-spacing("compact", 2);
+                    left: tn-get-spacing("compact", 2);
+                    right: tn-get-spacing("compact", 2);
+                    width: calc(100% - #{tn-get-spacing("compact", 4)});
+            }
+        }
+
+        &.tn-card-vertical {
+            width: 200px;
+
+            flex-direction: column;
+
+            .tn-card-media {
+                min-width: 200px;
+                min-height: 200px;
+            }
+        }
+        .tn-card-content {
+            @include tn-padding("compact", 4);
+        }
+
+    }
+
+}
+
+.tn-compact .tn-card-content {
+    @include tn-padding("compact", 4);
+}
+
+.tn-compact .tn-card-secondary-info {
+    margin: tn-get-spacing("compact", 1) 0 0 0;
+}
+
+.tn-compact .tn-card-label {
+    margin: tn-get-spacing("compact", 3) 0 0 0;
+}

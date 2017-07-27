@@ -22,3 +22,12 @@ body.tn-app { margin: 0; }
 .tn-card.tn-card-with-media .tn-card-content { flex: 2; padding: 32px; box-sizing: border-box; }
 .tn-card.tn-card-with-media.tn-card-vertical { max-width: 350px; width: auto; flex-direction: column; }
 .tn-card.tn-card-with-media.tn-card-vertical .tn-card-media { min-width: 348px; min-height: 350px; border-bottom: 1px solid #D4D9DE; }
+.tn-compact .tn-card { padding: 16px; width: 300px; }
+.tn-compact .tn-card.tn-card-with-media { width: 200px; max-width: 200px; padding: 0; }
+.tn-compact .tn-card.tn-card-with-media .tn-card-media { min-width: 80px; min-height: 80px; }
+.tn-compact .tn-card.tn-card-with-media .tn-card-media.tn-card-media-padding .tn-card-media-container { top: 8px; bottom: 8px; left: 8px; right: 8px; width: calc(100% - 16px); }
+.tn-compact .tn-card.tn-card-with-media.tn-card-vertical { width: 200px; flex-direction: column; }
+.tn-compact .tn-card.tn-card-with-media.tn-card-vertical .tn-card-media { min-width: 200px; min-height: 200px; }
+.tn-compact .tn-card-content, .tn-compact .tn-card.tn-card-with-media .tn-card-content { padding: 16px; }
+.tn-compact .tn-card-secondary-info { margin: 4px 0 0; }
+.tn-compact .tn-card-label { margin: 12px 0 0; }
