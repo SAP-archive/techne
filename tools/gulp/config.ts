@@ -15,7 +15,7 @@ export const TechneDist = join(__dirname, '../../dist/' /* , TechneVersion */);
 export const TechneCompiledFilename = 'techne.min.css';
 
 export const TechneSassPaths = [
-    './src/techne/**/*.scss'
+    './techne/**/*.scss'
 ]
 
 export const TechneCssComponentPaths = [
@@ -25,7 +25,7 @@ export const TechneCssComponentPaths = [
 export const SassConfig = {
     outputStyle: 'compact',
     includePaths: [
-        './src/techne'
+        './techne'
     ]
 }
 

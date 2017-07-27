@@ -5,7 +5,7 @@
     },
     "apps": [
         {
-            "root": "src",
+            "root": "website",
             "outDir": "www",
             "assets": [
                 {
@@ -42,7 +42,7 @@
             "testTsconfig": "tsconfig.spec.json",
             "prefix": "app",
             "styles": [
-                "techne/techne.scss",
+                "../techne/techne.compact.scss",
 
                 "../extra/prismjs/prism-vs.css",
                 "../node_modules/github-markdown-css/github-markdown.css"
