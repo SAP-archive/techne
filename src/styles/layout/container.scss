@@ -7,7 +7,7 @@ $block: ns(container);
     @include clearfix;
     padding: 0 $tn-padding--ui;
     max-width: $tn-max-width--ui;
-    margin-bottom: $margin-bottom;
+    margin-bottom: $tn-margin-bottom;
     &:last-child {
         margin-bottom: 0;
     }
