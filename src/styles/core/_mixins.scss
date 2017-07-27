@@ -1,26 +1,26 @@
 $ns: ns();
-@mixin reset() {
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $color;
+@mixin reset {
+    font-size: $tn-font-size;
+    line-height: $tn-line-height;
+    color: $tn-color;
 }
 
-@mixin clearfix() {
-  &:after {
-    content:'';
-    display:table;
-    clear:both;
-  }
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 @mixin screen($size, $dimension: width) {
-  @if map-has-key($breakpoints, $size) {
-    @media (min-#{$dimension}: map-get($breakpoints, $size)) {
-        @content;
+    @if map-has-key($tn-breakpoints, $size) {
+        @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {
+            @content;
+        }
+    } @else {
+        @warn "Unknown `#{$size}` in $breakpoints map";
     }
-  } @else {
-    @warn "Unknown `#{$size}` in $breakpoints map";
-  }
 }
 
 @mixin print() {
@@ -36,9 +36,9 @@ $ns: ns();
 @mixin tn-type($size: "0", $font: default, $weight: default, $transform: default) {
 
     //get type map — set default to 0
-    $list: map-get($type, "0");
-    @if map-has-key($type, $size) {
-        $list: map-get($type, $size);
+    $list: map-get($tn-type, "0");
+    @if map-has-key($tn-type, $size) {
+        $list: map-get($tn-type, $size);
     } @else {
         @warn "Unknown `#{$size}` in $type map";
     }
@@ -47,16 +47,16 @@ $ns: ns();
     //HANDLE TYPE FACE
     @if $font != default {
         //explicitly
-        @if map-has-key($fonts, $font) {
-            font-family: map-get($fonts, $font);
+        @if map-has-key($tn-fonts, $font) {
+            font-family: map-get($tn-fonts, $font);
         } @else {
-            @warn "Unknown `#{$font}` in $fonts map";
+            @warn "Unknown `#{$tn-font}` in $fonts map";
         }
     } @else {
         //implicity
         $_font: nth($list, 3);
         @if $_font != body {
-            font-family: map-get($fonts, $_font);
+            font-family: map-get($tn-fonts, $_font);
         }
     }
     //HANDLE WEIGHT
