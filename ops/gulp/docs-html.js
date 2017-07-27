@@ -67,6 +67,10 @@ const buildDocs = () => {
 				debug: environment.debug,
 			}
 		}))
+        .on('error', function(err) {
+            // err is the error thrown by the Nunjucks compiler.
+            handleErrors(err);
+        })
 		//.pipe(debug())
         .pipe(gulp.dest(paths.dest.root))
 }

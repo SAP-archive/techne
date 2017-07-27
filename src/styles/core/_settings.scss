@@ -1,7 +1,7 @@
 @import "functions";
 
 //library namespace
-$namespace: tn !default;
+$tn-namespace: tn !default;
 
 //breakpoints
 $tn-breakpoints: (
@@ -25,7 +25,7 @@ $tn-spacing: (
 ) !default;
 
 //type
-$type: (
+$tn-type: (
     -3: 0.75rem (16/12) body bold uppercase,	//12/16
     -2: 0.8125rem (18/13) body reg none,	//13/18
     -1: 0.875rem (20/14) body reg none,	//14/18
@@ -38,26 +38,13 @@ $type: (
 ) !default;
 
 //fonts
-$fonts: (
+$tn-fonts: (
     body: #{"'Open Sans'", sans-serif},
     header: #{"Dosis", sans-serif},
     code: #{"Courier", sans-serif},
 ) !default;
 
 //colors
-$colors: (
-    brand: #006fbb,
-    accent: #fbc100,
-    action: #009cdf,
-    success: #61bf33,
-    warning: #e96b1a,
-    error: #df1919,
-    lightest: #eef1f3,
-    light: #d7d7d7,
-    dark: #7f90a4,
-    darkest: #21262c,
-) !default;
-
 $tn-colors: (
     brand: (
         1: #006fbb,
@@ -102,26 +89,26 @@ $tn-max-width--ui: map-get($tn-breakpoints,xl) !default;
 $tn-width--gutter: tn-space(reg) !default;
 
 //type
-$font-family: map-get($fonts,body) !default;
-$font-family--header: map-get($fonts,header) !default;
-$font-family--code: map-get($fonts,code) !default;
-$font-size: nth(map-get($type,0), 1) !default;
-$line-height: nth(map-get($type,0), 2) !default;
+$tn-font-family: map-get($tn-fonts,body) !default;
+$tn-font-family--header: map-get($tn-fonts,header) !default;
+$tn-font-family--code: map-get($tn-fonts,code) !default;
+$tn-font-size: nth(map-get($tn-type,0), 1) !default;
+$tn-line-height: nth(map-get($tn-type,0), 2) !default;
 
 //baseline
-$color: tn-color(text) !default;
-$background-color: tn-color(inverse) !default;
+$tn-color: tn-color(text) !default;
+$tn-background-color: tn-color(inverse) !default;
 
 //positioning
-$margin-bottom: tn-space() !default;
+$tn-margin-bottom: tn-space() !default;
 
 //interactive
-$color--link: tn-color(action) !default;
-$color--link-hover: tn-color(action) !default;
-$color--button: tn-color(text,2) !default;
-$background-color--button: tn-color(neutral,1) !default;
+$tn-color--link: tn-color(action) !default;
+$tn-color--link-hover: tn-color(action) !default;
+$tn-color--button: tn-color(text,2) !default;
+$tn-background-color--button: tn-color(neutral,1) !default;
 
 //states
-$color--error: tn-color(status,error) !default;
-$color--warning: tn-color(status,warning) !default;
-$color--success: tn-color(status,success) !default;
+$tn-color--error: tn-color(status,error) !default;
+$tn-color--warning: tn-color(status,warning) !default;
+$tn-color--success: tn-color(status,success) !default;
