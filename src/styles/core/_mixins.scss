@@ -13,14 +13,14 @@ $ns: ns();
     }
 }
 
-@mixin screen($size, $dimension: width) {
-    @if map-has-key($tn-breakpoints, $size) {
-        @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {
-            @content;
-        }
-    } @else {
-        @warn "Unknown `#{$size}` in $breakpoints map";
+@mixin tn-at-media($size, $dimension: width) {
+  @if map-has-key($tn-breakpoints, $size) {
+    @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {
+        @content;
     }
+  } @else {
+    @warn "Unknown `#{$size}` in $tn-breakpoints map";
+  }
 }
 
 @mixin print() {
