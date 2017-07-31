@@ -1,0 +1,47 @@
+# Components sidebar
+entries:
+- title: Components
+  folders: 
+
+  - title: Structure
+    output: web
+    folderitems:
+    - title: Overview
+      url: /components.html
+      output: web
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web
+
+  - title: Colors
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web  
+
+  - title: Typography
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web  
+
+  - title: Typography
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web

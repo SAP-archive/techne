@@ -1,0 +1,20 @@
+# Styles sidebar
+entries:
+- title: Sidebar
+  product: Techne
+  version: 2.0
+  folders:
+
+  - title: Styles
+    output: web
+    folderitems:
+    - title: Styles
+      url: /styles.html
+      output: web
+
+  - title: Section Heading
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web

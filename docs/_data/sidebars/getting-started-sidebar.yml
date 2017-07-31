@@ -1,0 +1,27 @@
+# getting started sidebar
+entries:
+- title: Getting Started
+  folders:
+
+  - title: Section Heading
+    output: web
+    folderitems:
+    - title: Overview
+      url: /getting-started.html
+      output: web
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web
+
+  - title: Section Heading
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web    
+    - title: Link Label
+      url: /
+      output: web
