@@ -1,0 +1,26 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: Link 1
+      url: /
+    - title: Link 2
+      url: /news    
+    - title: Link 3
+      url: /news
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Link 3
+      folderitems:
+        - title: Sub link 1
+          url: /
+        - title: Sub Link 2 
+          url: /
+        - title: Sub Link 3
+          url: /
+        - title: Sub Link 4
+          url: /
