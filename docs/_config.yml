@@ -115,3 +115,5 @@ url:
 
 # Server Config options
 # livereload: true     # You no longer need to include --livereload
+
+keep_files: [css/techne.css, css/techne-icons.svg]
