@@ -3,18 +3,58 @@ entries:
 - title: Sidebar
   product: Techne
   version: 2.0
+
   folders:
 
-  - title: Styles
+  - title: Colors
+    url: colors.html
     output: web
+
     folderitems:
-    - title: Styles
-      url: /styles.html
+
+    - title: Group
+      url: /colors.html#group
       output: web
 
-  - title: Section Heading
+    - title: Function
+      url: /colors.html#function
+      output: web
+
+    - title: Helpers
+      url: /colors.html#helpers
+      output: web
+
+  - title: Type
     output: web
+    url: type.html
     folderitems:
-    - title: Link Label
-      url: /
+
+    - title: Sizes
+      url: /type.html#sizes
+      output: web
+          
+    - title: Mixins
+      url: /type.html#mixins
+      output: web
+          
+    - title: Helpers
+      url: /type.html#helpers
+      output: web
+
+  - title: Spacing
+    url: spacing.html
+    output: web
+
+    folderitems:
+
+    - title: Sizes
+      url: /spacing.html#sizes
+      output: web
+          
+    - title: Function
+      url: /spacing.html#function
+      output: web
+          
+    - title: Helpers
+      url: /spacing.html#helpers
       output: web

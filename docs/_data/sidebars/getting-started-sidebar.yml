@@ -1,27 +1,28 @@
 # getting started sidebar
 entries:
-- title: Getting Started
+- title: 
   folders:
 
-  - title: Section Heading
+  - title: Getting Started
     output: web
     folderitems:
-    - title: Overview
+
+    - title: Getting Started
       url: /getting-started.html
       output: web
-    - title: Link Label
-      url: /
-      output: web    
-    - title: Link Label
-      url: /
-      output: web
 
-  - title: Section Heading
-    output: web
-    folderitems:
-    - title: Link Label
+    - title: Starter Pages
+      url: /
+      output: web   
+
+    - title: Design Resources
       url: /
       output: web    
-    - title: Link Label
+
+    - title: Contribute
+      url: /
+      output: web    
+
+    - title: Troubleshooting
       url: /
       output: web
