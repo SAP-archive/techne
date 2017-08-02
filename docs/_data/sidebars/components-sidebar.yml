@@ -1,47 +1,211 @@
 # Components sidebar
 entries:
 - title: Components
-  folders: 
 
+
+  folders: 
   - title: Structure
     output: web
+    ur: /
+
     folderitems:
-    - title: Overview
-      url: /components.html
-      output: web
-    - title: Link Label
-      url: /
-      output: web    
-    - title: Link Label
+    - title: Gird
       url: /
       output: web
 
-  - title: Colors
-    output: web
-    folderitems:
-    - title: Link Label
+    - title: Panels
       url: /
       output: web    
-    - title: Link Label
+
+    - title: Spacing
+      url: /
+      output: web
+
+    - title: Layouts
+      url: /
+      output: web
+
+
+  - title: Containers
+    url: /
+    output: web
+
+    folderitems:
+    - title: Card
+      url: /
+      output: web 
+
+    - title: Product Thumbmail
       url: /
       output: web  
 
-  - title: Typography
-    output: web
-    folderitems:
-    - title: Link Label
-      url: /
-      output: web    
-    - title: Link Label
+    - title: Images / Avatars
       url: /
       output: web  
 
-  - title: Typography
+
+  - title: Collections
+    url: /
     output: web
+
     folderitems:
-    - title: Link Label
+    - title: List
       url: /
       output: web    
-    - title: Link Label
+
+    - title: Table
+      url: /
+      output: web  
+
+    - title: Tree
+      url: /
+      output: web 
+
+    - title: Cards
+      url: /
+      output: web 
+      
+    - title: Product Grid
       url: /
       output: web
+
+
+  - title: Actions
+    url: /
+    output: web
+
+    folderitems:
+    - title: Buttons
+      url: /
+      output: web    
+
+    - title: Links
+      url: /
+      output: web
+
+    - title: Contextual Menu
+      url: /
+      output: web
+
+    - title: Expandable Button
+      url: /
+      output: web
+
+
+  - title: Modals
+    url: /
+    output: web
+
+    folderitems:
+    - title: Informational Modal
+      url: /
+      output: web    
+
+    - title: Decision Modal
+      url: /
+      output: web    
+
+    - title: Form Modal
+      url: /
+      output: web   
+
+
+  - title: Forms
+    url: /
+    output: web
+
+    folderitems:
+    - title: Inputs
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Textarea
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Check box
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Dropdown
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Multi-tab Editor
+      url: /
+      output: web    
+
+
+  - title: Navigation
+    url: /
+    output: web
+
+    folderitems:
+    - title: Main Bar
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Side Bar
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Tabs
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Action Bar
+      url: /
+      output: web    
+
+    folderitems:
+    - title: Pagination
+      url: /
+      output: web    
+
+
+  - title: Guideance & Indicators
+    url: /
+    output: web
+
+    folderitems:
+    - title: Tooltip
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Loading Indicators
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Icons
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Alerts
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Tours
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Wizards
+      url: /
+      output: web          
+
+    folderitems:
+    - title: Status Indicators
+      url: /
+      output: web          
+

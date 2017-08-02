@@ -1,15 +1,14 @@
 # getting started sidebar
 entries:
-- title: 
-  folders:
+- title: Getting Started
 
-  - title: Getting Started
+
+  folders:
+  - title: Setup
+    url: 
     output: web
     folderitems:
 
-    - title: Getting Started
-      url: /getting-started.html
-      output: web
 
     - title: Starter Pages
       url: /

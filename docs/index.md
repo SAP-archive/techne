@@ -1,7 +1,7 @@
 ---
-title: Home page
+title: Home page test
 keywords: sample homepage
-tags: 
+tags: home
 permalink: index.html
 toc: false
 hide_sidebar: true
