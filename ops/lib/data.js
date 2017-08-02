@@ -13,18 +13,18 @@ var getPageDirectory = (file) => {
  }
 
 
-var setDocsAppData = () => {
-  try {
-    let app = require('../../docs/data/app.json');
-    return app;
-  } catch(err) {
-    console.log(err.message);
-  }
-  return {};
-}
+// var setDocsAppData = () => {
+//   try {
+//     let app = require('../../docs/data/app.json');
+//     return app;
+//   } catch(err) {
+//     console.log(err.message);
+//   }
+//   return {};
+// }
 
 
-let app = setDocsAppData();
+// let app = setDocsAppData();
 
 /*
 reads and outputs the app.json file
