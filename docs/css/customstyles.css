@@ -284,11 +284,17 @@ li.dropdownActive a {
     color: orange;
 }
 
+.navbar-inverse{
+    background-color: #008dee;
+}
 
 .navbar-inverse .navbar-nav > li > a {
     background-color: transparent;
     margin-top:10px;
+    color: #fff;
 }
+
+
 
 .post-content .rssfeedLink {
     color: #248EC2;
@@ -421,9 +427,15 @@ ul#mysidebar {
     border-radius: 5px;
 }
 
+
 span.projectTitle {
     font-family: Helvetica;
     font-weight: bold;
+    color: #fff;
+}
+
+span.projectTitle img{
+    width:30px;
 }
 
 .footer {

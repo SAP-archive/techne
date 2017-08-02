@@ -5,13 +5,13 @@ repository: saadmhybris/jeykll
 output: web
 
 # this appears on the top navigation bar next to the home button
-topnav_title: Techne V2.0
+topnav_title: TECHNE
 
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-site_title: Techne V2.0
+site_title: TECHNE
 
 # this appears in the footer
-company_name: Techne V2.0
+company_name: TECHNE
 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 github_editme_path: 
