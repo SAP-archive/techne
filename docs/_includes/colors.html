@@ -1,0 +1,12 @@
+<ul>
+{% for colors in site.data.colors %}
+  <li>
+      Group Name: {{ colors.group }}
+    <ul>
+        <li>{{ colors.groupcolors }}</li>
+        <li>{{ colors.groupcolors.name }}</li>
+        <li>{{ colors.value }}</li>
+    </ul>     
+  </li>
+{% endfor %}
+</ul>

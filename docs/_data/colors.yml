@@ -1,0 +1,77 @@
+# Brad group colors
+- group: brand
+
+  groupcolors:
+  - name: 1
+  - value: 006fbb
+
+  - name: 2
+  - value: 27394f
+
+# Text group Colors
+- group: text
+
+  groupcolors:
+  - name: 1
+  - value: 21262c
+
+  - name: 2
+  - value: 7f90a4
+
+  - name: 3
+  - value: 63758b
+
+# Inverse group colors
+- group: inverse
+
+  groupcolors:
+  - name: 1
+  - value: ffffff
+
+  - name: 2
+  - value : f6f8f9
+
+  - name: 3
+  - value: eef1f3
+
+# Action group colors 
+- group: action
+
+  groupcolors:
+  - name: 1
+  - value : 009cdf
+
+  - name: 2
+  - value: 00a5ec
+
+  - name: 3
+  - value: 0093d1
+
+# Netural Group Colors
+- group: neutral
+
+  groupcolors:
+  - name: 1
+  - value: f9fbfc
+
+  - name: 2
+  - value: d7d7d7
+
+  - name: 3
+  - value: ccdaeb
+
+# Success Group colors
+- group: status
+
+  groupcolors:
+  - name: success
+  - value: 61bf33
+
+  - name: warning
+  - value: e96b1a
+
+  - name: error
+  - value: df1919
+
+
+
