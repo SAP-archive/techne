@@ -119,6 +119,6 @@ $tn-color--button: tn-color(text,2) !default;
 $tn-background-color--button: tn-color(neutral,1) !default;
 
 //states
-$color--error: tn-color(status, 5) !default;
-$color--warning: tn-color(status, 3) !default;
-$color--success: tn-color(status, 1) !default;
+$tn-color--error: tn-color(status, 5) !default;
+$tn-color--warning: tn-color(status, 3) !default;
+$tn-color--success: tn-color(status, 1) !default;
