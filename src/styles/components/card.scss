@@ -19,7 +19,7 @@ $block: ns(card);
     $tn-card-media-width: 75px !default;
     $tn-card-color-border: tn-color(neutral,2) !default;
     $tn-card-color-disabled: tn-color(text,3) !default;
-    $tn-card-background-color: tn-color(text-inverse) !default;
+    $tn-card-background-color: $background-color !default;
     $tn-card-background-color-disabled: tn-color(neutral,1) !default;
     $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-time-hover: 0.2s !default;
