@@ -1,77 +1,76 @@
-# Brad group colors
-- group: brand
+group:
 
-  groupcolors:
-  - name: 1
-  - value: 006fbb
+# Brand Colors  
+- name: Brand
+  colors:
+  - colorname: 1
+    colorvalue: 006fbb
 
-  - name: 2
-  - value: 27394f
+  - colorname: 2
+    colorvalue: 27394f
 
-# Text group Colors
-- group: text
+  - colorname: color 3
+    colorvalue: ddd
 
-  groupcolors:
-  - name: 1
-  - value: 21262c
+# Text Colors
+- name: Text
+  colors:
+  - colorname: 1
+    colorvalue: 21262c
 
-  - name: 2
-  - value: 7f90a4
+  - colorname: 2
+    colorvalue: 7f90a4
 
-  - name: 3
-  - value: 63758b
+  - colorname: 3
+    colorvalue: 63758b
 
-# Inverse group colors
-- group: inverse
+# Inverse Colors
+- name: Inverse
+  colors:
+  - colorname: 1
+    colorvalue: ffffff
 
-  groupcolors:
-  - name: 1
-  - value: ffffff
+  - colorname: 2
+    colorvalue: f6f8f9
 
-  - name: 2
-  - value : f6f8f9
+  - colorname: 3
+    colorvalue: eef1f3
 
-  - name: 3
-  - value: eef1f3
+# Action Colors
+- name: Action
+  colors:
+  - colorname: 1
+    colorvalue: 009cdf
 
-# Action group colors 
-- group: action
+  - colorname: 2
+    colorvalue: 00a5ec
 
-  groupcolors:
-  - name: 1
-  - value : 009cdf
+  - colorname: 3
+    colorvalue: 0093d1
 
-  - name: 2
-  - value: 00a5ec
+# Neutral Colors
+- name: Neutral
+  colors:
+  - colorname: 1
+    colorvalue: f9fbfc
 
-  - name: 3
-  - value: 0093d1
+  - colorname: 2
+    colorvalue: d7d7d7
 
-# Netural Group Colors
-- group: neutral
+  - colorname: 3
+    colorvalue: ccdaeb
 
-  groupcolors:
-  - name: 1
-  - value: f9fbfc
+# Status Colors
+- name: Status
+  colors:
+  - colorname: success
+    colorvalue: 61bf33
 
-  - name: 2
-  - value: d7d7d7
+  - colorname: warning
+    colorvalue: e96b1a
 
-  - name: 3
-  - value: ccdaeb
-
-# Success Group colors
-- group: status
-
-  groupcolors:
-  - name: success
-  - value: 61bf33
-
-  - name: warning
-  - value: e96b1a
-
-  - name: error
-  - value: df1919
+  - colorname: error
+    colorvalue: df1919
 
 
 

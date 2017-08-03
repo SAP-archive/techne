@@ -1,12 +1,18 @@
-<ul>
-{% for colors in site.data.colors %}
-  <li>
-      Group Name: {{ colors.group }}
-    <ul>
-        <li>{{ colors.groupcolors }}</li>
-        <li>{{ colors.groupcolors.name }}</li>
-        <li>{{ colors.value }}</li>
-    </ul>     
-  </li>
+
+{% for group in site.data.colors.group %}
+
+    <h3>{{ group.name }} </h3>
+
+    <ul>    
+    {% for colors in group.colors %}        
+        <li style="background-color: #{{ colors.colorvalue }}; 
+                   padding:20px; 
+                   color:#fff; 
+                   border:2px solid #ddd">
+            {{ colors.colorname }} <br>
+            {{ colors.colorvalue }}
+        </li>
+    {% endfor %}
+    </ul>
+
 {% endfor %}
-</ul>
