@@ -76,7 +76,7 @@ entries:
 
     folderitems:
     - title: Buttons
-      url: /
+      url: /buttons.html
       output: web    
 
     - title: Links

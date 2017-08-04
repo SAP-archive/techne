@@ -1,0 +1,24 @@
+---
+title: Components
+keywords: components
+sidebar: components-sidebar
+toc: false
+permalink: components.html
+folder: components
+summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nobis cupiditate illo, autem consequatur tempore! Numquam nobis blanditiis, maxime, molestias reprehenderit libero beatae fugit officiis incidunt? Libero voluptas molestiae, iste.
+---
+
+{% for component in site.pages %}
+    {% if component.type == 'button' %}
+        
+        {{ component.title }}
+        <br>
+        {{ component.content }}
+        <br>
+{% highlight html %}
+{{ component.content }}
+{% endhighlight %}
+        <br>
+        
+    {% endif %}
+{% endfor %}
