@@ -26,7 +26,7 @@ $block: ns(button);
     $button-background-color: $background-color--button !default;
     $button-background-color-primary: tn-color(action) !default;
     $button-background-color-secondary: tn-color(action,2) !default;
-    $button-color-inverse: tn-color(inverse) !default;
+    $button-color-inverse: tn-color(text-inverse) !default;
 
     //BASE
     //set all reset and baseline block styles

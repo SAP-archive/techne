@@ -9,8 +9,8 @@ $block: ns(ui);
 .#{$block} {
     $tn-ui-header-height: 60px !default;
     $tn-ui-header-fixed: true !default;
-    $tn-ui-header-background-color: tn-color(brand) !default;
-    $tn-ui-sidebar-background-color: tn-color(brand,2) !default;
+    $tn-ui-header-background-color: tn-color(primary) !default;
+    $tn-ui-sidebar-background-color: tn-color(primary,2) !default;
 
     &__header {
         background: $tn-ui-header-background-color;
