@@ -1,5 +1,5 @@
 
-repository: saadmhybris/jeykll
+repository: /SAP/techne
 
 # this property is useful for conditional filtering of content that is separate from the PDF. 
 output: web
@@ -33,7 +33,7 @@ exclude:
   - .idea/
   - .gitignore
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: Techne Documentation Feedback
 
 # used as a contact email for the Feedback link in the top navigation bar
 feedback_email: techne@sap.com
@@ -107,7 +107,7 @@ sidebars:
 - tutorials-sidebar
 
 
-description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati esse necessitatibus consequatur, maiores fuga porro cupiditate ipsa dolores saepe eos, enim rem libero est natus temporibus accusamus dolor facere tempora."
+description: ""
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
