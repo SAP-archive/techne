@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title Card
+    style
+  body
+    h1 #{id}
+
+    //- Declaration
+    mixin card(modifiers=[], states=[], title="")
+      div(class=['tn-card'] class=modifiers)
+        div= title
+    //- Use
+    +card(['button'], "Hello")
