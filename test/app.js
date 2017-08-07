@@ -1,37 +1,31 @@
-var nunjucks = require('nunjucks');
-var express = require('express');
-var path = require('path');
-var app = express();
-var router = express.Router();
-var sass = require('node-sass');
+const nunjucks = require('nunjucks');
+const express = require('express');
+const path = require('path');
+const app = express();
+const router = express.Router();
+const sass = require('node-sass');
 
-var TEMPLATE_DIRECTORY = path.join(__dirname, 'templates');
-var CSS_DIRECTORY = path.join(__dirname, 'public');
+const TEMPLATE_DIRECTORY = path.join(__dirname, 'templates');
+const PUBLIC_DIRECTORY = path.join(__dirname, 'public');
+const SASS_DIRECTORY = "../src/styles/components"; //this should move to /scss
 
-var SASS_DIRECTORY = "../scss/components";
-
-var sassToCss = function(sassFile="app.scss") {
-    var scss_filename = `${CSS_DIRECTORY}/${sassFile}`;
-    return sass.renderSync({
-        file: scss_filename
-    }).css.toString();
-
-}
-console.log(sassToCss());
-
-
-// looks for html in views folder relative to current working directory
-var env = nunjucks.configure([TEMPLATE_DIRECTORY,CSS_DIRECTORY], {
+// looks for html in templates folder, static resources in public
+var env = nunjucks.configure([TEMPLATE_DIRECTORY,PUBLIC_DIRECTORY], {
     autoescape: true,
     cache: false,
     express: app,
     watch: true
 });
+// convert SASS to CSS from the lib source
 env.addFilter('sassToCss', function(sassFile="app.scss") {
-    var scss_filename = `${SASS_DIRECTORY}/${sassFile}`;
-    return sass.renderSync({
-        file: scss_filename
-    }).css.toString();
+    try {
+        var scss_filename = `${SASS_DIRECTORY}/${sassFile}`;
+        return sass.renderSync({
+            file: scss_filename
+        }).css.toString();
+    } catch(err) {
+        console.warn(`sassToCss: ${err.message}`);
+    }
 });
 
 app.set('views', TEMPLATE_DIRECTORY);
@@ -41,24 +35,23 @@ app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var data = {
-    css: 'app',
-    name: 'foo'
-} ;
+const GLOBALS = {
+    namespace: 'tn'
+};
 
 router.all('/', function (req, res, next) {
-  console.log('Someone made a request!');
+  //console.log('request initiated!');
   next();
 });
 
 router.get('/', function (req, res) {
-  res.render('index', data);
+  res.render('index', GLOBALS);
 });
 
-router.get('/component/:key', (req, res) => {
+router.get('/:key', (req, res) => {
     var key = req.params.key;
-    console.log(key)
-    res.render(key, { id: key });
+    //console.log(key)
+    res.render(key, Object.assign(GLOBALS, { id: key }));
 });
 
 app.listen(3030);

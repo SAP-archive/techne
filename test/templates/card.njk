@@ -1,6 +1,4 @@
-{% set cssFile = "../public/" + key + ".css" %}
 <style media="screen">
-    {% include cssFile %}
+    {{ "card.scss" | sassToCss }}
 </style>
-
-<h1> {{id}} </h1>
+{{ namespace }}
