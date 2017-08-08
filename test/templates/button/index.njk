@@ -1,0 +1,111 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import button %}
+{% from "./../format.njk" import format %}
+{% set css_deps = ['helpers'] %}
+
+{% block content %}
+
+<h1>Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['small']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['large']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['large']
+            },
+            state={
+                disabled: true
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Text Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text','small']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text']
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+
+<h1>Icon Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                icon: ['top']
+            })
+    }}
+
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                icon: ['left']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                icon: ['small','left']
+            })
+    }}
+
+{% endset %}
+{{ format(example) }}
+
+
+
+{% endblock %}

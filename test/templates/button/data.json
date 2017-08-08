@@ -1,0 +1,16 @@
+{
+    "properties": {
+        "label": "BUTTON_LABEL",
+        "icon": "ICON_NAME"
+    },
+    "modifier": {
+        "block": ["small", "large", "text"],
+        "icon": ["top", "before", "after"]
+    },
+    "state": {
+        "disabled": false
+    },
+    "aria": {
+
+    }
+}

@@ -23,14 +23,21 @@ $block: ns(button);
 
 .#{$block} {
     //SETTINGS
-    $button-background-color: $background-color--button !default;
-    $button-background-color-primary: tn-color(action) !default;
-    $button-background-color-secondary: tn-color(action,2) !default;
-    $button-color-inverse: tn-color(text-inverse) !default;
+    $tn-button-color: tn-color(text-inverse) !default;
+    $tn-button-background-color: tn-color(action) !default;
+    $tn-button-color-hover: $tn-button-color !default;
+    $tn-button-background-color-hover: tn-color(action,3) !default;
+    $tn-button-color-disabled: tn-color(text,2) !default;
+    $tn-button-background-color-disabled: tn-color(neutral) !default;
+
+    $tn-button-color-inverse: tn-color(text,2) !default;
+
 
     //BASE
     //set all reset and baseline block styles
-    @include reset;
+    @include tn-type(2,header,semi);
+//    @include tn-weight(semi);
+    line-height: 1 !important;
     font-smoothing: antialiased;
     appearance: none;
     outline: 0;
@@ -42,47 +49,65 @@ $block: ns(button);
     vertical-align: middle;
     white-space: nowrap;
     align-items: flex-start;
-    padding: 20px 40px;
-    background-color: $button-background-color;
+    background-color: $tn-button-background-color;
+    color: $tn-button-color;
+    padding-left: tn-space(reg);
+    padding-right: tn-space(reg);
+    max-height: tn-space(13);
+    height: tn-space(13);
+    //adjustment for anchors
+    @at-root {
+        a.#{$block} {
+            padding-top: tn-space(4);
+        }
+    }
+    &--small {
+        @include tn-type(0);
+        max-height: tn-space(10);
+        height: tn-space(10);
+        //adjustment for anchors
+        @at-root {
+            a.#{$block} {
+                &--small {
+                    padding-top: tn-space(3);
+                }
+            }
+        }
+    }
+    &--large {
+        @include tn-type(3);
+        max-height: tn-space(20);
+        height: tn-space(20);
+        //adjustment for anchors
+        @at-root {
+            a.#{$block} {
+                &--large {
+                    padding-top: tn-space(6.5);
+                }
+            }
+        }
+    }
+    &--text {
+        color: $tn-button-color-inverse;
+        background-color: $tn-button-background-color-disabled;
+    }
+    &:hover {
+        background-color: $tn-button-background-color-hover;
+        color: $tn-button-color-hover;
+    }
+    &:focus {
+        background-color: $tn-button-background-color-hover;
+        color: $tn-button-color-hover;
+    }
+    &:active {
+        background-color: $tn-button-background-color-hover;
+        color: $tn-button-color-hover;
+    }
+    &[aria-disabled="true"], &.is-disabled {
+        outline: solid 1px tn-color(neutral,2);
+        color: $tn-button-color-disabled;
+        background-color: $tn-button-background-color-disabled;
+        cursor: not-allowed;
 
-    //VARIANTS
-    //each variant MUST extend base block
-    &--primary {
-        @extend .#{$block};
-        background-color: $button-background-color-primary;
-    }
-    &--secondary {
-        @extend .#{$block};
-        background-color: $button-background-color-secondary;
-        color: $button-color-inverse;
-    }
-    &--link {
-        @extend .#{$block};
-        background-color: $button-color-inverse;
-    }
-    &--upload {
-        @extend .#{$block};
-        background-color: $button-background-color-secondary;
-        color: $button-color-inverse;
-        position: relative;
-        overflow: hidden;
-        [type="file"] {
-            opacity: 0;
-            position: absolute;
-            padding: 20px 40px;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-    }
-    &--add {
-        @extend .#{$block};
-        @include tn-weight(bold);
-        width: 100%;
-        &::before {
-            @include tn-type(3);
-            @include tn-weight(reg);
-            content: "+";
-        }
     }
 }

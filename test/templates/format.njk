@@ -1,6 +1,5 @@
 {% macro format(content="") %}
 {{ content }}
-<br>
+<br><br>
 <textarea>{{ content | e | trim }}</textarea>
-
 {% endmacro %}
