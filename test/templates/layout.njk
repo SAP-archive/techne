@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ id }}</title>
     <style media="screen">
-{% set sass = id + '.scss'  %}
+    body { padding: 20px; }
+    textarea { font-family: monospace; height: 200px; width: 100%; padding: 10px; border-color: rgba(0,0,0,0.1); }
+{% set sass = 'core.scss'  %}
+{{ sass | sassToCss }}
+{% set sass = 'components/' + id + '.scss'  %}
 {{ sass | sassToCss }}
     </style>
 </head>
