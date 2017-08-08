@@ -7,15 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ id }}</title>
     <style media="screen">
-    body { padding: 20px; }
-    textarea { font-family: monospace; height: 200px; width: 100%; padding: 10px; border-color: rgba(0,0,0,0.1); }
-{% set sass = 'core.scss'  %}
-{{ sass | sassToCss }}
-{% set sass = 'components/' + id + '.scss'  %}
-{{ sass | sassToCss }}
+        body { padding: 20px; }
+        textarea { font-family: monospace; height: 200px; width: 100%; padding: 10px; border-color: rgba(0,0,0,0.1); }
+        {% set core_sass = 'core.scss' %}
+        {{ core_sass | sassToCss }}
+
+        {% set component_sass = 'components/' + id + '.scss'  %}
+        {{ component_sass | sassToCss }}
+
+        {% for sass in css_deps %}
+            {% set dep_sass = sass + '.scss' %}
+            {{ dep_sass | sassToCss }}
+        {% endfor %}
     </style>
 </head>
 <body>
+    {{ css }}
     {% block content %}
     {% endblock %}
 </body>
