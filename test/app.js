@@ -9,9 +9,13 @@ const TEMPLATE_DIRECTORY = path.join(__dirname, 'templates');
 const PUBLIC_DIRECTORY = path.join(__dirname, 'public');
 const SASS_DIRECTORY = "../src/styles/components"; //this should move to /scss
 
+const GLOBALS = {
+    namespace: 'tn'
+};
+
 // looks for html in templates folder, static resources in public
 var env = nunjucks.configure([TEMPLATE_DIRECTORY,PUBLIC_DIRECTORY], {
-    autoescape: true,
+    autoescape: false,
     cache: false,
     express: app,
     watch: true
@@ -27,6 +31,14 @@ env.addFilter('sassToCss', function(sassFile="app.scss") {
         console.warn(`sassToCss: ${err.message}`);
     }
 });
+// convert an array to classes
+env.addFilter('modifier', function(array=[],element="") {
+    var mods = array.map((mod) => {
+         return ` ${GLOBALS.namespace}-${element}--${mod}`;
+    })
+    //console.log(mods.join());
+    return mods.join('') ;
+});
 
 app.set('views', TEMPLATE_DIRECTORY);
 app.set('view engine', 'njk');
@@ -35,9 +47,6 @@ app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-const GLOBALS = {
-    namespace: 'tn'
-};
 
 router.all('/', function (req, res, next) {
   //console.log('request initiated!');
@@ -51,7 +60,7 @@ router.get('/', function (req, res) {
 router.get('/:key', (req, res) => {
     var key = req.params.key;
     //console.log(key)
-    res.render(key, Object.assign(GLOBALS, { id: key }));
+    res.render(`${key}/index`, Object.assign(GLOBALS, { id: key }));
 });
 
 app.listen(3030);
