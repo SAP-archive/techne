@@ -7,7 +7,7 @@
     "build": "",
     "start": "gulp",
     "install": "bower install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/app.js"
   },
   "repository": {
     "type": "git",
@@ -53,5 +53,10 @@
     "require-dir": "^0.3.1",
     "sass": "^1.0.0-beta.1",
     "yargs": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "node-sass": "^4.5.3",
+    "nunjucks": "^3.0.1"
   }
 }
