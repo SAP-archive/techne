@@ -6,37 +6,22 @@ $block: ns(button);
 
 /*! */
 
-
-// BUTTON
-//     - primary
-//     - secondary
-//     - upload
-//     - directional
-//     - icon
-//         - back to top
-//     - link
-//         - delete
-//         - cancel
-//         - back
-//         - next
-//     - add
-
 .#{$block} {
     //SETTINGS
     $tn-button-color: tn-color(text-inverse) !default;
     $tn-button-background-color: tn-color(action) !default;
     $tn-button-color-hover: $tn-button-color !default;
-    $tn-button-background-color-hover: tn-color(action,3) !default;
+    $tn-button-background-color-hover: darken($tn-button-background-color,5) !default;
+    $tn-button-color-active: $tn-button-color !default;
+    $tn-button-background-color-active: darken($tn-button-background-color,10) !default;
     $tn-button-color-disabled: tn-color(text,2) !default;
     $tn-button-background-color-disabled: tn-color(neutral) !default;
-
+    $tn-button-shadow-focus: 0 0 4px 1px rgba(tn-color(neutral,4),1) !default;
     $tn-button-color-inverse: tn-color(text,2) !default;
-
-
+    $tn-button-color-text: $tn-color--link !default;
     //BASE
     //set all reset and baseline block styles
     @include tn-type(2,header,semi);
-//    @include tn-weight(semi);
     line-height: 1 !important;
     font-smoothing: antialiased;
     appearance: none;
@@ -51,63 +36,96 @@ $block: ns(button);
     align-items: flex-start;
     background-color: $tn-button-background-color;
     color: $tn-button-color;
-    padding-left: tn-space(reg);
-    padding-right: tn-space(reg);
     max-height: tn-space(13);
     height: tn-space(13);
-    //adjustment for anchors
+    padding-left: tn-space(5);
+    padding-right: tn-space(5);
+    padding-top: tn-space(4);
+    text-transform: uppercase;
+    //adjustment for buttons
     @at-root {
-        a.#{$block} {
-            padding-top: tn-space(4);
+        button.#{$block}, [type="button"].#{$block} {
+            padding-top: 0;
         }
     }
     &--small {
         @include tn-type(0);
+        @include tn-weight(semi);
         max-height: tn-space(10);
         height: tn-space(10);
-        //adjustment for anchors
-        @at-root {
-            a.#{$block} {
-                &--small {
-                    padding-top: tn-space(3);
-                }
-            }
-        }
+        padding-left: tn-space(4);
+        padding-right: tn-space(4);
+        padding-top: tn-space(3);
     }
     &--large {
-        @include tn-type(3);
         max-height: tn-space(20);
         height: tn-space(20);
-        //adjustment for anchors
-        @at-root {
-            a.#{$block} {
-                &--large {
-                    padding-top: tn-space(6.5);
-                }
-            }
-        }
-    }
-    &--text {
-        color: $tn-button-color-inverse;
-        background-color: $tn-button-background-color-disabled;
+        padding-left: tn-space(7);
+        padding-right: tn-space(7);
+        padding-top: tn-space(7.3);
     }
     &:hover {
         background-color: $tn-button-background-color-hover;
         color: $tn-button-color-hover;
     }
     &:focus {
-        background-color: $tn-button-background-color-hover;
         color: $tn-button-color-hover;
+        box-shadow: $tn-button-shadow-focus;
+        outline: solid 2px lighten($tn-button-background-color,15);
     }
     &:active {
-        background-color: $tn-button-background-color-hover;
-        color: $tn-button-color-hover;
+        background-color: $tn-button-background-color-active;
+        color: $tn-button-color-active;
     }
     &[aria-disabled="true"], &.is-disabled {
         outline: solid 1px tn-color(neutral,2);
         color: $tn-button-color-disabled;
         background-color: $tn-button-background-color-disabled;
         cursor: not-allowed;
-
     }
+    &--text {
+        height: tn-space(7);
+        color: $tn-button-color-text;
+        background: transparent;
+        padding-left: tn-space(4);
+        padding-right: tn-space(4);
+        position: relative;
+        //adjustment for small button
+        &.#{$block}--small {
+            height: tn-space(6);
+        }
+        &::after {
+            content: "";
+            border-bottom: solid 2px transparent;
+            width: calc(100% - #{tn-space(4)}*2);
+            height: 2px;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            margin-left: tn-space(4);
+        }
+        &:hover,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            color: $tn-button-color-text;
+            background-color: transparent;
+            &::after {
+                border-bottom-color: $tn-button-color-text;
+            }
+        }
+        &:active {
+            color: darken($tn-button-color-text,10);
+            background-color: transparent;
+        }
+        &[aria-disabled="true"], &.is-disabled {
+            outline: none;
+            color: $tn-button-color-disabled;
+            background-color: transparent;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
 }

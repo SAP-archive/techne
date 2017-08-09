@@ -3,11 +3,9 @@
 #}
 {% macro button(properties={}, modifier={}, state={}, aria={}) %}
 <button class="tn-button{{ modifier.block | modifier('button') }}{{ ' is-disabled' if state.disabled }}"{{ ' aria-disabled="'+ state.disabled +'"' if state.disabled }}>
-<span class="tn-button__icon{{ modifier.icon | modifier('button__icon') }}">{{properties.icon}}</span>
-{{properties.label}}
+    {%- if properties.icon %}
+    <span class="tn-button__icon{{ modifier.icon | modifier('button__icon') }}">{{properties.icon}}</span>
+    {%- endif %}
+    {{properties.label}}
 </button>
-<a class="tn-button{{ modifier.block | modifier('button') }}{{ ' is-disabled' if state.disabled }}"{{ ' aria-disabled="'+ state.disabled +'"' if state.disabled }}>
-<span class="tn-button__icon{{ modifier.icon | modifier('button__icon') }}">{{properties.icon}}</span>
-{{properties.label}}
-</a>
-{% endmacro %}
+{%- endmacro %}

@@ -5,6 +5,7 @@
 
 {% block content %}
 
+
 <h1>Button</h1>
 {% set example %}
     {{  button(
@@ -31,6 +32,34 @@
             },
             modifier={
                 block: ['large']
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Button — Disabled</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['small']
+            },
+            state={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+            },
+            state={
+                disabled: true
             })
     }}
     {{  button(
@@ -66,6 +95,35 @@
             },
             modifier={
                 block: ['text']
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Text Button — Disabled</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text','small']
+            },
+            state={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text']
+            },
+            state={
+                disabled: true
             })
     }}
 {% endset %}

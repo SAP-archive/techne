@@ -25,6 +25,7 @@ $tn-spacing: (
 ) !default;
 
 //type
+$tn-type--base: 16px;
 $tn-type: (
     -3: 0.75rem (16/12) body bold uppercase,	//12/16
     -2: 0.8125rem (18/13) body reg none,	//13/18
