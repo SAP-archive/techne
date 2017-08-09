@@ -1,5 +1,5 @@
-body {
-    font-size:15px; 
+html,body {
+    font-size: inherit;
 }
 
 .bs-callout {
@@ -314,6 +314,15 @@ a.accordion-toggle, a.accordion-collapsed {
     text-decoration: none;
 }
 
+
+.sidebarTitle h2{
+    margin-bottom: 0;
+}
+
+.sidebarTitle h2 .anchorjs-link{
+    display: none;
+}
+
 /* navgoco sidebar styles (customized) */
 .nav, .nav ul, .nav li {
     list-style: none;
@@ -369,7 +378,8 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 .nav > li.active > a  {
-background-color: #347DBE;
+    background-color: #f1f1f1;
+    color: #333;
 }
 
 .nav li a {
@@ -383,6 +393,7 @@ background-color: #347DBE;
     font-size: 14px;
     line-height: 20px;
     padding: 4px 10px;
+    margin-top: 20px;
 }
 
 ul#mysidebar {

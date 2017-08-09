@@ -1,19 +1,15 @@
 ---
-title:  "Welcome to Jekyll!"
-categories: jekyll update
-permalink: myupdate.html
-tags: [news]
+title:  "Welcome to Techne!"
+categories: Techne update
+permalink: test.html
+tags: [news release-notes]
 ---
 
+Test:
 
-Theme updates:
-
-- Permalinks
-- Kramdown
-- URL specified in config file
-- removed PDF output
-- removed some of the alternative layouts
-- added blog feature
-- sidebars configurable per page
+- One
+- Two
+- Three
+- Four
 
 {% include links.html %}

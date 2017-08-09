@@ -32,7 +32,7 @@ entries:
 
     folderitems:
     - title: Card
-      url: /
+      url: /card.html
       output: web 
 
     - title: Product Thumbmail
