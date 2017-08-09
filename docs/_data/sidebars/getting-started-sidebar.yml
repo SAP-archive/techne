@@ -1,0 +1,27 @@
+# getting started sidebar
+entries:
+- title: Getting Started
+
+
+  folders:
+  - title: Setup
+    url: 
+    output: web
+    folderitems:
+
+
+    - title: Starter Pages
+      url: /
+      output: web   
+
+    - title: Design Resources
+      url: /
+      output: web    
+
+    - title: Contribute
+      url: /
+      output: web    
+
+    - title: Troubleshooting
+      url: /
+      output: web

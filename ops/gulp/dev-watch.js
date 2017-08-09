@@ -10,7 +10,7 @@ const paths = {
 const task = () => {
 
 	//watch docs templates and component templates
-	gulp.watch([`./docs/**/*.html`,`./src/**/*.html`], ['docs-html']);
+	gulp.watch([`./docs/**/*.html`,`./src/**/*.html`]);
 
 	//watch component styles
 	gulp.watch([`./src/**/*.scss`], ['pkg-css']);

@@ -15,7 +15,7 @@ $block: ns(card);
 .#{$block} {
     @include reset;
     //LOCAL VARS
-    $tn-card-width: 500px !default;
+    $tn-card-width: 600px !default;
     $tn-card-media-width: 75px !default;
     $tn-card-color-border: tn-color(neutral,2) !default;
     $tn-card-color-disabled: tn-color(text,3) !default;

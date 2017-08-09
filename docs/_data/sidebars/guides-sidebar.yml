@@ -1,0 +1,19 @@
+# Styles sidebar
+entries:
+- title: Sidebar
+
+  folders:
+
+  - title: Guides
+    output: web
+    folderitems:
+    - title: Guides
+      url: /guides.html
+      output: web
+
+  - title: Section Heading
+    output: web
+    folderitems:
+    - title: Link Label
+      url: /
+      output: web

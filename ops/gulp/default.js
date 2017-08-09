@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const gulpSequence = require('gulp-sequence');
 
 const task = (cb) => {
-    gulpSequence('docs-build', ['dev-serve', 'dev-watch'], cb);
+    gulpSequence('dev-jekyll', ['dev-serve', 'dev-watch'], 'docs-build', cb);
     const unicorn = `
  \
    \\

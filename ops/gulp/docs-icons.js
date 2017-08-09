@@ -4,7 +4,7 @@ let environment = require('../lib/environment');
 
 const paths = {
 	src: !environment.production ? './tmp/css' : './dist/css',
-	dest: './www/css'
+	dest: './docs/_site/css'
 }
 
 const task = (cb) => {
