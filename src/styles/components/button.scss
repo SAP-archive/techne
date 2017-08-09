@@ -33,7 +33,7 @@ $block: ns(button);
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    align-items: flex-start;
+    //align-items: flex-start;
     background-color: $tn-button-background-color;
     color: $tn-button-color;
     max-height: tn-space(13);
@@ -105,7 +105,8 @@ $block: ns(button);
             margin-left: tn-space(4);
         }
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             outline: none;
             box-shadow: none;
             color: $tn-button-color-text;
@@ -124,6 +125,58 @@ $block: ns(button);
             background-color: transparent;
             &::after {
                 display: none;
+            }
+        }
+    }
+    //icon modifier
+    &--icon {
+
+        &.#{$block}--large {
+            @include tn-type(-3);
+            .#{$block}__icon {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        //no underline for text buttons
+        &.#{$block}--text {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+
+    //ICON
+    &__icon {
+        //display: block;
+        //float: left;
+        display: inline-block;
+        position: relative;
+        top: 1px;
+        background: white;
+        margin-right: tn-space(3);
+        width: 26px;
+        height: 26px;
+        vertical-align: text-top;
+
+        //vertical-align: inherit;
+        @at-root {
+            .#{$block}--small & {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        @at-root {
+            .#{$block}--text & {
+                background-color: $tn-button-color-text;
+            }
+            .#{$block}--text:hover & {
+                background-color: darken($tn-button-color-text,5);
+            }
+            .#{$block}--text:active & {
+                background-color: darken($tn-button-color-text,10);
             }
         }
     }

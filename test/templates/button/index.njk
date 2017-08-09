@@ -138,7 +138,7 @@
                 icon: 'foo'
             },
             modifier={
-                icon: ['top']
+                block: ['small','icon']
             })
     }}
 
@@ -148,7 +148,7 @@
                 icon: 'foo'
             },
             modifier={
-                icon: ['left']
+                block: ['icon']
             })
     }}
     {{  button(
@@ -157,10 +157,29 @@
                 icon: 'foo'
             },
             modifier={
-                icon: ['small','left']
+                block: ['large','icon']
             })
     }}
+<br>
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['small','icon','text']
+        })
+}}
 
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['icon','text']
+        })
+}}
 {% endset %}
 {{ format(example) }}
 
