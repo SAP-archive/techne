@@ -17,7 +17,7 @@ const paths = {
 const task = (cb) => {
 
     //compile individual component files
-    var componentsList = [`${paths.src}/card.scss`]
+    var componentsList = [`${paths.src}/card.scss`, `${paths.src}/button.scss`]
 
     return gulp.src(componentsList)
         .pipe(sass().on('error', sass.logError))
