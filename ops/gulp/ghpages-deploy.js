@@ -3,7 +3,7 @@ const ghPages = require('gulp-gh-pages');
 const gulpSequence = require('gulp-sequence');
 
 const paths = {
-    srcPrepare:  ['./www/**/*','./README.md'],
+    srcPrepare:  ['./docs/_site/**/*','./README.md'],
     destPrepare: './ghpages',
     srcDeploy:   './ghpages/**/*'
 }
