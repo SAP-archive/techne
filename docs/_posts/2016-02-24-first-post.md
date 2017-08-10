@@ -11,5 +11,3 @@ Test:
 - Two
 - Three
 - Four
-
-{% include links.html %}
