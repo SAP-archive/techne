@@ -1,11 +1,13 @@
 {#
     see ./data.json for object structure
 #}
-{% macro button(properties={}, modifier={}, state={}, aria={}) %}
+{%- macro button(properties={}, modifier={}, state={}, aria={}) -%}
 <button class="tn-button{{ modifier.block | modifier('button') }}{{ ' is-disabled' if state.disabled }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}>
     {%- if properties.icon %}
     <span class="tn-button__icon{{ modifier.icon | modifier('button__icon') }} tn-icon tn-icon--{{ properties.icon }}" role="presentation"></span>
     {%- endif %}
+    {%- if properties.label %}
     {{properties.label}}
+    {%- endif %}
 </button>
 {%- endmacro %}
