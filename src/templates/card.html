@@ -1,0 +1,58 @@
+<!--
+CARD:
+    CONTENT ___
+    title="", (string | optional)
+    description="", (string | optional)
+    status="", (string | optional)
+    media="", (url | optional)
+    mediaAlt="", (string | optional)
+    actions="", (string | optional)
+
+    TYPE ___
+    modifier="", (string | optional)
+
+    STATES ___
+    mediaShape=false (string | optional)
+-->
+{% macro card(
+    title="",
+    description="",
+    status="",
+    modifier="",
+    compact=false,
+    button=false,
+    media="",
+    mediaAlt="",
+    mediaModifier="",
+    disabled=false,
+    actions="",
+    body="") %}
+<div class="tn-card{{ ' tn-card--' + modifier if modifier }}{{ ' tn-card--compact' if compact }}"{{ ' aria-disabled="true"' if disabled }}{{ ' role="button"' if button }}>
+    {%- if media %}
+    <div class="tn-card__media{{ ' tn-card__media--'+mediaModifier if mediaModifier }}" style="background-image: url({{ media }})" aria-label="{{ mediaAlt }}">
+    </div>
+    {%- endif %}
+    <div class="tn-card__content">
+    {%- if body -%}
+        {{ body }}
+    {%- else %}
+        <h2 class="tn-card__header">
+            {{ title }}
+        </h2>
+        <p class="tn-card__description">
+            {{ description }}
+        </p>
+        {%- if status %}
+        <p class="tn-card__status">
+            {{ status }}
+        </p>
+        {%- endif -%}
+    {%- endif %}
+    </div>
+    {%- if actions %}
+    <div class="tn-card__actions">
+        {{ actions }}
+    </div>
+    {%- endif %}
+</div>
+{% endmacro %}

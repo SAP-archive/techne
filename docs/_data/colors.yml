@@ -1,0 +1,76 @@
+group:
+
+# Brand Colors  
+- name: Brand
+  colors:
+  - colorname: 1
+    colorvalue: 006fbb
+
+  - colorname: 2
+    colorvalue: 27394f
+
+  - colorname: color 3
+    colorvalue: ddd
+
+# Text Colors
+- name: Text
+  colors:
+  - colorname: 1
+    colorvalue: 21262c
+
+  - colorname: 2
+    colorvalue: 7f90a4
+
+  - colorname: 3
+    colorvalue: 63758b
+
+# Inverse Colors
+- name: Inverse
+  colors:
+  - colorname: 1
+    colorvalue: ffffff
+
+  - colorname: 2
+    colorvalue: f6f8f9
+
+  - colorname: 3
+    colorvalue: eef1f3
+
+# Action Colors
+- name: Action
+  colors:
+  - colorname: 1
+    colorvalue: 009cdf
+
+  - colorname: 2
+    colorvalue: 00a5ec
+
+  - colorname: 3
+    colorvalue: 0093d1
+
+# Neutral Colors
+- name: Neutral
+  colors:
+  - colorname: 1
+    colorvalue: f9fbfc
+
+  - colorname: 2
+    colorvalue: d7d7d7
+
+  - colorname: 3
+    colorvalue: ccdaeb
+
+# Status Colors
+- name: Status
+  colors:
+  - colorname: success
+    colorvalue: 61bf33
+
+  - colorname: warning
+    colorvalue: e96b1a
+
+  - colorname: error
+    colorvalue: df1919
+
+
+

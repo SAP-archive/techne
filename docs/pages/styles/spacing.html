@@ -1,0 +1,186 @@
+---
+title: Spacing
+keywords: spacing
+sidebar: styles-sidebar
+toc: false
+permalink: spacing.html
+folder: styles
+---
+
+<section class="docs-section" id="spacing">
+
+
+<h2 id="spacing-sizes">Sizes</h2>
+
+<p>All heights and widths are calculated from a base unit.</p>
+
+
+<p><strong>4px | base</strong></p>
+<div style="height: 4px;" class="tn-has-background-color-neutral-3"></div>
+
+
+    <br>
+    <p><strong>8px | xs</strong></p>
+    <div style="height: 8px;" class="tn-has-background-color-neutral-3"></div>
+
+    <br>
+    <p><strong>12px | s</strong></p>
+    <div style="height: 12px;" class="tn-has-background-color-neutral-3"></div>
+
+    <br>
+    <p><strong>20px | reg</strong></p>
+    <div style="height: 20px;" class="tn-has-background-color-neutral-3"></div>
+
+    <br>
+    <p><strong>40px | m</strong></p>
+    <div style="height: 40px;" class="tn-has-background-color-neutral-3"></div>
+
+    <br>
+    <p><strong>100px | l</strong></p>
+    <div style="height: 100px;" class="tn-has-background-color-neutral-3"></div>
+
+    <br>
+    <p><strong>148px | xl</strong></p>
+    <div style="height: 148px;" class="tn-has-background-color-neutral-3"></div>
+
+
+<h2 id="spacing-function">Function</h2>
+
+<h3><code>tn-space($size, $modifiable)</code></h3>
+<p>Accepts either keyword or increments for size. The second argument indicates whether the value is modifiable based on the <code>$tn-space-modify</code> feature flag.</p>
+<p>Example:<br>
+</p><pre>.foo {
+    height: tn-space(20); //80px
+    padding: tn-space(m); //40px
+}
+</pre>
+<p></p>
+<p>
+If <code>$tn-space-modify</code> is set to 'compact', the spacing value will be cut in half. Primarily enabled for collection components when information density is greater.
+</p>
+<p>Example:<br>
+</p><pre>.bar {
+    padding: tn-space(m,true); //20px
+}
+</pre>
+<table>
+    <tbody><tr>
+        <td colspan="2">
+            Acceptable arguments
+        </td>
+    </tr>
+    <tr>
+        <td>$size</td>
+        <td>base,xs,s,reg (default),m,l,xl</td>
+    </tr>
+    <tr>
+        <td>$modifiable</td>
+        <td>true, false (default)</td>
+    </tr>
+</tbody></table>
+
+
+<h2>Helpers</h2>
+<p>These classes are also available for overriding margins and padding. Use sparingly.</p>
+
+
+<p><code>
+
+
+     .has-margin-top-none, .has-padding-top-none
+
+    , .has-margin-right-none, .has-padding-right-none
+
+    , .has-margin-bottom-none, .has-padding-bottom-none
+
+    , .has-margin-left-none, .has-padding-left-none
+
+</code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-xs, .has-padding-top-xs
+    
+        , .has-margin-right-xs, .has-padding-right-xs
+    
+        , .has-margin-bottom-xs, .has-padding-bottom-xs
+    
+        , .has-margin-left-xs, .has-padding-left-xs
+    
+    </code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-s, .has-padding-top-s
+    
+        , .has-margin-right-s, .has-padding-right-s
+    
+        , .has-margin-bottom-s, .has-padding-bottom-s
+    
+        , .has-margin-left-s, .has-padding-left-s
+    
+    </code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-reg, .has-padding-top-reg
+    
+        , .has-margin-right-reg, .has-padding-right-reg
+    
+        , .has-margin-bottom-reg, .has-padding-bottom-reg
+    
+        , .has-margin-left-reg, .has-padding-left-reg
+    
+    </code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-m, .has-padding-top-m
+    
+        , .has-margin-right-m, .has-padding-right-m
+    
+        , .has-margin-bottom-m, .has-padding-bottom-m
+    
+        , .has-margin-left-m, .has-padding-left-m
+    
+    </code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-l, .has-padding-top-l
+    
+        , .has-margin-right-l, .has-padding-right-l
+    
+        , .has-margin-bottom-l, .has-padding-bottom-l
+    
+        , .has-margin-left-l, .has-padding-left-l
+    
+    </code></p>
+
+    
+    <p><code>
+    
+    
+         .has-margin-top-xl, .has-padding-top-xl
+    
+        , .has-margin-right-xl, .has-padding-right-xl
+    
+        , .has-margin-bottom-xl, .has-padding-bottom-xl
+    
+        , .has-margin-left-xl, .has-padding-left-xl
+    
+    </code></p>
+
+
+
+</section>
