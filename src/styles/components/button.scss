@@ -2,10 +2,13 @@
 @import "../core/mixins";
 @import "../core/functions";
 
+/*!
+.tn-button+(--small, --large, --icon, --text)+(.is-disabled | [aria-disabled=true])
+    .tn-button__icon+(.tn-icon)
+*/
+
+//set component name using namespace function, then use #{$block} below
 $block: ns(button);
-
-/*! */
-
 .#{$block} {
     //SETTINGS
     $tn-button-color: tn-color(text-inverse) !default;
@@ -22,7 +25,7 @@ $block: ns(button);
     //BASE
     //set all reset and baseline block styles
     @include tn-type(2,header,semi);
-    line-height: 1 !important;
+    line-height: 1;
     font-smoothing: antialiased;
     appearance: none;
     outline: 0;
@@ -33,7 +36,6 @@ $block: ns(button);
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    //align-items: flex-start;
     background-color: $tn-button-background-color;
     color: $tn-button-color;
     max-height: tn-space(13);
@@ -44,10 +46,12 @@ $block: ns(button);
     text-transform: uppercase;
     //adjustment for buttons
     @at-root {
-        button.#{$block}, [type="button"].#{$block} {
+        button.#{$block},
+        [type="button"].#{$block} {
             padding-top: 0;
         }
     }
+    //MODIFIERS
     &--small {
         @include tn-type(0);
         @include tn-weight(semi);
@@ -77,7 +81,8 @@ $block: ns(button);
         background-color: $tn-button-background-color-active;
         color: $tn-button-color-active;
     }
-    &[aria-disabled="true"], &.is-disabled {
+    &[aria-disabled="true"],
+    &.is-disabled {
         outline: solid 1px tn-color(neutral,2);
         color: $tn-button-color-disabled;
         background-color: $tn-button-background-color-disabled;
@@ -119,7 +124,8 @@ $block: ns(button);
             color: darken($tn-button-color-text,10);
             background-color: transparent;
         }
-        &[aria-disabled="true"], &.is-disabled {
+        &[aria-disabled="true"],
+        &.is-disabled {
             outline: none;
             color: $tn-button-color-disabled;
             background-color: transparent;
@@ -130,15 +136,25 @@ $block: ns(button);
     }
     //icon modifier
     &--icon {
-
         &.#{$block}--large {
+            position: relative;
             @include tn-type(-3);
+            padding-top: tn-space(13.25);
+            @at-root {
+                button.#{$block}--large.#{$block}--icon,
+                [type="button"].#{$block}--large.#{$block}--icon {
+                    padding-top: tn-space(10);
+                }
+            }
             .#{$block}__icon {
-                display: block;
-                margin: 0 auto;
+                $icon-size_: 32px;
+                position: absolute;
+                left: calc(50% - #{$icon-size_}/2);
+                top: tn-space(3);
+                width: $icon-size_;
+                height: $icon-size_;
             }
         }
-
         //no underline for text buttons
         &.#{$block}--text {
             &::after {
@@ -146,12 +162,8 @@ $block: ns(button);
             }
         }
     }
-
-
-    //ICON
+    //ELEMENTS
     &__icon {
-        //display: block;
-        //float: left;
         display: inline-block;
         position: relative;
         top: 1px;
@@ -160,8 +172,6 @@ $block: ns(button);
         width: 26px;
         height: 26px;
         vertical-align: text-top;
-
-        //vertical-align: inherit;
         @at-root {
             .#{$block}--small & {
                 width: 18px;
@@ -178,7 +188,10 @@ $block: ns(button);
             .#{$block}--text:active & {
                 background-color: darken($tn-button-color-text,10);
             }
+            .#{$block}[aria-disabled="true"] &,
+            .#{$block}.is-disabled & {
+                background-color: $tn-button-color-disabled;
+            }
         }
     }
-
 }
