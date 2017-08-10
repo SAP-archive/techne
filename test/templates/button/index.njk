@@ -1,0 +1,277 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import button %}
+{% from "./../format.njk" import format %}
+{% set css_deps = ['helpers'] %}
+
+{% block content %}
+
+<h1>Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['small']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['large']
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Button — Disabled</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['small']
+            },
+            state={
+
+            },
+            aria={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+            },
+            state={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['large']
+            },
+            state={
+
+            },
+            aria={
+                disabled: true
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Text Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text','small']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text']
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+<h1>Text Button — Disabled</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text','small']
+            },
+            state={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: ''
+            },
+            modifier={
+                block: ['text']
+            },
+            state={
+
+            },
+            aria={
+                disabled: true
+            })
+    }}
+{% endset %}
+{{ format(example) }}
+
+
+<h1>Icon Button</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['small','icon']
+            })
+    }}
+
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['icon']
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['large','icon']
+            })
+    }}
+<br>
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['small','icon','text']
+        })
+}}
+
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['icon','text']
+        })
+}}
+
+{% endset %}
+{{ format(example) }}
+
+
+
+<h1>Icon Button — Disabled</h1>
+{% set example %}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['small','icon']
+            },
+            state={
+                disabled: true
+            })
+    }}
+
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['icon']
+            },
+            state={
+
+            },
+            aria={
+                disabled: true
+            })
+    }}
+    {{  button(
+            {
+                label: 'BUTTON_LABEL',
+                icon: 'foo'
+            },
+            modifier={
+                block: ['large','icon']
+            },
+            state={
+                disabled: true
+            },
+            aria={
+
+            })
+    }}
+<br>
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['small','icon','text']
+        },
+        state={
+            disabled: true
+        })
+}}
+
+{{  button(
+        {
+            label: 'BUTTON_LABEL',
+            icon: 'foo'
+        },
+        modifier={
+            block: ['icon','text']
+        },
+        state={
+
+        },
+        aria={
+            disabled: true
+        })
+}}
+
+{% endset %}
+{{ format(example) }}
+
+
+
+{% endblock %}

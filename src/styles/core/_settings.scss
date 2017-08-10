@@ -25,6 +25,7 @@ $tn-spacing: (
 ) !default;
 
 //type
+$tn-type--base: 16px;
 $tn-type: (
     -3: 0.75rem (16/12) body bold uppercase,	//12/16
     -2: 0.8125rem (18/13) body reg none,	//13/18
@@ -115,8 +116,6 @@ $tn-margin-bottom: tn-space() !default;
 //interactive
 $tn-color--link: tn-color(action) !default;
 $tn-color--link-hover: tn-color(action) !default;
-$tn-color--button: tn-color(text,2) !default;
-$tn-background-color--button: tn-color(neutral,1) !default;
 
 //states
 $tn-color--error: tn-color(status, 5) !default;
