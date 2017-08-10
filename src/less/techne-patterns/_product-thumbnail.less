@@ -86,7 +86,7 @@ Markup:
          <div class="product-price ">
              <span class="product-price-element product-price-range product-price-original">
                 <span class="product-price-amount">
-                    47.48  
+                    47.48
                     <span class="product-price-separator">&nbsp;&ndash;&nbsp;</span>
                     49.48
                 </span>
@@ -106,6 +106,9 @@ Markup:
 
 Pattern 15.3
 */
+@import (reference) "../vendor/bootstrap/less/variables";
+@import (reference) "../vendor/bootstrap/less/mixins";
+@import (reference) "../vendor/bootstrap/less/type";
 
 .product-grid {
     display: flex;
@@ -117,14 +120,14 @@ Pattern 15.3
     background-color: @white;
     border: 1px solid @body-bg;
     box-shadow: 0 2px 1px @default-greyblue-200;
-    margin: 1%; 
+    margin: 1%;
     width: 47.85%;
     overflow: hidden;
     transition: all .1s ease-in-out 0s;
     height: auto;
     position: relative;
 
-    @-moz-document url-prefix() { 
+    @-moz-document url-prefix() {
         margin-bottom: 30px;
     }
 
@@ -133,12 +136,12 @@ Pattern 15.3
         background-color: @white;
         box-shadow: 0 3px 5px rgba(138, 143, 161, 0.6);
     }
-    
+
     .product-image {
         position:relative;
         overflow:hidden;
         padding-bottom:100%;
-        
+
         .img-wrapper {
             position: absolute;
             top: 0;
@@ -167,7 +170,7 @@ Pattern 15.3
         color: @black;
         font-size: 12px;
         padding: 0 15px 20px 15px;
-    }    
+    }
 
     .label{
         margin-bottom: 15px;
@@ -198,7 +201,7 @@ Pattern 15.3
         font-size: 15px;
         margin-bottom: 10px;
 
-        .product-price-element { 
+        .product-price-element {
 
             &.product-price-original {
                 text-decoration: line-through;
@@ -233,17 +236,17 @@ Pattern 15.3
             width: 15.83%;
             margin: .5%;
 
-            @-moz-document url-prefix() { 
+            @-moz-document url-prefix() {
                 margin-bottom: 35px;
             }
 
 
-            &:first-child, &:nth-child(6n+7) { 
-                margin-left: 0; 
+            &:first-child, &:nth-child(6n+7) {
+                margin-left: 0;
             }
 
-            &:nth-child(6n-6) { 
-                margin-right: 0; 
+            &:nth-child(6n-6) {
+                margin-right: 0;
             }
 
         }
@@ -255,16 +258,16 @@ Pattern 15.3
         .product-thumbnail{
             width: 23.49%;
 
-            @-moz-document url-prefix() { 
+            @-moz-document url-prefix() {
                 margin-bottom: 25px;
             }
 
-            &:first-child, &:nth-child(4n+5) { 
-                margin-left: 0; 
+            &:first-child, &:nth-child(4n+5) {
+                margin-left: 0;
             }
 
-            &:nth-child(4n-4) { 
-                margin-right: 0; 
+            &:nth-child(4n-4) {
+                margin-right: 0;
             }
         }
     }
@@ -275,16 +278,16 @@ Pattern 15.3
         .product-thumbnail{
             width: 23.49%;
 
-            @-moz-document url-prefix() { 
+            @-moz-document url-prefix() {
                 margin-bottom: 25px;
             }
 
-            &:first-child, &:nth-child(4n+5) { 
-                margin-left: 0; 
+            &:first-child, &:nth-child(4n+5) {
+                margin-left: 0;
             }
 
-            &:nth-child(4n-4) { 
-                margin-right: 0; 
+            &:nth-child(4n-4) {
+                margin-right: 0;
             }
         }
     }
@@ -295,16 +298,16 @@ Pattern 15.3
         .product-thumbnail{
             width: 48.85%;
 
-            @-moz-document url-prefix() { 
+            @-moz-document url-prefix() {
                 margin-bottom: 15px;
             }
-            
-            &:first-child, &:nth-child(odd) { 
-                margin-left: 0; 
+
+            &:first-child, &:nth-child(odd) {
+                margin-left: 0;
             }
 
-            &:nth-child(even) { 
-                margin-right: 0; 
+            &:nth-child(even) {
+                margin-right: 0;
             }
         }
     }

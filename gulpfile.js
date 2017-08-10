@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var gulpkss = require('gulp-kss');
 var cachebust = require('gulp-cache-bust');
 var concat = require('gulp-concat');
+var debug = require('gulp-debug');
 var config = require('./config.json');
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
@@ -25,7 +26,8 @@ var paths = {
     scripts: 'src/js/**/*',
     less: [
         'src/less/**/*.less',
-        '!src/less/**/_*.less'
+        '!src/less/**/_*.less',
+        '!src/less/vendor/bootstrap/less/**/*'
     ],
     less_watch: [
         'src/less/**/*.less',
@@ -95,10 +97,12 @@ gulp.task('setpath', function(cb) {
 // Complile general Less Files
 gulp.task('less', ['setpath'], () => {
     return gulp.src(paths.less)
+        .pipe(debug({title: 'less:'}))
         .pipe(less({
             errLogToConsole: true,
             plugins: [autoprefix, cleancss]
         }))
+
         .on('error', (err) => {
             console.log(err.message);
         })
@@ -146,7 +150,7 @@ gulp.task('styleguide', function () {
     }))
     .pipe(gulp.dest('docs/kss') )
     //.pipe(browserSync.stream());
-    
+
 
     gulp.src('./bower_components/bootstrap/fonts/**/*')
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
@@ -258,4 +262,3 @@ gulp.task('dist', ['iconfont', 'build']);
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', [ 'build' , 'serve']);
-

@@ -21,6 +21,7 @@
     "gulp-cache-bust": "^1.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-consolidate": "^0.2.0",
+    "gulp-debug": "^3.1.0",
     "gulp-iconfont": "^8.0.1",
     "gulp-if": "^2.0.2",
     "gulp-kss": "0.0.2",
