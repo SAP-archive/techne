@@ -13,6 +13,14 @@ $ns: ns();
     }
 }
 
+@mixin tn-last-child {
+    &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+        @content;
+    }
+}
+
 @mixin tn-at-media($size, $dimension: width) {
   @if map-has-key($tn-breakpoints, $size) {
     @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {

@@ -1,0 +1,156 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-form
+    .tn-form__group()
+        .tn-form__legend()
+        .tn-form__item+(--check, --inline)
+            .tn-form__label(.is-required)
+            .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
+        .tn-form__message(--help, --error, --warning)
+*/
+$block: ns(form);
+
+.#{$block} {
+    //LOCAL VARS (set all vars used in component, always include !default)
+    $tn-form-item-gutter: $tn-width--gutter !default;
+
+
+    //BLOCK BASE *******************************************
+    //set all BLOCK reset and baseline styles
+
+
+    //BLOCK MODIFIERS ************
+    //each mod MUST extend base block so devs can use a single class and get all base styles for free
+
+
+    //ELEMENTS *******************************************
+    //set all ELEMENT baseline styles
+    &__group {
+        @include clearfix;
+        @include tn-last-child;
+        margin-bottom: $tn-margin-bottom;
+
+        //ELEMENT MODIFIERS ************
+        //each mod MUST extend the element base
+
+    }
+    &__item {
+        @include tn-last-child;
+        margin-right: $tn-form-item-gutter;
+        &--check {
+            @include clearfix;
+            position: relative;
+            display: block;
+            margin-bottom: tn-space(5);
+            .#{$block}__label {
+                margin-bottom: 0;
+                margin-top: tn-space(1);
+                float: left;
+                width: calc(100% - #{tn-space(10)});
+            }
+            .#{$block}__control {
+                float: left;
+                &:focus {
+                    & + .#{$block}__label {
+                        color: tn-color(text);
+                    }
+                }
+            }
+        }
+        &--inline {
+            float: left;
+            margin-bottom: 0;
+            .#{$block}__label {
+                margin-bottom: 0;
+                margin-top: tn-space(1);
+                float: left;
+                width: auto;
+            }
+        }
+    }
+    &__label, &__legend {
+        display: block;
+        margin-bottom: tn-space(3);
+        @include tn-type(-1);
+        color: tn-color(text, 3);
+        &.is-required {
+            @include tn-weight(bold);
+        }
+    }
+    &__legend {
+        margin-bottom: tn-space(5);
+    }
+    &__message {
+        clear: both;
+        display: block;
+        @include tn-type(-1);
+        color: tn-color(text, 2);
+        padding: tn-space(1) 0;
+
+        font-style: italic;
+        position: relative;
+        //adjust for checks
+        @at-root {
+            .#{$block}__item--check + & {
+                transform: translateY(-(tn-space(3)));
+                margin-bottom: -(tn-space(3));
+            }
+            .#{$block}__item--inline.#{$block}__item--check + & {
+                transform: translateY(tn-space(2));
+                margin-bottom: tn-space(2);
+            }
+        }
+        &::before {
+            width: 18px;
+            height: 18px;
+            font-style: normal;
+            position: absolute;
+            left: 0;
+            color: tn-color(text-inverse);
+            border-radius: 50%;
+            background-color: tn-color(text, 3);
+            text-align: center;
+        }
+        &--help {
+            padding-left: tn-space(7);
+            &::before {
+                content: "?";
+            }
+        }
+        &--warning, &--error {
+            padding-left: tn-space(9);
+            color: tn-color(text);
+            &::before {
+                content: "!";
+                left: tn-space(2);
+            }
+        }
+        &--warning {
+            background-color: tn-color(status,4);
+            &::before {
+                background-color: transparent;
+                border-radius: 0;
+                @include triangle(20px 18px, tn-color(status, 3), up);
+                text-indent: -0.1em;
+            }
+        }
+        &--error {
+            background-color: tn-color(status,6);
+            &::before {
+                background-color: tn-color(status, 5);
+                color: tn-color(text-inverse);
+            }
+        }
+    }
+
+    //STATES *******************************************
+    //these classes and attributes can be modified by scripts
+
+
+
+
+
+}

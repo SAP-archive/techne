@@ -1,0 +1,36 @@
+{% macro text(
+    type="text",
+    properties={ value: "", placeholder: "", id: "" },
+    state={ disabled: false, readonly: false, status: "" },
+    aria={},
+    classes=[])
+-%}
+<input class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" type="{{type}}" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}"{{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>
+{%- endmacro %}
+
+{% macro textarea(
+    properties={ value: "", placeholder: "", id: "" },
+    state={ disabled: false, readonly: false, status: "" },
+    aria={},
+    classes=[])
+-%}
+<textarea class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" id="{{properties.id}}" name="{{properties.name}}" {{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>{{properties.value}}</textarea>
+{%- endmacro %}
+
+{% macro radio(
+    properties={ value: "", id: "" },
+    state={ checked: false, disabled: false, status: "" },
+    aria={},
+    classes=[])
+-%}
+<input class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" type="radio" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
+{%- endmacro %}
+
+{% macro checkbox(
+    properties={ value: "", id: "" },
+    state={ checked: false, disabled: false, status: "" },
+    aria={},
+    classes=[])
+-%}
+<input class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" type="checkbox" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
+{%- endmacro %}
