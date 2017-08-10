@@ -15,8 +15,10 @@ $( document ).ready(function() {
         placement : 'top'
     });
 
-    //AnchorJS
-    anchors.add('.post-content>h2');
+    /**
+     * AnchorJS
+     */
+    anchors.add('h2,h3,h4,h5');
 
 });
 
