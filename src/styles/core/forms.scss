@@ -1,0 +1,139 @@
+@import "settings";
+@import "mixins";
+
+$tn-elements__inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
+$tn-elements__inputs--check: "input[type=radio]", "input[type=checkbox]";
+
+
+$height--form-text: tn-space(13);
+$height--form-check: tn-space(8);
+
+$color--form: tn-color(primary) !default;
+$color--form-focus: tn-color(primary) !default;
+$color--form-error:  tn-color(primary) !default;
+$color--form-valid:  tn-color(primary) !default;
+
+$opacity--disabled: 0.5 !default;
+
+//updated
+$tn-forms-color: $tn-color !default;
+$tn-forms-color--placeholder: tn-color(text,3) !default;
+$tn-forms-color--focus: $tn-forms-color !default;
+$tn-forms-color--valid: tn-color(status,1) !default;
+$tn-forms-color--invalid: tn-color(status,5) !default;
+$tn-forms-color--warning: tn-color(status,3) !default;
+
+$tn-forms-border-color: tn-color(neutral,2) !default;
+$tn-forms-border-color--focus: tn-color(action,1) !default;
+
+$tn-forms-height--input-text: tn-space(13) !default;
+
+
+%form-field-base {
+    @include reset;
+    -webkit-appearance: textfield;
+    font-size: inherit;
+    appearance: none;
+    box-sizing: border-box;
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $tn-forms-border-color;
+    color: $tn-forms-color;
+    &::placeholder {
+        color: $tn-forms-color--placeholder;
+    }
+    //states
+    &[disabled],
+    &[aria-disabled="true"],
+    &.is-disabled {
+        color: $color--form;
+        border-color: $color--form;
+    }
+    &:focus {
+        border-color: $tn-forms-border-color--focus;;
+    }
+    &.is-invalid {
+        border-color: $tn-forms-color--invalid;
+    }
+    &.is-valid {
+        border-color: $tn-forms-color--valid;
+    }
+    &.is-warning {
+        border-color: $tn-forms-color--warning;
+    }
+}
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button {
+//     -webkit-appearance: none;
+// }
+#{$tn-elements__inputs--text}, textarea, select {
+    @extend %form-field-base;
+    width: 25%;
+    height: $tn-forms-height--input-text;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+textarea {
+    height: $height__form-text*3;
+    padding-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+#{$tn-elements__inputs--check} {
+    @extend %form-field-base;
+    height: $height--form-check;
+    width: $height--form-check;
+    margin: ($height--form-text - $height--form-check)/2 0;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    position: relative;
+    &:checked:after {
+        background: $color--form;
+        //border: solid 3px tn-color(white);
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+input[type="radio"] {
+    border-radius: 50%;
+    &:checked:after {
+        border-radius: 50%;
+    }
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjY2MiA1Ljg3M2wtLjAxMi4wMUwuMzQ1IDEuNThsLjg1LS44NTIgMy40NzcgMy40NzZMOC4xMzguNzRsLjg1Ljg1LTQuMzA0IDQuMzA1LS4wMjItLjAyMnoiIGZpbGw9InJnYmEoMTQ0LCAxNDQsIDE0NSwgMS4wKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.8em) center;
+    padding-right: 25px;
+    &.is-invalid {
+        border-color: $color--form-error;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5jaXJjdW1mbGV4LWludmVydGVkPC90aXRsZT48cGF0aCBkPSJNNC42NjIgNS44NzNsLS4wMTIuMDFMLjM0NSAxLjU4bC44NS0uODUyIDMuNDc3IDMuNDc2TDguMTM4Ljc0bC44NS44NS00LjMwNCA0LjMwNS0uMDIyLS4wMjJ6IiBmaWxsPSJyZ2JhKDIwNCwgMTI0LCAxMjcsIDEuMCkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+    }
+}
+
+@-moz-document url-prefix() {
+    // Firefox
+    select {
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    // IE10+ specific styles go here
+    select {
+        padding-right: 0;
+    }
+}

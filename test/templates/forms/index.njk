@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% from "./../format.njk" import format %}
+{% set css_deps = [] %}
+
+{% block content %}
+
+
+{% set input_types = ["text", "password", "email", "url", "search", "tel", "number", "date"] %}
+{% set check_types = ["radio", "checkbox"] %}
+
+
+{% for item in input_types %}
+    <input type="{{item}}" placeholder="{{ '0' if item == 'number' else 'Field placeholder text' }}" />
+    <input type="{{item}}" value="Field value" />
+    <br><br>
+{% endfor %}
+
+<textarea placeholder="Field placeholder text">
+</textarea>
+<textarea>
+    Field value text
+</textarea>
+<br><br>
+
+{% for item in check_types %}
+    <input type="{{item}}" />
+    <input type="{{item}}" checked />
+    <br><br>
+{% endfor %}
+
+
+
+{% endblock %}
