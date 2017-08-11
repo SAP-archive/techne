@@ -12,9 +12,13 @@ before_install:
 install:
 - npm install
 - npm install gulp -g
+- rvm install 2.1
+- rvm use 2.1
+- . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
+- gem install jekyll
 
 script:
-- gulp docs-build --production
+- jekyll build --source ./docs --destination ./ghpages
 
 after_success:
 - git config --global user.name "Travis CI Test"
