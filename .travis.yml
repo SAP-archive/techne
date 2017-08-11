@@ -12,7 +12,7 @@ before_install:
 install:
 - npm install
 - npm install gulp -g
-- apt-get install curl
+- sudo apt-get install curl
 - rvm install 2.3.3
 - gem install jekyll
 
