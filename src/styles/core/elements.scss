@@ -110,3 +110,27 @@ fieldset {
     padding: 0;
     margin: 0;
 }
+
+// select {
+//     appearance: none;
+//     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjY2MiA1Ljg3M2wtLjAxMi4wMUwuMzQ1IDEuNThsLjg1LS44NTIgMy40NzcgMy40NzZMOC4xMzguNzRsLjg1Ljg1LTQuMzA0IDQuMzA1LS4wMjItLjAyMnoiIGZpbGw9InJnYmEoMTQ0LCAxNDQsIDE0NSwgMS4wKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+//     background-repeat: no-repeat;
+//     background-position: calc(100% - 0.8em) center;
+//     padding-right: 25px;
+//     &.is-invalid {
+//         border-color: $tn-forms-color--invalid;
+//         background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5jaXJjdW1mbGV4LWludmVydGVkPC90aXRsZT48cGF0aCBkPSJNNC42NjIgNS44NzNsLS4wMTIuMDFMLjM0NSAxLjU4bC44NS0uODUyIDMuNDc3IDMuNDc2TDguMTM4Ljc0bC44NS44NS00LjMwNCA0LjMwNS0uMDIyLS4wMjJ6IiBmaWxsPSJyZ2JhKDIwNCwgMTI0LCAxMjcsIDEuMCkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+//     }
+// }
+
+@-moz-document url-prefix() {
+    // Firefox
+    select {
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    // IE10+ specific styles go here
+    select {
+        padding-right: 0;
+    }
+}

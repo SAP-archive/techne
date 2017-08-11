@@ -1,33 +1,121 @@
 {% extends "layout.njk" %}
+{% import "../forms.njk" as forms %}
 
-{% from "./../format.njk" import format %}
-{% set css_deps = [] %}
 
 {% block content %}
 
-
+{% for item in input_types %}
+{{item}}
+{% endfor %}
+<br><br>
 {% set input_types = ["text", "password", "email", "url", "search", "tel", "number", "date"] %}
 {% set check_types = ["radio", "checkbox"] %}
 
 
-{% for item in input_types %}
-    <input type="{{item}}" placeholder="{{ '0' if item == 'number' else 'Field placeholder text' }}" />
-    <input type="{{item}}" value="Field value" />
-    <br><br>
-{% endfor %}
-
-<textarea placeholder="Field placeholder text">
-</textarea>
-<textarea>
-    Field value text
-</textarea>
+{{ forms.radio(
+    state={  })
+}}
+{{ forms.radio(
+    state={ checked: true })
+}}
+{{ forms.radio(
+    state={ disabled: true })
+}}
+{{ forms.radio(
+    state={ checked: true, disabled: true })
+}}
 <br><br>
 
-{% for item in check_types %}
-    <input type="{{item}}" />
-    <input type="{{item}}" checked />
-    <br><br>
-{% endfor %}
+
+{{ forms.checkbox(
+    state={  })
+}}
+{{ forms.checkbox(
+    state={ checked: true })
+}}
+{{ forms.checkbox(
+    state={ disabled: true })
+}}
+{{ forms.checkbox(
+    state={ checked: true, disabled: true })
+}}
+<br><br>
+
+
+{{ forms.input(
+    properties={ placeholder: "Field placeholder text" })
+}}
+{{ forms.input(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "valid" })
+}}
+{{ forms.input(
+    properties={ value: "Suspendisse volutpat felis lectus nec consequat ipsum mattis id" },
+    state={ status: "invalid" })
+}}
+{{ forms.input(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "warning" })
+}}
+{{ forms.input(
+    properties={ value: "Suspendisse volutpat felis" },
+    aria={ disabled: "true" })
+}}
+{{ forms.input(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ readonly: true })
+}}
+
+<br><br>
+
+{{ forms.textarea(
+    properties={ placeholder: "Field placeholder text" })
+}}
+{{ forms.textarea(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "valid" })
+}}
+{{ forms.textarea(
+    properties={ value: "Suspendisse volutpat felis lectus nec consequat ipsum mattis id" },
+    state={ status: "invalid" })
+}}
+{{ forms.textarea(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "warning" })
+}}
+{{ forms.textarea(
+    properties={ value: "Suspendisse volutpat felis" },
+    aria={ disabled: "true" })
+}}
+{{ forms.textarea(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ readonly: true })
+}}
+
+
+
+
+<br><br><hr><br>
+<h1>To Do</h1>
+{{ forms.input(
+    type="search",
+    properties={
+        placeholder: "Field placeholder text"
+    },
+    state={
+
+    })
+}}
+{{ forms.input(
+    type="number",
+    properties={
+        placeholder: "Field placeholder text"
+    },
+    state={
+
+    })
+}}
+
 
 
 

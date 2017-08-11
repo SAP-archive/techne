@@ -1,0 +1,7 @@
+{#
+    see ./data.json for object structure
+#}
+{% macro input(type="text", properties={ value: "", placeholder: "" }, modifier={}, state={}, aria={}) %}
+<input type="{{type}}" class="{{ modifier.block | modifier('button') }}{{ ' is-disabled' if state.disabled }}{{ ' is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}>
+</button>
+{%- endmacro %}
