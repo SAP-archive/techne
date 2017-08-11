@@ -1,0 +1,307 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import form_group, form_control %}
+{% from "./../format.njk" import format %}
+
+{% block content %}
+
+<h1>Form Group — Inputs</h1>
+{% set example %}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-1"
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-2"
+    },
+    state={
+        required: true
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-3"
+    },
+    state={
+        status: "valid"
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-4"
+    },
+    state={
+        status: "invalid"
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-5"
+    },
+    state={
+        status: "warning"
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-6"
+    },
+    state={
+        disabled: true
+    })
+}}
+{{ form_group(
+    properties={
+        label: "Field Label",
+        placeholder: "Field placeholder text",
+        id: "input-7"
+    },
+    state={
+        readonly: true
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+<h1>Form Group — Textarea</h1>
+{% set example %}
+{{ form_group(
+    "textarea",
+    properties={
+        label: "Field Label",
+        value: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.",
+        id: "textarea-1" }
+    )
+}}
+{% endset %}
+{{ format(example) }}
+
+<h1>Form Group — Radio</h1>
+<h2>Stacked (Default)</h2>
+{% set example %}
+{{ form_group(
+    type="radio",
+    properties={
+        label: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-1",
+                name: "radio-name-1",
+                label: "Option 1"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-2",
+                name: "radio-name-1",
+                label: "Option 2"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-3",
+                name: "radio-name-1",
+                label: "Option 3"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    properties={
+        label: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-4",
+                name: "radio-name-2",
+                label: "Option 1"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option 2"
+            },
+            state: {
+                checked: true,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option 3"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+<h2>Inline</h2>
+{% set example %}
+{{ form_group(
+    type="radio",
+    modifier={
+        item: "inline"
+    },
+    properties={
+        label: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-7",
+                name: "radio-name-3",
+                label: "Option 1"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-8",
+                name: "radio-name-3",
+                label: "Option 2"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-9",
+                name: "radio-name-3",
+                label: "Option 3"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
+<h1>Form Group — Checkbox</h1>
+{% set example %}
+{{ form_group(
+    type="checkbox",
+    properties={
+        label: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "checkbox-1",
+                name: "checkbox-name-1",
+                label: "Option 1"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-2",
+                name: "checkbox-name-1",
+                label: "Option 2"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-3",
+                name: "checkbox-name-1",
+                label: "Option 3"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="checkbox",
+    properties={
+        label: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "checkbox-4",
+                name: "checkbox-name-2",
+                label: "Option 1"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-5",
+                name: "checkbox-name-2",
+                label: "Option 2"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-6",
+                name: "checkbox-name-2",
+                label: "Option 3"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
+
+
+{% endblock %}

@@ -21,7 +21,7 @@ var env = nunjucks.configure([TEMPLATE_DIRECTORY,PUBLIC_DIRECTORY], {
     watch: true
 });
 // convert SASS to CSS from the lib source
-env.addFilter('sassToCss', function(sassFile="app.scss") {
+env.addFilter('sass_to_css', function(sassFile="app.scss") {
     try {
         var scss_filename = `${SASS_DIRECTORY}/${sassFile}`;
         return sass.renderSync({
@@ -32,12 +32,30 @@ env.addFilter('sassToCss', function(sassFile="app.scss") {
     }
 });
 // convert an array to classes
+// returns [ tn-element--mod ]
 env.addFilter('modifier', function(array=[],element="") {
+    //is string
+    if (typeof array === "string") {
+        return ` ${GLOBALS.namespace}-${element}--${array}`;
+    }
     var mods = array.map((mod) => {
          return ` ${GLOBALS.namespace}-${element}--${mod}`;
     })
     //console.log(mods.join());
     return mods.join('') ;
+});
+// convert an array to classes
+// returns [ tn-cls ]
+env.addFilter('classes', function(array=[]) {
+    //is string
+    if (typeof array === "string") {
+        return ` ${GLOBALS.namespace}-${array}`;
+    }
+    var classes = array.map((cls, index) => {
+         return ` ${GLOBALS.namespace}-${cls}`;
+    })
+    //console.log(mods.join());
+    return classes.join('') ;
 });
 
 app.set('views', TEMPLATE_DIRECTORY);

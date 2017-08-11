@@ -7,7 +7,9 @@ form-group:
     aria={}
 -->
 {% macro form_group(
-    properties={},
+    properties={
+        label: "FORM_FIELD_LABEL"
+    },
     modifier={},
     state={},
     aria={})

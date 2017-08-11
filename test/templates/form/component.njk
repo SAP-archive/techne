@@ -1,0 +1,72 @@
+{% import "../forms.njk" as forms %}
+<!--
+form-group:
+    properties={},
+    modifier={},
+    state={},
+    aria={}
+-->
+{% macro form_group(
+    type="text",
+    properties={
+        label: "FORM_FIELD_LABEL",
+        id: "",
+        items: []
+    },
+    modifier={
+
+    },
+    state={
+        required: false
+    },
+    aria={})
+%}
+<div class="tn-form__group{{ modifier.block | modifier('form__group') }}{{ ' is-required' if state.required === true }}">
+
+{%- if type == "checkbox" or type == "radio" %}
+    <div class="tn-form__label">{{properties.label}}</div>
+    {%- for item in properties.items %}
+    {{modifier.item}}
+    <p class="tn-form__item{{ modifier.item | modifier('form__item') }}">
+        <label class="tn-form__label tn-form__label--check{{ modifier.block | modifier('form-group') }}">
+            {{   form_control(type,properties=item.properties,state=item.state,aria=item.aria) }}
+            {{ item.properties.label }}
+        </label>
+    </p>
+    {%- endfor %}
+{%- else %}
+    <p class="tn-form__item{{ modifier.item | modifier('form__item') }}">
+        <label class="tn-form__label" for="{{ properties.id }}">{{properties.label}}</label>
+        {{ form_control(type,properties=properties,state=state,aria=aria) | trim }}
+    </p>
+{%- endif %}
+
+</div>
+{% endmacro %}
+
+<!--
+form-control:
+    properties={},
+    modifier={},
+    state={},
+    aria={}
+-->
+{% macro form_control(
+    type="text",
+    properties={
+
+    },
+    modifier={},
+    state={},
+    aria={})
+%}
+{%- if type == "textarea" -%}
+    {{ forms.textarea(properties,state=state,aria=aria,classes="form__control") }}
+{%- elif type == "radio" -%}
+    {{ forms.radio(properties,state=state,aria=aria,classes="form__control") }}
+{%- elif type == "checkbox" -%}
+    {{ forms.checkbox(properties,state=state,aria=aria,classes="form__control") }}
+{%- else -%}
+    {{ forms.text(type,properties,state=state,aria=aria, classes="form__control") }}
+{%- endif -%}
+{% endmacro %}

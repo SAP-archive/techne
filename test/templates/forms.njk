@@ -2,33 +2,35 @@
     type="text",
     properties={ value: "", placeholder: "", id: "" },
     state={ disabled: false, readonly: false, status: "" },
-    aria={})
+    aria={},
+    classes=[])
 %}
-<input type="{{type}}" value="{{properties.value}}"{{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}class="{{ 'is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>
+<input type="{{type}}" class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}"{{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>
 {%- endmacro %}
 
 {% macro textarea(
     properties={ value: "", placeholder: "", id: "" },
     state={ disabled: false, readonly: false, status: "" },
-    aria={})
+    aria={},
+    classes=[])
 %}
-<textarea {{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}class="{{ 'is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>
-{{properties.value}}
-</textarea>
+<textarea id="{{properties.id}}" name="{{properties.name}}" {{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>{{properties.value}}</textarea>
 {%- endmacro %}
 
 {% macro radio(
     properties={ value: "", id: "" },
     state={ checked: false, disabled: false, status: "" },
-    aria={})
+    aria={},
+    classes=[])
 %}
-<input type="radio" value="{{properties.value}}" class="{{ 'is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
+<input type="radio" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}" class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
 {%- endmacro %}
 
 {% macro checkbox(
     properties={ value: "", id: "" },
     state={ checked: false, disabled: false, status: "" },
-    aria={})
+    aria={},
+    classes=[])
 %}
-<input type="checkbox" value="{{properties.value}}" class="{{ 'is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
+<input type="checkbox" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}" class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
 {%- endmacro %}

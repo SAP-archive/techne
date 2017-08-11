@@ -14,18 +14,18 @@
 #}
 {# <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.css"> #}
     <style media="screen">
-        body { padding: 20px; }
-        textarea { font-family: monospace; height: 200px; width: 100%; padding: 10px; border-color: rgba(0,0,0,0.1); }
         {% set core_sass = 'core.scss' %}
-        {{ core_sass | sassToCss }}
+        {{ core_sass | sass_to_css }}
 
         {% set component_sass = 'components/' + id + '.scss'  %}
-        {{ component_sass | sassToCss }}
+        {{ component_sass | sass_to_css }}
 
         {% for sass in css_deps %}
             {% set dep_sass = sass + '.scss' %}
-            {{ dep_sass | sassToCss }}
+            {{ dep_sass | sass_to_css }}
         {% endfor %}
+        body { padding: 20px; }
+        textarea.test-textarea { font-family: monospace; height: 200px; width: 100%; padding: 10px; font-size: 0.9rem; border: solid 1px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
