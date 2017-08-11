@@ -43,8 +43,8 @@ var paths = {
 /**
  * Font settings
  */
-const fontName = 'hyicon' // set name of your symbol font
-const className = 'hyicon' // set class name in your CSS
+const fontName = 'tn-icon' // set name of your symbol font
+const className = 'tn-icon' // set class name in your CSS
 
 // Create Iconfont
 gulp.task('iconfont', function() {

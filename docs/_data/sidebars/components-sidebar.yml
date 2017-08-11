@@ -119,22 +119,18 @@ entries:
       url: /
       output: web    
 
-    folderitems:
     - title: Textarea
       url: /
       output: web    
 
-    folderitems:
     - title: Check box
       url: /
       output: web    
 
-    folderitems:
     - title: Dropdown
       url: /
       output: web    
 
-    folderitems:
     - title: Multi-tab Editor
       url: /
       output: web    
@@ -149,22 +145,18 @@ entries:
       url: /
       output: web    
 
-    folderitems:
     - title: Side Bar
       url: /
       output: web    
 
-    folderitems:
     - title: Tabs
       url: /
       output: web    
 
-    folderitems:
     - title: Action Bar
       url: /
       output: web    
 
-    folderitems:
     - title: Pagination
       url: /
       output: web    
@@ -174,37 +166,35 @@ entries:
     url: /
     output: web
 
-    folderitems:
+    folderitems:      
+    - title: Icons
+      url: /icons.html
+      output: web          
+
     - title: Tooltip
       url: /
       output: web          
 
-    folderitems:
     - title: Loading Indicators
       url: /
       output: web          
 
-    folderitems:
     - title: Icons
       url: /
       output: web          
 
-    folderitems:
     - title: Alerts
       url: /
       output: web          
 
-    folderitems:
     - title: Tours
       url: /
       output: web          
 
-    folderitems:
     - title: Wizards
       url: /
       output: web          
 
-    folderitems:
     - title: Status Indicators
       url: /
       output: web          

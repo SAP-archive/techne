@@ -1,0 +1,7 @@
+{#
+    see ./data.json for object structure
+#}
+{% macro icon(properties={}, modifier={}, aria={}) %}
+<span class="tn-icon tn-icon{{ modifier.block | modifier('button') }}{{ ' is-disabled' if state.disabled }}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}>
+</span>
+{%- endmacro %}

@@ -1,0 +1,11 @@
+{
+    "properties": {
+        "name": "ICON_NAME"
+    },
+    "modifier": {
+        "block": ["small", "medium", "large"],
+    },
+    "aria": {
+        "disabled": false
+    }
+}

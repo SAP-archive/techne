@@ -8,8 +8,8 @@ const config = {
         css: require("fs").readFileSync("./src/icons/techne-icons-template.css", "utf-8"),
         previewSprite: require("fs").readFileSync("./src/icons/techne-icons-template.html", "utf-8")
     },
-    selector: "hyicon-%f",
-    common: "hyicon",
+    selector: "tn-icon-%f",
+    common: "tn-icon",
     svg: { sprite: "styles/icons/techne-icons.svg" },
     cssFile: "styles/icons/icons.css",
     preview: {sprite: "templates/icons.html"}
