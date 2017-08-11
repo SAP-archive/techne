@@ -9,6 +9,7 @@ form-group:
 {% macro form_group(
     type="text",
     properties={
+        legend: "",
         label: "FORM_FIELD_LABEL",
         id: "",
         items: []
@@ -20,29 +21,26 @@ form-group:
         required: false
     },
     aria={})
-%}
+-%}
 <div class="tn-form__group{{ modifier.block | modifier('form__group') }}{{ ' is-required' if state.required === true }}">
-
-{%- if type == "checkbox" or type == "radio" %}
-    <div class="tn-form__label">{{properties.label}}</div>
-    {%- for item in properties.items %}
-    {{modifier.item}}
-    <p class="tn-form__item{{ modifier.item | modifier('form__item') }}">
-        <label class="tn-form__label tn-form__label--check{{ modifier.block | modifier('form-group') }}">
+{%- if properties.legend %}
+    <div class="tn-form__legend">{{ properties.legend }}</div>
+{%- endif %}
+{%- for item in properties.items %}
+    <div class="tn-form__item{{ modifier.item | modifier('form__item') }}">
+        {%- if type == "checkbox" or type == "radio" %}
+        <label class="tn-form__label tn-form__label--check">
             {{   form_control(type,properties=item.properties,state=item.state,aria=item.aria) }}
             {{ item.properties.label }}
         </label>
-    </p>
-    {%- endfor %}
-{%- else %}
-    <p class="tn-form__item{{ modifier.item | modifier('form__item') }}">
-        <label class="tn-form__label" for="{{ properties.id }}">{{properties.label}}</label>
-        {{ form_control(type,properties=properties,state=state,aria=aria) | trim }}
-    </p>
-{%- endif %}
-
+        {%- else %}
+        <label class="tn-form__label" for="{{ properties.id }}">{{item.properties.label}}</label>
+        {{ form_control(type,properties=item.properties,state=item.state,aria=item.aria) | trim }}
+        {%- endif %}
+    </div>
+{%- endfor %}
 </div>
-{% endmacro %}
+{%- endmacro %}
 
 <!--
 form-control:
@@ -59,7 +57,7 @@ form-control:
     modifier={},
     state={},
     aria={})
-%}
+-%}
 {%- if type == "textarea" -%}
     {{ forms.textarea(properties,state=state,aria=aria,classes="form__control") }}
 {%- elif type == "radio" -%}
@@ -69,4 +67,4 @@ form-control:
 {%- else -%}
     {{ forms.text(type,properties,state=state,aria=aria, classes="form__control") }}
 {%- endif -%}
-{% endmacro %}
+{%- endmacro %}

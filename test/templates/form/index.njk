@@ -8,83 +8,148 @@
 {% set example %}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-1"
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-1"
+            }
+        }]
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-2"
-    },
-    state={
-        required: true
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-2"
+            },
+            state: {
+                required: true
+            }
+        }]
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-3"
-    },
-    state={
-        status: "valid"
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-3"
+            },
+            state: {
+                status: "valid"
+            }
+        }]
+
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-4"
-    },
-    state={
-        status: "invalid"
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-4"
+            },
+            state: {
+                status: "invalid"
+            }
+        }]
+
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-5"
-    },
-    state={
-        status: "warning"
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-5"
+            },
+            state: {
+                status: "warning"
+            }
+        }]
+
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-6"
-    },
-    state={
-        disabled: true
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-6"
+            },
+            state: {
+                disabled: true
+            }
+        }]
+
     })
 }}
 {{ form_group(
     properties={
-        label: "Field Label",
-        placeholder: "Field placeholder text",
-        id: "input-7"
-    },
-    state={
-        readonly: true
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-7"
+            },
+            state: {
+                readonly: true
+            }
+        }]
+
     })
 }}
 {% endset %}
 {{ format(example) }}
+
+<h2>Inline</h2>
+{% set example %}
+{{ form_group(
+    modifier={
+        item: 'inline'
+    },
+    properties={
+        items: [{
+            properties: {
+                label: "First Name",
+                placeholder: "First Name",
+                id: "input-8"
+            }
+        },
+        {
+            properties: {
+                label: "Last Name",
+                placeholder: "Last Name",
+                id: "input-9"
+            }
+        }]
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
 
 <h1>Form Group — Textarea</h1>
 {% set example %}
 {{ form_group(
     "textarea",
     properties={
-        label: "Field Label",
-        value: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.",
-        id: "textarea-1" }
-    )
+        items: [{
+            properties: {
+                label: "Field Label",
+                value: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.",
+                id: "textarea-1"
+            }
+        }]
+    })
 }}
 {% endset %}
 {{ format(example) }}
@@ -95,7 +160,7 @@
 {{ form_group(
     type="radio",
     properties={
-        label: "Select an option",
+        legend: "Select an option",
         items: [
         {
             properties: {
@@ -133,7 +198,7 @@
 {{ form_group(
     type="radio",
     properties={
-        label: "Select an option",
+        legend: "Select an option",
         items: [
         {
             properties: {
@@ -181,7 +246,7 @@
         item: "inline"
     },
     properties={
-        label: "Select an option",
+        legend: "Select an option",
         items: [
         {
             properties: {
@@ -225,7 +290,7 @@
 {{ form_group(
     type="checkbox",
     properties={
-        label: "Select an option",
+        legend: "Select an option",
         items: [
         {
             properties: {
@@ -263,7 +328,7 @@
 {{ form_group(
     type="checkbox",
     properties={
-        label: "Select an option",
+        legend: "Select an option",
         items: [
         {
             properties: {

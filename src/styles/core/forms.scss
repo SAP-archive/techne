@@ -80,7 +80,7 @@ $tn-forms-transition-params: 0.25s ease-in;
 // }
 #{$tn-elements-inputs--text}, textarea, select {
     @extend %form-field-base;
-    width: 100%;
+    //width: 100%;
     height: $tn-forms-height--input-text;
     padding-left: 1em;
     padding-right: 1em;
