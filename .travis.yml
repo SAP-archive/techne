@@ -8,12 +8,11 @@ before_install:
 - chmod 600 deploy-key
 - eval `ssh-agent -s`
 - ssh-add deploy-key
+- rvm install ruby --default
 
 install:
 - npm install
 - npm install gulp -g
-- sudo apt-get install curl
-- rvm install ruby --default
 - gem install jekyll
 
 script:
