@@ -1,0 +1,65 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import input_group %}
+{% import "../forms.njk" as forms %}
+{% from "./../format.njk" import format %}
+{% set css_deps = [] %}
+
+{% block content %}
+
+{% for item in input_types %}
+{{item}}
+{% endfor %}
+<br><br>
+{% set input_types = ["text", "password", "email", "url", "search", "tel", "number", "date"] %}
+
+{{ forms.text(
+    properties={ placeholder: "Field placeholder text" })
+}}
+{{ forms.text(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "valid" })
+}}
+{{ forms.text(
+    properties={ value: "Suspendisse volutpat felis lectus nec consequat ipsum mattis id" },
+    state={ status: "invalid" })
+}}
+{{ forms.text(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ status: "warning" })
+}}
+{{ forms.text(
+    properties={ value: "Suspendisse volutpat felis" },
+    aria={ disabled: "true" })
+}}
+{{ forms.text(
+    properties={ value: "Suspendisse volutpat felis" },
+    state={ readonly: true })
+}}
+
+
+
+<br><br><hr><br>
+<h1>To Do</h1>
+{{ forms.text(
+    type="search",
+    properties={
+        placeholder: "Field placeholder text"
+    },
+    state={
+
+    })
+}}
+{{ forms.text(
+    type="number",
+    properties={
+        placeholder: "Field placeholder text"
+    },
+    state={
+
+    })
+}}
+
+
+
+
+{% endblock %}

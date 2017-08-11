@@ -1,15 +1,14 @@
 {% extends "layout.njk" %}
 {% import "../forms.njk" as forms %}
 
-
 {% block content %}
 
+{% set input_types = ["text", "password", "email", "url", "search", "tel", "number", "date"] %}
+{% set check_types = ["radio", "checkbox"] %}
 {% for item in input_types %}
 {{item}}
 {% endfor %}
 <br><br>
-{% set input_types = ["text", "password", "email", "url", "search", "tel", "number", "date"] %}
-{% set check_types = ["radio", "checkbox"] %}
 
 
 {{ forms.radio(
@@ -42,26 +41,26 @@
 <br><br>
 
 
-{{ forms.input(
+{{ forms.text(
     properties={ placeholder: "Field placeholder text" })
 }}
-{{ forms.input(
+{{ forms.text(
     properties={ value: "Suspendisse volutpat felis" },
     state={ status: "valid" })
 }}
-{{ forms.input(
+{{ forms.text(
     properties={ value: "Suspendisse volutpat felis lectus nec consequat ipsum mattis id" },
     state={ status: "invalid" })
 }}
-{{ forms.input(
+{{ forms.text(
     properties={ value: "Suspendisse volutpat felis" },
     state={ status: "warning" })
 }}
-{{ forms.input(
+{{ forms.text(
     properties={ value: "Suspendisse volutpat felis" },
     aria={ disabled: "true" })
 }}
-{{ forms.input(
+{{ forms.text(
     properties={ value: "Suspendisse volutpat felis" },
     state={ readonly: true })
 }}
@@ -97,7 +96,7 @@
 
 <br><br><hr><br>
 <h1>To Do</h1>
-{{ forms.input(
+{{ forms.text(
     type="search",
     properties={
         placeholder: "Field placeholder text"
@@ -106,7 +105,7 @@
 
     })
 }}
-{{ forms.input(
+{{ forms.text(
     type="number",
     properties={
         placeholder: "Field placeholder text"

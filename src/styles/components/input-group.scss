@@ -3,22 +3,22 @@
 @import "../core/functions";
 
 /*!
-.tn-__COMPONENT_ID__+(--no-border)
-    .tn-__COMPONENT_ID____content+()
-    .tn-__COMPONENT_ID____title+()
+.tn-input-group+(--no-border)
+    .tn-input-group__content+()
+    .tn-input-group__title+()
 */
-$block: ns(__COMPONENT_ID__);
+$block: ns(input-group);
 
 .#{$block} {
     //LOCAL VARS (set all vars used in component, always include !default)
-    $tn-__COMPONENT_ID__-color-border: tn-color(neutral,3) !default;
-    $tn-__COMPONENT_ID__-color-border-content: tn-color(neutral,4) !default;
-    $tn-__COMPONENT_ID__-color-selected: tn-color(primary) !default;
+    $tn-input-group-color-border: tn-color(neutral, 3) !default;
+    $tn-input-group-color-border-content: tn-color(neutral, 4) !default;
+    $tn-input-group-color-selected: tn-color(primary, 3) !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
     @include reset;
-    border: solid 1px $tn-__COMPONENT_ID__-color-border;
+    border: solid 1px $tn-input-group-color-border;
 
 
     //BLOCK MODIFIERS ************
@@ -32,7 +32,7 @@ $block: ns(__COMPONENT_ID__);
     //ELEMENTS *******************************************
     //set all ELEMENT baseline styles
     &__content {
-        border: solid 1px $tn-__COMPONENT_ID__-color-border;
+        border: solid 1px $tn-input-group-color-border;
 
 
         //ELEMENT MODIFIERS ************
@@ -56,7 +56,7 @@ $block: ns(__COMPONENT_ID__);
         opacity: 0.5;
     }
     &[aria-selected="true"] {
-        border-color: $tn-__COMPONENT_ID__-color-selected;
+        border-color: $tn-input-group-color-selected;
     }
 
 

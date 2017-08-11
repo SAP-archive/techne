@@ -1,19 +1,17 @@
 <!--
 __COMPONENT_METHOD__:
-    label="", (string)
-    description="", (string | optional)
-    modifier="" (string | optional)
+    properties={},
+    modifier={},
+    state={},
+    aria={}
 -->
-{% macro __COMPONENT_METHOD__(
-    label="",
-    description="",
-    modifier="") %}
-<div class="tn-__COMPONENT_ID__{{ '--' + modifier if modifier }}">
+{% macro __COMPONENT_METHOD__(properties={}, modifier={}, state={}, aria={}) %}
+<div class="tn-__COMPONENT_ID__{{ modifier.block | modifier('__COMPONENT_ID__') }}">
     <p>
-        {{ label }}
-        {% if description %}
+        {{ properties.label }}
+        {%- if properties.description %}
             <br>
-            {{ description }}
+            {{ properties.description }}
         {% endif %}
     </p>
 </div>

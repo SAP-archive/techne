@@ -1,0 +1,24 @@
+{% import "../forms.njk" as forms %}
+<!--
+form-group:
+    properties={},
+    modifier={},
+    state={},
+    aria={}
+-->
+{% macro form_group(
+    properties={},
+    modifier={},
+    state={},
+    aria={})
+%}
+<div class="tn-form-group{{ modifier.block | modifier('form-group') }}">
+    <p>
+        {{ label }}
+        {% if description %}
+            <br>
+            {{ description }}
+        {% endif %}
+    </p>
+</div>
+{% endmacro %}
