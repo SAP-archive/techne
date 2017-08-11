@@ -13,7 +13,7 @@ install:
 - npm install
 - npm install gulp -g
 - sudo apt-get install curl
-- rvm install 2.3.3
+- rvm install ruby --default
 - gem install jekyll
 
 script:
