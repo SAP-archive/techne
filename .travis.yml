@@ -12,9 +12,7 @@ before_install:
 install:
 - npm install
 - npm install gulp -g
-- rvm install 2.1
-- rvm use 2.1
-- . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
+- rvm install 2.3.3
 - gem install jekyll
 
 script:
