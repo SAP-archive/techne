@@ -6,9 +6,9 @@
 .tn-form
     .tn-form__group()
         .tn-form__legend()
-        .tn-form__item+()
-            .tn-form__label()
-            .tn-form__control(--check)
+        .tn-form__item+(--check, --inline)
+            .tn-form__label(.is-required)
+            .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
 */
 $block: ns(form);
 
@@ -34,7 +34,6 @@ $block: ns(form);
 
         //ELEMENT MODIFIERS ************
         //each mod MUST extend the element base
-width: 200px;
 
     }
     &__legend {
@@ -44,42 +43,48 @@ width: 200px;
     &__item {
         @include tn-last-child;
         margin-right: $tn-form-item-gutter;
-
-        &--inline {
-            float: left;
-        }
         &--check {
+            @include clearfix;
             position: relative;
             display: block;
             margin-bottom: tn-space(5);
             .#{$block}__label {
-                display: inline-block;
-                padding-left: tn-space(11);
                 margin-bottom: 0;
+                margin-top: tn-space(1);
+                float: left;
+                width: calc(100% - #{tn-space(10)});
             }
             .#{$block}__control {
-                margin-left: -(tn-space(11));
+                float: left;
+                &:focus {
+                    & + .#{$block}__label {
+                        color: tn-color(text);
+                    }
+                }
+            }
+        }
+        &--inline {
+            float: left;
+            .#{$block}__label {
+                margin-bottom: 0;
+                margin-top: tn-space(1);
+                float: left;
+                width: auto;
             }
         }
     }
     &__label, &__legend {
-        @include clearfix;
         display: block;
         margin-bottom: tn-space(3);
         @include tn-type(-1);
         color: tn-color(text, 3);
-        @at-root {
-            &.is-required, .is-required & {
-                @include tn-weight(bold);
-            }
+        &.is-required {
+            @include tn-weight(bold);
         }
     }
-    // &__control {
-    //     display: block;
-    //     &--check {
-    //         float: left;
-    //     }
-    // }
+    &__legend {
+        margin-bottom: tn-space(5);
+    }
 
     //STATES *******************************************
     //these classes and attributes can be modified by scripts

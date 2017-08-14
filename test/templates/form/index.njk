@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h1>Form Group — Inputs</h1>
+<h1>Form — Inputs</h1>
 {% set example %}
 {{ form_group(
     properties={
@@ -137,7 +137,7 @@
 
 
 
-<h1>Form Group — Textarea</h1>
+<h1>Form — Textarea</h1>
 {% set example %}
 {{ form_group(
     "textarea",
@@ -154,7 +154,7 @@
 {% endset %}
 {{ format(example) }}
 
-<h1>Form Group — Radio</h1>
+<h1>Form — Radio</h1>
 <h2>Stacked (Default)</h2>
 {% set example %}
 {{ form_group(
@@ -166,7 +166,7 @@
             properties: {
                 id: "radio-1",
                 name: "radio-name-1",
-                label: "Option 1"
+                label: "Option One"
             },
             state: {
                 checked: true
@@ -176,7 +176,7 @@
             properties: {
                 id: "radio-2",
                 name: "radio-name-1",
-                label: "Option 2"
+                label: "Option Two"
             },
             state: {
                 checked: false
@@ -186,7 +186,7 @@
             properties: {
                 id: "radio-3",
                 name: "radio-name-1",
-                label: "Option 3"
+                label: "Option Three"
             },
             state: {
                 checked: false
@@ -195,6 +195,7 @@
 
     })
 }}
+
 {{ form_group(
     type="radio",
     properties={
@@ -204,7 +205,48 @@
             properties: {
                 id: "radio-4",
                 name: "radio-name-2",
-                label: "Option 1"
+                label: "Option One"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option Two"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    },
+    state={
+        required: true
+    })
+}}
+{{ form_group(
+    type="radio",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-7",
+                name: "radio-name-3",
+                label: "Option One"
             },
             state: {
                 checked: false,
@@ -213,9 +255,9 @@
         },
         {
             properties: {
-                id: "radio-5",
-                name: "radio-name-2",
-                label: "Option 2"
+                id: "radio-8",
+                name: "radio-name-3",
+                label: "Option Two"
             },
             state: {
                 checked: true,
@@ -224,9 +266,9 @@
         },
         {
             properties: {
-                id: "radio-5",
-                name: "radio-name-2",
-                label: "Option 3"
+                id: "radio-9",
+                name: "radio-name-3",
+                label: "Option Three"
             },
             state: {
                 checked: false,
@@ -252,7 +294,7 @@
             properties: {
                 id: "radio-7",
                 name: "radio-name-3",
-                label: "Option 1"
+                label: "Option One"
             },
             state: {
                 checked: true
@@ -262,7 +304,7 @@
             properties: {
                 id: "radio-8",
                 name: "radio-name-3",
-                label: "Option 2"
+                label: "Option Two"
             },
             state: {
                 checked: false
@@ -272,7 +314,7 @@
             properties: {
                 id: "radio-9",
                 name: "radio-name-3",
-                label: "Option 3"
+                label: "Option Three"
             },
             state: {
                 checked: false
@@ -285,7 +327,7 @@
 {{ format(example) }}
 
 
-<h1>Form Group — Checkbox</h1>
+<h1>Form — Checkbox</h1>
 {% set example %}
 {{ form_group(
     type="checkbox",
@@ -296,7 +338,7 @@
             properties: {
                 id: "checkbox-1",
                 name: "checkbox-name-1",
-                label: "Option 1"
+                label: "Option One"
             },
             state: {
                 checked: true
@@ -306,7 +348,7 @@
             properties: {
                 id: "checkbox-2",
                 name: "checkbox-name-1",
-                label: "Option 2"
+                label: "Option Two"
             },
             state: {
                 checked: false
@@ -316,7 +358,7 @@
             properties: {
                 id: "checkbox-3",
                 name: "checkbox-name-1",
-                label: "Option 3"
+                label: "Option Three"
             },
             state: {
                 checked: false
@@ -325,8 +367,12 @@
 
     })
 }}
+
 {{ form_group(
     type="checkbox",
+    modifier={
+        item: "inline"
+    },
     properties={
         legend: "Select an option",
         items: [
@@ -334,30 +380,33 @@
             properties: {
                 id: "checkbox-4",
                 name: "checkbox-name-2",
-                label: "Option 1"
+                label: "Option One"
             },
             state: {
-                checked: true
+                checked: true,
+                disabled: true
             }
         },
         {
             properties: {
                 id: "checkbox-5",
                 name: "checkbox-name-2",
-                label: "Option 2"
+                label: "Option Two"
             },
             state: {
-                checked: false
+                checked: false,
+                disabled: true
             }
         },
         {
             properties: {
                 id: "checkbox-6",
                 name: "checkbox-name-2",
-                label: "Option 3"
+                label: "Option Three"
             },
             state: {
-                checked: false
+                checked: false,
+                disabled: true
             }
         }]
 
@@ -365,8 +414,6 @@
 }}
 {% endset %}
 {{ format(example) }}
-
-
 
 
 {% endblock %}

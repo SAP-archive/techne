@@ -22,19 +22,17 @@ form-group:
     },
     aria={})
 -%}
-<{{ 'fieldset' if type !== 'text' else 'div' }} class="tn-form__group{{ modifier.block | modifier('form__group') }}{{ ' is-required' if state.required === true }}">
+<{{ 'fieldset' if type !== 'text' else 'div' }} class="tn-form__group{{ modifier.block | modifier('form__group') }}">
 {%- if properties.legend %}
-    <legend class="tn-form__legend">{{ properties.legend }}</legend>
+    <legend class="tn-form__legend{{ ' is-required' if state.required === true }}">{{ properties.legend }}</legend>
 {%- endif %}
 {%- for item in properties.items %}
-    <div class="tn-form__item{{ modifier.item | modifier('form__item') }}{{ ' tn-form__item--check' if type == "checkbox" or type == "radio" }}{{ ' is-required' if item.state.required === true }}">
+    <div class="tn-form__item{{ modifier.item | modifier('form__item') }}{{ ' tn-form__item--check' if type == "checkbox" or type == "radio" }}">
         {%- if type == "checkbox" or type == "radio" %}
-        <label class="tn-form__label">
-            {{   form_control(type,properties=item.properties,state=item.state,aria=item.aria) }}
-            {{ item.properties.label }}
-        </label>
+        {{ form_control(type,properties=item.properties,state=item.state,aria=item.aria) | trim }}
+        <label class="tn-form__label{{ ' is-required' if item.state.required === true }}" for="{{ item.properties.id }}">{{item.properties.label}}</label>
         {%- else %}
-        <label class="tn-form__label" for="{{ properties.id }}">{{item.properties.label}}</label>
+        <label class="tn-form__label{{ ' is-required' if item.state.required === true }}" for="{{ item.properties.id }}">{{item.properties.label}}</label>
         {{ form_control(type,properties=item.properties,state=item.state,aria=item.aria) | trim }}
         {%- endif %}
     </div>
@@ -61,9 +59,9 @@ form-control:
 {%- if type == "textarea" -%}
     {{ forms.textarea(properties,state=state,aria=aria,classes="form__control") }}
 {%- elif type == "radio" -%}
-    {{ forms.radio(properties,state=state,aria=aria,classes=["form__control","form__control--check"]) }}
+    {{ forms.radio(properties,state=state,aria=aria,classes=["form__control"]) }}
 {%- elif type == "checkbox" -%}
-    {{ forms.checkbox(properties,state=state,aria=aria,classes=["form__control","form__control--check"]) }}
+    {{ forms.checkbox(properties,state=state,aria=aria,classes=["form__control"]) }}
 {%- else -%}
     {{ forms.text(type,properties,state=state,aria=aria, classes="form__control") }}
 {%- endif -%}
