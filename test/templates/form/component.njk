@@ -10,8 +10,9 @@ form-group:
     type="text",
     properties={
         legend: "",
-        label: "FORM_FIELD_LABEL",
+        label: "",
         id: "",
+        message: "",
         items: []
     },
     modifier={
@@ -35,8 +36,18 @@ form-group:
         <label class="tn-form__label{{ ' is-required' if item.state.required === true }}" for="{{ item.properties.id }}">{{item.properties.label}}</label>
         {{ form_control(type,properties=item.properties,state=item.state,aria=item.aria) | trim }}
         {%- endif %}
+        {%- if item.properties.message %}
+        <span class="tn-form__message{{ item.modifier.message | modifier('form__message') }}">
+            {{item.properties.message}}
+        </span>
+        {%- endif %}
     </div>
 {%- endfor %}
+{%- if properties.message %}
+<div class="tn-form__message {{ modifier.message | modifier('form__message') }}">
+    {{properties.message}}
+</div>
+{%- endif %}
 </{{ 'fieldset' if type !== 'text' else 'div' }}>
 {%- endmacro %}
 

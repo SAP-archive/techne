@@ -49,10 +49,14 @@
 {{ form_group(
     properties={
         items: [{
+            modifier: {
+                message: "error"
+            },
             properties: {
                 label: "Field Label",
                 placeholder: "Field placeholder text",
-                id: "input-4"
+                id: "input-4",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
             },
             state: {
                 status: "invalid"
@@ -64,10 +68,14 @@
 {{ form_group(
     properties={
         items: [{
+            modifier: {
+                message: "warning"
+            },
             properties: {
                 label: "Field Label",
                 placeholder: "Field placeholder text",
-                id: "input-5"
+                id: "input-5",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
             },
             state: {
                 status: "warning"
@@ -106,6 +114,25 @@
 
     })
 }}
+{{ form_group(
+    properties={
+        items: [{
+            modifier: {
+                message: "help"
+            },
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-4",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
+            },
+            state: {
+                status: ""
+            }
+        }]
+
+    })
+}}
 {% endset %}
 {{ format(example) }}
 
@@ -113,9 +140,11 @@
 {% set example %}
 {{ form_group(
     modifier={
-        item: 'inline'
+        item: "inline",
+        message: "error"
     },
     properties={
+        message: "Error",
         items: [{
             properties: {
                 label: "First Name",
@@ -195,7 +224,6 @@
 
     })
 }}
-
 {{ form_group(
     type="radio",
     properties={
@@ -239,8 +267,12 @@
 }}
 {{ form_group(
     type="radio",
+    modifier={
+        message: "error"
+    },
     properties={
         legend: "Select an option",
+        message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.",
         items: [
         {
             properties: {
@@ -249,8 +281,7 @@
                 label: "Option One"
             },
             state: {
-                checked: false,
-                disabled: true
+                checked: false
             }
         },
         {
@@ -260,14 +291,53 @@
                 label: "Option Two"
             },
             state: {
-                checked: true,
-                disabled: true
+                checked: true
             }
         },
         {
             properties: {
                 id: "radio-9",
                 name: "radio-name-3",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-10",
+                name: "radio-name-4",
+                label: "Option One"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-11",
+                name: "radio-name-4",
+                label: "Option Two"
+            },
+            state: {
+                checked: true,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-12",
+                name: "radio-name-4",
                 label: "Option Three"
             },
             state: {
@@ -278,6 +348,10 @@
 
     })
 }}
+
+
+
+
 {% endset %}
 {{ format(example) }}
 <h2>Inline</h2>
@@ -292,8 +366,8 @@
         items: [
         {
             properties: {
-                id: "radio-7",
-                name: "radio-name-3",
+                id: "radio-13",
+                name: "radio-name-5",
                 label: "Option One"
             },
             state: {
@@ -302,8 +376,8 @@
         },
         {
             properties: {
-                id: "radio-8",
-                name: "radio-name-3",
+                id: "radio-14",
+                name: "radio-name-5",
                 label: "Option Two"
             },
             state: {
@@ -312,8 +386,51 @@
         },
         {
             properties: {
-                id: "radio-9",
-                name: "radio-name-3",
+                id: "radio-15",
+                name: "radio-name-5",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    modifier={
+        item: "inline",
+        message: "warning"
+    },
+    properties={
+        legend: "Select an option",
+        message: "In tincidunt mi nisi nec faucibus tortor euismod nec. ",
+        items: [
+        {
+            properties: {
+                id: "radio-16",
+                name: "radio-name-6",
+                label: "Option One"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-17",
+                name: "radio-name-6",
+                label: "Option Two"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-18",
+                name: "radio-name-6",
                 label: "Option Three"
             },
             state: {
