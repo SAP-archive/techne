@@ -8,13 +8,15 @@ before_install:
 - chmod 600 deploy-key
 - eval `ssh-agent -s`
 - ssh-add deploy-key
+- rvm install ruby --default
 
 install:
 - npm install
 - npm install gulp -g
+- gem install jekyll
 
 script:
-- gulp docs-build --production
+- jekyll build --source ./docs --destination ./ghpages
 
 after_success:
 - git config --global user.name "Travis CI Test"

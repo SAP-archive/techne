@@ -17,6 +17,12 @@ html {
     box-sizing: border-box;
     min-height: 100%;
 }
+html,
+body {
+    font-size: $tn-font-size;
+    font-family: $tn-font-family;
+    line-height: $tn-line-height;
+}
 * {
     box-sizing: inherit;
     &::before,
@@ -29,9 +35,7 @@ body {
     background-color: $tn-background-color;
     -webkit-font-smoothing: antialiased;
     color: $tn-color;
-    font-family: $tn-font-family;
-    font-size: $tn-font-size;
-    line-height: $tn-line-height;
+
 }
 
 /**
