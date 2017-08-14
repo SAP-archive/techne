@@ -16,6 +16,7 @@ install:
 - gem install jekyll
 
 script:
+- gulp docs-build
 - jekyll build --source ./docs --destination ./ghpages
 
 after_success:
