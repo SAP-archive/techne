@@ -80,7 +80,7 @@ $tn-forms-transition-params: 0.25s ease-in;
 // }
 #{$tn-elements-inputs--text}, textarea, select {
     @extend %form-field-base;
-    //width: 100%;
+    width: 100%;
     height: $tn-forms-height--input-text;
     padding-left: 1em;
     padding-right: 1em;
@@ -93,7 +93,8 @@ textarea {
     @extend %form-field-base;
     height: $tn-forms-height--input-check;
     width: $tn-forms-height--input-check;
-    margin: (($tn-forms-height--input-text - $tn-forms-height--input-check) / 2) 0;
+    //margin: (($tn-forms-height--input-text - $tn-forms-height--input-check) / 2) 0;
+    margin: 0;
     margin-right: tn-space(3);
     vertical-align: middle;
     position: relative;

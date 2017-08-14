@@ -1,0 +1,91 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-form
+    .tn-form__group()
+        .tn-form__legend()
+        .tn-form__item+()
+            .tn-form__label()
+            .tn-form__control(--check)
+*/
+$block: ns(form);
+
+.#{$block} {
+    //LOCAL VARS (set all vars used in component, always include !default)
+    $tn-form-item-gutter: $tn-width--gutter !default;
+
+
+    //BLOCK BASE *******************************************
+    //set all BLOCK reset and baseline styles
+
+
+    //BLOCK MODIFIERS ************
+    //each mod MUST extend base block so devs can use a single class and get all base styles for free
+
+
+    //ELEMENTS *******************************************
+    //set all ELEMENT baseline styles
+    &__group {
+        @include clearfix;
+        @include tn-last-child;
+        margin-bottom: $tn-margin-bottom;
+
+        //ELEMENT MODIFIERS ************
+        //each mod MUST extend the element base
+width: 200px;
+
+    }
+    &__legend {
+
+
+    }
+    &__item {
+        @include tn-last-child;
+        margin-right: $tn-form-item-gutter;
+
+        &--inline {
+            float: left;
+        }
+        &--check {
+            position: relative;
+            display: block;
+            margin-bottom: tn-space(5);
+            .#{$block}__label {
+                display: inline-block;
+                padding-left: tn-space(11);
+                margin-bottom: 0;
+            }
+            .#{$block}__control {
+                margin-left: -(tn-space(11));
+            }
+        }
+    }
+    &__label, &__legend {
+        @include clearfix;
+        display: block;
+        margin-bottom: tn-space(3);
+        @include tn-type(-1);
+        color: tn-color(text, 3);
+        @at-root {
+            &.is-required, .is-required & {
+                @include tn-weight(bold);
+            }
+        }
+    }
+    // &__control {
+    //     display: block;
+    //     &--check {
+    //         float: left;
+    //     }
+    // }
+
+    //STATES *******************************************
+    //these classes and attributes can be modified by scripts
+
+
+
+
+
+}
