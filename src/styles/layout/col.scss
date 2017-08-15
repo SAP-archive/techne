@@ -9,7 +9,7 @@ $block: ns(col);
 /*! */
 [class*="#{$block}"] {
     @include tn-at-media(s) {
-        height: 100px;
+        //height: 100px;
         float: left;
         margin-right: $tn-width--gutter;
         &:last-child {

@@ -59,6 +59,7 @@ $tn-forms-select-background-image--disabled: "data:image/svg+xml;base64,PHN2ZyB4
     &:focus,
     &:hover {
         border-color: $tn-forms-border-color--focus;
+        background-color: $tn-forms-background-color;
     }
     &.is-invalid {
         border-color: $tn-forms-color--invalid;
@@ -182,7 +183,7 @@ select {
         top: calc(50% - (#{$check-size_}/2));
         left: calc(50% - (#{$check-size_}/2));
         transition: background-color $tn-forms-transition-params;
-        background-color: $tn-forms-background-color;
+        background-color: transparent;
     }
     &:checked {
         background-color: $tn-forms-background-color;
