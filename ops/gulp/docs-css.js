@@ -5,7 +5,7 @@ let environment = require('../lib/environment');
 
 const paths = {
 	src: !environment.production ? './tmp/css' : './dist',
-	dest: './docs/_site/css'
+	dest: './docs/css'
 }
 
 let techneCss = environment.production ? 'techne.min.css' : 'techne.css';
