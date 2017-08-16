@@ -1,0 +1,30 @@
+{% import "../forms.njk" as forms %}
+<!--
+input-group:
+    properties={},
+    modifier={},
+    state={},
+    aria={}
+-->
+{% macro input_group(
+    type="text",
+    properties={
+
+    },
+    modifier={
+
+    },
+    state={
+        required: false
+    },
+    aria={
+
+    })
+-%}
+<div class="tn-input-group{{ modifier.block | modifier('input-group') }}">
+
+        {{ forms.text(type,properties,state=state,aria=aria) }}
+
+<div>
+
+{%- endmacro %}

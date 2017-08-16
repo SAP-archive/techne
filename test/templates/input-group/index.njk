@@ -1,0 +1,18 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import input_group %}
+{% from "./../format.njk" import format %}
+
+{% block content %}
+
+{{ input_group(
+    properties={
+
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-1"
+    })
+}}
+
+
+
+{% endblock %}
