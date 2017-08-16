@@ -6,10 +6,11 @@ input-group:
     state={},
     aria={}
 -->
+
 {% macro input_group(
     type="text",
     properties={
-
+        input: {}
     },
     modifier={
 
@@ -21,10 +22,25 @@ input-group:
 
     })
 -%}
+{%- set input = properties.input %}
 <div class="tn-input-group{{ modifier.block | modifier('input-group') }}">
-
-        {{ forms.text(type,properties,state=state,aria=aria) }}
-
-<div>
+    {%- if properties.before %}
+    <span class="tn-input-group__addon">
+        {{properties.before}}
+    </span>
+    {%- endif %}
+    {{ forms.text(type,input.properties,state=input.state,aria=input.aria) }}
+    {%- if properties.after %}
+    <span class="tn-input-group__addon">
+        {{properties.after}}
+    </span>
+    {%- endif %}
+    {%- if type === "number" %}
+    <span class="tn-input-group__addon tn-input-group__addon--button">
+        <button class="tn-input-group__button tn-input-group__button--step-up" aria-label="Step up" onclick="document.getElementById('{{input.properties.id}}').stepUp();"></button>
+        <button class="tn-input-group__button tn-input-group__button--step-down" aria-label="Step down" onclick="document.getElementById('{{input.properties.id}}').stepDown();"></button>
+    </span>
+    {%- endif %}
+</div>
 
 {%- endmacro %}

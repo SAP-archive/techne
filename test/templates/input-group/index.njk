@@ -4,14 +4,99 @@
 
 {% block content %}
 
+<h1>Input Group — Text addons</h1>
+{% set example %}
 {{ input_group(
     properties={
-
-                label: "Field Label",
-                placeholder: "Field placeholder text",
-                id: "input-1"
+        after: "km/h",
+        input: {
+            properties: {
+                placeholder: "Field placeholder text"
+            }
+        }
     })
 }}
+{{ input_group(
+    properties={
+        after: "km/h",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{{ input_group(
+    properties={
+        after: "€",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{{ input_group(
+    properties={
+        after: "$",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{{ input_group(
+    properties={
+        before: "km/h",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{{ input_group(
+    properties={
+        before: "€",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{{ input_group(
+    properties={
+        before: "$",
+        input: {
+            properties: {
+                value: "19387309"
+            }
+        }
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+<br><br>
+
+<h1>Input Group — Spinner addon</h1>
+
+{% set example %}
+{{ input_group(
+    type="number",
+    properties={
+        input: {
+            properties: {
+                value: "1000000", id: "number"
+            }
+        }
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
 
 
 

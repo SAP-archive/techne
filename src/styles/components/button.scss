@@ -1,6 +1,7 @@
 @import "../core/settings";
 @import "../core/mixins";
 @import "../core/functions";
+@import "mixins";
 
 /*!
 .tn-button+(--small, --large, --icon, --text)+(.is-disabled | [aria-disabled=true])
@@ -24,18 +25,9 @@ $block: ns(button);
     $tn-button-color-text: $tn-color--link !default;
     //BASE
     //set all reset and baseline block styles
+    @include tn-button-reset;
     @include tn-type(2,header,semi);
     line-height: 1;
-    font-smoothing: antialiased;
-    appearance: none;
-    outline: 0;
-    border: 0;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
     background-color: $tn-button-background-color;
     color: $tn-button-color;
     max-height: tn-space(13);

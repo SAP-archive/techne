@@ -1,0 +1,29 @@
+{
+    "properties": {
+        "input": "#/forms/text",
+            "properties": {
+                "value": "", "placeholder": "", "id": ""
+            },
+            "state": {
+                "disabled": false, "readonly": false, "status": ""
+            },
+            "aria": {}
+        },
+        "before": {
+
+        },
+        "after": {
+
+        }
+    },
+    "modifier": {
+        "block": [],
+        "icon": []
+    },
+    "state": {
+        "disabled": false
+    },
+    "aria": {
+        "disabled": false
+    }
+}
