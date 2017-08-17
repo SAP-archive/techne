@@ -1,29 +1,15 @@
 {
+    "type": "text",
     "properties": {
         "input": "#/forms/text",
-            "properties": {
-                "value": "", "placeholder": "", "id": ""
-            },
-            "state": {
-                "disabled": false, "readonly": false, "status": ""
-            },
-            "aria": {}
-        },
-        "before": {
-
-        },
-        "after": {
-
-        }
+        "before": "",
+        "after": ""
     },
     "modifier": {
         "block": [],
-        "icon": []
+        "before": ["button"],
+        "after": ["button"]
     },
-    "state": {
-        "disabled": false
-    },
-    "aria": {
-        "disabled": false
-    }
+    "state": { },
+    "aria": { }
 }
