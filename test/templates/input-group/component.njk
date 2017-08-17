@@ -1,17 +1,16 @@
 {% import "../forms.njk" as forms %}
 {% from "../button/component.njk" import button %}
-<!--
-input-group:
-    properties={},
-    modifier={},
-    state={},
-    aria={}
--->
-
+{#
+    see ./data.json for object structure
+#}
 {% macro input_group(
     type="text",
     properties={
-        input: {},
+        input: {
+            properties: {},
+            state: {},
+            aria: {}
+        },
         before: "",
         after: ""
     },
@@ -19,12 +18,6 @@ input-group:
         block: [],
         before: [],
         after: []
-    },
-    state={
-
-    },
-    aria={
-
     })
 -%}
 {%- set input = properties.input -%}
