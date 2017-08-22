@@ -54,7 +54,7 @@ $block: ns(input-group);
         border-style: solid;
         border-width: 1px;
         border-color: $tn-forms-border-color;
-        background-color: $tn-forms-background-color;
+        background-color: tn-color(neutral, 1);
         justify-content: center;
         display: flex;
         flex-direction: column;
