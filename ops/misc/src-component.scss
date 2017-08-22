@@ -49,7 +49,7 @@ $block: ns(__COMPONENT_ID__);
         opacity: 0.5;
     }
     &[aria-selected="true"] {
-        border-color: $tn-__COMPONENT_ID__-color-selected;
+        border-color: $tn-__COMPONENT_ID__-border-color--selected;
     }
 
 

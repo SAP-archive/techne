@@ -9,6 +9,9 @@
 {% block content %}
 
     <h1>__COMPONENT_ID__</h1>
+    <pre>
+data: {{ data | dump(4) }}
+    </pre>
 
     <!-- output the component example and the code snippet -->
     {% set example %}

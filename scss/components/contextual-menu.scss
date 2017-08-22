@@ -1,6 +1,8 @@
 @import "../core/settings";
 @import "../core/mixins";
 @import "../core/functions";
+@import "../components/button";
+@import "../components/dropdown";
 
 /*!
 .tn-contextual-menu
@@ -8,9 +10,6 @@
 $block: ns(contextual-menu);
 
 .#{$block} {
-
-    margin-left: tn-space(5);
-
-
-
+    min-width: 169px;
+    right: 0;
 }
