@@ -3,6 +3,81 @@
 {% from "./../format.njk" import format %}
 
 {% block content %}
+{% set options = [
+    {
+        properties: { label: "Duis malesuada odio volutpat elementum", value: "1" }
+    },
+    {
+        properties: { label: "Suspendisse ante ligula", value: "2" }
+    },
+    {
+        properties: { label: "Sed bibendum sapien at posuere interdum", value: "3" }
+    }
+]
+%}
+<h1>Form — Select</h1>
+{% set example %}
+{{ form_group(
+    "select",
+    properties={
+        items: [{
+            properties: {
+                label: "Select Label",
+                value: "Select",
+                id: "select-1",
+                options: options
+            }
+        }]
+    })
+}}
+{{ form_group(
+    "select",
+    properties={
+        items: [{
+            properties: {
+                label: "Select Label",
+                value: "Select",
+                id: "select-2",
+                options: options
+            }
+        }]
+    })
+}}
+{{ form_group(
+    "select",
+    properties={
+        items: [{
+            properties: {
+                label: "Select Label",
+                value: "Select",
+                id: "select-2",
+                options: options
+            },
+            state: {
+                required: true
+            }
+        }]
+    })
+}}
+{{ form_group(
+    "select",
+    properties={
+        items: [{
+            properties: {
+                label: "Select Label",
+                value: "Select",
+                id: "select-2",
+                options: options
+            },
+            state: {
+                disabled: true
+            }
+        }]
+    })
+}}
+{% endset %}
+{{ format(example) }}
+<br><br>
 
 <h1>Form — Inputs</h1>
 {% set example %}
@@ -135,7 +210,7 @@
 }}
 {% endset %}
 {{ format(example) }}
-
+<br><br>
 <h2>Inline</h2>
 {% set example %}
 {{ form_group(
@@ -164,7 +239,7 @@
 {% endset %}
 {{ format(example) }}
 
-
+<br><br>
 
 <h1>Form — Textarea</h1>
 {% set example %}
@@ -182,7 +257,7 @@
 }}
 {% endset %}
 {{ format(example) }}
-
+<br><br>
 <h1>Form — Radio</h1>
 <h2>Stacked (Default)</h2>
 {% set example %}
@@ -348,12 +423,9 @@
 
     })
 }}
-
-
-
-
 {% endset %}
 {{ format(example) }}
+<br><br>
 <h2>Inline</h2>
 {% set example %}
 {{ form_group(
@@ -442,7 +514,7 @@
 }}
 {% endset %}
 {{ format(example) }}
-
+<br><br>
 
 <h1>Form — Checkbox</h1>
 {% set example %}

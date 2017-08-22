@@ -34,3 +34,16 @@
 -%}
 <input class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" type="checkbox" id="{{properties.id}}" name="{{properties.name}}" value="{{properties.value}}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' checked' if state.checked }}>
 {%- endmacro %}
+
+{% macro select(
+    properties={ value: "", id: "", options: [] },
+    state={ multiple: false, disabled: false, status: "" },
+    aria={},
+    classes=[])
+-%}
+<select class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" id="{{properties.id}}" name="{{properties.name}}"{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' multiple' if state.multiple }}>
+{%- for option in properties.options %}
+    <option value="{{option.properties.value}}"{{ ' aria-disabled="'+ option.aria.disabled +'"' if aria.disabled }}{{ ' disabled' if option.state.disabled }}>{{option.properties.label}}</option>
+{%- endfor %}
+</select>
+{%- endmacro %}
