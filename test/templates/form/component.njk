@@ -23,7 +23,7 @@ form-group:
     },
     aria={})
 -%}
-<{{ 'fieldset' if type !== 'text' else 'div' }} class="tn-form__group{{ modifier.block | modifier('form__group') }}">
+<{{ 'fieldset' if (type !== 'text' and type !== 'select') else 'div' }} class="tn-form__group{{ modifier.block | modifier('form__group') }}">
 {%- if properties.legend %}
     <legend class="tn-form__legend{{ ' is-required' if state.required === true }}">{{ properties.legend }}</legend>
 {%- endif %}
@@ -48,7 +48,7 @@ form-group:
     {{properties.message}}
 </div>
 {%- endif %}
-</{{ 'fieldset' if type !== 'text' else 'div' }}>
+</{{ 'fieldset' if (type !== 'text' and type !== 'select') else 'div' }}>
 {%- endmacro %}
 
 <!--
@@ -73,6 +73,8 @@ form-control:
     {{ forms.radio(properties,state=state,aria=aria,classes=["form__control"]) }}
 {%- elif type == "checkbox" -%}
     {{ forms.checkbox(properties,state=state,aria=aria,classes=["form__control"]) }}
+{%- elif type == "select" -%}
+    {{ forms.select(properties,state=state,aria=aria,classes=["form__control"]) }}
 {%- else -%}
     {{ forms.text(type,properties,state=state,aria=aria, classes="form__control") }}
 {%- endif -%}
