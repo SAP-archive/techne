@@ -84,7 +84,8 @@ $block: ns(button);
         color: $tn-button-color--active;
     }
     &[aria-disabled="true"],
-    &.is-disabled {
+    &.is-disabled,
+    &:disabled {
         outline: solid 1px tn-color(neutral, 2);
         color: $tn-button-color--disabled;
         background-color: $tn-button-background-color--disabled;
@@ -186,13 +187,21 @@ $block: ns(button);
     //special flavor
     &--action-bar {
         @extend .#{$block}--large;
-        @extend .#{$block}--icon;
         @include tn-type(-3);
+        width: 135px;
         line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
         vertical-align: middle;
+        // &.#{$block}--text {
+        //     color: tn-color(text);
+        //     &:hover {
+        //         color: darken(tn-color(text), 5);
+        //     }
+        // }
         & > * {
             display: block !important;
             margin-top: tn-space(3);
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
