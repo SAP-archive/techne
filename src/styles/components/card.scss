@@ -28,7 +28,7 @@ $block: ns(card);
     $tn-card-padding: tn-space(m,true) !default;
     $tn-card-color-link: $tn-color--link !default;
     //anim
-    $tn-card-transition-params: 0.25s ease-in;
+    $tn-card-transition-params: 0.25s ease-in !default;
     $tn-card-time-hover: 0.2s !default;
 
     display: flex;
@@ -75,7 +75,7 @@ $block: ns(card);
     &--button,
     &[role="button"] {
         cursor: pointer;
-        transition: background-color $tn-forms-transition-params, border-color $tn-card-transition-params, box-shadow $tn-forms-transition-params;
+        transition: background-color $tn-card-transition-params, border-color $tn-card-transition-params, box-shadow $tn-card-transition-params;
         &:hover {
             border-color: $tn-card-color-link;
             background-color: $tn-card-background-color-hover;
