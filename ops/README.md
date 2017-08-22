@@ -64,21 +64,20 @@ Local development requires a server and includes watch tasks which auto-compiles
 
 
 # Contributing components
-Each component requires several files in order to generate it and make it available on the website. A script is available to generate these files.
+Each component requires several files. A script is available to generate the test files.
 
-`gulp create --component COMPONENT-ID --page PAGE-ID`
-
-> For example, "card" may be the component where "cards" is the page.
+`gulp create --component COMPONENT-ID`
 
 ## The files
-Assuming "foo" is the component and "foos" is the page, the following are created:
+Assuming "foo" is the component, the following are created:
 * `src/styles/foo.scss` is a SASS template with an example BEM structure, includes sample elements and states
-* `src/styles/components.scss` is appended with the file above
-* `src/data/foo.json` defines data and modifiers (i.e., a primitive schema) for the component
-* `src/templates/foo.html` is Nunjucks macro with a basic constructor
-* `docs/styleguide/foos.html` extends the master template, imports above macro to output the base component and any modified versions
-* `docs/data/foos.json` defines data for the page itself (i.e,, page title, description)
+* `src/styles/components.scss` is appended with `@import "components/foo.scss"`
+* `test/templates/foo/data.json` defines properties, modifiers, states and aria options (i.e., a primitive schema) for the component
+* `test/templates/foo/component.njk` is Nunjucks macro with a basic constructor
+* `test/templates/foo/index.njk` imports above macro and data file to output the base component
 
-> All template files are stored in `ops/misc`.
+> Read more about the `test` framework and [Simple visual testing](https://github.com/SAP/techne/blob/v2.0/test/README.md#simple-visual-testing)
 
-Run `npm start`. navigate to `localhost:3000/foos.html` to see the page.
+Run `npm test`. Navigate to [`localhost:3030/foo`](localhost:3030/foo) to see the page.
+
+> Note: The server must be restarted if `data.json` changes.

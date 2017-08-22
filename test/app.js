@@ -75,8 +75,9 @@ router.get('/', function (req, res) {
 
 router.get('/:key', (req, res) => {
     var key = req.params.key;
+    var data = require(`./templates/${key}/data.json`)
     console.log(`requested http://localhost:3030/${key}`);
-    res.render(`${key}/index`, Object.assign(GLOBALS, { id: key }));
+    res.render(`${key}/index`, Object.assign(GLOBALS, { id: key, data: data }));
 });
 
 router.get('/pages/:key', (req, res) => {

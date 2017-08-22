@@ -1,10 +1,13 @@
 # Simple visual testing
 
 ## Components
-Loads only `core.scss` and individual component `.scss` files. **The HTML created here will be used on the documentation site.**
+The component test framework loads only `core.scss` and individual component `.scss` files. **The HTML created here will be used on the documentation site.**
 
 - Run `npm test`
 - Go to [localhost:3030](http://localhost:3030)
+
+### Get started
+> Read about the `gulp create` task at [Contributing Components](https://github.com/SAP/techne/tree/v2.0/ops#contributing-components) which can automatically generate the required component files.
 
 To get started add a new directory matching the component block with an `index.njk` file inside.
 

@@ -17,7 +17,7 @@ var _namerize = (str) => {
 }
 exports.namerize = _namerize;
 
-exports.methodize = (str) => {
+exports.camelize = (str) => {
     var words;
     words = _namerize(str).split(" ");
     words[0] = words[0].toLowerCase();

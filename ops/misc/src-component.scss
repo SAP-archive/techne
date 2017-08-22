@@ -10,47 +10,40 @@
 $block: ns(__COMPONENT_ID__);
 
 .#{$block} {
-    //LOCAL VARS (set all vars used in component, always include !default)
-    $tn-__COMPONENT_ID__-color-border: tn-color(neutral,3) !default;
-    $tn-__COMPONENT_ID__-color-border-content: tn-color(neutral,4) !default;
-    $tn-__COMPONENT_ID__-color-selected: tn-color(primary) !default;
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-__COMPONENT_ID__-border-color: tn-color(primary, 1) !default;
+    $tn-__COMPONENT_ID__-content-border-color: tn-color(neutral, 4) !default;
+    $tn-__COMPONENT_ID__-border-color--selected: tn-color(primary) !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
     @include reset;
-    border: solid 1px $tn-__COMPONENT_ID__-color-border;
-
+    border: solid 20px $tn-__COMPONENT_ID__-border-color;
 
     //BLOCK MODIFIERS ************
-    //each mod MUST extend base block so devs can use a single class and get all base styles for free
+    //e.g., $tn-__COMPONENT_ID__--no-border
     &--no-border {
-        @extend .#{$block} !optional;
         border-color: transparent;
     }
 
-
     //ELEMENTS *******************************************
     //set all ELEMENT baseline styles
+    //e.g., $tn-__COMPONENT_ID____content
     &__content {
-        border: solid 1px $tn-__COMPONENT_ID__-color-border;
-
+        border: solid 10px $tn-__COMPONENT_ID__-content-border-color;
 
         //ELEMENT MODIFIERS ************
-        //each mod MUST extend the element base
+        //e.g., $tn-__COMPONENT_ID____content--no-border
         &--no-border {
-            @extend .#{$block}__content !optional;
             border-color: transparent;
         }
-
     }
     &__title {
 
 
     }
 
-
     //STATES *******************************************
-    //these classes and attributes can be modified by scripts
     &.is-disabled,
     &[disabled] {
         opacity: 0.5;
