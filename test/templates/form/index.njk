@@ -1,0 +1,536 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import form_group, form_control %}
+{% from "./../format.njk" import format %}
+
+{% block content %}
+
+<h1>Form — Inputs</h1>
+{% set example %}
+{{ form_group(
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-1"
+            }
+        }]
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-2"
+            },
+            state: {
+                required: true
+            }
+        }]
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-3"
+            },
+            state: {
+                status: "valid"
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            modifier: {
+                message: "error"
+            },
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-4",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
+            },
+            state: {
+                status: "invalid"
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            modifier: {
+                message: "warning"
+            },
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-5",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
+            },
+            state: {
+                status: "warning"
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-6"
+            },
+            state: {
+                disabled: true
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-7"
+            },
+            state: {
+                readonly: true
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    properties={
+        items: [{
+            modifier: {
+                message: "help"
+            },
+            properties: {
+                label: "Field Label",
+                placeholder: "Field placeholder text",
+                id: "input-4",
+                message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc"
+            },
+            state: {
+                status: ""
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+<h2>Inline</h2>
+{% set example %}
+{{ form_group(
+    modifier={
+        item: "inline",
+        message: "error"
+    },
+    properties={
+        message: "Error",
+        items: [{
+            properties: {
+                label: "First Name",
+                placeholder: "First Name",
+                id: "input-8"
+            }
+        },
+        {
+            properties: {
+                label: "Last Name",
+                placeholder: "Last Name",
+                id: "input-9"
+            }
+        }]
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
+
+<h1>Form — Textarea</h1>
+{% set example %}
+{{ form_group(
+    "textarea",
+    properties={
+        items: [{
+            properties: {
+                label: "Field Label",
+                value: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.",
+                id: "textarea-1"
+            }
+        }]
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+<h1>Form — Radio</h1>
+<h2>Stacked (Default)</h2>
+{% set example %}
+{{ form_group(
+    type="radio",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-1",
+                name: "radio-name-1",
+                label: "Option One"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-2",
+                name: "radio-name-1",
+                label: "Option Two"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-3",
+                name: "radio-name-1",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-4",
+                name: "radio-name-2",
+                label: "Option One"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option Two"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-5",
+                name: "radio-name-2",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    },
+    state={
+        required: true
+    })
+}}
+{{ form_group(
+    type="radio",
+    modifier={
+        message: "error"
+    },
+    properties={
+        legend: "Select an option",
+        message: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.",
+        items: [
+        {
+            properties: {
+                id: "radio-7",
+                name: "radio-name-3",
+                label: "Option One"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-8",
+                name: "radio-name-3",
+                label: "Option Two"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-9",
+                name: "radio-name-3",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-10",
+                name: "radio-name-4",
+                label: "Option One"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-11",
+                name: "radio-name-4",
+                label: "Option Two"
+            },
+            state: {
+                checked: true,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-12",
+                name: "radio-name-4",
+                label: "Option Three"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        }]
+
+    })
+}}
+
+
+
+
+{% endset %}
+{{ format(example) }}
+<h2>Inline</h2>
+{% set example %}
+{{ form_group(
+    type="radio",
+    modifier={
+        item: "inline"
+    },
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "radio-13",
+                name: "radio-name-5",
+                label: "Option One"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-14",
+                name: "radio-name-5",
+                label: "Option Two"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-15",
+                name: "radio-name-5",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{{ form_group(
+    type="radio",
+    modifier={
+        item: "inline",
+        message: "warning"
+    },
+    properties={
+        legend: "Select an option",
+        message: "In tincidunt mi nisi nec faucibus tortor euismod nec. ",
+        items: [
+        {
+            properties: {
+                id: "radio-16",
+                name: "radio-name-6",
+                label: "Option One"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "radio-17",
+                name: "radio-name-6",
+                label: "Option Two"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "radio-18",
+                name: "radio-name-6",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
+<h1>Form — Checkbox</h1>
+{% set example %}
+{{ form_group(
+    type="checkbox",
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "checkbox-1",
+                name: "checkbox-name-1",
+                label: "Option One"
+            },
+            state: {
+                checked: true
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-2",
+                name: "checkbox-name-1",
+                label: "Option Two"
+            },
+            state: {
+                checked: false
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-3",
+                name: "checkbox-name-1",
+                label: "Option Three"
+            },
+            state: {
+                checked: false
+            }
+        }]
+
+    })
+}}
+
+{{ form_group(
+    type="checkbox",
+    modifier={
+        item: "inline"
+    },
+    properties={
+        legend: "Select an option",
+        items: [
+        {
+            properties: {
+                id: "checkbox-4",
+                name: "checkbox-name-2",
+                label: "Option One"
+            },
+            state: {
+                checked: true,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-5",
+                name: "checkbox-name-2",
+                label: "Option Two"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        },
+        {
+            properties: {
+                id: "checkbox-6",
+                name: "checkbox-name-2",
+                label: "Option Three"
+            },
+            state: {
+                checked: false,
+                disabled: true
+            }
+        }]
+
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
+
+{% endblock %}

@@ -3,18 +3,17 @@
 @import "../core/functions";
 
 /*!
-    __COMPONENT_ID__ structure
-    .tn-__COMPONENT_ID__+(--no-border)
-        .tn-__COMPONENT_ID____content+()
-        .tn-__COMPONENT_ID____title+()
+.tn-__COMPONENT_ID__+(--no-border)
+    .tn-__COMPONENT_ID____content+()
+    .tn-__COMPONENT_ID____title+()
 */
 $block: ns(__COMPONENT_ID__);
 
 .#{$block} {
     //LOCAL VARS (set all vars used in component, always include !default)
-    $tn-__COMPONENT_ID__-color-border: color(light) !default;
-    $tn-__COMPONENT_ID__-color-border-content: color(dark) !default;
-    $tn-__COMPONENT_ID__-color-selected: color(brand) !default;
+    $tn-__COMPONENT_ID__-color-border: tn-color(neutral,3) !default;
+    $tn-__COMPONENT_ID__-color-border-content: tn-color(neutral,4) !default;
+    $tn-__COMPONENT_ID__-color-selected: tn-color(primary) !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
