@@ -20,6 +20,12 @@ $ns: ns();
         @content;
     }
 }
+@mixin tn-first-child {
+    &:first-child {
+        margin-left: 0;
+        @content;
+    }
+}
 
 @mixin tn-at-media($size, $dimension: width) {
   @if map-has-key($tn-breakpoints, $size) {

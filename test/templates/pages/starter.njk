@@ -1,0 +1,171 @@
+{% extends "./layouts/master.njk" %}
+{% from "../card/component.njk" import card %}
+{% from "../button/component.njk" import button %}
+{% from "../form/component.njk" import form_group %}
+{% block content %}
+
+<br><br>
+
+<div class="tn-container">
+    <h1 class="tn-has-type-5 tn-has-color-text-1">Mauris a orci iaculis hendrerit</h1>
+    {% for i in range(0,2) %}
+    <div class="tn-col-6">
+        {{  card(
+                {
+                    'title': 'Lorem ipsum dolor quam placeat numquam repellendus',
+                    'description': 'Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut.',
+                    'status': '<span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>'
+                },
+                modifier={
+                    block: ['button']
+                },
+                aria={
+                    role: 'button'
+                })
+        }}
+
+    </div>
+    {% endfor %}
+
+
+</div>
+
+<br>
+
+
+<div class="tn-container">
+    <h1 class="tn-has-type-4 tn-has-color-text-2">Proin ut quam arcu</h1>
+    {% for i in range(0,2) %}
+    <div class="tn-col-6">
+        {{ form_group(
+            properties={
+                items: [{
+                    properties: {
+                        label: "Field Label",
+                        placeholder: "Field placeholder text",
+                        id: "input-3"
+                    },
+                    state: {
+
+                    }
+                }]
+
+            })
+        }}
+
+
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+<div class="tn-container">
+    {% for i in range(0,2) %}
+    <div class="tn-col-6">
+{% set input_type %}{{ "radio" if i == 0 else "checkbox" }}{% endset %}
+        {{ form_group(
+            type=input_type,
+            modifier={
+                item: "inline"
+            },
+            properties={
+                legend: "Select an option",
+                items: [
+                {
+                    properties: {
+                        id: input_type+"-1",
+                        name: input_type+"-name-5",
+                        label: "Option One"
+                    },
+                    state: {
+                        checked: true
+                    }
+                },
+                {
+                    properties: {
+                        id: input_type+"-2",
+                        name: input_type+"-name-5",
+                        label: "Option Two"
+                    },
+                    state: {
+                        checked: false
+                    }
+                },
+                {
+                    properties: {
+                        id: input_type+"-3",
+                        name: input_type+"-name-5",
+                        label: "Option Three"
+                    },
+                    state: {
+                        checked: false
+                    }
+                }]
+
+            })
+        }}
+
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="tn-container">
+    <div class="tn-col-12">
+
+        {{ form_group(
+            type="textarea",
+            properties={
+                items: [{
+                    properties: {
+                        label: "Field Label",
+                        placeholder: "Field placeholder text",
+                        id: "input-3"
+                    },
+                    state: {
+
+                    }
+                }]
+
+            })
+        }}
+
+
+    </div>
+
+</div>
+
+
+
+
+<div class="tn-container">
+    <div class="tn-col-12" style="text-align: right;">
+
+        {{  button(
+                {
+                    label: 'Cancel',
+                    icon: ''
+                },
+                modifier={
+                    block: ['text']
+                })
+        }}
+        {{  button(
+                {
+                    label: 'Save',
+                    icon: ''
+                },
+                modifier={
+                })
+        }}
+
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

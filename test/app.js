@@ -62,9 +62,7 @@ app.set('views', TEMPLATE_DIRECTORY);
 app.set('view engine', 'njk');
 
 app.use(router);
-app.use(express.static(path.join(__dirname, 'public')));
-
-
+app.use('/static', express.static(path.join(__dirname, 'resources')));
 
 router.all('/', function (req, res, next) {
   //console.log('request initiated!');
@@ -77,8 +75,14 @@ router.get('/', function (req, res) {
 
 router.get('/:key', (req, res) => {
     var key = req.params.key;
-    //console.log(key)
+    console.log(`requested http://localhost:3030/${key}`);
     res.render(`${key}/index`, Object.assign(GLOBALS, { id: key }));
+});
+
+router.get('/pages/:key', (req, res) => {
+    var key = req.params.key;
+    console.log(`requested http://localhost:3030/pages/${key}`);
+    res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key }));
 });
 
 app.listen(3030);

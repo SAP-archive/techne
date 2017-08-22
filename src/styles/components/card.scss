@@ -14,18 +14,23 @@
 $block: ns(card);
 .#{$block} {
     @include reset;
-    //LOCAL VARS
+
+    //dimensions
     $tn-card-width: 600px !default;
     $tn-card-media-width: 75px !default;
+    //colors
     $tn-card-color-border: tn-color(neutral,2) !default;
     $tn-card-color-disabled: tn-color(text,3) !default;
     $tn-card-background-color: tn-color(background) !default;
     $tn-card-background-color-disabled: tn-color(neutral,1) !default;
     $tn-card-background-color-hover: $tn-card-background-color !default;
-    $tn-card-time-hover: 0.2s !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
     $tn-card-padding: tn-space(m,true) !default;
     $tn-card-color-link: $tn-color--link !default;
+    //anim
+    $tn-card-transition-params: 0.25s ease-in !default;
+    $tn-card-time-hover: 0.2s !default;
+
     display: flex;
     max-width: $tn-card-width;
     border-style: solid;
@@ -70,10 +75,10 @@ $block: ns(card);
     &--button,
     &[role="button"] {
         cursor: pointer;
-        transition: border-color $tn-card-time-hover, box-shadow $tn-card-time-hover;
+        transition: background-color $tn-card-transition-params, border-color $tn-card-transition-params, box-shadow $tn-card-transition-params;
         &:hover {
             border-color: $tn-card-color-link;
-            background-color: $tn-card-background-color;
+            background-color: $tn-card-background-color-hover;
             box-shadow: $tn-card-shadow-hover;
         }
     }

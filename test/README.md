@@ -1,6 +1,7 @@
 # Simple visual testing
 
-This simple framework loads only `core.scss` and individual component `.scss` files. **The HTML created here will be used on the documentation site.**
+## Components
+Loads only `core.scss` and individual component `.scss` files. **The HTML created here will be used on the documentation site.**
 
 - Run `npm test`
 - Go to [localhost:3030](http://localhost:3030)
@@ -27,6 +28,14 @@ The index file should minimally contain the following template:
 Then view component at `localhost:3030/BLOCK_NAME`, e.g., [localhost:3030/card](http://localhost:3030/card).
 
 Additionally, create a macro and generate the HTML based on a data object.
+
+## Pages
+
+Full pages can be built in the `pages` directory, served by the file name key, e.g., `/pages/starter`.
+
+Start at [localhost:3030/pages](http://localhost:3030/pages)
+
+This area is to test compositions of components with layout and base UI elements.
 
 👍
 
