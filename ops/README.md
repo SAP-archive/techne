@@ -12,14 +12,14 @@ Each output has a `build` task that chains the tasks together. Individual tasks 
 > It is VERY important that tasks be separated. Do NOT attempt to do everything in one task.
 
 ## The package
-* Inputs: `src`
+* Inputs: `scss`
 * Outputs: `dist` (and `tmp`)
 
 ### Generate the package
-`gulp pkg-build --production` builds to `dist`
+`gulp build:dist --production` builds to `dist`
 
 ### For local development
-`gulp pkg-build` builds to `tmp`
+`npm run build` or `gulp build:dist` builds to `tmp`
 
 > Local development has no dependency on `dist`. It only needs to be built for releases and deployments.
 

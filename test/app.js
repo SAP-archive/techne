@@ -7,7 +7,7 @@ const sass = require('node-sass');
 
 const TEMPLATE_DIRECTORY = path.join(__dirname, 'templates');
 const PUBLIC_DIRECTORY = path.join(__dirname, 'public');
-const SASS_DIRECTORY = path.join(__dirname, '..', 'src/styles'); //this should move to /scss
+const SASS_DIRECTORY = path.join(__dirname, '..', 'scss');
 
 const GLOBALS = {
     namespace: 'tn'
@@ -64,6 +64,10 @@ app.set('view engine', 'njk');
 app.use(router);
 app.use('/static', express.static(path.join(__dirname, 'resources')));
 
+router.get('/techne-icons.svg', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'scss/icons/techne-icons.svg'));
+});
+
 router.all('/', function (req, res, next) {
   //console.log('request initiated!');
   next();
@@ -92,6 +96,10 @@ router.get('/pages/:key', (req, res) => {
     console.log(`requested http://localhost:3030/pages/${key}`);
     res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key }));
 });
+
+
+//app.use('/', express.static(path.join(__dirname, '..', 'scss/icons/techne-icons.svg')));
+
 
 app.listen(3030);
 console.log('listening at http://localhost:3030')

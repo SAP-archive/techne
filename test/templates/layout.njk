@@ -14,8 +14,12 @@
         {% set core_sass = 'core.scss' %}
         {{ core_sass | sass_to_css }}
 
-        {% set component_sass = 'components/' + id + '.scss'  %}
-        {{ component_sass | sass_to_css }}
+{% if id === 'icons' %}
+    {{ 'icons/icons.css' | sass_to_css }}
+{% else %}
+    {% set component_sass = 'components/' + id + '.scss'  %}
+    {{ component_sass | sass_to_css }}
+{% endif %}
 
         {% for sass in css_deps %}
             {% set dep_sass = sass + '.scss' %}

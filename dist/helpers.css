@@ -59,18 +59,18 @@
 .tn-has-font-family-code {
   font-family: Courier,sans-serif
 }
-.tn-has-color-brand,
-.tn-has-color-brand-1 {
+.tn-has-color-primary,
+.tn-has-color-primary-1 {
   color: #006fbb
 }
-.tn-has-background-color-brand,
-.tn-has-background-color-brand-1 {
+.tn-has-background-color-primary,
+.tn-has-background-color-primary-1 {
   background-color: #006fbb
 }
-.tn-has-color-brand-2 {
+.tn-has-color-primary-2 {
   color: #27394f
 }
-.tn-has-background-color-brand-2 {
+.tn-has-background-color-primary-2 {
   background-color: #27394f
 }
 .tn-has-color-text,
@@ -93,24 +93,24 @@
 .tn-has-background-color-text-3 {
   background-color: #63758b
 }
-.tn-has-color-inverse,
-.tn-has-color-inverse-1 {
+.tn-has-color-text-inverse,
+.tn-has-color-text-inverse-1 {
   color: #fff
 }
-.tn-has-background-color-inverse,
-.tn-has-background-color-inverse-1 {
+.tn-has-background-color-text-inverse,
+.tn-has-background-color-text-inverse-1 {
   background-color: #fff
 }
-.tn-has-color-inverse-2 {
+.tn-has-color-text-inverse-2 {
   color: #f6f8f9
 }
-.tn-has-background-color-inverse-2 {
+.tn-has-background-color-text-inverse-2 {
   background-color: #f6f8f9
 }
-.tn-has-color-inverse-3 {
+.tn-has-color-text-inverse-3 {
   color: #eef1f3
 }
-.tn-has-background-color-inverse-3 {
+.tn-has-background-color-text-inverse-3 {
   background-color: #eef1f3
 }
 .tn-has-color-action,
@@ -133,6 +133,12 @@
 .tn-has-background-color-action-3 {
   background-color: #0093d1
 }
+.tn-has-color-action-4 {
+  color: #008ac4
+}
+.tn-has-background-color-action-4 {
+  background-color: #008ac4
+}
 .tn-has-color-neutral,
 .tn-has-color-neutral-1 {
   color: #f9fbfc
@@ -153,23 +159,69 @@
 .tn-has-background-color-neutral-3 {
   background-color: #ccdaeb
 }
-.tn-has-color-status-success {
+.tn-has-color-neutral-4 {
+  color: #8a8fa1
+}
+.tn-has-background-color-neutral-4 {
+  background-color: #8a8fa1
+}
+.tn-has-color-neutral-5 {
+  color: #c2d1ea
+}
+.tn-has-background-color-neutral-5 {
+  background-color: #c2d1ea
+}
+.tn-has-color-neutral-6 {
+  color: #a8bfe3
+}
+.tn-has-background-color-neutral-6 {
+  background-color: #a8bfe3
+}
+.tn-has-color-background,
+.tn-has-color-background-1 {
+  color: #fff
+}
+.tn-has-background-color-background,
+.tn-has-background-color-background-1 {
+  background-color: #fff
+}
+.tn-has-color-status,
+.tn-has-color-status-1 {
   color: #61bf33
 }
-.tn-has-background-color-status-success {
+.tn-has-background-color-status,
+.tn-has-background-color-status-1 {
   background-color: #61bf33
 }
-.tn-has-color-status-warning {
+.tn-has-color-status-2 {
+  color: #dff2d6
+}
+.tn-has-background-color-status-2 {
+  background-color: #dff2d6
+}
+.tn-has-color-status-3 {
   color: #e96b1a
 }
-.tn-has-background-color-status-warning {
+.tn-has-background-color-status-3 {
   background-color: #e96b1a
 }
-.tn-has-color-status-error {
+.tn-has-color-status-4 {
+  color: #fbe3d4
+}
+.tn-has-background-color-status-4 {
+  background-color: #fbe3d4
+}
+.tn-has-color-status-5 {
   color: #df1919
 }
-.tn-has-background-color-status-error {
+.tn-has-background-color-status-5 {
   background-color: #df1919
+}
+.tn-has-color-status-6 {
+  color: #f9d1d1
+}
+.tn-has-background-color-status-6 {
+  background-color: #f9d1d1
 }
 .tn-has-background-image {
   background-repeat: no-repeat;
@@ -272,182 +324,152 @@
   padding-left: 8px
 }
 .tn-has-margin-s {
-  margin: 16px
+  margin: 12px
 }
 .tn-has-padding-s {
-  padding: 16px
+  padding: 12px
 }
 .tn-has-margin-top-s {
-  margin-top: 16px
+  margin-top: 12px
 }
 .tn-has-padding-top-s {
-  padding-top: 16px
+  padding-top: 12px
 }
 .tn-has-margin-right-s {
-  margin-right: 16px
+  margin-right: 12px
 }
 .tn-has-padding-right-s {
-  padding-right: 16px
+  padding-right: 12px
 }
 .tn-has-margin-bottom-s {
-  margin-bottom: 16px
+  margin-bottom: 12px
 }
 .tn-has-padding-bottom-s {
-  padding-bottom: 16px
+  padding-bottom: 12px
 }
 .tn-has-margin-left-s {
-  margin-left: 16px
+  margin-left: 12px
 }
 .tn-has-padding-left-s {
-  padding-left: 16px
+  padding-left: 12px
 }
 .tn-has-margin-reg {
-  margin: 24px
+  margin: 20px
 }
 .tn-has-padding-reg {
-  padding: 24px
+  padding: 20px
 }
 .tn-has-margin-top-reg {
-  margin-top: 24px
+  margin-top: 20px
 }
 .tn-has-padding-top-reg {
-  padding-top: 24px
+  padding-top: 20px
 }
 .tn-has-margin-right-reg {
-  margin-right: 24px
+  margin-right: 20px
 }
 .tn-has-padding-right-reg {
-  padding-right: 24px
+  padding-right: 20px
 }
 .tn-has-margin-bottom-reg {
-  margin-bottom: 24px
+  margin-bottom: 20px
 }
 .tn-has-padding-bottom-reg {
-  padding-bottom: 24px
+  padding-bottom: 20px
 }
 .tn-has-margin-left-reg {
-  margin-left: 24px
+  margin-left: 20px
 }
 .tn-has-padding-left-reg {
-  padding-left: 24px
+  padding-left: 20px
 }
 .tn-has-margin-m {
-  margin: 32px
-}
-.tn-has-padding-m {
-  padding: 32px
-}
-.tn-has-margin-top-m {
-  margin-top: 32px
-}
-.tn-has-padding-top-m {
-  padding-top: 32px
-}
-.tn-has-margin-right-m {
-  margin-right: 32px
-}
-.tn-has-padding-right-m {
-  padding-right: 32px
-}
-.tn-has-margin-bottom-m {
-  margin-bottom: 32px
-}
-.tn-has-padding-bottom-m {
-  padding-bottom: 32px
-}
-.tn-has-margin-left-m {
-  margin-left: 32px
-}
-.tn-has-padding-left-m {
-  padding-left: 32px
-}
-.tn-has-margin-l {
   margin: 40px
 }
-.tn-has-padding-l {
+.tn-has-padding-m {
   padding: 40px
 }
-.tn-has-margin-top-l {
+.tn-has-margin-top-m {
   margin-top: 40px
 }
-.tn-has-padding-top-l {
+.tn-has-padding-top-m {
   padding-top: 40px
 }
-.tn-has-margin-right-l {
+.tn-has-margin-right-m {
   margin-right: 40px
 }
-.tn-has-padding-right-l {
+.tn-has-padding-right-m {
   padding-right: 40px
 }
-.tn-has-margin-bottom-l {
+.tn-has-margin-bottom-m {
   margin-bottom: 40px
 }
-.tn-has-padding-bottom-l {
+.tn-has-padding-bottom-m {
   padding-bottom: 40px
 }
-.tn-has-margin-left-l {
+.tn-has-margin-left-m {
   margin-left: 40px
 }
-.tn-has-padding-left-l {
+.tn-has-padding-left-m {
   padding-left: 40px
 }
-.tn-has-margin-xl {
+.tn-has-margin-l {
   margin: 100px
 }
-.tn-has-padding-xl {
+.tn-has-padding-l {
   padding: 100px
 }
-.tn-has-margin-top-xl {
+.tn-has-margin-top-l {
   margin-top: 100px
 }
-.tn-has-padding-top-xl {
+.tn-has-padding-top-l {
   padding-top: 100px
 }
-.tn-has-margin-right-xl {
+.tn-has-margin-right-l {
   margin-right: 100px
 }
-.tn-has-padding-right-xl {
+.tn-has-padding-right-l {
   padding-right: 100px
 }
-.tn-has-margin-bottom-xl {
+.tn-has-margin-bottom-l {
   margin-bottom: 100px
 }
-.tn-has-padding-bottom-xl {
+.tn-has-padding-bottom-l {
   padding-bottom: 100px
 }
-.tn-has-margin-left-xl {
+.tn-has-margin-left-l {
   margin-left: 100px
 }
-.tn-has-padding-left-xl {
+.tn-has-padding-left-l {
   padding-left: 100px
 }
-.tn-has-margin-xxl {
+.tn-has-margin-xl {
   margin: 148px
 }
-.tn-has-padding-xxl {
+.tn-has-padding-xl {
   padding: 148px
 }
-.tn-has-margin-top-xxl {
+.tn-has-margin-top-xl {
   margin-top: 148px
 }
-.tn-has-padding-top-xxl {
+.tn-has-padding-top-xl {
   padding-top: 148px
 }
-.tn-has-margin-right-xxl {
+.tn-has-margin-right-xl {
   margin-right: 148px
 }
-.tn-has-padding-right-xxl {
+.tn-has-padding-right-xl {
   padding-right: 148px
 }
-.tn-has-margin-bottom-xxl {
+.tn-has-margin-bottom-xl {
   margin-bottom: 148px
 }
-.tn-has-padding-bottom-xxl {
+.tn-has-padding-bottom-xl {
   padding-bottom: 148px
 }
-.tn-has-margin-left-xxl {
+.tn-has-margin-left-xl {
   margin-left: 148px
 }
-.tn-has-padding-left-xxl {
+.tn-has-padding-left-xl {
   padding-left: 148px
 }

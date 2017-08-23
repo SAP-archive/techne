@@ -1,14 +1,15 @@
 const gulp = require('gulp');
+const config = require('../config');
 
 let environment = require('../lib/environment');
 
 const paths = {
-	src: './src/styles/icons',
-	dest: !environment.production ? 'tmp/css' : 'dist'
+	src: `${config.root.css}/icons`,
+	dest: environment.production ? config.root.dest : config.root.tmp
 }
 
 const task = (cb) => {
-    let prefix = 'techne';
+    let prefix = config.tasks.css.prefix;
     return gulp.src([`${paths.src}/*.svg`])
 		.pipe(gulp.dest(paths.dest));
 }
