@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "",
+    "build": "gulp build:dist",
     "start": "gulp",
     "install": "bower install",
     "test": "node test/app.js"

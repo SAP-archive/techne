@@ -13,7 +13,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  max-width: 600px;
   border-style: solid;
   border-width: 1px;
   border-color: #d7d7d7;
@@ -36,13 +36,26 @@
 .tn-card[role=button] .tn-card__header {
   color: #009cdf
 }
+.tn-card--compact .tn-card__media {
+  margin: 20px 0 20px 20px
+}
+.tn-card--compact .tn-card__media--fill {
+  margin: 0;
+  width: 135px
+}
+.tn-card--compact .tn-card__content {
+  padding: 20px 20px
+}
+.tn-card--compact.tn-card--vertical .tn-card__media {
+  margin: 0
+}
 .tn-card--button,
 .tn-card[role=button] {
   cursor: pointer;
-  -webkit-transition: border-color .2s,-webkit-box-shadow .2s;
-  transition: border-color .2s,-webkit-box-shadow .2s;
-  transition: border-color .2s,box-shadow .2s;
-  transition: border-color .2s,box-shadow .2s,-webkit-box-shadow .2s
+  -webkit-transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
+  transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
+  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in;
+  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in
 }
 .tn-card--button:hover,
 .tn-card[role=button]:hover {
@@ -68,6 +81,7 @@
   background-position: center center;
   background-size: cover;
   min-width: 75px;
+  min-height: 75px;
   margin: 40px 0 40px 40px
 }
 .tn-card__media--fill {
@@ -81,12 +95,8 @@
 .tn-card__media--round {
   border-radius: 50%
 }
-.tn-card__media--hex {
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="75" height="75" viewBox="0 0 81 93" xmlns="http://www.w3.org/2000/svg"><title>hex</title><g fill="#000" fill-rule="evenodd"><path d="M79.609 23.056l.391.225v45.934L40 92.28 0 69.215V23.28L.477 23l38.645 21.925a2 2 0 0 0 1.975 0l38.512-21.869z"/><path d="M40.092 0l40.092 23.416-39.087 22.195a2 2 0 0 1-1.975 0L0 23.417 40.092 0z" fill-opacity=".6"/></g></svg>') center center/contain;
-  mask: url('data:image/svg+xml;utf8,<svg width="75" height="75" viewBox="0 0 81 93" xmlns="http://www.w3.org/2000/svg"><title>hex</title><g fill="#000" fill-rule="evenodd"><path d="M79.609 23.056l.391.225v45.934L40 92.28 0 69.215V23.28L.477 23l38.645 21.925a2 2 0 0 0 1.975 0l38.512-21.869z"/><path d="M40.092 0l40.092 23.416-39.087 22.195a2 2 0 0 1-1.975 0L0 23.417 40.092 0z" fill-opacity=".6"/></g></svg>') center center/contain
-}
 .tn-card__content {
-  padding: 35px 40px;
+  padding: 40px 40px;
   max-width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -104,7 +114,7 @@
   font-size: .8125rem;
   line-height: 1.38462;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;

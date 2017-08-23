@@ -7,7 +7,7 @@ const sass = require('node-sass');
 
 const TEMPLATE_DIRECTORY = path.join(__dirname, 'templates');
 const PUBLIC_DIRECTORY = path.join(__dirname, 'public');
-const SASS_DIRECTORY = path.join(__dirname, '..', 'src/styles'); //this should move to /scss
+const SASS_DIRECTORY = path.join(__dirname, '..', 'scss');
 
 const GLOBALS = {
     namespace: 'tn'
