@@ -75,9 +75,16 @@ router.get('/', function (req, res) {
 
 router.get('/:key', (req, res) => {
     var key = req.params.key;
-    var data = require(`./templates/${key}/data.json`)
+    var data = {};
+    try {
+        data = require(`./templates/${key}/data.json`);
+    } catch (e) {
+
+    } finally {
+
+    }
     console.log(`requested http://localhost:3030/${key}`);
-    res.render(`${key}/index`, Object.assign(GLOBALS, { id: key, data: data }));
+    res.render(`${key}/index`, Object.assign(GLOBALS, { id: key, data: data, libs: getLibs(req.query.lib) }));
 });
 
 router.get('/pages/:key', (req, res) => {
@@ -89,3 +96,36 @@ router.get('/pages/:key', (req, res) => {
 app.listen(3030);
 console.log('listening at http://localhost:3030')
 module.exports = app;
+
+function getLibs(libQuery) {
+    var libs = {
+        b3: false,
+        b4: false,
+        md: false,
+        tn: false
+    }
+    var libsChecked = libQuery;
+    if (libsChecked) {
+        if (typeof libsChecked == 'string') {
+            libsChecked = [libsChecked];
+        }
+        for (var i = 0; i < libsChecked.length; i++) {
+            switch (libsChecked[i]) {
+                case "b3":
+                    libs.b3 = true;
+                    break;
+                case "b4":
+                    libs.b4 = true;
+                    break;
+                case "md":
+                    libs.md = true;
+                    break;
+                case "tn":
+                    libs.tn = true;
+                    break;
+                default:
+            }
+        }
+    }
+    return libs;
+}
