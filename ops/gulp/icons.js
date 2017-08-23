@@ -10,9 +10,9 @@ const config = {
     },
     selector: "hyicon-%f",
     common: "hyicon",
-    svg: { sprite: "styles/icons/techne-icons.svg" },
-    cssFile: "styles/icons/icons.css",
-    preview: {sprite: "templates/icons.html"}
+    svg: { sprite: "scss/icons/techne-icons.svg" },
+    cssFile: "scss/icons/icons.css",
+    preview: {sprite: "test/templates/icons/index.njk"}
 };
 
 // generate icons
@@ -20,7 +20,7 @@ const task = (cb) => {
     return gulp.src('./src/icons/raw-svg/*.svg')
            .pipe(svgmin())
            .pipe(svgSprite(config))
-           .pipe(gulp.dest("./src"))
+           .pipe(gulp.dest("./"))
 }
 
 gulp.task('icons', task);
