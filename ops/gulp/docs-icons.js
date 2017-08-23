@@ -29,7 +29,7 @@ gulp.task('docs-iconsMarkup', iconsMarkup);
 
 const task = (cb) => {
 
-    gulpSequence('docs-iconsSvg', 'docs-iconsMarkup', cb);
+    gulpSequence('icons', 'docs-iconsSvg', 'docs-iconsMarkup', cb);
 
 }
 gulp.task('docs-icons', task);
