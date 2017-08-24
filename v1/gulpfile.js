@@ -43,8 +43,8 @@ var paths = {
 /**
  * Font settings
  */
-const fontName = 'hyicon' // set name of your symbol font
-const className = 'hyicon' // set class name in your CSS
+// const fontName = 'hyicon' // set name of your symbol font
+// const className = 'hyicon' // set class name in your CSS
 
 // Create Iconfont
 gulp.task('iconfont', function() {
@@ -146,7 +146,7 @@ gulp.task('styleguide', function () {
     }))
     .pipe(gulp.dest('docs/kss') )
     //.pipe(browserSync.stream());
-    
+
 
     gulp.src('./bower_components/bootstrap/fonts/**/*')
     .pipe( gulp.dest('./docs/kss/public/bootstrap/fonts') );
@@ -253,4 +253,3 @@ gulp.task('dist', ['iconfont', 'build']);
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', [ 'build' , 'serve']);
-
