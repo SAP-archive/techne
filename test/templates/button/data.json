@@ -4,8 +4,7 @@
         "icon": "ICON_ID"
     },
     "modifier": {
-        "block": ["small", "large", "text", "icon"],
-        "icon": []
+        "block": ["small", "large", "text", "icon", "link", "action-bar"]
     },
     "state": {
         "disabled": false

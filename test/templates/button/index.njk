@@ -4,7 +4,9 @@
 {% set css_deps = ['helpers'] %}
 
 {% block content %}
-
+<style media="screen">
+    textarea {display: none;}
+</style>
 <h1>Button</h1>
 {% set example %}
 {{  button(
@@ -254,7 +256,6 @@
 <br><hr><br>
 
 
-
 <h1>Icon Button</h1>
 {% set example %}
 {{  button(
@@ -354,7 +355,54 @@
 {% endset %}
 {{ format(example) }}
 
+<br><hr><br>
 
+<h1>Action Bar Button</h1>
+{% set example %}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['action-bar'] }
+    )
+}}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['text','action-bar'] }
+    )
+}}
+{% endset %}
+{{ format(example) }}
+
+
+<br>
+
+<h2>States — Selected, Disabled</h2>
+{% set example %}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['action-bar'] },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['action-bar'] },
+        aria={ disabled: true }
+    )
+}}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['text','action-bar'] },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'BUTTON_LABEL', icon: 'foo' },
+        modifier={ block: ['text','action-bar'] },
+        aria={ disabled: true }
+    )
+}}
+{% endset %}
+{{ format(example) }}
 
 
 

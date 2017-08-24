@@ -4,8 +4,8 @@
 @import "mixins";
 
 /*!
-.tn-button+( (--small | --large), --icon, --text, --link)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
-    .tn-button__icon+(.tn-icon)
+.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
+    .tn-button__icon+()
 */
 
 //set component name using namespace function, then use #{$block} below
@@ -160,52 +160,29 @@ $block: ns(button);
             }
         }
     }
-    //icon modifier (use if there is no text)
-    &--icon {
-        &.#{$block}--large {
-            $icon-size_: $tn-button-icon-height--large;
-            min-width: tn-space(7) * 2 + $icon-size_;
-            position: relative;
-            .#{$block}__icon {
-                $icon-size_: 32px;
-                position: absolute;
-                left: calc(50% - #{$icon-size_}/2);
-                top: tn-space(3);
-                width: $icon-size_;
-                height: $icon-size_;
-            }
-            &::after {
-                @include tn-type(-3);
-                display: inline-block;
-                transform: translateY(tn-space(3));
-                content: attr(aria-label);
-            }
-        }
-    }
     //ELEMENTS
     &__icon {
         display: inline-block;
         vertical-align: top;
-        position: relative;
         margin-right: tn-space(3);
         @at-root {
             .#{$block}--icon & {
-                margin-right: 0;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         //revisit — sizes will be part of the icons
+        font-size: 26px; //temp
         width: $tn-button-icon-height;
         height: $tn-button-icon-height;
-        line-height: $tn-button-icon-height;
-        top: $tn-button-height / 2 - $tn-button-icon-height / 2;
-        font-size: 26px; //temp
+        line-height: 1;
+        margin-top: $tn-button-height / 2 - $tn-button-icon-height / 2;
         @at-root {
             .#{$block}--small & {
                 font-size: 18px; //temp
                 width: $tn-button-icon-height--small;
                 height: $tn-button-icon-height--small;
-                line-height: $tn-button-icon-height--small;
-                top: $tn-button-height--small / 2 - $tn-button-icon-height--small / 2;
+                margin-top: $tn-button-height--small / 2 - $tn-button-icon-height--small / 2;
             }
         }
         @at-root {
@@ -213,9 +190,22 @@ $block: ns(button);
                 font-size: 32px; //temp
                 width: $tn-button-icon-height--large;
                 height: $tn-button-icon-height--large;
-                line-height: $tn-button-icon-height--large;
-                top: $tn-button-height--large / 2 - $tn-button-icon-height--large / 2;
+                margin-top: $tn-button-height--large / 2 - $tn-button-icon-height--large / 2;
             }
         }
     }
+
+    //special flavor
+    &--action-bar {
+        @extend .#{$block}--large;
+        @extend .#{$block}--icon;
+        @include tn-type(-3);
+        line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
+        vertical-align: middle;
+        .#{$block}__icon {
+            display: block;
+            margin-top: tn-space(3);
+        }
+    }
+
 }
