@@ -1,20 +1,21 @@
 ---
 title: Test page for Markdown formatting
 keywords: sample page
-tags: 
+tags:
 permalink: formatting.html
 toc: false
 hide_sidebar: true
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque, totam labore est accusamus ut atque voluptatum odit doloremque dolores suscipit ad reprehenderit vero pariatur debitis laboriosam enim soluta vel.
+search: exclude
 ---
 
 ## This is heading 2
 
 This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolore quasi, ex repellat.
 
-### This is heading 3 
+### This is heading 3
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolore quasi, ex repellat. Placeat, expedita odio earum vero sit quos quidem, eos tempora. Recusandae laudantium nostrum possimus assumenda placeat natus. 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolore quasi, ex repellat. Placeat, expedita odio earum vero sit quos quidem, eos tempora. Recusandae laudantium nostrum possimus assumenda placeat natus.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, exercitationem. Distinctio enim, vel aperiam praesentium sunt sequi sed voluptatem deleniti quis saepe reprehenderit, quas assumenda adipisci doloremque provident debitis totam!
 
@@ -50,7 +51,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
-⋅⋅* Unordered sub-list. 
+⋅⋅* Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
 ⋅⋅1. Ordered sub-list
 4. And another item.
@@ -77,8 +78,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -101,14 +102,14 @@ Inline `code` has `back-ticks around` it.
     <a href="#" class="btn btn-primary">Learn More</a>
 </div>
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
- 
+
 ```
-No language indicated, so no syntax highlighting. 
+No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
@@ -121,7 +122,7 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
+The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
@@ -134,7 +135,7 @@ Markdown | Less | Pretty
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 <dl>
   <dt>Definition list</dt>
