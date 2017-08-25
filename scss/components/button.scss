@@ -4,92 +4,131 @@
 @import "mixins";
 
 /*!
-.tn-button+(--small, --large, --icon, --text)+(.is-disabled | [aria-disabled=true])
-    .tn-button__icon+(.tn-icon)
+.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
+    .tn-button__icon+()
 */
 
 //set component name using namespace function, then use #{$block} below
 $block: ns(button);
 .#{$block} {
     //SETTINGS
-    $tn-button-color: tn-color(text-inverse) !default;
+    $tn-button-color: tn-color(text-inverse, 2) !default;
+    $tn-button-color--hover: $tn-button-color !default;
+    $tn-button-color--text: $tn-color--link !default;
+    $tn-button-color--active: $tn-button-color !default;
+    $tn-button-color--disabled: tn-color(text, 2) !default;
     $tn-button-background-color: tn-color(action) !default;
-    $tn-button-color-hover: $tn-button-color !default;
-    $tn-button-background-color-hover: darken($tn-button-background-color,5) !default;
-    $tn-button-color-active: $tn-button-color !default;
-    $tn-button-background-color-active: darken($tn-button-background-color,10) !default;
-    $tn-button-color-disabled: tn-color(text,2) !default;
-    $tn-button-background-color-disabled: tn-color(neutral) !default;
-    $tn-button-shadow-focus: 0 0 4px 1px rgba(tn-color(neutral,4),1) !default;
-    $tn-button-color-inverse: tn-color(text,2) !default;
-    $tn-button-color-text: $tn-color--link !default;
+    $tn-button-background-color--hover: darken($tn-button-background-color, 5) !default;
+    $tn-button-background-color--active: darken($tn-button-background-color,10) !default;
+    $tn-button-background-color--disabled: tn-color(neutral) !default;
+    $tn-button-shadow--focus: 0 0 4px 1px rgba(tn-color(neutral, 4), 1) !default;
+
+    //sizes
+    $tn-button-height: tn-space(13) !default;
+    $tn-button-height--small: tn-space(10) !default;
+    $tn-button-height--large: tn-space(19) !default;
+    $tn-button-height--link: tn-space(7) !default;
+    $tn-button-height--link-small: tn-space(6) !default;
+    $tn-button-icon-height: 26px !default;
+    $tn-button-icon-height--small: 18px !default;
+    $tn-button-icon-height--large: 32px !default;
+    //anim
+    $tn-button-transition-params: 0.25s ease-in !default;
+
     //BASE
     //set all reset and baseline block styles
     @include tn-button-reset;
-    @include tn-type(2,header,semi);
-    line-height: 1;
+    @include tn-type(2, header, semi);
+    display: inline-block;
     background-color: $tn-button-background-color;
+    transition: background-color $tn-button-transition-params;
     color: $tn-button-color;
-    max-height: tn-space(13);
-    height: tn-space(13);
+    max-height: $tn-button-height;
+    height: $tn-button-height;
+    line-height: $tn-button-height;
     padding-left: tn-space(5);
     padding-right: tn-space(5);
-    padding-top: tn-space(4);
+    text-align: center;
     text-transform: uppercase;
-    //adjustment for buttons
-    @at-root {
-        button.#{$block},
-        [type="button"].#{$block} {
-            padding-top: 0;
-        }
-    }
     //MODIFIERS
     &--small {
         @include tn-type(0);
         @include tn-weight(semi);
-        max-height: tn-space(10);
-        height: tn-space(10);
+        max-height: $tn-button-height--small;
+        height: $tn-button-height--small;
+        line-height: $tn-button-height--small;
         padding-left: tn-space(4);
         padding-right: tn-space(4);
-        padding-top: tn-space(3);
     }
     &--large {
-        max-height: tn-space(20);
-        height: tn-space(20);
+        max-height: $tn-button-height--large;
+        height: $tn-button-height--large;
+        line-height: $tn-button-height--large;
         padding-left: tn-space(7);
         padding-right: tn-space(7);
-        padding-top: tn-space(7.3);
     }
     &:hover {
-        background-color: $tn-button-background-color-hover;
-        color: $tn-button-color-hover;
+        background-color: $tn-button-background-color--hover;
+        color: $tn-button-color--hover;
+        text-decoration: none;
     }
     &:focus {
-        color: $tn-button-color-hover;
-        box-shadow: $tn-button-shadow-focus;
-        outline: solid 2px lighten($tn-button-background-color,15);
+        color: $tn-button-color--hover;
+        box-shadow: $tn-button-shadow--focus;
+        outline: solid 2px lighten($tn-button-background-color, 15);
     }
-    &:active {
-        background-color: $tn-button-background-color-active;
-        color: $tn-button-color-active;
+    &:active,
+    &.is-active,
+    &[aria-selected="true"],
+    &.is-selected {
+        background-color: $tn-button-background-color--active;
+        color: $tn-button-color--active;
     }
     &[aria-disabled="true"],
     &.is-disabled {
-        outline: solid 1px tn-color(neutral,2);
-        color: $tn-button-color-disabled;
-        background-color: $tn-button-background-color-disabled;
+        outline: solid 1px tn-color(neutral, 2);
+        color: $tn-button-color--disabled;
+        background-color: $tn-button-background-color--disabled;
         cursor: not-allowed;
     }
-    &--text {
-        height: tn-space(7);
-        color: $tn-button-color-text;
-        background: transparent;
+    &--text,
+    &--link {
+        color: $tn-button-color--text;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: darken($tn-button-color--text, 5);
+        }
+        &:active,
+        &[aria-selected="true"],
+        &.is-selected,
+        &[aria-disabled="true"],
+        &.is-disabled {
+            background-color: transparent;
+            outline: none;
+            box-shadow: none;
+        }
+        &:active,
+        &[aria-selected="true"],
+        &.is-selected {
+            color: darken($tn-button-color--text, 10);
+        }
+        &[aria-disabled="true"],
+        &.is-disabled {
+            color: $tn-button-color--disabled;
+        }
+    }
+    &--link {
+        height: $tn-button-height--link;
+        line-height: $tn-button-height--link;
         padding-left: tn-space(4);
         padding-right: tn-space(4);
         position: relative;
         //adjustment for small button
         &.#{$block}--small {
-            height: tn-space(6);
+            height: $tn-button-height--link-small;
+            line-height: $tn-button-height--link-small;
         }
         &::after {
             content: "";
@@ -101,54 +140,21 @@ $block: ns(button);
             left: 0;
             margin-left: tn-space(4);
         }
-        &:hover,
-        &:focus,
-        &:active {
+        &:focus {
             outline: none;
             box-shadow: none;
-            color: $tn-button-color-text;
-            background-color: transparent;
-            &::after {
-                border-bottom-color: $tn-button-color-text;
-            }
         }
-        &:active {
-            color: darken($tn-button-color-text,10);
-            background-color: transparent;
+        &:hover,
+        &:focus,
+        &:active,
+        &[aria-selected="true"],
+        &.is-selected {
+            &::after {
+                border-bottom-color: $tn-button-color--text;
+            }
         }
         &[aria-disabled="true"],
         &.is-disabled {
-            outline: none;
-            color: $tn-button-color-disabled;
-            background-color: transparent;
-            &::after {
-                display: none;
-            }
-        }
-    }
-    //icon modifier
-    &--icon {
-        &.#{$block}--large {
-            position: relative;
-            @include tn-type(-3);
-            padding-top: tn-space(13.25);
-            @at-root {
-                button.#{$block}--large.#{$block}--icon,
-                [type="button"].#{$block}--large.#{$block}--icon {
-                    padding-top: tn-space(10);
-                }
-            }
-            .#{$block}__icon {
-                $icon-size_: 32px;
-                position: absolute;
-                left: calc(50% - #{$icon-size_}/2);
-                top: tn-space(3);
-                width: $icon-size_;
-                height: $icon-size_;
-            }
-        }
-        //no underline for text buttons
-        &.#{$block}--text {
             &::after {
                 display: none;
             }
@@ -157,33 +163,49 @@ $block: ns(button);
     //ELEMENTS
     &__icon {
         display: inline-block;
-        position: relative;
-        top: 1px;
-        background: white;
+        vertical-align: top;
         margin-right: tn-space(3);
-        width: 26px;
-        height: 26px;
-        vertical-align: text-top;
+        @at-root {
+            .#{$block}--icon & {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        //revisit — sizes will be part of the icons
+        font-size: 26px; //temp
+        width: $tn-button-icon-height;
+        height: $tn-button-icon-height;
+        line-height: 1;
+        margin-top: $tn-button-height / 2 - $tn-button-icon-height / 2;
         @at-root {
             .#{$block}--small & {
-                width: 18px;
-                height: 18px;
+                font-size: 18px; //temp
+                width: $tn-button-icon-height--small;
+                height: $tn-button-icon-height--small;
+                margin-top: $tn-button-height--small / 2 - $tn-button-icon-height--small / 2;
             }
         }
         @at-root {
-            .#{$block}--text & {
-                background-color: $tn-button-color-text;
-            }
-            .#{$block}--text:hover & {
-                background-color: darken($tn-button-color-text,5);
-            }
-            .#{$block}--text:active & {
-                background-color: darken($tn-button-color-text,10);
-            }
-            .#{$block}[aria-disabled="true"] &,
-            .#{$block}.is-disabled & {
-                background-color: $tn-button-color-disabled;
+            .#{$block}--large & {
+                font-size: 32px; //temp
+                width: $tn-button-icon-height--large;
+                height: $tn-button-icon-height--large;
+                margin-top: $tn-button-height--large / 2 - $tn-button-icon-height--large / 2;
             }
         }
     }
+
+    //special flavor
+    &--action-bar {
+        @extend .#{$block}--large;
+        @extend .#{$block}--icon;
+        @include tn-type(-3);
+        line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
+        vertical-align: middle;
+        .#{$block}__icon {
+            display: block;
+            margin-top: tn-space(3);
+        }
+    }
+
 }

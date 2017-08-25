@@ -57,6 +57,35 @@ env.addFilter('classes', function(array=[]) {
     //console.log(mods.join());
     return classes.join('') ;
 });
+// convert an object to classes
+// returns [ is-key ]
+env.addFilter('state', function(obj=[]) {
+    var classes = [];
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        if (!!obj[key]) {
+            classes.push(` is-${key}`);
+        }
+      }
+    }
+    return classes.join('') ;
+});
+// convert an object to classes
+// returns [ aria-key="true", role="" ]
+env.addFilter('aria', function(obj=[]) {
+    var attrs = [];
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            if (key === "role") {
+                attrs.push(` role="${obj[key]}"`);
+            } else if (!!obj[key]) {
+                attrs.push(` aria-${key}="${obj[key]}"`);
+            }
+        }
+    }
+    return attrs.join('') ;
+});
+
 
 app.set('views', TEMPLATE_DIRECTORY);
 app.set('view engine', 'njk');
