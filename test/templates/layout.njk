@@ -41,20 +41,31 @@ angular_material/1.1.4</label>
             <label class="test-label"><input type="checkbox" name="lib" value="tn" {{'checked' if libs.tn }}> techne/1.5.7</label>
             <button type="submit">Submit</button>
         </fieldset>
-    </form>
+
+        </form>
+
+        <div class="test-datacontainer" style="position: fixed;right: 10px;bottom: 0px;text-align:right; width: 500px;max-width: calc(100vw - 15px);">
+                    <h2 style="font-size: 12px;margin-bottom:5px"><code style="word-wrap:break-word;">{{id}}/data.json</code></h2>
+            <textarea class="test-textarea" style="">
+{{ data | dump(2) }}
+            </textarea>
+
+        </div>
+        <style media="screen">
+        .test-datacontainer { padding: 5px;background-color: rgba(0,0,0,0.1); }
+        .test-datacontainer textarea { height: 50px; }
+            .test-datacontainer textarea:focus { height: 80vh; }
+        </style>
+
+
+
     </header>
-    <main style="display: flex; background-color: #f2f2f2;">
-        <div style="flex: 1;padding: 20px;">
+    <main style="background-color: #f2f2f2;">
+        <div style="padding: 20px;">
 
             {% block content %}
             {% endblock %}
 
-        </div>
-        <div style="width: 250px;padding: 20px;background-color:rgba(0,0,0,0.1);overflow: scroll;">
-    <b style="font-size: 14px;"><code style="word-wrap:break-word;">{{id}}/data.json</code></b><br>
-<pre>
-{{ data | dump(2) }}
-</pre>
         </div>
     </main>
 
