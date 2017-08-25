@@ -1,0 +1,52 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-card-group+(--no-border)
+    .tn-card-group__content+()
+    .tn-card-group__title+()
+*/
+$block: ns(card-group);
+
+.#{$block} {
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-card-group-items-per-group: 3 !default;
+    $tn-card-group-width--gutter: $tn-width--gutter !default;
+    display: flex;
+    flex-wrap: wrap;
+
+    //BLOCK BASE *******************************************
+    //set all BLOCK reset and baseline styles
+    @include reset;
+
+    $gutter_: $tn-card-group-width--gutter;
+    $i_: $tn-card-group-items-per-group;
+    & > * {
+        flex: 1;
+        margin-right: $gutter_;
+        min-width: calc((100% - #{$gutter_}*#{$i_ - 1}) / #{$i_});
+        max-width: calc((100% - #{$gutter_}*#{$i_ - 1}) / #{$i_});
+        &:nth-child(#{$i_}n+#{$i_}) {
+            margin-right: 0;
+        }
+    }
+
+    //BLOCK MODIFIERS ************
+    //e.g., $tn-card-group--no-border
+    &--2col {
+        & > * {
+            $j_: 2;
+            min-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
+            max-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
+            //reset the defaults
+            &:nth-child(#{$i_}n+#{$i_}) {
+                margin-right: $gutter_;
+            }
+            &:nth-child(#{$j_}n+#{$j_}) {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

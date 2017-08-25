@@ -16,7 +16,7 @@ $block: ns(card);
     @include reset;
 
     //dimensions
-    $tn-card-width: 600px !default;
+    $tn-card-width: auto !default;
     $tn-card-media-width: 75px !default;
     //colors
     $tn-card-color-border: tn-color(neutral,2) !default;
@@ -27,12 +27,13 @@ $block: ns(card);
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138,143,161,0.4) !default;
     $tn-card-padding: tn-space(m,true) !default;
     $tn-card-color-link: $tn-color--link !default;
+    $tn-card-margin-bottom: $tn-width--gutter !default;
     //anim
     $tn-card-transition-params: 0.25s ease-in !default;
     $tn-card-time-hover: 0.2s !default;
 
     display: flex;
-    max-width: $tn-card-width;
+    margin-bottom: $tn-card-margin-bottom;
     border-style: solid;
     border-width: 1px;
     border-color: $tn-card-color-border;
@@ -128,10 +129,12 @@ $block: ns(card);
         margin-bottom: 1px;
     }
     &__description {
+        //display: none;
         @include tn-type(-2);
         margin-bottom: tn-space(s);
-        white-space: nowrap;
-        max-width: 100%;
+        //white-space: nowrap;
+        //max-width: 100%;
+        //width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
     }

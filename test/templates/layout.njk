@@ -33,7 +33,7 @@
 <body>
     <header style="border-bottom: solid 6px lightgray; padding-bottom: 10px; margin-bottom: 10px;">
         <form action="#" method="get">
-        <fieldset>
+        <fieldset style="font-family: monospace;font-size: 14px;">
             <label class="test-label"><input type="checkbox" name="lib" value="b3" {{'checked' if libs.b3 }}> bootstrap/3.3.7</label>
             <label class="test-label"><input type="checkbox" name="lib" value="b4" {{'checked' if libs.b4 }}> bootstrap/4.0.0-beta</label>
             <label class="test-label"><input type="checkbox" name="lib" value="md" {{'checked' if libs.md }}>
@@ -43,7 +43,21 @@ angular_material/1.1.4</label>
         </fieldset>
     </form>
     </header>
-    {% block content %}
-    {% endblock %}
+    <main style="display: flex; background-color: #f2f2f2;">
+        <div style="flex: 1;padding: 20px;">
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <div style="width: 250px;padding: 20px;background-color:rgba(0,0,0,0.1);overflow: scroll;">
+    <b style="font-size: 14px;"><code style="word-wrap:break-word;">{{id}}/data.json</code></b><br>
+<pre>
+{{ data | dump(2) }}
+</pre>
+        </div>
+    </main>
+
+
 </body>
 </html>
