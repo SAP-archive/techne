@@ -34,19 +34,23 @@ $block: ns(card-group);
 
     //BLOCK MODIFIERS ************
     //e.g., $tn-card-group--no-border
-    &--2col {
-        & > * {
-            $j_: 2;
-            min-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
-            max-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
-            //reset the defaults
-            &:nth-child(#{$i_}n+#{$i_}) {
-                margin-right: $gutter_;
-            }
-            &:nth-child(#{$j_}n+#{$j_}) {
-                margin-right: 0;
+    @each $n in 2, 4 {
+        &--#{$n}col {
+            & > * {
+                $j_: $n;
+                min-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
+                max-width: calc((100% - #{$gutter_}*#{$j_ - 1}) / #{$j_});
+                //reset the defaults
+                &:nth-child(#{$i_}n+#{$i_}) {
+                    margin-right: $gutter_;
+                }
+                &:nth-child(#{$j_}n+#{$j_}) {
+                    margin-right: 0;
+                }
             }
         }
+
     }
+
 
 }

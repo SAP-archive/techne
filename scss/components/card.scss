@@ -39,7 +39,6 @@ $block: ns(card);
     background-color: $tn-card-background-color;
     //MODIFICATIONS
     &--vertical {
-        width: 370px;
         display: block;
         .#{$block}__media {
             width: 100%;
