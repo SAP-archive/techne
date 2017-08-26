@@ -1,0 +1,17 @@
+{
+    "id": "icon",
+    "name": "Icons",
+    "properties": {
+
+    },
+    "modifier": {
+        "block": ["medium", "large"<% _.each(glyphs, function(glyph) { %>, "<%= glyph.name %>"<% }); %>]
+    },
+    "state": {
+
+    },
+    "aria": {
+
+    }
+
+}

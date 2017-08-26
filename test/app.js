@@ -93,8 +93,9 @@ app.set('view engine', 'njk');
 app.use(router);
 app.use('/static', express.static(path.join(__dirname, 'resources')));
 
-router.get('/techne-icons.svg', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'scss/icons/techne-icons.svg'));
+//load font files
+router.get('/hyicon:key', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', `scss/icons/hyicon${req.params.key}`));
 });
 
 router.all('/', function (req, res, next) {
@@ -125,9 +126,6 @@ router.get('/pages/:key', (req, res) => {
     console.log(`requested http://localhost:3030/pages/${key}`);
     res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key }));
 });
-
-
-//app.use('/', express.static(path.join(__dirname, '..', 'scss/icons/techne-icons.svg')));
 
 
 app.listen(3030);

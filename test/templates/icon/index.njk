@@ -1,0 +1,458 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<!-- find original template at https://github.com/shakyShane/gulp-svg-sprites/blob/master/tmpl/preview.html -->
+<style>
+	.demo-icon-wrapper{
+		padding: 20px;
+		float: left;
+		width: 25%;
+		text-align: center;
+	}
+	.demo-icon-wrapper span{
+		padding: 20px;
+		display: inline-block;
+	}
+	.demo-icon-wrapper .icon-medium{
+		font-size: 26px;
+	}
+	.demo-icon-wrapper .icon-large{
+		font-size: 32px;
+	}
+</style>
+
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--add</h2>
+	<span class="tn-icon tn-icon--add"></span>
+	<span class="tn-icon tn-icon--add tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--add tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--addlg</h2>
+	<span class="tn-icon tn-icon--addlg"></span>
+	<span class="tn-icon tn-icon--addlg tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--addlg tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--arrow</h2>
+	<span class="tn-icon tn-icon--arrow"></span>
+	<span class="tn-icon tn-icon--arrow tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--arrow tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--back</h2>
+	<span class="tn-icon tn-icon--back"></span>
+	<span class="tn-icon tn-icon--back tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--back tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--caution</h2>
+	<span class="tn-icon tn-icon--caution"></span>
+	<span class="tn-icon tn-icon--caution tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--caution tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--change</h2>
+	<span class="tn-icon tn-icon--change"></span>
+	<span class="tn-icon tn-icon--change tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--change tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--checked</h2>
+	<span class="tn-icon tn-icon--checked"></span>
+	<span class="tn-icon tn-icon--checked tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--checked tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--checkedlg</h2>
+	<span class="tn-icon tn-icon--checkedlg"></span>
+	<span class="tn-icon tn-icon--checkedlg tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--checkedlg tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--chevron</h2>
+	<span class="tn-icon tn-icon--chevron"></span>
+	<span class="tn-icon tn-icon--chevron tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--chevron tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--clone</h2>
+	<span class="tn-icon tn-icon--clone"></span>
+	<span class="tn-icon tn-icon--clone tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--clone tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--close</h2>
+	<span class="tn-icon tn-icon--close"></span>
+	<span class="tn-icon tn-icon--close tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--close tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--collapse</h2>
+	<span class="tn-icon tn-icon--collapse"></span>
+	<span class="tn-icon tn-icon--collapse tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--collapse tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--combinedview</h2>
+	<span class="tn-icon tn-icon--combinedview"></span>
+	<span class="tn-icon tn-icon--combinedview tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--combinedview tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--customize</h2>
+	<span class="tn-icon tn-icon--customize"></span>
+	<span class="tn-icon tn-icon--customize tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--customize tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--delete</h2>
+	<span class="tn-icon tn-icon--delete"></span>
+	<span class="tn-icon tn-icon--delete tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--delete tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--done</h2>
+	<span class="tn-icon tn-icon--done"></span>
+	<span class="tn-icon tn-icon--done tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--done tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--dragdrop</h2>
+	<span class="tn-icon tn-icon--dragdrop"></span>
+	<span class="tn-icon tn-icon--dragdrop tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--dragdrop tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--dragdroplg</h2>
+	<span class="tn-icon tn-icon--dragdroplg"></span>
+	<span class="tn-icon tn-icon--dragdroplg tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--dragdroplg tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--duplicate</h2>
+	<span class="tn-icon tn-icon--duplicate"></span>
+	<span class="tn-icon tn-icon--duplicate tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--duplicate tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--edit</h2>
+	<span class="tn-icon tn-icon--edit"></span>
+	<span class="tn-icon tn-icon--edit tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--edit tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--expand</h2>
+	<span class="tn-icon tn-icon--expand"></span>
+	<span class="tn-icon tn-icon--expand tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--expand tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--feedback</h2>
+	<span class="tn-icon tn-icon--feedback"></span>
+	<span class="tn-icon tn-icon--feedback tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--feedback tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--filter</h2>
+	<span class="tn-icon tn-icon--filter"></span>
+	<span class="tn-icon tn-icon--filter tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--filter tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--filterremove</h2>
+	<span class="tn-icon tn-icon--filterremove"></span>
+	<span class="tn-icon tn-icon--filterremove tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--filterremove tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--gethelp</h2>
+	<span class="tn-icon tn-icon--gethelp"></span>
+	<span class="tn-icon tn-icon--gethelp tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--gethelp tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--grid</h2>
+	<span class="tn-icon tn-icon--grid"></span>
+	<span class="tn-icon tn-icon--grid tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--grid tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--helpoff</h2>
+	<span class="tn-icon tn-icon--helpoff"></span>
+	<span class="tn-icon tn-icon--helpoff tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--helpoff tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--helpon</h2>
+	<span class="tn-icon tn-icon--helpon"></span>
+	<span class="tn-icon tn-icon--helpon tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--helpon tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--info</h2>
+	<span class="tn-icon tn-icon--info"></span>
+	<span class="tn-icon tn-icon--info tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--info tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--infoon</h2>
+	<span class="tn-icon tn-icon--infoon"></span>
+	<span class="tn-icon tn-icon--infoon tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--infoon tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--library</h2>
+	<span class="tn-icon tn-icon--library"></span>
+	<span class="tn-icon tn-icon--library tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--library tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--linked</h2>
+	<span class="tn-icon tn-icon--linked"></span>
+	<span class="tn-icon tn-icon--linked tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--linked tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--list</h2>
+	<span class="tn-icon tn-icon--list"></span>
+	<span class="tn-icon tn-icon--list tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--list tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--localization</h2>
+	<span class="tn-icon tn-icon--localization"></span>
+	<span class="tn-icon tn-icon--localization tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--localization tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--lock</h2>
+	<span class="tn-icon tn-icon--lock"></span>
+	<span class="tn-icon tn-icon--lock tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--lock tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--maximize</h2>
+	<span class="tn-icon tn-icon--maximize"></span>
+	<span class="tn-icon tn-icon--maximize tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--maximize tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--minimize</h2>
+	<span class="tn-icon tn-icon--minimize"></span>
+	<span class="tn-icon tn-icon--minimize tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--minimize tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--more</h2>
+	<span class="tn-icon tn-icon--more"></span>
+	<span class="tn-icon tn-icon--more tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--more tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--msgdanger</h2>
+	<span class="tn-icon tn-icon--msgdanger"></span>
+	<span class="tn-icon tn-icon--msgdanger tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--msgdanger tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--msginfo</h2>
+	<span class="tn-icon tn-icon--msginfo"></span>
+	<span class="tn-icon tn-icon--msginfo tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--msginfo tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--msgsuccess</h2>
+	<span class="tn-icon tn-icon--msgsuccess"></span>
+	<span class="tn-icon tn-icon--msgsuccess tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--msgsuccess tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--msgwarning</h2>
+	<span class="tn-icon tn-icon--msgwarning"></span>
+	<span class="tn-icon tn-icon--msgwarning tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--msgwarning tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--noimage</h2>
+	<span class="tn-icon tn-icon--noimage"></span>
+	<span class="tn-icon tn-icon--noimage tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--noimage tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--options</h2>
+	<span class="tn-icon tn-icon--options"></span>
+	<span class="tn-icon tn-icon--options tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--options tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--remove</h2>
+	<span class="tn-icon tn-icon--remove"></span>
+	<span class="tn-icon tn-icon--remove tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--remove tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--removelg</h2>
+	<span class="tn-icon tn-icon--removelg"></span>
+	<span class="tn-icon tn-icon--removelg tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--removelg tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--restrictions</h2>
+	<span class="tn-icon tn-icon--restrictions"></span>
+	<span class="tn-icon tn-icon--restrictions tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--restrictions tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--search</h2>
+	<span class="tn-icon tn-icon--search"></span>
+	<span class="tn-icon tn-icon--search tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--search tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--sort</h2>
+	<span class="tn-icon tn-icon--sort"></span>
+	<span class="tn-icon tn-icon--sort tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--sort tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--sync</h2>
+	<span class="tn-icon tn-icon--sync"></span>
+	<span class="tn-icon tn-icon--sync tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--sync tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--top</h2>
+	<span class="tn-icon tn-icon--top"></span>
+	<span class="tn-icon tn-icon--top tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--top tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--visibilityoff</h2>
+	<span class="tn-icon tn-icon--visibilityoff"></span>
+	<span class="tn-icon tn-icon--visibilityoff tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--visibilityoff tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--visibilityon</h2>
+	<span class="tn-icon tn-icon--visibilityon"></span>
+	<span class="tn-icon tn-icon--visibilityon tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--visibilityon tn-icon--large"></span>
+	<br><br>
+</div>
+
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--warning</h2>
+	<span class="tn-icon tn-icon--warning"></span>
+	<span class="tn-icon tn-icon--warning tn-icon--medium"></span>
+	<span class="tn-icon tn-icon--warning tn-icon--large"></span>
+	<br><br>
+</div>
+
+
+{% endblock %}
