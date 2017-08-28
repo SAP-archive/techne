@@ -1,12 +1,11 @@
 {
   "name": "techne",
   "version": "2.0.0",
-  "description": "",
+  "description": "This is an in-development, experimental version of SAP Hybris Techne. It should **NOT** be used for production. Refer to the [Techne website](https://techne.yaas.io) for details about the current version.",
   "main": "index.js",
   "scripts": {
     "build": "gulp build:dist",
     "start": "gulp",
-    "install": "bower install",
     "test": "node test/app.js"
   },
   "repository": {
@@ -15,13 +14,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
-    "bower": "^1.7.9",
-    "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -59,5 +53,9 @@
     "express": "^4.15.4",
     "node-sass": "^4.5.3",
     "nunjucks": "^3.0.1"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   }
 }
