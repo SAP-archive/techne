@@ -72,9 +72,10 @@ $block: ns(form);
         }
     }
     &__label, &__legend {
+        @include tn-type(-1);
         display: block;
         margin-bottom: tn-space(3);
-        @include tn-type(-1);
+        border: 0;
         color: tn-color(text, 3);
         &.is-required {
             @include tn-weight(bold);
