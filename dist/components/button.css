@@ -1,4 +1,9 @@
 /*!
+* Techne v2.0.0
+* Copyright (c) 2017 SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/
+/*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
     .tn-button__icon+()
 */
