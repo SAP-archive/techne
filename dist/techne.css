@@ -1509,14 +1509,14 @@ select[multiple] {
   left: -52px
 }
 @font-face {
-  font-family: hyicon;
-  src: url(hyicon.woff2) format("woff2"),url(hyicon.woff) format("woff");
+  font-family: TechneIcons;
+  src: url(TechneIcons.woff2) format("woff2"),url(TechneIcons.woff) format("woff");
   font-weight: 400;
   font-style: normal
 }
 .tn-icon {
   font-size: 1.125rem;
-  font-family: hyicon
+  font-family: TechneIcons
 }
 .tn-icon--medium {
   font-size: 1.625rem
@@ -1527,7 +1527,6 @@ select[multiple] {
 .tn-icon::before {
   display: inline-block;
   vertical-align: middle;
-  font-family: hyicon;
   font-style: normal;
   font-weight: 400;
   speak: none;
