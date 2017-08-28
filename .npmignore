@@ -1,0 +1,22 @@
+# Exclude Directories
+docs
+icons
+ops
+src
+test
+bower_components
+tmp
+
+# Exclude Files
+.npmignore
+.gitignore
+*.yml
+deploy-key.enc
+gulpfile.js
+.tmp
+*.log
+PROJECT.md
+dist/css/techne-debug.min.css
+dist/css/techne-debug.css
+dist/techne-debug.min.css
+dist/techne-debug.css
