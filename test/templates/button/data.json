@@ -1,7 +1,7 @@
 {
     "properties": {
         "label": "BUTTON_LABEL",
-        "icon": "ICON_ID"
+        "icon": "#/icon"
     },
     "modifier": {
         "block": ["small", "large", "text", "icon", "link", "action-bar"]
