@@ -34,6 +34,7 @@
     "gulp-filenames": "^4.0.1",
     "gulp-footer": "^1.0.5",
     "gulp-gh-pages": "0.5.4",
+    "gulp-header": "^1.8.9",
     "gulp-iconfont": "^9.0.0",
     "gulp-if": "^2.0.2",
     "gulp-ignore": "^2.0.2",

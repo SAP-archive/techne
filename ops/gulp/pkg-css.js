@@ -8,7 +8,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const debug = require('gulp-debug');
 const gulpSequence = require('gulp-sequence');
 const replace = require('gulp-replace');
+const replace = require('gulp-header');
 const config = require('../config');
+const pkg = require('../package');
 
 let environment = require('../lib/environment');
 
@@ -71,6 +73,25 @@ var minifyTask = (cb) => {
         .pipe(gulp.dest(paths.dest))
 }
 gulp.task('pkg-css-minify', minifyTask);
+
+
+//create minify versions
+var bannerTask = (cb) => {
+    var d = new Date();
+    var y = d.getFullYear();
+    var banner = `
+/*!
+ * Techne v${pkg.version}
+ * Copyright (c) ${y} SAP SE or an SAP affiliate company.
+ * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+ */
+ `;
+    return gulp.src([`${paths.dest}/**/*.css`])
+        .pipe(header(banner, { pkg : pkg } ))
+        .pipe(gulp.dest(paths.dest))
+}
+gulp.task('pkg-css-banner', bannerTask);
+
 
 
 //main css task
