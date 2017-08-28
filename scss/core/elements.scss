@@ -6,8 +6,6 @@
 $elements__headers: h1, h2, h3, h4, h5, h6;
 $elements__blocks: p, ul, ol, li, blockquote, table, figure;
 $elements__interactive: a, audio\[controls\], button, details, embed, iframe, img\[usemap\], input, keygen, label, object\[usemap\], select, textarea, video\[controls\];
-$elements__inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
-$elements__inputs--check: "input[type=radio]", "input[type=checkbox]";
 
 /*!
 * @section Root Element
