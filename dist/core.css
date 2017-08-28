@@ -11,7 +11,7 @@ body,
 html {
   font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
-  line-height: 1.375
+  line-height: 1.5
 }
 * {
   -webkit-box-sizing: inherit;
@@ -111,10 +111,10 @@ input[type=submit]::-moz-focus-inner {
 select,
 textarea {
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   color: #21262c;
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   appearance: none;

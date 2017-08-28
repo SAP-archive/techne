@@ -8,7 +8,7 @@
 */
 .tn-card {
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   color: #21262c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,7 +112,7 @@
 }
 .tn-card__description {
   font-size: .8125rem;
-  line-height: 1.38462;
+  line-height: 1.53846;
   font-weight: 400;
   margin-bottom: 12px;
   white-space: nowrap;

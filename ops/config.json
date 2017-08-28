@@ -2,6 +2,7 @@
     "namespace": "tn",
     "root": {
         "css": "./scss",
+        "icons": "./icons",
         "dest": "./dist",
         "docs": "./docs",
         "www": "./www",
@@ -18,6 +19,33 @@
             "format": "beautify"
         },
         "extensions": ["scss"]
+    },
+    "icons": {
+        "svgs": {
+            "path": "svgs"
+        },
+        "css": {
+            "dest": "./scss/icons",
+            "template": "./icons/icons-template.scss",
+            "outputName": "icon.scss"
+        },
+        "data": {
+            "dest": "./test/templates/icon",
+            "template": "./icons/icons-data.json",
+            "outputName": "data.json"
+        },
+        "iconfont": {
+            "fontName": "TechneIcons",
+            "className": "icon",
+            "formats": ["woff", "woff2"],
+            "normalize": true,
+            "centerHorizontally": true,
+            "fontHeight": 100,
+            "prependUnicode": false
+        },
+        "templates": {
+            "html": "./ops/misc/icons-template.html"
+        }
     },
 
     "browserSync": {

@@ -1,0 +1,178 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+@font-face {
+    font-family: "TechneIcons";
+    src: url("TechneIcons.woff2") format("woff2"),
+        url("TechneIcons.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+//icon map
+$tn-icons: (
+
+    add: "\ea01",
+
+    addlg: "\ea02",
+
+    arrow: "\ea03",
+
+    back: "\ea04",
+
+    caution: "\ea05",
+
+    change: "\ea06",
+
+    checked: "\ea07",
+
+    checkedlg: "\ea08",
+
+    chevron: "\ea09",
+
+    clone: "\ea0a",
+
+    close: "\ea0b",
+
+    collapse: "\ea0c",
+
+    combinedview: "\ea0d",
+
+    customize: "\ea0e",
+
+    delete: "\ea0f",
+
+    done: "\ea10",
+
+    dragdrop: "\ea11",
+
+    dragdroplg: "\ea12",
+
+    duplicate: "\ea13",
+
+    edit: "\ea14",
+
+    expand: "\ea15",
+
+    feedback: "\ea16",
+
+    filter: "\ea17",
+
+    filterremove: "\ea18",
+
+    gethelp: "\ea19",
+
+    grid: "\ea1a",
+
+    helpoff: "\ea1b",
+
+    helpon: "\ea1c",
+
+    info: "\ea1d",
+
+    infoon: "\ea1e",
+
+    library: "\ea1f",
+
+    linked: "\ea20",
+
+    list: "\ea21",
+
+    localization: "\ea22",
+
+    lock: "\ea23",
+
+    maximize: "\ea24",
+
+    minimize: "\ea25",
+
+    more: "\ea26",
+
+    msgdanger: "\ea27",
+
+    msginfo: "\ea28",
+
+    msgsuccess: "\ea29",
+
+    msgwarning: "\ea2a",
+
+    noimage: "\ea2b",
+
+    options: "\ea2c",
+
+    remove: "\ea2d",
+
+    removelg: "\ea2e",
+
+    restrictions: "\ea2f",
+
+    search: "\ea30",
+
+    sort: "\ea31",
+
+    sync: "\ea32",
+
+    top: "\ea33",
+
+    visibilityoff: "\ea34",
+
+    visibilityon: "\ea35",
+
+    warning: "\ea36",
+
+) !default;
+
+$block: ns(icon);
+
+
+//TODO: finish mixin
+// @mixin icon($key, $size) {
+//     @if map-has-key($tn-icons, $size) {
+//         &::before {
+//             content: map-get($tn-icons, $key);
+//             @content;
+//         }
+//     } @else {
+//         @warn "Unknown `#{$key}` in $tn-icons map";
+//     }
+// }
+
+// [class*="#{$block}"] {
+//
+// }
+
+.#{$block} {
+    $tn-icon-size: 1.125rem !default;         //18px
+    $tn-icon-size--medium: 1.625rem !default; //26px
+    $tn-icon-size--large: 2rem !default;      //32px
+    font-size: $tn-icon-size;
+    font-family: "TechneIcons";
+    &--medium {
+        font-size: $tn-icon-size--medium;
+    }
+    &--large {
+        font-size: $tn-icon-size--large;
+    }
+    &::before {
+        display: inline-block;
+        vertical-align: middle;
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        line-height: 1;
+        text-decoration: inherit;
+        text-transform: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @each $key, $value in $tn-icons {
+        &--#{$key} {
+            &::before {
+                content: $value;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+
+{% block content %}
+
+<style>
+	.demo-icon-wrapper{
+		padding: 20px;
+		float: left;
+		width: 25%;
+		text-align: center;
+	}
+	.demo-icon-wrapper span {
+		padding: 20px;
+		display: inline-block;
+	}
+</style>
+
+
+{% for item in data.properties.glyphs %}
+<div class="demo-icon-wrapper">
+	<h2>.tn-icon--{{item}}</h2>
+
+    {% set example %}
+<span class="tn-icon tn-{{id}}--{{item}}"></span>
+    {%- for mod in data.modifier.block %}
+<span class="tn-icon tn-{{id}}--{{item}} tn-icon--{{mod}}"></span>
+    {%- endfor %}
+    {% endset %}
+    {{ format(example) }}
+
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

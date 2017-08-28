@@ -6,7 +6,6 @@
   "scripts": {
     "build": "gulp build:dist",
     "start": "gulp",
-    "install": "bower install",
     "test": "node test/app.js"
   },
   "repository": {
@@ -27,6 +26,7 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-consolidate": "^0.2.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-data": "^1.2.1",
     "gulp-debug": "^3.1.0",
@@ -34,6 +34,7 @@
     "gulp-filenames": "^4.0.1",
     "gulp-footer": "^1.0.5",
     "gulp-gh-pages": "0.5.4",
+    "gulp-iconfont": "^9.0.0",
     "gulp-if": "^2.0.2",
     "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^3.2.0",

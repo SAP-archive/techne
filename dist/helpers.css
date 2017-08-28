@@ -9,7 +9,7 @@
 }
 .tn-has-type-minus-2 {
   font-size: .8125rem;
-  line-height: 1.38462;
+  line-height: 1.53846;
   font-weight: 400
 }
 .tn-has-type-minus-1 {
@@ -20,7 +20,7 @@
 .tn-has-type-0,
 .tn-has-type-base {
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   font-weight: 400
 }
 .tn-has-type-1 {
@@ -30,7 +30,7 @@
 }
 .tn-has-type-2 {
   font-size: 1.25rem;
-  line-height: 1.3;
+  line-height: 1.4;
   font-weight: 600
 }
 .tn-has-type-3 {
@@ -40,13 +40,13 @@
 }
 .tn-has-type-4 {
   font-size: 2.1875rem;
-  line-height: 1.2;
+  line-height: 1.25714;
   font-family: Dosis,sans-serif;
   font-weight: 700
 }
 .tn-has-type-5 {
   font-size: 2.8125rem;
-  line-height: 1.11111;
+  line-height: 1.15556;
   font-family: Dosis,sans-serif;
   font-weight: 600
 }
