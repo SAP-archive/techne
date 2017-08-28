@@ -550,7 +550,6 @@ select[multiple] {
 }
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
-    .tn-button__icon+()
 */
 .tn-button {
   margin: 0;
@@ -710,32 +709,22 @@ select[multiple] {
 .tn-button--link[aria-disabled=true]::after {
   display: none
 }
-.tn-button__icon {
+.tn-button > * {
   display: inline-block;
   vertical-align: top;
   margin-right: 12px;
-  font-size: 26px;
-  width: 26px;
-  height: 26px;
-  line-height: 1;
   margin-top: 13px
 }
-.tn-button--action-bar .tn-button__icon,
-.tn-button--icon .tn-button__icon {
+.tn-button--action-bar > *,
+.tn-button--icon > * {
   margin-left: auto;
   margin-right: auto
 }
-.tn-button--small .tn-button__icon {
-  font-size: 18px;
-  width: 18px;
-  height: 18px;
+.tn-button--small > * {
   margin-top: 11px
 }
-.tn-button--action-bar .tn-button__icon,
-.tn-button--large .tn-button__icon {
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
+.tn-button--action-bar > *,
+.tn-button--large > * {
   margin-top: 22px
 }
 .tn-button--action-bar {
@@ -746,8 +735,8 @@ select[multiple] {
   line-height: 32px;
   vertical-align: middle
 }
-.tn-button--action-bar .tn-button__icon {
-  display: block;
+.tn-button--action-bar > * {
+  display: block!important;
   margin-top: 12px
 }
 /*!
@@ -765,14 +754,13 @@ select[multiple] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 600px;
+  margin-bottom: 20px;
   border-style: solid;
   border-width: 1px;
   border-color: #d7d7d7;
   background-color: #fff
 }
 .tn-card--vertical {
-  width: 370px;
   display: block
 }
 .tn-card--vertical .tn-card__media {
@@ -867,8 +855,6 @@ select[multiple] {
   line-height: 1.53846;
   font-weight: 400;
   margin-bottom: 12px;
-  white-space: nowrap;
-  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis
 }
@@ -880,6 +866,62 @@ select[multiple] {
 }
 .tn-card__actions {
   padding: 40px 20px
+}
+/*!
+.tn-card-group+(--2col | --4col)
+*/
+.tn-card-group {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+@media (min-width:800px) {
+  .tn-card-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .tn-card-group > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-right: 20px;
+    min-width: calc((100% - 20px*2)/ 3);
+    max-width: calc((100% - 20px*2)/ 3)
+  }
+  .tn-card-group > :nth-child(3n) {
+    margin-right: 0
+  }
+  .tn-card-group--2col > * {
+    min-width: calc((100% - 20px*1)/ 2);
+    max-width: calc((100% - 20px*1)/ 2)
+  }
+  .tn-card-group--2col > :nth-child(3n+3) {
+    margin-right: 20px
+  }
+  .tn-card-group--2col > :nth-child(2n+2) {
+    margin-right: 0
+  }
+  .tn-card-group--4col > * {
+    min-width: calc((100% - 20px*3)/ 4);
+    max-width: calc((100% - 20px*3)/ 4)
+  }
+  .tn-card-group--4col > :nth-child(3n+3) {
+    margin-right: 20px
+  }
+  .tn-card-group--4col > :nth-child(4n+4) {
+    margin-right: 0
+  }
 }
 /*!
 .tn-form
@@ -1516,7 +1558,17 @@ select[multiple] {
 }
 .tn-icon {
   font-size: 1.125rem;
-  font-family: TechneIcons
+  font-family: TechneIcons;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 .tn-icon--medium {
   font-size: 1.625rem
@@ -1525,17 +1577,8 @@ select[multiple] {
   font-size: 2rem
 }
 .tn-icon::before {
-  display: inline-block;
-  vertical-align: middle;
-  font-style: normal;
-  font-weight: 400;
-  speak: none;
-  line-height: 1;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  display: inline;
+  text-align: center
 }
 .tn-icon--add::before {
   content: ""

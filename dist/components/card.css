@@ -13,14 +13,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 600px;
+  margin-bottom: 20px;
   border-style: solid;
   border-width: 1px;
   border-color: #d7d7d7;
   background-color: #fff
 }
 .tn-card--vertical {
-  width: 370px;
   display: block
 }
 .tn-card--vertical .tn-card__media {
@@ -115,8 +114,6 @@
   line-height: 1.53846;
   font-weight: 400;
   margin-bottom: 12px;
-  white-space: nowrap;
-  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis
 }
