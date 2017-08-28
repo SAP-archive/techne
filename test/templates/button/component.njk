@@ -6,7 +6,7 @@
 <button class="tn-button{{ modifier.block | modifier('button') }}{{ state | state }}"{{ aria | aria }}>
     {%- if properties.icon %}
 {%- set iconsize %}{% if modifier.block.indexOf("small") != -1 %}small{% elseif modifier.block.indexOf("large") != -1 %}large{% else %}medium{% endif %}{% endset %}
-    {{ icon(properties.icon,iconsize) if iconsize != "small" else icon(properties.icon,iconsize) }}
+    {{ icon(properties.icon,iconsize) if iconsize != "small" else icon(properties.icon) }}
     {%- endif %}
     {%- if properties.label %}
     {{properties.label}}

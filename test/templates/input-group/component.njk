@@ -24,13 +24,13 @@
 <div class="tn-input-group{{ modifier.block | modifier('input-group') }}">
     {%- if properties.before %}
     <span class="tn-input-group__addon{{ modifier.before | modifier('input-group__addon') }}">
-{{properties.before}}
+{{ properties.before | trim | indent(8, true) }}
     </span>
     {%- endif %}
     {{ forms.text(type,input.properties,state=input.state,aria=input.aria) }}
     {%- if properties.after %}
     <span class="tn-input-group__addon{{ modifier.after | modifier('input-group__addon') }}">
-{{ properties.after }}
+{{ properties.after | trim | indent(8, true) }}
     </span>
     {%- endif %}
     {%- if type === "number" or type === "search" %}

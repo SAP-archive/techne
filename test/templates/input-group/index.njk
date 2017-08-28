@@ -1,8 +1,9 @@
 {% extends "layout.njk" %}
 {% from "./component.njk" import input_group %}
 {% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
 {% from "./../format.njk" import format %}
-{% set css_deps = ['helpers','components/button'] %}
+{% set css_deps = ['helpers','components/button','icons'] %}
 
 {% block content %}
 <style media="screen">
@@ -130,6 +131,7 @@
 <br><br>
 
 <h1>Input Group — Icon addon</h1>
+
 {% set example %}
 {{ input_group(
     properties={
@@ -138,7 +140,7 @@
                 value: "1000000"
             }
         },
-        before: '<span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>'
+        before: icon("localization")
     })
 }}
 {{ input_group(
@@ -148,7 +150,7 @@
                 value: "1000000"
             }
         },
-        after: '<span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label==""></span>'
+        after: icon("visibilityoff")
     })
 }}
 {% endset %}
@@ -164,7 +166,7 @@
 {%- set iconbtn %}{{  button(
         {
             label: '',
-            icon: 'foo'
+            icon: 'chevron'
         },
         modifier={
             block: ['icon','text']
@@ -233,7 +235,7 @@
                 value: "1000000"
             }
         },
-        after: button({ icon: 'foo' }, modifier={ block: 'icon' })
+        after: button({ icon: 'chevron' }, modifier={ block: 'icon' })
     })
 }}
 {% endset %}
