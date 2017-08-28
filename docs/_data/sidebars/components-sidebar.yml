@@ -36,6 +36,12 @@ entries:
       url: /label.html
       output: web
 
+    - title: Input Group
+      url: /input-group.html
+      output: web
+
+
+
 
 
   # folders:

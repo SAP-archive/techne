@@ -1230,3 +1230,7 @@ h4.panel-title {
 .no-search-results{
   padding: 10px;
 }
+
+.tn-input-group {
+    margin-bottom: 20px;
+}
