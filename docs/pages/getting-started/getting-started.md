@@ -3,13 +3,14 @@ title: Getting Started
 keywords: getting sarted
 sidebar: getting-started-sidebar
 toc: false
-permalink: getting-started.html
+permalink: index.html
 folder: getting-started
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nobis cupiditate illo, autem consequatur tempore! Numquam nobis blanditiis, maxime, molestias reprehenderit libero beatae fugit officiis incidunt? Libero voluptas molestiae, iste.
+search: exclude
 ---
 
 
-Install the library.
+## Install the library.
 
 ### [](#npm)NPM
 
