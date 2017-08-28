@@ -125,22 +125,35 @@ $tn-icons: (
 
 $block: ns(icon);
 
-/*
-//TODO: finish mixin
-@mixin icon($key, $size) {
-    @if map-has-key($tn-icons, $size) {
-        &::before {
-            content: map-get($tn-icons, $key);
-            @content;
-        }
-    } @else {
-        @warn "Unknown `#{$key}` in $tn-icons map";
-    }
-}
-*/
 
-[class*="#{$block}"] {
+//TODO: finish mixin
+// @mixin icon($key, $size) {
+//     @if map-has-key($tn-icons, $size) {
+//         &::before {
+//             content: map-get($tn-icons, $key);
+//             @content;
+//         }
+//     } @else {
+//         @warn "Unknown `#{$key}` in $tn-icons map";
+//     }
+// }
+
+// [class*="#{$block}"] {
+//
+// }
+
+.#{$block} {
+    $tn-icon-size: 1.125rem !default;         //18px
+    $tn-icon-size--medium: 1.625rem !default; //26px
+    $tn-icon-size--large: 2rem !default;      //32px
+    font-size: $tn-icon-size;
     font-family: 'hyicon';
+    &--medium {
+        font-size: $tn-icon-size--medium;
+    }
+    &--large {
+        font-size: $tn-icon-size--large;
+    }
     &::before {
         display: inline-block;
         vertical-align: middle;
@@ -155,9 +168,7 @@ $block: ns(icon);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-}
 
-.#{$block} {
     @each $key, $value in $tn-icons {
         &--#{$key} {
             &::before {

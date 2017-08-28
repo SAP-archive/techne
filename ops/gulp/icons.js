@@ -25,11 +25,11 @@ module.exports = iconTask = (cb) => {
                 .pipe(consolidate('lodash', options))
                 .pipe(rename(config.tasks.icons.css.outputName))
                 .pipe(gulp.dest(config.tasks.icons.css.dest))
-            //process the HTML template
-            gulp.src(config.tasks.icons.html.template)
+            //process the data template
+            gulp.src(config.tasks.icons.data.template)
                 .pipe(consolidate('lodash', options))
-                .pipe(rename(config.tasks.icons.html.outputName))
-                .pipe(gulp.dest(config.tasks.icons.html.dest))
+                .pipe(rename(config.tasks.icons.data.outputName))
+                .pipe(gulp.dest(config.tasks.icons.data.dest))
         })
         .pipe(gulp.dest(config.tasks.icons.css.dest));
 

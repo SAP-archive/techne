@@ -27,12 +27,12 @@
         "css": {
             "dest": "./scss/icons",
             "template": "./icons/icons-template.scss",
-            "outputName": "icons.scss"
+            "outputName": "icon.scss"
         },
-        "html": {
+        "data": {
             "dest": "./test/templates/icon",
-            "template": "./icons/icons-template.html",
-            "outputName": "index.njk"
+            "template": "./icons/icons-data.json",
+            "outputName": "data.json"
         },
         "iconfont": {
             "fontName": "hyicon",
