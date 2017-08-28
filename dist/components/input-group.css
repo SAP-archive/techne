@@ -11,10 +11,10 @@
 select,
 textarea {
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   color: #21262c;
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   appearance: none;
@@ -353,7 +353,7 @@ select[multiple] {
 */
 .tn-input-group {
   font-size: 1rem;
-  line-height: 1.375;
+  line-height: 1.5;
   color: #21262c;
   display: -webkit-box;
   display: -ms-flexbox;

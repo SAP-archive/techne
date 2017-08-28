@@ -35,13 +35,13 @@
             "outputName": "data.json"
         },
         "iconfont": {
-            "fontName": "hyicon",
+            "fontName": "TechneIcons",
             "className": "icon",
-            "formats": ["ttf", "eot",  "woff", "woff2", "svg"],
+            "formats": ["woff", "woff2"],
             "normalize": true,
             "centerHorizontally": true,
             "fontHeight": 100,
-            "prependUnicode": true
+            "prependUnicode": false
         },
         "templates": {
             "html": "./ops/misc/icons-template.html"

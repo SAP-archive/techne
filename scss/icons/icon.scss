@@ -3,9 +3,9 @@
 @import "../core/functions";
 
 @font-face {
-    font-family: 'hyicon';
-    src: url('hyicon.woff2') format('woff2'),
-        url('hyicon.woff') format('woff');
+    font-family: "TechneIcons";
+    src: url("TechneIcons.woff2") format("woff2"),
+        url("TechneIcons.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -147,7 +147,7 @@ $block: ns(icon);
     $tn-icon-size--medium: 1.625rem !default; //26px
     $tn-icon-size--large: 2rem !default;      //32px
     font-size: $tn-icon-size;
-    font-family: 'hyicon';
+    font-family: "TechneIcons";
     &--medium {
         font-size: $tn-icon-size--medium;
     }
@@ -157,7 +157,6 @@ $block: ns(icon);
     &::before {
         display: inline-block;
         vertical-align: middle;
-        font-family: "hyicon";
         font-style: normal;
         font-weight: normal;
         speak: none;

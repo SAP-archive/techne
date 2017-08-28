@@ -10,9 +10,9 @@ const paths = {
 
 const task = (cb) => {
     let prefix = config.tasks.css.prefix;
-    return gulp.src([`${paths.src}/*.svg`])
+    return gulp.src([`${paths.src}/*`, `!${paths.src}/*.scss`])
 		.pipe(gulp.dest(paths.dest));
 }
 
-gulp.task('pkg-icons', task);
+gulp.task('pkg-iconfont', task);
 module.exports = task;
