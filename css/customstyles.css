@@ -203,7 +203,7 @@ p.post-meta {font-size: 80%; color: #777;}
     top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
     z-index: -1;
-    width:223px;
+    width:21.25em;
     border-left: 1px solid #dedede;
     box-shadow: 2px 3px 2px #dedede;
 }
@@ -225,6 +225,7 @@ ul#results-container a:hover {
     padding: .5em;
     margin-left:20px;
     width:20em;
+    height: 2.5em;
     font-size: 0.8em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1224,4 +1225,8 @@ h4.panel-title {
     .collapse.in{
         display:block !important;
     }
+}
+
+.no-search-results{
+  padding: 10px;
 }

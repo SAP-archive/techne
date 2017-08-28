@@ -70,17 +70,17 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                
+
 
                 <!-- standard links -->
                 
-                
+
                 
 
                 
                     
                         
-                            <li><a href="getting-started.html">Get Started</a></li>
+                            <li><a href="index.html">Get Started</a></li>
                         
                     
                         
@@ -91,16 +91,8 @@
                             <li><a href="components.html">Components</a></li>
                         
                     
-                        
-                            <li><a href="guides.html">Guides</a></li>
-                        
-                    
-                        
-                            <li><a href="tutorials.html">Tutorials</a></li>
-                        
-                    
                 
-                
+
                 <!-- entries with drop-downs appear here -->
 
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
@@ -109,7 +101,7 @@
                 <!-- feedback link -->
                 
 
-                
+
                 <li>
                     <!--start search-->
                     <div id="search-demo-container">
@@ -123,7 +115,7 @@
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
                                 searchResultTemplate: '<li><a href="{url}" title="Test page for Markdown formatting">{title}</a></li>',
-                    noResultsText: 'No results found.',
+                    noResultsText: '<li class="no-search-results">No results found</li>',
                             limit: 10,
                             fuzzy: true,
                     })
@@ -234,8 +226,8 @@
 
 <p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
 
-<p>URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes 
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes
 example.com (but not on Github, for example).</p>
 
 <p>Some text to show that the reference links can follow later.</p>
@@ -260,7 +252,7 @@ example.com (but not on Github, for example).</p>
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>No language indicated, so no syntax highlighting. 
+<div class="highlighter-rouge"><pre class="highlight"><code>No language indicated, so no syntax highlighting.
 But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 </code></pre>
 </div>
@@ -295,7 +287,7 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 </table>
 
 <p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don’t need to make the 
+The outer pipes (|) are optional, and you don’t need to make the
 raw Markdown line up prettily. You can also use inline Markdown.</p>
 
 <table>
@@ -368,7 +360,7 @@ This line is part of the same quote.</p>
 <footer>
     <div class="row">
         <div class="col-lg-12 footer">
-			Footer Content               
+			Techne 2.0 Alpha
         </div>
     </div>
 </footer>
