@@ -3,8 +3,8 @@
 #}
 {% macro card(properties={}, modifier={}, state={}, aria={}) %}
 <div class="tn-card{{ modifier.block | modifier('card') }}{{ ' is-disabled' if state.disabled }}"{{ ' aria-disabled="'+ state.disabled +'"' if state.disabled }}{{ ' role="' + aria.role +'"' if aria.role }}>
-    {% if properties.media %}{{ card_media(modifier=modifier.media, properties=properties.media) | trim }}
-    {% endif -%}
+    {%- if properties.media %}{{ card_media(modifier=modifier.media, properties=properties.media) | trim }}
+    {%- endif %}
     <div class="tn-card__content">
         {%- if properties.body -%}
              {{ properties.body }}
@@ -28,7 +28,7 @@
     </div>
     {%- endif %}
 </div>
-{% endmacro %}
+{%- endmacro %}
 
 {% macro card_media(modifier=[], properties={}) %}
 <div class="tn-card__media{{ modifier | modifier('card__media') }}" style="background-image: url({{ properties.image }})" aria-label="{{ properties.alt }}"></div>

@@ -13,8 +13,7 @@ const pageId = yargs.argv.page;
 const paths = {
 	src: './ops/misc',
     dest: {
-        lib: './src',
-        docs: './docs',
+        lib: './scss',
         test: './test'
     }
 }
@@ -51,9 +50,9 @@ const createTask = (cb) => {
     gulp.src(`${paths.src}/src-component.scss`)
         .pipe(rename(`${componentId}.scss`))
         .pipe(replace('__COMPONENT_ID__',componentId))
-        .pipe(gulp.dest(`${paths.dest.lib}/styles/components`));
+        .pipe(gulp.dest(`${paths.dest.lib}/components`));
 
-    gulp.src(`${paths.dest.lib}/styles/components.scss`)
+    gulp.src(`${paths.dest.lib}/components.scss`)
         .pipe(footer(`@import "components/${componentId}";\n`))
         .pipe(gulp.dest(`${paths.dest.lib}/styles`));
 }

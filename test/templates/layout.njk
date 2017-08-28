@@ -33,7 +33,7 @@
 <body>
     <header style="border-bottom: solid 6px lightgray; padding-bottom: 10px; margin-bottom: 10px;">
         <form action="#" method="get">
-        <fieldset>
+        <fieldset style="font-family: monospace;font-size: 14px;">
             <label class="test-label"><input type="checkbox" name="lib" value="b3" {{'checked' if libs.b3 }}> bootstrap/3.3.7</label>
             <label class="test-label"><input type="checkbox" name="lib" value="b4" {{'checked' if libs.b4 }}> bootstrap/4.0.0-beta</label>
             <label class="test-label"><input type="checkbox" name="lib" value="md" {{'checked' if libs.md }}>
@@ -41,9 +41,34 @@ angular_material/1.1.4</label>
             <label class="test-label"><input type="checkbox" name="lib" value="tn" {{'checked' if libs.tn }}> techne/1.5.7</label>
             <button type="submit">Submit</button>
         </fieldset>
-    </form>
+
+        </form>
+
+        <div class="test-datacontainer" style="position: fixed;right: 10px;bottom: 0px;text-align:right; width: 500px;max-width: calc(100vw - 15px);">
+                    <h2 style="font-size: 12px;margin-bottom:5px"><code style="word-wrap:break-word;">{{id}}/data.json</code></h2>
+            <textarea class="test-textarea" style="">
+{{ data | dump(2) }}
+            </textarea>
+
+        </div>
+        <style media="screen">
+        .test-datacontainer { padding: 5px;background-color: rgba(0,0,0,0.1); }
+        .test-datacontainer textarea { height: 50px; }
+            .test-datacontainer textarea:focus { height: 80vh; }
+        </style>
+
+
+
     </header>
-    {% block content %}
-    {% endblock %}
+    <main style="background-color: #f2f2f2;">
+        <div style="padding: 20px;">
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+    </main>
+
+
 </body>
 </html>
