@@ -8,9 +8,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const debug = require('gulp-debug');
 const gulpSequence = require('gulp-sequence');
 const replace = require('gulp-replace');
-const replace = require('gulp-header');
+const header = require('gulp-header');
 const config = require('../config');
-const pkg = require('../package');
+const pkg = require('../../package');
 
 let environment = require('../lib/environment');
 
@@ -18,6 +18,14 @@ const paths = {
 	src: config.root.css,
 	dest: environment.production ? config.root.dest : config.root.tmp
 }
+
+var d = new Date();
+var y = d.getFullYear();
+var banner = `/*!
+* Techne v${pkg.version}
+* Copyright (c) ${y} SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/\n`;
 
 //compile top-level files
 var sassTask = (cb) => {
@@ -74,30 +82,18 @@ var minifyTask = (cb) => {
 }
 gulp.task('pkg-css-minify', minifyTask);
 
-
-//create minify versions
+//add banner
 var bannerTask = (cb) => {
-    var d = new Date();
-    var y = d.getFullYear();
-    var banner = `
-/*!
- * Techne v${pkg.version}
- * Copyright (c) ${y} SAP SE or an SAP affiliate company.
- * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
- */
- `;
     return gulp.src([`${paths.dest}/**/*.css`])
-        .pipe(header(banner, { pkg : pkg } ))
+        .pipe(header(banner))
         .pipe(gulp.dest(paths.dest))
 }
 gulp.task('pkg-css-banner', bannerTask);
 
-
-
 //main css task
 module.exports = cssTask = (cb) => {
     if (environment.production) {
-        gulpSequence('pkg-sass', 'pkg-css-components', 'pkg-css-minify', cb)
+        gulpSequence('pkg-sass', 'pkg-css-components', 'pkg-css-minify', 'pkg-css-banner', cb)
     } else {
         gulpSequence('pkg-sass', cb)
     }
