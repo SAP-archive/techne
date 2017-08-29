@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field. Use these components along with inline help and error st...">
+
+<meta name="keywords" content=" form">
+
+<title>Form | TECHNE</title>
+
+<link rel="stylesheet" href="css/syntax.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/customstyles.css">
+
+<link rel="stylesheet" href="css/techne.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<!-- <script src="js/jquery.navgoco.min.js"></script> -->
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+
+<script src="js/toc.js"></script>
+
+<script src="js/customscripts.js"></script>
+
+<!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"><img src="/images/techne-logo.svg" alt=""> TECHNE</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <!-- standard links -->
+                
+
+                
+
+                
+                    
+                        
+                            <li><a href="index.html">Get Started</a></li>
+                        
+                    
+                        
+                            <li><a href="styles.html">Styles</a></li>
+                        
+                    
+                        
+                            <li><a href="components.html">Components</a></li>
+                        
+                    
+                
+
+                <!-- entries with drop-downs appear here -->
+
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+                <!-- feedback link -->
+                
+
+
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Form">{title}</a></li>',
+                    noResultsText: '<li class="no-search-results">No results found</li>',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">
+        <h2></h2>
+    </li>
+    
+    
+    
+    <li>
+        <a href="" class="text-large">Components</a>
+        <ul>
+            
+            
+            
+            <li><a href="action-bar.html">Action Bar</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="buttons.html">Buttons</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="card.html">Card</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="form.html">Form</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="icons.html">Icons</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="layout.html">Layout</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="list.html">List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="label.html">Label</a></li>
+            
+            
+            
+            
+        </ul>
+    </li>
+    
+    
+    
+
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Form</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field. Use these components along with inline help and error state treatements for any form design.</div>
+   
+
+    
+
+
+    
+
+  <h2 id="select">Select</h2>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="select-1">Default Select</label>
+        <select class="tn-form__control" id="select-1" name="">
+            <option value="1">Duis malesuada odio volutpat elementum</option>
+            <option value="2">Suspendisse ante ligula</option>
+            <option value="3">Sed bibendum sapien at posuere interdum</option>
+        </select>
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label is-required" for="select-2">Required Select</label>
+        <select class="tn-form__control" id="select-2" name="">
+            <option value="1">Duis malesuada odio volutpat elementum</option>
+            <option value="2">Suspendisse ante ligula</option>
+            <option value="3">Sed bibendum sapien at posuere interdum</option>
+        </select>
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="select-2">Disabled Select</label>
+        <select class="tn-form__control" id="select-2" name="" disabled="">
+            <option value="1">Duis malesuada odio volutpat elementum</option>
+            <option value="2">Suspendisse ante ligula</option>
+            <option value="3">Sed bibendum sapien at posuere interdum</option>
+        </select>
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"select-1"</span><span class="nt">&gt;</span>Default Select<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"select-1"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Duis malesuada odio volutpat elementum<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Suspendisse ante ligula<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Sed bibendum sapien at posuere interdum<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label is-required"</span> <span class="na">for=</span><span class="s">"select-2"</span><span class="nt">&gt;</span>Required Select<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"select-2"</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Duis malesuada odio volutpat elementum<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Suspendisse ante ligula<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Sed bibendum sapien at posuere interdum<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"select-2"</span><span class="nt">&gt;</span>Disabled Select<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"select-2"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Duis malesuada odio volutpat elementum<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Suspendisse ante ligula<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Sed bibendum sapien at posuere interdum<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="inputs">Inputs</h2>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-1">Default Input</label>
+        <input class="tn-form__control" type="text" id="input-1" name="" value="" placeholder="Field placeholder text" />
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label is-required" for="input-2">Required Input</label>
+        <input class="tn-form__control" type="text" id="input-2" name="" value="" placeholder="Field placeholder text" />
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-3">Valid Input</label>
+        <input class="tn-form__control is-valid" type="text" id="input-3" name="" value="" placeholder="Field placeholder text" />
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-4">Invalid Input</label>
+        <input class="tn-form__control is-invalid" type="text" id="input-4" name="" value="" placeholder="Field placeholder text" />
+        <span class="tn-form__message tn-form__message--error">
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        </span>
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-5">Warning Input</label>
+        <input class="tn-form__control is-warning" type="text" id="input-5" name="" value="" placeholder="Field placeholder text" />
+        <span class="tn-form__message tn-form__message--warning">
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        </span>
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-6">Disabled Input</label>
+        <input class="tn-form__control" type="text" id="input-6" name="" value="" placeholder="Field placeholder text" disabled="" />
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-7">Read Only Input</label>
+        <input class="tn-form__control" type="text" id="input-7" name="" value="" placeholder="Field placeholder text" readonly="" />
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-4">Input with Help Message</label>
+        <input class="tn-form__control" type="text" id="input-4" name="" value="" placeholder="Field placeholder text" />
+        <span class="tn-form__message tn-form__message--help">
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        </span>
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item tn-form__item--inline">
+        <label class="tn-form__label" for="input-8">Inline Input</label>
+        <input class="tn-form__control" type="text" id="input-8" name="" value="" placeholder="Field placeholder text" />
+    </div>
+    <div class="tn-form__item tn-form__item--inline">
+        <label class="tn-form__label" for="input-9">Inline Input</label>
+        <input class="tn-form__control" type="text" id="input-9" name="" value="" placeholder="Field placeholder text" />
+    </div>
+    <div class="tn-form__message  tn-form__message--error">
+        Error
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-1"</span><span class="nt">&gt;</span>Default Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-1"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label is-required"</span> <span class="na">for=</span><span class="s">"input-2"</span><span class="nt">&gt;</span>Required Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-2"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-3"</span><span class="nt">&gt;</span>Valid Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control is-valid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-3"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-4"</span><span class="nt">&gt;</span>Invalid Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control is-invalid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-4"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-form__message tn-form__message--error"</span><span class="nt">&gt;</span>
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-5"</span><span class="nt">&gt;</span>Warning Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control is-warning"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-5"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-form__message tn-form__message--warning"</span><span class="nt">&gt;</span>
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-6"</span><span class="nt">&gt;</span>Disabled Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-6"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-7"</span><span class="nt">&gt;</span>Read Only Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-7"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-4"</span><span class="nt">&gt;</span>Input with Help Message<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-4"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-form__message tn-form__message--help"</span><span class="nt">&gt;</span>
+            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+        <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-8"</span><span class="nt">&gt;</span>Inline Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-8"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"input-9"</span><span class="nt">&gt;</span>Inline Input<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-9"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Field placeholder text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__message  tn-form__message--error"</span><span class="nt">&gt;</span>
+        Error
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="textarea">Textarea</h2>
+
+<fieldset class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="textarea-1">Field Label</label>
+        <textarea class="tn-form__control" id="textarea-1" name="">Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.</textarea>
+    </div>
+</fieldset>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"textarea-1"</span><span class="nt">&gt;</span>Field Label<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"textarea-1"</span> <span class="na">name=</span><span class="s">""</span> <span class="nt">&gt;</span>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.<span class="nt">&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="radio-buttons">Radio Buttons</h2>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Default Radio Options</legend>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-1" name="radio-name-1" value="" checked="" />
+        <label class="tn-form__label" for="radio-1">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-2" name="radio-name-1" value="" />
+        <label class="tn-form__label" for="radio-2">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-3" name="radio-name-1" value="" />
+        <label class="tn-form__label" for="radio-3">Option Three</label>
+    </div>
+</fieldset>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend is-required">Required Radio Options</legend>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-4" name="radio-name-2" value="" />
+        <label class="tn-form__label" for="radio-4">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-5" name="radio-name-2" value="" checked="" />
+        <label class="tn-form__label" for="radio-5">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-5" name="radio-name-2" value="" />
+        <label class="tn-form__label" for="radio-5">Option Three</label>
+    </div>
+</fieldset>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Radio Options Error</legend>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-7" name="radio-name-3" value="" />
+        <label class="tn-form__label" for="radio-7">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-8" name="radio-name-3" value="" checked="" />
+        <label class="tn-form__label" for="radio-8">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-9" name="radio-name-3" value="" />
+        <label class="tn-form__label" for="radio-9">Option Three</label>
+    </div>
+    <div class="tn-form__message  tn-form__message--error">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+    </div>
+</fieldset>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Radio Options Disabled</legend>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-10" name="radio-name-4" value="" disabled="" />
+        <label class="tn-form__label" for="radio-10">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-11" name="radio-name-4" value="" disabled="" checked="" />
+        <label class="tn-form__label" for="radio-11">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-12" name="radio-name-4" value="" disabled="" />
+        <label class="tn-form__label" for="radio-12">Option Three</label>
+    </div>
+</fieldset>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Inline Radio Option</legend>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-13" name="radio-name-5" value="" checked="" />
+        <label class="tn-form__label" for="radio-13">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-14" name="radio-name-5" value="" />
+        <label class="tn-form__label" for="radio-14">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="radio" id="radio-15" name="radio-name-5" value="" />
+        <label class="tn-form__label" for="radio-15">Option Three</label>
+    </div>
+</fieldset>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Default Radio Options<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-1"</span> <span class="na">name=</span><span class="s">"radio-name-1"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-1"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-2"</span> <span class="na">name=</span><span class="s">"radio-name-1"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-2"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-3"</span> <span class="na">name=</span><span class="s">"radio-name-1"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-3"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend is-required"</span><span class="nt">&gt;</span>Required Radio Options<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-4"</span> <span class="na">name=</span><span class="s">"radio-name-2"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-4"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-5"</span> <span class="na">name=</span><span class="s">"radio-name-2"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-5"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-5"</span> <span class="na">name=</span><span class="s">"radio-name-2"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-5"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Radio Options Error<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-7"</span> <span class="na">name=</span><span class="s">"radio-name-3"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-7"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-8"</span> <span class="na">name=</span><span class="s">"radio-name-3"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-8"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-9"</span> <span class="na">name=</span><span class="s">"radio-name-3"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-9"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__message  tn-form__message--error"</span><span class="nt">&gt;</span>
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Radio Options Disabled<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-10"</span> <span class="na">name=</span><span class="s">"radio-name-4"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-10"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-11"</span> <span class="na">name=</span><span class="s">"radio-name-4"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-11"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-12"</span> <span class="na">name=</span><span class="s">"radio-name-4"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-12"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Inline Radio Option<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-13"</span> <span class="na">name=</span><span class="s">"radio-name-5"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-13"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-14"</span> <span class="na">name=</span><span class="s">"radio-name-5"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-14"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-15"</span> <span class="na">name=</span><span class="s">"radio-name-5"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"radio-15"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="checkbox">Checkbox</h2>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Stacked (default)</legend>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-1" name="checkbox-name-1" value="" checked="" />
+        <label class="tn-form__label" for="checkbox-1">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-2" name="checkbox-name-1" value="" />
+        <label class="tn-form__label" for="checkbox-2">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-3" name="checkbox-name-1" value="" />
+        <label class="tn-form__label" for="checkbox-3">Option Three</label>
+    </div>
+</fieldset>
+
+<fieldset class="tn-form__group">
+    <legend class="tn-form__legend">Inline</legend>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-4" name="checkbox-name-2" value="" disabled="" checked="" />
+        <label class="tn-form__label" for="checkbox-4">Option One</label>
+    </div>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-5" name="checkbox-name-2" value="" disabled="" />
+        <label class="tn-form__label" for="checkbox-5">Option Two</label>
+    </div>
+    <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+        <input class="tn-form__control" type="checkbox" id="checkbox-6" name="checkbox-name-2" value="" disabled="" />
+        <label class="tn-form__label" for="checkbox-6">Option Three</label>
+    </div>
+</fieldset>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Stacked (default)<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-1"</span> <span class="na">name=</span><span class="s">"checkbox-name-1"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-1"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-2"</span> <span class="na">name=</span><span class="s">"checkbox-name-1"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-2"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-3"</span> <span class="na">name=</span><span class="s">"checkbox-name-1"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-3"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+
+<span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"tn-form__legend"</span><span class="nt">&gt;</span>Inline<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-4"</span> <span class="na">name=</span><span class="s">"checkbox-name-2"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-4"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-5"</span> <span class="na">name=</span><span class="s">"checkbox-name-2"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-5"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--inline tn-form__item--check"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-6"</span> <span class="na">name=</span><span class="s">"checkbox-name-2"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-6"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+			Techne 2.0 Alpha
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
