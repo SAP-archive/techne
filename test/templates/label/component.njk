@@ -1,21 +1,10 @@
 <!--
-{{ label(properties={ "text": "Hello" }, modifier={ 'block': ['success'] }) }}
-
-LABEL:
-    modifier:
-        block="", (array | optional)
-    properties:
-        text="", (string | optional)
-    state:
-        block="", (array | optional)
+label:
+    properties={},
+    modifier={ block: [] }
 -->
-{% macro label(properties={}, modifier={}, state={}) %}
-<ul>
-    <li><strong>properties:</strong> {{properties | dump}}</li>
-    <li><strong>modifier:</strong> {{modifier | dump}}</li>
-    <li><strong>state:</strong> {{state | dump}}</li>
-</ul>
+{% macro label(properties={}, modifier={}, state={}, aria={}) -%}
 <span class="tn-label{{ modifier.block | modifier('label') }}">
-    {{ properties.text }}
+    {{properties.label}}
 </span>
-{% endmacro %}
+{%- endmacro %}
