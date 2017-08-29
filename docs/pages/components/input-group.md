@@ -100,7 +100,7 @@ $
 {% capture icon-addon %}    
 <div class="tn-input-group">
     <span class="tn-input-group__addon">
-<span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
+      <span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
     </span>
     <input class="" type="text" id="" name="" value="1000000">
 </div>
@@ -108,7 +108,7 @@ $
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000">
     <span class="tn-input-group__addon">
-<span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
+      <span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
     </span>
 </div>
 {% endcapture %}

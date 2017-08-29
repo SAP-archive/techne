@@ -7,42 +7,42 @@ entries:
     output: web
 
     folderitems:
-    - title: Layout
-      url: /layout.html
-      output: web
 
     - title: Action Bar
       url: /action-bar.html
-      output: web
-
-    - title: Card
-      url: /card.html
-      output: web
-
-    - title: List
-      url: /list.html
       output: web
 
     - title: Buttons
       url: /buttons.html
       output: web
 
+    - title: Card
+      url: /card.html
+      output: web
+
     - title: Form
       url: /form.html
       output: web
 
-
-    - title: Label
-      url: /label.html
+    - title: Icons
+      url: /icons.html
       output: web
 
     - title: Input Group
       url: /input-group.html
       output: web
 
+    - title: Layout
+      url: /layout.html
+      output: web
 
+    - title: List
+      url: /list.html
+      output: web
 
-
+    - title: Label
+      url: /label.html
+      output: web
 
   # folders:
   # - title: Structure

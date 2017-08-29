@@ -599,14 +599,13 @@ a[data-toggle] {
 .summary {
     font-size:120%;
     color: #808080;
-    margin:20px 0px 20px 0px;
+    margin:20px 0px 40px 0px;
     border-left: 5px solid #ED1951;
     padding-left: 10px;
 
 }
 
 .summary:before {
-    content: "Summary: ";
     font-weight: bold;
 }
 
@@ -1233,4 +1232,18 @@ h4.panel-title {
 
 .tn-input-group {
     margin-bottom: 20px;
+}
+
+.demo-icon-wrapper{
+  padding: 20px;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.demo-icon-wrapper span {
+  padding: 20px;
+  display: inline-block;
+}
+.demo-icon-wrapper h4 {
+  margin-bottom: 0;
 }

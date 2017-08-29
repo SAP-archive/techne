@@ -3,12 +3,12 @@ const gulp = require('gulp');
 let environment = require('../lib/environment');
 
 const paths = {
-	src: !environment.production ? './tmp/css' : './dist/css',
+	src: './dist',
 	dest: './docs/css'
 }
 
 const task = (cb) => {
-    return gulp.src([`${paths.src}/*.svg`])
+    return gulp.src([`${paths.src}/*.woff`, `${paths.src}/*.woff2`])
 		.pipe(gulp.dest(paths.dest));
 }
 
