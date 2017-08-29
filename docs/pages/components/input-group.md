@@ -100,7 +100,7 @@ $
 {% capture icon-addon %}    
 <div class="tn-input-group">
     <span class="tn-input-group__addon">
-      <span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
+      <span class="tn-icon tn-icon--checked"></span>
     </span>
     <input class="" type="text" id="" name="" value="1000000">
 </div>
@@ -108,7 +108,7 @@ $
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000">
     <span class="tn-input-group__addon">
-      <span class="tn-icon tn-icon--foo tn-has-background-color-text" style="width: 26px; height: 26px;" aria-label=""></span>
+      <span class="tn-icon tn-icon--checked"></span>
     </span>
 </div>
 {% endcapture %}
@@ -123,36 +123,36 @@ $
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000">
     <span class="tn-input-group__addon tn-input-group__addon--button">
-<button class="tn-button tn-button--icon tn-button--text">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-</button>
+        <button class="tn-button tn-button--icon tn-button--text">
+            <span class="tn-icon tn-icon--checked"></span>
+        </button>
     </span>
 </div>
 
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000" readonly>
     <span class="tn-input-group__addon tn-input-group__addon--button">
-<button class="tn-button tn-button--icon tn-button--text">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-</button>
+        <button class="tn-button tn-button--icon tn-button--text">
+            <span class="tn-icon tn-icon--checked"></span>
+        </button>
     </span>
 </div>
 
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000">
     <span class="tn-input-group__addon tn-input-group__addon--button">
-<button class="tn-button">
-    Button
-</button>
+        <button class="tn-button">
+            Button
+        </button>
     </span>
 </div>
 
 <div class="tn-input-group">
     <input class="" type="text" id="" name="" value="1000000">
     <span class="tn-input-group__addon tn-input-group__addon--button">
-<button class="tn-button tn-button--icon">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-</button>
+        <button class="tn-button tn-button--icon">
+            <span class="tn-icon tn-icon--checked"></span>
+        </button>
     </span>
 </div>
 {% endcapture %}
