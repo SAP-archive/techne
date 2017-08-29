@@ -12,7 +12,17 @@
 }
 .tn-icon {
   font-size: 1.125rem;
-  font-family: TechneIcons
+  font-family: TechneIcons;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 .tn-icon--medium {
   font-size: 1.625rem
@@ -21,17 +31,8 @@
   font-size: 2rem
 }
 .tn-icon::before {
-  display: inline-block;
-  vertical-align: middle;
-  font-style: normal;
-  font-weight: 400;
-  speak: none;
-  line-height: 1;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  display: inline;
+  text-align: center
 }
 .tn-icon--add::before {
   content: ""

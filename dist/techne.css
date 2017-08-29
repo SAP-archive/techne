@@ -550,7 +550,6 @@ input[type=radio]:checked[disabled]::after {
 }
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
-    .tn-button__icon+()
 */
 .tn-button {
   margin: 0;
@@ -710,32 +709,22 @@ input[type=radio]:checked[disabled]::after {
 .tn-button--link[aria-disabled=true]::after {
   display: none
 }
-.tn-button__icon {
+.tn-button > * {
   display: inline-block;
   vertical-align: top;
   margin-right: 12px;
-  font-size: 26px;
-  width: 26px;
-  height: 26px;
-  line-height: 1;
   margin-top: 13px
 }
-.tn-button--action-bar .tn-button__icon,
-.tn-button--icon .tn-button__icon {
+.tn-button--action-bar > *,
+.tn-button--icon > * {
   margin-left: auto;
   margin-right: auto
 }
-.tn-button--small .tn-button__icon {
-  font-size: 18px;
-  width: 18px;
-  height: 18px;
+.tn-button--small > * {
   margin-top: 11px
 }
-.tn-button--action-bar .tn-button__icon,
-.tn-button--large .tn-button__icon {
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
+.tn-button--action-bar > *,
+.tn-button--large > * {
   margin-top: 22px
 }
 .tn-button--action-bar {
@@ -746,8 +735,8 @@ input[type=radio]:checked[disabled]::after {
   line-height: 32px;
   vertical-align: middle
 }
-.tn-button--action-bar .tn-button__icon {
-  display: block;
+.tn-button--action-bar > * {
+  display: block!important;
   margin-top: 12px
 }
 /*!
@@ -1569,7 +1558,17 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-icon {
   font-size: 1.125rem;
-  font-family: TechneIcons
+  font-family: TechneIcons;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 .tn-icon--medium {
   font-size: 1.625rem
@@ -1578,17 +1577,8 @@ input[type=radio]:checked[disabled]::after {
   font-size: 2rem
 }
 .tn-icon::before {
-  display: inline-block;
-  vertical-align: middle;
-  font-style: normal;
-  font-weight: 400;
-  speak: none;
-  line-height: 1;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  display: inline;
+  text-align: center
 }
 .tn-icon--add::before {
   content: ""

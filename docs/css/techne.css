@@ -295,7 +295,6 @@ input[type="radio"] {
 
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
-    .tn-button__icon+()
 */
 .tn-button {
   margin: 0;
@@ -406,27 +405,17 @@ input[type="radio"] {
       border-bottom-color: #009cdf; }
     .tn-button--link[aria-disabled="true"]::after, .tn-button--link.is-disabled::after {
       display: none; }
-  .tn-button__icon {
+  .tn-button > * {
     display: inline-block;
     vertical-align: top;
     margin-right: 12px;
-    font-size: 26px;
-    width: 26px;
-    height: 26px;
-    line-height: 1;
     margin-top: 13px; }
-    .tn-button--icon .tn-button__icon, .tn-button--action-bar .tn-button__icon {
+    .tn-button--icon > *, .tn-button--action-bar > * {
       margin-left: auto;
       margin-right: auto; }
-    .tn-button--small .tn-button__icon {
-      font-size: 18px;
-      width: 18px;
-      height: 18px;
+    .tn-button--small > * {
       margin-top: 11px; }
-    .tn-button--large .tn-button__icon, .tn-button--action-bar .tn-button__icon {
-      font-size: 32px;
-      width: 32px;
-      height: 32px;
+    .tn-button--large > *, .tn-button--action-bar > * {
       margin-top: 22px; }
   .tn-button--action-bar {
     font-size: 0.75rem;
@@ -435,8 +424,8 @@ input[type="radio"] {
     text-transform: uppercase;
     line-height: 32px;
     vertical-align: middle; }
-    .tn-button--action-bar .tn-button__icon {
-      display: block;
+    .tn-button--action-bar > * {
+      display: block !important;
       margin-top: 12px; }
 
 /*!
@@ -1008,6 +997,17 @@ input[type="radio"] {
 .tn-icon {
   font-size: 1.125rem;
   font-family: "TechneIcons"; }
+  font-family: "TechneIcons";
+  line-height: 1;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   .tn-icon--medium {
     font-size: 1.625rem; }
   .tn-icon--large {
@@ -1024,6 +1024,8 @@ input[type="radio"] {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+    display: inline;
+    text-align: center; }
   .tn-icon--add::before {
     content: ""; }
   .tn-icon--addlg::before {
