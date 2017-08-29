@@ -1,0 +1,8 @@
+{% for icon in site.data.icons %}
+<div class="demo-icon-wrapper">
+  <h4>.tn-icon--{{ icon.name }}</h4>
+  <span class="tn-icon tn-icon--{{ icon.name }}"></span>
+  <span class="tn-icon tn-icon--{{ icon.name }} tn-icon--medium"></span>
+  <span class="tn-icon tn-icon--{{ icon.name }} tn-icon--large"></span>
+</div>
+{% endfor %}
