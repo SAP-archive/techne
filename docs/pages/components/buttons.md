@@ -8,83 +8,75 @@ folder: components
 summary: Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.
 ---
 
-## Default Button
+## Button Sizes
 
-{% capture default-button %}
+{% capture button-sizes %}
 <button class="tn-button tn-button--small">
     Small Button
 </button>
-
 <button class="tn-button">
     Default Button
 </button>
-
 <button class="tn-button tn-button--large">
     Large Button
 </button>
 {% endcapture %}
 
-{% include display-component.html component=default-button %}
+{% include display-component.html component=button-sizes %}
 
 <br>
 
-## Selected Button
+## Button States
 
-{% capture selected-button %}    
+{% capture button-states %}  
+<button class="tn-button">
+    Default Button
+</button>
 <button class="tn-button" aria-selected="true">
-    Default Button
+    Selected Button
 </button>
-{% endcapture %}
-
-{% include display-component.html component=selected-button %}
-
-<br>
-
-## Disabled Button
-
-{% capture disabled-button %}    
 <button class="tn-button" aria-disabled="true">
-    Default Button
+    Disabled Button
 </button>
 {% endcapture %}
 
-{% include display-component.html component=disabled-button %}
+{% include display-component.html component=button-states %}
 
 <br>
 
-## Text Button
+## Text Button Sizes
 
-{% capture text-button %}
+{% capture text-button-sizes %}
+<button class="tn-button tn-button--text tn-button--small">
+    Small Text Button
+</button>
 <button class="tn-button tn-button--text">
-    Button Text
+    Default Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--large">
+    Large Text Button
 </button>
 {% endcapture %}
 
-{% include display-component.html component=text-button %}
+{% include display-component.html component=text-button-sizes %}
 
 <br>
 
-## Selected Text Button
+## Text Button States
 
-{% capture selected-text-button %}
+{% capture text-button-states %}
+<button class="tn-button tn-button--text">
+    Default Text Button
+</button>
 <button class="tn-button tn-button--text" aria-selected="true">
-    Button Text
+    Selected Text Button
 </button>
-{% endcapture %}
-
-{% include display-component.html component=selected-text-button %}
-
-<br>
-
-## Disabled Text Button
-
-{% capture disabled-text-button %}
 <button class="tn-button tn-button--text" aria-disabled="true">
-    Button Text
+    Disabled Text Button
 </button>
 {% endcapture %}
 
-{% include display-component.html component=disabled-text-button %}
+{% include display-component.html component=text-button-states %}
 
 <br>
 
@@ -104,12 +96,12 @@ summary: Button and Button Links are used to indicate primary, secondary and ter
 
 {% capture button-with-icon %}
 <button class="tn-button">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-    Button Text
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Default Button
 </button>
 <button class="tn-button tn-button--text">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-    Button Text
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Link Button
 </button>
 {% endcapture %}
 
@@ -121,10 +113,10 @@ summary: Button and Button Links are used to indicate primary, secondary and ter
 
 {% capture icon-button %}
 <button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
 </button>
 <button class="tn-button tn-button--text tn-button--icon" aria-label="BUTTON_LABEL">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
 </button>
 {% endcapture %}
 
@@ -136,12 +128,12 @@ summary: Button and Button Links are used to indicate primary, secondary and ter
 
 {% capture icon-button %}
 <button class="tn-button tn-button--action-bar">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-    Button Action
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Default Button
 </button>
 <button class="tn-button tn-button--text tn-button--action-bar">
-    <span class="tn-button__icon tn-icon tn-icon--foo" role="presentation">✕</span>
-    Button Action
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Link Button
 </button>
 {% endcapture %}
 
