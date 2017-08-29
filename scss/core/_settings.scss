@@ -62,29 +62,21 @@ $tn-colors: (
         3: #eef1f3,
     ),
     action: (
-        1: #009cdf,
-        2: #00a5ec,
-        3: #0093d1,
-       	4: #008ac4
+        1: #009cdf
     ),
     neutral: (
         1: #f9fbfc,
         2: #d7d7d7,
         3: #ccdaeb,
         4: #8a8fa1,
-        5: #c2d1ea,
-        6: #a8bfe3
     ),
     background: (
         1: #ffffff
     ),
     status: (
         1: #61bf33,
-        2: #dff2d6,
-        3: #e96b1a,
-        4: #fbe3d4,
-        5: #df1919,
-        6: #f9d1d1
+        2: #e97326,
+        3: #df1919,
     )
 ) !default;
 
@@ -118,6 +110,6 @@ $tn-color--link: tn-color(action) !default;
 $tn-color--link-hover: tn-color(action) !default;
 
 //states
-$tn-color--error: tn-color(status, 5) !default;
-$tn-color--warning: tn-color(status, 3) !default;
+$tn-color--error: tn-color(status, 3) !default;
+$tn-color--warning: tn-color(status, 2) !default;
 $tn-color--success: tn-color(status, 1) !default;
