@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0
+* Techne v2.0.0-alpha.1
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -58,18 +58,18 @@
   margin-bottom: 0
 }
 .tn-form__item--inline .tn-form__label {
-  margin-bottom: 0;
   margin-top: 4px;
   float: left;
   width: auto
 }
 .tn-form__label,
 .tn-form__legend {
-  display: block;
-  margin-bottom: 12px;
   font-size: .875rem;
   line-height: 1.42857;
   font-weight: 400;
+  display: block;
+  margin-bottom: 12px;
+  border: 0;
   color: #63758b
 }
 .tn-form__label.is-required,
@@ -128,20 +128,20 @@
   left: 8px
 }
 .tn-form__message--warning {
-  background-color: #fbe3d4
+  background-color: #f8d5be
 }
 .tn-form__message--warning::before {
   background-color: transparent;
   border-radius: 0;
   height: 0;
   width: 0;
-  border-bottom: 18px solid #e96b1a;
+  border-bottom: 18px solid #e97326;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   text-indent: -.1em
 }
 .tn-form__message--error {
-  background-color: #f9d1d1
+  background-color: #f7b8b8
 }
 .tn-form__message--error::before {
   background-color: #df1919;
