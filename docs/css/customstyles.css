@@ -1230,3 +1230,17 @@ h4.panel-title {
 .no-search-results{
   padding: 10px;
 }
+
+.demo-icon-wrapper{
+  padding: 20px;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.demo-icon-wrapper span {
+  padding: 20px;
+  display: inline-block;
+}
+.demo-icon-wrapper h4 {
+  margin-bottom: 0;
+}
