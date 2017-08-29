@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0
+* Techne v2.0.0-alpha.1
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -126,24 +126,6 @@
 .tn-has-background-color-action-1 {
   background-color: #009cdf
 }
-.tn-has-color-action-2 {
-  color: #00a5ec
-}
-.tn-has-background-color-action-2 {
-  background-color: #00a5ec
-}
-.tn-has-color-action-3 {
-  color: #0093d1
-}
-.tn-has-background-color-action-3 {
-  background-color: #0093d1
-}
-.tn-has-color-action-4 {
-  color: #008ac4
-}
-.tn-has-background-color-action-4 {
-  background-color: #008ac4
-}
 .tn-has-color-neutral,
 .tn-has-color-neutral-1 {
   color: #f9fbfc
@@ -170,18 +152,6 @@
 .tn-has-background-color-neutral-4 {
   background-color: #8a8fa1
 }
-.tn-has-color-neutral-5 {
-  color: #c2d1ea
-}
-.tn-has-background-color-neutral-5 {
-  background-color: #c2d1ea
-}
-.tn-has-color-neutral-6 {
-  color: #a8bfe3
-}
-.tn-has-background-color-neutral-6 {
-  background-color: #a8bfe3
-}
 .tn-has-color-background,
 .tn-has-color-background-1 {
   color: #fff
@@ -199,34 +169,16 @@
   background-color: #61bf33
 }
 .tn-has-color-status-2 {
-  color: #dff2d6
+  color: #e97326
 }
 .tn-has-background-color-status-2 {
-  background-color: #dff2d6
+  background-color: #e97326
 }
 .tn-has-color-status-3 {
-  color: #e96b1a
-}
-.tn-has-background-color-status-3 {
-  background-color: #e96b1a
-}
-.tn-has-color-status-4 {
-  color: #fbe3d4
-}
-.tn-has-background-color-status-4 {
-  background-color: #fbe3d4
-}
-.tn-has-color-status-5 {
   color: #df1919
 }
-.tn-has-background-color-status-5 {
+.tn-has-background-color-status-3 {
   background-color: #df1919
-}
-.tn-has-color-status-6 {
-  color: #f9d1d1
-}
-.tn-has-background-color-status-6 {
-  background-color: #f9d1d1
 }
 .tn-has-background-image {
   background-repeat: no-repeat;
