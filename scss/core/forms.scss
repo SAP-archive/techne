@@ -1,8 +1,8 @@
 @import "settings";
 @import "mixins";
 
-$tn-elements-inputs--text: "[type=text]", "[type=password]", "[type=email]", "[type=url]", "[type=search]", "[type=tel]", "[type=number]", "[type=date]";
-$tn-elements-inputs--check: "[type=radio]", "[type=checkbox]";
+$tn-elements-inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
+$tn-elements-inputs--check: "input[type=radio]", "input[type=checkbox]";
 
 //dimensions
 $tn-forms-height--input-text: tn-space(13) !default;
@@ -145,7 +145,7 @@ select {
         background-color: $tn-forms-background-color--disabled;
     }
 }
-[type="checkbox"] {
+input[type="checkbox"] {
     &:checked {
         &::after {
             content: "";
@@ -169,7 +169,7 @@ select {
         }
     }
 }
-[type="radio"] {
+input[type="radio"] {
     border-radius: 50%;
     &::after {
         $check-size_: tn-space(4);

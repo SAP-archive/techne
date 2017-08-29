@@ -1,7 +1,7 @@
 {
   "name": "techne",
-  "version": "2.0.0",
-  "description": "",
+  "version": "2.0.0-alpha.1",
+  "description": "This is an in-development, experimental version of SAP Hybris Techne. It should **NOT** be used for production. Refer to the [Techne website](https://techne.yaas.io) for details about the current version.",
   "main": "index.js",
   "scripts": {
     "build": "gulp build:dist",
@@ -14,19 +14,15 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
-    "bower": "^1.7.9",
-    "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-consolidate": "^0.2.0",
+    "gulp-contains": "^1.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-data": "^1.2.1",
     "gulp-debug": "^3.1.0",
@@ -34,6 +30,7 @@
     "gulp-filenames": "^4.0.1",
     "gulp-footer": "^1.0.5",
     "gulp-gh-pages": "0.5.4",
+    "gulp-header": "^1.8.9",
     "gulp-iconfont": "^9.0.0",
     "gulp-if": "^2.0.2",
     "gulp-ignore": "^2.0.2",
@@ -54,11 +51,13 @@
     "path": "^0.12.7",
     "require-dir": "^0.3.1",
     "sass": "^1.0.0-beta.1",
-    "yargs": "^7.0.2"
-  },
-  "dependencies": {
+    "yargs": "^7.0.2",
     "express": "^4.15.4",
     "node-sass": "^4.5.3",
     "nunjucks": "^3.0.1"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   }
 }

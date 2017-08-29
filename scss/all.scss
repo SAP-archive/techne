@@ -1,35 +1,6 @@
-/*!
- * Techne v2.0
- * Copyright (c) 2017 SAP SE or an SAP affiliate company.
- * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
- */
-
-// Techne uses the `techne` theme by default
-// 	with variables in `core/settings`
-// 	- Individual component files are compiled with default settings
-// 	- The full compiled library uses default settings
-// Another theme can be enabled by creating a custom version of this file
-// 	within your own project.
-// 	- The selected theme should be the first import (you can create your own too)
-// 	- With additional import following (using bower)
-// 	- All functions, mixins, and helpers will pick up the new theme variables
-//
-// 	@import "bower_components/techne/src/themes/dark"
-// 	@import "bower_components/techne/src/core"
-// 	@import "bower_components/techne/src/layout"
-// 	@import "bower_components/techne/src/helpers"
-// 	@import "bower_components/techne/src/components/button"
-// 	...additional project styles
-//
-// Themes can be created easily by defining the variable you want to override,
-// 	leaving others in place. See example theme `theme/foo` which only defines
-// 	fonts and colors
 
 @import url("//fonts.googleapis.com/css?family=Dosis:400,500,600");
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,600");
-
-//@import "theme/dark";
-//@import "theme/fiori";
 
 @import "core";
 @import "layout";
