@@ -1,15 +1,14 @@
 {% extends "layout.njk" %}
 {% from "./component.njk" import button %}
 {% from "./../format.njk" import format %}
-{% set css_deps = ['helpers'] %}
+{% set css_deps = ['helpers','icons'] %}
 
 {% block content %}
 <h1>Button</h1>
 {% set example %}
 {{  button(
         {
-            label: 'BUTTON_LABEL',
-            icon: ''
+            label: 'BUTTON_LABEL'
         },
         modifier={
             block: ['small']
@@ -17,16 +16,14 @@
 }}
 {{  button(
         {
-            label: 'BUTTON_LABEL',
-            icon: ''
+            label: 'BUTTON_LABEL'
         },
         modifier={
         })
 }}
 {{  button(
         {
-            label: 'BUTTON_LABEL',
-            icon: ''
+            label: 'BUTTON_LABEL'
         },
         modifier={
             block: ['large']
@@ -158,7 +155,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo'
+            icon: 'checkedlg'
         },
         modifier={
             block: ['small']
@@ -167,7 +164,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo'
+            icon: 'checkedlg'
         },
         modifier={
             block: []
@@ -176,7 +173,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo'
+            icon: 'checkedlg'
         },
         modifier={
             block: ['large']
@@ -186,7 +183,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo',
+            icon: 'checkedlg',
             after: false
         },
         modifier={
@@ -196,7 +193,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo'
+            icon: 'checkedlg'
         },
         modifier={
             block: ['text']
@@ -205,7 +202,7 @@
 {{  button(
         {
             label: 'BUTTON_LABEL',
-            icon: 'foo'
+            icon: 'checkedlg'
         },
         modifier={
             block: ['text','large']
@@ -220,26 +217,26 @@
 
 {% set example %}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: [] },
         aria={ selected: true }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: [] },
         aria={ disabled: true }
     )
 }}
 <br><br>
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['text'] },
         aria={ selected: true }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['text'] },
         aria={ disabled: true }
     )
@@ -256,38 +253,38 @@
 <h1>Icon Button</h1>
 {% set example %}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['small','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['large','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 <br><br>
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','small','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','large','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
@@ -301,50 +298,50 @@
 <h2>States — Selected, Disabled</h2>
 {% set example %}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['icon'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['large','icon'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['icon'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['large','icon'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
 <br><br>
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','icon'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','large','icon'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','icon'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
 {{  button(
-        { icon: 'foo' },
+        { icon: 'checkedlg' },
         modifier={ block: ['text','large','icon'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
@@ -357,12 +354,12 @@
 <h1>Action Bar Button</h1>
 {% set example %}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['action-bar'] }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['text','action-bar'] }
     )
 }}
@@ -375,25 +372,25 @@
 <h2>States — Selected, Disabled</h2>
 {% set example %}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['action-bar'] },
         aria={ selected: true }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['action-bar'] },
         aria={ disabled: true }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['text','action-bar'] },
         aria={ selected: true }
     )
 }}
 {{  button(
-        { label: 'BUTTON_LABEL', icon: 'foo' },
+        { label: 'BUTTON_LABEL', icon: 'checkedlg' },
         modifier={ block: ['text','action-bar'] },
         aria={ disabled: true }
     )
