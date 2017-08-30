@@ -1,0 +1,33 @@
+/*!
+* Techne v2.0.0-alpha-1
+* Copyright (c) 2017 SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/
+/*!
+.tn-badge+(( --success | --warning | --error ), --pill)
+*/
+.tn-badge {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  font-size: .75rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 4px 8px
+}
+.tn-badge--pill {
+  border-radius: 12.5px
+}
+.tn-badge--success {
+  color: #61bf33
+}
+.tn-badge--warning {
+  color: #e97326
+}
+.tn-badge--error {
+  color: #df1919
+}
