@@ -170,6 +170,7 @@ summary: Form Elements include the layout of a field itself, checkboxes, radio b
     </div>
 </fieldset>
 
+
 <fieldset class="tn-form__group">
     <legend class="tn-form__legend is-required">Required Radio Options</legend>
     <div class="tn-form__item tn-form__item--check">
@@ -185,6 +186,7 @@ summary: Form Elements include the layout of a field itself, checkboxes, radio b
         <label class="tn-form__label" for="radio-5">Option Three</label>
     </div>
 </fieldset>
+
 
 <fieldset class="tn-form__group">
     <legend class="tn-form__legend">Radio Options Error</legend>
@@ -205,6 +207,7 @@ summary: Form Elements include the layout of a field itself, checkboxes, radio b
     </div>
 </fieldset>
 
+
 <fieldset class="tn-form__group">
     <legend class="tn-form__legend">Radio Options Disabled</legend>
     <div class="tn-form__item tn-form__item--check">
@@ -221,6 +224,7 @@ summary: Form Elements include the layout of a field itself, checkboxes, radio b
     </div>
 </fieldset>
 
+
 <fieldset class="tn-form__group">
     <legend class="tn-form__legend">Inline Radio Option</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
@@ -236,7 +240,6 @@ summary: Form Elements include the layout of a field itself, checkboxes, radio b
         <label class="tn-form__label" for="radio-15">Option Three</label>
     </div>
 </fieldset>
-
 {% endcapture %}
 
 {% include display-component.html component=radio-buttons %}
