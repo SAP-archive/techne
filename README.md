@@ -17,12 +17,6 @@ Install the library.
 npm install techne@2.0-alpha-1 --save
 ````
 
-### Bower
-
-````
-bower install techne@2.0-alpha-1 --save
-````
-
 ## Usage
 
 Include the full library.
@@ -53,12 +47,11 @@ We rely on several core technologies.
 
 * [Node](https://nodejs.org/) (minimum v6.4)
 * Gulp
-* Bower
 * Sass
 * Nunjucks
 
 ## First
-In addition to Node, you must have Gulp and Bower installed globally:
+In addition to Node, you must have Gulp installed globally:
 
 `npm install -g gulp bower`
 
@@ -72,6 +65,11 @@ Install dev dependencies
 The documentation website is served from the `www` directory.
 
 `npm start`
+
+*In case of problems with nokigiri while running the project please execute from /docs/ next:
+
+bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2
+bundle install
 
 ## Build production
 
@@ -89,6 +87,6 @@ git checkout -b hotfix/001
 git checkout -b release/2.1
 ```
 
-Create a pull request against the appropriate branch and assign it for review.
+Create a pull request against branch  v2.0  and assign it for review.
 
 When accepted, the reviewer will merge and delete the branch.
