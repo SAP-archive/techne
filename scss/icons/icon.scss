@@ -148,6 +148,16 @@ $block: ns(icon);
     $tn-icon-size--large: 2rem !default;      //32px
     font-size: $tn-icon-size;
     font-family: "TechneIcons";
+    line-height: 1;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     &--medium {
         font-size: $tn-icon-size--medium;
     }
@@ -155,17 +165,8 @@ $block: ns(icon);
         font-size: $tn-icon-size--large;
     }
     &::before {
-        display: inline-block;
-        vertical-align: middle;
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
-        line-height: 1;
-        text-decoration: inherit;
-        text-transform: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        display: inline;
+        text-align: center;
     }
 
     @each $key, $value in $tn-icons {

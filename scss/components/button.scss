@@ -5,7 +5,6 @@
 
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
-    .tn-button__icon+()
 */
 
 //set component name using namespace function, then use #{$block} below
@@ -161,35 +160,24 @@ $block: ns(button);
         }
     }
     //ELEMENTS
-    &__icon {
+    & > * {
         display: inline-block;
         vertical-align: top;
         margin-right: tn-space(3);
         @at-root {
-            .#{$block}--icon & {
+            .#{$block}--icon > * {
                 margin-left: auto;
                 margin-right: auto;
             }
         }
-        //revisit — sizes will be part of the icons
-        font-size: 26px; //temp
-        width: $tn-button-icon-height;
-        height: $tn-button-icon-height;
-        line-height: 1;
         margin-top: $tn-button-height / 2 - $tn-button-icon-height / 2;
         @at-root {
-            .#{$block}--small & {
-                font-size: 18px; //temp
-                width: $tn-button-icon-height--small;
-                height: $tn-button-icon-height--small;
+            .#{$block}--small > * {
                 margin-top: $tn-button-height--small / 2 - $tn-button-icon-height--small / 2;
             }
         }
         @at-root {
-            .#{$block}--large & {
-                font-size: 32px; //temp
-                width: $tn-button-icon-height--large;
-                height: $tn-button-icon-height--large;
+            .#{$block}--large > * {
                 margin-top: $tn-button-height--large / 2 - $tn-button-icon-height--large / 2;
             }
         }
@@ -202,8 +190,8 @@ $block: ns(button);
         @include tn-type(-3);
         line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
         vertical-align: middle;
-        .#{$block}__icon {
-            display: block;
+        & > * {
+            display: block !important;
             margin-top: tn-space(3);
         }
     }

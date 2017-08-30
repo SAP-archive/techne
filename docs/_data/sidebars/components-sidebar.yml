@@ -28,6 +28,10 @@ entries:
       url: /icons.html
       output: web
 
+    - title: Input Group
+      url: /input-group.html
+      output: web
+
     - title: Layout
       url: /layout.html
       output: web

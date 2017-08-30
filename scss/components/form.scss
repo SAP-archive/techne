@@ -129,18 +129,18 @@ $block: ns(form);
             }
         }
         &--warning {
-            background-color: tn-color(status,4);
+            background-color: scale-color($tn-color--warning, $lightness: 70%);
             &::before {
                 background-color: transparent;
                 border-radius: 0;
-                @include triangle(20px 18px, tn-color(status, 3), up);
+                @include triangle(20px 18px, $tn-color--warning, up);
                 text-indent: -0.1em;
             }
         }
         &--error {
-            background-color: tn-color(status,6);
+            background-color: scale-color($tn-color--error, $lightness: 70%);
             &::before {
-                background-color: tn-color(status, 5);
+                background-color: $tn-color--error;
                 color: tn-color(text-inverse);
             }
         }

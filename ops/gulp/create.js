@@ -54,7 +54,7 @@ const createTask = (cb) => {
 
     gulp.src(`${paths.dest.lib}/components.scss`)
         .pipe(footer(`@import "components/${componentId}";\n`))
-        .pipe(gulp.dest(`${paths.dest.lib}/styles`));
+        .pipe(gulp.dest(`${paths.dest.lib}`));
 }
 
 gulp.task('create', createTask);
