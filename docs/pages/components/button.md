@@ -3,7 +3,7 @@ title: Buttons
 keywords: button, buttons
 sidebar: components-sidebar
 toc: false
-permalink: buttons.html
+permalink: button.html
 folder: components
 summary: Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.
 ---

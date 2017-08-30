@@ -8,8 +8,8 @@ entries:
 
     folderitems:
 
-    - title: Buttons
-      url: /buttons.html
+    - title: Button
+      url: /button.html
       output: web
 
     - title: Card
@@ -26,10 +26,6 @@ entries:
 
     - title: Input Group
       url: /input-group.html
-      output: web
-
-    - title: Status Indicators
-      url: /status-indicators.html
       output: web
 
     - title: Status Indicators
