@@ -8,10 +8,6 @@ entries:
 
     folderitems:
 
-    - title: Action Bar
-      url: /action-bar.html
-      output: web
-
     - title: Buttons
       url: /buttons.html
       output: web
@@ -32,16 +28,12 @@ entries:
       url: /input-group.html
       output: web
 
-    - title: Layout
-      url: /layout.html
+    - title: Status Indicators
+      url: /status-indicators.html
       output: web
 
-    - title: List
-      url: /list.html
-      output: web
-
-    - title: Label
-      url: /label.html
+    - title: Status Indicators
+      url: /status-indicators.html
       output: web
 
   # folders:

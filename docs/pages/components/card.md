@@ -5,7 +5,7 @@ sidebar: components-sidebar
 toc: false
 permalink: card.html
 folder: components
-summary: 
+summary:
 ---
 
 ## Default Card
@@ -30,7 +30,7 @@ summary:
 
 <br>
 
-## Button Card 
+## Button Card
 
 {% capture button-card %}
 <div class="tn-card tn-card--button" role="button">
@@ -52,7 +52,7 @@ summary:
 
 <br>
 
-## Disabled Card 
+## Disabled Card
 
 {% capture disabled-card %}
 <div class="tn-card tn-card--button is-disabled" aria-disabled="true" role="button">
@@ -90,7 +90,9 @@ summary:
          </p>
     </div>
     <div class="tn-card__actions">
-        <div style="transform: rotate(90deg); width: 40px;"><span class="tn-has-type-1">•••</span></div>
+        <button class="tn-button tn-button--icon tn-button--text" aria-label="BUTTON_LABEL">
+            <span class="tn-icon tn-icon--more tn-icon--large" role="presentation"></span>
+        </button>
     </div>
 </div>
 {% endcapture %}
@@ -210,5 +212,3 @@ summary:
 {% endcapture %}
 
 {% include display-component.html component=custom-content-card %}
-
-

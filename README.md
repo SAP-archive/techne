@@ -21,7 +21,7 @@ https://techne.yaas.io/libs/techne/2.0.0-alpha-1/techne.min.css
 Install the library.
 
 ````
-npm install techne@2.0-alpha-1 --save
+npm install techne@2.0.0-alpha-1 --save
 ````
 ## Usage
 
@@ -88,6 +88,6 @@ git checkout -b bug/000
 git checkout -b hotfix/000
 ```
 
-Create a pull request against the appropriate branch and assign it for review.
+Create a pull request against branch  v2.0  and assign it for review.
 
 When accepted, the reviewer will merge and delete the branch.
