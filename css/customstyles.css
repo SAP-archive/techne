@@ -1247,3 +1247,27 @@ h4.panel-title {
 .demo-icon-wrapper h4 {
   margin-bottom: 0;
 }
+
+.color-plaue-container{
+ margin-bottom: 40px;
+}
+.demo-color-plaque{
+  padding:20px;
+  color:#fff;
+  border:1px solid #666;
+  float: left;
+  width: 250px;
+  height: 150px;
+  position: relative;
+  padding: 0;
+  margin-right:10px!important;
+}
+
+.color-info{
+  width: 100%;
+  background: #666;
+  bottom: 0;
+  position: absolute;
+  padding: 5px;
+  text-align: center;
+}
