@@ -21,7 +21,7 @@ https://techne.yaas.io/libs/techne/2.0.0-alpha-1/techne.min.css
 Install the library.
 
 ````
-npm install techne@2.0.0-alpha-1 --save
+npm install techne@2.0.0-alpha-2 --save
 ````
 ## Usage
 
