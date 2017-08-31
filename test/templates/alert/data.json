@@ -1,7 +1,8 @@
 {
     "properties": {
         "text": "Alert Text",
-        "action": "#/action"
+        "dismissible": true,
+        "id": "alert-id"
     },
     "modifier": {
         "block": ["notification", "error"]

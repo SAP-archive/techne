@@ -8,46 +8,46 @@
 
 {% block content %}
 
-    <h1>alert</h1>
+<h1>alert</h1>
 
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-    {{  alert(
-            properties={
-                text: "Default Alert Message"
-            },
-            modifier={
-                block: []
-            }
-        )
-    }}
+<!-- output the component example and the code snippet -->
+{% set example %}
+{{  alert(
+        properties={
+            text: "default_alert_text",
+            id: "defautl-alert"
+        },
+        modifier={
+            block: []
+        }
+    )
+}}
+<br>
+{{  alert(
+        properties={
+            text: "warnign_alert_text",
+            id: "warning-alert"
 
-    <br>
+        },
+        modifier={
+            block: ["warning"]
+        }
+    )
+}}
+<br>
+{{  alert(
+        properties={
+            text: "error_alert_text",
+            id: "error-alert"
+        },
+        modifier={
+            block: ["error"]
+        }
+    )
+}}
 
-    {{  alert(
-            properties={
-                text: "Notification Alert Message"
-            },
-            modifier={
-                block: ["notification"]
-            }
-        )
-    }}
-
-    <br>
-
-    {{  alert(
-            properties={
-                text: "Error Alert Message"
-            },
-            modifier={
-                block: ["error"]
-            }
-        )
-    }}
-
-    {% endset %}
-    {{ format(example) }}
+{% endset %}
+{{ format(example) }}
 
 
 {% endblock %}
