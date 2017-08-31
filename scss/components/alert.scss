@@ -1,0 +1,52 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-alert+(--notification. --error)
+    .tn-alert__action
+*/
+$block: ns(alert);
+
+.#{$block} {
+    //SETTINGS
+    $tn-alert-background-color: tn-color(text, 3) !default;
+    $tn-alert-background-color--notification: tn-color(status, 2) !default;
+    $tn-alert-background-color--error: tn-color(status, 3) !default;
+    $tn-alert-color: tn-color(text-inverse, 1) !default;
+    $tn-alert-border-color: tn-color(neutral, 2) !default;
+    $tn-alert-height: tn-space(13) !default;
+
+    // Block
+    color: $tn-alert-color;
+    border: solid 1px $tn-alert-border-color;
+    background-color: $tn-alert-background-color;
+    height: $tn-alert-height;
+    padding: tn-space(s);
+    text-align: center;
+
+    // Element
+    &__action {
+        float: right;
+        margin: -(tn-space(s));
+        .tn-button{
+          color: tn-color(text-inverse, 1);
+          min-height: $tn-alert-height;
+          &:hover,
+          &:active,
+          &:focus{
+            color: tn-color(text-inverse, 1);
+          }
+        }
+    }
+
+    // Modifiers
+    &--notification {
+      background-color: $tn-alert-background-color--notification;
+    }
+    &--error {
+      background-color: $tn-alert-background-color--error;
+    }
+
+
+}

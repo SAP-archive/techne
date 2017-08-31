@@ -1,0 +1,9 @@
+{
+    "properties": {
+        "text": "Alert Text",
+        "action": "#/action"
+    },
+    "modifier": {
+        "block": ["notification", "error"]
+    }
+}

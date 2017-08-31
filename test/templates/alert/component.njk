@@ -1,0 +1,16 @@
+{#
+    see ./data.json for object structure
+#}
+
+{% from "../button/component.njk" import button %}
+{% macro alert(properties={}, modifier={}) -%}
+<div class="tn-alert{{ modifier.block | modifier('alert') }}" role="alert">
+  <div class="tn-alert__action">
+    {{ button({ icon: 'remove' }, modifier={ block: ['icon', 'text', 'small'] }, aria={ label: 'Remove' }) }}
+  </div>
+  {%- if properties.text %}
+    {{ properties.text }}
+  {%- endif %}
+</div>
+
+{%- endmacro %}
