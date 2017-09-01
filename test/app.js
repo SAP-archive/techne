@@ -85,6 +85,24 @@ env.addFilter('aria', function(obj=[]) {
     }
     return attrs.join('') ;
 });
+// random_number
+// returns 123
+env.addFilter('random_number', function(length=3) {
+    var randomFixedInteger = function (length) {
+        return Math.floor(Math.pow(10, length-1) + Math.random() * (Math.pow(10, length) - Math.pow(10, length-1) - 1));
+    }
+    return randomFixedInteger(length);
+});
+// random_string
+// returns "FAhPm"
+env.addFilter('random_string', function(length=5) {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (var i = 0; i < 5; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+});
 
 
 app.set('views', TEMPLATE_DIRECTORY);

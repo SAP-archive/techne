@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "./component.njk" import dropdown %}
+
+<!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
+{% set css_deps = ["components/button","icons"] %}
+
+{% block content %}
+<style media="screen">
+    .tn-dropdown {
+        margin-right: 200px;
+    }
+</style>
+
+    <h1>dropdown</h1>
+
+    <p><strong>onclick</strong>: change aria-expanded boolean on the control and change aria-hidden boolean on the menu </p>
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+
+
+
+    {{  dropdown(properties=data.properties) }}
+
+    {{  dropdown(properties=data.properties, state={
+            disabled: true
+        })
+    }}
+
+
+    {% endset %}
+    {{ format(example) }}
+
+
+<script type="text/javascript">
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var isExpanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !isExpanded);
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+        target.setAttribute("aria-hidden", isExpanded);
+    })
+}
+</script>
+
+{% endblock %}

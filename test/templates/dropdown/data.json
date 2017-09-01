@@ -1,0 +1,33 @@
+{
+    "id": "dropdown",
+    "name": "Dropdown",
+    "properties": {
+        "id": "",
+        "icon": "filter",
+        "label": "Select",
+        "items": [
+            { "label": "Pellentesque metus" },
+            { "label": "Duis malesuada odio volutpat" },
+            { "label": "Suspendisse" },
+            { "label": "Donec mattis arcu et velit" },
+            {  "label": "Accumsan tellus",
+                "items": [
+                    { "label": "Scelerisque ante" },
+                    { "label": "Accumsan" },
+                    { "label": "Volutpat felix" }
+                ]
+            }
+
+        ]
+    },
+    "modifier": {
+        "block": []
+    },
+    "state": {
+        "disabled": false
+    },
+    "aria": {
+
+    }
+
+}
