@@ -1187,7 +1187,7 @@ h4.panel-title {
     margin-top: 0px;
 }
 
-/*set navbar breakpoint so that it converts to hamburger earlier */
+/*set navbar breakpoint so that it converts to arrow earlier */
 
 @media (max-width: 1200px) {
     .navbar-header {
@@ -1198,6 +1198,12 @@ h4.panel-title {
     }
     .navbar-toggle {
         display: block;
+    }
+    
+    .navbar-toggle[aria-expanded="true"] span.tn-icon--arrow {
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
