@@ -1199,7 +1199,15 @@ h4.panel-title {
     .navbar-toggle {
         display: block;
     }
-    
+    .navbar-toggle:hover,
+    .navbar-toggle:focus
+    {
+        color: #ffffff;
+    }
+    .navbar-toggle span.tn-icon--arrow {
+        position: relative;
+        top: 4px;
+    }
     .navbar-toggle[aria-expanded="true"] span.tn-icon--arrow {
         -webkit-transform: rotateZ(180deg);
         -moz-transform: rotateZ(180deg);
