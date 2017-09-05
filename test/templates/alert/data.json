@@ -5,6 +5,6 @@
         "id": "alert-id"
     },
     "modifier": {
-        "block": ["notification", "error"]
+        "block": ["warning", "error"]
     }
 }

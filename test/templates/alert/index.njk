@@ -25,7 +25,7 @@
 <br>
 {{  alert(
         properties={
-            text: "warnign_alert_text",
+            text: "warning_alert_text",
             id: "warning-alert"
 
         },
@@ -47,7 +47,23 @@
 }}
 
 {% endset %}
-{{ format(example) }}
+{{- format(example) -}}
 
+<script type="text/javascript">
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        //remove or hide if we want some animation
+        // target.setAttribute("aria-hidden", true);
+        target.remove();
+
+    })
+}
+
+console.log('test')
+</script>
 
 {% endblock %}
