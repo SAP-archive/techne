@@ -20,13 +20,34 @@
     {% set example %}
 
 
-
     {{  dropdown(properties=data.properties) }}
 
-    {{  dropdown(properties=data.properties, state={
-            disabled: true
+    {{  dropdown(properties={
+            label: "Select",
+            icon: "filter",
+            items: [
+                { "label": "Pellentesque metus" },
+                { "label": "Duis malesuada odio volutpat" },
+                { "label": "Suspendisse" },
+                { "label": "Donec mattis arcu et velit" },
+                {  "label": "Accumsan tellus",
+                    "items": [
+                        { "label": "Scelerisque ante" },
+                        { "label": "Accumsan" },
+                        { "label": "Volutpat felix" }
+                    ]
+                }
+            ]
         })
     }}
+
+    {{  dropdown(properties={
+                label: "Select"
+            },
+            state={
+                disabled: true
+            }
+        )  }}
 
 
     {% endset %}

@@ -12,7 +12,7 @@ dropdown:
 {%- set _id = utils.id() %}
 <div class="tn-dropdown{{ modifier.block | modifier('dropdown') }}">
     <button class="tn-dropdown__control" aria-controls="{{ _id }}" aria-expanded="false" aria-haspopup="true"{{ " disabled" if state.disabled }}>
-        {%- if icon %}
+        {%- if properties.icon %}
         {{ icon(glyph=properties.icon, classes="dropdown__icon") }}
         {%- endif %}
         {{ properties.label }}

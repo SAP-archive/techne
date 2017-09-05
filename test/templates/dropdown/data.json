@@ -3,21 +3,19 @@
     "name": "Dropdown",
     "properties": {
         "id": "",
-        "icon": "filter",
+        "icon": "",
         "label": "Select",
         "items": [
-            { "label": "Pellentesque metus" },
-            { "label": "Duis malesuada odio volutpat" },
-            { "label": "Suspendisse" },
-            { "label": "Donec mattis arcu et velit" },
-            {  "label": "Accumsan tellus",
+            { "label": "Option 1" },
+            { "label": "Option 2" },
+            { "label": "Option 3" },
+            {  "label": "Group Header",
                 "items": [
-                    { "label": "Scelerisque ante" },
-                    { "label": "Accumsan" },
-                    { "label": "Volutpat felix" }
+                    { "label": "Option 4" },
+                    { "label": "Option 5" },
+                    { "label": "Option 6" }
                 ]
             }
-
         ]
     },
     "modifier": {
