@@ -1,16 +1,15 @@
-<!--
-badge:
-    properties={},
-    modifier={ block: [] }
--->
-{% macro badge(properties={}, modifier={}, state={}, aria={}) -%}
-<span class="tn-pagination{{ modifier.block}}">
+{#
+    see ./data.json for object structure
+#}
+
+{% macro pagination(properties={}, modifier={}, state={}, aria={}) -%}
+<span class="tn-pagination">
     <li disabled>
-      <a href="#" aria-label="Previous">
+      <a href="#" aria-label="Previous" aira-disabled="{{aria.disabled}}">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li class="active"><a href="#">1</a></li>
+    <li class="{{modifier.block}}"><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li>

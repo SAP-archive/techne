@@ -1,50 +1,48 @@
 {% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "./component.njk" import pagination %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
-{% set css_deps = [] %}
+{% set css_deps = ['components/pagination'] %}
 
 {% block content %}
-    <style media="screen">
-        .tn-pagination { margin-top: 20px; }
-    </style>
-    <h1>pagination</h1>
 
-    <!-- output the component example and the code snippet -->
+<h1>alert</h1>
 
-    {% set example %}
-        {{
-            "id": "pagination",
-            "name": "Pagination",
-            "modifier": {
-                "block": ["disable", "active"]
-            },
-            "state": {
-                "disabled": false
-            },
-            "aria": {
-                "disabled": false
-            }
-        }}
-    {% endset %}
-    <nav>
-      <ul class="tn-pagination">
-        <li disabled>
-          <a href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li>
-          <a href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+<!-- output the component example and the code snippet -->
+{% set example %}
+{{  pagination(
+        properties={
+            id: "pager-1"
+        },
+        modifier={
+          block: "active"
+        },
+        aria={
+          disabled: true
+        }
+    )
+}}
 
+{% endset %}
 
-
+{{- format(example) -}}
 
 {% endblock %}
+{# <nav>
+  <ul class="tn-pagination">
+    <li disabled>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav> #}

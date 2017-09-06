@@ -2261,6 +2261,39 @@ input[type=radio]:checked[disabled]::after {
 .tn-alert--error {
   background-color: #df1919
 }
+/*!
+.tn-pagination
+*/
+.tn-pagination {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  font-weight: 600;
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 3px
+}
+.tn-pagination > li {
+  display: inline
+}
+.tn-pagination > li:first-child > a,
+.tn-pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px
+}
+.tn-pagination.disabled > a,
+.tn-pagination.disabled > a:focus,
+.tn-pagination.disabled > a:hover,
+.tn-pagination.disabled > span,
+.tn-pagination.disabled > span:focus,
+.tn-pagination.disabled > span:hover {
+  color: #cadbee;
+  background-color: transparent;
+  border-color: #e1e5e9;
+  cursor: not-allowed
+}
 @font-face {
   font-family: TechneIcons;
   src: url(TechneIcons.woff2) format("woff2"),url(TechneIcons.woff) format("woff");
