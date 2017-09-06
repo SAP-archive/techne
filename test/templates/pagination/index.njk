@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+<!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
+{% set css_deps = [] %}
+
+{% block content %}
+    <style media="screen">
+        .tn-pagination { margin-top: 20px; }
+    </style>
+    <h1>pagination</h1>
+
+    <!-- output the component example and the code snippet -->
+
+    {% set example %}
+        {{
+            "id": "pagination",
+            "name": "Pagination",
+            "modifier": {
+                "block": ["disable", "active"]
+            },
+            "state": {
+                "disabled": false
+            },
+            "aria": {
+                "disabled": false
+            }
+        }}
+    {% endset %}
+    <nav>
+      <ul class="tn-pagination">
+        <li disabled>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+{% endblock %}

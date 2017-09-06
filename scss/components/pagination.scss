@@ -1,0 +1,42 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "mixins";
+
+/*!
+.tn-pagination
+*/
+//set component name using namespace function, then use #{$block} below
+$block: ns(pagination);
+
+.#{$block} {
+  @include reset;
+  font-weight: 600;
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 3px;
+  > li{
+    display: inline;
+    &:first-child>a,
+    &:first-child>span {
+      margin-left: 0;
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+  }
+  &.disabled {
+    &>a,
+    &>a:focus,
+    &>a:hover,
+    &>span,
+    &>span:focus,
+    &>span:hover {
+      color: #cadbee;
+      background-color: transparent;
+      border-color: #e1e5e9;
+      cursor: not-allowed;
+    }
+  }
+}
+

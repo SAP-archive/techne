@@ -1,0 +1,13 @@
+{
+    "id": "pagination",
+    "name": "Pagination",
+    "modifier": {
+        "block": ["disable", "active"]
+    },
+    "state": {
+        "disabled": false
+    },
+    "aria": {
+        "disabled": false
+    }
+}

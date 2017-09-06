@@ -32,6 +32,10 @@ entries:
       url: /status-indicators.html
       output: web
 
+    - title: Pagination
+      url: /pagination.html
+      output: web
+
   # folders:
   # - title: Structure
   #   output: web
