@@ -1,50 +1,14 @@
 @import "settings";
 @import "mixins";
 
+//els
 $tn-elements-inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
 $tn-elements-inputs--check: "input[type=radio]", "input[type=checkbox]";
-
-//dimensions
-$tn-forms-height--input-text: tn-space(13) !default;
-$tn-forms-height--input-check: tn-space(7) !default;
-$tn-forms-padding: tn-space(4) !default;
-//colors
-$tn-forms-color: $tn-color !default;
-$tn-forms-color--placeholder: tn-color(text, 3) !default;
-$tn-forms-color--focus: $tn-forms-color !default;
-$tn-forms-color--disabled: tn-color(text, 3) !default;
-$tn-forms-background-color: tn-color(background, 1) !default;
-$tn-forms-background-color--check: tn-color(action, 1);
-$tn-forms-background-color--check-disabled: tn-color(text, 2);
-$tn-forms-background-color--disabled: tn-color(neutral, 1) !default;
-$tn-forms-border-color: tn-color(neutral, 2) !default;
-$tn-forms-border-color--check: tn-color(action) !default;
-$tn-forms-border-color--focus: tn-color(action) !default;
-$tn-forms-border-color--disabled: tn-color(neutral, 2) !default;
 //anim
 $tn-forms-transition-params: 0.25s ease-in !default;
-//elements
-$tn-forms-select-width--background-image: 12px!default;
-$tn-forms-select-background-image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMTI2MkMiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
-$tn-forms-select-background-image--active: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
-$tn-forms-select-background-image--open: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgNi41M0w2LjE4OC4xMDRhLjI2NC4yNjQgMCAwIDAtLjM3OCAwTC4wNjUgNi41M2EuMjQuMjQgMCAwIDAtLjA2MS4xNzcuMjM3LjIzNyAwIDAgMCAuMDg3LjE2NWwxLjI5IDEuMDcxYS4yNTguMjU4IDAgMCAwIC4xNjMuMDU4TDEuNTYzIDhhLjI1Mi4yNTIgMCAwIDAgLjE3MS0uMDg1bDQuMjY1LTQuODYxIDQuMjY3IDQuODYxYy4wNDMuMDQ5LjEwNC4wOC4xNy4wODVhLjI2MS4yNjEgMCAwIDAgLjE4Mi0uMDU3bDEuMjkxLTEuMDcxYS4yMzYuMjM2IDAgMCAwIC4wMjYtLjM0MnoiLz48L3N2Zz4=" !default;
-$tn-forms-select-background-image--disabled: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM2Mzc1OEIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNS4yMzUgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzQuMjM0IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
 
 %form-field-base {
-    @include reset;
-    @include tn-type(0, body);
-    appearance: none;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    font-size: inherit;
-    box-sizing: border-box;
-    outline: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $tn-forms-border-color;
-    border-radius: 0;
-    color: $tn-forms-color;
-    background-color: $tn-forms-background-color;
+    @include tn-form-base;
     transition: border-color $tn-forms-transition-params, background-color $tn-forms-transition-params, background-image $tn-forms-transition-params;
     &::after {
         transition: border-color $tn-forms-transition-params;
@@ -52,81 +16,35 @@ $tn-forms-select-background-image--disabled: "data:image/svg+xml;base64,PHN2ZyB4
     &::placeholder {
         color: $tn-forms-color--placeholder;
     }
-    //states
-    &:focus,
-    &:hover {
-        border-color: $tn-forms-border-color--focus;
-        background-color: $tn-forms-background-color;
-    }
-    &.is-invalid {
-        border-color: $tn-color--error;
-    }
-    &.is-valid {
-        border-color: $tn-color--success;
-    }
-    &.is-warning {
-        border-color: $tn-color--warning;
-    }
-    &[disabled],
-    &[aria-disabled="true"],
-    &.is-disabled {
-        cursor: not-allowed;
-        color: $tn-forms-color--disabled;
-        border-color: $tn-forms-border-color--disabled;
-        background-color: $tn-forms-background-color--disabled;
-    }
-    &[readonly],
-    &.is-readonly {
-        color: $tn-forms-color;
-        background-color: $tn-forms-background-color;
-        border-color: $tn-forms-border-color--disabled;
-        border-width: 0 0 1px;
-    }
 }
 fieldset {
     border: 0;
     padding: 0;
     margin: 0;
 }
-#{$tn-elements-inputs--text}, textarea, select {
-    @extend %form-field-base;
+#{$tn-elements-inputs--text},
+textarea {
+    @include tn-form-text;
     width: 100%;
-    height: $tn-forms-height--input-text;
-    padding-left: $tn-forms-padding;
-    padding-right: $tn-forms-padding;
 }
 textarea {
     height: $tn-forms-height--input-text * 3;
     padding-top: $tn-forms-padding;
 }
 select {
-    appearance: none;
-    -moz-appearance: none;
-    background-image: url(#{$tn-forms-select-background-image});
-    background-repeat: no-repeat;
-    background-position: calc(100% - #{$tn-forms-select-width--background-image}) center;
-    padding-right: ($tn-forms-padding * 2) + $tn-forms-select-width--background-image;
-    &:focus,
-    &:hover {
-        background-image: url(#{$tn-forms-select-background-image--active});
-    }
-    &[disabled],
-    &[aria-disabled="true"],
-    &.is-disabled {
-        background-image: url(#{$tn-forms-select-background-image--disabled});
-    }
+    @include tn-form-select;
+    width: 100%;
     &[multiple] {
         height: $tn-forms-height--input-text * 3;
         background-image: none;
         padding-top: $tn-forms-padding;
     }
-
 }
+
 #{$tn-elements-inputs--check} {
     @extend %form-field-base;
     height: $tn-forms-height--input-check;
     width: $tn-forms-height--input-check;
-    //margin: (($tn-forms-height--input-text - $tn-forms-height--input-check) / 2) 0;
     margin: 0;
     margin-right: tn-space(3);
     vertical-align: middle;

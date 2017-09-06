@@ -1,0 +1,69 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "./component.njk" import alert %}
+
+<!-- include add'tl css from src/styles/ -->
+{% set css_deps = ['icons', 'components/button'] %}
+
+{% block content %}
+
+<h1>alert</h1>
+
+<!-- output the component example and the code snippet -->
+{% set example %}
+{{  alert(
+        properties={
+            text: "default_alert_text",
+            id: "defautl-alert"
+        },
+        modifier={
+            block: []
+        }
+    )
+}}
+<br>
+{{  alert(
+        properties={
+            text: "warning_alert_text",
+            id: "warning-alert"
+
+        },
+        modifier={
+            block: ["warning"]
+        }
+    )
+}}
+<br>
+{{  alert(
+        properties={
+            text: "error_alert_text",
+            id: "error-alert"
+        },
+        modifier={
+            block: ["error"]
+        }
+    )
+}}
+
+{% endset %}
+{{- format(example) -}}
+
+<script type="text/javascript">
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        //remove or hide if we want some animation
+        // target.setAttribute("aria-hidden", true);
+        target.remove();
+
+    })
+}
+
+console.log('test')
+</script>
+
+{% endblock %}

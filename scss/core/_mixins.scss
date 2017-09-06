@@ -1,9 +1,94 @@
 $ns: ns();
+//utils
 @mixin reset {
     font-size: $tn-font-size;
     line-height: $tn-line-height;
     color: $tn-color;
 }
+
+
+
+//els
+@mixin tn-form-base {
+    @include reset;
+    @include tn-type(0, body);
+    appearance: none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    font-size: inherit;
+    box-sizing: border-box;
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $tn-forms-border-color;
+    border-radius: 0;
+    color: $tn-forms-color;
+    background-color: $tn-forms-background-color;
+    //states
+    &:focus,
+    &:hover {
+        border-color: $tn-forms-border-color--focus;
+        background-color: $tn-forms-background-color;
+    }
+    &.is-invalid {
+        border-color: $tn-color--error;
+    }
+    &.is-valid {
+        border-color: $tn-color--success;
+    }
+    &.is-warning {
+        border-color: $tn-color--warning;
+    }
+    &:disabled,
+    &[aria-disabled="true"],
+    &.is-disabled {
+        cursor: not-allowed;
+        color: $tn-forms-color--disabled;
+        border-color: $tn-forms-border-color--disabled;
+        background-color: $tn-forms-background-color--disabled;
+    }
+    &[readonly],
+    &.is-readonly {
+        color: $tn-forms-color;
+        background-color: $tn-forms-background-color;
+        border-color: $tn-forms-border-color--disabled;
+        border-width: 0 0 1px;
+    }
+    @content;
+}
+@mixin tn-form-text {
+    @include tn-form-base;
+    height: $tn-forms-height--input-text;
+    padding-left: $tn-forms-padding;
+    padding-right: $tn-forms-padding;
+    @content;
+}
+@mixin tn-form-select {
+    @include tn-form-text;
+    appearance: none;
+    -moz-appearance: none;
+    background-image: url(#{$tn-forms-select-background-image});
+    background-repeat: no-repeat;
+    background-position: calc(100% - #{$tn-forms-select-width--background-image}) center;
+    padding-right: ($tn-forms-padding * 2) + $tn-forms-select-width--background-image;
+    &:focus,
+    &:hover {
+        background-image: url(#{$tn-forms-select-background-image--active});
+    }
+    &[aria-expanded="true"],
+    &.is-expanded {
+        background-image: url(#{$tn-forms-select-background-image--expanded});
+    }
+    &[disabled],
+    &[aria-disabled="true"],
+    &.is-disabled {
+        background-image: url(#{$tn-forms-select-background-image--disabled});
+    }
+    @content;
+}
+
+
+
 
 @mixin clearfix {
     &::after {
