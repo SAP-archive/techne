@@ -8,6 +8,10 @@ entries:
 
     folderitems:
 
+    - title: Alert
+      url: /alert.html
+      output: web
+
     - title: Button
       url: /button.html
       output: web
