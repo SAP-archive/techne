@@ -1,5 +1,4 @@
 {% import "./../utils.njk" as utils %}
-{% from "./../format.njk" import format %}
 {% from "./../icon/component.njk" import icon %}
 <!--
 dropdown:
@@ -11,30 +10,33 @@ dropdown:
 {% macro dropdown(properties={}, modifier={}, state={}, aria={}) -%}
 {%- set _id = utils.id() %}
 <div class="tn-dropdown{{ modifier.block | modifier('dropdown') }}">
-    <button class="tn-dropdown__control" aria-controls="{{ _id }}" aria-expanded="false" aria-haspopup="true"{{ " disabled" if state.disabled }}>
+    <button class="tn-dropdown__control{{ modifier.control | modifier('dropdown__control') }}" aria-controls="{{ _id }}" aria-expanded="false" aria-haspopup="true"{{ " disabled" if state.disabled }}{{ aria | aria }}>
         {%- if properties.icon %}
         {{ icon(glyph=properties.icon, classes="dropdown__icon") }}
         {%- endif %}
         {{ properties.label }}
     </button>
-    <ul class="tn-dropdown__menu" aria-hidden="true" id="{{ _id }}">
-        {%- for item in properties.items %}
-        {%- if item.items %}
-        {{ optgroup(item) | indent(8) }}
-        {%- else %}
-        {{ option(item) }}
-        {%- endif %}
-        {%- endfor %}
-    </ul>
+    {{ menu({ items: properties.items, id: _id }, modifier.menu) }}
 </div>
 {%- endmacro %}
 
-
-{%- macro option(properties={}, modifier={}, state={}, aria={}) -%}
+{%- macro option(properties={}) -%}
 <li><a href="#" class="tn-dropdown__item">{{ properties.label }}</a></li>
 {%- endmacro %}
 
-{% macro optgroup(properties={}, modifier={}, state={}, aria={}) -%}
+{%- macro menu(properties={}, modifier=[], classes=[]) -%}
+<ul class="tn-dropdown__menu{{ modifier | modifier('dropdown__menu') }}{{ classes | classes }}" aria-hidden="true" id="{{ properties.id }}">
+    {%- for item in properties.items %}
+    {%- if item.items %}
+    {{ optgroup(item) | indent(8) }}
+    {%- else %}
+    {{ option(item) }}
+    {%- endif %}
+    {%- endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro optgroup(properties={}) -%}
 <ul class="tn-dropdown__group">
     <span class="tn-dropdown__separator" role="separator">{{ properties.label }}</span>
     {%- for item in properties.items %}
@@ -43,6 +45,30 @@ dropdown:
 </ul>
 {%- endmacro %}
 
+
+
+
+
+{% macro dropdown_alt(properties={}, modifier={}, state={}, aria={}) -%}
+{%- set _id = utils.id() %}
+<div class="tn-dropdown{{ modifier.block | modifier('dropdown') }}{{ state | state }}"{{ aria | aria }}>
+    <button class="tn-dropdown__control" aria-controls="{{ _id }}" aria-expanded="false">
+        {%- if properties.icon %}
+        {{ icon(glyph=properties.icon, classes="dropdown__icon") }}
+        {%- endif %}
+        {{ properties.label }}
+    </button>
+    <div class="tn-dropdown__menu" aria-hidden="true">
+        {%- for item in properties.items %}
+        {%- if item.items %}
+        {{ optgroup_alt(item) | indent(8) }}
+        {%- else %}
+        {{ option_alt(item) }}
+        {%- endif %}
+        {%- endfor %}
+    </div>
+</div>
+{%- endmacro %}
 
 {%- macro option_alt(properties={}, modifier={}, state={}, aria={}) -%}
 <a href="#" class="tn-dropdown__item">{{ properties.label }}</a>
