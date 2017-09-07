@@ -16,6 +16,10 @@ entries:
       url: /card.html
       output: web
 
+    - title: Dropdown
+      url: /dropdown.html
+      output: web
+
     - title: Form
       url: /form.html
       output: web
