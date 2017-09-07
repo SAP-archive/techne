@@ -1,0 +1,97 @@
+{% from "../button/component.njk" import button %}
+{% from "../dropdown/component.njk" import dropdown, menu %}
+{% from "../form/component.njk" import form_control %}
+{% from "../input-group/component.njk" import input_group %}
+{% import "./../utils.njk" as utils %}
+<!--
+toolbar:
+    properties={},
+    modifier={ block: [] },
+    state={},
+    aria={}
+-->
+{% macro toolbar(properties={}, modifier={}, state={}, aria={}) -%}
+{%- set _id = utils.id() %}
+<div class="tn-toolbar{{ modifier.block | modifier('toolbar') }}{{ state | state }}"{{ aria | aria }}>
+    <div class="tn-toolbar__group">
+        <div class="tn-toolbar__filters">
+            <div class="tn-toolbar__filter-item">
+                {{  button(
+                        { icon: 'filter' },
+                        modifier={ block: ['text','icon'] },
+                        aria={ label: 'BUTTON_LABEL', expanded: false, controls: _id, haspopup: true }
+                    )
+                }}
+            </div>
+            <div class="tn-toolbar__filter-item">
+                {{  dropdown(properties={
+                        label: "Newest",
+                        icon: "sort",
+                        items: [
+                            { "label": "Pellentesque metus" },
+                            { "label": "Duis malesuada odio volutpat" },
+                            { "label": "Suspendisse" },
+                            { "label": "Donec mattis arcu et velit" },
+                            {  "label": "Accumsan tellus",
+                                "items": [
+                                    { "label": "Scelerisque ante" },
+                                    { "label": "Accumsan" },
+                                    { "label": "Volutpat felix" }
+                                ]
+                            }
+                        ]
+                    },
+                    modifier={
+                        control: ""
+                    },
+                    classes="toolbar__filter-item")
+                }}
+            </div>
+            <div class="tn-toolbar__filter-item">
+                {{ input_group(
+                    type="search",
+                    properties={
+                        input: {
+                            properties: {
+                                value: "", id: "search-1", placeholder: "Search"
+                            }
+                        }
+                    })
+                }}
+            </div>
+        </div>
+        <div class="tn-toolbar__navigation">
+            .tn-pagination
+        </div>
+        <div class="tn-toolbar__toggles">
+            {{  button(
+                    { icon: 'grid' },
+                    modifier={ block: ['text','icon'] },
+                    aria={ label: 'BUTTON_LABEL', pressed: true }
+                )
+            }}
+            {{  button(
+                    { icon: 'list' },
+                    modifier={ block: ['text','icon'] },
+                    aria={ label: 'BUTTON_LABEL' }
+                )
+            }}
+        </div>
+
+    </div>
+    <div class="tn-toolbar__group">
+        //filter options
+    </div>
+    <div class="tn-toolbar__group">
+        //filter list
+    </div>
+
+    {#
+    <div class="tn-toolbar__content{{ modifier.content | modifier('toolbar__content') }}">
+        <h1 class="tn-toolbar__title">{{ properties.title }}</h1>
+        {%- if properties.description %}
+            {{ properties.description }}
+        {%- endif %}
+    </div> #}
+</div>
+{%- endmacro %}

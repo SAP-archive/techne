@@ -23,12 +23,13 @@ $ns: ns();
     border-color: $tn-forms-border-color;
     border-radius: 0;
     color: $tn-forms-color;
-    background-color: $tn-forms-background-color;
+    //background-color: $tn-forms-background-color;
+    background-color: transparent;
     //states
     &:focus,
     &:hover {
         border-color: $tn-forms-border-color--focus;
-        background-color: $tn-forms-background-color;
+        //background-color: $tn-forms-background-color;
     }
     &.is-invalid {
         border-color: $tn-color--error;
@@ -45,12 +46,12 @@ $ns: ns();
         cursor: not-allowed;
         color: $tn-forms-color--disabled;
         border-color: $tn-forms-border-color--disabled;
-        background-color: $tn-forms-background-color--disabled;
+        //background-color: $tn-forms-background-color--disabled;
     }
     &[readonly],
     &.is-readonly {
         color: $tn-forms-color;
-        background-color: $tn-forms-background-color;
+        //background-color: $tn-forms-background-color;
         border-color: $tn-forms-border-color--disabled;
         border-width: 0 0 1px;
     }

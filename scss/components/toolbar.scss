@@ -1,0 +1,75 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "./button";
+@import "./dropdown";
+@import "../icons";
+/*!
+.tn-toolbar+(--no-border)
+    .tn-toolbar__content+()
+    .tn-toolbar__title+()
+*/
+$block: ns(toolbar);
+
+.#{$block} {
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-toolbar-border-color: tn-color(neutral, 3) !default;
+    $tn-toolbar-group-height: tn-space(13) !default;
+
+
+    //BLOCK BASE *******************************************
+    //set all BLOCK reset and baseline styles
+    @include reset;
+    min-height: $tn-toolbar-group-height;
+    border-color: $tn-toolbar-border-color;
+    border-style: solid;
+    border-width: 1px 0;
+
+    & [role="separator"] {
+        display: none;
+        vertical-align: middle;
+        max-width: 1px;
+        height: $tn-toolbar-group-height;
+        border-left: solid 1px $tn-toolbar-border-color;
+        background: red;
+    }
+    &__group {
+        display: flex;
+        max-height: $tn-toolbar-group-height;
+        align-items: center;
+        border-bottom: solid 1px $tn-toolbar-border-color;
+        &:last-child {
+            border: none;
+        }
+        max-height: $tn-toolbar-group-height;
+        overflow: visible;
+        * {
+            //background: yellow !important;
+        }
+    }
+    &__filters {
+        flex: 1;
+        display: flex;
+    }
+    &__filter-item {
+        
+    }
+    &__navigation {
+        //margin-left: auto;
+    }
+    &__toggles {
+        margin-left: auto;
+        border-left: solid 1px $tn-toolbar-border-color;
+    }
+    //ELEMENTS *******************************************
+    //set all ELEMENT baseline styles
+    //e.g., $tn-toolbar__content
+
+
+    //STATES *******************************************
+
+
+
+
+
+}

@@ -4,7 +4,7 @@
 @import "mixins";
 
 /*!
-.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
+.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true] | (.is-pressed | [aria-pressed=true]))
 */
 
 //set component name using namespace function, then use #{$block} below
@@ -79,7 +79,9 @@ $block: ns(button);
     &:active,
     &.is-active,
     &[aria-selected="true"],
-    &.is-selected {
+    &.is-selected,
+    &[aria-pressed="true"],
+    &.is-pressed {
         background-color: $tn-button-background-color--active;
         color: $tn-button-color--active;
     }
@@ -102,6 +104,8 @@ $block: ns(button);
         &:active,
         &[aria-selected="true"],
         &.is-selected,
+        &[aria-pressed="true"],
+        &.is-pressed,
         &[aria-disabled="true"],
         &.is-disabled {
             background-color: transparent;
@@ -110,7 +114,9 @@ $block: ns(button);
         }
         &:active,
         &[aria-selected="true"],
-        &.is-selected {
+        &.is-selected,
+        &[aria-pressed="true"],
+        &.is-pressed {
             color: darken($tn-button-color--text, 10);
         }
         &[aria-disabled="true"],
@@ -147,7 +153,9 @@ $block: ns(button);
         &:focus,
         &:active,
         &[aria-selected="true"],
-        &.is-selected {
+        &.is-selected,
+        &[aria-pressed="true"],
+        &.is-pressed {
             &::after {
                 border-bottom-color: $tn-button-color--text;
             }
