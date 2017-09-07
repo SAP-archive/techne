@@ -74,6 +74,7 @@ $block: ns(dropdown);
         &:hover {
             color: $tn-dropdown-menu-item-color--hover;
             background-color: $tn-dropdown-menu-item-background-color--hover;
+            text-decoration: none;
         }
     }
     &__separator {
