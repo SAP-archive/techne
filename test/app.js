@@ -47,6 +47,9 @@ env.addFilter('modifier', function(array=[],element="") {
 // convert an array to classes
 // returns [ tn-cls ]
 env.addFilter('classes', function(array=[]) {
+    if (array === "") {
+        return;
+    }
     //is string
     if (typeof array === "string") {
         return ` ${GLOBALS.namespace}-${array}`;
