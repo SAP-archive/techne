@@ -2,7 +2,7 @@
     "id": "icon",
     "name": "Icons",
     "properties": {
-        "glyphs": ["add","addlg","arrow","back","caution","change","checked","checkedlg","chevron","clone","close","collapse","combinedview","customize","delete","done","dragdrop","dragdroplg","duplicate","edit","expand","feedback","filter","filterremove","gethelp","grid","helpoff","helpon","info","infoon","library","linked","list","localization","lock","maximize","minimize","more","msgdanger","msginfo","msgsuccess","msgwarning","noimage","options","remove","removelg","restrictions","search","sort","sync","top","visibilityoff","visibilityon","warning"]
+        "glyphs": ["add","addlg","arrow","back","backarrow","caution","change","checked","checkedlg","chevron","clone","close","collapse","combinedview","customize","delete","done","dragdrop","dragdroplg","duplicate","edit","expand","feedback","filter","filterremove","gethelp","grid","helpoff","helpon","info","infoon","library","linked","list","localization","lock","maximize","minimize","more","msgdanger","msginfo","msgsuccess","msgwarning","noimage","options","remove","removelg","restrictions","search","sort","sync","top","visibilityoff","visibilityon","warning"]
     },
     "modifier": {
         "block": ["medium", "large"]
