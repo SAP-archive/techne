@@ -55,7 +55,6 @@ $block: ns(dropdown);
         border: $tn-dropdown-menu-border;
         background: $tn-dropdown-menu-background-color;
         position: absolute;
-        min-width: 100%;
         white-space: nowrap;
         z-index: $tn-dropdown-menu-z-index;
         transform: translateY(-1px);
@@ -74,6 +73,7 @@ $block: ns(dropdown);
         &:hover {
             color: $tn-dropdown-menu-item-color--hover;
             background-color: $tn-dropdown-menu-item-background-color--hover;
+            text-decoration: none;
         }
     }
     &__separator {

@@ -8,12 +8,20 @@ entries:
 
     folderitems:
 
+    - title: Alert
+      url: /alert.html
+      output: web
+
     - title: Button
       url: /button.html
       output: web
 
     - title: Card
       url: /card.html
+      output: web
+
+    - title: Dropdown
+      url: /dropdown.html
       output: web
 
     - title: Form
