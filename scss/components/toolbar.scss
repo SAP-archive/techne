@@ -5,9 +5,10 @@
 @import "./dropdown";
 @import "../icons";
 /*!
-.tn-toolbar+(--no-border)
-    .tn-toolbar__content+()
-    .tn-toolbar__title+()
+.tn-toolbar+()
+    .tn-toolbar__row
+        .tn-toolbar__group
+        .tn-toolbar__item
 */
 $block: ns(toolbar);
 
@@ -15,7 +16,8 @@ $block: ns(toolbar);
     //LOCAL VARS (set all themeable properties, always include !default)
     $tn-toolbar-border-color: tn-color(neutral, 3) !default;
     $tn-toolbar-group-height: tn-space(13) !default;
-
+    //anim
+    $tn-toolbar-row-transition-params: 0.15s ease-in !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
@@ -26,45 +28,64 @@ $block: ns(toolbar);
     border-width: 1px 0;
 
     & [role="separator"] {
-        display: none;
+        display: inline-block;
         vertical-align: middle;
         max-width: 1px;
         height: $tn-toolbar-group-height;
         border-left: solid 1px $tn-toolbar-border-color;
-        background: red;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        height: $tn-toolbar-group-height;
+        max-height: $tn-toolbar-group-height;
+        border-top: solid 1px $tn-toolbar-border-color;
+        &:first-child {
+            border-top: none;
+        }
+        overflow: visible;
+        transition: all $tn-toolbar-row-transition-params;
+        //max-height: 0px;
+        &[aria-hidden="true"] {
+            background: #eeeaaa;
+            overflow: hidden;
+            opacity: 0;
+            //display: none;
+            max-height: 0px;
+            border: none;
+        }
     }
     &__group {
         display: flex;
-        max-height: $tn-toolbar-group-height;
         align-items: center;
-        border-bottom: solid 1px $tn-toolbar-border-color;
-        &:last-child {
-            border: none;
+        &--left {
+            margin-right: auto;
         }
-        max-height: $tn-toolbar-group-height;
-        overflow: visible;
-        * {
-            //background: yellow !important;
+        &--right {
+            margin-left: auto;
         }
     }
-    &__filters {
-        flex: 1;
+    //filter
+    &__applied-filter-list {
+        margin-left: tn-space(5);
+        list-style: none;
         display: flex;
+        align-items: center;
+        margin-bottom: 0;
     }
-    &__filter-item {
-        
+    &__applied-filter-item {
+        @include tn-type(-3, body, reg, none);
+        display: inline-flex;
+        align-items: center;
+        margin-right: tn-space(5);
+        &::after {
+            content: "•";
+        }
     }
-    &__navigation {
-        //margin-left: auto;
-    }
-    &__toggles {
-        margin-left: auto;
-        border-left: solid 1px $tn-toolbar-border-color;
-    }
-    //ELEMENTS *******************************************
-    //set all ELEMENT baseline styles
-    //e.g., $tn-toolbar__content
 
+    &__applied-filter-clear {
+        @include tn-type(-3, body, semi);
+    }
 
     //STATES *******************************************
 

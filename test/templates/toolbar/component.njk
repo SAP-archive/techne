@@ -1,4 +1,5 @@
 {% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
 {% from "../dropdown/component.njk" import dropdown, menu %}
 {% from "../form/component.njk" import form_control %}
 {% from "../input-group/component.njk" import input_group %}
@@ -11,87 +12,99 @@ toolbar:
     aria={}
 -->
 {% macro toolbar(properties={}, modifier={}, state={}, aria={}) -%}
-{%- set _id = utils.id() %}
+{%- set _filter_id = utils.id() %}
+{%- set filterbutton %}
+{{  button(
+        { icon: 'filter' },
+        modifier={ block: ['text','icon'] },
+        aria={ label: 'BUTTON_LABEL', expanded: false, controls: _filter_id, haspopup: true }
+    )
+}}
+{%- endset %}
+{%- set show_filter_options_row = (properties.filters and properties.filters.items.length > 1) %}
 <div class="tn-toolbar{{ modifier.block | modifier('toolbar') }}{{ state | state }}"{{ aria | aria }}>
-    <div class="tn-toolbar__group">
-        <div class="tn-toolbar__filters">
-            <div class="tn-toolbar__filter-item">
+    <!-- FILTER CONTROLS ROW -->
+    <div class="tn-toolbar__row">
+    {%- if properties.filters or properties.sort %}
+        <div class="tn-toolbar__group tn-toolbar__group--left">
+        {%- if properties.filters %}
+            {%- if show_filter_options_row %}
+{{ filterbutton | indent(12) }}
+            {%- else  %}
+{{ dropdown(properties.filters.items[0]) }}
+            {%- endif %}
+            <span role="separator"></span>
+        {%- endif %}
+        {%- if properties.search %}
+        {%- set _searchid = utils.id() %}
+{{ input_group("search", { input: { properties: { placeholder: properties.search.placeholder, id: _searchid } } }) | indent(12) }}
+        {%- endif %}
+        {%- if properties.sort %}
+            <span role="separator"></span>
+{{ dropdown(properties.sort) | indent(12) }}
+        {%- endif %}
+        </div>
+    {%- endif %}
+    {%- if properties.pagination or properties.view %}
+        <div class="tn-toolbar__group tn-toolbar__group--right">
+            {%- if properties.pagination %}
+            <div class="tn-pagination">
+                {{ properties.pagination.total }} items
+                << 1 2 3 ... {{ (properties.pagination.total/properties.pagination.number) | round(0, "ceil") }} >>
+            </div>
+            {%- endif %}
+            {%- if properties.view %}
+            <span role="separator"></span>
+                {%- for item in properties.view.items %}
                 {{  button(
-                        { icon: 'filter' },
-                        modifier={ block: ['text','icon'] },
-                        aria={ label: 'BUTTON_LABEL', expanded: false, controls: _id, haspopup: true }
+                        { icon: item.icon },
+                        modifier={ block: ['text', 'icon'] },
+                        aria={ label: item.label, pressed: loop.first }
                     )
                 }}
-            </div>
-            <div class="tn-toolbar__filter-item">
-                {{  dropdown(properties={
-                        label: "Newest",
-                        icon: "sort",
-                        items: [
-                            { "label": "Pellentesque metus" },
-                            { "label": "Duis malesuada odio volutpat" },
-                            { "label": "Suspendisse" },
-                            { "label": "Donec mattis arcu et velit" },
-                            {  "label": "Accumsan tellus",
-                                "items": [
-                                    { "label": "Scelerisque ante" },
-                                    { "label": "Accumsan" },
-                                    { "label": "Volutpat felix" }
-                                ]
-                            }
-                        ]
-                    },
-                    modifier={
-                        control: ""
-                    },
-                    classes="toolbar__filter-item")
-                }}
-            </div>
-            <div class="tn-toolbar__filter-item">
-                {{ input_group(
-                    type="search",
-                    properties={
-                        input: {
-                            properties: {
-                                value: "", id: "search-1", placeholder: "Search"
-                            }
-                        }
-                    })
-                }}
-            </div>
+                {%- endfor %}
+            {%- endif %}
         </div>
-        <div class="tn-toolbar__navigation">
-            .tn-pagination
-        </div>
-        <div class="tn-toolbar__toggles">
-            {{  button(
-                    { icon: 'grid' },
-                    modifier={ block: ['text','icon'] },
-                    aria={ label: 'BUTTON_LABEL', pressed: true }
-                )
-            }}
-            {{  button(
-                    { icon: 'list' },
-                    modifier={ block: ['text','icon'] },
-                    aria={ label: 'BUTTON_LABEL' }
-                )
-            }}
-        </div>
+    {%- endif %}
 
     </div>
-    <div class="tn-toolbar__group">
-        //filter options
-    </div>
-    <div class="tn-toolbar__group">
-        //filter list
-    </div>
 
-    {#
-    <div class="tn-toolbar__content{{ modifier.content | modifier('toolbar__content') }}">
-        <h1 class="tn-toolbar__title">{{ properties.title }}</h1>
-        {%- if properties.description %}
-            {{ properties.description }}
+    {%- if properties.filters %}
+        {%- if show_filter_options_row %}
+    <!-- FILTER OPTIONS ROW -->
+    <div class="tn-toolbar__row" id="{{ _filter_id }}" aria-hidden="false">
+            {%- for item in properties.filters.items %}
+{{ dropdown(item) | indent(8) }}
+                {%- if not loop.first %}
+            <span role="separator"></span>
+                {%- endif %}
+            {%- endfor %}
+    </div>
         {%- endif %}
-    </div> #}
+    <!-- APPLIED FILTER ROW -->
+    <div class="tn-toolbar__row" aria-hidden="false">
+        <ul class="tn-toolbar__applied-filter-list">
+            <li class="tn-toolbar__applied-filter-item">
+                <span>Color: <strong>Red</strong></span>
+                {{  button(
+                        { icon: 'filterremove' },
+                        modifier={ block: ['text','small','icon'] },
+                        aria={ label: 'Clear' }
+                    )
+                | indent(16) }}
+            </li>
+            <li class="tn-toolbar__applied-filter-item">
+                <span>Size: <strong>Small</strong></span>
+                    {{  button(
+                            { icon: 'filterremove' },
+                            modifier={ block: ['text','small','icon'] },
+                            aria={ label: 'Clear' }
+                        )
+                    | indent(16) }}
+            </li>
+        </ul>
+        <a href="#" class="tn-toolbar__applied-filter-clear">Clear All</a>
+    </div>
+    {%- endif %}
 </div>
 {%- endmacro %}
