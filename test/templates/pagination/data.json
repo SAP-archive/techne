@@ -4,7 +4,7 @@
     "name": "Pagination"
   },
   "modifier": {
-      "block": ["disable", "active"]
+      "block": []
   },
   "state": {
       "disabled": false

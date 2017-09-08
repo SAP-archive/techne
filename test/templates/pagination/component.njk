@@ -3,19 +3,33 @@
 #}
 
 {% macro pagination(properties={}, modifier={}, state={}, aria={}) -%}
-<span class="tn-pagination">
-    <li disabled>
-      <a href="#" aria-label="Previous" aira-disabled="{{aria.disabled}}">
-        <span aria-hidden="true">&laquo;</span>
+<ul class="tn-pagination">
+    <li class="tn-pagination--link-wrapper">
+      <a href="#" class="tn-pagination--link" aria-label="Previous">
+        <span aria-hidden="true"><<</span>
       </a>
     </li>
-    <li class="{{modifier.block}}"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+    <li class="tn-pagination--link-wrapper">
+        <a href="#" class="tn-pagination--link">1</a>
+    </li>
+    <li class="tn-pagination--link-wrapper">
+        <a href="#" aria-selected="true" class="tn-pagination--link">2</a>
+    </li>
+    <li class="tn-pagination--link-wrapper">
+        <a href="#" class="tn-pagination--link">3</a>
+    </li>
+    <li class="tn-pagination--link-wrapper">
+        <a href="#" class="tn-pagination--link tn-pagination--more" aria-label="Next">
+            <span aria-hidden="true">&#8226;&#8226;&#8226;</span>
+        </a>
+    </li>
+     <li class="tn-pagination--link-wrapper">
+            <a href="#" class="tn-pagination--link">199</a>
+        </li>
+    <li class="tn-pagination--link-wrapper">
+      <a href="#" class="tn-pagination--link" aria-label="Next">
+        <span>>></span>
       </a>
     </li>
-</span>
+</ul>
 {%- endmacro %}

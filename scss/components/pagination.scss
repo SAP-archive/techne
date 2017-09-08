@@ -6,36 +6,58 @@
 /*!
 .tn-pagination
 */
-//set component name using namespace function, then use #{$block} below
+
 $block: ns(pagination);
 
 .#{$block} {
+  $tn-pagination-color: tn-color(text-inverse, 2) !default;
+  $tn-pagination-color--text: $tn-color--link !default;
+  $tn-pagination-color--active: $tn-pagination-color !default;
+  $tn-pagination-color--disabled: tn-color(text, 1) !default;
+
   @include reset;
-  font-weight: 600;
   display: inline-block;
-  padding-left: 0;
-  margin: 20px 0;
-  border-radius: 3px;
-  > li{
-    display: inline;
-    &:first-child>a,
-    &:first-child>span {
-      margin-left: 0;
-      border-bottom-left-radius: 3px;
-      border-top-left-radius: 3px;
+  &--link {
+    color: $tn-pagination-color--text;
+    background-color: transparent;
+    padding-left: tn-space(2);
+    padding-right: tn-space(2);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: darken($tn-pagination-color--text, 5);
+      text-decoration: underline;
+    }
+    &:active,
+    &[aria-selected="true"],
+    &.is-selected,
+    &[aria-disabled="true"],
+    &.is-disabled {
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+    &:active,
+    &[aria-selected="true"],
+    &.is-selected {
+      color: $tn-pagination-color--disabled;
+      text-decoration: none;
+      cursor: default;
     }
   }
-  &.disabled {
-    &>a,
-    &>a:focus,
-    &>a:hover,
-    &>span,
-    &>span:focus,
-    &>span:hover {
-      color: #cadbee;
+  &--link-wrapper{
+    display: inline;
+  }
+  &--more{
+    color: $tn-pagination-color--disabled;
+    vertical-align: sub;
+    @include tn-type(-3);
+    &:hover,
+    &:focus {
       background-color: transparent;
-      border-color: #e1e5e9;
-      cursor: not-allowed;
+      text-decoration: none;
+      color: $tn-pagination-color--disabled;
+      cursor: default;
     }
   }
 }
