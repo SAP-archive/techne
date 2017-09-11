@@ -35,7 +35,7 @@ $block: ns(action-bar);
         flex: 1;
         margin-bottom: 0;
         &:first-child {
-            padding-left: tn-space(6);
+            padding-left: tn-space();
         }
     }
     &__actions {
