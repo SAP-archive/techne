@@ -76,7 +76,7 @@ The buttons can also be set to a state:
 
 * **Normal**: The default state of the button. It can be clicked/tapped to perform the corresponding action.
 * **Selected**: Used to signal this button is selected among other buttons.
-* **Disabled**: It cannot be clicked/tapped. One use of this state is to disable the "Save" button on a form, until all the data is entered correctly and the form can be saved. 
+* **Disabled**: It cannot be clicked/tapped. One use of this state is to disable the "Save" button on a form, until all the data is entered correctly and the form can be saved.
 
 {% capture button-standard-state %}
 <button class="tn-button">
@@ -116,7 +116,7 @@ The buttons can also be set to a state:
 
 <br>
 
-## Text button 
+## Text button
 The text button is used to let the user perform other actions that are less important that the primary actions; secondary actions.
 
 {% capture text-buttons %}
@@ -270,3 +270,63 @@ The ActionBar button is used on the **ActionBar** Component. It can also be used
 {% include display-component.html component=icon-button %}
 
 <br>
+
+## Contextual Menu Button
+The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.
+
+{% capture icon-button %}
+<div class="tn-dropdown">
+    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
+        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+    </button>
+    <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk786">
+        <li><a href="#" class="tn-dropdown__item">Pellentesque metus</a></li>
+        <li><a href="#" class="tn-dropdown__item">Duis malesuada odio volutpat</a></li>
+        <li><a href="#" class="tn-dropdown__item">Suspendisse</a></li>
+        <li><a href="#" class="tn-dropdown__item">Donec mattis arcu et velit</a></li>
+    </ul>
+</div>
+
+<div class="tn-dropdown">
+    <button class="tn-button tn-button--icon tn-button--text is-disabled" aria-controls="V9HDS171" aria-haspopup="true" aria-label="More">
+        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+    </button>
+</div>
+
+<div class="tn-dropdown">
+    <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="VTkxK416" aria-haspopup="true" aria-label="More">
+        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+        More
+    </button>
+    <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="VTkxK416">
+        <li><a href="#" class="tn-dropdown__item">Option 1</a></li>
+        <li><a href="#" class="tn-dropdown__item">Option 2</a></li>
+        <li><a href="#" class="tn-dropdown__item">Option 3</a></li>
+        <ul class="tn-dropdown__group">
+            <span class="tn-dropdown__separator" role="separator">Group Header</span>
+            <li><a href="#" class="tn-dropdown__item">Option 4</a></li>
+            <li><a href="#" class="tn-dropdown__item">Option 5</a></li>
+            <li><a href="#" class="tn-dropdown__item">Option 6</a></li>
+        </ul>
+    </ul>
+</div>
+{% endcapture %}
+
+{% include display-component.html component=icon-button %}
+
+<br>
+
+<script type="text/javascript">
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var isExpanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !isExpanded);
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+        target.setAttribute("aria-hidden", isExpanded);
+    })
+}
+</script>
