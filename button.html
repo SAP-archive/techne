@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.">
+<meta name="description" content="">
 
 <meta name="keywords" content=" button, buttons">
 
@@ -230,181 +230,419 @@
 <div class="post-content">
 
    
-    <div class="summary">Button and Button Links are used to indicate primary, secondary and tertiary actions on a page.</div>
-   
 
     
 
 
     
 
-  <h2 id="button-sizes">Button Sizes</h2>
+  <p>The Buttons are components that let the user perform an actions. For example: saving a form, submitting data to the server, adding one element to a list, etc.</p>
+
+<p><br /></p>
+
+<h2 id="standard-button">Standard button</h2>
+<p>Uses the main action color and perform the most important or primary actions on screen. It also support icons along with the caption text, or the icon alone.</p>
+
+<p><button class="tn-button">
+    Button
+</button>
+<button class="tn-button">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button>
+<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="standard-button-sizes">Standard button sizes</h2>
+<p>The buttons can be set to three sizes: <strong>small</strong>, <strong>default</strong> and <strong>large</strong>.</p>
 
 <p><button class="tn-button tn-button--small">
     Small Button
 </button>
-<button class="tn-button">
+<button class="tn-button tn-button--small">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--small" role="presentation"></span>
+    Small Button
+</button>
+<button class="tn-button tn-button--icon tn-button--small" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--small" role="presentation"></span>
+</button></p>
+
+<p><button class="tn-button">
     Default Button
 </button>
-<button class="tn-button tn-button--large">
+<button class="tn-button">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Default Button
+</button>
+<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<p><button class="tn-button tn-button--large">
     Large Button
+</button>
+<button class="tn-button tn-button--large">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--large" role="presentation"></span>
+    Large Button
+</button>
+<button class="tn-button tn-button--icon tn-button--large" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--large" role="presentation"></span>
 </button></p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--small"</span><span class="nt">&gt;</span>
     Small Button
 <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--small"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Small Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
     Default Button
 <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Default Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--large"</span><span class="nt">&gt;</span>
     Large Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--large"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--large"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Large Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--large"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--large"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="button-states">Button States</h2>
+<h2 id="standard-button-state">Standard button state</h2>
+<p>The buttons can also be set to a state:</p>
+
+<ul>
+  <li><strong>Normal</strong>: The default state of the button. It can be clicked/tapped to perform the corresponding action.</li>
+  <li><strong>Selected</strong>: Used to signal this button is selected among other buttons.</li>
+  <li><strong>Disabled</strong>: It cannot be clicked/tapped. One use of this state is to disable the “Save” button on a form, until all the data is entered correctly and the form can be saved.</li>
+</ul>
 
 <p><button class="tn-button">
-    Default Button
+    Button
 </button>
-<button class="tn-button" aria-selected="true">
-    Selected Button
+<button class="tn-button">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
 </button>
-<button class="tn-button" aria-disabled="true">
-    Disabled Button
+<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
 </button></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  
+<p><button class="tn-button" aria-selected="true">
+    Button
+</button>
+<button class="tn-button" aria-selected="true">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button>
+<button class="tn-button tn-button--icon" aria-selected="true" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<p><button class="tn-button" aria-disabled="true" disabled="">
+    Button
+</button>
+<button class="tn-button" aria-disabled="true" disabled="">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button>
+<button class="tn-button tn-button--icon" aria-disabled="true" disabled="" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
-    Default Button
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Button
 <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    Selected Button
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Button
 <span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    Disabled Button
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="text-button-sizes">Text Button Sizes</h2>
+<h2 id="text-button">Text button</h2>
+<p>The text button is used to let the user perform other actions that are less important that the primary actions; secondary actions.</p>
+
+<p><button class="tn-button tn-button--text">
+    Text Button
+</button>
+<button class="tn-button tn-button--text">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--icon">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="text-button-sizes">Text button sizes</h2>
+<p>The text button support the same sizes as the Standard button.</p>
 
 <p><button class="tn-button tn-button--text tn-button--small">
     Small Text Button
 </button>
-<button class="tn-button tn-button--text">
-    Default Text Button
-</button>
-<button class="tn-button tn-button--text tn-button--large">
-    Large Text Button
-</button></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
+<button class="tn-button tn-button--text tn-button--small">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--small" role="presentation"></span>
     Small Text Button
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
-    Default Text Button
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--large"</span><span class="nt">&gt;</span>
-    Large Text Button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="text-button-states">Text Button States</h2>
+</button>
+<button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--small" role="presentation"></span>
+</button></p>
 
 <p><button class="tn-button tn-button--text">
     Default Text Button
 </button>
-<button class="tn-button tn-button--text" aria-selected="true">
-    Selected Text Button
-</button>
-<button class="tn-button tn-button--text" aria-disabled="true">
-    Disabled Text Button
-</button></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
-    Default Text Button
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    Selected Text Button
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    Disabled Text Button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="link-button">Link Button</h2>
-
-<p><button class="tn-button tn-button--link">
-    Button Text
-</button></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--link"</span><span class="nt">&gt;</span>
-    Button Text
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="button-with-icon">Button with Icon</h2>
-
-<p><button class="tn-button">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-    Default Button
-</button>
 <button class="tn-button tn-button--text">
     <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-    Link Button
-</button></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Default Button
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Link Button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="icon-button">Icon Button</h2>
-
-<p><button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Default Text Button
 </button>
 <button class="tn-button tn-button--text tn-button--icon" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
 </button></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+<p><button class="tn-button tn-button--text tn-button--large">
+    Large Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--large">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--large" role="presentation"></span>
+    Large Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--icon tn-button--large" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--large" role="presentation"></span>
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
+    Small Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Small Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    Default Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Default Text Button
 <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--large"</span><span class="nt">&gt;</span>
+    Large Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--large"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--large"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Large Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--large"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--large"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="text-button-state">Text button state</h2>
+<p>The text button can be set to: <strong>normal</strong>, <strong>selected</strong> and <strong>disabled</strong> state.</p>
+
+<p><button class="tn-button tn-button--text">
+    Text Button
+</button>
+<button class="tn-button tn-button--text">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--icon" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<p><button class="tn-button tn-button--text" aria-selected="true">
+    Text Button
+</button>
+<button class="tn-button tn-button--text" aria-selected="true">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--icon" aria-selected="true" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<p><button class="tn-button tn-button--text" aria-disabled="true" disabled="">
+    Text Button
+</button>
+<button class="tn-button tn-button--text" aria-disabled="true" disabled="">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Text Button
+</button>
+<button class="tn-button tn-button--text tn-button--icon" aria-disabled="true" disabled="" aria-label="BUTTON_LABEL">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Text Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="na">aria-label=</span><span class="s">"BUTTON_LABEL"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="action-bar-button">Action Bar Button</h2>
+<h2 id="buttons-priority">Buttons priority</h2>
+<p>When displaying various actions together, they can be prioritized by using a <strong>Standard button</strong> for the Primary Action and a <strong>Text button</strong> for the other actions. The Primary action should be always on the right side.</p>
 
-<p><button class="tn-button tn-button--action-bar">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-    Default Button
+<p><button class="tn-button tn-button--text">
+    Cancel
 </button>
-<button class="tn-button tn-button--text tn-button--action-bar">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+<button class="tn-button">
+    Save
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+    Cancel
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button"</span><span class="nt">&gt;</span>
+    Save
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="link-button">Link Button</h2>
+<p>The link button let the user navigate to a different page instead of performing an action.</p>
+
+<p><button class="tn-button tn-button--link">
     Link Button
 </button></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--action-bar"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--link"</span><span class="nt">&gt;</span>
+    Link Button
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="actionbar-button">ActionBar Button</h2>
+<p>The ActionBar button is used on the <strong>ActionBar</strong> Component. It can also be used for standalone actions.</p>
+
+<p><button class="tn-button tn-button--text tn-button--action-bar">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button>
+<button class="tn-button tn-button--text tn-button--action-bar">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button>
+<button class="tn-button tn-button--action-bar">
+    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+    Button
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Default Button
+    Button
 <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Link Button
+    Button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--action-bar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Button
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p><br /></p>
