@@ -1,0 +1,63 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "mixins";
+
+/*!
+.tn-pagination
+*/
+
+$block: ns(pagination);
+
+.#{$block} {
+  $tn-pagination-color: tn-color(text-inverse, 2) !default;
+  $tn-pagination-color--text: $tn-color--link !default;
+  $tn-pagination-color--active: $tn-pagination-color !default;
+  $tn-pagination-color--disabled: tn-color(text, 1) !default;
+
+  @include reset;
+  display: inline-block;
+  &__link {
+    color: $tn-pagination-color--text;
+    background-color: transparent;
+    padding-left: tn-space(2);
+    padding-right: tn-space(2);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: darken($tn-pagination-color--text, 5);
+      text-decoration: underline;
+    }
+    &:active,
+    &[aria-selected="true"],
+    &.is-selected,
+    &[aria-disabled="true"],
+    &.is-disabled {
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+    &:active,
+    &[aria-selected="true"],
+    &.is-selected {
+      color: $tn-pagination-color--disabled;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+  &__item{
+    display: inline;
+  }
+  &__more{
+    color: $tn-pagination-color--disabled;
+    vertical-align: sub;
+    @include tn-type(-3);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      text-decoration: none;
+      color: $tn-pagination-color--disabled;
+      cursor: default;
+    }
+  }
+}
