@@ -8,7 +8,7 @@
 {% from "./component.njk" import toolbar %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
-{% set css_deps = ['components/input-group'] %}
+{% set css_deps = ['components/input-group','helpers'] %}
 
 {% block content %}
 
@@ -25,7 +25,6 @@
     <!-- output the component example and the code snippet -->
     {% set example %}
 
-
         {{  toolbar(
                 properties=data.properties,
                 modifier={
@@ -35,7 +34,6 @@
                 aria=data.aria
             )
         }}
-
 
         {{  toolbar(
                 properties={

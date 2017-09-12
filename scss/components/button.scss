@@ -40,7 +40,7 @@ $block: ns(button);
     @include tn-type(2, header, semi);
     display: inline-block;
     background-color: $tn-button-background-color;
-    transition: background-color $tn-button-transition-params;
+    //transition: background-color $tn-button-transition-params;
     color: $tn-button-color;
     max-height: $tn-button-height;
     height: $tn-button-height;

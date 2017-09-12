@@ -45,7 +45,7 @@ $block: ns(dropdown);
             box-shadow: $tn-dropdown-menu-shadow;
         }
         &--no-border {
-            border-color: transparent !important;
+            border-color: transparent;
         }
     }
     &__icon {
