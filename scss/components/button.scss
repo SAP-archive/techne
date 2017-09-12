@@ -65,6 +65,10 @@ $block: ns(button);
         line-height: $tn-button-height--large;
         padding-left: tn-space(7);
         padding-right: tn-space(7);
+        &.#{$block}--icon {
+            padding-left: tn-space(5);
+            padding-right: tn-space(5);
+        }
     }
     &:hover {
         background-color: $tn-button-background-color--hover;
