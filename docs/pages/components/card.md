@@ -76,7 +76,7 @@ summary:
 
 ## Actions Card
 
-{% capture disabled-card %}
+{% capture action-card %}
 <div class="tn-card tn-card--button">
     <div class="tn-card__content">
          <h2 class="tn-card__header">
@@ -90,15 +90,37 @@ summary:
          </p>
     </div>
     <div class="tn-card__actions">
-        <button class="tn-button tn-button--icon tn-button--text" aria-label="BUTTON_LABEL">
-            <span class="tn-icon tn-icon--more tn-icon--large" role="presentation"></span>
-        </button>
+        <div class="tn-dropdown">
+            <button class="tn-button tn-button--icon tn-button--text" aria-controls="dKKJX636" aria-haspopup="true" aria-label="More">
+                <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+            </button>
+            <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="dKKJX636">
+                <li><a href="#" class="tn-dropdown__item">Pellentesque metus</a></li>
+                <li><a href="#" class="tn-dropdown__item">Duis malesuada odio volutpat</a></li>
+                <li><a href="#" class="tn-dropdown__item">Suspendisse</a></li>
+                <li><a href="#" class="tn-dropdown__item">Donec mattis arcu et velit</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 {% endcapture %}
 
-{% include display-component.html component=disabled-card %}
-
+{% include display-component.html component=action-card %}
+<script type="text/javascript">
+// demo interaction script
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var isExpanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !isExpanded);
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+        target.setAttribute("aria-hidden", isExpanded);
+    })
+}
+</script>
 <br>
 
 ## Media Card
