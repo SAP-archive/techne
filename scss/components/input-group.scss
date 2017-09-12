@@ -47,6 +47,11 @@ $block: ns(input-group);
         }
         -moz-appearance: textfield;
     }
+    &--no-border {
+        input {
+            border-color: transparent;
+        }
+    }
     &__addon {
         @include tn-type(-3, body, bold, normal);
         color: tn-color(text, 3);

@@ -14,7 +14,8 @@ $block: ns(toolbar);
 
 .#{$block} {
     //LOCAL VARS (set all themeable properties, always include !default)
-    $tn-toolbar-border-color: tn-color(neutral, 3) !default;
+    $tn-toolbar-background-color: tn-color(neutral, 3) !default;
+    $tn-toolbar-border-color: tn-color(neutral, 2) !default;
     $tn-toolbar-group-height: tn-space(13) !default;
     //anim
     $tn-toolbar-row-transition-params: 0.15s ease-in !default;
@@ -23,6 +24,7 @@ $block: ns(toolbar);
     //set all BLOCK reset and baseline styles
     @include reset;
     min-height: $tn-toolbar-group-height;
+    //background-color: $tn-toolbar-background-color;
     border-color: $tn-toolbar-border-color;
     border-style: solid;
     border-width: 1px 0;
@@ -45,14 +47,14 @@ $block: ns(toolbar);
         }
         overflow: visible;
         transition: all $tn-toolbar-row-transition-params;
-        //max-height: 0px;
         &[aria-hidden="true"] {
-            background: #eeeaaa;
             overflow: hidden;
             opacity: 0;
-            //display: none;
             max-height: 0px;
             border: none;
+        }
+        &--filters {
+            background-color: tn-color(background);
         }
     }
     &__group {
@@ -63,6 +65,11 @@ $block: ns(toolbar);
         }
         &--right {
             margin-left: auto;
+        }
+    }
+    &__button {
+        &[aria-expanded="true"] {
+            background-color: tn-color(background, 1);
         }
     }
     //filter
