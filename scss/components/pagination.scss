@@ -17,7 +17,7 @@ $block: ns(pagination);
 
   @include reset;
   display: inline-block;
-  &--link {
+  &__link {
     color: $tn-pagination-color--text;
     background-color: transparent;
     padding-left: tn-space(2);
@@ -45,10 +45,10 @@ $block: ns(pagination);
       cursor: default;
     }
   }
-  &--link-wrapper{
+  &__item{
     display: inline;
   }
-  &--more{
+  &__more{
     color: $tn-pagination-color--disabled;
     vertical-align: sub;
     @include tn-type(-3);

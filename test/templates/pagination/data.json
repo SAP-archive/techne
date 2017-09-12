@@ -1,15 +1,8 @@
 {
+  "type": "text",
   "properties": {
-    "id": "pagination",
-    "name": "Pagination"
-  },
-  "modifier": {
-      "block": []
-  },
-  "state": {
-      "disabled": false
-  },
-  "aria": {
-      "disabled": false
+    "total": "",
+    "number": "",
+    "page": ""
   }
 }
