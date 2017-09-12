@@ -291,38 +291,6 @@ The “more” contextual menu is used with Cards or Tables when there is additi
 
 <br/>
 
-## Contextual menu button in ActionBar
-The “more” contextual menu can be also used with the ActionBar component with there is more than four global actions the user can perform.
-
-{% capture contextual-button-actionbar %}
-<button class="tn-button tn-button--text tn-button--action-bar">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-    Button
-</button>
-<button class="tn-button tn-button--text tn-button--action-bar">
-    <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-    Button
-</button>
-<div class="tn-dropdown">
-    <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="VTkxK416" aria-haspopup="true" aria-label="More">
-        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-        More
-    </button>
-    <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="VTkxK416">
-        <li><a href="#" class="tn-dropdown__item">Option 1</a></li>
-        <li><a href="#" class="tn-dropdown__item">Option 2</a></li>
-        <ul class="tn-dropdown__group">
-            <span class="tn-dropdown__separator" role="separator">Group Header</span>
-            <li><a href="#" class="tn-dropdown__item">Option 4</a></li>
-            <li><a href="#" class="tn-dropdown__item">Option 6</a></li>
-        </ul>
-    </ul>
-</div>
-{% endcapture %}
-
-{% include display-component.html component=contextual-button-actionbar %}
-
-<br>
 
 ## Contextual menu button state
 It can be also be set to a **disabled** state.
