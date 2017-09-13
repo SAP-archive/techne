@@ -95,10 +95,10 @@ summary:
                 <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
             </button>
             <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="dKKJX636">
-                <li><a href="#" class="tn-dropdown__item">Pellentesque metus</a></li>
-                <li><a href="#" class="tn-dropdown__item">Duis malesuada odio volutpat</a></li>
-                <li><a href="#" class="tn-dropdown__item">Suspendisse</a></li>
-                <li><a href="#" class="tn-dropdown__item">Donec mattis arcu et velit</a></li>
+                <li><a class="tn-dropdown__item">Pellentesque metus</a></li>
+                <li><a class="tn-dropdown__item">Duis malesuada odio volutpat</a></li>
+                <li><a class="tn-dropdown__item">Suspendisse</a></li>
+                <li><a class="tn-dropdown__item">Donec mattis arcu et velit</a></li>
             </ul>
         </div>
     </div>
