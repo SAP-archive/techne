@@ -1,8 +1,8 @@
 {
   "type": "text",
   "properties": {
-    "total": "",
-    "number": "",
-    "page": ""
+    "totalItems": "",
+    "itemsPerPage": "",
+    "currentPage": ""
   }
 }
