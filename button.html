@@ -647,6 +647,64 @@
 
 <p><br /></p>
 
+<h2 id="contextual-menu-button">Contextual menu button</h2>
+<p>The “more” contextual menu is used with Cards or Tables when there is additional functionality available for the data shown in the Card or Table row, and trying to expose that functionality would clutter the interface.</p>
+
+<div class="tn-dropdown">
+    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
+        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+    </button>
+    <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk786">
+        <li><a href="#" class="tn-dropdown__item">Pellentesque metus</a></li>
+        <li><a href="#" class="tn-dropdown__item">Duis malesuada odio volutpat</a></li>
+        <li><a href="#" class="tn-dropdown__item">Suspendisse</a></li>
+    </ul>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-controls=</span><span class="s">"nH3Yk786"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-dropdown__menu tn-contextual-menu"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">id=</span><span class="s">"nH3Yk786"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Pellentesque metus<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Duis malesuada odio volutpat<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Suspendisse<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="contextual-menu-button-state">Contextual menu button state</h2>
+<p>It can be also be set to a <strong>disabled</strong> state.</p>
+
+<div class="tn-dropdown">
+    <button class="tn-button tn-button--icon tn-button--text is-disabled" aria-controls="V9HDS171" aria-haspopup="true" aria-label="More">
+        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+    </button>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text is-disabled"</span> <span class="na">aria-controls=</span><span class="s">"V9HDS171"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<script type="text/javascript">
+var els = document.querySelectorAll("[aria-controls]");
+for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    el.addEventListener('click', function() {
+        var isExpanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !isExpanded);
+        var targetId = this.getAttribute("aria-controls");
+        var target = document.getElementById(targetId);
+        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+        target.setAttribute("aria-hidden", isExpanded);
+    })
+}
+</script>
+
+
 
     <div class="tags">
         
