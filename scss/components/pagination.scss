@@ -14,6 +14,8 @@ $block: ns(pagination);
   $tn-pagination-color--text: $tn-color--link !default;
   $tn-pagination-color--active: $tn-pagination-color !default;
   $tn-pagination-color--disabled: tn-color(text, 1) !default;
+  $tn-pagination-nav-color--disabled: tn-color(text, 2) !default;
+  $tn-pagination-info-font-size--text: $tn-type(-3) !default;
 
   @include reset;
   display: inline-block;
@@ -30,12 +32,16 @@ $block: ns(pagination);
     }
     &:active,
     &[aria-selected="true"],
-    &.is-selected,
-    &[aria-disabled="true"],
-    &.is-disabled {
+    &.is-selected{
       background-color: transparent;
       outline: none;
       box-shadow: none;
+    }
+    &[aria-disabled="true"],
+    &.is-disabled {
+      color: $tn-pagination-nav-color--disabled;
+      text-decoration: none;
+      cursor: default;
     }
     &:active,
     &[aria-selected="true"],
@@ -59,5 +65,8 @@ $block: ns(pagination);
       color: $tn-pagination-color--disabled;
       cursor: default;
     }
+  }
+  &__total{
+    color: $tn-pagination-nav-color--disabled;
   }
 }

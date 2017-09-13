@@ -9,12 +9,17 @@
 {%- set pageNumber = properties.number -%}
 
 <ul class="tn-pagination">
+    <span class="tn-pagination__total">{{pageAmount}} items</span>
     <li class="tn-pagination__item">
-        <a href="#" class="tn-pagination__link" aria-label="Previous">
+        {%- if currentPage === 1 %}
+            <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
+        {%- else %}
+            <a href="#" class="tn-pagination__link" aria-label="Previous">
+        {%- endif %}
             <span aria-hidden="true"><<</span>
         </a>
     </li>
-    {%- for item in range(1, pageAmount/pageNumber - 3) %}
+    {%- for item in range(1, pageAmount/pageNumber) %}
         <li class="tn-pagination__item">
             {%- if item === currentPage %}
                 <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
@@ -22,7 +27,8 @@
                 <a href="#" class="tn-pagination__link">{{item}}</a>
             {%- endif %}
         </li>
-        {%- if item == currentPage + 1  or item == currentPage - 2%}
+        {%- if pageAmount/pageNumber > 4 %}
+        {%- if (item == currentPage + 1)  or  (item == currentPage - 2) %}
         <li class="tn-pagination__item">
             <span class="tn-pagination__link tn-pagination__more"
                 aria-hidden="true"
@@ -30,17 +36,25 @@
                 role="presentation">&#8226;&#8226;&#8226;</span>
         </li>
         {%- endif %}
+        {%- endif %}
     {%- endfor %}
+    {#
     {%- for item in range((pageAmount/pageNumber) | round(0), pageAmount/pageNumber ) %}
     <li class="tn-pagination__item">
                 <a href="#" class="tn-pagination__link">{{item}}</a>
             </li>
     {%- endfor %}
+    #}
     <li class="tn-pagination__item">
-        <a href="#" class="tn-pagination__link" aria-label="Next">
-            <span>>></span>
+        {%- if currentPage === pageAmount/pageNumber %}
+            <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
+        {%- else %}
+            <a href="#" class="tn-pagination__link" aria-label="Previous">
+        {%- endif %}
+            <span aria-hidden="true">>></span>
         </a>
     </li>
 </ul>
+<br>
 
 {%- endmacro %}

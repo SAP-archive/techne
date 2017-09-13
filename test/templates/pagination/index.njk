@@ -10,15 +10,33 @@
 <h1>pagination</h1>
 
 <!-- output the component example and the code snippet -->
+<h1>Page 1</h1>
 {% set example %}
 {{  pagination(
         properties={
-            total: 283,
-            number: 20,
-            page: 10
+            total: 10,
+            number: 3,
+            page: 1
         }
     )
 }}
+{{  pagination(
+        properties={
+            total: 10,
+            number: 3,
+            page: 2
+        }
+    )
+}}
+{{  pagination(
+        properties={
+            total: 500,
+            number: 10,
+            page: 2
+        }
+    )
+}}
+
 
 {% endset %}
 
