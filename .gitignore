@@ -18,6 +18,3 @@ tmp
 *.log
 
 # Files that are generated on project startup
-docs/css/TechneIcons.woff
-docs/css/TechneIcons.woff2
-docs/css/techne.css
