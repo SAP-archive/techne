@@ -81,7 +81,7 @@ env.addFilter('aria', function(obj=[]) {
         if (obj.hasOwnProperty(key)) {
             if (key === "role") {
                 attrs.push(` role="${obj[key]}"`);
-            } else if (!!obj[key]) {
+            } else {
                 attrs.push(` aria-${key}="${obj[key]}"`);
             }
         }

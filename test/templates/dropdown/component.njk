@@ -7,7 +7,7 @@ dropdown:
     state={},
     aria={}
 -->
-{% macro dropdown(properties={}, modifier={}, state={}, aria={}) -%}
+{%- macro dropdown(properties={}, modifier={}, state={}, aria={}) %}
 {%- set _id = utils.id() %}
 <div class="tn-dropdown{{ modifier.block | modifier('dropdown') }}">
     <button class="tn-dropdown__control{{ modifier.control | modifier('dropdown__control') }}" aria-controls="{{ _id }}" aria-expanded="false" aria-haspopup="true"{{ " disabled" if state.disabled }}{{ aria | aria }}>
@@ -16,7 +16,7 @@ dropdown:
         {%- endif %}
         {{ properties.label }}
     </button>
-    {{ menu({ items: properties.items, id: _id }, modifier.menu) }}
+    {{ menu({ items: properties.items, id: _id }, modifier.menu) | indent(4) }}
 </div>
 {%- endmacro %}
 
@@ -28,7 +28,7 @@ dropdown:
 <ul class="tn-dropdown__menu{{ modifier | modifier('dropdown__menu') }}{{ classes | classes }}" aria-hidden="true" id="{{ properties.id }}">
     {%- for item in properties.items %}
     {%- if item.items %}
-    {{ optgroup(item) | indent(8) }}
+    {{ optgroup(item) }}
     {%- else %}
     {{ option(item) }}
     {%- endif %}

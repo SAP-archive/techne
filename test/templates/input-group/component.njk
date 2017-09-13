@@ -19,8 +19,8 @@
         before: [],
         after: []
     })
--%}
-{%- set input = properties.input -%}
+%}
+{%- set input = properties.input %}
 <div class="tn-input-group{{ modifier.block | modifier('input-group') }}">
     {%- if properties.before %}
     <span class="tn-input-group__addon{{ modifier.before | modifier('input-group__addon') }}">
@@ -44,4 +44,4 @@
     </span>
     {%- endif %}
 </div>
-{% endmacro %}
+{%- endmacro %}
