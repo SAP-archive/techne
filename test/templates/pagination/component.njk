@@ -46,7 +46,7 @@
     {%- endfor %}
     #}
     <li class="tn-pagination__item">
-        {%- if currentPage === pageAmount/pageNumber %}
+        {%- if currentPage === pageAmount/pageNumber-1 | round(0) %}
             <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
         {%- else %}
             <a href="#" class="tn-pagination__link" aria-label="Previous">
