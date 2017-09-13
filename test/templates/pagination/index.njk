@@ -14,41 +14,43 @@
 {% set example %}
 {{  pagination(
         properties={
-            total: 10,
-            number: 3,
-            page: 1
+            totalItems: 30,
+            itemsPerPage: 10,
+            currentPage: 1
         }
     )
 }}
 {{  pagination(
         properties={
-            total: 10,
-            number: 3,
-            page: 2
+            totalItems: 100,
+            itemsPerPage: 10,
+            currentPage: 2
         }
     )
 }}
 {{  pagination(
         properties={
-            total: 500,
-            number: 10,
-            page: 2
+            totalItems: 500,
+            itemsPerPage: 10,
+            currentPage: 2
         }
     )
 }}
+
 {{  pagination(
         properties={
-            total: 500,
-            number: 10,
-            page: 24
+            totalItems: 500,
+            itemsPerPage: 10,
+            currentPage: 24
         }
     )
 }}
+
 {{  pagination(
         properties={
-            total: 500,
-            number: 10,
-            page: 49
+            totalItems: 500,
+            itemsPerPage: 10,
+            currentPage: 50
         }
     )
 }}

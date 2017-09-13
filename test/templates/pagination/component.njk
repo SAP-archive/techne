@@ -2,14 +2,15 @@
     see ./data.json for object structure
 #}
 
-
 {% macro pagination(properties={}) -%}
-{%- set currentPage = properties.page -%}
-{%- set pageAmount = properties.total -%}
-{%- set pageNumber = properties.number -%}
+{%- set currentPage = properties.currentPage -%}
+{%- set totalItems = properties.totalItems -%}
+{%- set itemsPerPage = properties.itemsPerPage -%}
 
 <ul class="tn-pagination">
-    <span class="tn-pagination__total">{{pageAmount}} items</span>
+
+    <span class="tn-pagination__total">{{totalItems}} items</span>
+
     <li class="tn-pagination__item">
         {%- if currentPage === 1 %}
             <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
@@ -19,34 +20,36 @@
             <span aria-hidden="true"><<</span>
         </a>
     </li>
-    {%- for item in range(1, pageAmount/pageNumber) %}
-        <li class="tn-pagination__item">
-            {%- if item === currentPage %}
-                <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
-            {%- else %}
-                <a href="#" class="tn-pagination__link">{{item}}</a>
-            {%- endif %}
-        </li>
-        {%- if pageAmount/pageNumber > 4 %}
-        {%- if (item == currentPage + 1)  or  (item == currentPage - 2) %}
-        <li class="tn-pagination__item">
-            <span class="tn-pagination__link tn-pagination__more"
-                aria-hidden="true"
-                aria-label="..."
-                role="presentation">&#8226;&#8226;&#8226;</span>
-        </li>
+
+  {%- for item in range(1, totalItems/itemsPerPage + 1) %}
+    <li class="tn-pagination__item">
+        {%- if item === currentPage %}
+            <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
+        {%- else %}
+            <a href="#" class="tn-pagination__link">{{item}}</a>
         {%- endif %}
-        {%- endif %}
-    {%- endfor %}
+    </li>
+
+  {%- if totalItems/itemsPerPage > 4 %}
+    {%- if (item == currentPage + 1)  or  (item == currentPage - 2) %}
+    <li class="tn-pagination__item"> 
+        <span class="tn-pagination__link tn-pagination__more"
+            aria-hidden="true"
+            aria-label="..."
+            role="presentation">&#8226;&#8226;&#8226;</span>
+    </li>
+    {%- endif %}
+  {%- endif %}
+  {%- endfor %}
     {#
-    {%- for item in range((pageAmount/pageNumber) | round(0), pageAmount/pageNumber ) %}
+    {%- for item in range((totalItems/itemsPerPage) | round(0), totalItems/itemsPerPage ) %}
     <li class="tn-pagination__item">
                 <a href="#" class="tn-pagination__link">{{item}}</a>
             </li>
     {%- endfor %}
     #}
     <li class="tn-pagination__item">
-        {%- if currentPage === pageAmount/pageNumber-1 | round(0) %}
+        {%- if currentPage === totalItems/itemsPerPage | round(0) %}
             <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
         {%- else %}
             <a href="#" class="tn-pagination__link" aria-label="Previous">
