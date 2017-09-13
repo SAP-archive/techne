@@ -228,7 +228,7 @@ for (var i = 0; i < els.length; i++) {
         <p>Lorem ipsum</p>
     </div>
     <div class="tn-card__actions">
-        <a href="#alt" class="tn-has-type-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>
+        <a class="tn-has-type-1 tn-has-font-family-header">GENERATE ACCESS TOKEN</a>
     </div>
 </div>
 {% endcapture %}
