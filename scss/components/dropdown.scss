@@ -44,6 +44,9 @@ $block: ns(dropdown);
             z-index: $tn-dropdown-menu-z-index + 1;
             box-shadow: $tn-dropdown-menu-shadow;
         }
+        &--no-border {
+            border-color: transparent;
+        }
     }
     &__icon {
         margin-right: tn-space(3);

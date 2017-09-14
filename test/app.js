@@ -12,7 +12,9 @@ const SASS_DIRECTORY = path.join(__dirname, '..', 'scss');
 const GLOBALS = {
     namespace: 'tn'
 };
-
+const config = {
+    id: "techne"
+}
 // looks for html in templates folder, static resources in public
 var env = nunjucks.configure([TEMPLATE_DIRECTORY,PUBLIC_DIRECTORY], {
     autoescape: false,
@@ -47,7 +49,7 @@ env.addFilter('modifier', function(array=[],element="") {
 // convert an array to classes
 // returns [ tn-cls ]
 env.addFilter('classes', function(array=[]) {
-    if (array === "") {
+    if (!array) {
         return;
     }
     //is string
@@ -81,7 +83,7 @@ env.addFilter('aria', function(obj=[]) {
         if (obj.hasOwnProperty(key)) {
             if (key === "role") {
                 attrs.push(` role="${obj[key]}"`);
-            } else if (!!obj[key]) {
+            } else {
                 attrs.push(` aria-${key}="${obj[key]}"`);
             }
         }
@@ -145,7 +147,7 @@ router.get('/:key', (req, res) => {
 router.get('/pages/:key', (req, res) => {
     var key = req.params.key;
     console.log(`requested http://localhost:3030/pages/${key}`);
-    res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key }));
+    res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key, app: config }));
 });
 
 

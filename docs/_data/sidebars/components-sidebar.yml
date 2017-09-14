@@ -24,7 +24,7 @@ entries:
       url: /dropdown.html
       output: web
 
-    - title: Form
+    - title: Forms
       url: /form.html
       output: web
 
