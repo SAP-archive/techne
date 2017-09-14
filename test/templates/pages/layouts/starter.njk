@@ -1,4 +1,6 @@
 {% from "../../action-bar/component.njk" import action_bar %}
+{% from "../../button/component.njk" import button %}
+{% set css_deps = ['components/icons'] %}
 <!doctype html>
 <html lang="en-us">
 <head>
@@ -13,9 +15,19 @@
     </style>
 </head>
 <body class="tn-ui tn-ui--{{ app.id }}">
+
+{%- set backbtn %}
+    {{ button(
+              { icon: 'backarrow' },
+              modifier={ block: ['text','icon','large'] },
+              aria={ label: 'Back' }
+    )}}
+{%- endset %}
+
     {{  action_bar(
             properties={
-                title: "Page Title"
+                title: "Page Title",
+                navigation: backbtn
             },
             modifier={
                 block: []

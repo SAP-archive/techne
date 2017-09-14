@@ -1,48 +1,148 @@
 {% set title = "Cards" %}
 {% extends "./layouts/starter.njk" %}
+{% import "./../utils.njk" as utils %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
 {% from "../card/component.njk" import card %}
-{% set css_deps = ['components/card'] %}
+{% from "../dropdown/component.njk" import dropdown, menu %}
+{% from "../form/component.njk" import form_control %}
+{% from "../input-group/component.njk" import input_group %}
+{% from "../toolbar/component.njk" import toolbar %}
+{% from "../card/component.njk" import card %}
+{% from "../card-group/component.njk" import card_group %}
+{% set css_deps = ['components/card', 'icons', 'helpers'] %}
 
 {% block content %}
 
+{# Toolbar  #}
+{{  toolbar(
+        properties={
+            "title": "Toolbar Label",
+            "description": "Toolbar Description",
+            "filters": {
+                "items": [
+                    {
+                        "label": "Color",
+                        "items": [
+                            { "label": "Option 1" },
+                            { "label": "Option 2" },
+                            { "label": "Option 3" }
+                        ]
+                    },
+                    {
+                        "label": "Size",
+                        "items": [
+                            { "label": "Option 1" },
+                            { "label": "Option 2" },
+                            { "label": "Option 3" }
+                        ]
+                    }
 
+                ]
+            },
+            "search": {
+                "placeholder": "Filter by Keyword"
+            },
+            "sort": {
+                "label": "Newest",
+                "icon": "sort",
+                "items": [
+                    { "label": "Option 1" },
+                    { "label": "Option 2" },
+                    { "label": "Option 3" }
+                ]
+            },
+            "pagination": {
+                "total": 283,
+                "number": 20,
+                "page": 10
+            },
+            "view": {
+                "items": [
+                    { "label": "View as grid", "icon": "grid" },
+                    { "label": "View as list", "icon": "list" }
+                ]
+            }
+        },
+        modifier={
+            block: data.modifier.block
+        },
+        state=data.state,
+        aria=data.aria
+    )
+}}
+
+<br>
+
+{# Cards #}
 <div class="tn-container">
 
-toolbar
-
-</div>
-
-<div class="tn-container">
-
-{% set example %}
-  {% for i in range(0, 5) -%}
-  {{  card(
+  {% set mediaCardItem = card(
           {
               'title': 'Asperiores doloribus id dolore',
               'description': 'Consectetur adipisicing elit',
-              'status': '<span class="tn-has-color-status-1">Cumque itaque</span>',
               'media': {
                   'alt': 'YaaS product thumbnail',
                   'image': 'https://techne.yaas.io/images/product-thumbnail-wide.png'
               }
           },
-          modifier={
-              media: ['round']
+          modifier={ media: "fill" },
+          aria={ role: 'button' })
+   %}
+
+
+  {% set cardItem = card(
+              { title: 'Lorem ipsum dolor quam placeat numquam repellendus', description: 'Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut molestias voluptatibus dolorum ut.', status: '<span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>' },
+              modifier={ block: [] },
+              aria={ role: 'button' }
+      )
+  %}
+  {% set cardItem2 = card(
+              { title: 'Lorem ipsum dolor quam placeat numquam repellendus', description: 'Tenetur quam  dolorum ut.', status: '' },
+              modifier={ block: [] },
+              aria={ role: 'button' }
+      )
+  %}
+  {% set btn = button(
+          {
+              label: 'View'
           },
-          aria={
-              role: 'button'
-          })
+          modifier={ block: "small" }
+      )
+   %}
+  {% set actionCardItem = card(
+              { title: 'Lorem ipsum dolor quam placeat numquam repellendus', description: 'Tenetur quam  dolorum ut.', status: 'VOLUPTATE QUIS ADIPISCI SIT',
+              actions: btn },
+              modifier={ block: [] },
+              aria={  }
+      )
+  %}
+  {% set productCardItem =
+      card(
+              {
+                  'title': 'Asperiores doloribus id dolore',
+                  'description': 'Consectetur adipisicing elit',
+                  'status': '<span class="tn-has-color-status-1">Cumque itaque</span>',
+                  'media': {
+                      'alt': 'YaaS product thumbnail',
+                      'image': 'https://techne.yaas.io/images/product-thumbnail-wide.png'
+                  }
+              },
+              modifier={ block: ['vertical'] },
+              aria={ role: 'button' })
+  %}
+  {{  card_group(
+          properties={
+              items: [
+              cardItem2, mediaCardItem, actionCardItem, cardItem, cardItem2
+              ]
+          }
+      )
   }}
-  {%- endfor %}
-{% endset %}
-{{ example }}
 
 </div>
 
-<div class="tn-container">
-
-toolbar
-
-</div>
+{# Toolbar #}
+{{  toolbar() }}
 
 {% endblock %}
