@@ -52,6 +52,10 @@ entries:
       url: /status-indicators.html
       output: web
 
+    - title: Toolbar
+      url: /toolbar.html
+      output: web
+
   # folders:
   # - title: Structure
   #   output: web
