@@ -24,6 +24,10 @@ entries:
       url: /card.html
       output: web
 
+    - title: Card Group
+      url: /card-group.html
+      output: web
+
     - title: Dropdown
       url: /dropdown.html
       output: web
@@ -40,8 +44,16 @@ entries:
       url: /input-group.html
       output: web
 
+    - title: Pagination
+      url: /pagination.html
+      output: web
+
     - title: Status Indicators
       url: /status-indicators.html
+      output: web
+
+    - title: Toolbar
+      url: /toolbar.html
       output: web
 
   # folders:
