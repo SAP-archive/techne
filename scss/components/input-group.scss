@@ -18,7 +18,7 @@ $block: ns(input-group);
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
     @include reset;
-    display: flex;
+    display: inline-flex;
     max-height: $tn-forms-height--input-text;
 
     //ELEMENTS *******************************************
@@ -46,6 +46,11 @@ $block: ns(input-group);
             margin: 0;
         }
         -moz-appearance: textfield;
+    }
+    &--no-border {
+        input {
+            border-color: transparent;
+        }
     }
     &__addon {
         @include tn-type(-3, body, bold, normal);
