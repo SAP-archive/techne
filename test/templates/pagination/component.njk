@@ -9,45 +9,42 @@
 {%- set pages = totalItems/itemsPerPage -%}
 
 <ul class="tn-pagination">
-
     <span class="tn-pagination__total">{{totalItems}} items</span>
-
     <li class="tn-pagination__item">
-        {% if currentPage === 1 %}
+        {%- if currentPage === 1 %}
             <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
-        {% else %}
+        {%- else %}
             <a href="#" class="tn-pagination__link" aria-label="Previous">
-        {% endif %}
+        {%- endif %}
             <span aria-hidden="true"><</span>
         </a>
     </li>
-
-    {% if pages < 4 %}
-        {% for item in range(1, pages + 1) %}
+    {%- if pages < 4 %}
+        {%- for item in range(1, pages + 1) %}
         <li class="tn-pagination__item">
-            {% if item === currentPage %}
+            {%- if item === currentPage %}
                 <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
-            {% else %}
+            {%- else %}
                 <a href="#" class="tn-pagination__link">{{item}}</a>
-            {% endif %}
+            {%- endif %}
         </li>
-        {% endfor %}
-    {% elseif (currentPage === pages) or (currentPage === pages + 1) or (currentPage > 4) %}
+        {%- endfor %}
+    {%- elseif (currentPage === pages) or (currentPage === pages + 1) or (currentPage > 4) %}
         <li class="tn-pagination__item">
             <a href="#" class="tn-pagination__link">1</a>
         </li>
-        {% for item in range(pages, pages+1) %}
+        {%- for item in range(pages, pages+1) %}
             <li class="tn-pagination__item">
                 <span class="tn-pagination__link tn-pagination__more"
                     aria-hidden="true"
                     aria-label="..."
                     role="presentation">&#8226;&#8226;&#8226;</span>
             </li>
-            {% if (item === currentPage) %}
+            {%- if (item === currentPage) %}
                 <li class="tn-pagination__item">
                     <a href="#" class="tn-pagination__link">{{item - 1}}</a>
                 </li>
-            {% elseif (currentPage !== (pages)) or (item !== (pages))%}
+            {%- elseif (currentPage !== (pages)) or (item !== (pages))%}
                 <li class="tn-pagination__item">
                     <a href="#" class="tn-pagination__link">{{currentPage -1}}</a>
                 </li>
@@ -63,58 +60,55 @@
                         aria-label="..."
                         role="presentation">&#8226;&#8226;&#8226;</span>
                 </li>
-            {% endif %}
+            {%- endif %}
             <li class="tn-pagination__item">
-                {% if (item === currentPage) or (item === pages + 1) %}
+                {%- if (item === currentPage) or (item === pages + 1) %}
                     <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
-                {% else %}
+                {%- else %}
                     <a href="#" class="tn-pagination__link">{{item}}</a>
-                {% endif %}
+                {%- endif %}
             </li>
-        {% endfor %}
-    {% else %}
-        {% for item in range(1, 4) %}
+        {%- endfor %}
+    {%- else %}
+        {%- for item in range(1, 4) %}
             <li class="tn-pagination__item">
-                {% if item === currentPage %}
+                {%- if item === currentPage %}
                     <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
-                {% else %}
+                {%- else %}
                     <a href="#" class="tn-pagination__link">{{item}}</a>
-                {% endif %}
+                {%- endif %}
             </li>
-        {% endfor %}
-        {% for item in range(pages, pages+1) %}
+        {%- endfor %}
+        {%- for item in range(pages, pages+1) %}
             <li class="tn-pagination__item">
             <span class="tn-pagination__link tn-pagination__more"
                 aria-hidden="true"
                 aria-label="..."
                 role="presentation">&#8226;&#8226;&#8226;</span>
             </li>
-            {% if (item === currentPage) %}
+            {%- if (item === currentPage) %}
                 <li class="tn-pagination__item">
                     <a href="#" class="tn-pagination__link">{{item - 1}}</a>
                 </li>
-            {% endif %}
+            {%- endif %}
             <li class="tn-pagination__item">
-                {% if (item === currentPage) or (item === pages + 1) %}
+                {%- if (item === currentPage) or (item === pages + 1) %}
                     <a href="#" class="tn-pagination__link" aria-selected="true">{{item}}</a>
-                {% else %}
+                {%- else %}
                     <a href="#" class="tn-pagination__link">{{item}}</a>
-                {% endif %}
+                {%- endif %}
             </li>
-        {% endfor %}
-    {% endif %}
-
-
+        {%- endfor %}
+    {%- endif %}
     <li class="tn-pagination__item">
-        {% if currentPage === pages | round(0) %}
-            <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
-        {% else %}
-            <a href="#" class="tn-pagination__link" aria-label="Previous">
-        {% endif %}
+        {%- if currentPage === pages | round(0) %}
+            <a href="#" class="tn-pagination__link" aria-label="Next" aria-disabled="true">
+        {%- else %}
+            <a href="#" class="tn-pagination__link" aria-label="Next">
+        {%- endif %}
             <span aria-hidden="true">></span>
         </a>
     </li>
 </ul>
 <br>
-
 {% endmacro %}

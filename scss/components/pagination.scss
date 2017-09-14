@@ -24,11 +24,23 @@ $block: ns(pagination);
     background-color: transparent;
     padding-left: tn-space(2);
     padding-right: tn-space(2);
+    position: relative;
+    &::after {
+        content: "";
+        border-bottom: solid 2px transparent;
+        width: calc(100% - #{tn-space(2)}*2);;
+        height: 2px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        margin-left: tn-space(2);
+    }
     &:hover,
     &:focus {
-      background-color: transparent;
       color: darken($tn-pagination-color--text, 5);
-      text-decoration: underline;
+      &::after {
+          border-bottom-color: darken($tn-pagination-color--text, 5);
+      }
     }
     &:active,
     &[aria-selected="true"],
@@ -36,12 +48,19 @@ $block: ns(pagination);
       background-color: transparent;
       outline: none;
       box-shadow: none;
+      &::after {
+          border-bottom-color: transparent;
+      }
     }
     &[aria-disabled="true"],
     &.is-disabled {
       color: $tn-pagination-nav-color--disabled;
       text-decoration: none;
       cursor: default;
+      &::after {
+          border-bottom-color: transparent;
+      }
+
     }
     &:active,
     &[aria-selected="true"],
@@ -51,8 +70,9 @@ $block: ns(pagination);
       cursor: default;
     }
   }
+
   &__item{
-    display: inline;
+    display: inline-block;
   }
   &__more{
     color: $tn-pagination-color--disabled;
