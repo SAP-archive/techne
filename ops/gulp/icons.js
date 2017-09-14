@@ -33,11 +33,11 @@ module.exports = iconTask = (cb) => {
                 .pipe(rename(config.tasks.icons.data.outputName))
                 .pipe(gulp.dest(config.tasks.icons.data.dest))
 
-            //process the yml template
-            gulp.src(config.tasks.icons.yml.template)
-                .pipe(consolidate('lodash', options))
-                .pipe(rename(config.tasks.icons.yml.outputName))
-                .pipe(gulp.dest(config.tasks.icons.yml.dest))
+            // //process the yml template
+            // gulp.src(config.tasks.icons.yml.template)
+            //     .pipe(consolidate('lodash', options))
+            //     .pipe(rename(config.tasks.icons.yml.outputName))
+            //     .pipe(gulp.dest(config.tasks.icons.yml.dest))
         })
         .pipe(gulp.dest(config.tasks.icons.css.dest));
 
