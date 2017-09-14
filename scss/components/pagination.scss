@@ -19,6 +19,7 @@ $block: ns(pagination);
 
   @include reset;
   display: inline-block;
+  margin-bottom: 0;
   &__link {
     color: $tn-pagination-color--text;
     background-color: transparent;

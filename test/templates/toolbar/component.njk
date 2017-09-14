@@ -3,6 +3,7 @@
 {% from "../dropdown/component.njk" import dropdown, menu %}
 {% from "../form/component.njk" import form_control %}
 {% from "../input-group/component.njk" import input_group %}
+{% from "../pagination/component.njk" import pagination %}
 {% import "./../utils.njk" as utils %}
 <!--
 toolbar:
@@ -41,10 +42,14 @@ toolbar:
     {%- endif %}
     <div class="tn-toolbar__group tn-toolbar__group--view">
         <div class="tn-toolbar__pagination">
-            <div class="tn-pagination">
-                {{ properties.pagination.total }} items
-                << 1 2 3 ... {{ (properties.pagination.total/properties.pagination.number) | round(0, "ceil") }} >>
-            </div>
+            {{  pagination(
+                    properties={
+                        totalItems: 30,
+                        itemsPerPage: 10,
+                        currentPage: 2
+                    }
+                )
+            }}
         </div>
         {%- if properties.view %}
         <div class="tn-toolbar__view-as">
