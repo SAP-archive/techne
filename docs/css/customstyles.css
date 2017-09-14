@@ -2,6 +2,11 @@ html,body {
     font-size: inherit;
 }
 
+.post-content.ul, .post-content.ol {
+  padding-left: 40px !important;
+  list-style: disc !important;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -90,7 +95,7 @@ dt[id]{
     max-height: 100%;
 }
 
-.post-content ol li, .post-content ul li {
+.post-content.ol li, .post-content.ul li {
     margin: 10px 0px;
 }
 
@@ -231,6 +236,7 @@ ul#results-container a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-top:10px;
+    background: #fff;
 }
 /* end search */
 
