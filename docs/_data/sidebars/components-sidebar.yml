@@ -8,6 +8,10 @@ entries:
 
     folderitems:
 
+    - title: Action Bar
+      url: /action-bar.html
+      output: web
+
     - title: Alert
       url: /alert.html
       output: web
@@ -18,6 +22,10 @@ entries:
 
     - title: Card
       url: /card.html
+      output: web
+
+    - title: Card Group
+      url: /card-group.html
       output: web
 
     - title: Dropdown
@@ -34,6 +42,10 @@ entries:
 
     - title: Input Group
       url: /input-group.html
+      output: web
+
+    - title: Pagination
+      url: /pagination.html
       output: web
 
     - title: Status Indicators

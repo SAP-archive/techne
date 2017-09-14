@@ -2,6 +2,11 @@ html,body {
     font-size: inherit;
 }
 
+.post-content.ul, .post-content.ol {
+  padding-left: 40px !important;
+  list-style: disc !important;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
