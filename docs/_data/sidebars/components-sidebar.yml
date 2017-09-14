@@ -40,6 +40,10 @@ entries:
       url: /input-group.html
       output: web
 
+    - title: Pagination
+      url: /pagination.html
+      output: web
+
     - title: Status Indicators
       url: /status-indicators.html
       output: web
