@@ -34,10 +34,10 @@ module.exports = iconTask = (cb) => {
                 .pipe(gulp.dest(config.tasks.icons.data.dest))
 
             // //process the yml template
-            // gulp.src(config.tasks.icons.yml.template)
-            //     .pipe(consolidate('lodash', options))
-            //     .pipe(rename(config.tasks.icons.yml.outputName))
-            //     .pipe(gulp.dest(config.tasks.icons.yml.dest))
+            gulp.src(config.tasks.icons.yml.template)
+                .pipe(consolidate('lodash', options))
+                .pipe(rename(config.tasks.icons.yml.outputName))
+                .pipe(gulp.dest(config.tasks.icons.yml.dest))
         })
         .pipe(gulp.dest(config.tasks.icons.css.dest));
 

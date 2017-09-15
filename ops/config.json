@@ -37,7 +37,7 @@
         "yml": {
             "dest": "./docs/_data",
             "template": "./icons/icons-data.yml",
-            "outputName": "icon-data.yml"
+            "outputName": "icons.yml"
         },
         "iconfont": {
             "fontName": "TechneIcons",
