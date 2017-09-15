@@ -34,6 +34,11 @@
             "template": "./icons/icons-data.json",
             "outputName": "data.json"
         },
+        "yml": {
+            "dest": "./docs/_data",
+            "template": "./icons/icons-data.yml",
+            "outputName": "icons.yml"
+        },
         "iconfont": {
             "fontName": "TechneIcons",
             "className": "icon",
