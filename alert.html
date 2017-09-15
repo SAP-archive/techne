@@ -89,6 +89,10 @@
                             <li><a href="components.html">Components</a></li>
                         
                     
+                        
+                            <li><a href="starter-pages.html">Starter Pages</a></li>
+                        
+                    
                 
 
                 <!-- entries with drop-downs appear here -->
@@ -319,22 +323,6 @@
   Error Message
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<script type="text/javascript">
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function() {
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        target.setAttribute("aria-hidden", true);
-        target.remove();
-
-    })
-}
-
-console.log('test')
-</script>
-
 
 
     <div class="tags">
@@ -347,6 +335,16 @@ console.log('test')
 </div>
 
 <hr class="shaded"/>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+			Techne 2.0 Alpha
+        </div>
+    </div>
+</footer>
+
+
 
 <script type="text/javascript">
 //dropdown
@@ -379,15 +377,6 @@ for (var i = 0; i < els.length; i++) {
 }
 
 </script>
-
-<footer>
-    <div class="row">
-        <div class="col-lg-12 footer">
-			Techne 2.0 Alpha
-        </div>
-    </div>
-</footer>
-
 
         </div>
     <!-- /.row -->

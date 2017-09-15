@@ -9,9 +9,9 @@
 
 <meta name="description" content="">
 
-<meta name="keywords" content=" ">
+<meta name="keywords" content=" starter page">
 
-<title>Page Not Found | TECHNE</title>
+<title>Starter Pages | TECHNE</title>
 
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -90,7 +90,7 @@
                         
                     
                         
-                            <li><a href="starter-pages.html">Starter Pages</a></li>
+                            <li class="active"><a href="starter-pages.html">Starter Pages</a></li>
                         
                     
                 
@@ -116,7 +116,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Page Not Found">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Starter Pages">{title}</a></li>',
                     noResultsText: '<li class="no-search-results">No results found</li>',
                             limit: 10,
                             fuzzy: true,
@@ -137,29 +137,11 @@
     <div class="row">
         
         
-            <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
-                
-
-<ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">
-        <h2></h2>
-    </li>
-    
-
-</ul>
-
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
-
-            </div>
-            
-        
 
         <!-- Content Column -->
-        <div class="col-md-9" id="tg-sb-content">
+        <div class="col-md-12" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Page Not Found</h1>
+   <h1 class="post-title-main">Starter Pages</h1>
 </div>
 
 
@@ -169,34 +151,15 @@
    
 
     
-        
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
 
-  <p>Sorry, but the page you were trying to view does not exist. Try searching for it or looking at the URL to see if it looks correct.</p>
+  <ul>
+  <li>
+    <a href="cards-starter-pages.html" target="_blank">Cards</a>
+  </li>
+</ul>
 
 
     <div class="tags">

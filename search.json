@@ -58,6 +58,8 @@
 
 
 
+
+
 {
 "title": "Colors",
 "tags": "",
@@ -113,7 +115,18 @@
 "tags": "",
 "keywords": "icon, icons",
 "url": "icons.html",
-"summary": "Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun. Icons can be used adaptively if desired, but at this point they are used more as visual elements within other components"
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Starter Pages",
+"tags": "",
+"keywords": "starter page",
+"url": "starter-pages.html",
+"summary": ""
 }
 ,
 
