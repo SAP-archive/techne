@@ -3,8 +3,11 @@
 @import "../core/functions";
 //set namespace using function to avoid hardcoding it
 $ns: ns();
-.#{$ns}-text-transform-none {
+.#{$ns}text-transform-none {
     text-transform: none !important;
+}
+.#{$ns}has-text-align-center {
+    text-align: center !important;
 }
 
 

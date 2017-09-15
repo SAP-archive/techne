@@ -87,7 +87,7 @@ $tn-colors: (
 $tn-space-modify: normal !default; //normal, compact
 
 //ui
-$tn-padding--ui: tn-space(m) !default;
+$tn-padding--ui: tn-space() !default;
 $tn-max-width--ui: map-get($tn-breakpoints,xl) !default;
 
 //global widths

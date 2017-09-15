@@ -1,0 +1,79 @@
+{% from "../../action-bar/component.njk" import action_bar %}
+{% from "../../button/component.njk" import button %}
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><![endif]-->
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAP Hybris Techne | Starter Page | {{ title }}</title>
+    <style media="screen">
+    {% set core_sass = 'all.scss' %}
+    {{ core_sass | sass_to_css }}
+    </style>
+</head>
+<body class="tn-ui tn-ui--{{ app.id }}">
+
+{%- set backbtn %}
+    {{ button(
+              { icon: 'backarrow' },
+              modifier={ block: ['text','icon','large'] },
+              aria={ label: 'Back' }
+    )}}
+{%- endset %}
+
+    {{  action_bar(
+            properties={
+                title: "Page Title",
+                navigation: backbtn
+            },
+            modifier={
+                block: []
+            },
+            state={},
+            aria={}
+        )
+    }}
+
+    <div class="tn-container tn-has-text-align-center tn-has-padding-reg tn-has-margin-none tn-has-background-color-background-2">
+        <p><em>Page description volutpat felis lectus nec consequat ipsum mattis id</em></p>
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+    <script type="text/javascript">
+    //dropdown
+    var els = document.querySelectorAll("[aria-controls]");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.addEventListener('click', function(e) {
+            var targetId = this.getAttribute("aria-controls");
+            var target = document.getElementById(targetId);
+            //alert
+            var isAlert = this.parentElement.getAttribute("role") === "alert";
+            if (isAlert) {
+                //remove or hide if we want some animation
+                // target.setAttribute("aria-hidden", true);
+                target.remove();
+                return;
+            }
+            //dropdown
+            var isDropdown = this.getAttribute("aria-haspopup") === "true";
+            if (isDropdown) {
+                //trigger
+                var isExpanded = this.getAttribute("aria-expanded") === "true";
+                this.setAttribute("aria-expanded", !isExpanded);
+                //target
+                var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+                target.setAttribute("aria-hidden", isExpanded);
+                return;
+            }
+        })
+    }
+
+    </script>
+</body>
+</html>
