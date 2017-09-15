@@ -1,0 +1,14 @@
+---
+layout: starter-page
+title: Cards Starter Page
+keywords: cards starter page
+search: exclude
+toc: false
+permalink: cards-starter-pages.html
+---
+
+{% include starter-page-components/action-bar.html %}
+{% include starter-page-components/page-level-help.html %}
+{% include starter-page-components/toolbar-top.html %}
+{% include starter-page-components/card-group.html %}
+{% include starter-page-components/toolbar-bottom.html %}

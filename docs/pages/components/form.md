@@ -9,8 +9,6 @@ folder: components
 
 Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field. Use these components along with inline help and error state.
 
-<br/>
-
 ## Inputs
 Inputs are the used to collect data from the user. When a field is required the **label** is displayed in bold and noted by asterisk *
 
@@ -67,7 +65,7 @@ A short Help text can be added to help the user to understand what type of data 
 <br/>
 
 ## Inputs state
-Input can reflect if the data entered is valid or not, for that, the state can be set: 
+Input can reflect if the data entered is valid or not, for that, the state can be set:
 * **Normal**: No validation  state is displayed.
 * **Valid**: Used mostly when the data have a specific format, like an email address for example.
 * **Invalid**: The data entered is not valid and the input have to be corrected.

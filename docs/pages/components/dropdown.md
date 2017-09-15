@@ -71,18 +71,3 @@ summary:
 {% endcapture %}
 
 {% include display-component.html component=disabled-dropdown %}
-
-<script type="text/javascript">
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function() {
-        var isExpanded = this.getAttribute("aria-expanded") === "true";
-        this.setAttribute("aria-expanded", !isExpanded);
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
-        target.setAttribute("aria-hidden", isExpanded);
-    })
-}
-</script>
