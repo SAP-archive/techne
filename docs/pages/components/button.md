@@ -9,8 +9,6 @@ folder: components
 
 The Buttons are components that let the user perform an actions. For example: saving a form, submitting data to the server, adding one element to a list, etc.
 
-<br/>
-
 ## Standard button
 Uses the main action color and perform the most important or primary actions on screen. It also support icons along with the caption text, or the icon alone.
 
@@ -304,18 +302,3 @@ It can be also be set to a **disabled** state.
 {% endcapture %}
 
 {% include display-component.html component=contextual-button-disabled %}
-
-<script type="text/javascript">
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function() {
-        var isExpanded = this.getAttribute("aria-expanded") === "true";
-        this.setAttribute("aria-expanded", !isExpanded);
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        var targetIsHidden = target.getAttribute("aria-hidden") == "true";
-        target.setAttribute("aria-hidden", isExpanded);
-    })
-}
-</script>

@@ -1,7 +1,7 @@
 
 repository: /SAP/techne
 
-# this property is useful for conditional filtering of content that is separate from the PDF. 
+# this property is useful for conditional filtering of content that is separate from the PDF.
 output: web
 
 # this appears on the top navigation bar next to the home button
@@ -14,13 +14,13 @@ site_title: TECHNE
 company_name: TECHNE
 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
-github_editme_path: 
+github_editme_path:
 
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
-disqus_shortname: 
+disqus_shortname:
 
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
-google_analytics: 
+google_analytics:
 
 # the preview server used. Leave as is.
 host: 127.0.0.1
@@ -78,6 +78,14 @@ defaults:
   -
     scope:
       path: ""
+      type: "starter-pages"
+    values:
+      layout: "starter-page"
+      comments: false
+      search: true
+  -
+    scope:
+      path: ""
       type: "tooltips"
     values:
       layout: "page"
@@ -111,7 +119,7 @@ description: ""
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: 
+url:
 
 # Server Config options
 # livereload: true     # You no longer need to include --livereload

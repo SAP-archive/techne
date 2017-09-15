@@ -10,6 +10,8 @@ topnav:
       url: styles.html
     - title: Components
       url: components.html
+    - title: Starter Pages
+      url: starter-pages.html
     # - title: Guides
     #   url: guides.html
     # - title: Tutorials

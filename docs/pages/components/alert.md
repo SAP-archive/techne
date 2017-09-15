@@ -54,19 +54,3 @@ Add the modifier class `tn-alert--error` for Error alert.
 {% endcapture %}
 
 {% include display-component.html component=error-alert %}
-
-<script type="text/javascript">
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function() {
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        target.setAttribute("aria-hidden", true);
-        target.remove();
-
-    })
-}
-
-console.log('test')
-</script>

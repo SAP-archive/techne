@@ -5,8 +5,9 @@ sidebar: components-sidebar
 toc: false
 permalink: icons.html
 folder: components
-summary: Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun. Icons can be used adaptively if desired, but at this point they are used more as visual elements within other components
+summary:
 ---
+Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun. Icons can be used adaptively if desired, but at this point they are used more as visual elements within other components
 
 ## Icon usage
 {% highlight html %}
@@ -14,6 +15,8 @@ summary: Icons are used throughout the UI to save space, allow for visual clarit
 <span class="tn-icon tn-icon--{icon-name} tn-icon--medium"></span>
 <span class="tn-icon tn-icon--{icon-name} tn-icon--large"></span>
 {% endhighlight %}
+
+<br />
 
 ## Available Icons
 {% for icon in site.data.icons %}
