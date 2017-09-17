@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-2
+* Techne v2.0.0-alpha-3
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -24,7 +24,7 @@ input[type=radio] {
   border-color: #d7d7d7;
   border-radius: 0;
   color: #21262c;
-  background-color: #fff;
+  background-color: transparent;
   -webkit-transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in;
   transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in
 }
@@ -32,8 +32,7 @@ input[type=checkbox]:focus,
 input[type=checkbox]:hover,
 input[type=radio]:focus,
 input[type=radio]:hover {
-  border-color: #009cdf;
-  background-color: #fff
+  border-color: #009cdf
 }
 input.is-invalid[type=checkbox],
 input.is-invalid[type=radio] {
@@ -55,15 +54,13 @@ input[type=checkbox]:disabled,
 input[type=radio]:disabled {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7;
-  background-color: #f9fbfc
+  border-color: #d7d7d7
 }
 input.is-readonly[type=checkbox],
 input.is-readonly[type=radio],
 input[readonly][type=checkbox],
 input[readonly][type=radio] {
   color: #21262c;
-  background-color: #fff;
   border-color: #d7d7d7;
   border-width: 0 0 1px
 }
@@ -117,7 +114,7 @@ textarea {
   border-color: #d7d7d7;
   border-radius: 0;
   color: #21262c;
-  background-color: #fff;
+  background-color: transparent;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -141,8 +138,7 @@ input[type=url]:focus,
 input[type=url]:hover,
 textarea:focus,
 textarea:hover {
-  border-color: #009cdf;
-  background-color: #fff
+  border-color: #009cdf
 }
 input[type=date].is-invalid,
 input[type=email].is-invalid,
@@ -206,8 +202,7 @@ textarea:disabled,
 textarea[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7;
-  background-color: #f9fbfc
+  border-color: #d7d7d7
 }
 input[type=date].is-readonly,
 input[type=date][readonly],
@@ -228,7 +223,6 @@ input[type=url][readonly],
 textarea.is-readonly,
 textarea[readonly] {
   color: #21262c;
-  background-color: #fff;
   border-color: #d7d7d7;
   border-width: 0 0 1px
 }
@@ -256,7 +250,7 @@ select {
   border-color: #d7d7d7;
   border-radius: 0;
   color: #21262c;
-  background-color: #fff;
+  background-color: transparent;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -271,8 +265,7 @@ select {
 }
 select:focus,
 select:hover {
-  border-color: #009cdf;
-  background-color: #fff
+  border-color: #009cdf
 }
 select.is-invalid {
   border-color: #df1919
@@ -288,13 +281,11 @@ select:disabled,
 select[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7;
-  background-color: #f9fbfc
+  border-color: #d7d7d7
 }
 select.is-readonly,
 select[readonly] {
   color: #21262c;
-  background-color: #fff;
   border-color: #d7d7d7;
   border-width: 0 0 1px
 }
@@ -395,9 +386,9 @@ input[type=radio]:checked[disabled]::after {
   font-size: 1rem;
   line-height: 1.5;
   color: #21262c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   max-height: 52px
 }
 .tn-input-group [type=number] {
@@ -423,6 +414,9 @@ input[type=radio]:checked[disabled]::after {
 .tn-input-group [type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   margin: 0
+}
+.tn-input-group--no-border input {
+  border-color: transparent
 }
 .tn-input-group__addon {
   font-size: .75rem;

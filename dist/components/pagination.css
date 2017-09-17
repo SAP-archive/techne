@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-2
+* Techne v2.0.0-alpha-3
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -10,29 +10,82 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #21262c;
-  font-weight: 600;
   display: inline-block;
-  padding-left: 0;
-  margin: 20px 0;
-  border-radius: 3px
+  margin-bottom: 0
 }
-.tn-pagination > li {
-  display: inline
-}
-.tn-pagination > li:first-child > a,
-.tn-pagination > li:first-child > span {
-  margin-left: 0;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px
-}
-.tn-pagination.disabled > a,
-.tn-pagination.disabled > a:focus,
-.tn-pagination.disabled > a:hover,
-.tn-pagination.disabled > span,
-.tn-pagination.disabled > span:focus,
-.tn-pagination.disabled > span:hover {
-  color: #cadbee;
+.tn-pagination__link {
+  color: #009cdf;
   background-color: transparent;
-  border-color: #e1e5e9;
-  cursor: not-allowed
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative
+}
+.tn-pagination__link::after {
+  content: "";
+  border-bottom: solid 2px transparent;
+  width: calc(100% - 8px*2);
+  height: 2px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  margin-left: 8px
+}
+.tn-pagination__link:focus,
+.tn-pagination__link:hover {
+  color: #008ac6
+}
+.tn-pagination__link:focus::after,
+.tn-pagination__link:hover::after {
+  border-bottom-color: #008ac6
+}
+.tn-pagination__link.is-selected,
+.tn-pagination__link:active,
+.tn-pagination__link[aria-selected=true] {
+  background-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.tn-pagination__link.is-selected::after,
+.tn-pagination__link:active::after,
+.tn-pagination__link[aria-selected=true]::after {
+  border-bottom-color: transparent
+}
+.tn-pagination__link.is-disabled,
+.tn-pagination__link[aria-disabled=true] {
+  color: #7f90a4;
+  text-decoration: none;
+  cursor: default
+}
+.tn-pagination__link.is-disabled::after,
+.tn-pagination__link[aria-disabled=true]::after {
+  border-bottom-color: transparent
+}
+.tn-pagination__link.is-selected,
+.tn-pagination__link:active,
+.tn-pagination__link[aria-selected=true] {
+  color: #21262c;
+  text-decoration: none;
+  cursor: default
+}
+.tn-pagination__item {
+  display: inline-block
+}
+.tn-pagination__more {
+  color: #21262c;
+  vertical-align: sub;
+  font-size: .75rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  text-transform: uppercase
+}
+.tn-pagination__more:focus,
+.tn-pagination__more:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: #21262c;
+  cursor: default
+}
+.tn-pagination__total {
+  color: #7f90a4
 }

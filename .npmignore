@@ -17,6 +17,7 @@ gulpfile.js
 .tmp
 *.log
 PROJECT.md
+package-lock.json
 
 # OS generated files
 .DS_Store
