@@ -3,9 +3,10 @@
 @import "../core/functions";
 
 /*!
-.tn-table+(--no-border)
-    .tn-table__content+()
-    .tn-table__title+()
+.tn-table
+    thead
+    tbody
+        tr+([aria-selected])
 */
 $block: ns(table);
 
@@ -17,7 +18,7 @@ $block: ns(table);
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
-    //@include reset;
+    @include reset;
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
@@ -32,10 +33,15 @@ $block: ns(table);
         }
     }
     thead {
+        color: tn-color(text, 2);
         tr {
             &:hover {
                 background-color: inherit;
             }
+        }
+        td,
+        th {
+            border: none;
         }
     }
     td,
@@ -49,7 +55,6 @@ $block: ns(table);
         border-width: 1px 0;
         border-color: $tn-table-border-color;
     }
-
 
 
 

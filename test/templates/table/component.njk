@@ -7,23 +7,23 @@ table:
 -->
 {% macro table(properties={}, modifier={}, state={}, aria={}) -%}
 <table class="tn-table{{ modifier.block | modifier('table') }}{{ state | state }}"{{ aria | aria }}>
-<thead>
-    <tr>
-        {%- for header in properties.headers %}
-        <th>{{header}}</th>
+    <thead>
+        <tr>
+            {%- for header in properties.headers %}
+            <th>{{header}}</th>
+            {%- endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {%- for row in properties.rows %}
+        {%- for i in range(0, 5) %}
+        <tr{% if i === 2 %} aria-selected="true"{% endif %}>
+            {%- for item in row %}
+            <td>{{item}}</td>
+            {%- endfor %}
+        </tr>
         {%- endfor %}
-    </tr>
-</thead>
-<tbody>
-    {%- for row in properties.rows %}
-    {%- for i in range(0, 5) %}
-    <tr{% if i === 2 %} aria-selected="true"{% endif %}>
-        {%- for item in row %}
-        <td>{{item}}</td>
         {%- endfor %}
-    </tr>
-    {%- endfor %}
-    {%- endfor %}
-</thead>
+    </thead>
 </table>
 {%- endmacro %}
