@@ -1,10 +1,13 @@
 /*!
-* Techne v2.0.0-alpha-2
+* Techne v2.0.0-alpha-3
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
-.tn--text-transform-none {
+.tn-text-transform-none {
   text-transform: none!important
+}
+.tn-has-text-align-center {
+  text-align: center!important
 }
 .tn-has-type-minus-3 {
   font-size: .75rem;
@@ -159,6 +162,18 @@
 .tn-has-background-color-background,
 .tn-has-background-color-background-1 {
   background-color: #fff
+}
+.tn-has-color-background-2 {
+  color: #f0f5ff
+}
+.tn-has-background-color-background-2 {
+  background-color: #f0f5ff
+}
+.tn-has-color-background-3 {
+  color: #000
+}
+.tn-has-background-color-background-3 {
+  background-color: #000
 }
 .tn-has-color-status,
 .tn-has-color-status-1 {

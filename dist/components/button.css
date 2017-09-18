@@ -1,10 +1,10 @@
 /*!
-* Techne v2.0.0-alpha-2
+* Techne v2.0.0-alpha-3
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
 /*!
-.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true]))
+.tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true] | (.is-pressed | [aria-pressed=true]))
 */
 .tn-button {
   margin: 0;
@@ -31,8 +31,6 @@
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
-  -webkit-transition: background-color .25s ease-in;
-  transition: background-color .25s ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -61,6 +59,11 @@
   padding-left: 28px;
   padding-right: 28px
 }
+.tn-button--icon.tn-button--action-bar,
+.tn-button--large.tn-button--icon {
+  padding-left: 20px;
+  padding-right: 20px
+}
 .tn-button:hover {
   background-color: #008ac6;
   color: #f6f8f9;
@@ -73,13 +76,16 @@
   outline: solid 2px #2dc0ff
 }
 .tn-button.is-active,
+.tn-button.is-pressed,
 .tn-button.is-selected,
 .tn-button:active,
+.tn-button[aria-pressed=true],
 .tn-button[aria-selected=true] {
   background-color: #0078ac;
   color: #f6f8f9
 }
 .tn-button.is-disabled,
+.tn-button:disabled,
 .tn-button[aria-disabled=true] {
   outline: solid 1px #d7d7d7;
   color: #7f90a4;
@@ -99,25 +105,33 @@
   color: #008ac6
 }
 .tn-button--link.is-disabled,
+.tn-button--link.is-pressed,
 .tn-button--link.is-selected,
 .tn-button--link:active,
 .tn-button--link[aria-disabled=true],
+.tn-button--link[aria-pressed=true],
 .tn-button--link[aria-selected=true],
 .tn-button--text.is-disabled,
+.tn-button--text.is-pressed,
 .tn-button--text.is-selected,
 .tn-button--text:active,
 .tn-button--text[aria-disabled=true],
+.tn-button--text[aria-pressed=true],
 .tn-button--text[aria-selected=true] {
   background-color: transparent;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none
 }
+.tn-button--link.is-pressed,
 .tn-button--link.is-selected,
 .tn-button--link:active,
+.tn-button--link[aria-pressed=true],
 .tn-button--link[aria-selected=true],
+.tn-button--text.is-pressed,
 .tn-button--text.is-selected,
 .tn-button--text:active,
+.tn-button--text[aria-pressed=true],
 .tn-button--text[aria-selected=true] {
   color: #0078ac
 }
@@ -153,10 +167,12 @@
   -webkit-box-shadow: none;
   box-shadow: none
 }
+.tn-button--link.is-pressed::after,
 .tn-button--link.is-selected::after,
 .tn-button--link:active::after,
 .tn-button--link:focus::after,
 .tn-button--link:hover::after,
+.tn-button--link[aria-pressed=true]::after,
 .tn-button--link[aria-selected=true]::after {
   border-bottom-color: #009cdf
 }
@@ -170,7 +186,6 @@
   margin-right: 12px;
   margin-top: 13px
 }
-.tn-button--action-bar > *,
 .tn-button--icon > * {
   margin-left: auto;
   margin-right: auto
@@ -187,10 +202,13 @@
   line-height: 1.33333;
   font-weight: 700;
   text-transform: uppercase;
+  width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
 .tn-button--action-bar > * {
   display: block!important;
-  margin-top: 12px
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto
 }

@@ -2,7 +2,7 @@ html,body {
     font-size: inherit;
 }
 
-.post-content.ul, .post-content.ol {
+.post-content>ul, .post-content>ol {
   padding-left: 40px !important;
   list-style: disc !important;
 }
