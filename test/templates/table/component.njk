@@ -16,13 +16,11 @@ table:
     </thead>
     <tbody>
         {%- for row in properties.rows %}
-        {%- for i in range(0, 5) %}
-        <tr{% if i === 2 %} aria-selected="true"{% endif %}>
+        <tr{% if properties.selectedRow === loop.index %} aria-selected="true"{% endif %}>
             {%- for item in row %}
             <td>{{item}}</td>
             {%- endfor %}
         </tr>
-        {%- endfor %}
         {%- endfor %}
     </thead>
 </table>

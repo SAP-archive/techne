@@ -14,7 +14,7 @@ $block: ns(table);
     //LOCAL VARS (set all themeable properties, always include !default)
     $tn-table-border-color: tn-color(neutral, 3) !default;
     $tn-table-cell-spacing: $tn-width--gutter !default;
-    $tn-table-cell-padding: tn-space(4) !default;
+    $tn-table-cell-padding: tn-space(3) !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
