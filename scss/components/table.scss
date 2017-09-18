@@ -28,7 +28,6 @@ $block: ns(table);
         }
         &.is-selected,
         &[aria-selected="true"] {
-            background-color: tn-color(neutral, 3);
             background-color: lighten(tn-color(neutral, 3), 5);
         }
     }
