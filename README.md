@@ -78,6 +78,7 @@ The documentation website is served from the `docs/_site` directory which is gen
 Please refer to the [Troubleshooting guide](https://github.com/SAP/techne/wiki/Troubleshooting-&-Known-Issues) if you are having issues with the setup.
 
 # Contributing
+Details of where and how to start developing the new component can be found in test/README.MD file.
 New branches should include the type (feature, bug, or hotfix) and the issue number or release number.
 
 ```

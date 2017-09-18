@@ -18,7 +18,8 @@ $block: ns(card);
     //dimensions
     $tn-card-media-width: 75px !default;
     //colors
-    $tn-card-color-border: tn-color(neutral, 2) !default;
+    $tn-card-color-border: tn-color(neutral, 3) !default;
+    $tn-card-color-border-disabled: tn-color(neutral, 2) !default;
     $tn-card-color-disabled: tn-color(text, 3) !default;
     $tn-card-background-color: tn-color(background) !default;
     $tn-card-background-color-disabled: tn-color(neutral, 1) !default;
@@ -86,7 +87,7 @@ $block: ns(card);
     &[aria-disabled="true"],
     &.is-disabled {
         background-color: $tn-card-background-color-disabled !important;
-        border-color: $tn-card-color-border !important;
+        border-color: $tn-card-color-border-disabled !important;
         box-shadow: none !important;
         cursor: default;
         * {
