@@ -26,3 +26,9 @@ $ns: ns();
         font-family: $value;
     }
 }
+
+@each $key, $value in $tn-weights {
+    .#{$ns}has-font-weight-#{$key} {
+        font-weight: $value;
+    }
+}

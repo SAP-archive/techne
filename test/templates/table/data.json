@@ -1,0 +1,20 @@
+{
+    "id": "table",
+    "name": "Table",
+    "properties": {
+        "headers": ["", "Header 2", "Header 3", "Header 4", "Header 5"],
+        "rows": [
+            ["<img src=http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png>", "<a class=tn-has-font-weight-semi>user.name@email.com</a>", "First Name", "Last Name", "<div style='width:10px;height:100px;'></div>"]
+        ]
+    },
+    "modifier": {
+        "block": []
+    },
+    "state": {
+
+    },
+    "aria": {
+
+    }
+
+}

@@ -1,0 +1,94 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "./component.njk" import table %}
+
+<!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
+{% set css_deps = ['helpers'] %}
+
+{% block content %}
+
+    <h1>table</h1>
+
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+
+    {{  table(
+            properties=data.properties,
+            modifier={
+                block: data.modifier.block
+            },
+            state=data.state,
+            aria=data.aria
+        )
+    }}
+
+
+
+
+
+
+
+    {% endset %}
+    {{ format(example) }}
+
+
+        <table class="table table-striped table-hover techne-table">
+         <thead>
+             <th></th>
+             <th>Col 1</th>
+             <th>Col 2</th>
+             <th>Col 3</th>
+             <th>Col 4</th>
+             <th>Col 5</th>
+             <th>Col 6</th>
+          </tr>
+         </thead>
+         <tbody>
+            <tr class="techne-table-xs-right techne-table-xs-left">
+              <td class="techne-table-xs-left-slot">
+                  <div class="checkbox">
+                      <input type="checkbox" id="optionsCheck1" value="optionc1" >
+                      <label for="optionsCheck1"></label>
+                  </div>
+              </td>
+              <td>
+                  <div class="cellcontent">
+                      <a href="#">test data</a>
+                  </div>
+              </td>
+              <td data-th="Placed At" >
+                  <div class="cellcontent">test data</div>
+              </td>
+              <td data-th="Customer Email" >
+                  <div class="cellcontent">test data</div>
+              </td>
+              <td data-th="Customer Email" >
+                  <div class="cellcontent">test data</div>
+              </td>
+              <td data-th="# Of Items" >
+                  <div class="cellcontent">test data</div>
+              </td>
+              <td class="techne-table-xs-right-slot">
+                  <img src="http://api.adorable.io/avatars/50/burgundy.flemming@emailprovider.com.png"
+                       class="img-responsive img-circle"/>
+              </td>
+            </tr>
+        </table>
+    <hr>
+    {{  table(
+            properties={
+                title: "Sed bibendum sapien",
+                description: "Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan."
+            },
+            modifier={
+                block: []
+            },
+            state={},
+            aria={}
+        )
+    }}
+
+
+
+{% endblock %}
