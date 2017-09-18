@@ -117,7 +117,7 @@ app.use(router);
 app.use('/static', express.static(path.join(__dirname, 'resources')));
 
 //load font files
-router.get('/*/TechneIcons:key', (req, res) => {
+router.get('/(*/)?TechneIcons:key', (req, res) => {
     res.sendFile(path.join(__dirname, '..', `scss/icons/TechneIcons${req.params.key}`));
 });
 
