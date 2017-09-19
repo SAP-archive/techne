@@ -58,7 +58,6 @@ $block: ns(input-group);
         justify-content: center;
         display: flex;
         flex-direction: column;
-        font-size: .5rem; 
 
         //ELEMENT MODIFIERS ************
         //each mod MUST extend the element base
@@ -67,6 +66,9 @@ $block: ns(input-group);
         }
         &:last-child {
             border-left-width: 0;
+        }
+        &--step-up, &--step-down  {
+           font-size: 10px;
         }
         &--button {
             padding: 0;
