@@ -274,7 +274,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -364,7 +364,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -500,7 +500,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -676,7 +676,7 @@ input[type=radio]:checked[disabled]::after {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -749,7 +749,7 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-dropdown__menu,
 .tn-dropdown__options {
-  border: solid 1px #d7d7d7;
+  border: solid 1px #ccdaeb;
   background: #fff;
   position: absolute;
   white-space: nowrap;
@@ -796,7 +796,7 @@ input[type=radio]:checked[disabled]::after {
   color: #7f90a4;
   padding: 12px 16px;
   padding-top: 16px;
-  border-top: solid 1px #d7d7d7
+  border-top: solid 1px #ccdaeb
 }
 /*!
 .tn-contextual-menu
@@ -1115,7 +1115,7 @@ input[type=radio]:checked[disabled]::after {
   margin-bottom: 20px;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   background-color: #fff
 }
 .tn-card--vertical {
@@ -1299,7 +1299,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -1389,7 +1389,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -1525,7 +1525,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -1701,7 +1701,7 @@ input[type=radio]:checked[disabled]::after {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -1774,7 +1774,7 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-dropdown__menu,
 .tn-dropdown__options {
-  border: solid 1px #d7d7d7;
+  border: solid 1px #ccdaeb;
   background: #fff;
   position: absolute;
   white-space: nowrap;
@@ -1821,7 +1821,7 @@ input[type=radio]:checked[disabled]::after {
   color: #7f90a4;
   padding: 12px 16px;
   padding-top: 16px;
-  border-top: solid 1px #d7d7d7
+  border-top: solid 1px #ccdaeb
 }
 /*!
 .tn-form
@@ -1985,7 +1985,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -2075,7 +2075,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -2211,7 +2211,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -2392,7 +2392,7 @@ input[type=radio]:checked[disabled]::after {
   padding: 0 16px;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   background-color: #f9fbfc;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -2454,7 +2454,7 @@ input[type=radio]:checked[disabled]::after {
   position: relative
 }
 .tn-input-group__button--step-up {
-  border-bottom: solid 1px #d7d7d7
+  border-bottom: solid 1px #ccdaeb
 }
 .tn-input-group__button--step-up::after {
   height: 0;
@@ -2727,7 +2727,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -2817,7 +2817,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -2953,7 +2953,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -3129,7 +3129,7 @@ input[type=radio]:checked[disabled]::after {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -3202,7 +3202,7 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-dropdown__menu,
 .tn-dropdown__options {
-  border: solid 1px #d7d7d7;
+  border: solid 1px #ccdaeb;
   background: #fff;
   position: absolute;
   white-space: nowrap;
@@ -3249,7 +3249,7 @@ input[type=radio]:checked[disabled]::after {
   color: #7f90a4;
   padding: 12px 16px;
   padding-top: 16px;
-  border-top: solid 1px #d7d7d7
+  border-top: solid 1px #ccdaeb
 }
 @font-face {
   font-family: TechneIcons;
@@ -3694,4 +3694,47 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-pagination__total {
   color: #7f90a4
+}
+/*!
+.tn-table
+    thead
+    tbody
+        tr+([aria-selected])
+*/
+.tn-table {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse
+}
+.tn-table tr:hover {
+  background-color: #f1f5f9
+}
+.tn-table tr.is-selected,
+.tn-table tr[aria-selected=true] {
+  background-color: #dee7f2
+}
+.tn-table thead {
+  color: #7f90a4
+}
+.tn-table thead tr:hover {
+  background-color: inherit
+}
+.tn-table thead td,
+.tn-table thead th {
+  border: none
+}
+.tn-table td,
+.tn-table th {
+  text-align: left;
+  padding: 12px 20px 12px 0;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: #ccdaeb
+}
+.tn-table td:first-child,
+.tn-table th:first-child {
+  padding-left: 20px
 }
