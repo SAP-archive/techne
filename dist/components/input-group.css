@@ -21,7 +21,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -111,7 +111,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -247,7 +247,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -428,7 +428,7 @@ input[type=radio]:checked[disabled]::after {
   padding: 0 16px;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   background-color: #f9fbfc;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -490,7 +490,7 @@ input[type=radio]:checked[disabled]::after {
   position: relative
 }
 .tn-input-group__button--step-up {
-  border-bottom: solid 1px #d7d7d7
+  border-bottom: solid 1px #ccdaeb
 }
 .tn-input-group__button--step-up::after {
   height: 0;

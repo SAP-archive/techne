@@ -9,6 +9,9 @@
 .tn-has-text-align-center {
   text-align: center!important
 }
+.tn-has-border-radius-50percent {
+  border-radius: 50%!important
+}
 .tn-has-type-minus-3 {
   font-size: .75rem;
   line-height: 1.33333;
@@ -66,6 +69,21 @@
 }
 .tn-has-font-family-code {
   font-family: Courier,sans-serif
+}
+.tn-has-font-weight-light {
+  font-weight: 300
+}
+.tn-has-font-weight-reg {
+  font-weight: 400
+}
+.tn-has-font-weight-med {
+  font-weight: 500
+}
+.tn-has-font-weight-semi {
+  font-weight: 600
+}
+.tn-has-font-weight-bold {
+  font-weight: 700
 }
 .tn-has-color-primary,
 .tn-has-color-primary-1 {

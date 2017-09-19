@@ -230,7 +230,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -320,7 +320,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -456,7 +456,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -632,7 +632,7 @@ input[type=radio]:checked[disabled]::after {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -705,7 +705,7 @@ input[type=radio]:checked[disabled]::after {
 }
 .tn-dropdown__menu,
 .tn-dropdown__options {
-  border: solid 1px #d7d7d7;
+  border: solid 1px #ccdaeb;
   background: #fff;
   position: absolute;
   white-space: nowrap;
@@ -752,7 +752,7 @@ input[type=radio]:checked[disabled]::after {
   color: #7f90a4;
   padding: 12px 16px;
   padding-top: 16px;
-  border-top: solid 1px #d7d7d7
+  border-top: solid 1px #ccdaeb
 }
 /*!
 .tn-contextual-menu

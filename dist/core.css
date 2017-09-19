@@ -78,7 +78,8 @@ ul {
 * Default styles for phrase elements
 */
 img {
-  line-height: 0
+  line-height: 0;
+  vertical-align: middle
 }
 a {
   color: #009cdf;
@@ -119,7 +120,7 @@ input[type=radio] {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -209,7 +210,7 @@ textarea {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
@@ -345,7 +346,7 @@ select {
   outline: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #d7d7d7;
+  border-color: #ccdaeb;
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
