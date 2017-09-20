@@ -3,7 +3,7 @@ title: Getting Started
 keywords: getting sarted
 sidebar: getting-started-sidebar
 toc: false
-permalink: index.html
+permalink: getting-started.html
 folder: getting-started
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nobis cupiditate illo, autem consequatur tempore! Numquam nobis blanditiis, maxime, molestias reprehenderit libero beatae fugit officiis incidunt? Libero voluptas molestiae, iste.
 search: exclude
@@ -14,11 +14,8 @@ search: exclude
 
 ### [](#npm)NPM
 
-    npm install techne@2.0-alpha-1 --save
+    npm install techne@{{site.library_version}} --save
 
-### [](#bower)Bower
-
-    bower install techne@2.0-alpha-1 --save
 
 ## [](#usage)Usage
 
