@@ -23,21 +23,25 @@ At Desktop and Tablet inflections, it is recommended to show 25 rows of data alo
     </thead>
     <tbody>
         <tr>
-            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="tn-has-border-radius-50percent" width="32" height="32"></td>
+            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png"
+            class="tn-has-border-radius-50percent" 
+            width="32" height="32"></td>
             <td><a class="tn-has-font-weight-semi">user.name@email.com</a></td>
             <td>First Name</td>
             <td>Last Name</td>
             <td>01/26/17</td>
         </tr>
         <tr>
-            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="tn-has-border-radius-50percent" width="32" height="32"></td>
+            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png"
+            class="tn-has-border-radius-50percent" width="32" height="32"></td>
             <td><a class="tn-has-font-weight-semi">user.name@email.com</a></td>
             <td>First Name</td>
             <td>Last Name</td>
             <td>01/26/17</td>
         </tr>
         <tr>
-            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="tn-has-border-radius-50percent" width="32" height="32"></td>
+            <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png"
+            class="tn-has-border-radius-50percent" width="32" height="32"></td>
             <td><a class="tn-has-font-weight-semi">user.name@email.com</a></td>
             <td>First Name</td>
             <td>Last Name</td>
