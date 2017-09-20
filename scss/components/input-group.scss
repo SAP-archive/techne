@@ -53,7 +53,7 @@ $block: ns(input-group);
         }
     }
     &__addon {
-        @include tn-type(-3, body, bold, normal);
+        @include tn-type(-2, body, bold, normal);
         color: tn-color(text, 3);
         padding: 0 tn-space(4);
         border-style: solid;
@@ -71,6 +71,9 @@ $block: ns(input-group);
         }
         &:last-child {
             border-left-width: 0;
+        }
+        &--step-up, &--step-down  {
+           font-size: 10px;
         }
         &--button {
             padding: 0;
