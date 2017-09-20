@@ -1,0 +1,53 @@
+@import "../core/settings";
+@import "../core/forms";
+@import "../core/mixins";
+@import "../core/functions";
+@import "../components/button";
+/*!
+.tn-modal
+    .tn-form__title
+    .tn-form__body
+    .tn-form__footer
+*/
+$block: ns(modal);
+  $tn-modal-border-color: tn-color(neutral, 3) !default;
+  $tn-modal-inner-padding: tn-space(10) !default;
+  $tn-modal-inner-content-background: tn-color(background, 1) !default;
+
+
+.#{$block} {
+  width: 700px;
+  margin: 30px auto;
+  &__content{
+    background-color: $tn-modal-inner-content-background;
+    button{
+      float: right;
+    }
+  }
+  &__header{
+    @include tn-type(4,header,reg);
+    border-bottom: 1px solid $tn-modal-border-color;
+    padding-left: $tn-modal-inner-padding;
+
+  }
+  &__button-close{
+    @extend .tn-icon;
+  }
+  &__body{
+    padding: $tn-modal-inner-padding;
+  }
+  &__footer{
+    border-top: 1px solid $tn-modal-border-color;
+    padding: $tn-modal-inner-padding;
+
+  }
+  &__button-primary {
+    @extend .tn-icon;
+    @extend .tn-icon--close;
+  }
+  &__button-secondary {
+    @extend .tn-button;
+    @extend .tn-button--text;
+  }
+
+}
