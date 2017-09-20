@@ -45,6 +45,14 @@ $tn-fonts: (
     code: #{"Courier", sans-serif},
 ) !default;
 
+$tn-weights: (
+    light: 300,
+    reg: 400,
+    med: 500,
+    semi: 600,
+    bold: 700
+) !default;
+
 //colors
 $tn-colors: (
     primary: (
