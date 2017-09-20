@@ -87,7 +87,7 @@ dt[id]{
 
 }
 
-.post-content img {
+.post-content.img {
     margin: 12px 0px 3px 0px;
     width: auto;
     height: auto;
@@ -118,7 +118,7 @@ dt[id]{
     color: gray;
 }
 
-table {
+/*table {
     background-color: transparent;
 }
 caption {
@@ -183,7 +183,7 @@ table th[class*="col-"] {
 table tr td {
     hyphens: auto;
 }
-
+*/
 
 p.external a {
     text-align:right;
@@ -902,26 +902,26 @@ span.soft {
     }
 }
 
-.col-md-9 img {
+.col-md-9.img {
     max-width: 100%;
     max-height: 100%;
 }
 
 
-.post-content img {
+.post-content.img {
     margin: 12px 0px 3px 0px;
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
 }
-.col-md-9 img {
+.col-md-9.img {
     max-width: 100%;
     max-height: 100%;
 }
 
 
-.post-content img {
+.post-content.img {
     margin: 12px 0px 3px 0px;
     width: auto;
     height: auto;
@@ -929,7 +929,7 @@ span.soft {
     max-height: 100%;
 }
 
-.videoThumbs img {
+.videoThumbs.img {
     float: left;
     margin:15px 15px 15px 0px;
     box-shadow: 2px 2px 1px #f0f0f0;
