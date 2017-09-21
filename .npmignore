@@ -1,12 +1,12 @@
 # Exclude Directories
-docs
-icons
-ops
-src
-test
-bower_components
-tmp
-scss/theme
+/docs
+/icons
+/ops
+/src
+/test
+/bower_components
+/tmp
+/scss/theme
 
 # Exclude Files
 .npmignore
