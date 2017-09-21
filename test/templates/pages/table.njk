@@ -1,0 +1,108 @@
+{% set title = "Table" %}
+{% extends "./layouts/starter.njk" %}
+{% import "./../utils.njk" as utils %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "../dropdown/component.njk" import dropdown, menu %}
+{% from "../form/component.njk" import form_control %}
+{% from "../input-group/component.njk" import input_group %}
+{% from "../toolbar/component.njk" import toolbar %}
+{% from "../label/component.njk" import label %}
+{% from "../table/component.njk" import table %}
+
+{% block content %}
+
+{# Toolbar  #}
+{{  toolbar(
+        properties={
+            "title": "Toolbar Label",
+            "description": "Toolbar Description",
+            "filters": {
+                "items": [
+                    {
+                        "label": "Color",
+                        "items": [
+                            { "label": "Option 1" },
+                            { "label": "Option 2" },
+                            { "label": "Option 3" }
+                        ]
+                    },
+                    {
+                        "label": "Size",
+                        "items": [
+                            { "label": "Option 1" },
+                            { "label": "Option 2" },
+                            { "label": "Option 3" }
+                        ]
+                    }
+
+                ]
+            },
+            "search": {
+                "placeholder": "Filter by Keyword"
+            },
+            "sort": {
+                "label": "Newest",
+                "icon": "sort",
+                "items": [
+                    { "label": "Option 1" },
+                    { "label": "Option 2" },
+                    { "label": "Option 3" }
+                ]
+            },
+            "pagination": {
+                "total": 283,
+                "number": 20,
+                "page": 10
+            },
+            "view": {
+                "items": [
+                    { "label": "View as grid", "icon": "grid" },
+                    { "label": "View as list", "icon": "list" }
+                ]
+            }
+        },
+        modifier={
+            block: data.modifier.block
+        },
+        state=data.state,
+        aria=data.aria
+    )
+}}
+
+{# Cards #}
+<div class="tn-container">
+
+    {% set headers = ["", "Column Header", "Column Header", "Column Header", "Column Header"] %}
+    {% set image_row = ['<img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="tn-has-border-radius-50percent" width="32" height="32">', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
+
+    {% set checkbox_row = ['<input type="checkbox">', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
+    {% set checkbox_row_selected = ['<input type="checkbox" checked>', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
+
+
+        <!-- output the component example and the code snippet -->
+        {% set example %}
+        {{  table({
+                headers: headers,
+                rows: [image_row, image_row, image_row]
+            })
+        }}
+        {% endset %}
+        {{ example }}
+
+        {% set example %}
+        {{  table({
+                headers: headers,
+                rows: [checkbox_row_selected, checkbox_row, checkbox_row],
+                selectedRow: 1
+            })
+        }}
+        {% endset %}
+        {{ example }}
+
+</div>
+
+{# Toolbar #}
+{{  toolbar() }}
+
+{% endblock %}

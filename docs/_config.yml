@@ -4,6 +4,9 @@ repository: /SAP/techne
 # this property is useful for conditional filtering of content that is separate from the PDF.
 output: web
 
+# library version should always match ./package.json   "version"
+library_version: 2.0.0-alpha-3
+
 # this appears on the top navigation bar next to the home button
 topnav_title: TECHNE
 
@@ -105,7 +108,6 @@ defaults:
       topnav: topnav
 
 # these are defaults used for the frontmatter for these file types
-
 sidebars:
 - home-sidebar
 - getting-started-sidebar
@@ -115,8 +117,8 @@ sidebars:
 - tutorials-sidebar
 
 
-description: ""
 # the description is used in the feed.xml file
+description: ""
 
 # needed for sitemap.xml file only
 url:
