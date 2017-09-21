@@ -7,7 +7,7 @@
 .tn-modal
     .tn-form__title
     .tn-form__body
-    .tn-form__footer
+    .tn-form__footer-items
 */
 $block: ns(modal);
   $tn-modal-border-color: tn-color(neutral, 3) !default;
@@ -17,7 +17,7 @@ $block: ns(modal);
 
 .#{$block} {
   width: 700px;
-  margin: 30px auto;
+  margin: tn-space(8) auto;
   &__content{
     background-color: $tn-modal-inner-content-background;
     button{
@@ -28,26 +28,24 @@ $block: ns(modal);
     @include tn-type(4,header,reg);
     border-bottom: 1px solid $tn-modal-border-color;
     padding-left: $tn-modal-inner-padding;
-
-  }
-  &__button-close{
-    @extend .tn-icon;
+    padding-top: $tn-modal-inner-padding;
+    padding-right: $tn-modal-inner-padding/2;
   }
   &__body{
     padding: $tn-modal-inner-padding;
   }
-  &__footer{
+  &__footer-items {
+    display: block;
+    overflow: auto;
     border-top: 1px solid $tn-modal-border-color;
     padding: $tn-modal-inner-padding;
-
+    padding-top: $tn-modal-inner-padding/2;
   }
   &__button-primary {
-    @extend .tn-icon;
-    @extend .tn-icon--close;
+    @extend .tn-button;
   }
   &__button-secondary {
     @extend .tn-button;
     @extend .tn-button--text;
   }
-
 }
