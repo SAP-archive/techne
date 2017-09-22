@@ -5,33 +5,31 @@ sidebar: components-sidebar
 toc: false
 permalink: action-bar.html
 folder: components
-summary:
 ---
-The Action Bar sits at the top of an object detail page and allows for saving, cancelling, going back, and other actions upon the object. General guidelines for this pattern are as follows:
+The Action Bar is located at the top of the page and is used for three main functions: 
+1. Display the title of the current page
+2. Navigate back on a detail page
+3. Display the main Actions for the page
 
-* The Action Bar sits at the top of the page
-* When users come to a new/create object, the Cancel and Save are both visible and enabled.
-* When there is a primary button other than Save, the Primary button should always be active. There is no Cancel link in this case.
-* On an object page in edit mode, before any edits have been made Cancel and Save are not visible or enabled.
-* A user must click or tap inside a field to make visible and enable the Save and Cancel actions.
-* In the new or edit scenario if a user clicks on Cancel, the form is cleared and the user is taken back to the page they came from.
-* If the user leaves a page in the middle of create or edit, they should receive a confirmation dialogue asking them to confirm whether they want to leave the page without saving (see screenshot)
+## Title
 
-## Default Action Bar
+The page title is displayed very prominently in the Action Bar. This is helpful for the user to know what page or part of the application is currently in use. The page title should be descriptive like "Your profile" or "Product #2342 - Red T-Shirt Type D"
 
 {% capture default-action-bar %}
 <header class="tn-action-bar">
     <h1 class="tn-action-bar__title">
-        Page Title
+        Your profile
     </h1>
 </header>
 {% endcapture %}
 
 {% include display-component.html component=default-action-bar %}
 
-<br>
+<br/>
 
-## Action Bar with Back Button
+## Back Button
+
+The Action bar can display a "Back button" to allow the user to navigate back to the previous page in the navigation hierarchy. For example if the user click an item in a table row and the application navigate to the details page, that details page should have the back button to give the user the posibility to go back to the table.
 
 {% capture default-action-bar-back %}
 <header class="tn-action-bar">
@@ -42,16 +40,89 @@ The Action Bar sits at the top of an object detail page and allows for saving, c
 
     </div>
     <h1 class="tn-action-bar__title">
-        Page Title
+        Product #2342 - Red T-Shirt Type D
     </h1>
 </header>
 {% endcapture %}
 
 {% include display-component.html component=default-action-bar-back %}
 
-<br>
+<br/>
 
-## Action Bar with Multiple Action Buttons
+## Main Actions
+
+Main actions that are performed on the object represented on the page can be displayed on the Action Bar. we recommend not putting more than four actions on the action bar. 
+
+{% capture default-action-bar-multi %}
+<header class="tn-action-bar">
+    <h1 class="tn-action-bar__title">
+        Page Title
+    </h1>
+    <div class="tn-action-bar__actions">
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--customize tn-icon--medium" role="presentation"></span>
+                Customize
+            </button>
+        </div>
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--combinedview tn-icon--medium" role="presentation"></span>
+                Combine
+            </button>
+        </div>
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--sync tn-icon--medium" role="presentation"></span>
+                Sync
+            </button>
+        </div>
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--clone tn-icon--medium" role="presentation"></span>
+                Clone
+            </button>
+        </div>
+    </div>
+</header>
+{% endcapture %}
+
+{% include display-component.html component=default-action-bar-multi %}
+
+## Actions with Contextual menu
+
+When you need to display more than four actions it is recommended to use the **Contextual Menu** to display all actions.
+
+{% capture default-action-bar-menu %}
+<header class="tn-action-bar">
+    <h1 class="tn-action-bar__title">
+        Page Title
+    </h1>
+    <div class="tn-action-bar__actions">
+        <div class="tn-action-bar__action-item">
+            <div class="tn-dropdown">
+                <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="3ewpS611" aria-haspopup="true" aria-expanded="false" aria-label="More">
+                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+                    More
+                </button>
+                <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="3ewpS611">
+                    <li><a href="#" class="tn-dropdown__item">Customize</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Combine</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Sync</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Clone</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Archive</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+{% endcapture %}
+
+{% include display-component.html component=default-action-bar-menu %}
+
+## Edit mode actions
+
+When the user is editing the content of the page, the Actions to Save or Discard/Cancel the changes are also displayed on the Action Bar. In this case the Primary action is styled as Standard button.
 
 {% capture default-action-bar-multi %}
 <header class="tn-action-bar">
@@ -64,67 +135,15 @@ The Action Bar sits at the top of an object detail page and allows for saving, c
                 <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
                 Cancel
             </button>
-
-        </div>
-        <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
-                Cancel
-            </button>
-
-        </div>
-        <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
-                Cancel
-            </button>
-
         </div>
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--action-bar">
                 <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
                 Save
             </button>
-
         </div>
     </div>
 </header>
 {% endcapture %}
 
 {% include display-component.html component=default-action-bar-multi %}
-
-<br>
-
-## Action Bar with Contextual Menu
-
-{% capture default-action-bar-menu %}
-<header class="tn-action-bar">
-    <h1 class="tn-action-bar__title">
-        Page Title
-    </h1>
-    <div class="tn-action-bar__actions">
-        <div class="tn-action-bar__action-item">
-
-
-            <div class="tn-dropdown">
-                <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="3ewpS611" aria-haspopup="true" aria-expanded="false" aria-label="More">
-                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                    More
-                </button>
-
-                <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="3ewpS611">
-                    <li><a href="#" class="tn-dropdown__item">Edit</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Delete</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Assign</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Expire</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Archive</a></li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-</header>
-{% endcapture %}
-
-{% include display-component.html component=default-action-bar-menu %}
