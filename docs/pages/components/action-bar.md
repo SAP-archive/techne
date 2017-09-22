@@ -6,10 +6,12 @@ toc: false
 permalink: action-bar.html
 folder: components
 ---
-The Action Bar is located at the top of the page and is used for three main functions: 
+The Action Bar is located at the top of the page and is used for three main functions:
 1. Display the title of the current page
 2. Navigate back on a detail page
 3. Display the main Actions for the page
+
+<br/>
 
 ## Title
 
@@ -51,7 +53,7 @@ The Action bar can display a "Back button" to allow the user to navigate back to
 
 ## Main Actions
 
-Main actions that are performed on the object represented on the page can be displayed on the Action Bar. we recommend not putting more than four actions on the action bar. 
+Main actions that are performed on the object represented on the page can be displayed on the Action Bar. we recommend not putting more than four actions on the action bar.
 
 {% capture default-action-bar-multi %}
 <header class="tn-action-bar">
@@ -89,6 +91,8 @@ Main actions that are performed on the object represented on the page can be dis
 
 {% include display-component.html component=default-action-bar-multi %}
 
+<br/>
+
 ## Actions with Contextual menu
 
 When you need to display more than four actions it is recommended to use the **Contextual Menu** to display all actions.
@@ -119,6 +123,8 @@ When you need to display more than four actions it is recommended to use the **C
 {% endcapture %}
 
 {% include display-component.html component=default-action-bar-menu %}
+
+<br/>
 
 ## Edit mode actions
 
