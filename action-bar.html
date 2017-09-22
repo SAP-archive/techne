@@ -275,35 +275,36 @@
 
     
 
-  <p>The Action Bar sits at the top of an object detail page and allows for saving, cancelling, going back, and other actions upon the object. General guidelines for this pattern are as follows:</p>
+  <p>The Action Bar is located at the top of the page and is used for three main functions:</p>
+<ol>
+  <li>Display the title of the current page</li>
+  <li>Navigate back on a detail page</li>
+  <li>Display the main Actions for the page</li>
+</ol>
 
-<ul>
-  <li>The Action Bar sits at the top of the page</li>
-  <li>When users come to a new/create object, the Cancel and Save are both visible and enabled.</li>
-  <li>When there is a primary button other than Save, the Primary button should always be active. There is no Cancel link in this case.</li>
-  <li>On an object page in edit mode, before any edits have been made Cancel and Save are not visible or enabled.</li>
-  <li>A user must click or tap inside a field to make visible and enable the Save and Cancel actions.</li>
-  <li>In the new or edit scenario if a user clicks on Cancel, the form is cleared and the user is taken back to the page they came from.</li>
-  <li>If the user leaves a page in the middle of create or edit, they should receive a confirmation dialogue asking them to confirm whether they want to leave the page without saving (see screenshot)</li>
-</ul>
+<p><br /></p>
 
-<h2 id="default-action-bar">Default Action Bar</h2>
+<h2 id="title">Title</h2>
+
+<p>The page title is displayed very prominently in the Action Bar. This is helpful for the user to know what page or part of the application is currently in use. The page title should be descriptive like “Your profile” or “Product #2342 - Red T-Shirt Type D”</p>
 
 <header class="tn-action-bar">
     <h1 class="tn-action-bar__title">
-        Page Title
+        Your profile
     </h1>
 </header>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"tn-action-bar"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-action-bar__title"</span><span class="nt">&gt;</span>
-        Page Title
+        Your profile
     <span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/header&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="action-bar-with-back-button">Action Bar with Back Button</h2>
+<h2 id="back-button">Back Button</h2>
+
+<p>The Action bar can display a “Back button” to allow the user to navigate back to the previous page in the navigation hierarchy. For example if the user click an item in a table row and the application navigate to the details page, that details page should have the back button to give the user the posibility to go back to the table.</p>
 
 <header class="tn-action-bar">
     <div class="tn-action-bar__navigation">
@@ -313,7 +314,7 @@
 
     </div>
     <h1 class="tn-action-bar__title">
-        Page Title
+        Product #2342 - Red T-Shirt Type D
     </h1>
 </header>
 
@@ -325,13 +326,15 @@
 
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-action-bar__title"</span><span class="nt">&gt;</span>
-        Page Title
+        Product #2342 - Red T-Shirt Type D
     <span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/header&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="action-bar-with-multiple-action-buttons">Action Bar with Multiple Action Buttons</h2>
+<h2 id="main-actions">Main Actions</h2>
+
+<p>Main actions that are performed on the object represented on the page can be displayed on the Action Bar. we recommend not putting more than four actions on the action bar.</p>
 
 <header class="tn-action-bar">
     <h1 class="tn-action-bar__title">
@@ -340,31 +343,27 @@
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
-                Cancel
+                <span class="tn-icon tn-icon--customize tn-icon--medium" role="presentation"></span>
+                Customize
             </button>
-
         </div>
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
-                Cancel
+                <span class="tn-icon tn-icon--combinedview tn-icon--medium" role="presentation"></span>
+                Combine
             </button>
-
         </div>
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
-                Cancel
+                <span class="tn-icon tn-icon--sync tn-icon--medium" role="presentation"></span>
+                Sync
             </button>
-
         </div>
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--action-bar">
-                <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
-                Save
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--clone tn-icon--medium" role="presentation"></span>
+                Clone
             </button>
-
         </div>
     </div>
 </header>
@@ -376,38 +375,36 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__actions"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                Cancel
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--customize tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Customize
             <span class="nt">&lt;/button&gt;</span>
-
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                Cancel
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--combinedview tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Combine
             <span class="nt">&lt;/button&gt;</span>
-
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                Cancel
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--sync tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Sync
             <span class="nt">&lt;/button&gt;</span>
-
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--action-bar"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                Save
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--clone tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Clone
             <span class="nt">&lt;/button&gt;</span>
-
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/header&gt;</span></code></pre></figure>
 
 <p><br /></p>
 
-<h2 id="action-bar-with-contextual-menu">Action Bar with Contextual Menu</h2>
+<h2 id="actions-with-contextual-menu">Actions with Contextual menu</h2>
+
+<p>When you need to display more than four actions it is recommended to use the <strong>Contextual Menu</strong> to display all actions.</p>
 
 <header class="tn-action-bar">
     <h1 class="tn-action-bar__title">
@@ -415,24 +412,19 @@
     </h1>
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
-
-
             <div class="tn-dropdown">
                 <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="3ewpS611" aria-haspopup="true" aria-expanded="false" aria-label="More">
                     <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
                     More
                 </button>
-
                 <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="3ewpS611">
-                    <li><a href="#" class="tn-dropdown__item">Edit</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Delete</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Assign</a></li>
-                    <li><a href="#" class="tn-dropdown__item">Expire</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Customize</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Combine</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Sync</a></li>
+                    <li><a href="#" class="tn-dropdown__item">Clone</a></li>
                     <li><a href="#" class="tn-dropdown__item">Archive</a></li>
                 </ul>
-
             </div>
-
         </div>
     </div>
 </header>
@@ -443,24 +435,65 @@
     <span class="nt">&lt;/h1&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__actions"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
-
-
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-dropdown"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span> <span class="na">aria-controls=</span><span class="s">"3ewpS611"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
                     More
                 <span class="nt">&lt;/button&gt;</span>
-
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-dropdown__menu tn-contextual-menu"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">id=</span><span class="s">"3ewpS611"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Assign<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Expire<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Customize<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Combine<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Sync<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Clone<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tn-dropdown__item"</span><span class="nt">&gt;</span>Archive<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
-
             <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre></figure>
 
+<p><br /></p>
+
+<h2 id="edit-mode-actions">Edit mode actions</h2>
+
+<p>When the user is editing the content of the page, the Actions to Save or Discard/Cancel the changes are also displayed on the Action Bar. In this case the Primary action is styled as Standard button.</p>
+
+<header class="tn-action-bar">
+    <h1 class="tn-action-bar__title">
+        Page Title
+    </h1>
+    <div class="tn-action-bar__actions">
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--text tn-button--action-bar">
+                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
+                Cancel
+            </button>
+        </div>
+        <div class="tn-action-bar__action-item">
+            <button class="tn-button tn-button--action-bar">
+                <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+                Save
+            </button>
+        </div>
+    </div>
+</header>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"tn-action-bar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-action-bar__title"</span><span class="nt">&gt;</span>
+        Page Title
+    <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__actions"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--action-bar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Cancel
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-action-bar__action-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--action-bar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checkedlg tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                Save
+            <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/header&gt;</span></code></pre></figure>
