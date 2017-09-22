@@ -1,7 +1,10 @@
+
+{% import "../forms.njk" as forms %}
+{% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
 {#
     see ./data.json for object structure
 #}
-
 {% macro pagination(properties={}) %}
 {%- set currentPage = properties.currentPage -%}
 {%- set totalItems = properties.totalItems -%}
@@ -10,14 +13,14 @@
 
 <ul class="tn-pagination">
     <span class="tn-pagination__total">{{totalItems}} items</span>
-    <li class="tn-pagination__item">
+    <li class="tn-pagination__item tn-pagination__navigation">
         {%- if currentPage === 1 %}
-            <a href="#" class="tn-pagination__link" aria-label="Previous" aria-disabled="true">
+        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
         {%- else %}
-            <a href="#" class="tn-pagination__link" aria-label="Previous">
+        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous">
         {%- endif %}
-            <span aria-hidden="true"><</span>
-        </a>
+            <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
+        </button>
     </li>
     {%- if pages < 4 %}
         {%- for item in range(1, pages + 1) %}
@@ -35,7 +38,7 @@
         </li>
         {%- for item in range(pages, pages+1) %}
             <li class="tn-pagination__item">
-                <span class="tn-pagination__link tn-pagination__more"
+                <span class="tn-pagination__more"
                     aria-hidden="true"
                     aria-label="..."
                     role="presentation">&#8226;&#8226;&#8226;</span>
@@ -55,7 +58,7 @@
                     <a href="#" class="tn-pagination__link">{{currentPage+1}}</a>
                 </li>
                 <li class="tn-pagination__item">
-                    <span class="tn-pagination__link tn-pagination__more"
+                    <span class="tn-pagination__more"
                         aria-hidden="true"
                         aria-label="..."
                         role="presentation">&#8226;&#8226;&#8226;</span>
@@ -81,7 +84,7 @@
         {%- endfor %}
         {%- for item in range(pages, pages+1) %}
             <li class="tn-pagination__item">
-            <span class="tn-pagination__link tn-pagination__more"
+            <span class="tn-pagination__more"
                 aria-hidden="true"
                 aria-label="..."
                 role="presentation">&#8226;&#8226;&#8226;</span>
@@ -102,12 +105,12 @@
     {%- endif %}
     <li class="tn-pagination__item">
         {%- if currentPage === pages | round(0) %}
-            <a href="#" class="tn-pagination__link" aria-label="Next" aria-disabled="true">
+        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next" aria-disabled="true">
         {%- else %}
-            <a href="#" class="tn-pagination__link" aria-label="Next">
+        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
         {%- endif %}
-            <span aria-hidden="true">></span>
-        </a>
+            <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
+        </button>
     </li>
 </ul>
 <br>

@@ -1,9 +1,11 @@
 {% extends "layout.njk" %}
 {% from "./../format.njk" import format %}
 {% from "./component.njk" import pagination %}
+{% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
-{% set css_deps = ['components/pagination'] %}
+{% set css_deps = ['components/pagination','icons'] %}
 
 {% block content %}
 
