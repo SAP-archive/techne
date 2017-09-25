@@ -5,8 +5,11 @@ sidebar: components-sidebar
 toc: false
 permalink: card-group.html
 folder: components
-summary:
 ---
+
+The Card Group is used to display a collection of Cards representing objects of the same type. For instance: A set of products, projects, organizations, etc. It should be used to display collections of objects where the user can find and identify the items visually, by glancing at the Card Groups. The Cards layouts doesn't allow too much comparison of the data inside the cards; but different state (active/inactive, etc) are easily identifiable.
+
+<br />
 
 ## Default Layout
 
@@ -15,71 +18,66 @@ summary:
   <div class="tn-card" role="button">
       <div class="tn-card__content">
            <h2 class="tn-card__header">
-               Lorem ipsum dolor quam placeat numquam repellendus
+               Title/Primary info
            </h2>
            <p class="tn-card__description">
-               Tenetur quam placeat obcaecati molestias voluptatibus dolorum ut
-               molestias voluptatibus dolorum ut.
+               Secondary info.
            </p>
            <p class="tn-card__status">
-               <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
+               <span class="tn-has-color-status-1">STATUS</span>
            </p>
       </div>
   </div>
     <div class="tn-card" role="button">
         <div class="tn-card__content">
-             <h2 class="tn-card__header">
-                 Lorem ipsum dolor quam placeat numquam repellendus
-             </h2>
-             <p class="tn-card__description">
-                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum
-                 ut molestias voluptatibus dolorum ut.
-             </p>
-             <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
-             </p>
+           <h2 class="tn-card__header">
+               Title/Primary info
+           </h2>
+           <p class="tn-card__description">
+               Secondary info.
+           </p>
+           <p class="tn-card__status">
+               <span class="tn-has-color-status-1">STATUS</span>
+           </p>
         </div>
     </div>
     <div class="tn-card" role="button">
         <div class="tn-card__content">
-             <h2 class="tn-card__header">
-                 Lorem ipsum dolor quam placeat numquam repellendus
-             </h2>
-             <p class="tn-card__description">
-                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum
-                 ut molestias voluptatibus dolorum ut.
-             </p>
-             <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
-             </p>
+           <h2 class="tn-card__header">
+               Title/Primary info
+           </h2>
+           <p class="tn-card__description">
+               Secondary info.
+           </p>
+            <p class="tn-card__status">
+                <span class="tn-has-color-status-1">STATUS</span>
+            </p>
         </div>
     </div>
     <div class="tn-card" role="button">
         <div class="tn-card__content">
-             <h2 class="tn-card__header">
-                 Lorem ipsum dolor quam placeat numquam repellendus
-             </h2>
-             <p class="tn-card__description">
-                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum
-                 ut molestias voluptatibus dolorum ut.
-             </p>
-             <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
-             </p>
+           <h2 class="tn-card__header">
+               Title/Primary info
+           </h2>
+           <p class="tn-card__description">
+               Secondary info.
+           </p>
+           <p class="tn-card__status">
+               <span class="tn-has-color-status-1">STATUS</span>
+           </p>
         </div>
     </div>
     <div class="tn-card" role="button">
         <div class="tn-card__content">
-             <h2 class="tn-card__header">
-                 Lorem ipsum dolor quam placeat numquam repellendus
-             </h2>
-             <p class="tn-card__description">
-                 Tenetur quam placeat obcaecati molestias voluptatibus dolorum
-                 ut molestias voluptatibus dolorum ut.
-             </p>
-             <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
-             </p>
+           <h2 class="tn-card__header">
+               Title/Primary info
+           </h2>
+           <p class="tn-card__description">
+               Secondary info.
+           </p>
+           <p class="tn-card__status">
+               <span class="tn-has-color-status-1">STATUS</span>
+           </p>
         </div>
     </div>
 </div>
@@ -96,13 +94,13 @@ summary:
     <div class="tn-card">
         <div class="tn-card__content">
              <h2 class="tn-card__header">
-                 Lorem ipsum dolor quam placeat numquam repellendus
+                 Card Primary info
              </h2>
              <p class="tn-card__description">
                  Tenetur quam  dolorum ut.
              </p>
              <p class="tn-card__status">
-                 VOLUPTATE QUIS ADIPISCI SIT
+                 STATUS
              </p>
         </div>
         <div class="tn-card__actions">
@@ -121,7 +119,7 @@ summary:
                  ut molestias voluptatibus dolorum ut.
              </p>
              <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
+                 <span class="tn-has-color-status-1">STATUS</span>
              </p>
         </div>
     </div>
@@ -157,7 +155,7 @@ summary:
                  ut molestias voluptatibus dolorum ut.
              </p>
              <p class="tn-card__status">
-                 <span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>
+                 <span class="tn-has-color-status-1">STATUS</span>
              </p>
         </div>
     </div>
