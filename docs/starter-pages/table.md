@@ -1,14 +1,14 @@
 ---
 layout: starter-page
-title: Cards Starter Page
-keywords: cards starter page
+title: Table Starter Page
+keywords: table starter page
 search: exclude
 toc: false
-permalink: cards-starter-page.html
+permalink: table-starter-page.html
 ---
 
 {% include starter-page-components/action-bar.html %}
 {% include starter-page-components/page-level-help.html %}
 {% include starter-page-components/toolbar-top.html %}
-{% include starter-page-components/card-group.html %}
+{% include starter-page-components/table.html %}
 {% include starter-page-components/toolbar-bottom.html %}
