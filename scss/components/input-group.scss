@@ -19,6 +19,7 @@ $block: ns(input-group);
     //set all BLOCK reset and baseline styles
     @include reset;
     display: inline-flex;
+    vertical-align: bottom;
     max-height: $tn-forms-height--input-text;
 
     //ELEMENTS *******************************************
