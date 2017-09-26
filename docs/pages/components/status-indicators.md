@@ -5,19 +5,36 @@ sidebar: components-sidebar
 toc: false
 permalink: status-indicators.html
 folder: components
-summary:
 ---
 
-<style>
-.tn-badge, .tn-label {
-    margin-right: 20px;
-}
-</style>
+The Status indicators are used to show the status of a object of a process. They can be displayed as **Labels**, **Badges** or **Pills** depending on the context.
 
+We provide different colors for fast recognition of the status, can be used as follows:
 
-## Badge
+* **Black**: is the default color, used when the status doesn't have a binary status like active/inactive or error.
+* **Green**: signal positive status: active, published, approved, etc.
+* **Orange**: used for status like: in process, waiting, reviewing, etc.
+* **Red**: signal the user that the object or process needs attention: in error, rejected, expired, etc.
+
+<br />
+
+## Indicators
 
 {% capture badge %}
+<span class="tn-label">
+    Default
+</span>
+<span class="tn-label tn-label--success">
+    Success
+</span>
+<span class="tn-label tn-label--warning">
+    Warning
+</span>
+<span class="tn-label tn-label--error">
+    Error
+</span>
+
+
 <span class="tn-badge">
     Default
 </span>
@@ -30,15 +47,7 @@ summary:
 <span class="tn-badge tn-badge--error">
     Default
 </span>
-{% endcapture %}
 
-{% include display-component.html component=badge %}
-
-<br>
-
-## Badge Pill
-
-{% capture badge-pill %}
 <span class="tn-badge tn-badge--pill">
     Default
 </span>
@@ -53,28 +62,10 @@ summary:
 </span>
 {% endcapture %}
 
-{% include display-component.html component=badge-pill %}
+{% include display-component.html component=badge %}
 
-<br>
-
-
-## Label
-
-{% capture label %}
-<span class="tn-label">
-    Default
-</span>
-<span class="tn-label tn-label--success">
-    Success
-</span>
-<span class="tn-label tn-label--warning">
-    Warning
-</span>
-<span class="tn-label tn-label--error">
-    Error
-</span>
-{% endcapture %}
-
-{% include display-component.html component=label %}
-
-<br>
+<style>
+.tn-badge, .tn-label {
+    margin-right: 20px;
+}
+</style>
