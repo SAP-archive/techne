@@ -7,11 +7,11 @@ permalink: status-indicators.html
 folder: components
 ---
 
-The Status indicators are used to show the status of a object of a process. They can be displayed as **Labels**, **Badges** or **Pills** depending on the context.
+The Status indicators are used to show the status of an object or a process. They can be displayed as **Labels**, **Badges** or **Pills** depending on the context.
 
-We provide different colors for fast recognition of the status, can be used as follows:
+The following color options are avialable for fast recognition of the status:
 
-* **Black**: is the default color, used when the status doesn't have a binary status like active/inactive or error.
+* **Black**: the default color, used when the status doesn't have active/inactive or error states.
 * **Green**: signal positive status: active, published, approved, etc.
 * **Orange**: used for status like: in process, waiting, reviewing, etc.
 * **Red**: signal the user that the object or process needs attention: in error, rejected, expired, etc.
