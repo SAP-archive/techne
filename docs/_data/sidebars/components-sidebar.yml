@@ -60,6 +60,10 @@ entries:
       url: /toolbar.html
       output: web
 
+    - title: Modal
+      url: /modal.html
+      output: web
+
   # folders:
   # - title: Structure
   #   output: web
