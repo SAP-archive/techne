@@ -1290,3 +1290,8 @@ h4.panel-title {
   padding: 5px;
   text-align: center;
 }
+
+.modal-demo-bg{
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 40px;
+}

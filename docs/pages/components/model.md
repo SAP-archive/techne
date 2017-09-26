@@ -8,10 +8,10 @@ folder: components
 summary:
 ---
 
-## Default Modal
 Use to let people know there is something happening, but you can dismiss and act upon it later if needed, e.g. a service subscribed to needs updating. It’s recommended to use the dark blue treatment for Alerts. Alerts should display until they are dismissed by clicking or tapping X.
 
 {% capture default-modal %}
+<div class="modal-demo-bg">
 <div class="tn-modal">
     <div class="tn-modal__content">
         <div class="tn-modal__header">
@@ -28,6 +28,7 @@ Use to let people know there is something happening, but you can dismiss and act
             <button class="tn-modal__button-secondary">Secondary</button>
         </footer>
     </div>
+</div>
 </div>
 {% endcapture %}
 
