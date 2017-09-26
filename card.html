@@ -282,15 +282,30 @@
 
     
 
-  <h2 id="default-card">Default Card</h2>
+  <p>The Card is a container element, used to display information in a way the user can glance and find easily the information. They have common elements always on the same position and with similar visual style.</p>
+
+<p>The cards can be <a href="card-group.html">grouped</a> to display a set of the object of the same type.</p>
+
+<p>Some common elements are styled by default:</p>
+<ul>
+  <li><strong>Primary info</strong>: used mainly to display names or titles.</li>
+  <li><strong>Secondary info</strong>: here you can add more information about the object.</li>
+  <li><strong>Status</strong>: you can signal the status of the object, for instance: active/inactive</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="default-card">Default Card</h2>
+
+<p>Used to display static information only. The user should not interact with this card.</p>
 
 <div class="tn-card">
     <div class="tn-card__content">
          <h2 class="tn-card__header">
-             Primary Value
+             Primary info
          </h2>
          <p class="tn-card__description">
-             Secondary Value aute irure dolor in reprehenderit in voluptate
+             Secondary info aute irure dolor in reprehenderit in voluptate
          </p>
          <p class="tn-card__status">
              Status
@@ -301,10 +316,10 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card__content"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"tn-card__header"</span><span class="nt">&gt;</span>
-             Primary Value
+             Primary info
          <span class="nt">&lt;/h2&gt;</span>
          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"tn-card__description"</span><span class="nt">&gt;</span>
-             Secondary Value aute irure dolor in reprehenderit in voluptate
+             Secondary info aute irure dolor in reprehenderit in voluptate
          <span class="nt">&lt;/p&gt;</span>
          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"tn-card__status"</span><span class="nt">&gt;</span>
              Status
@@ -315,6 +330,8 @@
 <p><br /></p>
 
 <h2 id="button-card">Button Card</h2>
+
+<p>Use this type of card to signal the user that there is more information behind the card. The user can access more information about the object by clicking/tapping on the card.</p>
 
 <div class="tn-card tn-card--button" role="button">
     <div class="tn-card__content">
@@ -348,6 +365,8 @@
 
 <h2 id="disabled-card">Disabled Card</h2>
 
+<p>Use this Card to signal the user he cannot interact with this object. The difference with the default card is that at some point in time the user may be able to interact with a card that’s disabled. For example if the user doesn’t have the right permissions to access the object represented by the card.</p>
+
 <div class="tn-card tn-card--button is-disabled" aria-disabled="true" role="button">
     <div class="tn-card__content">
          <h2 class="tn-card__header">
@@ -379,6 +398,8 @@
 <p><br /></p>
 
 <h2 id="actions-card">Actions Card</h2>
+
+<p>The card can also contain actions that can be performed on the object. This actions are displayed under a “more” dropdown menu, represented by an ellipsis icon. When clicked all the actions will be displayed.</p>
 
 <div class="tn-card tn-card--button">
     <div class="tn-card__content">
@@ -438,8 +459,26 @@
 
 <h2 id="media-card">Media Card</h2>
 
+<p>This type of card can display images. Along with the usual card elements. Used to display information like products, profiles and other objects with associated visual information.</p>
+
+<p>It can adopt various layouts, to display the better accommodate the images.</p>
+
 <div class="tn-card" role="button">
     <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+    <div class="tn-card__content">
+         <h2 class="tn-card__header">
+             Asperiores doloribus id dolore
+         </h2>
+         <p class="tn-card__description">
+             Consectetur adipisicing elit
+         </p>
+         <p class="tn-card__status">
+             <span class="tn-has-color-status-1">Cumque itaque</span>
+         </p>
+    </div>
+</div>
+<div class="tn-card" role="button">
+    <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
     <div class="tn-card__content">
          <h2 class="tn-card__header">
              Asperiores doloribus id dolore
@@ -466,26 +505,8 @@
              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-has-color-status-1"</span><span class="nt">&gt;</span>Cumque itaque<span class="nt">&lt;/span&gt;</span>
          <span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h2 id="media-card-with-round-image">Media Card with Round Image</h2>
-
-<div class="tn-card" role="button">
-    <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-    <div class="tn-card__content">
-         <h2 class="tn-card__header">
-             Asperiores doloribus id dolore
-         </h2>
-         <p class="tn-card__description">
-             Consectetur adipisicing elit
-         </p>
-         <p class="tn-card__status">
-             <span class="tn-has-color-status-1">Cumque itaque</span>
-         </p>
-    </div>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card__media tn-card__media--round"</span> <span class="na">style=</span><span class="s">"background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)"</span> <span class="na">aria-label=</span><span class="s">"YaaS product thumbnail"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card__content"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"tn-card__header"</span><span class="nt">&gt;</span>
@@ -502,10 +523,26 @@
 
 <p><br /></p>
 
-<h2 id="media-card-with-fill-image">Media Card with Fill Image</h2>
+<h2 id="media-card-with-fill-image">Media Card with fill Image</h2>
+
+<p>The Media Card can also display images in a more prominent way. Can be used horizontally or vertically.</p>
 
 <div class="tn-card" role="button">
     <div class="tn-card__media tn-card__media--fill" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+    <div class="tn-card__content">
+         <h2 class="tn-card__header">
+             Asperiores doloribus id dolore
+         </h2>
+         <p class="tn-card__description">
+             Consectetur adipisicing elit
+         </p>
+         <p class="tn-card__status">
+             <span class="tn-has-color-status-1">Cumque itaque</span>
+         </p>
+    </div>
+</div>
+<div class="tn-card tn-card--vertical" role="button">
+    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
     <div class="tn-card__content">
          <h2 class="tn-card__header">
              Asperiores doloribus id dolore
@@ -532,28 +569,8 @@
              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-has-color-status-1"</span><span class="nt">&gt;</span>Cumque itaque<span class="nt">&lt;/span&gt;</span>
          <span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="vertical-media-card">Vertical Media Card</h2>
-
-<div class="tn-card tn-card--vertical" role="button">
-    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-    <div class="tn-card__content">
-         <h2 class="tn-card__header">
-             Asperiores doloribus id dolore
-         </h2>
-         <p class="tn-card__description">
-             Consectetur adipisicing elit
-         </p>
-         <p class="tn-card__status">
-             <span class="tn-has-color-status-1">Cumque itaque</span>
-         </p>
-    </div>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card tn-card--vertical"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card tn-card--vertical"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card__media"</span> <span class="na">style=</span><span class="s">"background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)"</span> <span class="na">aria-label=</span><span class="s">"YaaS product thumbnail"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-card__content"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"tn-card__header"</span><span class="nt">&gt;</span>
@@ -571,6 +588,8 @@
 <p><br /></p>
 
 <h2 id="custom-content-card">Custom Content Card</h2>
+
+<p>As a container element, the card can display all types of information inside the content area.</p>
 
 <div class="tn-card">
     <div class="tn-card__content">
