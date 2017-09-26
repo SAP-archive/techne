@@ -5,10 +5,16 @@ sidebar: components-sidebar
 toc: false
 permalink: dropdown.html
 folder: components
-summary:
 ---
 
+The dropdown component let the user select one of different options. It is more flexible than the normal Select.
+
+<br />
+
 ## Default Dropdown
+
+The dropdown is designed to look like the rest of input components. The options can be divided in groups, which are visually separated and can have a small Group header text.
+
 {% capture default-dropdown %}
 <div class="tn-dropdown">
     <button class="tn-dropdown__control" aria-controls="nNJnB279" aria-expanded="false" aria-haspopup="true">
@@ -32,7 +38,11 @@ summary:
 
 {% include display-component.html component=default-dropdown %}
 
+<br />
+
 ## Dropdown with Icon
+
+It can also include complementary information like an icon.
 
 {% capture icon-dropdown %}
 <div class="tn-dropdown">
@@ -58,7 +68,11 @@ summary:
 
 {% include display-component.html component=icon-dropdown %}
 
+<br />
+
 ## Disabled Dropdown
+
+As the rest of the form inputs it can also have a disabled state.
 
 {% capture disabled-dropdown %}
 <div class="tn-dropdown">
