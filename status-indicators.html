@@ -282,73 +282,20 @@
 
     
 
-  <style>
-.tn-badge, .tn-label {
-    margin-right: 20px;
-}
-</style>
+  <p>The Status indicators are used to show the status of an object or a process. They can be displayed as <strong>Labels</strong>, <strong>Badges</strong> or <strong>Pills</strong> depending on the context.</p>
 
-<h2 id="badge">Badge</h2>
+<p>The following color options are avialable for fast recognition of the status:</p>
 
-<p><span class="tn-badge">
-    Default
-</span>
-<span class="tn-badge tn-badge--success">
-    Default
-</span>
-<span class="tn-badge tn-badge--warning">
-    Default
-</span>
-<span class="tn-badge tn-badge--error">
-    Default
-</span></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--success"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--warning"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--error"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span></code></pre></figure>
+<ul>
+  <li><strong>Black</strong>: the default color, used when the status doesn’t have active/inactive or error states.</li>
+  <li><strong>Green</strong>: signal positive status: active, published, approved, etc.</li>
+  <li><strong>Orange</strong>: used for status like: in process, waiting, reviewing, etc.</li>
+  <li><strong>Red</strong>: signal the user that the object or process needs attention: in error, rejected, expired, etc.</li>
+</ul>
 
 <p><br /></p>
 
-<h2 id="badge-pill">Badge Pill</h2>
-
-<p><span class="tn-badge tn-badge--pill">
-    Default
-</span>
-<span class="tn-badge tn-badge--success tn-badge--pill">
-    Default
-</span>
-<span class="tn-badge tn-badge--warning tn-badge--pill">
-    Default
-</span>
-<span class="tn-badge tn-badge--error tn-badge--pill">
-    Default
-</span></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--pill"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--success tn-badge--pill"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--warning tn-badge--pill"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--error tn-badge--pill"</span><span class="nt">&gt;</span>
-    Default
-<span class="nt">&lt;/span&gt;</span></code></pre></figure>
-
-<p><br /></p>
-
-<h2 id="label">Label</h2>
+<h2 id="indicators">Indicators</h2>
 
 <p><span class="tn-label">
     Default
@@ -363,6 +310,32 @@
     Error
 </span></p>
 
+<p><span class="tn-badge">
+    Default
+</span>
+<span class="tn-badge tn-badge--success">
+    Default
+</span>
+<span class="tn-badge tn-badge--warning">
+    Default
+</span>
+<span class="tn-badge tn-badge--error">
+    Default
+</span></p>
+
+<p><span class="tn-badge tn-badge--pill">
+    Default
+</span>
+<span class="tn-badge tn-badge--success tn-badge--pill">
+    Default
+</span>
+<span class="tn-badge tn-badge--warning tn-badge--pill">
+    Default
+</span>
+<span class="tn-badge tn-badge--error tn-badge--pill">
+    Default
+</span></p>
+
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
     Default
 <span class="nt">&lt;/span&gt;</span>
@@ -374,9 +347,41 @@
 <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label tn-label--error"</span><span class="nt">&gt;</span>
     Error
+<span class="nt">&lt;/span&gt;</span>
+
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--success"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--warning"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--error"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--pill"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--success tn-badge--pill"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--warning tn-badge--pill"</span><span class="nt">&gt;</span>
+    Default
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-badge tn-badge--error tn-badge--pill"</span><span class="nt">&gt;</span>
+    Default
 <span class="nt">&lt;/span&gt;</span></code></pre></figure>
 
-<p><br /></p>
+<style>
+.tn-badge, .tn-label {
+    margin-right: 20px;
+}
+</style>
+
 
 
     <div class="tags">
