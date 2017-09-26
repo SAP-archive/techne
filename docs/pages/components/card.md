@@ -5,19 +5,31 @@ sidebar: components-sidebar
 toc: false
 permalink: card.html
 folder: components
-summary:
 ---
 
+The Card is a container element, used to display information in a way the user can glance and find easily the information. They have common elements always on the same position and with similar visual style.
+
+The cards can be [grouped](card-group.html) to display a set of the object of the same type.
+
+Some common elements are styled by default:
+* **Primary info**: used mainly to display names or titles.
+* **Secondary info**: here you can add more information about the object.
+* **Status**: you can signal the status of the object, for instance: active/inactive 
+
+<br/>
+
 ## Default Card
+
+Used to display static information only. The user should not interact with this card.
 
 {% capture default-card %}
 <div class="tn-card">
     <div class="tn-card__content">
          <h2 class="tn-card__header">
-             Primary Value
+             Primary info
          </h2>
          <p class="tn-card__description">
-             Secondary Value aute irure dolor in reprehenderit in voluptate
+             Secondary info aute irure dolor in reprehenderit in voluptate
          </p>
          <p class="tn-card__status">
              Status
@@ -31,6 +43,8 @@ summary:
 <br>
 
 ## Button Card
+
+Use this type of card to signal the user that there is more information behind the card. The user can access more information about the object by clicking/tapping on the card.
 
 {% capture button-card %}
 <div class="tn-card tn-card--button" role="button">
@@ -54,6 +68,8 @@ summary:
 
 ## Disabled Card
 
+Use this Card to signal the user he cannot interact with this object. The difference with the default card is that at some point in time the user may be able to interact with a card that's disabled. For example if the user doesn't have the right permissions to access the object represented by the card.
+
 {% capture disabled-card %}
 <div class="tn-card tn-card--button is-disabled" aria-disabled="true" role="button">
     <div class="tn-card__content">
@@ -75,6 +91,8 @@ summary:
 <br>
 
 ## Actions Card
+
+The card can also contain actions that can be performed on the object. This actions are displayed under a "more" dropdown menu, represented by an ellipsis icon. When clicked all the actions will be displayed.
 
 {% capture action-card %}
 <div class="tn-card tn-card--button">
@@ -111,6 +129,10 @@ summary:
 
 ## Media Card
 
+This type of card can display images. Along with the usual card elements. Used to display information like products, profiles and other objects with associated visual information.
+
+It can adopt various layouts, to display the better accommodate the images.
+
 {% capture media-card %}
 <div class="tn-card" role="button">
     <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
@@ -126,13 +148,6 @@ summary:
          </p>
     </div>
 </div>
-{% endcapture %}
-
-{% include display-component.html component=media-card %}
-
-## Media Card with Round Image
-
-{% capture media-card-round-image %}
 <div class="tn-card" role="button">
     <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
     <div class="tn-card__content">
@@ -149,15 +164,31 @@ summary:
 </div>
 {% endcapture %}
 
-{% include display-component.html component=media-card-round-image %}
+{% include display-component.html component=media-card %}
 
 <br>
 
-## Media Card with Fill Image
+## Media Card with fill Image
+
+The Media Card can also display images in a more prominent way. Can be used horizontally or vertically.
 
 {% capture media-card-fill-image %}
 <div class="tn-card" role="button">
     <div class="tn-card__media tn-card__media--fill" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+    <div class="tn-card__content">
+         <h2 class="tn-card__header">
+             Asperiores doloribus id dolore
+         </h2>
+         <p class="tn-card__description">
+             Consectetur adipisicing elit
+         </p>
+         <p class="tn-card__status">
+             <span class="tn-has-color-status-1">Cumque itaque</span>
+         </p>
+    </div>
+</div>
+<div class="tn-card tn-card--vertical" role="button">
+    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
     <div class="tn-card__content">
          <h2 class="tn-card__header">
              Asperiores doloribus id dolore
@@ -176,30 +207,9 @@ summary:
 
 <br>
 
-## Vertical Media Card
-
-{% capture verticle-media-card %}
-<div class="tn-card tn-card--vertical" role="button">
-    <div class="tn-card__media" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-    <div class="tn-card__content">
-         <h2 class="tn-card__header">
-             Asperiores doloribus id dolore
-         </h2>
-         <p class="tn-card__description">
-             Consectetur adipisicing elit
-         </p>
-         <p class="tn-card__status">
-             <span class="tn-has-color-status-1">Cumque itaque</span>
-         </p>
-    </div>
-</div>
-{% endcapture %}
-
-{% include display-component.html component=verticle-media-card %}
-
-<br>
-
 ## Custom Content Card
+
+As a container element, the card can display all types of information inside the content area.
 
 {% capture custom-content-card %}
 <div class="tn-card">
