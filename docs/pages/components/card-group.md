@@ -11,7 +11,9 @@ The Card Group is used to display a collection of Cards representing objects of 
 
 <br />
 
-## Default Layout
+## Three columns layout
+
+The default layout of the Cards group is a three columns layout. The three cards per row will adjust to fill the width of the container element. 
 
 {% capture default-card %}
 <div class="tn-card-group">
@@ -87,7 +89,9 @@ The Card Group is used to display a collection of Cards representing objects of 
 
 <br>
 
-## Two Column Layout
+## Two columns Layout
+
+Depending of the content of the cards you can use the Card Group with a two columns layout.
 
 {% capture two-column %}
 <div class="tn-card-group tn-card-group--2col">
@@ -166,7 +170,9 @@ The Card Group is used to display a collection of Cards representing objects of 
 
 <br>
 
-## Four Column Layout
+## Four column layout
+
+This layout shows more cards per row. The content on the cards should not be too dense.
 
 {% capture four-column %}
 <div class="tn-card-group tn-card-group--4col">
