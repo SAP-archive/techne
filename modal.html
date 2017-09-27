@@ -282,7 +282,13 @@
 
     
 
-  <p>Use to let people know there is something happening, but you can dismiss and act upon it later if needed, e.g. a service subscribed to needs updating. It’s recommended to use the dark blue treatment for Alerts. Alerts should display until they are dismissed by clicking or tapping X.</p>
+  <p>The Modal component is a high level component, used as a temporary container to be displayed on response of an user action. Can be used to collect simple information from the user: a small form; or give some contextual information that doesn’t need the use user to navigate to a new page.</p>
+
+<p><br /></p>
+
+<h2 id="informational-modal">Informational Modal</h2>
+
+<p>Used when you need to inform the user but the <a href="alert.html">Alert Component</a> doesn’t fit all the information. Also when the user have to acknowledge the information, actively, by clicking a button or closing the Modal.</p>
 
 <div class="modal-demo-bg">
 <div class="tn-modal">
@@ -291,14 +297,62 @@
             <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
-            <h4 class="tn-modal__title">Modal Header</h4>
+            <h4 class="tn-modal__title">Product Added</h4>
         </div>
         <div class="tn-modal__body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <b>Thew new product have been added to your catalog.</b><br />
+            <br />
+            Automatic Product ID: <b>PD-3465334</b><br />
+            <br />
+            Expiration date: <b>13/03/2018</b><br />
+            <br />
+        </div>
+    </div>
+</div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-demo-bg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Product Added<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;b&gt;</span>Thew new product have been added to your catalog.<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+            Automatic Product ID: <span class="nt">&lt;b&gt;</span>PD-3465334<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+            Expiration date: <span class="nt">&lt;b&gt;</span>13/03/2018<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="confirmation-modal">Confirmation Modal</h2>
+
+<p>Used to confirm with the user before continuing with destructive or complex actions. In this case the modal have two buttons at the bottom. With the “positive” path always been the primary button.</p>
+
+<div class="modal-demo-bg">
+<div class="tn-modal">
+    <div class="tn-modal__content">
+        <div class="tn-modal__header">
+            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
+            </button>
+            <h4 class="tn-modal__title">Delete</h4>
+        </div>
+        <div class="tn-modal__body">
+            Do you want to delete item <b>X</b>?
         </div>
         <footer class="tn-modal__footer-items">
-            <button class="tn-modal__button-primary">Primary</button>
-            <button class="tn-modal__button-secondary">Secondary</button>
+            <button class="tn-modal__button-primary">Yes</button>
+            <button class="tn-modal__button-secondary">No</button>
         </footer>
     </div>
 </div>
@@ -311,14 +365,70 @@
             <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Modal Header<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/h4&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Do you want to delete item <span class="nt">&lt;b&gt;</span>X<span class="nt">&lt;/b&gt;</span>?
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"tn-modal__footer-items"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-primary"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-secondary"</span><span class="nt">&gt;</span>No<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="form-modal">Form Modal</h2>
+
+<p>Used to collect simple information from the user. Please use with care and don’t include more than five inputs on a modal to avoid scrolling inside the modal.</p>
+
+<div class="modal-demo-bg">
+<div class="tn-modal">
+    <div class="tn-modal__content">
+        <div class="tn-modal__header">
+            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
+            </button>
+            <h4 class="tn-modal__title">Invite user</h4>
+        </div>
+        <div class="tn-modal__body">
+        <div class="tn-form__group">
+            <div class="tn-form__item">
+                <label class="tn-form__label is-required" for="input-2">Email*</label>
+                <input class="tn-form__control" type="text" id="input-2" />
+            </div>
+        </div>
+        </div>
+        <footer class="tn-modal__footer-items">
+            <button class="tn-modal__button-primary">Invite</button>
+            <button class="tn-modal__button-secondary">Cancel</button>
+        </footer>
+    </div>
+</div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-demo-bg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Invite user<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label is-required"</span> <span class="na">for=</span><span class="s">"input-2"</span><span class="nt">&gt;</span>Email*<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"tn-modal__footer-items"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-primary"</span><span class="nt">&gt;</span>Invite<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-secondary"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;/footer&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
