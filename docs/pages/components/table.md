@@ -206,8 +206,8 @@ When there is more than four actions to display we recommend the use of the cont
             <td>01/26/17</td>
             <td>
                 <div class="tn-dropdown">
-                    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
-                        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+                    <button class="tn-button tn-button--icon tn-button--text tn-button--small" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
+                        <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                     </button>
                     <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk786">
                         <li><a class="tn-dropdown__item">Edit</a></li>
@@ -225,8 +225,8 @@ When there is more than four actions to display we recommend the use of the cont
             <td>01/26/17</td>
             <td>
                 <div class="tn-dropdown">
-                    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk787" aria-haspopup="true" aria-label="More">
-                        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+                    <button class="tn-button tn-button--icon tn-button--text tn-button--small" aria-controls="nH3Yk787" aria-haspopup="true" aria-label="More">
+                        <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                     </button>
                     <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk787">
                         <li><a class="tn-dropdown__item">Edit</a></li>
@@ -244,8 +244,8 @@ When there is more than four actions to display we recommend the use of the cont
             <td>01/26/17</td>
             <td>
                 <div class="tn-dropdown">
-                    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk788" aria-haspopup="true" aria-label="More">
-                        <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
+                    <button class="tn-button tn-button--icon tn-button--text tn-button--small" aria-controls="nH3Yk788" aria-haspopup="true" aria-label="More">
+                        <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                     </button>
                     <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk788">
                         <li><a class="tn-dropdown__item">Edit</a></li>
