@@ -6,7 +6,8 @@
         "dest": "./dist",
         "docs": "./docs",
         "www": "./www",
-        "tmp": "./tmp"
+        "tmp": "./tmp",
+        "cdn": "./cdn"
   },
   "tasks": {
     "css": {
