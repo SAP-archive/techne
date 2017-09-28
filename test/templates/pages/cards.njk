@@ -11,6 +11,7 @@
 {% from "../label/component.njk" import label %}
 {% from "../card/component.njk" import card %}
 {% from "../card-group/component.njk" import card_group %}
+{% from "../add-button/component.njk" import add_button %}
 
 {% block content %}
 
@@ -71,6 +72,9 @@
         aria=data.aria
     )
 }}
+
+{# Add New Button #}
+{{ add_button() }}
 
 {# Cards #}
 <div class="tn-container">
