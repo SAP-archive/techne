@@ -69,12 +69,17 @@
             block: data.modifier.block
         },
         state=data.state,
-        aria=data.aria
+        aria=data.aria,
+        classes="test"
     )
 }}
 
 {# Add New Button #}
-{{ add_button() }}
+<div class="tn-container tn-has-text-align-right">
+    <button class="tn-button tn-button--text tn-button--small">
+        <span class="tn-icon tn-icon--addlg" role="presentation"></span>ADD
+    </button>
+</div>
 
 {# Cards #}
 <div class="tn-container">
@@ -109,6 +114,7 @@
 </div>
 
 {# Toolbar #}
+
 {{  toolbar() }}
 
 {% endblock %}

@@ -9,6 +9,9 @@ $ns: ns();
 .#{$ns}has-text-align-center {
     text-align: center !important;
 }
+.#{$ns}has-text-align-right {
+    text-align: right !important;
+}
 .#{$ns}has-border-radius-50percent {
     border-radius: 50% !important;
 }
