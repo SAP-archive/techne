@@ -4,7 +4,7 @@ const config = require('../config');
 let environment = require('../lib/environment');
 
 const task = (cb) => {
-    gulpSequence('pkg-clean', 'pkg-css', 'pkg-iconfont', cb)
+    gulpSequence('pkg-clean', 'pkg-css', 'pkg-iconfont', 'pkg-cdn', cb)
 }
 
 gulp.task('build:dist', task);
