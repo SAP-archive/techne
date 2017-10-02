@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-3
+* Techne v2.0.0-alpha-4
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -8,6 +8,9 @@
 }
 .tn-has-text-align-center {
   text-align: center!important
+}
+.tn-has-text-align-right {
+  text-align: right!important
 }
 .tn-has-border-radius-50percent {
   border-radius: 50%!important

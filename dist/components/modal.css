@@ -6,7 +6,9 @@
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true] | (.is-pressed | [aria-pressed=true]))
 */
-.tn-button {
+.tn-button,
+.tn-modal__button-primary,
+.tn-modal__button-secondary {
   margin: 0;
   padding: 0;
   font-smoothing: antialiased;
@@ -64,46 +66,74 @@
   padding-left: 20px;
   padding-right: 20px
 }
-.tn-button:hover {
+.tn-button:hover,
+.tn-modal__button-primary:hover,
+.tn-modal__button-secondary:hover {
   background-color: #008ac6;
   color: #f6f8f9;
   text-decoration: none
 }
-.tn-button:focus {
+.tn-button:focus,
+.tn-modal__button-primary:focus,
+.tn-modal__button-secondary:focus {
   color: #f6f8f9;
   -webkit-box-shadow: 0 0 4px 1px #8a8fa1;
   box-shadow: 0 0 4px 1px #8a8fa1;
   outline: solid 2px #2dc0ff
 }
+.is-active.tn-modal__button-primary,
+.is-active.tn-modal__button-secondary,
+.is-pressed.tn-modal__button-primary,
+.is-pressed.tn-modal__button-secondary,
+.is-selected.tn-modal__button-primary,
+.is-selected.tn-modal__button-secondary,
 .tn-button.is-active,
 .tn-button.is-pressed,
 .tn-button.is-selected,
 .tn-button:active,
 .tn-button[aria-pressed=true],
-.tn-button[aria-selected=true] {
+.tn-button[aria-selected=true],
+.tn-modal__button-primary:active,
+.tn-modal__button-secondary:active,
+[aria-pressed=true].tn-modal__button-primary,
+[aria-pressed=true].tn-modal__button-secondary,
+[aria-selected=true].tn-modal__button-primary,
+[aria-selected=true].tn-modal__button-secondary {
   background-color: #0078ac;
   color: #f6f8f9
 }
+.is-disabled.tn-modal__button-primary,
+.is-disabled.tn-modal__button-secondary,
 .tn-button.is-disabled,
 .tn-button:disabled,
-.tn-button[aria-disabled=true] {
+.tn-button[aria-disabled=true],
+.tn-modal__button-primary:disabled,
+.tn-modal__button-secondary:disabled,
+[aria-disabled=true].tn-modal__button-primary,
+[aria-disabled=true].tn-modal__button-secondary {
   outline: solid 1px #d7d7d7;
   color: #7f90a4;
   background-color: #f9fbfc;
   cursor: not-allowed
 }
 .tn-button--link,
-.tn-button--text {
+.tn-button--text,
+.tn-modal__button-secondary {
   color: #009cdf;
   background-color: transparent
 }
 .tn-button--link:focus,
 .tn-button--link:hover,
 .tn-button--text:focus,
-.tn-button--text:hover {
+.tn-button--text:hover,
+.tn-modal__button-secondary:focus,
+.tn-modal__button-secondary:hover {
   background-color: transparent;
   color: #008ac6
 }
+.is-disabled.tn-modal__button-secondary,
+.is-pressed.tn-modal__button-secondary,
+.is-selected.tn-modal__button-secondary,
 .tn-button--link.is-disabled,
 .tn-button--link.is-pressed,
 .tn-button--link.is-selected,
@@ -117,12 +147,18 @@
 .tn-button--text:active,
 .tn-button--text[aria-disabled=true],
 .tn-button--text[aria-pressed=true],
-.tn-button--text[aria-selected=true] {
+.tn-button--text[aria-selected=true],
+.tn-modal__button-secondary:active,
+[aria-disabled=true].tn-modal__button-secondary,
+[aria-pressed=true].tn-modal__button-secondary,
+[aria-selected=true].tn-modal__button-secondary {
   background-color: transparent;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none
 }
+.is-pressed.tn-modal__button-secondary,
+.is-selected.tn-modal__button-secondary,
 .tn-button--link.is-pressed,
 .tn-button--link.is-selected,
 .tn-button--link:active,
@@ -132,13 +168,18 @@
 .tn-button--text.is-selected,
 .tn-button--text:active,
 .tn-button--text[aria-pressed=true],
-.tn-button--text[aria-selected=true] {
+.tn-button--text[aria-selected=true],
+.tn-modal__button-secondary:active,
+[aria-pressed=true].tn-modal__button-secondary,
+[aria-selected=true].tn-modal__button-secondary {
   color: #0078ac
 }
+.is-disabled.tn-modal__button-secondary,
 .tn-button--link.is-disabled,
 .tn-button--link[aria-disabled=true],
 .tn-button--text.is-disabled,
-.tn-button--text[aria-disabled=true] {
+.tn-button--text[aria-disabled=true],
+[aria-disabled=true].tn-modal__button-secondary {
   color: #7f90a4
 }
 .tn-button--link {
@@ -180,7 +221,9 @@
 .tn-button--link[aria-disabled=true]::after {
   display: none
 }
-.tn-button > * {
+.tn-button > *,
+.tn-modal__button-primary > *,
+.tn-modal__button-secondary > * {
   display: inline-block;
   vertical-align: top;
   margin-right: 12px;
@@ -211,4 +254,45 @@
   margin-top: 12px;
   margin-left: auto;
   margin-right: auto
+}
+/*!
+.tn-modal
+    .tn-modal__header
+        .tn-form__title
+    .tn-form__body
+    .tn-form__footer-items
+      .tn-modal__button-primary
+      .tn-modal__button-secondary
+*/
+.tn-modal {
+  width: 700px;
+  margin: 32px auto
+}
+.tn-modal__content {
+  background-color: #fff
+}
+.tn-modal__content button {
+  float: right
+}
+.tn-modal__header {
+  border-bottom: 1px solid #ccdaeb;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 20px
+}
+.tn-modal__title {
+  font-size: 2.1875rem;
+  line-height: 1.25714;
+  font-family: Dosis,sans-serif;
+  font-weight: 400
+}
+.tn-modal__body {
+  padding: 40px
+}
+.tn-modal__footer-items {
+  display: block;
+  overflow: auto;
+  border-top: 1px solid #ccdaeb;
+  padding: 40px;
+  padding-top: 20px
 }
