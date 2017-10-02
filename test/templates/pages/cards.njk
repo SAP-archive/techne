@@ -11,6 +11,7 @@
 {% from "../label/component.njk" import label %}
 {% from "../card/component.njk" import card %}
 {% from "../card-group/component.njk" import card_group %}
+{% from "../add-button/component.njk" import add_button %}
 
 {% block content %}
 
@@ -68,9 +69,17 @@
             block: data.modifier.block
         },
         state=data.state,
-        aria=data.aria
+        aria=data.aria,
+        classes="test"
     )
 }}
+
+{# Add New Button #}
+<div class="tn-container tn-has-text-align-right">
+    <button class="tn-button tn-button--text tn-button--small">
+        <span class="tn-icon tn-icon--addlg" role="presentation"></span>ADD
+    </button>
+</div>
 
 {# Cards #}
 <div class="tn-container">
@@ -105,6 +114,7 @@
 </div>
 
 {# Toolbar #}
+
 {{  toolbar() }}
 
 {% endblock %}

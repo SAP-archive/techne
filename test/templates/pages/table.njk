@@ -9,7 +9,7 @@
 {% from "../toolbar/component.njk" import toolbar %}
 {% from "../label/component.njk" import label %}
 {% from "../table/component.njk" import table %}
-
+{% from "../add-button/component.njk" import add_button %}
 {% block content %}
 
 {# Toolbar  #}
@@ -69,6 +69,13 @@
         aria=data.aria
     )
 }}
+
+{# Add New Button #}
+<div class="tn-container tn-has-text-align-right">
+    <button class="tn-button tn-button--text tn-button--small">
+        <span class="tn-icon tn-icon--addlg" role="presentation"></span>ADD
+    </button>
+</div>
 
 {# Cards #}
 <div class="tn-container">
