@@ -25,7 +25,7 @@ $block: ns(card);
     $tn-card-background-color-disabled: tn-color(neutral, 1) !default;
     $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138, 143, 161, 0.4) !default;
-    $tn-card-padding: tn-space(m, true) !default;
+    $tn-card-padding: tn-space(reg, true) !default;
     $tn-card-color-link: $tn-color--link !default;
     $tn-card-margin-bottom: $tn-width--gutter !default;
     //anim
