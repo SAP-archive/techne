@@ -19,13 +19,13 @@ $block: ns(card);
     $tn-card-media-width: 75px !default;
     //colors
     $tn-card-color-border: tn-color(neutral, 3) !default;
-    $tn-card-color-border-disabled: tn-color(neutral, 2) !default;
+    $tn-card-color-border-disabled: lighten(tn-color(neutral, 2), 5%) !default;
     $tn-card-color-disabled: tn-color(text, 3) !default;
     $tn-card-background-color: tn-color(background) !default;
     $tn-card-background-color-disabled: tn-color(neutral, 1) !default;
     $tn-card-background-color-hover: $tn-card-background-color !default;
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138, 143, 161, 0.4) !default;
-    $tn-card-padding: tn-space(m, true) !default;
+    $tn-card-padding: tn-space(reg, true) !default;
     $tn-card-color-link: $tn-color--link !default;
     $tn-card-margin-bottom: $tn-width--gutter !default;
     //anim
