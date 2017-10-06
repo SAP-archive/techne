@@ -32,7 +32,7 @@ $block: ns(button);
     $tn-button-icon-height--small: 18px !default;
     $tn-button-icon-height--large: 32px !default;
     //anim
-    $tn-button-transition-params: 0.25s ease-in !default;
+    $tn-button-transition-params: $tn-animation--speed ease-in !default;
 
     //BASE
     //set all reset and baseline block styles
@@ -40,7 +40,7 @@ $block: ns(button);
     @include tn-type(2, header, semi);
     display: inline-block;
     background-color: $tn-button-background-color;
-    //transition: background-color $tn-button-transition-params;
+    transition: background-color $tn-button-transition-params;
     color: $tn-button-color;
     max-height: $tn-button-height;
     height: $tn-button-height;
@@ -149,6 +149,7 @@ $block: ns(button);
             bottom: 1px;
             left: 0;
             margin-left: tn-space(4);
+            transition: border-bottom-color $tn-button-transition-params;
         }
         &:focus {
             outline: none;
