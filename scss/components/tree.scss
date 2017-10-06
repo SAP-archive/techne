@@ -1,6 +1,7 @@
 @import "../core/settings";
 @import "../core/mixins";
 @import "../core/functions";
+@import "./mixins";
 
 /*!
 .tn-tree
@@ -17,17 +18,22 @@ $block: ns(tree);
     $tn-tree-border-color: tn-color(neutral, 3) !default;
     $tn-tree-cell-spacing: $tn-width--gutter !default;
     $tn-tree-cell-padding: tn-space(3) !default;
-    $tn-tree-control-width: tn-space(6) !default;
+    $tn-tree-control-width: 18px !default;
     position: relative;
     @include reset;
     width: 100%;
     max-width: 100%;
     border-bottom: solid 1px $tn-tree-border-color;
     &__group {
-        //group classes
+        //see addt'l group classes under __col--first below
+        transition: opacity .125s linear;
+        max-height: auto;
+        opacity: 1;
         &.is-hidden,
         &[aria-hidden="true"] {
-            //display: none;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
         }
     }
     &__item {
@@ -49,13 +55,11 @@ $block: ns(tree);
         &--first {
             flex: auto;
             width: 25%;
-            //set 6 sublevels of indentation based on __group level
+            //sets 6 sublevels of indentation based on __group level
             @at-root {
                 @each $i in 1,2,3,4,5,6 {
                     .#{$block}__group--sublevel-#{$i} & {
-
-                            padding-left: $tn-tree-control-width * $i * 2;
-
+                        padding-left: $tn-tree-control-width * $i * 2;
                     }
                 }
 
@@ -66,7 +70,21 @@ $block: ns(tree);
 
 
     &__control {
+        @include tn-button-reset;
+        position: relative;
+        top: -2px;
         width: $tn-tree-control-width;
+        height: $tn-tree-control-width;
+        margin-right: tn-space(3);
+        background: url($tn-forms-select-background-image--active) no-repeat 50%;
+        background-size: contain;
+        transform: rotate(-90deg);
+        vertical-align: middle;
+        transition: transform 0.125s linear;
+        &[aria-pressed="true"],
+        &.is-pressed {
+            transform: rotate(0);
+        }
     }
 
 

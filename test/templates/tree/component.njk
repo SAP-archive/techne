@@ -7,16 +7,17 @@ tree:
     aria={}
 -->
 {% macro tree(properties={}, modifier={}, state={}, aria={}) %}
-
-<ul class="tn-tree__header">
+{%- if properties.headers %}
+<div class="tn-tree-header">
     <div class="tn-tree__row">
         <div class="tn-tree__col tn-tree__col--first">
-            <button class="tn-tree__control">+</button>
+            <button class="tn-tree__control" aria-label="Expand all"></button>
             {{ properties.headers | dump }}
         </div>
     </div>
+</div>
+{%- endif %}
 
-</ul>
 <ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" role="tree"{{ aria | aria }}>
 {%- for item in properties.items -%}
 {{ tree_item(item, level=0) }}
@@ -28,25 +29,22 @@ tree:
 {%- set _is_parent = item.items %}
 {%- set _id = utils.id() %}
     {%- if _is_parent %}
-<li class="tn-tree__item" role="treeitem" id="{{_id}}" aria-expanded="false">
+    <li class="tn-tree__item" role="treeitem" id="{{_id}}" aria-expanded="false">
     {%- else %}
-<li class="tn-tree__item" role="treeitem">
+    <li class="tn-tree__item" role="treeitem">
     {%- endif %}
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--first">
+                {% if _is_parent %}
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="false"></button>
+                {% endif %}
+                <a class="tn-has-font-weight-semi">{{ item.label }}</a>
 
-    <div class="tn-tree__row">
-        <div class="tn-tree__col tn-tree__col--first">
-            {% if _is_parent %}
-            <button class="tn-tree__control">+</button>
-            {% endif %}
-            <a class="tn-has-font-weight-semi">{{ item.label }}</a>
-
+            </div>
         </div>
-    </div>
-
-
-        {%- if item.items %}
-            {{- tree_group(item.items, level+1) }}
-        {%- endif %}
+    {%- if item.items %}
+        {{- tree_group(item.items, level+1) }}
+    {%- endif %}
     </li>
 {%- endmacro %}
 

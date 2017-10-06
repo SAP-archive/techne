@@ -96,6 +96,24 @@ angular_material/1.1.4</label>
                 target.setAttribute("aria-hidden", isExpanded);
                 return;
             }
+            //tree
+            var isTreeItem = target.getAttribute("role") === "treeitem";
+            if(isTreeItem) {
+                //trigger
+                var isPressed = this.getAttribute("aria-pressed") === "true";
+                var isExpanded = isPressed;
+                this.setAttribute("aria-pressed", !isPressed);
+                //target
+                target.setAttribute("aria-expanded", !isExpanded);
+                //group
+                var group = target.querySelector("[role=group]");
+                group.setAttribute("aria-hidden",isExpanded);
+                group.classList.remove('is-hidden');
+//                console.log(group)
+            }
+
+
+
         })
     }
 
