@@ -2,48 +2,46 @@
     "id": "tree",
     "name": "Tree",
     "properties": {
-        "headers": ["Header 1", "Header 2", "Header 3", "Header 4", "Header 5"],
+        "headers": ["Column Header", "Column Header", "Column Header", "Status"],
         "items": [
             {
-                "id": "",
-                "label": "1"
-            },
-            { "label": "2" },
-            { "label": "3",
+                "name": "First Level",
+                "status": "Inactive",
                 "items": [
-                    { "label": "3.1" },
-                    { "label": "3.2" },
-                    { "label": "3.3",
-                        "items": [
-                            { "label": "3.3.1" },
-                            { "label": "3.3.2" },
-                            { "label": "3.3.3" },
-                            { "label": "3.3.4" }
-                        ]
+                    {
+                        "name": "Second Level",
+                        "status": "Inactive"
                     },
-                    { "label": "3.4" }
+                    {
+                        "name": "Second Level",
+                        "status": "Default",
+                        "items": [
+                            {
+                                "name": "Third Level",
+                                "status": "Inactive"
+                            },
+                            {
+                                "name": "Third Level",
+                                "status": "Default"
+                            }
+                        ]
+                    }
                 ]
             },
-            { "label": "4" },
-            { "label": "5",
-                "items": [
-                    { "label": "5.1" },
-                    { "label": "5.2" },
-                    { "label": "5.3",
-                        "items": [
-                            { "label": "5.3.1" },
-                            { "label": "5.3.2" },
-                            { "label": "5.3.3" },
-                            { "label": "5.3.4" }
-                        ]
-                    },
-                    { "label": "5.4",
-                        "items": [
-                            { "label": "5.3.1" }
-                        ] }
-                ]
+            {
+                "name": "First Level",
+                "status": "Default"
             },
-            { "label": "6" }
+            {
+                "name": "First Level",
+                "status": "Inactive",
+                "items": [
+                    {
+                        "name": "Second Level",
+                        "status": "Inactive"
+                    }
+                ]
+            }
         ]
     },
     "modifier": {

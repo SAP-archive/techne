@@ -11,6 +11,16 @@
             .tn-tree__col
                 .tn-tree__control
 */
+$block: ns(tree-header);
+.#{$block} {
+    &__row {
+        &:hover {
+            background: initial;
+        }
+    }
+
+}
+
 $block: ns(tree);
 
 .#{$block} {
@@ -26,7 +36,7 @@ $block: ns(tree);
     border-bottom: solid 1px $tn-tree-border-color;
     &__group {
         //see addt'l group classes under __col--first below
-        transition: opacity .125s linear;
+        transition: opacity $tn-animation--speed linear;
         max-height: auto;
         opacity: 1;
         &.is-hidden,
@@ -48,6 +58,14 @@ $block: ns(tree);
         display: flex;
         &:hover {
             background-color: lighten(tn-color(neutral, 3), 10);
+        }
+        &--header {
+            @include tn-type(-1);
+            @include tn-weight(bold);
+            color: tn-color(text, 2);
+            &:hover {
+                background-color: transparent;
+            }
         }
     }
     &__col {
@@ -80,7 +98,7 @@ $block: ns(tree);
         background-size: contain;
         transform: rotate(-90deg);
         vertical-align: middle;
-        transition: transform 0.125s linear;
+        transition: transform $tn-animation--speed linear;
         &[aria-pressed="true"],
         &.is-pressed {
             transform: rotate(0);

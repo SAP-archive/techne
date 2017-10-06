@@ -1,4 +1,6 @@
 {% import "./../utils.njk" as utils %}
+{% from "../label/component.njk" import label %}
+
 <!--
 tree:
     properties={},
@@ -8,11 +10,20 @@ tree:
 -->
 {% macro tree(properties={}, modifier={}, state={}, aria={}) %}
 {%- if properties.headers %}
-<div class="tn-tree-header">
-    <div class="tn-tree__row">
+<div class="tn-tree tn-tree--header">
+    <div class="tn-tree__row tn-tree__row--header">
         <div class="tn-tree__col tn-tree__col--first">
             <button class="tn-tree__control" aria-label="Expand all"></button>
-            {{ properties.headers | dump }}
+            {{ properties.headers[0] }}
+        </div>
+        <div class="tn-tree__col">
+            {{ properties.headers[1] }}
+        </div>
+        <div class="tn-tree__col">
+            {{ properties.headers[2] }}
+        </div>
+        <div class="tn-tree__col">
+            {{ properties.headers[3] }}
         </div>
     </div>
 </div>
@@ -38,8 +49,16 @@ tree:
                 {% if _is_parent %}
                 <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="false"></button>
                 {% endif %}
-                <a class="tn-has-font-weight-semi">{{ item.label }}</a>
-
+                <a class="tn-has-font-weight-semi">{{ item.name }}</a>
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                {{  label({label: item.status}) }}
             </div>
         </div>
     {%- if item.items %}
