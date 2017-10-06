@@ -153,14 +153,14 @@ input[type=checkbox]:disabled,
 input[type=radio]:disabled {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 input.is-readonly[type=checkbox],
 input.is-readonly[type=radio],
 input[readonly][type=checkbox],
 input[readonly][type=radio] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 input[type=checkbox]::after,
@@ -301,7 +301,7 @@ textarea:disabled,
 textarea[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 input[type=date].is-readonly,
 input[type=date][readonly],
@@ -322,7 +322,7 @@ input[type=url][readonly],
 textarea.is-readonly,
 textarea[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 textarea {
@@ -380,12 +380,12 @@ select:disabled,
 select[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 select.is-readonly,
 select[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 select:focus,
@@ -426,7 +426,7 @@ input[type=checkbox][disabled],
 input[type=radio].is-disabled,
 input[type=radio][aria-disabled=true],
 input[type=radio][disabled] {
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   background-color: #f9fbfc
 }
 input[type=checkbox]:checked::after {
