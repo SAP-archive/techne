@@ -1,0 +1,59 @@
+{% import "./../utils.njk" as utils %}
+<!--
+tree:
+    properties={},
+    modifier={ block: [] },
+    state={},
+    aria={}
+-->
+{% macro tree(properties={}, modifier={}, state={}, aria={}) %}
+
+<ul class="tn-tree__header">
+    <div class="tn-tree__row">
+        <div class="tn-tree__col tn-tree__col--first">
+            <button class="tn-tree__control">+</button>
+            {{ properties.headers | dump }}
+        </div>
+    </div>
+
+</ul>
+<ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" role="tree"{{ aria | aria }}>
+{%- for item in properties.items -%}
+{{ tree_item(item, level=0) }}
+{%- endfor %}
+</ul>
+{% endmacro %}
+
+{%- macro tree_item(item, level) %}
+{%- set _is_parent = item.items %}
+{%- set _id = utils.id() %}
+    {%- if _is_parent %}
+<li class="tn-tree__item" role="treeitem" id="{{_id}}" aria-expanded="false">
+    {%- else %}
+<li class="tn-tree__item" role="treeitem">
+    {%- endif %}
+
+    <div class="tn-tree__row">
+        <div class="tn-tree__col tn-tree__col--first">
+            {% if _is_parent %}
+            <button class="tn-tree__control">+</button>
+            {% endif %}
+            <a class="tn-has-font-weight-semi">{{ item.label }}</a>
+
+        </div>
+    </div>
+
+
+        {%- if item.items %}
+            {{- tree_group(item.items, level+1) }}
+        {%- endif %}
+    </li>
+{%- endmacro %}
+
+{%- macro tree_group(group, level) %}
+        <ul class="tn-tree__group tn-tree__group--sublevel-{{level}} is-hidden" role="group" aria-hidden="true">
+        {%- for item in group %}
+        {{- tree_item(item, level) | indent(8) }}
+        {%- endfor %}
+        </ul>
+{%- endmacro %}

@@ -1,0 +1,73 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-tree
+    .tn-tree__group+(--sublevel-1...-6, [aria-hidden])
+    .tn-tree__item
+        .tn-tree__row
+            .tn-tree__col
+                .tn-tree__control
+*/
+$block: ns(tree);
+
+.#{$block} {
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-tree-border-color: tn-color(neutral, 3) !default;
+    $tn-tree-cell-spacing: $tn-width--gutter !default;
+    $tn-tree-cell-padding: tn-space(3) !default;
+    $tn-tree-control-width: tn-space(6) !default;
+    position: relative;
+    @include reset;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: solid 1px $tn-tree-border-color;
+    &__group {
+        //group classes
+        &.is-hidden,
+        &[aria-hidden="true"] {
+            //display: none;
+        }
+    }
+    &__item {
+        border-top: solid 1px $tn-tree-border-color;
+        &.is-selected,
+        &[aria-selected="true"] {
+            background-color: lighten(tn-color(neutral, 3), 5);
+        }
+    }
+    &__row {
+        padding: $tn-tree-cell-padding $tn-tree-cell-spacing;
+        display: flex;
+        &:hover {
+            background-color: lighten(tn-color(neutral, 3), 10);
+        }
+    }
+    &__col {
+        flex: 1;
+        &--first {
+            flex: auto;
+            width: 25%;
+            //set 6 sublevels of indentation based on __group level
+            @at-root {
+                @each $i in 1,2,3,4,5,6 {
+                    .#{$block}__group--sublevel-#{$i} & {
+
+                            padding-left: $tn-tree-control-width * $i * 2;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+    &__control {
+        width: $tn-tree-control-width;
+    }
+
+
+}
