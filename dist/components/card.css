@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -41,14 +41,14 @@
   color: #009cdf
 }
 .tn-card--compact .tn-card__media {
-  margin: 20px 0 20px 20px
+  margin: 10px 0 10px 10px
 }
 .tn-card--compact .tn-card__media--fill {
   margin: 0;
-  width: 135px
+  width: 105px
 }
 .tn-card--compact .tn-card__content {
-  padding: 20px 20px
+  padding: 10px 10px
 }
 .tn-card--compact.tn-card--vertical .tn-card__media {
   margin: 0
@@ -56,10 +56,10 @@
 .tn-card--button,
 .tn-card[role=button] {
   cursor: pointer;
-  -webkit-transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in
+  -webkit-transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in,-webkit-box-shadow 125ms ease-in
 }
 .tn-card--button:hover,
 .tn-card[role=button]:hover {
@@ -71,7 +71,7 @@
 .tn-card.is-disabled,
 .tn-card[aria-disabled=true] {
   background-color: #f9fbfc!important;
-  border-color: #d7d7d7!important;
+  border-color: #e4e4e4!important;
   -webkit-box-shadow: none!important;
   box-shadow: none!important;
   cursor: default
@@ -86,21 +86,21 @@
   background-size: cover;
   min-width: 75px;
   min-height: 75px;
-  margin: 40px 0 40px 40px
+  margin: 20px 0 20px 20px
 }
 .tn-card__media--fill {
   margin: 0;
-  width: 195px;
+  width: 135px;
   background-size: cover
 }
 .tn-card__media--fill + .tn-card__content {
-  padding-left: 20px
+  padding-left: 10px
 }
 .tn-card__media--round {
   border-radius: 50%
 }
 .tn-card__content {
-  padding: 40px 40px;
+  padding: 20px 20px;
   max-width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -129,5 +129,5 @@
   text-transform: uppercase
 }
 .tn-card__actions {
-  padding: 40px 20px
+  padding: 20px 10px
 }

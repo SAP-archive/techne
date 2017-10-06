@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -127,8 +127,10 @@ input[type=radio] {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
-  -webkit-transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in;
-  transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
+  -webkit-transition: border-color 125ms ease-in,background-color 125ms ease-in,background-image 125ms ease-in;
+  transition: border-color 125ms ease-in,background-color 125ms ease-in,background-image 125ms ease-in
 }
 input[type=checkbox]:focus,
 input[type=checkbox]:hover,
@@ -156,20 +158,20 @@ input[type=checkbox]:disabled,
 input[type=radio]:disabled {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 input.is-readonly[type=checkbox],
 input.is-readonly[type=radio],
 input[readonly][type=checkbox],
 input[readonly][type=radio] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 input[type=checkbox]::after,
 input[type=radio]::after {
-  -webkit-transition: border-color .25s ease-in;
-  transition: border-color .25s ease-in
+  -webkit-transition: border-color 125ms ease-in;
+  transition: border-color 125ms ease-in
 }
 input[type=checkbox]::-webkit-input-placeholder,
 input[type=radio]::-webkit-input-placeholder {
@@ -217,6 +219,8 @@ textarea {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -304,7 +308,7 @@ textarea:disabled,
 textarea[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 input[type=date].is-readonly,
 input[type=date][readonly],
@@ -325,7 +329,7 @@ input[type=url][readonly],
 textarea.is-readonly,
 textarea[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 textarea {
@@ -353,6 +357,8 @@ select {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -383,12 +389,12 @@ select:disabled,
 select[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 select.is-readonly,
 select[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 select:focus,
@@ -429,7 +435,7 @@ input[type=checkbox][disabled],
 input[type=radio].is-disabled,
 input[type=radio][aria-disabled=true],
 input[type=radio][disabled] {
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   background-color: #f9fbfc
 }
 input[type=checkbox]:checked::after {
@@ -464,8 +470,8 @@ input[type=radio]::after {
   right: 0;
   top: calc(50% - (16px/2));
   left: calc(50% - (16px/2));
-  -webkit-transition: background-color .25s ease-in;
-  transition: background-color .25s ease-in;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   background-color: transparent
 }
 input[type=radio]:checked {
@@ -646,6 +652,8 @@ input[type=radio]:checked[disabled]::after {
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -814,7 +822,9 @@ input[type=radio]:checked[disabled]::after {
   position: absolute;
   bottom: 1px;
   left: 0;
-  margin-left: 16px
+  margin-left: 16px;
+  -webkit-transition: border-bottom-color 125ms ease-in;
+  transition: border-bottom-color 125ms ease-in
 }
 .tn-button--link:focus {
   outline: 0;
@@ -918,6 +928,8 @@ input[type=radio]:checked[disabled]::after {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -948,12 +960,12 @@ input[type=radio]:checked[disabled]::after {
 .tn-dropdown__control[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 .tn-dropdown__control.is-readonly,
 .tn-dropdown__control[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 .tn-dropdown__control:focus,
@@ -995,11 +1007,16 @@ input[type=radio]:checked[disabled]::after {
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
-  box-shadow: 0 0 4px 1px rgba(138,143,161,.2)
+  box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 125ms ease-in;
+  transition: opacity 125ms ease-in
 }
 .tn-dropdown__menu[aria-hidden=true],
 .tn-dropdown__options[aria-hidden=true] {
-  display: none
+  opacity: 0;
+  visibility: hidden
 }
 .tn-dropdown__item,
 .tn-dropdown__option {
@@ -1011,9 +1028,7 @@ input[type=radio]:checked[disabled]::after {
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   display: block;
-  padding: 12px 16px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in
+  padding: 12px 16px
 }
 .tn-dropdown__item:hover,
 .tn-dropdown__option:hover {
@@ -1156,6 +1171,8 @@ input[type=radio]:checked[disabled]::after {
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -1324,7 +1341,9 @@ input[type=radio]:checked[disabled]::after {
   position: absolute;
   bottom: 1px;
   left: 0;
-  margin-left: 16px
+  margin-left: 16px;
+  -webkit-transition: border-bottom-color 125ms ease-in;
+  transition: border-bottom-color 125ms ease-in
 }
 .tn-button--link:focus {
   outline: 0;
@@ -1416,14 +1435,14 @@ input[type=radio]:checked[disabled]::after {
   color: #009cdf
 }
 .tn-card--compact .tn-card__media {
-  margin: 20px 0 20px 20px
+  margin: 10px 0 10px 10px
 }
 .tn-card--compact .tn-card__media--fill {
   margin: 0;
-  width: 135px
+  width: 105px
 }
 .tn-card--compact .tn-card__content {
-  padding: 20px 20px
+  padding: 10px 10px
 }
 .tn-card--compact.tn-card--vertical .tn-card__media {
   margin: 0
@@ -1431,10 +1450,10 @@ input[type=radio]:checked[disabled]::after {
 .tn-card--button,
 .tn-card[role=button] {
   cursor: pointer;
-  -webkit-transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in
+  -webkit-transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in,-webkit-box-shadow 125ms ease-in
 }
 .tn-card--button:hover,
 .tn-card[role=button]:hover {
@@ -1446,7 +1465,7 @@ input[type=radio]:checked[disabled]::after {
 .tn-card.is-disabled,
 .tn-card[aria-disabled=true] {
   background-color: #f9fbfc!important;
-  border-color: #d7d7d7!important;
+  border-color: #e4e4e4!important;
   -webkit-box-shadow: none!important;
   box-shadow: none!important;
   cursor: default
@@ -1461,21 +1480,21 @@ input[type=radio]:checked[disabled]::after {
   background-size: cover;
   min-width: 75px;
   min-height: 75px;
-  margin: 40px 0 40px 40px
+  margin: 20px 0 20px 20px
 }
 .tn-card__media--fill {
   margin: 0;
-  width: 195px;
+  width: 135px;
   background-size: cover
 }
 .tn-card__media--fill + .tn-card__content {
-  padding-left: 20px
+  padding-left: 10px
 }
 .tn-card__media--round {
   border-radius: 50%
 }
 .tn-card__content {
-  padding: 40px 40px;
+  padding: 20px 20px;
   max-width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1504,7 +1523,7 @@ input[type=radio]:checked[disabled]::after {
   text-transform: uppercase
 }
 .tn-card__actions {
-  padding: 40px 20px
+  padding: 20px 10px
 }
 /*!
 .tn-card-group+(--2col | --4col)
@@ -1612,6 +1631,8 @@ input[type=radio]:checked[disabled]::after {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -1642,12 +1663,12 @@ input[type=radio]:checked[disabled]::after {
 .tn-dropdown__control[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 .tn-dropdown__control.is-readonly,
 .tn-dropdown__control[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 .tn-dropdown__control:focus,
@@ -1689,11 +1710,16 @@ input[type=radio]:checked[disabled]::after {
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
-  box-shadow: 0 0 4px 1px rgba(138,143,161,.2)
+  box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 125ms ease-in;
+  transition: opacity 125ms ease-in
 }
 .tn-dropdown__menu[aria-hidden=true],
 .tn-dropdown__options[aria-hidden=true] {
-  display: none
+  opacity: 0;
+  visibility: hidden
 }
 .tn-dropdown__item,
 .tn-dropdown__option {
@@ -1705,9 +1731,7 @@ input[type=radio]:checked[disabled]::after {
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   display: block;
-  padding: 12px 16px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in
+  padding: 12px 16px
 }
 .tn-dropdown__item:hover,
 .tn-dropdown__option:hover {
@@ -1795,7 +1819,7 @@ input[type=radio]:checked[disabled]::after {
   line-height: 1.42857;
   font-weight: 400;
   display: block;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   border: 0;
   color: #63758b
 }
@@ -2068,6 +2092,8 @@ input[type=radio]:checked[disabled]::after {
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -2236,7 +2262,9 @@ input[type=radio]:checked[disabled]::after {
   position: absolute;
   bottom: 1px;
   left: 0;
-  margin-left: 16px
+  margin-left: 16px;
+  -webkit-transition: border-bottom-color 125ms ease-in;
+  transition: border-bottom-color 125ms ease-in
 }
 .tn-button--link:focus {
   outline: 0;
@@ -2340,6 +2368,8 @@ input[type=radio]:checked[disabled]::after {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -2370,12 +2400,12 @@ input[type=radio]:checked[disabled]::after {
 .tn-dropdown__control[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 .tn-dropdown__control.is-readonly,
 .tn-dropdown__control[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 .tn-dropdown__control:focus,
@@ -2417,11 +2447,16 @@ input[type=radio]:checked[disabled]::after {
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
-  box-shadow: 0 0 4px 1px rgba(138,143,161,.2)
+  box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 125ms ease-in;
+  transition: opacity 125ms ease-in
 }
 .tn-dropdown__menu[aria-hidden=true],
 .tn-dropdown__options[aria-hidden=true] {
-  display: none
+  opacity: 0;
+  visibility: hidden
 }
 .tn-dropdown__item,
 .tn-dropdown__option {
@@ -2433,9 +2468,7 @@ input[type=radio]:checked[disabled]::after {
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   display: block;
-  padding: 12px 16px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in
+  padding: 12px 16px
 }
 .tn-dropdown__item:hover,
 .tn-dropdown__option:hover {
@@ -2651,6 +2684,8 @@ input[type=radio]:checked[disabled]::after {
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -2819,7 +2854,9 @@ input[type=radio]:checked[disabled]::after {
   position: absolute;
   bottom: 1px;
   left: 0;
-  margin-left: 16px
+  margin-left: 16px;
+  -webkit-transition: border-bottom-color 125ms ease-in;
+  transition: border-bottom-color 125ms ease-in
 }
 .tn-button--link:focus {
   outline: 0;
@@ -3177,6 +3214,10 @@ input[type=radio]:checked[disabled]::after {
   max-width: 100%;
   border-collapse: collapse
 }
+.tn-table tr {
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in
+}
 .tn-table tr:hover {
   background-color: #f1f5f9
 }
@@ -3236,6 +3277,8 @@ input[type=radio]:checked[disabled]::after {
   font-weight: 600;
   display: inline-block;
   background-color: #009cdf;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   color: #f6f8f9;
   max-height: 52px;
   height: 52px;
@@ -3404,7 +3447,9 @@ input[type=radio]:checked[disabled]::after {
   position: absolute;
   bottom: 1px;
   left: 0;
-  margin-left: 16px
+  margin-left: 16px;
+  -webkit-transition: border-bottom-color 125ms ease-in;
+  transition: border-bottom-color 125ms ease-in
 }
 .tn-button--link:focus {
   outline: 0;
