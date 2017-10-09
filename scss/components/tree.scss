@@ -47,6 +47,7 @@ $block: ns(tree);
     &__row {
         padding: 0 $tn-tree-cell-spacing;
         display: flex;
+        align-items: center;
         position: relative;
         &:hover {
             background-color: lighten(tn-color(neutral, 3), 10);
