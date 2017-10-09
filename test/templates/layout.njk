@@ -99,14 +99,6 @@ angular_material/1.1.4</label>
             //tree
             var isTree = target.getAttribute("role") === "tree";
             var isTreeItem = target.getAttribute("role") === "treeitem";
-            function allOpen(el, bool) {
-                el.setAttribute("aria-pressed", bool);
-                if (bool) {
-                    el.classList.add('is-pressed');
-                } else {
-                    el.classList.remove('is-pressed');
-                }
-            }
             function setPressed(el, bool) {
                 el.setAttribute("aria-pressed", bool);
                 if (bool) {

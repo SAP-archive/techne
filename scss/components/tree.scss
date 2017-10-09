@@ -8,7 +8,7 @@
     .tn-tree__group+(--sublevel-1...-6, ([aria-hidden] | .is-hidden))
     .tn-tree__item
         .tn-tree__row+(--header, ([aria-selected] | .is-selected))
-            .tn-tree__col+(--first)
+            .tn-tree__col+(--control, --actions)
                 .tn-tree__control+([aria-pressed] | .is-pressed)
 */
 $block: ns(tree);

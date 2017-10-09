@@ -38,12 +38,7 @@ tree:
 </div>
 {%- endif %}
 <ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" id="{{_treeid}}" role="tree"{{ aria | aria }}>
-
-
-{# {% set hasExpanded = properties.expandedItems.length > 0 %} #}
 {%- for item in properties.items -%}
-{# {%- set expandedItems = properties.expandedItems[loop.index0] or hasExpanded %} #}
-{# pass a bool or array #}
 {{ tree_item(item, level=0, expanded=properties.expandedItems[loop.index0]) }}
 {%- endfor %}
 </ul>
@@ -75,7 +70,7 @@ tree:
                 {{ label({label: item.status}) | indent(16) }}
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-            {{ btn }}
+                {{ btn | indent(16) }}
             </div>
         </div>
     {%- if item.items %}
