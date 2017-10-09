@@ -25,9 +25,14 @@ $block: ns(form);
         @include tn-clearfix;
         @include tn-last-child;
         margin-bottom: $tn-margin-bottom;
+        width: 100%;
+        //ELEMENT MODIFIERS ************
+        //each mod MUST extend the element base
+
     }
     &__item {
         @include tn-last-child;
+        width: 100%;
         margin-right: $tn-form-item-gutter;
         &--check {
             @include tn-clearfix;
@@ -52,6 +57,7 @@ $block: ns(form);
         &--inline {
             float: left;
             margin-bottom: 0;
+            width: auto;
             .#{$block}__label {
                 margin-top: tn-space(1);
                 float: left;
@@ -71,6 +77,14 @@ $block: ns(form);
     }
     &__legend {
         margin-bottom: tn-space(5);
+    }
+    &__label {
+        //adjust for checks
+        @at-root {
+            .#{$block}__item--check & {
+                padding-bottom: 0;
+            }
+        }
     }
     &__message {
         clear: both;
