@@ -10,37 +10,39 @@
                 "items": [
                     {
                         "name": "Second Level",
-                        "status": "Inactive"
-                    },
-                    {
-                        "name": "Second Level",
-                        "status": "Default",
+                        "status": "Inactive",
                         "items": [
                             {
                                 "name": "Third Level",
-                                "status": "Inactive"
-                            },
-                            {
-                                "name": "Third Level",
-                                "status": "Default"
+                                "status": "Inactive",
+                                "items": [
+                                    {
+                                        "name": "Fourth Level",
+                                        "status": "Inactive"
+                                    }
+                                ]
                             }
                         ]
+                    },
+                    {
+                        "name": "Second Level",
+                        "status": "Default"
                     }
                 ]
             },
             {
                 "name": "First Level",
-                "status": "Default"
-            },
-            {
-                "name": "First Level",
-                "status": "Inactive",
+                "status": "Default",
                 "items": [
                     {
                         "name": "Second Level",
                         "status": "Inactive"
                     }
                 ]
+            },
+            {
+                "name": "First Level",
+                "status": "Inactive"
             }
         ]
     },

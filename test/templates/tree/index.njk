@@ -16,5 +16,38 @@
     {% endset %}
     {{ format(example) }}
 
+<br><br>
+
+    {% set example %}
+{{ tree({
+    headers: data.properties.headers,
+    items: data.properties.items,
+    expandedItems: [
+        true,
+        false,
+        false
+    ]
+
+}) }}
+    {% endset %}
+    {{ format(example) }}
+
+<br><br>
+    {% set example %}
+{{ tree({
+    headers: data.properties.headers,
+    items: data.properties.items,
+    expandedItems: [
+        [true,
+            [true, false]
+        ],
+        true,
+        false
+    ]
+
+}) }}
+    {% endset %}
+    {{ format(example) }}
+
 
 {% endblock %}

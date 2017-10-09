@@ -19,6 +19,7 @@ $block: ns(tree);
     $tn-tree-cell-spacing: $tn-width--gutter !default;
     $tn-tree-cell-padding: tn-space(3) !default;
     $tn-tree-control-width: 18px !default;
+    $tn-tree-control-margin-right: tn-space(2) !default;
     position: relative;
     @include reset;
     width: 100%;
@@ -26,6 +27,7 @@ $block: ns(tree);
     border-bottom: solid 1px $tn-tree-border-color;
     &--header {
         border-bottom: 0;
+        border-top: solid 1px $tn-tree-border-color;
     }
     &__group {
         //see addt'l group classes under __col--first below
@@ -45,6 +47,7 @@ $block: ns(tree);
     &__row {
         padding: $tn-tree-cell-padding $tn-tree-cell-spacing;
         display: flex;
+        position: relative;
         &:hover {
             background-color: lighten(tn-color(neutral, 3), 10);
         }
@@ -61,8 +64,11 @@ $block: ns(tree);
             background-color: lighten(tn-color(neutral, 3), 5);
         }
     }
+    $_row_padding: $tn-tree-control-width + $tn-tree-control-margin-right;
     &__col {
         flex: 1;
+        //pad to account for control
+        padding-left: $_row_padding;
         &--first {
             flex: auto;
             width: 25%;
@@ -70,7 +76,8 @@ $block: ns(tree);
             @at-root {
                 @each $i in 1,2,3,4,5,6,7,8 {
                     .#{$block}__group--sublevel-#{$i} & {
-                        padding-left: $tn-tree-control-width * $i * 2;
+                        //padding-left: ($tn-tree-cell-spacing * ($i + 1));
+                        padding-left: $_row_padding * ($i + 1);
                     }
                 }
 
@@ -80,8 +87,9 @@ $block: ns(tree);
 
     &__control {
         @include tn-button-reset;
-        position: relative;
-        top: -2px;
+        position: absolute;
+        top: calc(50% - #{$tn-tree-control-width}/2);
+        margin-left: -#{$_row_padding};
         width: $tn-tree-control-width;
         height: $tn-tree-control-width;
         margin-right: tn-space(3);

@@ -30,24 +30,30 @@ tree:
 </div>
 {%- endif %}
 <ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" id="{{_treeid}}" role="tree"{{ aria | aria }}>
+
+
+{# {% set hasExpanded = properties.expandedItems.length > 0 %} #}
 {%- for item in properties.items -%}
-{{ tree_item(item, level=0) }}
+{# {%- set expandedItems = properties.expandedItems[loop.index0] or hasExpanded %} #}
+{# pass a bool or array #}
+{{ tree_item(item, level=0, expanded=properties.expandedItems[loop.index0]) }}
 {%- endfor %}
 </ul>
 {% endmacro %}
 
-{%- macro tree_item(item, level) %}
+{%- macro tree_item(item, level, expanded=false) %}
 {%- set _is_parent = item.items %}
 {%- set _id = utils.id() %}
+{%- set item_expanded = expanded === true or expanded.length > 0 %}
     {%- if _is_parent %}
-    <li class="tn-tree__item" role="treeitem" id="{{_id}}" aria-expanded="false">
+    <li class="tn-tree__item" role="treeitem" id="{{_id}}" aria-expanded="{{item_expanded}}">
     {%- else %}
     <li class="tn-tree__item" role="treeitem">
     {%- endif %}
         <div class="tn-tree__row">
             <div class="tn-tree__col tn-tree__col--first">
                 {%- if _is_parent %}
-                <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="false"></button>
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="{{item_expanded}}"></button>
                 {%- endif %}
                 <a class="tn-has-font-weight-semi">{{ item.name }}</a>
             </div>
@@ -58,19 +64,19 @@ tree:
                 Secondary Value
             </div>
             <div class="tn-tree__col">
-                {{  label({label: item.status}) | indent(16) }}
+                {{ label({label: item.status}) | indent(16) }}
             </div>
         </div>
     {%- if item.items %}
-        {{- tree_group(item.items, level+1) }}
+        {{- tree_group(item.items, level+1, item_expanded === false, expanded[level+1]) }}
     {%- endif %}
     </li>
 {%- endmacro %}
 
-{%- macro tree_group(group, level) %}
-        <ul class="tn-tree__group tn-tree__group--sublevel-{{level}} is-hidden" role="group" aria-hidden="true">
+{%- macro tree_group(group, level, hidden=true, expanded=false) %}
+        <ul class="tn-tree__group tn-tree__group--sublevel-{{level}} {{'is-hidden' if hidden }}" role="group" aria-hidden="{{hidden}}">
         {%- for item in group %}
-        {{- tree_item(item, level) | indent(8) }}
+        {{- tree_item(item, level, expanded[loop.index0]) | indent(8) }}
         {%- endfor %}
         </ul>
 {%- endmacro %}
