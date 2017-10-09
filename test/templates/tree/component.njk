@@ -10,10 +10,11 @@ tree:
 -->
 {% macro tree(properties={}, modifier={}, state={}, aria={}) %}
 {%- if properties.headers %}
+{%- set _treeid = utils.id() %}
 <div class="tn-tree tn-tree--header">
     <div class="tn-tree__row tn-tree__row--header">
         <div class="tn-tree__col tn-tree__col--first">
-            <button class="tn-tree__control" aria-label="Expand all"></button>
+            <button class="tn-tree__control" aria-label="Expand all" aria-controls="{{_treeid}}" aria-pressed="false"></button>
             {{ properties.headers[0] }}
         </div>
         <div class="tn-tree__col">
@@ -28,8 +29,7 @@ tree:
     </div>
 </div>
 {%- endif %}
-
-<ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" role="tree"{{ aria | aria }}>
+<ul class="tn-tree{{ modifier.block | modifier('tree') }}{{ state | state }}" id="{{_treeid}}" role="tree"{{ aria | aria }}>
 {%- for item in properties.items -%}
 {{ tree_item(item, level=0) }}
 {%- endfor %}
@@ -46,9 +46,9 @@ tree:
     {%- endif %}
         <div class="tn-tree__row">
             <div class="tn-tree__col tn-tree__col--first">
-                {% if _is_parent %}
+                {%- if _is_parent %}
                 <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="false"></button>
-                {% endif %}
+                {%- endif %}
                 <a class="tn-has-font-weight-semi">{{ item.name }}</a>
             </div>
             <div class="tn-tree__col">
@@ -58,7 +58,7 @@ tree:
                 Secondary Value
             </div>
             <div class="tn-tree__col">
-                {{  label({label: item.status}) }}
+                {{  label({label: item.status}) | indent(16) }}
             </div>
         </div>
     {%- if item.items %}

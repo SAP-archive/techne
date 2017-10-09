@@ -97,22 +97,57 @@ angular_material/1.1.4</label>
                 return;
             }
             //tree
+            var isTree = target.getAttribute("role") === "tree";
             var isTreeItem = target.getAttribute("role") === "treeitem";
-            if(isTreeItem) {
-                //trigger
-                var isPressed = this.getAttribute("aria-pressed") === "true";
-                var isExpanded = isPressed;
-                this.setAttribute("aria-pressed", !isPressed);
-                //target
-                target.setAttribute("aria-expanded", !isExpanded);
-                //group
-                var group = target.querySelector("[role=group]");
-                group.setAttribute("aria-hidden",isExpanded);
-                group.classList.remove('is-hidden');
+            function allOpen(el, bool) {
+                el.setAttribute("aria-pressed", bool);
+                if (bool) {
+                    el.classList.add('is-pressed');
+                } else {
+                    el.classList.remove('is-pressed');
+                }
             }
-
-
-
+            function setPressed(el, bool) {
+                el.setAttribute("aria-pressed", bool);
+                if (bool) {
+                    el.classList.add('is-pressed');
+                } else {
+                    el.classList.remove('is-pressed');
+                }
+            }
+            function setExpanded(el, bool) {
+                el.setAttribute("aria-expanded", bool);
+                //get group
+                var group = el.querySelector("[role=group]");
+                group.setAttribute("aria-hidden", !bool);
+                if (!bool) {
+                    group.classList.add('is-hidden');
+                } else {
+                    group.classList.remove('is-hidden');
+                }
+            }
+            var isPressed;
+            //handle the primary trigger
+            if(isTree || isTreeItem) {
+                isPressed = this.getAttribute("aria-pressed") === "true";
+                setPressed(this, !isPressed);
+            }
+            //toggle a single treeitem
+            if(isTreeItem) {
+                setExpanded(target, !isPressed);
+            }
+            //toggle all treeitems
+            if(isTree) {
+                //all triggers
+                var controls = target.querySelectorAll("[aria-controls]");
+                for (var i = 0; i < controls.length; i++) {
+                    var control = controls[i];
+                    setPressed(control, !isPressed);
+                    targetId = control.getAttribute("aria-controls");
+                    target = document.getElementById(targetId);
+                    setExpanded(target, !isPressed);
+                }
+            }
         })
     }
 

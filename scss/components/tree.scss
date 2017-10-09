@@ -4,23 +4,13 @@
 @import "./mixins";
 
 /*!
-.tn-tree
-    .tn-tree__group+(--sublevel-1...-6, [aria-hidden])
+.tn-tree+(--header)
+    .tn-tree__group+(--sublevel-1...-6, ([aria-hidden] | .is-hidden))
     .tn-tree__item
-        .tn-tree__row
-            .tn-tree__col
-                .tn-tree__control
+        .tn-tree__row+(--header, ([aria-selected] | .is-selected))
+            .tn-tree__col+(--first)
+                .tn-tree__control+([aria-pressed] | .is-pressed)
 */
-$block: ns(tree-header);
-.#{$block} {
-    &__row {
-        &:hover {
-            background: initial;
-        }
-    }
-
-}
-
 $block: ns(tree);
 
 .#{$block} {
@@ -34,6 +24,9 @@ $block: ns(tree);
     width: 100%;
     max-width: 100%;
     border-bottom: solid 1px $tn-tree-border-color;
+    &--header {
+        border-bottom: 0;
+    }
     &__group {
         //see addt'l group classes under __col--first below
         transition: opacity $tn-animation--speed linear;
@@ -48,10 +41,6 @@ $block: ns(tree);
     }
     &__item {
         border-top: solid 1px $tn-tree-border-color;
-        &.is-selected,
-        &[aria-selected="true"] {
-            background-color: lighten(tn-color(neutral, 3), 5);
-        }
     }
     &__row {
         padding: $tn-tree-cell-padding $tn-tree-cell-spacing;
@@ -67,15 +56,19 @@ $block: ns(tree);
                 background-color: transparent;
             }
         }
+        &.is-selected,
+        &[aria-selected="true"] {
+            background-color: lighten(tn-color(neutral, 3), 5);
+        }
     }
     &__col {
         flex: 1;
         &--first {
             flex: auto;
             width: 25%;
-            //sets 6 sublevels of indentation based on __group level
+            //sets 8 sublevels of indentation based on __group level
             @at-root {
-                @each $i in 1,2,3,4,5,6 {
+                @each $i in 1,2,3,4,5,6,7,8 {
                     .#{$block}__group--sublevel-#{$i} & {
                         padding-left: $tn-tree-control-width * $i * 2;
                     }
@@ -84,8 +77,6 @@ $block: ns(tree);
             }
         }
     }
-
-
 
     &__control {
         @include tn-button-reset;
