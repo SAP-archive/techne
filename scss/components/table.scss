@@ -15,6 +15,8 @@ $block: ns(table);
     $tn-table-border-color: tn-color(neutral, 3) !default;
     $tn-table-cell-spacing: $tn-width--gutter !default;
     $tn-table-cell-padding: tn-space(3) !default;
+    $tn-table-transition-params: $tn-animation--speed ease-in !default;
+
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
@@ -22,7 +24,9 @@ $block: ns(table);
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
+
     tr {
+        transition: background-color $tn-table-transition-params;
         &:hover {
             background-color: lighten(tn-color(neutral, 3), 10);
         }
