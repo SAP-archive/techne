@@ -45,7 +45,7 @@ $block: ns(tree);
         border-top: solid 1px $tn-tree-border-color;
     }
     &__row {
-        padding: $tn-tree-cell-padding $tn-tree-cell-spacing;
+        padding: 0 $tn-tree-cell-spacing;
         display: flex;
         position: relative;
         &:hover {
@@ -67,9 +67,10 @@ $block: ns(tree);
     $_row_padding: $tn-tree-control-width + $tn-tree-control-margin-right;
     &__col {
         flex: 1;
+        padding: $tn-tree-cell-padding 0;
         //pad to account for control
         padding-left: $_row_padding;
-        &--first {
+        &--control {
             flex: auto;
             width: 25%;
             //sets 8 sublevels of indentation based on __group level
@@ -82,6 +83,11 @@ $block: ns(tree);
                 }
 
             }
+        }
+        &--actions {
+            padding-top: 0;
+            padding-bottom: 0;
+            text-align: right;
         }
     }
 

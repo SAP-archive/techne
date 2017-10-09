@@ -1,6 +1,12 @@
 {% import "./../utils.njk" as utils %}
 {% from "../label/component.njk" import label %}
-
+{% from "../button/component.njk" import button %}
+{% set btn = button(
+        { icon: 'more' },
+        modifier={ block: ['icon','text'] },
+        aria={ label: 'More' }
+    )
+%}
 <!--
 tree:
     properties={},
@@ -13,7 +19,7 @@ tree:
 {%- set _treeid = utils.id() %}
 <div class="tn-tree tn-tree--header">
     <div class="tn-tree__row tn-tree__row--header">
-        <div class="tn-tree__col tn-tree__col--first">
+        <div class="tn-tree__col tn-tree__col--control">
             <button class="tn-tree__control" aria-label="Expand all" aria-controls="{{_treeid}}" aria-pressed="false"></button>
             {{ properties.headers[0] }}
         </div>
@@ -25,6 +31,8 @@ tree:
         </div>
         <div class="tn-tree__col">
             {{ properties.headers[3] }}
+        </div>
+        <div class="tn-tree__col tn-tree__col--actions">
         </div>
     </div>
 </div>
@@ -51,7 +59,7 @@ tree:
     <li class="tn-tree__item" role="treeitem">
     {%- endif %}
         <div class="tn-tree__row">
-            <div class="tn-tree__col tn-tree__col--first">
+            <div class="tn-tree__col tn-tree__col--control">
                 {%- if _is_parent %}
                 <button class="tn-tree__control" aria-label="Expand" aria-controls="{{_id}}" aria-pressed="{{item_expanded}}"></button>
                 {%- endif %}
@@ -65,6 +73,9 @@ tree:
             </div>
             <div class="tn-tree__col">
                 {{ label({label: item.status}) | indent(16) }}
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+            {{ btn }}
             </div>
         </div>
     {%- if item.items %}
