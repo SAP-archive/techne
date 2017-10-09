@@ -1,0 +1,74 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import list_group %}
+{% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
+{% from "./../format.njk" import format %}
+{% set css_deps = ['helpers','components/button','icons'] %}
+
+{% block content %}
+
+<h1>Lists</h1>
+
+{% set example %}
+{{ list_group(
+    properties={
+        list: [
+        "List item 1",
+        "List item 2",
+        "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
+        "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+        ]
+    })
+}}
+
+{% endset %}
+
+{{ format(example) }}
+<br><br>
+
+<h1>List with actions</h1>
+
+{% set example %}
+{{ list_group(
+    properties={
+          list: [
+          "List item 1",
+          "List item 2",
+          "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
+          "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+          ],
+          modifier: {
+            after: icon("msgdanger")
+        }
+    })
+}}
+
+{%- endset %}
+
+{{ format(example) }}
+<br><br>
+
+<h1>List with checkboxes</h1>
+
+{% set example %}
+{{ list_group(
+    properties={
+        list: [
+        "List item 1",
+        "List item 2",
+        "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
+        "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+        ],
+        modifier: {
+            before: icon("msgdanger")
+        }
+    })
+}}
+
+{%- endset %}
+
+{{ format(example) }}
+<br><br>
+
+
+{% endblock %}
