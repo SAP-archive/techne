@@ -78,7 +78,6 @@ $block: ns(tree);
             @at-root {
                 @each $i in 1,2,3,4,5,6,7,8 {
                     .#{$block}__group--sublevel-#{$i} & {
-                        //padding-left: ($tn-tree-cell-spacing * ($i + 1));
                         padding-left: $_row_padding * ($i + 1);
                     }
                 }
