@@ -36,6 +36,7 @@ $block: ns(table);
         }
     }
     thead {
+        @include tn-type(-1);
         color: tn-color(text, 2);
         tr {
             &:hover {
