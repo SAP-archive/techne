@@ -145,7 +145,57 @@ The Toolbar sorting elements modify the order of the items in the collection dep
 
 {% include display-component.html component=toolbar-sorting %}
 
-<br>
+<br />
+
+## Paination
+
+The Toolbar is also used to support [pagination elements](pagination.html). They are displayed at the main toolbar and also bellow the collection. 
+
+{% capture toolbar-pagination %}
+<div class="tn-toolbar">
+    <div class="tn-toolbar__group tn-toolbar__group--filter">
+        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
+            <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
+        </button>
+        <span role="separator"></span>
+        <div class="tn-dropdown">
+            <button class="tn-dropdown__control tn-dropdown__control--no-border" disabled aria-disabled="true">
+                <span class="tn-icon tn-icon--sort tn-dropdown__icon" role="presentation"></span>
+                Newest
+            </button>
+        </div>
+        <span role="separator"></span>
+    </div>
+    <div class="tn-toolbar__group tn-toolbar__group--view">
+        <div class="tn-toolbar__pagination">
+                <ul class="tn-pagination">
+                    <span class="tn-pagination__total">30 items</span>
+                    <li class="tn-pagination__item">
+                            <a href="#" class="tn-pagination__link" aria-label="Previous">
+                            <span aria-hidden="true"><</span>
+                        </a>
+                    </li>
+                    <li class="tn-pagination__item">
+                            <a href="#" class="tn-pagination__link">1</a>
+                    </li>
+                    <li class="tn-pagination__item">
+                            <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
+                    </li>
+                    <li class="tn-pagination__item">
+                            <a href="#" class="tn-pagination__link">3</a>
+                    </li>
+                    <li class="tn-pagination__item">
+                            <a href="#" class="tn-pagination__link" aria-label="Next">
+                            <span aria-hidden="true">></span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+{% include display-component.html component=toolbar-pagination %}
 
 ## Toolbar with pagination
 
