@@ -5,9 +5,9 @@
 /*!
 .tn-list-group
   .tn-list-group__item
-    .tn-list-group__item--action
+    .tn-list-group__action
       .tn-list-group__button
-    .tn-list-group__item--action-form
+    .tn-list-group__action-form
       .tn-list-group__control
       .tn-list-group__label
 
@@ -44,16 +44,16 @@ $tn-list-group-item-padding: tn-space(4) !default;
         }
       }
     }
-    &--action{
-      position: relative;
-      padding-right: tn-space(12);
-    }
-    &--action-form{
-      display: flex;
-      flex-direction: row;
-      input[type=checkbox]{
-          margin-right: tn-space(4);
-      }
+  }
+  &__action{
+    position: relative;
+    padding-right: tn-space(12);
+  }
+  &__action-form{
+    display: flex;
+    flex-direction: row;
+    input[type=checkbox]{
+        margin-right: tn-space(4);
     }
   }
   &__control{

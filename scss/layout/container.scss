@@ -4,10 +4,10 @@
 
 $block: ns(container);
 .#{$block} {
-    @include clearfix;
+    @include tn-clearfix;
     padding: 0 $tn-padding--ui;
-    max-width: $tn-max-width--ui;
     margin-bottom: $tn-margin-bottom;
+    max-width: $tn-max-width--ui;
     &:last-child {
         margin-bottom: 0;
     }
@@ -17,7 +17,11 @@ $block: ns(container);
     &--bleed {
         padding: 0;
     }
+    &--flex {
+        display: flex;
+    }
     &--centered {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
