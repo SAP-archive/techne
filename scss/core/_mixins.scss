@@ -93,8 +93,7 @@ $ns: ns();
 
 
 
-
-@mixin clearfix {
+@mixin tn-clearfix {
     &::after {
         content: "";
         display: table;
