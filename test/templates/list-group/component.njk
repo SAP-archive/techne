@@ -3,28 +3,26 @@
 {#
     see ./data.json for object structure
 #}
-{% macro list_group(properties={}) %}
+{% macro list_group(properties={}, action={}) %}
 <ul class="tn-list-group">
-  {%- for item in properties.list %}
-  {%-if properties.modifier.after %}
-    <li class="tn-list-group__item tn-list-group__item--action">
-    {% else %}
+  {%- for item in properties.items %}
     <li class="tn-list-group__item">
-  {% endif %}
-  {%- if properties.modifier %}
-    {%- if properties.modifier.after %}
-      {{item}}
-      <button class="tn-list-group__button tn-list-group__button--delete" aria-label="Delete"></button>
-    {% else %}
-      <div class="tn-list-group__item--addon" >
-        <input class="tn-list-group__control" type="checkbox" id="checkbox-{{ loop.index }}" name="checkbox-name-{{ loop.index }}">
-        <label class="tn-list-group__label" for="checkbox-{{ loop.index }}">{{item}}</label>
-      </div>
-    {%- endif %}
-  {% else %}
-    {{item}}
-  {%- endif %}
-  </li>
+      {%- if action %}
+        {%- if action.after %}
+          <div class=" tn-list-group__item--action">
+            {{item}}
+            <button class="tn-list-group__button tn-list-group__button--delete" aria-label="Delete"></button>
+          </div>
+        {% else %}
+          <div class="tn-list-group__item--action-form" >
+            <input class="tn-list-group__control" type="checkbox" id="checkbox-{{ loop.index }}" name="checkbox-name-{{ loop.index }}">
+            <label class="tn-list-group__label" for="checkbox-{{ loop.index }}">{{item}}</label>
+          </div>
+        {%- endif %}
+      {% else %}
+        {{item}}
+      {%- endif %}
+    </li>
   {% endfor %}
 </ul>
 

@@ -10,16 +10,7 @@
 <h1>Lists</h1>
 
 {% set example %}
-{{ list_group(
-    properties={
-        list: [
-        "List item 1",
-        "List item 2",
-        "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
-        "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-        ]
-    })
-}}
+{{ list_group(data.properties, data.action)}}
 
 {% endset %}
 
@@ -29,40 +20,30 @@
 <h1>List with actions</h1>
 
 {% set example %}
-{{ list_group(
-    properties={
-          list: [
-          "List item 1",
-          "List item 2",
-          "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
-          "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-          ],
-          modifier: {
-            after: icon("msgdanger")
-        }
-    })
+
+{{  list_group(
+      properties={
+          items: data.properties.items
+      },
+      action={
+          after: 'icon'
+      })
 }}
 
 {%- endset %}
 
 {{ format(example) }}
 <br><br>
-
 <h1>List with checkboxes</h1>
 
 {% set example %}
-{{ list_group(
-    properties={
-        list: [
-        "List item 1",
-        "List item 2",
-        "List item 3 - Lorem ipsum dolor sit amet, consectetur sed do",
-        "List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
-        ],
-        modifier: {
-            before: icon("msgdanger")
-        }
-    })
+{{  list_group(
+      properties={
+          items: data.properties.items
+      },
+      action={
+          before: 'checkbox'
+      })
 }}
 
 {%- endset %}

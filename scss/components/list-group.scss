@@ -5,8 +5,9 @@
 /*!
 .tn-list-group
   .tn-list-group__item
-    .tn-list-group__button
-    .tn-list-group__addon
+    .tn-list-group__item--action
+      .tn-list-group__button
+    .tn-list-group__item--action-form
       .tn-list-group__control
       .tn-list-group__label
 
@@ -16,6 +17,8 @@ $block: ns(list-group);
 $tn-list-group--border-color: lighten(tn-color(neutral, 2), 5%);
 $tn-list-group-hover: tn-color(action);
 $tn-list-group--input-width: tn-space(7) !default;
+$tn-list-group--border-width: 1px;
+$tn-list-group-item-padding: tn-space(4) !default;
 
 .#{$block} {
   @include reset;
@@ -23,28 +26,29 @@ $tn-list-group--input-width: tn-space(7) !default;
   min-height: $tn-forms-height--input-text;
 
   &__item{
-    border: 1px solid $tn-list-group--border-color;
+    border: $tn-list-group--border-width solid $tn-list-group--border-color;
     border-top: none;
     padding: tn-space(4);
     min-height: $tn-forms-height--input-text;
 
     &:first-child{
-      border-top: 1px solid $tn-list-group--border-color;
+      border-top: $tn-list-group--border-width solid $tn-list-group--border-color;
     }
-    
+
     &:hover{
-      border: 1px solid $tn-list-group-hover;
-      margin-top: -1px; //enable content do not jump because of the double border
-      &:first-child{
-        border-color: $tn-list-group-hover;
-        margin-top: 0;
+      background-color: lighten(tn-color(neutral, 3), 10);
+      input[type=checkbox]{
+        background-color: tn-color(background, 1);
+        &:checked{
+          background-color: tn-color(action, 1);
+        }
       }
     }
     &--action{
       position: relative;
       padding-right: tn-space(12);
     }
-    &--addon{
+    &--action-form{
       display: flex;
       flex-direction: row;
       input[type=checkbox]{
@@ -70,7 +74,7 @@ $tn-list-group--input-width: tn-space(7) !default;
     text-decoration: none;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -14px;
     cursor: pointer;
     &--delete{
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjMDA5Q0RGIiBkPSJNMTMgMEM1LjgyIDAgMCA1LjgyIDAgMTNzNS44MiAxMyAxMyAxMyAxMy01LjgyIDEzLTEzUzIwLjE4IDAgMTMgMHptNS4xOTUgMTcuMzk2YS41NjQuNTY0IDAgMSAxLS43OTkuNzk5TDEzIDEzLjc5OWwtNC4zOTYgNC4zOTZhLjU2NC41NjQgMCAxIDEtLjc5OS0uNzk5TDEyLjIwMSAxMyA3LjgwNSA4LjYwNGEuNTY0LjU2NCAwIDEgMSAuNzk5LS43OTlMMTMgMTIuMjAxbDQuMzk2LTQuMzk2YS41NjQuNTY0IDAgMSAxIC43OTkuNzk5TDEzLjc5OSAxM2w0LjM5NiA0LjM5NnoiLz48L3N2Zz4=');
