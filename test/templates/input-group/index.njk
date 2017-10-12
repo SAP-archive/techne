@@ -22,6 +22,9 @@
                 placeholder: "Field placeholder text"
             }
         }
+    },
+    modifier={
+        block: "inline"
     })
 }}
 {{ input_group(
@@ -99,6 +102,37 @@
 {{ format(example) }}
 
 <br><br>
+<h2>Input Group — Inline</h2>
+{% set example %}
+{{ input_group(
+    properties={
+        after: "phone",
+        input: {
+            properties: {
+                placeholder: "Field placeholder text"
+            }
+        }
+    },
+    modifier={
+        block: "inline"
+    })
+}}
+{{ input_group(
+    properties={
+        after: "fax",
+        input: {
+            properties: {
+                placeholder: "Field placeholder text"
+            }
+        }
+    },
+    modifier={
+        block: "inline"
+    })
+}}
+{% endset %}
+{{ format(example) }}
+
 
 <h1>Input Group — Special addon</h1>
 
