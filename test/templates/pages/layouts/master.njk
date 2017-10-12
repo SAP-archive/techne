@@ -11,18 +11,26 @@
     {{ core_sass | sass_to_css }}
     </style>
 </head>
-<body class="tn-ui tn-ui--{{ app.id }}">
+<body>
+
+<div class="tn-ui tn-ui--{{ app.id }}">
     <div class="tn-ui__header">
         <code class="tn-has-color-inverse">&nbsp;</code>
     </div>
-    <div class="tn-ui__app">
-        <div class="tn-ui__sidebar" style="width: 200px;">
+    <div class="tn-ui__app" id="tn-ui-app">
+        .tn-ui__app
+        {# <div class="tn-ui__sidebar" style="width: 200px;">
             <code class="tn-has-color-inverse">&nbsp;</code>
         </div>
-        <main class="tn-ui__main">
+        <main class="tn-ui__main"> #}
             {% block content %}
             {% endblock %}
-        </main>
+        {# </main> #}
     </div>
+    <div class="tn-overlay" aria-hidden="true" id="tn-ui-overlay">
+        .tn-overlay
+    </div>
+</div>
+
 </body>
 </html>

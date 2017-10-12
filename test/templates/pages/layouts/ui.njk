@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><![endif]-->
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ id }}</title>
+    <style media="screen">
+    {% set core_sass = 'all.scss' %}
+    {{ core_sass | sass_to_css }}
+    </style>
+</head>
+<body>
+    {%- set fix_ui = (fix_footer and fix_header) or (hide_footer and fix_header) %}
+<div class="tn-ui{{ 'fixed' | modifier('ui') if fix_ui }} tn-ui--{{ app.id }}">
+    <div class="tn-ui__header{{ 'fixed' | modifier('ui__header') if fix_header and fix_ui === false }}">
+    {% block header -%}
+    {%- endblock %}
+    </div>
+    <div class="tn-ui__app">
+        {% block app -%}
+        {%- endblock %}
+    </div>
+    {% if hide_footer !== true %}
+    <div class="tn-ui__footer{{ 'fixed' | modifier('ui__footer') if fix_footer and fix_ui === false }}">
+        {% block footer -%}
+        {%- endblock %}
+    </div>
+    {% endif %}
+    {%- if show_overlay %}
+    <div class="tn-ui__overlay tn-overlay" aria-hidden="{{ false if show_overlay else true }}">
+        {% block overlay -%}
+        {%- endblock %}
+    </div>
+    {%- endif %}
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ $block: ns(col);
 */
 .#{$block} {
     flex: 1;
-    @include tn-at-media(s) {
+    @include tn-screen(s) {
         @for $i from 1 through 12 {
             &--#{$i} {
                 @include tn-flow($i, 12);
