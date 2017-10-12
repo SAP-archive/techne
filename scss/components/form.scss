@@ -29,7 +29,7 @@ $block: ns(form);
     //ELEMENTS *******************************************
     //set all ELEMENT baseline styles
     &__group {
-        @include clearfix;
+        @include tn-clearfix;
         @include tn-last-child;
         margin-bottom: $tn-margin-bottom;
 
@@ -41,7 +41,7 @@ $block: ns(form);
         @include tn-last-child;
         margin-right: $tn-form-item-gutter;
         &--check {
-            @include clearfix;
+            @include tn-clearfix;
             position: relative;
             display: block;
             margin-bottom: tn-space(5);

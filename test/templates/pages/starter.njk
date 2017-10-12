@@ -9,7 +9,7 @@
 <div class="tn-container">
     <h1 class="tn-has-type-5 tn-has-color-text-1">Mauris a orci iaculis hendrerit</h1>
     {% for i in range(0,2) %}
-    <div class="tn-col-6">
+    <div class="tn-col--6">
         {{  card(
                 {
                     'title': 'Lorem ipsum dolor quam placeat numquam repellendus',
@@ -36,7 +36,7 @@
 <div class="tn-container">
     <h1 class="tn-has-type-4 tn-has-color-text-2">Proin ut quam arcu</h1>
     {% for i in range(0,2) %}
-    <div class="tn-col-6">
+    <div class="tn-col--6">
         {{ form_group(
             properties={
                 items: [{
@@ -63,7 +63,7 @@
 
 <div class="tn-container">
     {% for i in range(0,2) %}
-    <div class="tn-col-6">
+    <div class="tn-col--6">
 {% set input_type %}{{ "radio" if i == 0 else "checkbox" }}{% endset %}
         {{ form_group(
             type=input_type,
@@ -113,7 +113,7 @@
 
 
 <div class="tn-container">
-    <div class="tn-col-12">
+    <div class="tn-col--12">
 
         {{ form_group(
             type="textarea",
@@ -141,7 +141,7 @@
 
 
 <div class="tn-container">
-    <div class="tn-col-12" style="text-align: right;">
+    <div class="tn-col--12" style="text-align: right;">
 
         {{  button(
                 {
