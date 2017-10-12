@@ -9,6 +9,60 @@ folder: components
 
 The Toolbar component is used always along a collection of items, like cards or a table. The main use of it is to manipulate the collection. We provide elements and interaction patters for **filtering**, **sorting**, **pagination** and **view changes**.
 
+{% capture toolbar-full %}
+<div class="tn-toolbar">
+    <div class="tn-toolbar__group tn-toolbar__group--filter">
+        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL">
+            <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
+        </button>
+        <span role="separator"></span>
+        <div class="tn-dropdown">
+            <button class="tn-dropdown__control tn-dropdown__control--no-border">
+                <span class="tn-icon tn-icon--sort tn-dropdown__icon" role="presentation"></span>
+                Newest
+            </button>
+        </div>
+        <span role="separator"></span>
+    </div>
+    <div class="tn-toolbar__group tn-toolbar__group--view">
+        <div class="tn-toolbar__pagination">
+            <ul class="tn-pagination">
+                <span class="tn-pagination__total">30 items</span>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-label="Previous">
+                        <span aria-hidden="true"><</span>
+                    </a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link">1</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link">3</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-label="Next">
+                        <span aria-hidden="true">></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tn-toolbar__view-as">
+            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as grid" aria-pressed="true">
+                <span class="tn-icon tn-icon--grid tn-icon--medium" role="presentation"></span>
+            </button>
+            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as list" aria-pressed="false">
+                <span class="tn-icon tn-icon--list tn-icon--medium" role="presentation"></span>
+            </button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+{% include display-component.html component=toolbar-full %}
+
 <br/>
 
 ## Filtering
@@ -197,7 +251,71 @@ The Toolbar is also used to support [pagination elements](pagination.html). They
 
 {% include display-component.html component=toolbar-pagination %}
 
-## Toolbar with pagination
+<br />
+
+## Change view
+
+For some collections the user can choose the type of view the items are represented. Icons that show the expected visual representation are used.
+
+{% capture toolbar-change-view %}
+<div class="tn-toolbar">
+    <div class="tn-toolbar__group tn-toolbar__group--filter">
+        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
+            <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
+        </button>
+        <span role="separator"></span>
+        <div class="tn-dropdown">
+            <button class="tn-dropdown__control tn-dropdown__control--no-border" disabled aria-disabled="true">
+                <span class="tn-icon tn-icon--sort tn-dropdown__icon" role="presentation"></span>
+                Newest
+            </button>
+        </div>
+        <span role="separator"></span>
+    </div>
+    <div class="tn-toolbar__group tn-toolbar__group--view">
+        <div class="tn-toolbar__pagination">
+            <ul class="tn-pagination">
+                <span class="tn-pagination__total">30 items</span>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-label="Previous">
+                        <span aria-hidden="true"><</span>
+                    </a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link">1</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link">3</a>
+                </li>
+                <li class="tn-pagination__item">
+                        <a href="#" class="tn-pagination__link" aria-label="Next">
+                        <span aria-hidden="true">></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tn-toolbar__view-as">
+            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as grid" aria-pressed="true">
+                <span class="tn-icon tn-icon--grid tn-icon--medium" role="presentation"></span>
+            </button>
+            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as list" aria-pressed="false">
+                <span class="tn-icon tn-icon--list tn-icon--medium" role="presentation"></span>
+            </button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+{% include display-component.html component=toolbar-change-view %}
+
+<br/>
+
+## Bottom pagination
+
+At the bottom of a collection is recommended to show a toolbar with the pagination component only.
 
 {% capture toolbar-pagination %}
 <div class="tn-toolbar">
