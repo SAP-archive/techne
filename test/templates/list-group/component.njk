@@ -1,5 +1,6 @@
 {% import "../forms.njk" as forms %}
 {% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
 {#
     see ./data.json for object structure
 #}
@@ -8,9 +9,11 @@
   {%- for item in properties.items %}
     <li class="tn-list-group__item">
         {%- if action.after %}
-          <div class=" tn-list-group__action">
+          <div class="tn-list-group__action">
             {{item}}
-            <button class="tn-list-group__button tn-list-group__button--delete" aria-label="Delete"></button>
+            <button class="tn-list-group__button">
+             <span class="tn-icon tn-icon--remove" role="presentation"></span>
+           </button>
           </div>
         {% elseif action.before %}
           <div class="tn-list-group__action-form" >
