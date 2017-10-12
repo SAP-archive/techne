@@ -17,7 +17,7 @@ When the first page is active, the previous link should be disabled.
 {% capture pagination %}
 <ul class="tn-pagination">
     <span class="tn-pagination__total">30 items</span>
-    <li class="tn-pagination__item tn-pagination__navigation">
+    <li class="tn-pagination__item">
         <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
