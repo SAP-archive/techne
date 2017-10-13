@@ -44,6 +44,10 @@ entries:
       url: /input-group.html
       output: web
 
+    - title: List Group
+      url: /list-group.html
+      output: web
+
     - title: Pagination
       url: /pagination.html
       output: web
