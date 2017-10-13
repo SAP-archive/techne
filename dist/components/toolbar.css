@@ -293,12 +293,12 @@
 .tn-dropdown__control[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #d7d7d7
+  border-color: #e4e4e4
 }
 .tn-dropdown__control.is-readonly,
 .tn-dropdown__control[readonly] {
   color: #21262c;
-  border-color: #d7d7d7;
+  border-color: #e4e4e4;
   border-width: 0 0 1px
 }
 .tn-dropdown__control:focus,

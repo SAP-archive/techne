@@ -1,51 +1,34 @@
   - name: add 
-  - name: addlg 
   - name: arrow 
-  - name: back 
   - name: backarrow 
   - name: caution 
   - name: change 
   - name: checked 
-  - name: checkedlg 
   - name: chevron 
   - name: clone 
   - name: close 
   - name: collapse 
-  - name: combinedview 
-  - name: customize 
   - name: delete 
   - name: done 
-  - name: dragdrop 
-  - name: dragdroplg 
-  - name: duplicate 
+  - name: doublechevron 
+  - name: dragdroplist 
+  - name: dragdropobject 
   - name: edit 
   - name: expand 
   - name: feedback 
   - name: filter 
-  - name: filterremove 
-  - name: gethelp 
   - name: grid 
-  - name: helpoff 
-  - name: helpon 
-  - name: info 
+  - name: help 
   - name: infoon 
-  - name: library 
-  - name: linked 
+  - name: link 
   - name: list 
   - name: localization 
   - name: lock 
   - name: maximize 
   - name: minimize 
   - name: more 
-  - name: msgdanger 
-  - name: msginfo 
-  - name: msgsuccess 
-  - name: msgwarning 
   - name: noimage 
   - name: options 
-  - name: remove 
-  - name: removelg 
-  - name: restrictions 
   - name: search 
   - name: sort 
   - name: sync 
