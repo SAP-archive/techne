@@ -24,7 +24,7 @@ $block: ns(dropdown);
     $tn-dropdown-menu-item-background-color--hover: darken(tn-color(action), 5%) !default;
     $tn-dropdown-menu-item-padding: tn-space(3) tn-space(4) !default;
     //anim
-    $tn-dropdown-menu-item-transition-params: 0.15s ease-in !default;
+    $tn-dropdown-menu-item-transition-params: $tn-animation--speed ease-in !default;
 
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
@@ -61,8 +61,12 @@ $block: ns(dropdown);
         z-index: $tn-dropdown-menu-z-index;
         transform: translateY(-1px);
         box-shadow: $tn-dropdown-menu-shadow;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $tn-dropdown-menu-item-transition-params;
         &[aria-hidden="true"] {
-            display: none;
+            opacity: 0;
+            visibility: hidden;
         }
     }
     &__item,
@@ -71,7 +75,6 @@ $block: ns(dropdown);
         @include tn-type(-1,body);
         display: block;
         padding: $tn-dropdown-menu-item-padding;
-        transition: all $tn-dropdown-menu-item-transition-params;
         &:hover {
             color: $tn-dropdown-menu-item-color--hover;
             background-color: $tn-dropdown-menu-item-background-color--hover;

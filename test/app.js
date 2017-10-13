@@ -144,10 +144,18 @@ router.get('/:key', (req, res) => {
     res.render(`${key}/index`, Object.assign(GLOBALS, { id: key, data: data, libs: getLibs(req.query.lib) }));
 });
 
+function getStarterData() {
+    var data = {
+        "toolbar": require(`./templates/toolbar/data.json`),
+        "tree": require(`./templates/tree/data.json`)
+    }
+    return data;
+}
+
 router.get('/pages/:key', (req, res) => {
     var key = req.params.key;
     console.log(`requested http://localhost:3030/pages/${key}`);
-    res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key, app: config }));
+    res.render(`pages/${key}`, Object.assign(GLOBALS, { id: key, data: getStarterData(), app: config }));
 });
 
 

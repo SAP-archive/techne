@@ -34,13 +34,14 @@ $block: ns(pagination);
         width: calc(100% - #{tn-space(2)}*2);;
         height: 2px;
         position: absolute;
-        bottom: 1px;
+        bottom: -6px;
         left: 0;
         margin-left: tn-space(2);
     }
     &:hover,
     &:focus {
       color: darken($tn-pagination-color--text, 5);
+      text-decoration: none;
       &::after {
           border-bottom-color: darken($tn-pagination-color--text, 5);
       }
@@ -63,7 +64,6 @@ $block: ns(pagination);
       &::after {
           border-bottom-color: transparent;
       }
-
     }
     &:active,
     &[aria-selected="true"],
@@ -76,6 +76,10 @@ $block: ns(pagination);
 
   &__item{
     display: inline-block;
+    .tn-icon--chevron-back{
+      @extend .tn-icon--chevron;
+      @include rotate(180);
+    }
   }
   &__more{
     @include tn-type(-3);
@@ -92,9 +96,5 @@ $block: ns(pagination);
   }
   &__total{
     color: $tn-pagination-nav-color--disabled;
-  }
-  &__navigation .tn-icon--chevron-back{
-    @extend .tn-icon--chevron;
-    @include rotate(180);
   }
 }

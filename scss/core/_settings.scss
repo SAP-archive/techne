@@ -124,6 +124,9 @@ $tn-color--error: tn-color(status, 3) !default;
 $tn-color--warning: tn-color(status, 2) !default;
 $tn-color--success: tn-color(status, 1) !default;
 
+//animation speed
+$tn-animation--speed: 0.125s !default;
+
 //FORMS
 //dimensions
 $tn-forms-height--input-text: tn-space(13) !default;

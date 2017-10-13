@@ -1,0 +1,22 @@
+{% set title = "Tree" %}
+{% extends "./layouts/starter.njk" %}
+{% import "./../utils.njk" as utils %}
+{% from "../toolbar/component.njk" import toolbar %}
+{% from "../tree/component.njk" import tree %}
+
+{% block content %}
+
+<br>
+{# Add New Button #}
+<div class="tn-container tn-has-text-align-right">
+    <button class="tn-button tn-button--text tn-button--small">
+        <span class="tn-icon tn-icon--addlg" role="presentation"></span>ADD
+    </button>
+</div>
+
+{{ tree(data.tree.properties) }}
+
+
+
+
+{% endblock %}

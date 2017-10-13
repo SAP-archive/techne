@@ -1,5 +1,6 @@
 # Exclude Directories
 /docs
+/cdn
 /icons
 /ops
 /src

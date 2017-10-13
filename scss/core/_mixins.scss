@@ -1,3 +1,5 @@
+@import "settings";
+
 $ns: ns();
 //utils
 @mixin reset {
@@ -25,6 +27,7 @@ $ns: ns();
     color: $tn-forms-color;
     //background-color: $tn-forms-background-color;
     background-color: transparent;
+    transition: border-color $tn-animation--speed;
     //states
     &:focus,
     &:hover {
@@ -90,8 +93,7 @@ $ns: ns();
 
 
 
-
-@mixin clearfix {
+@mixin tn-clearfix {
     &::after {
         content: "";
         display: table;
