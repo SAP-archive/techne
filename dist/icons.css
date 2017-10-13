@@ -37,165 +37,114 @@
 .tn-icon--add::before {
   content: ""
 }
-.tn-icon--addlg::before {
+.tn-icon--arrow::before {
   content: ""
 }
-.tn-icon--arrow::before {
+.tn-icon--backarrow::before {
   content: ""
 }
-.tn-icon--back::before {
+.tn-icon--caution::before {
   content: ""
 }
-.tn-icon--backarrow::before {
+.tn-icon--change::before {
   content: ""
 }
-.tn-icon--caution::before {
+.tn-icon--checked::before {
   content: ""
 }
-.tn-icon--change::before {
+.tn-icon--chevron::before {
   content: ""
 }
-.tn-icon--checked::before {
+.tn-icon--clone::before {
   content: ""
 }
-.tn-icon--checkedlg::before {
+.tn-icon--close::before {
   content: ""
 }
-.tn-icon--chevron::before {
+.tn-icon--collapse::before {
   content: ""
 }
-.tn-icon--clone::before {
+.tn-icon--delete::before {
   content: ""
 }
-.tn-icon--close::before {
+.tn-icon--done::before {
   content: ""
 }
-.tn-icon--collapse::before {
+.tn-icon--doublechevron::before {
   content: ""
 }
-.tn-icon--combinedview::before {
+.tn-icon--dragdroplist::before {
   content: ""
 }
-.tn-icon--customize::before {
+.tn-icon--dragdropobject::before {
   content: ""
 }
-.tn-icon--delete::before {
+.tn-icon--edit::before {
   content: ""
 }
-.tn-icon--done::before {
+.tn-icon--expand::before {
   content: ""
 }
-.tn-icon--dragdrop::before {
+.tn-icon--feedback::before {
   content: ""
 }
-.tn-icon--dragdroplg::before {
+.tn-icon--filter::before {
   content: ""
 }
-.tn-icon--duplicate::before {
+.tn-icon--grid::before {
   content: ""
 }
-.tn-icon--edit::before {
+.tn-icon--help::before {
   content: ""
 }
-.tn-icon--expand::before {
+.tn-icon--infoon::before {
   content: ""
 }
-.tn-icon--feedback::before {
+.tn-icon--link::before {
   content: ""
 }
-.tn-icon--filter::before {
+.tn-icon--list::before {
   content: ""
 }
-.tn-icon--filterremove::before {
+.tn-icon--localization::before {
   content: ""
 }
-.tn-icon--gethelp::before {
+.tn-icon--lock::before {
   content: ""
 }
-.tn-icon--grid::before {
+.tn-icon--maximize::before {
   content: ""
 }
-.tn-icon--helpoff::before {
+.tn-icon--minimize::before {
   content: ""
 }
-.tn-icon--helpon::before {
+.tn-icon--more::before {
   content: ""
 }
-.tn-icon--info::before {
+.tn-icon--noimage::before {
   content: ""
 }
-.tn-icon--infoon::before {
+.tn-icon--options::before {
   content: ""
 }
-.tn-icon--library::before {
+.tn-icon--search::before {
   content: ""
 }
-.tn-icon--linked::before {
+.tn-icon--sort::before {
   content: ""
 }
-.tn-icon--list::before {
+.tn-icon--sync::before {
   content: ""
 }
-.tn-icon--localization::before {
+.tn-icon--top::before {
   content: ""
 }
-.tn-icon--lock::before {
+.tn-icon--visibilityoff::before {
   content: ""
 }
-.tn-icon--maximize::before {
+.tn-icon--visibilityon::before {
   content: ""
 }
-.tn-icon--minimize::before {
-  content: ""
-}
-.tn-icon--more::before {
-  content: ""
-}
-.tn-icon--msgdanger::before {
-  content: ""
-}
-.tn-icon--msginfo::before {
-  content: ""
-}
-.tn-icon--msgsuccess::before {
-  content: ""
-}
-.tn-icon--msgwarning::before {
-  content: ""
-}
-.tn-icon--noimage::before {
-  content: ""
-}
-.tn-icon--options::before {
-  content: ""
-}
-.tn-icon--remove::before {
-  content: ""
-}
-.tn-icon--removelg::before {
-  content: ""
-}
-.tn-icon--restrictions::before {
-  content: ""
-}
-.tn-icon--search::before {
-  content: ""
-}
-.tn-icon--sort::before {
-  content: ""
-}
-.tn-icon--sync::before {
-  content: ""
-}
-.tn-icon--top::before {
-  content: ""
-}
-.tn-icon--visibilityoff::before {
-  content: ""
-}
-.tn-icon--visibilityon::before {
-  content: ""
-}
 .tn-icon--warning::before {
-  content: ""
+  content: ""
 }

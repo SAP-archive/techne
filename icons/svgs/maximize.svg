@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 132 132" style="enable-background:new 0 0 132 132;" xml:space="preserve">
-<path d="M121.8-0.9H70.7c-6.1,0-10.2,4.1-10.2,10.2s4.1,10.2,10.2,10.2h26.6L19.5,97.2V70.7c0-6.1-4.1-10.2-10.2-10.2
-	S-0.9,64.5-0.9,70.7v51.1c0,6.1,4.1,10.2,10.2,10.2h51.1c6.1,0,10.2-4.1,10.2-10.2c0-6.1-4.1-10.2-10.2-10.2H33.8l77.7-77.7v26.6
-	c0,6.1,4.1,10.2,10.2,10.2c6.1,0,10.2-4.1,10.2-10.2V9.3C132,3.2,127.9-0.9,121.8-0.9z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>maximize</title><g id="Layer_2" data-name="Layer 2"><g id="Filled_Icons" data-name="Filled Icons"><path d="M18,17V7a1,1,0,0,0-1-1H7A1,1,0,0,0,6,7V17a1,1,0,0,0,1,1H17A1,1,0,0,0,18,17Zm-2-1H8V8h8Z"/><path d="M6,0H1A1,1,0,0,0,0,1V6A1,1,0,0,0,2,6V3.41L4.29,5.71A1,1,0,0,0,5.71,4.29L3.41,2H6A1,1,0,0,0,6,0Z"/><path d="M24,6V1a1,1,0,0,0-1-1H18a1,1,0,0,0,0,2h2.59L18.29,4.29a1,1,0,0,0,1.41,1.41L22,3.41V6a1,1,0,0,0,2,0Z"/><path d="M18,24h5a1,1,0,0,0,1-1V18a1,1,0,0,0-2,0v2.59l-2.29-2.29a1,1,0,0,0-1.41,1.41L20.59,22H18a1,1,0,0,0,0,2Z"/><path d="M0,18v5a1,1,0,0,0,1,1H6a1,1,0,0,0,0-2H3.41l2.29-2.29a1,1,0,0,0-1.41-1.41L2,20.59V18a1,1,0,0,0-2,0Z"/></g></g></svg>

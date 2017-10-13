@@ -14,5 +14,5 @@ const task = (cb) => {
 		.pipe(gulp.dest(paths.dest));
 }
 
-gulp.task('pkg-iconfont', task);
+gulp.task('pkg-icons', task);
 module.exports = task;
