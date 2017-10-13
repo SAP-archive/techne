@@ -1,0 +1,77 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "../components/mixins";
+
+/*!
+.tn-list-group
+  .tn-list-group__item
+    .tn-list-group__action
+      .tn-list-group__button
+    .tn-list-group__action-form
+      .tn-list-group__control
+      .tn-list-group__label
+
+*/
+$block: ns(list-group);
+
+$tn-list-group--border-color: lighten(tn-color(neutral, 2), 5%);
+$tn-list-group-hover: tn-color(action);
+$tn-list-group--input-width: tn-space(7) !default;
+$tn-list-group--border-width: 1px;
+$tn-list-group-item-padding: tn-space(4) !default;
+
+.#{$block} {
+  @include reset;
+  vertical-align: top;
+  min-height: $tn-forms-height--input-text;
+
+  &__item{
+    border: $tn-list-group--border-width solid $tn-list-group--border-color;
+    border-top: none;
+    padding: tn-space(4);
+    min-height: $tn-forms-height--input-text;
+
+    &:first-child{
+      border-top: $tn-list-group--border-width solid $tn-list-group--border-color;
+    }
+
+    &:hover{
+      background-color: lighten(tn-color(neutral, 3), 10);
+      input[type=checkbox]{
+        background-color: tn-color(background, 1);
+        &:checked{
+          background-color: tn-color(action, 1);
+        }
+      }
+    }
+  }
+  &__action{
+    position: relative;
+    padding-right: tn-space(12);
+  }
+  &__action-form{
+    display: flex;
+    flex-direction: row;
+    input[type=checkbox]{
+        margin-right: tn-space(4);
+    }
+  }
+  &__control{
+    flex-basis: $tn-list-group--input-width;
+    min-width: $tn-list-group--input-width;
+  }
+  &__label{
+    flex-basis: 95%;
+  }
+  &__button{
+    flex: 1;
+    display: block;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+}

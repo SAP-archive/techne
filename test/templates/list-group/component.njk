@@ -1,0 +1,30 @@
+{% import "../forms.njk" as forms %}
+{% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
+{#
+    see ./data.json for object structure
+#}
+{% macro list_group(properties={}, action={}) %}
+<ul class="tn-list-group">
+  {%- for item in properties.items %}
+    <li class="tn-list-group__item">
+        {%- if action.after %}
+          <div class="tn-list-group__action">
+            {{item}}
+            <button class="tn-list-group__button">
+             <span class="tn-icon tn-icon--remove" role="presentation"></span>
+           </button>
+          </div>
+        {% elseif action.before %}
+          <div class="tn-list-group__action-form" >
+            <input class="tn-list-group__control" type="checkbox" id="checkbox-{{ loop.index }}" name="checkbox-name-{{ loop.index }}">
+            <label class="tn-list-group__label" for="checkbox-{{ loop.index }}">{{item}}</label>
+          </div>
+      {% else %}
+        {{item}}
+      {%- endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{%- endmacro %}

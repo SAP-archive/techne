@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+{% from "./component.njk" import list_group %}
+{% from "../button/component.njk" import button %}
+{% from "../icon/component.njk" import icon %}
+{% from "./../format.njk" import format %}
+{% set css_deps = ['helpers','components/button','icons'] %}
+
+{% block content %}
+
+<h1>Lists</h1>
+
+{% set example %}
+{{ list_group(data.properties)}}
+
+{% endset %}
+
+{{ format(example) }}
+<br><br>
+
+<h1>List with actions</h1>
+
+{% set example %}
+
+{{  list_group(
+      properties={
+          items: data.properties.items
+      },
+      action={
+          after: 'icon'
+      })
+}}
+
+{%- endset %}
+
+{{ format(example) }}
+<br><br>
+<h1>List with checkboxes</h1>
+
+{% set example %}
+{{  list_group(
+      properties={
+          items: data.properties.items
+      },
+      action={
+          before: 'checkbox'
+      })
+}}
+
+{%- endset %}
+
+{{ format(example) }}
+<br><br>
+
+
+{% endblock %}
