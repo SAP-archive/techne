@@ -19,12 +19,10 @@ $block: ns(ui);
     $tn-ui-header-fixed: false !default;
     $tn-ui-footer-fixed: false !default;
 
-    $tn-ui-header-height: 60px !default;
+    $tn-ui-header-height: 50px !default;
     $tn-ui-header-background-color: tn-color(primary) !default;
     $tn-ui-footer-height: 40px !default;
     $tn-ui-footer-background-color: tn-color(primary, 2) !default;
-    $tn-ui-sidebar-width: 280px !default;
-    $tn-ui-sidebar-background-color: tn-color(primary, 2) !default;
 
     $_ui-is-fixed: $tn-ui-fixed or ($tn-ui-header-fixed and $tn-ui-footer-fixed);
     position: absolute;
@@ -110,13 +108,6 @@ $block: ns(ui);
             @if $tn-ui-footer-fixed {
                 padding-bottom: $tn-ui-footer-height;
             }
-        }
-    }
-    &__sidebar {
-        background-color: $tn-ui-sidebar-background-color;
-        flex: 0 0 $tn-ui-sidebar-width;
-        @if $_ui-is-fixed {
-            overflow: scroll;
         }
     }
     &__main {

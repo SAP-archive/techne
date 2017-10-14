@@ -5,7 +5,7 @@
 $block: ns(container);
 .#{$block} {
     @include tn-clearfix;
-    padding: 0 $tn-padding--ui;
+    //padding: 0 $tn-padding--ui;
     margin-bottom: $tn-margin-bottom;
     max-width: $tn-max-width--ui;
     &:last-child {
@@ -14,9 +14,9 @@ $block: ns(container);
     &--fluid {
         max-width: 100%;
     }
-    &--bleed {
-        padding: 0;
-    }
+    // &--bleed {
+    //     padding: 0;
+    // }
     &--flex {
         display: flex;
     }
