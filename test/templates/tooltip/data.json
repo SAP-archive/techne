@@ -5,13 +5,13 @@
         "content": ""
     },
     "modifier": {
-        "block": [ "none", "top-left", "top-right", "botom-left", "bottom-right"]
+        "block": [ "left", "right", "top-left", "top-right", "botom-left", "bottom-right"]
     },
     "state": {
 
     },
     "aria": {
-
+        "test":"test"
     }
 
 }

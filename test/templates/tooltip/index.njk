@@ -8,23 +8,78 @@
 
 {% block content %}
 
-    <h1>tooltip</h1>
+<h1>tooltip</h1>
 
-    <!-- output the component example and the code snippet -->
-    {% set example %}
-    {{  tooltip(
-            properties={
-                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-            },
-            modifier={
-                block: ["top-left"]
-            },
-            state={},
-            aria={}
-        )
-    }}
-    {% endset %}
-    {{ format(example) }}
+<!-- output the component example and the code snippet -->
+{% set example %}
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
+        },
+        modifier={
+            block: ["left"]
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
+        },
+        modifier={
+            block: ["right"]
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        modifier={
+            block: ["top-left"]
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        modifier={
+            block: ["top-right"]
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        modifier={
+            block: ["bottom-left"]
+        }
+    )
+}}
+<br><br>
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        modifier={
+            block: ["bottom-right"]
+        }
+    )
+}}
+{% endset %}
+{{- format(example) -}}
 
 
 {% endblock %}

@@ -15,6 +15,8 @@ $block: ns(tooltip);
     $tn-tooltip-content-background-color: tn-color(text, 3) !default;
     $tn-tooltip-content-color: tn-color(text-inverse, 1) !default;
     $tn-tooltip-padding: tn-space(s) !default;
+    $tn-tooltip-arrow-offset: (tn-space(s)) - 2 ;
+    $tn-tooltip-arrow-width: $tn-tooltip-arrow-offset;
 
     //BLOCK BASE *******************************************
     @include reset;
@@ -25,25 +27,50 @@ $block: ns(tooltip);
 
     //ELEMENTS *******************************************
     &__arrow{
-        &::after {
-            margin-left: -4px;
-            content: "";
-            border-width: 7px 7px 0;
-            border-top-color: #000;
-            position: absolute;
-            border-color: transparent;
-            border-style: solid;
-        }
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 $tn-tooltip-arrow-width $tn-tooltip-arrow-width $tn-tooltip-arrow-width;
+        border-color: transparent transparent $tn-tooltip-content-background-color transparent;
+        position: absolute;
+        display: none;
+    }
+    &__arrow--left{
+        display: block;
+        top: $tn-tooltip-arrow-offset + 5;
+        left: -($tn-tooltip-arrow-offset + 5);
+        transform: rotate(-90deg);
+    }
+    &__arrow--right{
+        display: block;
+        top: $tn-tooltip-arrow-offset + 5;
+        right: -($tn-tooltip-arrow-offset + 5);
+        transform: rotate(90deg);
+    }
+    &__arrow--top-left{
+        display: block;
+        top: -($tn-tooltip-arrow-offset);
+        left: $tn-tooltip-arrow-offset;
+    }
+    &__arrow--top-right{
+            display: block;
+            top: -($tn-tooltip-arrow-offset);
+            right: $tn-tooltip-arrow-offset;
+    }
+    &__arrow--bottom-left{
+            display: block;
+            bottom: -($tn-tooltip-arrow-offset);
+            left: $tn-tooltip-arrow-offset;
+            transform: rotate(180deg);
+    }
+    &__arrow--bottom-right{
+            display: block;
+            bottom: -($tn-tooltip-arrow-offset);
+            right: $tn-tooltip-arrow-offset;
+            transform: rotate(180deg);
     }
     &__content {
         @include tn-type(-2)
         color: $tn-tooltip-content-color;
     }
-
-    //STATES *******************************************
-    &.is-disabled,
-    &[disabled] {
-        opacity: 0.5;
-    }
-
 }
