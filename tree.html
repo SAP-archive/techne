@@ -296,24 +296,28 @@
 
     
 
-  <h2 id="tree">Tree</h2>
+  <p>The Tree component is used to display hierarchical data in tabular way. Permitting the user to dig deeper into the data in an simple way. Along with displaying the hierarchy information it can also contain other data in the same node as well.</p>
+
+<p><br /></p>
+
+<h2 id="simple-tree">Simple tree</h2>
+
+<p>The tree can be used with a simple hierarchy and the items with data a the end nodes.</p>
 
 <div class="tn-tree tn-tree--header">
     <div class="tn-tree__row tn-tree__row--header">
         <div class="tn-tree__col tn-tree__col--control">
             <button class="tn-tree__control" aria-label="Expand all" aria-controls="q3gqJ609" aria-pressed="false"></button>
-            Column Header
+            Header
         </div>
         <div class="tn-tree__col">
-            Column Header
+            Header
         </div>
         <div class="tn-tree__col">
-            Column Header
+            Header
         </div>
         <div class="tn-tree__col">
             Status
-        </div>
-        <div class="tn-tree__col tn-tree__col--actions">
         </div>
     </div>
 </div>
@@ -324,120 +328,41 @@
                 <button class="tn-tree__control" aria-label="Expand" aria-controls="wcPvE475" aria-pressed="false"></button>
                 <a class="tn-has-font-weight-semi">First Level</a>
             </div>
-            <div class="tn-tree__col">
-                Secondary Value
-            </div>
-            <div class="tn-tree__col">
-                Secondary Value
-            </div>
-            <div class="tn-tree__col">
-                <span class="tn-label">
-                    Inactive
-                </span>
-            </div>
-            <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                </button>
-            </div>
         </div>
         <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
-            <li class="tn-tree__item" role="treeitem" id="w2Qhp313" aria-expanded="false">
-                <div class="tn-tree__row">
-                    <div class="tn-tree__col tn-tree__col--control">
-                        <button class="tn-tree__control" aria-label="Expand" aria-controls="w2Qhp313" aria-pressed="false"></button>
-                        <a class="tn-has-font-weight-semi">Second Level</a>
-                    </div>
-                    <div class="tn-tree__col">
-                        Secondary Value
-                    </div>
-                    <div class="tn-tree__col">
-                        Secondary Value
-                    </div>
-                    <div class="tn-tree__col">
-                        <span class="tn-label">
-                            Inactive
-                        </span>
-                    </div>
-                    <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                            <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                        </button>
-                    </div>
-                </div>
-                <ul class="tn-tree__group tn-tree__group--sublevel-2 is-hidden" role="group" aria-hidden="true">
-                    <li class="tn-tree__item" role="treeitem" id="QKWZR356" aria-expanded="false">
-                        <div class="tn-tree__row">
-                            <div class="tn-tree__col tn-tree__col--control">
-                                <button class="tn-tree__control" aria-label="Expand" aria-controls="QKWZR356" aria-pressed="false"></button>
-                                <a class="tn-has-font-weight-semi">Third Level</a>
-                            </div>
-                            <div class="tn-tree__col">
-                                Secondary Value
-                            </div>
-                            <div class="tn-tree__col">
-                                Secondary Value
-                            </div>
-                            <div class="tn-tree__col">
-                                <span class="tn-label">
-                                    Inactive
-                                </span>
-                            </div>
-                            <div class="tn-tree__col tn-tree__col--actions">
-                                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                                </button>
-                            </div>
-                        </div>
-                        <ul class="tn-tree__group tn-tree__group--sublevel-3 is-hidden" role="group" aria-hidden="true">
-                            <li class="tn-tree__item" role="treeitem">
-                                <div class="tn-tree__row">
-                                    <div class="tn-tree__col tn-tree__col--control">
-                                        <a class="tn-has-font-weight-semi">Fourth Level</a>
-                                    </div>
-                                    <div class="tn-tree__col">
-                                        Secondary Value
-                                    </div>
-                                    <div class="tn-tree__col">
-                                        Secondary Value
-                                    </div>
-                                    <div class="tn-tree__col">
-                                        <span class="tn-label">
-                                            Inactive
-                                        </span>
-                                    </div>
-                                    <div class="tn-tree__col tn-tree__col--actions">
-                                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                                            <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
             <li class="tn-tree__item" role="treeitem">
                 <div class="tn-tree__row">
                     <div class="tn-tree__col tn-tree__col--control">
-                        <a class="tn-has-font-weight-semi">Second Level</a>
+                       Second Level
                     </div>
                     <div class="tn-tree__col">
                         Secondary Value
                     </div>
                     <div class="tn-tree__col">
-                        Secondary Value
+                        123
                     </div>
                     <div class="tn-tree__col">
                         <span class="tn-label">
                             Default
                         </span>
                     </div>
-                    <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                            <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                        </button>
+                </div>
+            </li>
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        323
+                    </div>
+                    <div class="tn-tree__col">
+                        <span class="tn-label">
+                            Default
+                        </span>
                     </div>
                 </div>
             </li>
@@ -449,44 +374,23 @@
                 <button class="tn-tree__control" aria-label="Expand" aria-controls="to6w3377" aria-pressed="false"></button>
                 <a class="tn-has-font-weight-semi">First Level</a>
             </div>
-            <div class="tn-tree__col">
-                Secondary Value
-            </div>
-            <div class="tn-tree__col">
-                Secondary Value
-            </div>
-            <div class="tn-tree__col">
-                <span class="tn-label">
-                    Default
-                </span>
-            </div>
-            <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                </button>
-            </div>
         </div>
         <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
             <li class="tn-tree__item" role="treeitem">
                 <div class="tn-tree__row">
                     <div class="tn-tree__col tn-tree__col--control">
-                        <a class="tn-has-font-weight-semi">Second Level</a>
+                        Second Level
                     </div>
                     <div class="tn-tree__col">
                         Secondary Value
                     </div>
                     <div class="tn-tree__col">
-                        Secondary Value
+                        443
                     </div>
                     <div class="tn-tree__col">
                         <span class="tn-label">
                             Inactive
                         </span>
-                    </div>
-                    <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                            <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                        </button>
                     </div>
                 </div>
             </li>
@@ -495,23 +399,18 @@
     <li class="tn-tree__item" role="treeitem">
         <div class="tn-tree__row">
             <div class="tn-tree__col tn-tree__col--control">
-                <a class="tn-has-font-weight-semi">First Level</a>
+                First Level
             </div>
             <div class="tn-tree__col">
                 Secondary Value
             </div>
             <div class="tn-tree__col">
-                Secondary Value
+                344
             </div>
             <div class="tn-tree__col">
                 <span class="tn-label">
                     Inactive
                 </span>
-            </div>
-            <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
-                    <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
-                </button>
             </div>
         </div>
     </li>
@@ -521,18 +420,16 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row tn-tree__row--header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand all"</span> <span class="na">aria-controls=</span><span class="s">"q3gqJ609"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
-            Column Header
+            Header
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-            Column Header
+            Header
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-            Column Header
+            Header
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
             Status
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -543,120 +440,41 @@
                 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"wcPvE475"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                Secondary Value
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                Secondary Value
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                    Inactive
-                <span class="nt">&lt;/span&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                <span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-1 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"w2Qhp313"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"w2Qhp313"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Second Level<span class="nt">&lt;/a&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        Secondary Value
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        Secondary Value
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                            Inactive
-                        <span class="nt">&lt;/span&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                        <span class="nt">&lt;/button&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
-                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-2 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"QKWZR356"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"QKWZR356"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
-                                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Third Level<span class="nt">&lt;/a&gt;</span>
-                            <span class="nt">&lt;/div&gt;</span>
-                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                Secondary Value
-                            <span class="nt">&lt;/div&gt;</span>
-                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                Secondary Value
-                            <span class="nt">&lt;/div&gt;</span>
-                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                                    Inactive
-                                <span class="nt">&lt;/span&gt;</span>
-                            <span class="nt">&lt;/div&gt;</span>
-                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                                <span class="nt">&lt;/button&gt;</span>
-                            <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-3 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
-                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Fourth Level<span class="nt">&lt;/a&gt;</span>
-                                    <span class="nt">&lt;/div&gt;</span>
-                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                        Secondary Value
-                                    <span class="nt">&lt;/div&gt;</span>
-                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                        Secondary Value
-                                    <span class="nt">&lt;/div&gt;</span>
-                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                                            Inactive
-                                        <span class="nt">&lt;/span&gt;</span>
-                                    <span class="nt">&lt;/div&gt;</span>
-                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                                        <span class="nt">&lt;/button&gt;</span>
-                                    <span class="nt">&lt;/div&gt;</span>
-                                <span class="nt">&lt;/div&gt;</span>
-                            <span class="nt">&lt;/li&gt;</span>
-                        <span class="nt">&lt;/ul&gt;</span>
-                    <span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;/ul&gt;</span>
-            <span class="nt">&lt;/li&gt;</span>
-
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Second Level<span class="nt">&lt;/a&gt;</span>
+                       Second Level
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                         Secondary Value
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        Secondary Value
+                        123
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
                             Default
                         <span class="nt">&lt;/span&gt;</span>
                     <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                        <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        323
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                            Default
+                        <span class="nt">&lt;/span&gt;</span>
                     <span class="nt">&lt;/div&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/li&gt;</span>
@@ -668,20 +486,234 @@
                 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"to6w3377"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
                 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-1 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        443
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                            Inactive
+                        <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                First Level
+            <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                 Secondary Value
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                Secondary Value
+                344
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                    Default
+                    Inactive
                 <span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="actions">Actions</h2>
+
+<p>The Tree rows can have also Actions, same was as the Table component.</p>
+
+<div class="tn-tree tn-tree--header">
+    <div class="tn-tree__row tn-tree__row--header">
+        <div class="tn-tree__col tn-tree__col--control">
+            <button class="tn-tree__control" aria-label="Expand all" aria-controls="a3gqJ609" aria-pressed="false"></button>
+            Header
+        </div>
+        <div class="tn-tree__col">
+            Header
+        </div>
+        <div class="tn-tree__col">
+            Header
+        </div>
+        <div class="tn-tree__col">
+        </div>
+    </div>
+</div>
+<ul class="tn-tree" id="a3gqJ609" role="tree">
+    <li class="tn-tree__item" role="treeitem" id="wcPvE476" aria-expanded="false">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="wcPvE476" aria-pressed="false"></button>
+                <a class="tn-has-font-weight-semi">First Level</a>
+            </div>
+            <div class="tn-tree__col">
+            </div>
+            <div class="tn-tree__col">
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                </button>
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+        <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                       Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        123
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                        </button>
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        323
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                        </button>
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="tn-tree__item" role="treeitem" id="to6w3378" aria-expanded="false">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="to6w3378" aria-pressed="false"></button>
+                <a class="tn-has-font-weight-semi">First Level</a>
+            </div>
+            <div class="tn-tree__col">
+            </div>
+            <div class="tn-tree__col">
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                </button>
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+        <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        443
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                        </button>
+                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="tn-tree__item" role="treeitem">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                First Level
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                344
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
+                </button>
+                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree tn-tree--header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row tn-tree__row--header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand all"</span> <span class="na">aria-controls=</span><span class="s">"a3gqJ609"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+            Header
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            Header
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            Header
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree"</span> <span class="na">id=</span><span class="s">"a3gqJ609"</span> <span class="na">role=</span><span class="s">"tree"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"wcPvE476"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"wcPvE476"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
                 <span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
@@ -689,22 +721,84 @@
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Second Level<span class="nt">&lt;/a&gt;</span>
+                       Second Level
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                         Secondary Value
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        Secondary Value
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
-                            Inactive
-                        <span class="nt">&lt;/span&gt;</span>
+                        123
                     <span class="nt">&lt;/div&gt;</span>
                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        323
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"to6w3378"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"to6w3378"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-1 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        443
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
                         <span class="nt">&lt;/button&gt;</span>
                     <span class="nt">&lt;/div&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
@@ -714,10 +808,245 @@
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
+                First Level
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                 Secondary Value
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                344
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--remove tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="multiple-levels">Multiple levels</h2>
+
+<p>The Tree component support till four levels on the hierarchy.</p>
+
+<div class="tn-tree tn-tree--header">
+    <div class="tn-tree__row tn-tree__row--header">
+        <div class="tn-tree__col tn-tree__col--control">
+            <button class="tn-tree__control" aria-label="Expand all" aria-controls="b3gqJ609" aria-pressed="false"></button>
+            Header
+        </div>
+        <div class="tn-tree__col">
+            Header
+        </div>
+        <div class="tn-tree__col">
+            Status
+        </div>
+        <div class="tn-tree__col tn-tree__col--actions">
+        </div>
+    </div>
+</div>
+<ul class="tn-tree" id="b3gqJ609" role="tree">
+    <li class="tn-tree__item" role="treeitem" id="acPvE475" aria-expanded="false">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="acPvE475" aria-pressed="false"></button>
+                <a class="tn-has-font-weight-semi">First Level</a>
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                    <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+        <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
+            <li class="tn-tree__item" role="treeitem" id="a2Qhp313" aria-expanded="false">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        <button class="tn-tree__control" aria-label="Expand" aria-controls="a2Qhp313" aria-pressed="false"></button>
+                        <a class="tn-has-font-weight-semi">Second Level</a>
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        <span class="tn-label">
+                            Inactive
+                        </span>
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                            <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+                <ul class="tn-tree__group tn-tree__group--sublevel-2 is-hidden" role="group" aria-hidden="true">
+                    <li class="tn-tree__item" role="treeitem" id="aKWZR356" aria-expanded="false">
+                        <div class="tn-tree__row">
+                            <div class="tn-tree__col tn-tree__col--control">
+                                <button class="tn-tree__control" aria-label="Expand" aria-controls="aKWZR356" aria-pressed="false"></button>
+                                <a class="tn-has-font-weight-semi">Third Level</a>
+                            </div>
+                            <div class="tn-tree__col">
+                                Secondary Value
+                            </div>
+                            <div class="tn-tree__col">
+                                <span class="tn-label">
+                                    Inactive
+                                </span>
+                            </div>
+                            <div class="tn-tree__col tn-tree__col--actions">
+                                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                                    <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="tn-tree__group tn-tree__group--sublevel-3 is-hidden" role="group" aria-hidden="true">
+                            <li class="tn-tree__item" role="treeitem">
+                                <div class="tn-tree__row">
+                                    <div class="tn-tree__col tn-tree__col--control">
+                                        Fourth Level
+                                    </div>
+                                    <div class="tn-tree__col">
+                                        Secondary Value
+                                    </div>
+                                    <div class="tn-tree__col">
+                                        <span class="tn-label">
+                                            Inactive
+                                        </span>
+                                    </div>
+                                    <div class="tn-tree__col tn-tree__col--actions">
+                                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                                            <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        <span class="tn-label">
+                            Default
+                        </span>
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                            <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="tn-tree__item" role="treeitem" id="ao6w3377" aria-expanded="false">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                <button class="tn-tree__control" aria-label="Expand" aria-controls="ao6w3377" aria-pressed="false"></button>
+                <a class="tn-has-font-weight-semi">First Level</a>
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                <span class="tn-label">
+                    Default
+                </span>
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                    <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+        <ul class="tn-tree__group tn-tree__group--sublevel-1 is-hidden" role="group" aria-hidden="true">
+            <li class="tn-tree__item" role="treeitem">
+                <div class="tn-tree__row">
+                    <div class="tn-tree__col tn-tree__col--control">
+                        Second Level
+                    </div>
+                    <div class="tn-tree__col">
+                        Secondary Value
+                    </div>
+                    <div class="tn-tree__col">
+                        <span class="tn-label">
+                            Inactive
+                        </span>
+                    </div>
+                    <div class="tn-tree__col tn-tree__col--actions">
+                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                            <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="tn-tree__item" role="treeitem">
+        <div class="tn-tree__row">
+            <div class="tn-tree__col tn-tree__col--control">
+                First Level
+            </div>
+            <div class="tn-tree__col">
+                Secondary Value
+            </div>
+            <div class="tn-tree__col">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </div>
+            <div class="tn-tree__col tn-tree__col--actions">
+                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                    <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
+                </button>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree tn-tree--header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row tn-tree__row--header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand all"</span> <span class="na">aria-controls=</span><span class="s">"b3gqJ609"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+            Header
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            Header
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+            Status
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree"</span> <span class="na">id=</span><span class="s">"b3gqJ609"</span> <span class="na">role=</span><span class="s">"tree"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"acPvE475"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"acPvE475"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
                 Secondary Value
@@ -729,14 +1058,164 @@
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--medium"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-1 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"a2Qhp313"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"a2Qhp313"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Second Level<span class="nt">&lt;/a&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                            Inactive
+                        <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-2 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"aKWZR356"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"aKWZR356"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>Third Level<span class="nt">&lt;/a&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                                Secondary Value
+                            <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                                    Inactive
+                                <span class="nt">&lt;/span&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                                <span class="nt">&lt;/button&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-3 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                                        Fourth Level
+                                    <span class="nt">&lt;/div&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                                        Secondary Value
+                                    <span class="nt">&lt;/div&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                                            Inactive
+                                        <span class="nt">&lt;/span&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                                        <span class="nt">&lt;/button&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/li&gt;</span>
+                        <span class="nt">&lt;/ul&gt;</span>
+                    <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                            Default
+                        <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span> <span class="na">id=</span><span class="s">"ao6w3377"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-tree__control"</span> <span class="na">aria-label=</span><span class="s">"Expand"</span> <span class="na">aria-controls=</span><span class="s">"ao6w3377"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tn-has-font-weight-semi"</span><span class="nt">&gt;</span>First Level<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                Secondary Value
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                    Default
+                <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-tree__group tn-tree__group--sublevel-1 is-hidden"</span> <span class="na">role=</span><span class="s">"group"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                        Second Level
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        Secondary Value
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                            Inactive
+                        <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                        <span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-tree__item"</span> <span class="na">role=</span><span class="s">"treeitem"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--control"</span><span class="nt">&gt;</span>
+                First Level
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                Secondary Value
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-label"</span><span class="nt">&gt;</span>
+                    Inactive
+                <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-tree__col tn-tree__col--actions"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text"</span> <span class="na">aria-label=</span><span class="s">"More"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--more tn-icon--small"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
                 <span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<p><br /></p>
 
 
     <div class="tags">
