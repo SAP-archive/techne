@@ -15,8 +15,8 @@ $block: ns(tooltip);
     $tn-tooltip-content-background-color: tn-color(text, 3) !default;
     $tn-tooltip-content-color: tn-color(text-inverse, 1) !default;
     $tn-tooltip-padding: tn-space(s) !default;
-    $tn-tooltip-arrow-offset: (tn-space(s)) - 2 ;
-    $tn-tooltip-arrow-width: $tn-tooltip-arrow-offset;
+    $tn-tooltip-arrow-offset: (tn-space(s)) - 2 !default ;
+    $tn-tooltip-arrow-width: $tn-tooltip-arrow-offset !default;
 
     //BLOCK BASE *******************************************
     @include reset;
