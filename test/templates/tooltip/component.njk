@@ -6,7 +6,7 @@ tooltip:
 {% macro tooltip(properties={}, modifier={}, state={}, aria={}) -%}
 <div class="tn-tooltip"{{ aria | aria }}>
     {%- if modifier.block %}
-    <div class="tn-tooltip__arrow{{ modifier.block | modifier('tooltip__arrow') }}"></div>
+    <div class="{{ modifier.block | modifier('tooltip__arrow') }}"></div>
     {%- endif %}
     <div class="tn-tooltip__content">
         {{ properties.content }}
