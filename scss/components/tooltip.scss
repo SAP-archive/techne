@@ -1,0 +1,49 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-tooltip
+    .tn-tooltip__arrow
+    .tn-tooltip__content
+*/
+$block: ns(tooltip);
+
+.#{$block} {
+
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-tooltip-content-background-color: tn-color(text, 3) !default;
+    $tn-tooltip-content-color: tn-color(text-inverse, 1) !default;
+    $tn-tooltip-padding: tn-space(s) !default;
+
+    //BLOCK BASE *******************************************
+    @include reset;
+    background: $tn-tooltip-content-background-color;
+    padding: $tn-tooltip-padding;
+    display: inline-block;
+    position: relative;
+
+    //ELEMENTS *******************************************
+    &__arrow{
+        &::after {
+            margin-left: -4px;
+            content: "";
+            border-width: 7px 7px 0;
+            border-top-color: #000;
+            position: absolute;
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+    &__content {
+        @include tn-type(-2)
+        color: $tn-tooltip-content-color;
+    }
+
+    //STATES *******************************************
+    &.is-disabled,
+    &[disabled] {
+        opacity: 0.5;
+    }
+
+}

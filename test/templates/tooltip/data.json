@@ -1,0 +1,17 @@
+{
+    "id": "tooltip",
+    "name": "Tooltip",
+    "properties": {
+        "content": ""
+    },
+    "modifier": {
+        "block": [ "none", "top-left", "top-right", "botom-left", "bottom-right"]
+    },
+    "state": {
+
+    },
+    "aria": {
+
+    }
+
+}

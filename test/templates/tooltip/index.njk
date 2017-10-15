@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "./component.njk" import tooltip %}
+
+<!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
+{% set css_deps = [] %}
+
+{% block content %}
+
+    <h1>tooltip</h1>
+
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+    {{  tooltip(
+            properties={
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+            },
+            modifier={
+                block: ["top-left"]
+            },
+            state={},
+            aria={}
+        )
+    }}
+    {% endset %}
+    {{ format(example) }}
+
+
+{% endblock %}
