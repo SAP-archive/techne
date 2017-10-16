@@ -63,14 +63,14 @@ Main actions that are performed on the object represented on the page can be dis
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--customize tn-icon--medium" role="presentation"></span>
+                <span class="tn-icon tn-icon--edit tn-icon--medium" role="presentation"></span>
                 Customize
             </button>
         </div>
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--combinedview tn-icon--medium" role="presentation"></span>
-                Combine
+                <span class="tn-icon tn-icon--link tn-icon--medium" role="presentation"></span>
+                Link
             </button>
         </div>
         <div class="tn-action-bar__action-item">
@@ -138,13 +138,13 @@ When the user is editing the content of the page, the Actions to Save or Discard
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--text tn-button--action-bar">
-                <span class="tn-icon tn-icon--remove tn-icon--medium" role="presentation"></span>
+                <span class="tn-icon tn-icon--close tn-icon--medium" role="presentation"></span>
                 Cancel
             </button>
         </div>
         <div class="tn-action-bar__action-item">
             <button class="tn-button tn-button--action-bar">
-                <span class="tn-icon tn-icon--checkedlg tn-icon--medium" role="presentation"></span>
+                <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
                 Save
             </button>
         </div>
