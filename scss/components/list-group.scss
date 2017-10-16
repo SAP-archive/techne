@@ -67,12 +67,13 @@ $block: ns(list-group);
     }
     &__button{
         flex: 1;
-        display: block;
+        display: inline-block;
         background-color: transparent;
         outline: 0;
         border: 0;
         position: absolute;
         right: 0;
+        top:0;
         cursor: pointer;
     }
 }

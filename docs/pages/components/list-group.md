@@ -7,25 +7,25 @@ permalink: list-group.html
 folder: components
 ---
 
-The List Component is used to display a list of items. This component is used when the items on the list have simple information, like: scopes, names, etc.
+The List Component can be used to display a list of items with simple information such as - scopes, names, etc.
 
 ## Simple List
 
-You can use the link also to allow the user to access more information about the item when you display a link on the list item.
+You can use a link to allow the user to access more information about list item.
 
 {% capture list-group-default %}
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <a>List item 1</a>
+        <a href="">List item 1</a>
     </li>
     <li class="tn-list-group__item">
-        <a>List item 2</a>
+        <a href="">List item 2</a>
     </li>
     <li class="tn-list-group__item">
-        <a>List item 3</a> - Lorem ipsum dolor sit amet, consectetur sed do
+        <a href="">List item 3</a> - Lorem ipsum dolor sit amet, consectetur sed do
     </li>
     <li class="tn-list-group__item">
-        <a>List item 4</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        <a href="">List item 4</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     </li>
 </ul>
 {% endcapture %}
@@ -36,7 +36,7 @@ You can use the link also to allow the user to access more information about the
 
 ## Lists with Action
 
-The List items can also contain quick actions, like: remove, disable, etc.
+The List items can also contain quick actions, like: remove, edit, copy, etc.
 
 {% capture list-group-action %}
 <ul class="tn-list-group">
@@ -44,7 +44,7 @@ The List items can also contain quick actions, like: remove, disable, etc.
         <div class="tn-list-group__action">
             List item 1
             <button class="tn-list-group__button">
-                <span class="tn-icon tn-icon--remove" role="presentation"></span>
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
         </div>
     </li>
@@ -52,7 +52,7 @@ The List items can also contain quick actions, like: remove, disable, etc.
         <div class="tn-list-group__action">
             List item 2
             <button class="tn-list-group__button">
-                <span class="tn-icon tn-icon--remove" role="presentation"></span>
+                <span class="tn-icon tn-icon--edit" role="presentation"></span>
             </button>
         </div>
     </li>
@@ -60,7 +60,7 @@ The List items can also contain quick actions, like: remove, disable, etc.
         <div class="tn-list-group__action">
             List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
             <button class="tn-list-group__button">
-                <span class="tn-icon tn-icon--remove" role="presentation"></span>
+                <span class="tn-icon tn-icon--clone" role="presentation"></span>
             </button>
         </div>
     </li>
@@ -68,7 +68,7 @@ The List items can also contain quick actions, like: remove, disable, etc.
         <div class="tn-list-group__action">
             List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             <button class="tn-list-group__button">
-                <span class="tn-icon tn-icon--remove" role="presentation"></span>
+                <span class="tn-icon tn-icon--options" role="presentation"></span>
             </button>
         </div>
     </li>
@@ -82,7 +82,7 @@ The List items can also contain quick actions, like: remove, disable, etc.
 
 ## List with Check boxes
 
-The list items can also contain a checkbox on the left, that permits the user to select multiple items at once.
+Checkboxes can be used on the left, that enables the user to select multiple items for bulk actions.
 
 {% capture list-group-actions-form %}
 <ul class="tn-list-group">
