@@ -1,0 +1,45 @@
+{% extends "./layouts/app.njk" %}
+
+{# ui-level settings #}
+{% set hide_footer = false %}
+{% set fix_header = false %}
+{% set fix_footer = false %}
+
+{% set show_overlay = false %}
+{% block overlay %}
+<strong>.tn-ui__overlay</strong>
+{% endblock %}
+
+{# app-level settings #}
+{# {% set hide_sidebar = false %} #}
+{% block sidebar %}
+
+    <div class="tn-has-color-text-inverse-1" style="width: 200px;">
+        <strong>.tn-app__sidebar</strong>
+        <br><br>
+        <ul>
+            {% for item in range(0,50) %}
+            <li>Vivamus sagittis diam</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block main %}
+
+<strong>.tn-app__main</strong>
+<br><br>
+{% for item in range(0,10) %}
+<div class="tn-container tn-has-background-color-neutral-2">
+    <div class="tn-col--6">
+        <p>Nullam ut tincidunt nunc. Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem. </p>
+    </div>
+    <div class="tn-col--6">
+        <p>Suspendisse volutpat felis lectus nec consequat ipsum mattis id. Donec dapibus vehicula facilisis. In tincidunt mi nisi nec faucibus tortor euismod nec. Suspendisse ante ligula aliquet vitae libero eu vulputate dapibus libero. Sed bibendum sapien at posuere interdum libero est sollicitudin magna ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

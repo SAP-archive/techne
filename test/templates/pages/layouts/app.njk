@@ -1,0 +1,24 @@
+{% extends "./ui.njk" %}
+
+{% block app %}
+<div class="tn-app">
+    {% if hide_sidebar !== true %}
+    <div class="tn-app__sidebar">
+        {% block sidebar -%}
+        {%- endblock %}
+    </div>
+    {% endif %}
+    <main class="tn-app__main">
+        {% block main -%}
+        {%- endblock %}
+    </main>
+</div>
+{% endblock %}
+
+{% block header %}
+<strong class="tn-has-color-text-inverse">.tn-ui__header</strong>
+{% endblock %}
+
+{% block footer %}
+<strong class="tn-has-color-text-inverse">.tn-ui__footer</strong>
+{% endblock %}
