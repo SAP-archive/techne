@@ -39,26 +39,26 @@ The following color options are avialable for fast recognition of the status:
     Default
 </span>
 <span class="tn-badge tn-badge--success">
-    Default
+    Success
 </span>
 <span class="tn-badge tn-badge--warning">
-    Default
+    Warning
 </span>
 <span class="tn-badge tn-badge--error">
-    Default
+    Error
 </span>
 
 <span class="tn-badge tn-badge--pill">
     Default
 </span>
 <span class="tn-badge tn-badge--success tn-badge--pill">
-    Default
+    Success
 </span>
 <span class="tn-badge tn-badge--warning tn-badge--pill">
-    Default
+    Warning
 </span>
 <span class="tn-badge tn-badge--error tn-badge--pill">
-    Default
+    Error
 </span>
 {% endcapture %}
 
