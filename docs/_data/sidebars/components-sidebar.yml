@@ -44,7 +44,7 @@ entries:
       url: /input-group.html
       output: web
 
-    - title: List Group
+    - title: List
       url: /list-group.html
       output: web
 
