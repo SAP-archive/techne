@@ -7,18 +7,18 @@ permalink: input-group.html
 folder: components
 ---
 
-The Input groups component are from inputs with addons that allows the user to better understand the information been entered.
+The Input groups component are form inputs with add-ons that allows the user to better understand the information been entered.
 
 <br/>
 
-## Text addon
+## Text add-on
 
-The Input with text addon component is used mainly to specify the magnitude of the entered data, like: currency, scalar units, etc. There informational addon can be placed at the left or right of the input element.
+The Input with text add-on component is used mainly to specify the type of the data being entered, like: currency, unit of measure, etc. There informational add-on can be placed at the left or right of the input element.
 
 {% capture text-addon %}
 <div class="tn-form__group">
     <div class="tn-form__item">
-        <label class="tn-form__label" for="">Left Aligned Text Addon</label>
+        <label class="tn-form__label" for="">Left Aligned Text Add-on</label>
         <div class="tn-input-group">
             <span class="tn-input-group__addon">$</span>
             <input class="" type="text" id="" name="" value="1234568910 ">
@@ -63,7 +63,7 @@ The Input with text addon component is used mainly to specify the magnitude of t
 
 ## Number input
 
-When the user needs to enter a integer value you can use the spinner, to aid the user to modify the value.
+When the user needs to enter an integer value you can use the spinner, to aid the user to increase or decrease the value.
 
 {% capture input-spinner %}
 <div class="tn-form__group">
@@ -86,7 +86,7 @@ When the user needs to enter a integer value you can use the spinner, to aid the
 
 ## Input with icons
 
-The Input with addons components also support having actions icons to the right of the element.
+The Input with add-on component also support actions icons to the right of the element.
 
 {% capture input-action %}
 <div class="tn-form__group">
@@ -132,7 +132,7 @@ The Input with addons components also support having actions icons to the right 
 
 ## Input with actions
 
-The inputs addons also support actions. The actions can show labels and also icons.
+The input add-on also support actions. The actions can show a label and also a icon.
 
 {% capture button-addon %}
 <div class="tn-form__group">
