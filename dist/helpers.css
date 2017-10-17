@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -465,4 +465,22 @@
 }
 .tn-has-padding-left-xl {
   padding-left: 148px
+}
+.tn-has-clearfix::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-has-display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.tn-has-display-block {
+  display: block
+}
+.tn-has-align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }

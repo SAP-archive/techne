@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -17,6 +17,10 @@
   max-width: 100%;
   border-collapse: collapse
 }
+.tn-table tr {
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in
+}
 .tn-table tr:hover {
   background-color: #f1f5f9
 }
@@ -25,6 +29,9 @@
   background-color: #dee7f2
 }
 .tn-table thead {
+  font-size: .875rem;
+  line-height: 1.42857;
+  font-weight: 400;
   color: #7f90a4
 }
 .tn-table thead tr:hover {

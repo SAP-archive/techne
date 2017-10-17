@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -68,7 +68,7 @@
   line-height: 1.42857;
   font-weight: 400;
   display: block;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   border: 0;
   color: #63758b
 }

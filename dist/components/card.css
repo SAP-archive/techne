@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -56,10 +56,10 @@
 .tn-card--button,
 .tn-card[role=button] {
   cursor: pointer;
-  -webkit-transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,-webkit-box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in;
-  transition: background-color .25s ease-in,border-color .25s ease-in,box-shadow .25s ease-in,-webkit-box-shadow .25s ease-in
+  -webkit-transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,-webkit-box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in;
+  transition: background-color 125ms ease-in,border-color 125ms ease-in,box-shadow 125ms ease-in,-webkit-box-shadow 125ms ease-in
 }
 .tn-card--button:hover,
 .tn-card[role=button]:hover {

@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -124,8 +124,10 @@ input[type=radio] {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
-  -webkit-transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in;
-  transition: border-color .25s ease-in,background-color .25s ease-in,background-image .25s ease-in
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
+  -webkit-transition: border-color 125ms ease-in,background-color 125ms ease-in,background-image 125ms ease-in;
+  transition: border-color 125ms ease-in,background-color 125ms ease-in,background-image 125ms ease-in
 }
 input[type=checkbox]:focus,
 input[type=checkbox]:hover,
@@ -165,8 +167,8 @@ input[readonly][type=radio] {
 }
 input[type=checkbox]::after,
 input[type=radio]::after {
-  -webkit-transition: border-color .25s ease-in;
-  transition: border-color .25s ease-in
+  -webkit-transition: border-color 125ms ease-in;
+  transition: border-color 125ms ease-in
 }
 input[type=checkbox]::-webkit-input-placeholder,
 input[type=radio]::-webkit-input-placeholder {
@@ -214,6 +216,8 @@ textarea {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -350,6 +354,8 @@ select {
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -461,8 +467,8 @@ input[type=radio]::after {
   right: 0;
   top: calc(50% - (16px/2));
   left: calc(50% - (16px/2));
-  -webkit-transition: background-color .25s ease-in;
-  transition: background-color .25s ease-in;
+  -webkit-transition: background-color 125ms ease-in;
+  transition: background-color 125ms ease-in;
   background-color: transparent
 }
 input[type=radio]:checked {

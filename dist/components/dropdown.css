@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-4
+* Techne v2.0.0-alpha-5
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -53,6 +53,8 @@
   border-radius: 0;
   color: #21262c;
   background-color: transparent;
+  -webkit-transition: border-color 125ms;
+  transition: border-color 125ms;
   height: 52px;
   padding-left: 16px;
   padding-right: 16px;
@@ -130,11 +132,16 @@
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
-  box-shadow: 0 0 4px 1px rgba(138,143,161,.2)
+  box-shadow: 0 0 4px 1px rgba(138,143,161,.2);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 125ms ease-in;
+  transition: opacity 125ms ease-in
 }
 .tn-dropdown__menu[aria-hidden=true],
 .tn-dropdown__options[aria-hidden=true] {
-  display: none
+  opacity: 0;
+  visibility: hidden
 }
 .tn-dropdown__item,
 .tn-dropdown__option {
@@ -146,9 +153,7 @@
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   display: block;
-  padding: 12px 16px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in
+  padding: 12px 16px
 }
 .tn-dropdown__item:hover,
 .tn-dropdown__option:hover {
