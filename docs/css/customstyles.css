@@ -2,7 +2,7 @@ html,body {
     font-size: inherit;
 }
 
-.post-content>ul, .post-content>ol {
+.post-content.ul, .post-content.ol {
   padding-left: 40px !important;
   list-style: disc !important;
 }
@@ -1251,6 +1251,14 @@ h4.panel-title {
 
 .tn-input-group {
     margin-bottom: 20px;
+}
+
+.tn-tree > li {
+  list-style: none;
+}
+
+.tn-list-group__label{
+  font-weight: normal;
 }
 
 .demo-icon-wrapper{

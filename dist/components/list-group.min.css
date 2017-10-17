@@ -1,0 +1,6 @@
+/*!
+* Techne v2.0.0-alpha-5
+* Copyright (c) 2017 SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/
+.tn-list-group{font-size:1rem;line-height:1.5;color:#21262c;vertical-align:top;min-height:52px}.tn-list-group__item{border:1px solid #e4e4e4;border-top:none;padding:16px;min-height:52px;-webkit-transition:background-color 125ms ease-in;transition:background-color 125ms ease-in}.tn-list-group__item:first-child{border-top:1px solid #e4e4e4}.tn-list-group__item:hover{background-color:#f1f5f9}.tn-list-group__item:hover input[type=checkbox]{background-color:#fff}.tn-list-group__item:hover input[type=checkbox]:checked{background-color:#009cdf}.tn-list-group__action{position:relative;padding-right:48px}.tn-list-group__action-form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.tn-list-group__action-form input[type=checkbox]{margin-right:16px}.tn-list-group__control{-ms-flex-preferred-size:28px;flex-basis:28px;min-width:28px}.tn-list-group__label{-ms-flex-preferred-size:95%;flex-basis:95%}.tn-list-group__button{-webkit-box-flex:1;-ms-flex:1;flex:1;display:inline-block;background-color:transparent;outline:0;border:0;position:absolute;right:0;top:0;cursor:pointer}

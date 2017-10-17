@@ -466,3 +466,21 @@
 .tn-has-padding-left-xl {
   padding-left: 148px
 }
+.tn-has-clearfix::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-has-display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.tn-has-display-block {
+  display: block
+}
+.tn-has-align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}

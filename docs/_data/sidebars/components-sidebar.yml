@@ -44,6 +44,10 @@ entries:
       url: /input-group.html
       output: web
 
+    - title: List
+      url: /list-group.html
+      output: web
+
     - title: Pagination
       url: /pagination.html
       output: web
@@ -58,6 +62,10 @@ entries:
 
     - title: Toolbar
       url: /toolbar.html
+      output: web
+
+    - title: Tree
+      url: /tree.html
       output: web
 
     - title: Modal

@@ -4,7 +4,7 @@
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
 /*!
-.tn-input-group
+.tn-input-group+(--inline)
     .tn-input-group__addon+()
         .tn-input-group__button
 */
@@ -12,9 +12,9 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #21262c;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   vertical-align: bottom;
   max-height: 52px
 }
@@ -41,6 +41,11 @@
 .tn-input-group [type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   margin: 0
+}
+.tn-input-group--inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex
 }
 .tn-input-group--no-border input {
   border-color: transparent

@@ -1,39 +1,24 @@
 @import "../core/settings";
 @import "../core/functions";
 @import "../core/mixins";
-
-
+@import "mixins";
 
 $block: ns(col);
 
-/*! */
-[class*="#{$block}"] {
-    @include tn-at-media(s) {
-        //height: 100px;
-        float: left;
-        margin-right: $tn-width--gutter;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
+/*!
+    .tn-col+(--1...12, --shift-1...11)
+*/
 .#{$block} {
-    @include tn-at-media(s) {
+    flex: 1;
+    @include tn-screen(s) {
         @for $i from 1 through 12 {
-            &-#{$i} {
-                width: calc(
-                    (
-                        (
-                            (100% -
-                                (#{$tn-width--gutter} * #{12 - 1})
-                                )/
-                                #{12}
-                                )
-                            * #{$i}
-                        )
-                        +
-                        ( #{$tn-width--gutter}*#{$i - 1} )
-                );
+            &--#{$i} {
+                @include tn-flow($i, 12);
+            }
+        }
+        @for $i from 1 through 11 {
+            &--shift-#{$i} {
+                @include tn-flow-shift($i);
             }
         }
     }

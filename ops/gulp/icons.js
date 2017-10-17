@@ -40,7 +40,5 @@ module.exports = iconTask = (cb) => {
                 .pipe(gulp.dest(config.tasks.icons.yml.dest))
         })
         .pipe(gulp.dest(config.tasks.icons.css.dest));
-
-
 }
 gulp.task('icons', iconTask);

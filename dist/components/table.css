@@ -29,6 +29,9 @@
   background-color: #dee7f2
 }
 .tn-table thead {
+  font-size: .875rem;
+  line-height: 1.42857;
+  font-weight: 400;
   color: #7f90a4
 }
 .tn-table thead tr:hover {

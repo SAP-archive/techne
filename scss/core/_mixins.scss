@@ -93,8 +93,7 @@ $ns: ns();
 
 
 
-
-@mixin clearfix {
+@mixin tn-clearfix {
     &::after {
         content: "";
         display: table;
@@ -116,7 +115,7 @@ $ns: ns();
     }
 }
 
-@mixin tn-at-media($size, $dimension: width) {
+@mixin tn-screen($size, $dimension: width) {
   @if map-has-key($tn-breakpoints, $size) {
     @media (min-#{$dimension}: map-get($tn-breakpoints, $size)) {
         @content;
@@ -126,7 +125,7 @@ $ns: ns();
   }
 }
 
-@mixin print() {
+@mixin tn-print() {
 	@media print {
 		@content;
 	}

@@ -19,7 +19,7 @@ $block: ns(card-group);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    @include tn-at-media(s) {
+    @include tn-screen(s) {
         flex-direction: row;
         & > * {
             flex: 1;
