@@ -5,7 +5,7 @@
         "content": ""
     },
     "modifier": {
-        "block": [ "left", "right", "top-left", "top-right", "botom-left", "bottom-right"]
+        "arrow": [ "left", "right", "top-left", "top-right", "botom-left", "bottom-right"]
     },
     "state": {
 

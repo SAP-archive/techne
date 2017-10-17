@@ -2,9 +2,10 @@
 {% from "./../format.njk" import format %}
 {% from "../button/component.njk" import button %}
 {% from "./component.njk" import tooltip %}
+{% import "./../utils.njk" as utils %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
-{% set css_deps = [] %}
+{% set css_deps = ['components/button'] %}
 
 {% block content %}
 
@@ -12,8 +13,15 @@
 
 <!-- output the component example and the code snippet -->
 {% set example %}
+{%- set _id = utils.id() %}
+{{ button(
+    { label: 'Default Tooltip' },
+    modifier={ block: ["text"] },
+    aria={ controls: _id, hastooltip: true, expanded: false, label: "More" }) | indent(4)
+}}
 {{  tooltip(
         properties={
+            id: _id,
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
         }
     )
@@ -24,7 +32,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
         },
         modifier={
-            block: ["left"]
+            arrow: ["left"]
         }
     )
 }}
@@ -34,7 +42,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
         },
         modifier={
-            block: ["right"]
+            arrow: ["right"]
         }
     )
 }}
@@ -44,7 +52,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         modifier={
-            block: ["top-left"]
+            arrow: ["top-left"]
         }
     )
 }}
@@ -54,7 +62,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         modifier={
-            block: ["top-right"]
+            arrow: ["top-right"]
         }
     )
 }}
@@ -64,7 +72,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         modifier={
-            block: ["bottom-left"]
+            arrow: ["bottom-left"]
         }
     )
 }}
@@ -74,7 +82,7 @@
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         modifier={
-            block: ["bottom-right"]
+            arrow: ["bottom-right"]
         }
     )
 }}

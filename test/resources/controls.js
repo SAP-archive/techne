@@ -29,6 +29,17 @@
                     target.setAttribute("aria-hidden", isExpanded);
                     return;
                 }
+                //tooltip
+                var isTooltip = this.getAttribute("aria-hastooltip") === "true";
+                if (isDropdown) {
+                    //trigger
+                    var isExpanded = this.getAttribute("aria-expanded") === "true";
+                    this.setAttribute("aria-expanded", !isExpanded);
+                    //target
+                    var targetIsHidden = target.getAttribute("aria-hidden") == "true";
+                    target.setAttribute("aria-hidden", isExpanded);
+                    return;
+                }
                 //tree
                 var isTree = target.getAttribute("role") === "tree";
                 var isTreeItem = target.getAttribute("role") === "treeitem";

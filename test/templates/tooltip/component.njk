@@ -1,12 +1,14 @@
+{% import "./../utils.njk" as utils %}
 <!--
 tooltip:
     properties={},
     modifier={ block: [] }
 -->
 {% macro tooltip(properties={}, modifier={}, state={}, aria={}) -%}
-<div class="tn-tooltip"{{ aria | aria }}>
-    {%- if modifier.block %}
-    <div class="{{ modifier.block | modifier('tooltip__arrow') }}"></div>
+{%- set _id = utils.id() %}
+<div class="tn-tooltip"{{ aria | aria }} id="{{ properties.id }}">
+    {%- if modifier.arrow %}
+    <div class="{{ modifier.arrow | modifier('tooltip__arrow') }}"></div>
     {%- endif %}
     <div class="tn-tooltip__content">
         {{ properties.content }}
