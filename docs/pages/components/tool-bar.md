@@ -29,23 +29,23 @@ The Toolbar component is used always along a collection of items, like cards or 
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Previous">
-                        <span aria-hidden="true"><</span>
-                    </a>
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                        <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link">1</a>
+                    <a href="#" class="tn-pagination__link" aria-selected="true">1</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
+                    <a href="#" class="tn-pagination__link">2</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link">3</a>
+                    <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Next">
-                        <span aria-hidden="true">></span>
-                    </a>
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                        <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -203,7 +203,7 @@ The Toolbar sorting elements modify the order of the items in the collection dep
 
 ## Paination
 
-The Toolbar is also used to support [pagination elements](pagination.html). They are displayed at the main toolbar and also bellow the collection. 
+The Toolbar is also used to support [pagination elements](pagination.html). They are displayed at the main toolbar and also bellow the collection.
 
 {% capture toolbar-pagination %}
 <div class="tn-toolbar">
@@ -222,28 +222,28 @@ The Toolbar is also used to support [pagination elements](pagination.html). They
     </div>
     <div class="tn-toolbar__group tn-toolbar__group--view">
         <div class="tn-toolbar__pagination">
-                <ul class="tn-pagination">
-                    <span class="tn-pagination__total">30 items</span>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link" aria-label="Previous">
-                            <span aria-hidden="true"><</span>
-                        </a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link">1</a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link">3</a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link" aria-label="Next">
-                            <span aria-hidden="true">></span>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="tn-pagination">
+                <span class="tn-pagination__total">30 items</span>
+                <li class="tn-pagination__item">
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                        <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
+                    </button>
+                </li>
+                <li class="tn-pagination__item">
+                    <a href="#" class="tn-pagination__link" aria-selected="true">1</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <a href="#" class="tn-pagination__link">2</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <a href="#" class="tn-pagination__link">3</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                        <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
@@ -277,23 +277,23 @@ For some collections the user can choose the type of view the items are represen
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Previous">
-                        <span aria-hidden="true"><</span>
-                    </a>
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                        <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link">1</a>
+                    <a href="#" class="tn-pagination__link" aria-selected="true">1</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
+                    <a href="#" class="tn-pagination__link">2</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link">3</a>
+                    <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Next">
-                        <span aria-hidden="true">></span>
-                    </a>
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                        <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -324,23 +324,23 @@ At the bottom of a collection is recommended to show a toolbar with the paginati
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Previous">
-                        <span aria-hidden="true"><</span>
-                    </a>
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                        <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link">1</a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link" aria-selected="true">2</a>
-                    </li>
-                    <li class="tn-pagination__item">
-                            <a href="#" class="tn-pagination__link">3</a>
-                    </li>
                 <li class="tn-pagination__item">
-                        <a href="#" class="tn-pagination__link" aria-label="Next">
-                        <span aria-hidden="true">></span>
-                    </a>
+                    <a href="#" class="tn-pagination__link" aria-selected="true">1</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <a href="#" class="tn-pagination__link">2</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <a href="#" class="tn-pagination__link">3</a>
+                </li>
+                <li class="tn-pagination__item">
+                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                        <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
+                    </button>
                 </li>
             </ul>
         </div>
