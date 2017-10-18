@@ -44,19 +44,6 @@ Bottom Left
 
 <br><br>
 
-Left
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
-        },
-        modifier={
-            arrow: ["left"]
-        }
-    )
-}}
-
-<br><br>
-
 Right
 {{  tooltip(
         properties={
@@ -68,7 +55,18 @@ Right
     )
 }}
 
+<br><br>
 
+Left
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
+        },
+        modifier={
+            arrow: ["left"]
+        }
+    )
+}}
 
 {% endset %}
 {{- format(example) -}}

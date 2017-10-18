@@ -5,13 +5,6 @@
         "content": ""
     },
     "modifier": {
-        "arrow": [ "left", "right", "top-left", "top-right", "botom-left", "bottom-right"]
-    },
-    "state": {
-
-    },
-    "aria": {
-        "test":"test"
+        "arrow": [ "left", "right", "botom-left", "bottom-right"]
     }
-
 }
