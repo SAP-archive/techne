@@ -19,6 +19,7 @@ $block: ns(tooltip);
     $tn-tooltip-arrow-width: $tn-tooltip-arrow-offset !default;
     $tn-tooltip-icon-size: 18px;
     $tn-tooltip-transition-params: $tn-animation--speed ease-in !default;
+    $tn-tooltip-min-width: 350px;
 
     //BLOCK BASE *******************************************
     // @include reset;
@@ -50,12 +51,14 @@ $block: ns(tooltip);
         position: absolute;
         @include tn-type(-2)
         color: $tn-tooltip-content-color;
-        margin-top: $tn-tooltip-padding * 2.5;
-        margin-left: -$tn-tooltip-padding;
-        min-width: 350px;
+        top: $tn-tooltip-padding * 2.5;
+        right: -$tn-tooltip-padding;
+        min-width: $tn-tooltip-min-width;
         visibility: hidden;
         opacity: 0;
         transition: opacity $tn-tooltip-transition-params;
+        text-align: left;
+        z-index: 1;
         &::before {
             width: 0;
             height: 0;
@@ -65,55 +68,48 @@ $block: ns(tooltip);
             position: absolute;
             content: "";
             top: -($tn-tooltip-arrow-offset);
-            left: $tn-tooltip-arrow-offset;
-            // display: none;
-            // &--left{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     top: $tn-tooltip-arrow-offset + 5;
-            //     left: -($tn-tooltip-arrow-offset + 5);
-            //     transform: rotate(-90deg);
-            // }
-            // &--right{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     top: $tn-tooltip-arrow-offset + 5;
-            //     right: -($tn-tooltip-arrow-offset + 5);
-            //     transform: rotate(90deg);
-            // }
-            // &--top-left{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     top: -($tn-tooltip-arrow-offset);
-            //     left: $tn-tooltip-arrow-offset;
-            // }
-            // &--top-right{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     top: -($tn-tooltip-arrow-offset);
-            //     right: $tn-tooltip-arrow-offset;
-            // }
-            // &--bottom-left{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     bottom: -($tn-tooltip-arrow-offset);
-            //     left: $tn-tooltip-arrow-offset;
-            //     transform: rotate(180deg);
-            // }
-            // &--bottom-right{
-            //     @extend .tn-tooltip__arrow;
-            //     display: block;
-            //     bottom: -($tn-tooltip-arrow-offset);
-            //     right: $tn-tooltip-arrow-offset;
-            //     transform: rotate(180deg);
-            // }
+            right: $tn-tooltip-arrow-offset;
+        }
+        &--left{
+            top: -$tn-tooltip-padding;
+            left: $tn-tooltip-padding * 2.5;
+            &::before{
+                display: block;
+                top: $tn-tooltip-arrow-offset + 5;
+                left: -($tn-tooltip-arrow-offset + 5);
+                transform: rotate(-90deg);
+            }
+        }
+        &--right{
+            top: -$tn-tooltip-padding;
+            right: $tn-tooltip-padding * 2.5;
+            &::before{
+                display: block;
+                top: $tn-tooltip-arrow-offset + 5;
+                right: -($tn-tooltip-arrow-offset + 5);
+                left: unset;
+                transform: rotate(90deg);
+            }
+        }
+        &--bottom-left::before{
+            // @extend .tn-tooltip__arrow;
+            // display: block;
+            // bottom: -($tn-tooltip-arrow-offset);
+            // left: $tn-tooltip-arrow-offset;
+            // transform: rotate(180deg);
+        }
+        &--bottom-right::before{
+            // @extend .tn-tooltip__arrow;
+            display: block;
+            bottom: -($tn-tooltip-arrow-offset);
+            right: $tn-tooltip-arrow-offset;
+            // transform: rotate(180deg);
         }
     }
     &:hover{
         .#{$block}__content{
             visibility: visible;
             opacity: 1;
-
         }
     }
 }

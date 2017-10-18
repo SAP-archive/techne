@@ -10,94 +10,69 @@
 {% block content %}
 
 <h1>tooltip</h1>
+<div style="text-align:center;">
 
 <!-- output the component example and the code snippet -->
 {% set example %}
 {%- set _id = utils.id() %}
 
-Bottom Left Aligned {{  tooltip(
-        properties={
-            id: _id,
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
-        }
-    )
-}}
-<br><br>
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
-        },
-        modifier={
-            arrow: ["left"]
-        }
-    )
-}}
-<br><br>
-<br><br>
 <br><br>
 
+Bottom Right (Default)
 {{  tooltip(
         properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
-        },
-        modifier={
-            arrow: ["right"]
-        }
-    )
-}}
-<br><br>
-<br><br>
-<br><br>
-
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-        },
-        modifier={
-            arrow: ["top-left"]
-        }
-    )
-}}
-<br><br>
-<br><br>
-<br><br>
-
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-        },
-        modifier={
-            arrow: ["top-right"]
-        }
-    )
-}}
-<br><br>
-<br><br>
-<br><br>
-
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-        },
-        modifier={
-            arrow: ["bottom-left"]
-        }
-    )
-}}
-<br><br>
-<br><br>
-<br><br>
-{{  tooltip(
-        properties={
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
         modifier={
             arrow: ["bottom-right"]
         }
     )
 }}
+
+<br><br>
+
+Bottom Left
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
+        },
+        modifier={
+            arrow: ["bottom-left"]
+        }
+    )
+}}
+
+<br><br>
+
+Left
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
+        },
+        modifier={
+            arrow: ["left"]
+        }
+    )
+}}
+
+<br><br>
+
+Right
+{{  tooltip(
+        properties={
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
+        },
+        modifier={
+            arrow: ["right"]
+        }
+    )
+}}
+
+
+
 {% endset %}
 {{- format(example) -}}
 
-
 {% endblock %}
+
+</div>
