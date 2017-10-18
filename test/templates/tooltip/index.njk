@@ -5,7 +5,7 @@
 {% import "./../utils.njk" as utils %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
-{% set css_deps = ['components/button'] %}
+{% set css_deps = ['components/button', 'components/form'] %}
 
 {% block content %}
 
@@ -14,12 +14,8 @@
 <!-- output the component example and the code snippet -->
 {% set example %}
 {%- set _id = utils.id() %}
-{{ button(
-    { label: 'Default Tooltip' },
-    modifier={ block: ["text"] },
-    aria={ controls: _id, hastooltip: true, expanded: false, label: "More" }) | indent(4)
-}}
-{{  tooltip(
+
+Bottom Left Aligned {{  tooltip(
         properties={
             id: _id,
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
@@ -37,6 +33,9 @@
     )
 }}
 <br><br>
+<br><br>
+<br><br>
+
 {{  tooltip(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam id mauris venenatis, pharetra tortor nec, luctus dui."
@@ -47,6 +46,9 @@
     )
 }}
 <br><br>
+<br><br>
+<br><br>
+
 {{  tooltip(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
@@ -57,6 +59,9 @@
     )
 }}
 <br><br>
+<br><br>
+<br><br>
+
 {{  tooltip(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
@@ -67,6 +72,9 @@
     )
 }}
 <br><br>
+<br><br>
+<br><br>
+
 {{  tooltip(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
@@ -76,6 +84,8 @@
         }
     )
 }}
+<br><br>
+<br><br>
 <br><br>
 {{  tooltip(
         properties={
