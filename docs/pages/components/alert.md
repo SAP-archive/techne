@@ -14,7 +14,7 @@ Use to let people know there is something happening, but you can dismiss and act
 {% capture default-alert %}
 <div class="tn-alert" role="alert" id="defautl-alert">
   <button class="tn-alert__close" aria-controls="defautl-alert">
-    <span class="tn-icon tn-icon--remove" role="presentation"></span>
+    <span class="tn-icon tn-icon--close" role="presentation"></span>
   </button>
   Default Message
 </div>
@@ -30,7 +30,7 @@ Add the modifier class `tn-alert--warning` for Notification alert.
 {% capture warning-alert %}
 <div class="tn-alert tn-alert--warning" role="alert" id="warning-alert">
   <button class="tn-alert__close" aria-controls="warning-alert">
-    <span class="tn-icon tn-icon--remove" role="presentation"></span>
+    <span class="tn-icon tn-icon--close" role="presentation"></span>
   </button>
   Warning Message
 </div>
@@ -47,7 +47,7 @@ Add the modifier class `tn-alert--error` for Error alert.
 
 <div class="tn-alert tn-alert--error" role="alert" id="error-alert">
   <button class="tn-alert__close" aria-controls="error-alert">
-    <span class="tn-icon tn-icon--remove" role="presentation"></span>
+    <span class="tn-icon tn-icon--close" role="presentation"></span>
   </button>
   Error Message
 </div>
