@@ -170,7 +170,7 @@ The Tree rows can have also Actions, same was as the Table component.
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
                 <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                    <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
         </div>
@@ -191,7 +191,7 @@ The Tree rows can have also Actions, same was as the Table component.
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
                         <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                            <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
                 </div>
@@ -212,7 +212,7 @@ The Tree rows can have also Actions, same was as the Table component.
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
                         <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                            <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
                 </div>
@@ -234,7 +234,7 @@ The Tree rows can have also Actions, same was as the Table component.
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
                 <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                    <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
         </div>
@@ -255,7 +255,7 @@ The Tree rows can have also Actions, same was as the Table component.
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
                         <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                            <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                            <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ The Tree rows can have also Actions, same was as the Table component.
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
                 <button class="tn-button tn-button--text tn-button--icon tn-button--small">
-                    <span class="tn-icon tn-icon--remove tn-icon--small" role="presentation"></span>
+                    <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
         </div>
