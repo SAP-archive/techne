@@ -4,8 +4,8 @@
 
 /*!
 .tn-tooltip
-    .tn-tooltip__arrow
     .tn-tooltip__content
+    .tn-tooltip__content+(left, right, bottom-left, bottom-right)
 */
 $block: ns(tooltip);
 
@@ -22,10 +22,9 @@ $block: ns(tooltip);
     $tn-tooltip-min-width: 350px;
 
     //BLOCK BASE *******************************************
-    // @include reset;
+    @include tn-type(-1);
     position: relative;
     margin-left: tn-space(xs);
-    @include tn-type(-1);
     display: inline-block;
     width: $tn-tooltip-icon-size;
     height: $tn-tooltip-icon-size;
@@ -45,11 +44,11 @@ $block: ns(tooltip);
 
     //ELEMENTS *******************************************
     &__content {
+        @include tn-type(-2)
         background: $tn-tooltip-content-background-color;
         padding: $tn-tooltip-padding;
         display: inline-block;
         position: absolute;
-        @include tn-type(-2)
         color: $tn-tooltip-content-color;
         top: $tn-tooltip-padding * 2.5;
         right: -$tn-tooltip-padding;
@@ -74,7 +73,6 @@ $block: ns(tooltip);
             top: -$tn-tooltip-padding;
             left: $tn-tooltip-padding * 2.5;
             &::before{
-                display: block;
                 top: $tn-tooltip-arrow-offset + 5;
                 left: -($tn-tooltip-arrow-offset + 5);
                 transform: rotate(-90deg);
@@ -84,27 +82,26 @@ $block: ns(tooltip);
             top: -$tn-tooltip-padding;
             right: $tn-tooltip-padding * 2.5;
             &::before{
-                display: block;
                 top: $tn-tooltip-arrow-offset + 5;
                 right: -($tn-tooltip-arrow-offset + 5);
-                left: unset;
                 transform: rotate(90deg);
             }
         }
-        &--bottom-left::before{
-            // @extend .tn-tooltip__arrow;
-            // display: block;
-            // bottom: -($tn-tooltip-arrow-offset);
-            // left: $tn-tooltip-arrow-offset;
-            // transform: rotate(180deg);
+        &--bottom-left{
+            left: -$tn-tooltip-arrow-offset;
+            &::before{
+                top: -($tn-tooltip-arrow-offset);
+                left: $tn-tooltip-arrow-offset;
+
+            }
         }
-        &--bottom-right::before{
-            // @extend .tn-tooltip__arrow;
-            display: block;
-            bottom: -($tn-tooltip-arrow-offset);
-            right: $tn-tooltip-arrow-offset;
-            // transform: rotate(180deg);
-        }
+        // &--bottom-right::before{
+        //     // @extend .tn-tooltip__arrow;
+        //     display: block;
+        //     bottom: -($tn-tooltip-arrow-offset);
+        //     right: $tn-tooltip-arrow-offset;
+        //     // transform: rotate(180deg);
+        // }
     }
     &:hover{
         .#{$block}__content{
