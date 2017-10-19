@@ -1303,3 +1303,8 @@ h4.panel-title {
     background-color:rgba(0, 0, 0, 0.5);
     padding: 40px;
 }
+
+pre code{
+    white-space: pre;
+    overflow-x: scroll;
+}

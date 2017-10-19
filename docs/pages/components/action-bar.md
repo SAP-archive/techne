@@ -39,7 +39,6 @@ The Action bar can display a "Back button" to allow the user to navigate back to
         <button class="tn-button tn-button--text tn-button--icon tn-button--large" aria-label="Back">
             <span class="tn-icon tn-icon--backarrow tn-icon--large" role="presentation"></span>
         </button>
-
     </div>
     <h1 class="tn-action-bar__title">
         Product #2342 - Red T-Shirt Type D

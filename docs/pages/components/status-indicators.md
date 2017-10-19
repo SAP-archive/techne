@@ -34,7 +34,6 @@ The following color options are avialable for fast recognition of the status:
     Error
 </span>
 
-
 <span class="tn-badge">
     Default
 </span>

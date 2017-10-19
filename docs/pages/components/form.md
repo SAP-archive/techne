@@ -253,7 +253,6 @@ Checkboxes let the user select multiple options, while all the options been disp
     </div>
 </fieldset>
 
-
 <fieldset class="tn-form__group">
     <legend class="tn-form__legend">Checkboxes inline</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
