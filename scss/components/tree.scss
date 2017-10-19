@@ -65,7 +65,7 @@ $block: ns(tree);
             background-color: lighten(tn-color(neutral, 3), 5);
         }
     }
-    $_row_padding: $tn-tree-control-width + $tn-tree-control-margin-right;
+    $_row_padding: $tn-tree-control-width + $tn-tree-control-margin-right + 4;
     &__col {
         flex: 1;
         padding: $tn-tree-cell-padding 0;
