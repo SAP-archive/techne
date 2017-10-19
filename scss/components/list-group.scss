@@ -23,6 +23,7 @@ $block: ns(list-group);
     $tn-list-group--border-width: 1px;
     $tn-list-group-item-padding: tn-space(4) !default;
     $tn-list-group-transition-params: $tn-animation--speed ease-in !default;
+    $tn-list-group--button-size: tn-space() + 6;
 
     @include reset;
     vertical-align: top;
@@ -75,5 +76,16 @@ $block: ns(list-group);
         right: 0;
         top:0;
         cursor: pointer;
+        color: tn-color('text-inverse', 1);
+        background-color: tn-color('action', 1);
+        border-radius: 50%;
+        padding: 0;
+        padding-top: 2px;
+        width:$tn-list-group--button-size;
+        height: $tn-list-group--button-size;
+        @include tn-type(0);
+        .tn-icon{
+            @include tn-type(-1);
+        }
     }
 }
