@@ -40,8 +40,8 @@ $tn-type: (
 
 //fonts
 $tn-fonts: (
-    body: #{"'Open Sans'","'Courier New'", monospace},
-    header: #{"Roboto","'Courier New'", monospace},
+    body: #{"'Open Sans'", sans-serif},
+    header: #{"Roboto", sans-serif},
     code: #{"'Courier New'", monospace},
 ) !default;
 
