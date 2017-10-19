@@ -95,13 +95,6 @@ $block: ns(tooltip);
 
             }
         }
-        // &--bottom-right::before{
-        //     // @extend .tn-tooltip__arrow;
-        //     display: block;
-        //     bottom: -($tn-tooltip-arrow-offset);
-        //     right: $tn-tooltip-arrow-offset;
-        //     // transform: rotate(180deg);
-        // }
     }
     &:hover{
         .#{$block}__content{

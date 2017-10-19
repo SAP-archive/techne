@@ -5,6 +5,6 @@
         "content": ""
     },
     "modifier": {
-        "arrow": [ "left", "right", "botom-left", "bottom-right"]
+        "content": [ "left", "right", "botom-left", "bottom-right"]
     }
 }

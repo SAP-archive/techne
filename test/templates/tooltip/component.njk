@@ -5,7 +5,7 @@ tooltip:
 -->
 {% macro tooltip(properties={}, modifier={}, state={}, aria={}) -%}
 <span class="tn-tooltip"{{ aria | aria }}>
-    <span class="tn-tooltip__content{{ modifier.arrow | modifier('tooltip__content') }}">
+    <span class="tn-tooltip__content{{ modifier.content | modifier('tooltip__content') }}">
             {{ properties.content }}
     </span>
 </span>
