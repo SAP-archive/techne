@@ -10,10 +10,12 @@ $block: ns(badge);
 .#{$block} {
     @include reset;
     @include tn-type(-3);
+    line-height: tn-space(reg);
     border-radius: 5px;
     border-width: 1px;
     border-style: solid;
     padding: tn-space(1) tn-space(2);
+    vertical-align: middle;
     &--pill {
         border-radius: 12.5px;
     }

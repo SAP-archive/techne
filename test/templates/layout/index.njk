@@ -26,19 +26,19 @@
 
 {% call container() -%}
 <code>.tn-container</code><br>
-<small>20px left and right padding, max width at 1580px (default)</small>
+<small>Max width at 1290px (default)</small>
 {%- endcall %}
 {% call code() -%}
 {%- call container() -%}{%- endcall %}
 {%- endcall %}
-
+{#
 {% call container(modifier="bleed") -%}
 <code>.tn-container--bleed</code><br>
 <small>No left and right padding</small>
 {%- endcall %}
 {% call code() -%}
 {%- call container(modifier="bleed") -%}{%- endcall %}
-{%- endcall %}
+{%- endcall %} #}
 
 {% call container(modifier="fluid") -%}
 <code>.tn-container--fluid</code><br>
@@ -169,6 +169,17 @@
     {% set example %}
     {%- call container(modifier="flex") -%}
         {%- call col(9) -%}{%- endcall %}
+        {%- call col(0) -%}{%- endcall %}
+        {%- call col(0) -%}{%- endcall %}
+        {%- call col(0) -%}{%- endcall %}
+    {%- endcall %}
+    {% endset %}
+    {{ format(example) }}
+
+    <strong>3 col (flex,flex,flex)</strong>
+    <p>Inside flex containers, use .tn-col to distirbute space with no margin</p>
+    {% set example %}
+    {%- call container(modifier="flex") -%}
         {%- call col(0) -%}{%- endcall %}
         {%- call col(0) -%}{%- endcall %}
         {%- call col(0) -%}{%- endcall %}

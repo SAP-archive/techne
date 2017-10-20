@@ -13,7 +13,7 @@ $block: ns(card-group);
     $tn-card-group-width--gutter: $tn-width--gutter !default;
 
     @include reset;
-
+    @include tn-clearfix;
     $gutter_: $tn-card-group-width--gutter;
     $i_: $tn-card-group-items-per-group;
     display: flex;

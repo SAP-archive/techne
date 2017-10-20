@@ -5,13 +5,13 @@ section:
     classes=[],
     aria={}
 -->
-{%- macro section(modifier=[], aria={}, classes=[]) %}
+{%- macro block(properties={}, modifier=[], aria={}, classes=[]) %}
 <section class="tn-section{{ classes | classes }}{{ modifier | modifier("section") }}"{{aria | aria}}>
     {{- caller() }}
 </section>
 {%- endmacro %}
 
-{%- macro section_header(properties={}, modifier=[], aria={}, classes=[]) %}
+{%- macro header(properties={}, modifier=[], aria={}, classes=[]) %}
 <header class="tn-section__header{{ classes | classes }}{{ modifier | modifier("section__header") }}">
     {%- if properties.title %}
     <h1 class="tn-section__title">
@@ -22,13 +22,13 @@ section:
 </header>
 {%- endmacro %}
 
-{%- macro section_footer(properties={}, modifier=[], aria={}, classes=[]) %}
+{%- macro footer(properties={}, modifier=[], aria={}, classes=[]) %}
 <footer class="tn-section__footer">
 {{ caller() }}
 </footer>
 {%- endmacro %}
 
-{%- macro section_actions(properties={}, modifier=[], aria={}, classes=[]) %}
+{%- macro actions(properties={}, modifier=[], aria={}, classes=[]) %}
 <div class="tn-section__actions">
     {{ caller() }}
 </div>

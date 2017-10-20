@@ -1,0 +1,36 @@
+{% extends "./ui.njk" %}
+{# ui-level vars #}
+{%- set hide_ui_header = true %}
+{%- set hide_ui_footer = true %}
+{%- set show_ui_overlay = show_ui_overlay or false %}
+
+{# page-level vars #}
+{%- set hide_page_header = hide_page_header or false %}
+{%- set hide_page_footer = hide_page_footer or false %}
+
+{# ui-level blocks #}
+{% block ui_header -%}
+{%- endblock %}
+{% block ui_footer -%}
+{%- endblock %}
+{% block ui_overlay -%}
+{%- endblock %}
+{% block ui_app -%}
+<article class="tn-page">
+    {% if hide_page_header !== true %}
+    <header class="tn-page__header">
+        {% block page_header -%}
+        {%- endblock %}
+    </header>
+    {% endif %}
+    {% if page_intro %}
+    <div class="tn-page__intro">
+        <p><em>{{ page_intro }}</em></p>
+    </div>
+    {% endif %}
+    <div class="tn-page__content">
+    {% block page_content -%}
+    {%- endblock %}
+    </div>
+</article>
+{%- endblock %}
