@@ -30,7 +30,6 @@ The dropdown is designed to look like the rest of input components. The options 
             <li><a href="#" class="tn-dropdown__item">Option 5</a></li>
             <li><a href="#" class="tn-dropdown__item">Option 6</a></li>
         </ul>
-
     </ul>
 </div>
 
@@ -61,7 +60,6 @@ It can also include complementary information like an icon.
             <li><a href="#" class="tn-dropdown__item">Accumsan</a></li>
             <li><a href="#" class="tn-dropdown__item">Volutpat felix</a></li>
         </ul>
-
     </ul>
 </div>
 {% endcapture %}
