@@ -1,0 +1,132 @@
+{% extends "./layouts/page.njk" %}
+{% import "../layout/section.njk" as section %}
+{% from "../layout/component.njk" import container, col %}
+{% from "../tree/component.njk" import tree %}
+{% from "../table/component.njk" import table %}
+
+{% set hide_app_sidebar = false %}
+{% set hide_page_header = true %}
+{% block page_content %}
+
+<h1>.tn-section</h1>
+<div class="tn-has-background-color-neutral-2">
+{% call section.block() -%}
+    {% call section.header({ title: ".tn-section__title" }) -%}
+        {% call section.actions() -%}
+.tn-section__actions
+        {%- endcall %}
+    {%- endcall %}
+    <div style="background-color: #e8e8e8; height: 100px;">
+.tn-container, .tn-card-group
+    </div>
+    {% call section.footer() -%}
+.tn-section__footer
+    {%- endcall %}
+{%- endcall %}
+</div>
+<br>
+
+<h1>.tn-section--full-bleed</h1>
+<div class="tn-has-background-color-neutral-2">
+{% call section.block(modifier="full-bleed") -%}
+    {% call section.header({ title: ".tn-section__title" }) -%}
+        {% call section.actions() -%}
+.tn-section__actions
+        {%- endcall %}
+    {%- endcall %}
+    <div style="background-color:  #e8e8e8; height: 100px;">
+.tn-table, .tn-tree
+    </div>
+    {% call section.footer() -%}
+.tn-section__footer
+    {%- endcall %}
+{%- endcall %}
+</div>
+
+
+
+
+<br><br>
+<br><br>
+
+
+{% set badgetitle %}
+Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
+{% endset %}
+
+    {% call section.block(classes="") -%}
+        {% call section.header({ title: badgetitle }) -%}
+
+        {%- endcall %}
+
+<div class="tn-container">
+
+    <div class="tn-col--6">
+
+        <div class="tn-form__group">
+            <div class="tn-form__item">
+                <label class="tn-form__label" for="input-1">Field Label</label>
+                <input class="tn-form__control" type="text" id="input-1" name="" value="" placeholder="Field placeholder text">
+            </div>
+        </div>
+        <fieldset class="tn-form__group">
+            <legend class="tn-form__legend">Select an option</legend>
+            <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+                <input class="tn-form__control" type="radio" id="radio-13" name="radio-name-5" value="" checked>
+                <label class="tn-form__label" for="radio-13">Option One</label>
+            </div>
+            <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+                <input class="tn-form__control" type="radio" id="radio-14" name="radio-name-5" value="">
+                <label class="tn-form__label" for="radio-14">Option Two</label>
+            </div>
+            <div class="tn-form__item tn-form__item--inline tn-form__item--check">
+                <input class="tn-form__control" type="radio" id="radio-15" name="radio-name-5" value="">
+                <label class="tn-form__label" for="radio-15">Option Three</label>
+            </div>
+        </fieldset>
+
+    </div>
+        <div class="tn-col--6">
+
+            <fieldset class="tn-form__group">
+                <div class="tn-form__item">
+                    <label class="tn-form__label" for="textarea-1">Field Label</label>
+                    <textarea class="tn-form__control" id="textarea-1" name="" >Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem.</textarea>
+                </div>
+            </fieldset>
+
+        </div>
+
+</div>
+
+
+
+        {% call section.footer() -%}
+        <em>Vivamus sagittis diam in vehicula lobortis sapien arcu mattis erat vel aliquet.</em>
+        {%- endcall %}
+    {%- endcall %}
+
+
+
+
+    {% call section.block(modifier="full-bleed", classes="") -%}
+
+        {% call section.header({ title: "Table" }) -%}
+            {% call section.actions() -%}
+            <button class="tn-button tn-button--text tn-button--small">
+                <span class="tn-icon tn-icon--add" role="presentation"></span>
+                Add
+            </button>
+            {%- endcall %}
+        {%- endcall %}
+
+    {{ table(data.table.properties) }}
+
+        {% call section.footer() -%}
+        <a href="#" class="tn-button tn-button--link">See All</a>
+        {%- endcall %}
+    {%- endcall %}
+
+
+
+{% endblock %}
