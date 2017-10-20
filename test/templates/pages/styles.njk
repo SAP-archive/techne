@@ -8,9 +8,9 @@
     "0": [ 16, 24, "body", "reg", "none" ],
     "1": [ 18, 24, "body", "semi", "none" ],
     "2": [ 20, 28, "body", "semi", "none" ],
-    "3": [ 26, 32, "header", "semi", "none" ],
+    "3": [ 26, 32, "header", "medium", "none" ],
     "4": [ 35, 44, "header", "bold", "none" ],
-    "5": [ 45, 52, "header", "semi", "none" ]
+    "5": [ 45, 52, "header", "medium", "none" ]
 } %}
 
 
@@ -21,7 +21,7 @@
     <h2>Sizes</h2>
     {% for i in ["-3","-2","-1","0","1","2","3","4","5"] | reverse %}
     {% set type = specs[i] %}
-        <p><strong>{{i}}</strong> — {{ "Dosis" if type[2] == "header" else "Open Sans" }} {{ type[3] | capitalize }}{{ "bold" if type[2] == "semi" }} {{ type[0] }}px | Line-height {{ type[1] }}px</p>
+        <p><strong>{{i}}</strong> — {{ "Roboto" if type[2] == "header" else "Open Sans" }} {{ type[3] | capitalize }}{{ "bold" if type[2] == "medium" }} {{ type[0] }}px | Line-height {{ type[1] }}px</p>
         <p class="tn-has-type{{ '-minus' if i < 0 }}-{{ i | abs if i != 0 else 'base' }}">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
 
     {% endfor %}
