@@ -49,6 +49,7 @@ $block: ns(button);
     padding-right: tn-space(5);
     text-align: center;
     text-transform: uppercase;
+    border-radius: 0;
     //MODIFIERS
     &--small {
         @include tn-type(0);
@@ -196,7 +197,6 @@ $block: ns(button);
             }
         }
     }
-
     //special flavor
     &--action-bar {
         @extend .#{$block}--large;
@@ -204,12 +204,6 @@ $block: ns(button);
         width: 135px;
         line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
         vertical-align: middle;
-        // &.#{$block}--text {
-        //     color: tn-color(text);
-        //     &:hover {
-        //         color: darken(tn-color(text), 5);
-        //     }
-        // }
         & > * {
             display: block !important;
             margin-top: tn-space(3);
@@ -217,5 +211,4 @@ $block: ns(button);
             margin-right: auto;
         }
     }
-
 }
