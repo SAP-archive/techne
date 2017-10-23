@@ -75,9 +75,6 @@ $block: ns(input-group);
         &:last-child {
             border-left-width: 0;
         }
-        &--step-up, &--step-down  {
-           font-size: 10px;
-        }
         &--button {
             padding: 0;
         }
@@ -91,7 +88,6 @@ $block: ns(input-group);
             [type="search"] + & {
                 border: 0;
                 width: 0;
-                //outline: solid 1px red;
             }
         }
 
@@ -103,6 +99,7 @@ $block: ns(input-group);
         display: block;
         min-width: tn-space(12);
         &--step-up, &--step-down  {
+            font-size: 10px;
             &::after {
                 content: "";
                 position: relative;
