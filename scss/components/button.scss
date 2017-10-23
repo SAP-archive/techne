@@ -37,7 +37,7 @@ $block: ns(button);
     //BASE
     //set all reset and baseline block styles
     @include tn-button-reset;
-    @include tn-type(1, header, medium);
+    @include tn-type(1, header, med);
     display: inline-block;
     background-color: $tn-button-background-color;
     transition: background-color $tn-button-transition-params;

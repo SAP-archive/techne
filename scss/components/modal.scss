@@ -33,7 +33,7 @@ $block: ns(modal);
     padding-right: $tn-modal-inner-padding/2;
   }
   &__title{
-      @include tn-type(4,header, medium);
+      @include tn-type(4,header, med);
   }
   &__body{
     padding: $tn-modal-inner-padding;
