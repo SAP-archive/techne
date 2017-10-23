@@ -7,7 +7,7 @@
     .tn-tooltip__content
     .tn-tooltip__content+(left, right, bottom-left, bottom-right)
 */
-$block: ns(tooltip);
+$block: ns(inline-help);
 
 .#{$block} {
 

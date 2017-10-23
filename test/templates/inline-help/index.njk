@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 {% from "./../format.njk" import format %}
 {% from "../button/component.njk" import button %}
-{% from "./component.njk" import tooltip %}
+{% from "./component.njk" import inline_help %}
 {% import "./../utils.njk" as utils %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
@@ -9,17 +9,15 @@
 
 {% block content %}
 
-<h1>tooltip</h1>
+<h1>Inline Help</h1>
 <div style="text-align:center;">
 
 <!-- output the component example and the code snippet -->
 {% set example %}
 {%- set _id = utils.id() %}
 
-<br><br>
-
 Bottom Right (Default)
-{{  tooltip(
+{{  inline_help(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
@@ -32,7 +30,7 @@ Bottom Right (Default)
 <br><br>
 
 Bottom Left
-{{  tooltip(
+{{  inline_help(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
@@ -45,7 +43,7 @@ Bottom Left
 <br><br>
 
 Right
-{{  tooltip(
+{{  inline_help(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },
@@ -58,7 +56,7 @@ Right
 <br><br>
 
 Left
-{{  tooltip(
+{{  inline_help(
         properties={
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing."
         },

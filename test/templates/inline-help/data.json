@@ -1,6 +1,6 @@
 {
-    "id": "tooltip",
-    "name": "Tooltip",
+    "id": "inline-help",
+    "name": "Inline-Help",
     "properties": {
         "content": ""
     },
