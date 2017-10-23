@@ -62,6 +62,27 @@ A short Help text can be added to help the user to understand what type of data 
 
 {% include display-component.html component=inputs-help %}
 
+## Inputs inline help elements
+Help text can be placed inline with the label
+
+{% capture inputs-help %}
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-4">
+            Input with Help Message
+            <span class="tn-inline-help">
+                <span class="tn-inline-help__content tn-inline-help__content--bottom-right">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing.
+                </span>
+            </span>
+        </label>
+        <input class="tn-form__control" type="text" id="input-4">
+    </div>
+</div>{% endcapture %}
+
+{% include display-component.html component=inputs-help %}
+
+
 <br/>
 
 ## Inputs state
