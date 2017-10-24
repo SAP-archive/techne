@@ -36,9 +36,9 @@ The Action bar can display a "Back button" to allow the user to navigate back to
 {% capture default-action-bar-back %}
 <header class="tn-action-bar">
     <div class="tn-action-bar__navigation">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--large" aria-label="Back">
-            <span class="tn-icon tn-icon--backarrow tn-icon--large" role="presentation"></span>
-        </button>
+      <button class="tn-icon-button tn-icon-button--text tn-icon-button--large" aria-label="Back">
+          <span class="tn-icon tn-icon--backarrow tn-icon--large" role="presentation"></span>
+      </button>
     </div>
     <h1 class="tn-action-bar__title">
         Product #2342 - Red T-Shirt Type D
@@ -61,25 +61,25 @@ Main actions that are performed on the object represented on the page can be dis
     </h1>
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
+            <button class="tn-action-bar-button tn-action-bar-button--text">
                 <span class="tn-icon tn-icon--edit tn-icon--medium" role="presentation"></span>
                 Customize
             </button>
         </div>
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
+            <button class="tn-action-bar-button tn-action-bar-button--text">
                 <span class="tn-icon tn-icon--link tn-icon--medium" role="presentation"></span>
                 Link
             </button>
         </div>
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
+            <button class="tn-action-bar-button tn-action-bar-button--text">
                 <span class="tn-icon tn-icon--sync tn-icon--medium" role="presentation"></span>
                 Sync
             </button>
         </div>
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
+            <button class="tn-action-bar-button tn-action-bar-button--text">
                 <span class="tn-icon tn-icon--clone tn-icon--medium" role="presentation"></span>
                 Clone
             </button>
@@ -104,7 +104,7 @@ When you need to display more than four actions it is recommended to use the **C
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
             <div class="tn-dropdown">
-                <button class="tn-button tn-button--text tn-button--action-bar" aria-controls="3ewpS611" aria-haspopup="true" aria-expanded="false" aria-label="More">
+                <button class="tn-action-bar-button tn-action-bar-button--text" aria-controls="3ewpS611" aria-haspopup="true" aria-expanded="false" aria-label="More">
                     <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
                     More
                 </button>
@@ -136,13 +136,13 @@ When the user is editing the content of the page, the Actions to Save or Discard
     </h1>
     <div class="tn-action-bar__actions">
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--text tn-button--action-bar">
+            <button class="tn-action-bar-button tn-action-bar-button--text">
                 <span class="tn-icon tn-icon--close tn-icon--medium" role="presentation"></span>
                 Cancel
             </button>
         </div>
         <div class="tn-action-bar__action-item">
-            <button class="tn-button tn-button--action-bar">
+            <button class="tn-action-bar-button">
                 <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
                 Save
             </button>

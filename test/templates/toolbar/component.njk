@@ -1,5 +1,6 @@
-{% from "../button/component.njk" import button %}
 {% from "../icon/component.njk" import icon %}
+{% from "../button/component.njk" import button %}
+{% from "../icon-button/component.njk" import icon_button %}
 {% from "../dropdown/component.njk" import dropdown, menu %}
 {% from "../form/component.njk" import form_control %}
 {% from "../input-group/component.njk" import input_group %}
@@ -15,9 +16,9 @@ toolbar:
 {% macro toolbar(properties={}, modifier={}, state={}, aria={}) -%}
 {%- set _filter_id = utils.id() %}
 {%- set filterbutton %}
-{{  button(
+{{  icon_button(
         { icon: 'filter' },
-        modifier={ block: ['text','icon'] },
+        modifier={ block: ['text'] },
         aria={ label: 'BUTTON_LABEL', expanded: false, controls: _filter_id, haspopup: true },
         classes="toolbar__button"
     )

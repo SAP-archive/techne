@@ -12,7 +12,7 @@ The Toolbar component is used always along a collection of items, like cards or 
 {% capture toolbar-full %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL">
+        <button class="tn-icon-button tn-icon-button--text tn-toolbar__button" aria-label="BUTTON_LABEL">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
         <span role="separator"></span>
@@ -29,7 +29,7 @@ The Toolbar component is used always along a collection of items, like cards or 
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
                         <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -43,7 +43,7 @@ The Toolbar component is used always along a collection of items, like cards or 
                     <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
                         <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -72,7 +72,7 @@ All the filtering options will be under the filtering icon (<span class="tn-icon
 {% capture toolbar %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" aria-expanded="false" aria-controls="gfAMe850" aria-haspopup="true">
+        <button class="tn-icon-button tn-icon-button--text tn-toolbar__button" aria-label="BUTTON_LABEL" aria-expanded="false" aria-controls="gfAMe850" aria-haspopup="true">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
     </div>
@@ -114,7 +114,7 @@ The selected filters will be displayed on a new row bellow. Every filter will in
 {% capture toolbar-with-filters %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" aria-expanded="false" aria-controls="gfAMe851" aria-haspopup="true">
+        <button class="tn-icon-button tn-icon-button--text tn-toolbar__button" aria-label="BUTTON_LABEL" aria-expanded="false" aria-controls="gfAMe851" aria-haspopup="true">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
     </div>
@@ -148,13 +148,13 @@ The selected filters will be displayed on a new row bellow. Every filter will in
         <ul class="tn-toolbar__applied-filter-list">
             <li class="tn-toolbar__applied-filter-item">
                 <span>Color: <strong>Red</strong></span>
-                <button class="tn-button tn-button--text tn-button--small tn-button--icon" aria-label="Clear">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Clear">
                     <span class="tn-icon tn-icon--filterremove" role="presentation"></span>
                 </button>
             </li>
             <li class="tn-toolbar__applied-filter-item">
                 <span>Size: <strong>Small</strong></span>
-                <button class="tn-button tn-button--text tn-button--small tn-button--icon" aria-label="Clear">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Clear">
                     <span class="tn-icon tn-icon--filterremove" role="presentation"></span>
                 </button>
             </li>
@@ -177,7 +177,7 @@ The Toolbar sorting elements modify the order of the items in the collection dep
 {% capture toolbar-sorting %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
         <span role="separator"></span>
@@ -208,7 +208,7 @@ The Toolbar is also used to support [pagination elements](pagination.html). They
 {% capture toolbar-pagination %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
         <span role="separator"></span>
@@ -225,7 +225,7 @@ The Toolbar is also used to support [pagination elements](pagination.html). They
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
                         <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -239,7 +239,7 @@ The Toolbar is also used to support [pagination elements](pagination.html). They
                     <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
                         <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -260,7 +260,7 @@ For some collections the user can choose the type of view the items are represen
 {% capture toolbar-change-view %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">
-        <button class="tn-button tn-button--text tn-button--icon tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-toolbar__button" aria-label="BUTTON_LABEL" disabled aria-disabled="true">
             <span class="tn-icon tn-icon--filter tn-icon--medium" role="presentation"></span>
         </button>
         <span role="separator"></span>
@@ -277,7 +277,7 @@ For some collections the user can choose the type of view the items are represen
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
                         <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -291,17 +291,17 @@ For some collections the user can choose the type of view the items are represen
                     <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
                         <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
             </ul>
         </div>
         <div class="tn-toolbar__view-as">
-            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as grid" aria-pressed="true">
+            <button class="tn-icon-button tn-icon-button--text" aria-label="View as grid" aria-pressed="true">
                 <span class="tn-icon tn-icon--grid tn-icon--medium" role="presentation"></span>
             </button>
-            <button class="tn-button tn-button--text tn-button--icon" aria-label="View as list" aria-pressed="false">
+            <button class="tn-icon-button tn-icon-button--text" aria-label="View as list" aria-pressed="false">
                 <span class="tn-icon tn-icon--list tn-icon--medium" role="presentation"></span>
             </button>
         </div>
@@ -324,7 +324,7 @@ At the bottom of a collection is recommended to show a toolbar with the paginati
             <ul class="tn-pagination">
                 <span class="tn-pagination__total">30 items</span>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
                         <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
                     </button>
                 </li>
@@ -338,7 +338,7 @@ At the bottom of a collection is recommended to show a toolbar with the paginati
                     <a href="#" class="tn-pagination__link">3</a>
                 </li>
                 <li class="tn-pagination__item">
-                    <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+                    <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
                         <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
                     </button>
                 </li>

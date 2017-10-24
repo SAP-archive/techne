@@ -21,7 +21,7 @@ Used when you need to inform the user but the [Alert Component](alert.html) does
 <div class="tn-modal">
     <div class="tn-modal__content">
         <div class="tn-modal__header">
-            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+            <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="close">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
             <h4 class="tn-modal__title">Product Added</h4>
@@ -41,7 +41,7 @@ Used when you need to inform the user but the [Alert Component](alert.html) does
 
 {% include display-component.html component=default-modal %}
 
-<br/> 
+<br/>
 
 ## Confirmation Modal
 
@@ -52,7 +52,7 @@ Used to confirm with the user before continuing with destructive or complex acti
 <div class="tn-modal">
     <div class="tn-modal__content">
         <div class="tn-modal__header">
-            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+            <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="close">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
             <h4 class="tn-modal__title">Delete</h4>
@@ -82,7 +82,7 @@ Used to collect simple information from the user. Please use with care and don't
 <div class="tn-modal">
     <div class="tn-modal__content">
         <div class="tn-modal__header">
-            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+            <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="close">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
             <h4 class="tn-modal__title">Invite user</h4>

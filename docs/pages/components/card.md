@@ -14,7 +14,7 @@ The cards can be [grouped](card-group.html) to display a set of the object of th
 Some common elements are styled by default:
 * **Primary info**: used mainly to display names or titles.
 * **Secondary info**: here you can add more information about the object.
-* **Status**: you can signal the status of the object, for instance: active/inactive 
+* **Status**: you can signal the status of the object, for instance: active/inactive
 
 <br/>
 
@@ -109,7 +109,7 @@ The card can also contain actions that can be performed on the object. This acti
     </div>
     <div class="tn-card__actions">
         <div class="tn-dropdown">
-            <button class="tn-button tn-button--icon tn-button--text" aria-controls="dKKJX636" aria-haspopup="true" aria-label="More">
+            <button class="tn-icon-button tn-icon-button--text" aria-controls="dKKJX636" aria-haspopup="true" aria-label="More">
                 <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
             </button>
             <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="dKKJX636">
