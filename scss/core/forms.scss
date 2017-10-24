@@ -39,6 +39,11 @@ select {
         background-image: none;
         padding-top: $tn-forms-padding;
     }
+    // &[disabled],
+    // &[aria-disabled="true"],
+    // &.is-disabled {
+    //     background-color: $tn-forms-background-color--disabled;
+    // }
 }
 
 #{$tn-elements-inputs--check} {

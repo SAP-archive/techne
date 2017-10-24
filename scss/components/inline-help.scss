@@ -4,7 +4,6 @@
 
 /*!
 .tn-tooltip
-    .tn-tooltip__content
     .tn-tooltip__content+(left, right, bottom-left, bottom-right)
 */
 $block: ns(inline-help);
@@ -24,11 +23,12 @@ $block: ns(inline-help);
     //BLOCK BASE *******************************************
     @include tn-type(-1);
     position: relative;
-    margin-left: tn-space(xs);
+    //margin-left: tn-space(xs);
     display: inline-block;
     width: $tn-tooltip-icon-size;
     height: $tn-tooltip-icon-size;
-    top:3px;
+    top: 3px;
+
     &::before {
         content: "?";
         width: $tn-tooltip-icon-size;
@@ -47,7 +47,7 @@ $block: ns(inline-help);
         @include tn-type(-2)
         background: $tn-tooltip-content-background-color;
         padding: $tn-tooltip-padding;
-        display: inline-block;
+        display: block;
         position: absolute;
         color: $tn-tooltip-content-color;
         top: $tn-tooltip-padding * 2.5;
@@ -92,7 +92,6 @@ $block: ns(inline-help);
             &::before{
                 top: -($tn-tooltip-arrow-offset);
                 left: $tn-tooltip-arrow-offset;
-
             }
         }
     }
@@ -100,6 +99,7 @@ $block: ns(inline-help);
         .#{$block}__content{
             visibility: visible;
             opacity: 1;
+            overflow: visible;
         }
     }
 }
