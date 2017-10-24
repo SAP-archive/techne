@@ -1,0 +1,9 @@
+{
+    "properties": {
+        "label": "BUTTON_LABEL",
+        "icon": "#/icon"
+    },
+    "modifier": {
+        "block": ["small", "large", "text", "icon"]
+    }
+}

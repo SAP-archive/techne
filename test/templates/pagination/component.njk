@@ -15,9 +15,9 @@
     <span class="tn-pagination__total">{{totalItems}} items</span>
     <li class="tn-pagination__item">
         {%- if currentPage === 1 %}
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
         {%- else %}
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous">
         {%- endif %}
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
@@ -105,9 +105,9 @@
     {%- endif %}
     <li class="tn-pagination__item">
         {%- if currentPage === pages | round(0) %}
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next" aria-disabled="true">
         {%- else %}
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
         {%- endif %}
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
