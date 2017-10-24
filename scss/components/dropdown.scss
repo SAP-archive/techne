@@ -45,6 +45,12 @@ $block: ns(dropdown);
         }
         &--no-border {
             border-color: transparent;
+            &[aria-disabled="true"],
+            &.is-disabled,
+            &:disabled {
+                border-color: transparent;
+            }
+
         }
     }
     &__icon {
@@ -90,19 +96,5 @@ $block: ns(dropdown);
         padding-top: tn-space(4);
         border-top: solid 1px tn-color(neutral, 3);
     }
-
-
-
-    //BLOCK MODIFIERS ************
-    //e.g., $tn-dropdown--no-border
-
-
-    //ELEMENTS *******************************************
-    //set all ELEMENT baseline styles
-    //e.g., $tn-dropdown__content
-
-    //STATES *******************************************
-
-
 
 }

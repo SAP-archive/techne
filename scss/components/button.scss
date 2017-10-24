@@ -36,7 +36,7 @@ $block: ns(button);
     //BASE
     //set all reset and baseline block styles
     @include tn-button-reset;
-    @include tn-type(2, header, semi);
+    @include tn-type(1, header, med);
     display: inline-block;
     background-color: $tn-button-background-color;
     transition: background-color $tn-button-transition-params;
@@ -60,6 +60,7 @@ $block: ns(button);
         padding-right: tn-space(4);
     }
     &--large {
+        @include tn-type(2);
         max-height: $tn-button-height--large;
         height: $tn-button-height--large;
         line-height: $tn-button-height--large;
@@ -112,7 +113,8 @@ $block: ns(button);
         &[aria-pressed="true"],
         &.is-pressed,
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             background-color: transparent;
             outline: none;
             box-shadow: none;
@@ -125,7 +127,8 @@ $block: ns(button);
             color: darken($tn-button-color--text, 10);
         }
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             color: $tn-button-color--disabled;
         }
     }
@@ -167,7 +170,8 @@ $block: ns(button);
             }
         }
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             &::after {
                 display: none;
             }
