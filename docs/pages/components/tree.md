@@ -166,10 +166,10 @@ The Tree rows can have also Actions, same was as the Table component.
             <div class="tn-tree__col">
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
@@ -187,10 +187,10 @@ The Tree rows can have also Actions, same was as the Table component.
                         123
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -208,10 +208,10 @@ The Tree rows can have also Actions, same was as the Table component.
                         323
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -230,10 +230,10 @@ The Tree rows can have also Actions, same was as the Table component.
             <div class="tn-tree__col">
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
@@ -251,10 +251,10 @@ The Tree rows can have also Actions, same was as the Table component.
                         443
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                         </button>
-                        <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                             <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -274,10 +274,10 @@ The Tree rows can have also Actions, same was as the Table component.
                 344
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--edit tn-icon--small" role="presentation"></span>
                 </button>
-                <button class="tn-button tn-button--text tn-button--icon tn-button--small">
+                <button class="tn-icon-button tn-icon-button--text tn-icon-button--small">
                     <span class="tn-icon tn-icon--close tn-icon--small" role="presentation"></span>
                 </button>
             </div>
@@ -328,7 +328,7 @@ The Tree component support till four levels on the hierarchy.
                 </span>
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                     <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                 </button>
             </div>
@@ -349,7 +349,7 @@ The Tree component support till four levels on the hierarchy.
                         </span>
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                        <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                             <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -370,7 +370,7 @@ The Tree component support till four levels on the hierarchy.
                                 </span>
                             </div>
                             <div class="tn-tree__col tn-tree__col--actions">
-                                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                                <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                                     <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                                 </button>
                             </div>
@@ -390,7 +390,7 @@ The Tree component support till four levels on the hierarchy.
                                         </span>
                                     </div>
                                     <div class="tn-tree__col tn-tree__col--actions">
-                                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                                        <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                                             <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                                         </button>
                                     </div>
@@ -414,7 +414,7 @@ The Tree component support till four levels on the hierarchy.
                         </span>
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                        <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                             <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -437,7 +437,7 @@ The Tree component support till four levels on the hierarchy.
                 </span>
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                     <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                 </button>
             </div>
@@ -457,7 +457,7 @@ The Tree component support till four levels on the hierarchy.
                         </span>
                     </div>
                     <div class="tn-tree__col tn-tree__col--actions">
-                        <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                        <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                             <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                         </button>
                     </div>
@@ -479,7 +479,7 @@ The Tree component support till four levels on the hierarchy.
                 </span>
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                <button class="tn-button tn-button--icon tn-button--text" aria-label="More">
+                <button class="tn-icon-button tn-icon-button--text" aria-label="More">
                     <span class="tn-icon tn-icon--more tn-icon--small" role="presentation"></span>
                 </button>
             </div>
