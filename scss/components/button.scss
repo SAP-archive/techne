@@ -114,7 +114,8 @@ $block: ns(button);
         &[aria-pressed="true"],
         &.is-pressed,
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             background-color: transparent;
             outline: none;
             box-shadow: none;
@@ -127,7 +128,8 @@ $block: ns(button);
             color: darken($tn-button-color--text, 10);
         }
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             color: $tn-button-color--disabled;
         }
     }
@@ -169,7 +171,8 @@ $block: ns(button);
             }
         }
         &[aria-disabled="true"],
-        &.is-disabled {
+        &.is-disabled,
+        &:disabled {
             &::after {
                 display: none;
             }
