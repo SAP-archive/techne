@@ -1,12 +1,13 @@
 {% extends "layout.njk" %}
-{% from "./component.njk" import button %}
+
 {% from "./../format.njk" import format %}
+{% from "../icon-button/component.njk" import icon_button %}
 {% set css_deps = ['helpers','icons'] %}
 
 {% block content %}
 <h1>Button w/ Icon</h1>
 {% set example %}
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked'
@@ -15,7 +16,7 @@
             block: ['small']
         })
 }}
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked'
@@ -24,7 +25,7 @@
             block: []
         })
 }}
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked'
@@ -34,7 +35,7 @@
         })
 }}
 <br><br>
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked',
@@ -44,7 +45,7 @@
             block: ['text','small']
         })
 }}
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked'
@@ -53,7 +54,7 @@
             block: ['text']
         })
 }}
-{{  button(
+{{  icon_button(
         {
             label: 'BUTTON_LABEL',
             icon: 'checked'
@@ -70,26 +71,26 @@
 <h2>States — Selected, Disabled</h2>
 
 {% set example %}
-{{  button(
+{{  icon_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: [] },
         aria={ selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: [] },
         aria={ disabled: true }
     )
 }}
 <br><br>
-{{  button(
+{{  icon_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ disabled: true }
@@ -106,38 +107,38 @@
 
 <h1>Icon Button</h1>
 {% set example %}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['small','icon'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: [] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['large'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
 <br><br>
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text','small'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ label: 'BUTTON_LABEL' }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text','large'] },
         aria={ label: 'BUTTON_LABEL' }
@@ -151,50 +152,50 @@
 
 <h2>States — Selected, Disabled</h2>
 {% set example %}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: [] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['large'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: [] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['large'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
 <br><br>
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text','large'] },
         aria={ label: 'BUTTON_LABEL', selected: true }
     )
 }}
-{{  button(
+{{  icon_button(
         { icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }
     )
 }}
-{{  button(
+{{  icon_button (
         { icon: 'checked' },
         modifier={ block: ['text','large'] },
         aria={ label: 'BUTTON_LABEL', disabled: true }

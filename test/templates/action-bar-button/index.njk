@@ -1,17 +1,17 @@
 {% extends "layout.njk" %}
-{% from "./component.njk" import button %}
 {% from "./../format.njk" import format %}
+{% from "../action-bar-button/component.njk" import action_bar_button %}
 {% set css_deps = ['helpers','icons'] %}
 
 {% block content %}
 <h1>Action Bar Button</h1>
 {% set example %}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: [] }
     )
 }}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: ['text'] }
     )
@@ -24,25 +24,25 @@
 
 <h2>States — Selected, Disabled</h2>
 {% set example %}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: [] },
         aria={ selected: true }
     )
 }}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: [] },
         aria={ disabled: true }
     )
 }}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ selected: true }
     )
 }}
-{{  button(
+{{  action_bar_button(
         { label: 'BUTTON_LABEL', icon: 'checked' },
         modifier={ block: ['text'] },
         aria={ disabled: true }
