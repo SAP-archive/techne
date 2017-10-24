@@ -70,7 +70,7 @@ Help text can be placed inline with the label
     <div class="tn-form__item">
         <label class="tn-form__label" for="input-4">
             Input with Help Message
-            <span class="tn-inline-help">
+            <span class="tn-inline-help tn-has-float-right">
                 <span class="tn-inline-help__content tn-inline-help__content--bottom-right">
                         Lorem ipsum dolor sit amet, consectetur adipiscing.
                 </span>
