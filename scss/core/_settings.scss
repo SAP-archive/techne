@@ -43,7 +43,7 @@ $tn-fonts: (
     body: #{sans-serif},
     header: #{sans-serif},
     code: #{monospace},
-);
+) !default;
 
 $tn-weights: (
     light: 300,
