@@ -163,7 +163,7 @@ The text button support the same sizes as the Standard button.
 <button class="tn-button tn-button--text tn-button--large">
     Large Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--large">
+<button class="tn-button tn-button--icon tn-button--text tn-button--large">
     <span class="tn-icon tn-icon--checked tn-icon--large" role="presentation"></span>
     Large Text Button
 </button>

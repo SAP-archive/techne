@@ -4,7 +4,7 @@
         "icon": "#/icon"
     },
     "modifier": {
-        "block": ["small", "large", "text", "icon", "link", "action-bar"]
+        "block": ["small", "large", "text", "icon", "link"]
     },
     "state": {
         "disabled": false
