@@ -8,8 +8,10 @@
         .tn-form__legend()
         .tn-form__item+(--check, --inline)
             .tn-form__label(.is-required)
+                .tn-inlin-help
             .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
         .tn-form__message(--help, --error, --warning)
+
 */
 $block: ns(form);
 
@@ -17,25 +19,12 @@ $block: ns(form);
     //LOCAL VARS (set all vars used in component, always include !default)
     $tn-form-item-gutter: $tn-width--gutter !default;
 
-
-    //BLOCK BASE *******************************************
-    //set all BLOCK reset and baseline styles
-
-
-    //BLOCK MODIFIERS ************
-    //each mod MUST extend base block so devs can use a single class and get all base styles for free
-
-
     //ELEMENTS *******************************************
     //set all ELEMENT baseline styles
     &__group {
         @include tn-clearfix;
         @include tn-last-child;
         margin-bottom: $tn-margin-bottom;
-
-        //ELEMENT MODIFIERS ************
-        //each mod MUST extend the element base
-
     }
     &__item {
         @include tn-last-child;
@@ -145,12 +134,4 @@ $block: ns(form);
             }
         }
     }
-
-    //STATES *******************************************
-    //these classes and attributes can be modified by scripts
-
-
-
-
-
 }

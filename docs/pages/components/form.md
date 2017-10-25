@@ -47,18 +47,38 @@ Inputs are the used to collect data from the user. When a field is required the 
 <br/>
 
 ## Inputs help elements
-A short Help text can be added to help the user to understand what type of data is expected.
+
+To make it easier for the user to understand what kind of information is should be entered; two types of help elements can be used.
+
+The inline help element: displayed as an icon that when the user hover the cursor over it, shows the help indications. This help elements is used then the help indications are an aid to the user but not contain information they have to know right away.
+
+The help indications can be aso always visible when the user needs to be inform about it at all times, to avoid mistakes. This help element is then displayed bellow the input.
 
 {% capture inputs-help %}
 <div class="tn-form__group">
     <div class="tn-form__item">
-        <label class="tn-form__label" for="input-4">Input with Help Message</label>
-        <input class="tn-form__control" type="text" id="input-4">
+        <label class="tn-form__label" for="input-44">
+            Input with inline help
+            <span class="tn-inline-help tn-has-float-right">
+                <span class="tn-inline-help__content tn-inline-help__content--bottom-right">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing.
+                </span>
+            </span>
+        </label>
+        <input class="tn-form__control" type="text" id="input-45">
+    </div>
+</div>
+
+<div class="tn-form__group">
+    <div class="tn-form__item">
+        <label class="tn-form__label" for="input-45">Input with Help Message</label>
+        <input class="tn-form__control" type="text" id="input-45">
         <span class="tn-form__message tn-form__message--help">
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </span>
     </div>
-</div>{% endcapture %}
+</div>
+{% endcapture %}
 
 {% include display-component.html component=inputs-help %}
 
