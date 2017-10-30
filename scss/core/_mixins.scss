@@ -49,7 +49,7 @@ $ns: ns();
         cursor: not-allowed;
         color: $tn-forms-color--disabled;
         border-color: $tn-forms-border-color--disabled;
-        //background-color: $tn-forms-background-color--disabled;
+        background-color: $tn-forms-background-color--disabled;
     }
     &[readonly],
     &.is-readonly {
