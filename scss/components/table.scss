@@ -24,6 +24,7 @@ $block: ns(table);
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
+    margin-bottom: $tn-margin-bottom;
     tr {
         transition: background-color $tn-table-transition-params;
         &:hover {

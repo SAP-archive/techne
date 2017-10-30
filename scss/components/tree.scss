@@ -25,15 +25,18 @@ $block: ns(tree);
     width: 100%;
     max-width: 100%;
     border-bottom: solid 1px $tn-tree-border-color;
+    margin-bottom: $tn-margin-bottom;
     &--header {
         border-bottom: 0;
         border-top: solid 1px $tn-tree-border-color;
+        margin-bottom: 0;
     }
     &__group {
         //see addt'l group classes under __col--first below
         transition: opacity $tn-animation--speed linear;
         max-height: auto;
         opacity: 1;
+        margin-bottom: 0;
         &.is-hidden,
         &[aria-hidden="true"] {
             max-height: 0;
@@ -43,6 +46,7 @@ $block: ns(tree);
     }
     &__item {
         border-top: solid 1px $tn-tree-border-color;
+        margin-bottom: 0;
     }
     &__row {
         padding: 0 $tn-tree-cell-spacing;
