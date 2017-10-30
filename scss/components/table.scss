@@ -21,6 +21,7 @@ $block: ns(table);
     //BLOCK BASE *******************************************
     //set all BLOCK reset and baseline styles
     @include reset;
+    @include tn-last-child;
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;

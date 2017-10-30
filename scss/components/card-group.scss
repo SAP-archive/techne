@@ -19,7 +19,9 @@ $block: ns(card-group);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: -$tn-margin-bottom;
+    &:last-child {
+        margin-bottom: -$tn-margin-bottom;
+    }
     @include tn-screen(s) {
         flex-direction: row;
         & > * {

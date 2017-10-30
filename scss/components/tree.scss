@@ -21,6 +21,7 @@ $block: ns(tree);
     $tn-tree-control-width: 18px !default;
     $tn-tree-control-margin-right: tn-space(2) !default;
     @include reset;
+    @include tn-last-child;
     position: relative;
     width: 100%;
     max-width: 100%;
