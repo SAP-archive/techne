@@ -40,9 +40,9 @@ $tn-type: (
 
 //fonts
 $tn-fonts: (
-    body: #{"'Open Sans'", sans-serif},
-    header: #{"Roboto", sans-serif},
-    code: #{"'Courier New'", monospace},
+    body: #{sans-serif},
+    header: #{sans-serif},
+    code: #{monospace},
 ) !default;
 
 $tn-weights: (
