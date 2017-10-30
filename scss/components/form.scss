@@ -44,16 +44,19 @@ $block: ns(form);
         }
     }
     &__item {
+        @include tn-last-child;
         margin-bottom: $tn-margin-bottom;
         &--check {
+            @include tn-clearfix;
             position: relative;
             display: block;
-            margin-bottom: tn-space(5);
             .#{$block}__label {
                 @include tn-type($tn-form-label-font-size--check);
                 margin-bottom: 0;
                 display: inline-block;
                 vertical-align: middle;
+                display: flex;
+                line-height: $tn-forms-height--input-check;
             }
             .#{$block}__control {
                 float: left;
@@ -81,6 +84,9 @@ $block: ns(form);
         &.is-required {
             @include tn-weight(bold);
         }
+    }
+    &__control {
+        min-width: $tn-forms-height--input-check;
     }
     &__legend {
         margin-bottom: tn-space(5);

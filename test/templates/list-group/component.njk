@@ -1,33 +1,25 @@
 {% import "../forms.njk" as forms %}
 {% from "../button/component.njk" import button %}
 {% from "../icon/component.njk" import icon %}
-
-{% set btn = button(
-        { icon: 'close' },
-        modifier={ block: ['icon','text'] },
-        aria={ label: 'More' }
-    )
-%}
-
+{#
+    see ./data.json for object structure
+#}
 {% macro list_group(properties={}, action={}) %}
 <ul class="tn-list-group">
     {%- for item in properties.items %}
     <li class="tn-list-group__item">
-        {%- if action.after %}
         {{item}}
-        <div class="tn-list-group__action">
-            {{ btn | indent(16) }}
-        </div>
-        {% elseif action.before %}
-        <div class="tn-list-group__action-form" >
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-{{ loop.index }}" name="checkbox-name-{{ loop.index }}">
-            <label class="tn-list-group__label" for="checkbox-{{ loop.index }}">{{item}}</label>
-        </div>
-        {% else %}
-        {{item}}
+        {%- if properties.action %}
+        <span class="tn-list-group__action">
+            {{ button(
+                { icon: properties.action.icon },
+                modifier={ block: ['icon','text','small'] },
+                aria={ label: properties.action.label }
+                )
+            }}
+        </span>
         {%- endif %}
     </li>
-    {% endfor %}
+    {%- endfor %}
 </ul>
-
 {%- endmacro %}
