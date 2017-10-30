@@ -32,9 +32,11 @@ $block: ns(list-group);
     &__item{
         border: $tn-list-group--border-width solid $tn-list-group--border-color;
         border-top: none;
-        padding: tn-space(4);
+        padding: $tn-list-group-item-padding;
         min-height: $tn-forms-height--input-text;
         transition: background-color $tn-list-group-transition-params;
+        position: relative;
+        padding-right: 52px;
         &:first-child{
             border-top: $tn-list-group--border-width solid $tn-list-group--border-color;
         }
@@ -49,8 +51,9 @@ $block: ns(list-group);
         }
     }
     &__action{
-        position: relative;
-        padding-right: tn-space(12);
+        top: 0;
+        right: 0;
+        position: absolute;
     }
     &__action-form{
         display: flex;
@@ -65,27 +68,5 @@ $block: ns(list-group);
     }
     &__label{
         flex-basis: 95%;
-    }
-    &__button{
-        flex: 1;
-        display: inline-block;
-        background-color: transparent;
-        outline: 0;
-        border: 0;
-        position: absolute;
-        right: 0;
-        top:0;
-        cursor: pointer;
-        color: tn-color('text-inverse', 1);
-        background-color: tn-color('action', 1);
-        border-radius: 50%;
-        padding: 0;
-        padding-top: 2px;
-        width:$tn-list-group--button-size;
-        height: $tn-list-group--button-size;
-        @include tn-type(0);
-        .tn-icon{
-            @include tn-type(-1);
-        }
     }
 }
