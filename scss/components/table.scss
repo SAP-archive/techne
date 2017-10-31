@@ -26,6 +26,7 @@ $block: ns(table);
     max-width: 100%;
     border-collapse: collapse;
     margin-bottom: $tn-margin-bottom;
+    border-top: solid 1px $tn-table-border-color;
     tr {
         transition: background-color $tn-table-transition-params;
         &:hover {
