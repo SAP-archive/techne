@@ -1,0 +1,27 @@
+# Exclude Directories
+/docs
+/docu
+/gulp-patch
+
+# Exclude Files
+.npmignore
+.gitignore
+*.yml
+deploy-key.enc
+gulpfile.js
+.tmp
+*.log
+PROJECT.md
+package-lock.json
+bower.json
+repo-properties.json
+
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

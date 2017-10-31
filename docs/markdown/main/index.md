@@ -5,7 +5,7 @@
             <p>SAP Hybris Techné is the design guideline and component library for modern, mobile-first, user-centric experience design that gives teams the freedom and creativity to implement experiences from design to deployment FAST on YaaS, or anywhere they choose.</p>
             <a class="btn btn-warning" href="/GettingStarted.html">Download now</a>
             <br/>
-            <sub>Current version: v1.5.7</sub>
+            <sub>Current version: v1.5.9</sub>
         </div>
         <span class="techne-definition text-center">“Techné” is a term derived from the Greek τέχνη, often translated as “craftmanship”, “craft”, or “art”.</span>
     </header>
@@ -48,7 +48,7 @@
                     <p class="text-center">The Developer</p>
                 </a>
             </div>
-        </div> 
+        </div>
         <div class="row personasCarousel">
             <!-- carousel #hyPersonasCarouselID -->
             <div id="hyPersonasCarouselID" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -70,7 +70,7 @@
                     <p class="hyPersonaTitle">The Developer</p>
                         <p>These are the people who make it possible for all other personas to get stuff done. Whether working independently or in a team; for themselves or for another brand, these developers need tools to get s#&% done fast. There is no tolerance for confusing interfaces, slowness or barriers to getting that next release out. In fact the less time spent in a 'tool' the better. <a href="#hyHomeSoftDevC">Learn more »</a></p>
                     </div>
-                </div> 
+                </div>
                 <a href="#hyPersonasCarouselID" class="left carousel-control" role="button" data-slide="prev">
                     <img src="images/home/arrow_left.png">
                 </a>
