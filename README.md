@@ -5,13 +5,13 @@ See this page for a list of UI Components included in Hybris Techne.
 https://techne.yaas.io/components/Alerts-Errors-Notifications.html
 
 
-# Installation 
+# Installation
 
-### Install using bower 
+### Install using bower
 You can install Techne using [Bower](http://bower.io/) by with the following command in terminal or command prompt:
 `bower install hyTechne`
 
-### Install using NPM 
+### Install using NPM
 Techne is also avialable as a NPM package. You can install with the following command in terminal or command prompt:
 `npm install techne`
 
@@ -21,10 +21,11 @@ Techne is also avialable as a NPM package. You can install with the following co
 Four quick steps to get started:
 
 - Clone the repo.
-- Run [npm](https://www.npmjs.org): `npm install`.
+- Install node dependencies [npm](https://www.npmjs.org): `npm install`.
+- Install bower dependencies [bower](https://bower.io): `bower install`
+- Initialize KSS: `gulp patchgulpkss`
 - Run [npm](https://www.npmjs.org): `npm start` or run [gulp](http://gulpjs.com/): `gulp`
 - If you have a different folder setup than the default bower, you should modify the config.json to fit your needs.
-
 
 ### What's the structure?
 
