@@ -7,7 +7,7 @@ section:
 -->
 {%- macro section(modifier=[], aria={}, classes=[]) %}
 <section class="tn-section{{ classes | classes }}{{ modifier | modifier("section") }}"{{aria | aria}}>
-    {{- caller() }}
+    {{- caller() | indent -}}
 </section>
 {%- endmacro %}
 
@@ -18,13 +18,13 @@ section:
         {{ properties.title }}
     </h1>
     {%- endif %}
-    {{ caller() }}
+    {{- caller() | indent -}}
 </header>
 {%- endmacro %}
 
 {%- macro section_footer(properties={}, modifier=[], aria={}, classes=[]) %}
 <footer class="tn-section__footer">
-{{ caller() }}
+    {{ caller() }}
 </footer>
 {%- endmacro %}
 

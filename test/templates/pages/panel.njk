@@ -103,31 +103,33 @@ Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 {%- endcall %}
 {%- endcall %}
 
-<br>
+
 <hr>
-<br>
+
 <section class="tn-section">
+    <div class="tn-section__header">
+        <h1 class="tn-section__title">
+            Code
+        </h1>
+    </div>
 
-
-<h1>Code example</h1>
-{%- set panel_code %}
+{%- set code_example %}
 {% call layout.panel() -%}
-    {% call layout.panel_header({ title: ".tn-panel__title" }) -%}
+    {% call layout.panel_header({ title: "//title (optional)" }) -%}
         {% call layout.panel_actions() -%}
-.tn-panel__actions
+//buttons (optional)
         {%- endcall %}
     {%- endcall %}
 
 //panel content
     {% call layout.panel_footer() -%}
-.tn-panel__footer
+//link or info (optional)
     {%- endcall %}
 {%- endcall %}
 {% endset %}
-
-{%- call code() -%}
-{{panel_code}}
-{%- endcall %}
+<pre>
+{{code_example | e | trim }}
+</pre>
 
 
 {% endblock %}

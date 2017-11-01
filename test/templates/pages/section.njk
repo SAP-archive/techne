@@ -128,4 +128,60 @@ Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 
 
 
+
+
+
+
+
+    <hr>
+
+    <section class="tn-section">
+        <div class="tn-section__header">
+            <h1 class="tn-section__title">
+                Code
+            </h1>
+        </div>
+
+{%- set code_example %}
+{% call layout.section() -%}
+    {% call layout.section_header({ title: "//title (optional)" }) -%}
+        {% call layout.section_actions() -%}
+//buttons (optional)
+        {%- endcall %}
+    {%- endcall %}
+
+//content (.tn-container, .tn-card-group)
+    {% call layout.section_footer() -%}
+//link or info (optional)
+    {%- endcall %}
+{%- endcall %}
+
+{% call layout.section(modifier="full-bleed") -%}
+    {% call layout.section_header({ title: "//title (optional)" }) -%}
+        {% call layout.section_actions() -%}
+//buttons (optional)
+        {%- endcall %}
+    {%- endcall %}
+
+//content (.tn-table, .tn-tree)
+    {% call layout.section_footer() -%}
+//link or info (optional)
+    {%- endcall %}
+{%- endcall %}
+{% endset %}
+
+<pre>
+{{code_example | e | trim }}
+</pre>
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
