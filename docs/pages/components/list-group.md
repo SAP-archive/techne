@@ -87,27 +87,35 @@ Checkboxes can be used on the left, that enables the user to select multiple ite
 {% capture list-group-actions-form %}
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form" >
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-1" name="checkbox-name-1">
-            <label class="tn-list-group__label" for="checkbox-1">List item 1</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-1">
+                <input class="tn-form__control" type="checkbox" id="checkbox-1">
+                List item 1
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form" >
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-2" name="checkbox-name-2">
-            <label class="tn-list-group__label" for="checkbox-2">List item 2</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-2">
+                <input type="checkbox" class="tn-form__control" id="checkbox-2">
+                List item 2
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form" >
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-3" name="checkbox-name-3">
-            <label class="tn-list-group__label" for="checkbox-3">List item 3 - Lorem ipsum dolor sit amet, consectetur sed do</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-3">
+                <input type="checkbox" class="tn-form__control" id="checkbox-3">
+                List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form" >
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-4" name="checkbox-name-4">
-            <label class="tn-list-group__label" for="checkbox-4">List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-4">
+                <input type="checkbox" class="tn-form__control" id="checkbox-4">
+                List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            </label>
         </div>
     </li>
 </ul>
