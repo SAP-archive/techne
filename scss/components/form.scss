@@ -61,6 +61,7 @@ $block: ns(form);
             .#{$block}__control {
                 float: left;
                 vertical-align: middle;
+                margin-right: tn-space(3);
             }
             .#{$block}__help {
                 float: none;

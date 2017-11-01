@@ -1,5 +1,12 @@
-{% set title = "Table" %}
-{% extends "./layouts/starter.njk" %}
+{% extends "./layouts/module.njk" %}
+{% set page_title = "Table" %}
+{% set page_intro = "Page level help message goes here" %}
+{% set is_landing_page = false %}
+{% set show_toolbar = true %}
+
+{% import "../layout/section.njk" as section %}
+{% from "../layout/component.njk" import container, col %}
+
 {% import "./../utils.njk" as utils %}
 {% from "./../format.njk" import format %}
 {% from "../button/component.njk" import button %}
@@ -9,20 +16,18 @@
 {% from "../toolbar/component.njk" import toolbar %}
 {% from "../label/component.njk" import label %}
 {% from "../table/component.njk" import table %}
-{% block content %}
 
-{# Toolbar  #}
-{{  toolbar(data.toolbar.properties) }}
+{% block page_content %}
 
-{# Add New Button #}
-<div class="tn-container tn-has-text-align-right">
-    <button class="tn-button tn-button--text tn-button--small">
-        <span class="tn-icon tn-icon--add" role="presentation"></span>ADD
-    </button>
-</div>
-
-{# Cards #}
-<div class="tn-container">
+{%- call section.block(modifier="full-bleed") -%}
+    {%- call section.header() -%}
+        {% call section.actions() -%}
+        <button class="tn-button tn-button--text tn-button--small">
+            <span class="tn-icon tn-icon--add" role="presentation"></span>
+            Add
+        </button>
+        {%- endcall %}
+    {%- endcall %}
 
     {% set headers = ["", "Column Header", "Column Header", "Column Header", "Column Header"] %}
     {% set image_row = ['<img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png" class="tn-has-border-radius-50percent" width="32" height="32">', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
@@ -30,30 +35,25 @@
     {% set checkbox_row = ['<input type="checkbox">', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
     {% set checkbox_row_selected = ['<input type="checkbox" checked>', '<a class="tn-has-font-weight-semi">user.name@email.com</a>', 'First Name', 'Last Name', '01/26/17'] %}
 
+    <!-- output the component example and the code snippet -->
+    {{  table({
+            headers: headers,
+            rows: [image_row, image_row, image_row]
+        })
+    }}
 
-        <!-- output the component example and the code snippet -->
-        {% set example %}
-        {{  table({
-                headers: headers,
-                rows: [image_row, image_row, image_row]
-            })
-        }}
-        {% endset %}
-        {{ example }}
+    {{  table({
+            headers: headers,
+            rows: [checkbox_row_selected, checkbox_row, checkbox_row],
+            selectedRow: 1
+        })
+    }}
 
-        {% set example %}
-        {{  table({
-                headers: headers,
-                rows: [checkbox_row_selected, checkbox_row, checkbox_row],
-                selectedRow: 1
-            })
-        }}
-        {% endset %}
-        {{ example }}
 
-</div>
+{%- endcall %}
 
-{# Toolbar #}
-{{  toolbar() }}
+
+
+
 
 {% endblock %}

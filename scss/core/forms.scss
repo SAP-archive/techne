@@ -39,19 +39,12 @@ select {
         background-image: none;
         padding-top: $tn-forms-padding;
     }
-    // &[disabled],
-    // &[aria-disabled="true"],
-    // &.is-disabled {
-    //     background-color: $tn-forms-background-color--disabled;
-    // }
 }
-
 #{$tn-elements-inputs--check} {
     @extend %form-field-base;
     height: $tn-forms-height--input-check;
     width: $tn-forms-height--input-check;
     margin: 0;
-    margin-right: tn-space(3);
     vertical-align: middle;
     position: relative;
     &:checked {

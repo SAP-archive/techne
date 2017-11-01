@@ -60,6 +60,7 @@ $block: ns(dropdown);
     }
     &__menu,
     &__options {
+        min-width: 100%;
         border: $tn-dropdown-menu-border;
         background: $tn-dropdown-menu-background-color;
         position: absolute;

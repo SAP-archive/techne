@@ -28,8 +28,7 @@ $block: ns(toolbar);
     border-color: $tn-toolbar-border-color;
     border-style: solid;
     border-width: 1px 0;
-    margin-bottom: tn-space(m);
-
+    //margin-bottom: tn-space(m);
 
     & [role="separator"] {
         display: inline-block;
