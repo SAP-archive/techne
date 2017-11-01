@@ -118,6 +118,7 @@ $block: ns(toolbar);
     }
     &__applied-filter-item {
         @include tn-type(-3, body, reg, none);
+        line-height: inherit;
         display: flex;
         align-items: center;
         margin-right: tn-space(5);
@@ -135,9 +136,6 @@ $block: ns(toolbar);
     }
     &__applied-filter-clear {
         @include tn-type(-3, body, semi);
-        padding: tn-space(3) 0;
     }
-
-    //STATES *******************************************
 
 }

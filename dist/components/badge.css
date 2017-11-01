@@ -14,10 +14,12 @@
   line-height: 1.33333;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 20px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  padding: 4px 8px
+  padding: 4px 8px;
+  vertical-align: middle
 }
 .tn-badge--pill {
   border-radius: 12.5px

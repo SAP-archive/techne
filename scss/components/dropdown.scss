@@ -56,7 +56,7 @@ $block: ns(dropdown);
     &__icon {
         margin-right: tn-space(3);
         vertical-align: middle;
-        transform: translateY(-(tn-space(1)));
+        transform: translateY(-2px);
     }
     &__menu,
     &__options {

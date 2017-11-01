@@ -38,7 +38,7 @@
   color: #21262c;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   appearance: none;
   -webkit-appearance: textfield;
@@ -85,7 +85,8 @@
 .tn-dropdown__control[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #e4e4e4
+  border-color: #e4e4e4;
+  background-color: #f9fbfc
 }
 .tn-dropdown__control.is-readonly,
 .tn-dropdown__control[readonly] {
@@ -116,6 +117,11 @@
 .tn-dropdown__control--no-border {
   border-color: transparent
 }
+.tn-dropdown__control--no-border.is-disabled,
+.tn-dropdown__control--no-border:disabled,
+.tn-dropdown__control--no-border[aria-disabled=true] {
+  border-color: transparent
+}
 .tn-dropdown__icon {
   margin-right: 12px;
   vertical-align: middle;
@@ -124,6 +130,7 @@
 }
 .tn-dropdown__menu,
 .tn-dropdown__options {
+  min-width: 100%;
   border: solid 1px #ccdaeb;
   background: #fff;
   position: absolute;
@@ -150,7 +157,7 @@
   color: #21262c;
   font-size: .875rem;
   line-height: 1.42857;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   display: block;
   padding: 12px 16px
@@ -167,7 +174,7 @@
   color: #21262c;
   font-size: .75rem;
   line-height: 1.33333;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   text-transform: none;
   display: block;
