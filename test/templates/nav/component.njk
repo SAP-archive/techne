@@ -6,7 +6,7 @@ nav:
     aria={}
 -->
 {% macro nav(properties={}, modifier={}, state={}, aria={}) -%}
-<ul class="tn-nav{{ modifier.block | modifier('nav') }}{{ state | state }}"{{ aria | aria }} role="navigation">
+<ul class="tn-nav{{ modifier.block | modifier('nav') }}{{ state | state }}"{{ aria | aria }}>
     {%- for item in properties.items %}
     <li class="tn-nav__item{{ modifier.item | modifier('nav__item') }}">
         {%- set state = { selected: item.selected, disabled: item.disabled } %}
