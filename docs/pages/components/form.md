@@ -13,28 +13,28 @@ Form Elements include the layout of a field itself, checkboxes, radio buttons an
 Inputs are the used to collect data from the user. When a field is required the **label** is displayed in bold and noted by asterisk *
 
 {% capture inputs %}
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="input-1">Default Input</label>
         <input class="tn-form__control" type="text" id="input-1" placeholder="Field placeholder text">
     </div>
 </div>
 
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label is-required" for="input-2">Required Input*</label>
         <input class="tn-form__control" type="text" id="input-2" placeholder="Field placeholder text">
     </div>
 </div>
 
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label is-required" for="input-3">Password*</label>
         <input class="tn-form__control" type="password" id="input-3">
     </div>
 </div>
 
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="textarea-1">Text area</label>
         <textarea class="tn-form__control" id="textarea-1">Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.</textarea>
@@ -55,7 +55,7 @@ The inline help element: displayed as an icon that when the user hover the curso
 The help indications can be aso always visible when the user needs to be inform about it at all times, to avoid mistakes. This help element is then displayed bellow the input.
 
 {% capture inputs-help %}
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="input-44">
             Input with inline help
@@ -69,7 +69,7 @@ The help indications can be aso always visible when the user needs to be inform 
     </div>
 </div>
 
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="input-45">Input with Help Message</label>
         <input class="tn-form__control" type="text" id="input-45">
@@ -96,52 +96,62 @@ Input can reflect if the data entered is valid or not, for that, the state can b
 Along with **Invalid** and **Warning**, messages can be displayed to help the user to correct the errors.
 
 {% capture inputs %}
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-1">Normal Input</label>
-        <input class="tn-form__control" type="text" id="input-1">
-    </div>
+<div class="tn-form__item">
+    <label class="tn-form__label" for="OatmD552">
+        Normal Input
+    </label>
+    <input type="text" class="tn-form__control" id="OatmD552" placeholder="Field placeholder text">
+    <span class="tn-form__message">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
 </div>
 
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-2">Valid Input</label>
-        <input class="tn-form__control is-valid" type="text" id="input-2">
-    </div>
+<div class="tn-form__item">
+    <label class="tn-form__label" for="input-2">
+        Valid Input
+    </label>
+    <input class="tn-form__control is-valid" type="text" id="input-2">
 </div>
 
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-4">Invalid Input</label>
-        <input class="tn-form__control is-invalid" type="text" id="input-4">
-        <span class="tn-form__message tn-form__message--error">
-            Error. Please correct.
-        </span>
-    </div>
+<div class="tn-form__item">
+    <label class="tn-form__label" for="UI7xy545">
+        Invalid Input
+    </label>
+    <input type="text" class="tn-form__control is-invalid" id="UI7xy545" placeholder="Field placeholder text">
+    <span class="tn-form__message tn-form__message--error">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
 </div>
 
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-5">Warning Input</label>
-        <input class="tn-form__control is-warning" type="text" id="input-5">
-        <span class="tn-form__message tn-form__message--warning">
-            Warning. Please correct.
-        </span>
-    </div>
+<div class="tn-form__item">
+    <label class="tn-form__label" for="pvsz1273">
+        Warning Input
+    </label>
+    <input type="text" class="tn-form__control is-warning" id="pvsz1273" placeholder="Field placeholder text">
+    <span class="tn-form__message tn-form__message--warning">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
 </div>
 
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-6">Disabled Input</label>
-        <input class="tn-form__control" type="text" id="input-6" value="Non editable data" disabled>
-    </div>
+
+<div class="tn-form__item">
+    <label class="tn-form__label" for="VmsRZ860">
+        Field Label
+    </label>
+    <input type="text" class="tn-form__control" id="VmsRZ860" placeholder="Field placeholder text">
+    <span class="tn-form__message tn-form__message--help">
+        Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
 </div>
 
-<div class="tn-form__group">
-    <div class="tn-form__item">
-        <label class="tn-form__label" for="input-7">Read Only Input</label>
-        <input class="tn-form__control" type="text" id="input-7" value="Read only data" readonly>
-    </div>
+<div class="tn-form__item">
+    <label class="tn-form__label" for="input-6">Disabled Input</label>
+    <input class="tn-form__control" type="text" id="input-6" value="Non editable data" disabled>
+</div>
+
+<div class="tn-form__item">
+    <label class="tn-form__label" for="input-7">Read Only Input</label>
+    <input class="tn-form__control" type="text" id="input-7" value="Read only data" readonly>
 </div>
 {% endcapture %}
 
@@ -153,7 +163,7 @@ Along with **Invalid** and **Warning**, messages can be displayed to help the us
 The *Simple Select* form component is used to let the user select on of various options. It also can be set to a **Disabled** state.
 
 {% capture select %}
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="select-1">Default Select</label>
         <select class="tn-form__control" id="select-1" name="">
@@ -164,7 +174,7 @@ The *Simple Select* form component is used to let the user select on of various 
     </div>
 </div>
 
-<div class="tn-form__group">
+<div class="tn-form__set">
     <div class="tn-form__item">
         <label class="tn-form__label" for="select-2">Disabled Select</label>
         <select class="tn-form__control" id="select-2" name="" disabled>
@@ -184,7 +194,7 @@ The *Simple Select* form component is used to let the user select on of various 
 Are used to let the user select only one of various options. All options are visible at all time. This component can also be **disabled** and displayed in a row.
 
 {% capture radio-buttons%}
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Radio buttons</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-1" name="radio-name-1" value="" checked>
@@ -200,7 +210,7 @@ Are used to let the user select only one of various options. All options are vis
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Radio buttons Disabled</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-10" name="radio-name-4" value="" disabled>
@@ -216,7 +226,7 @@ Are used to let the user select only one of various options. All options are vis
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Inline Radio buttons</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-13" name="radio-name-5" value="" checked>
@@ -241,7 +251,7 @@ Are used to let the user select only one of various options. All options are vis
 Checkboxes let the user select multiple options, while all the options been displayed. This component can be set **disabled** and also displayed in a row.
 
 {% capture checkbox %}    
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-1" name="checkbox-name-1" checked>
@@ -257,7 +267,7 @@ Checkboxes let the user select multiple options, while all the options been disp
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes disabled</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-4" name="checkbox-name-2" checked disabled>
@@ -273,7 +283,7 @@ Checkboxes let the user select multiple options, while all the options been disp
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes inline</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-7" name="checkbox-name-3" checked>
