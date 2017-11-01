@@ -5,6 +5,6 @@
 {% endmacro %}
 
 
-{% macro code() %}
+{% macro code() -%}
 <textarea readonly class="test-textarea">{{ caller() | trim }}</textarea>
-{% endmacro %}
+{%- endmacro %}

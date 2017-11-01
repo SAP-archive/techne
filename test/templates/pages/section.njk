@@ -1,6 +1,7 @@
 {% extends "./layouts/page.njk" %}
-{% import "../layout/section.njk" as section %}
-{% from "../layout/component.njk" import container, col %}
+{# {% import "../layout/layout.section_njk" as section %} #}
+{% import "../layout/component.njk" as layout %}
+
 {% from "../tree/component.njk" import tree %}
 {% from "../table/component.njk" import table %}
 
@@ -8,36 +9,34 @@
 {% set hide_page_header = true %}
 {% block page_content %}
 
-<h1>.tn-section</h1>
 <div class="tn-has-background-color-neutral-2">
-{% call section.block() -%}
-    {% call section.header({ title: ".tn-section__title" }) -%}
-        {% call section.actions() -%}
+{% call layout.section() -%}
+    {% call layout.section_header({ title: ".tn-section__title" }) -%}
+        {% call layout.section_actions() -%}
 .tn-section__actions
         {%- endcall %}
     {%- endcall %}
-    <div style="background-color: #e8e8e8; height: 100px;">
-.tn-container, .tn-card-group
+    <div style="height: 100px;">
+        <h1>.tn-section</h1>
+        <p>Use for .tn-container, .tn-card-group and other content that requires the built-in left and right page padding.</p>
     </div>
-    {% call section.footer() -%}
+    {% call layout.section_footer() -%}
 .tn-section__footer
     {%- endcall %}
 {%- endcall %}
 </div>
-<br>
-
-<h1>.tn-section--full-bleed</h1>
-<div class="tn-has-background-color-neutral-2">
-{% call section.block(modifier="full-bleed") -%}
-    {% call section.header({ title: ".tn-section__title" }) -%}
-        {% call section.actions() -%}
+<div class="tn-has-background-color-status-1">
+{% call layout.section(modifier="full-bleed") -%}
+    {% call layout.section_header({ title: ".tn-section__title" }) -%}
+        {% call layout.section_actions() -%}
 .tn-section__actions
         {%- endcall %}
     {%- endcall %}
-    <div style="background-color:  #e8e8e8; height: 100px;">
-.tn-table, .tn-tree
+    <div style="height: 100px;">
+        <h1>.tn-section--full-bleed</h1>
+        <p>Use for .tn-table, .tn-tree and other content that must bleed to the edge.</p>
     </div>
-    {% call section.footer() -%}
+    {% call layout.section_footer() -%}
 .tn-section__footer
     {%- endcall %}
 {%- endcall %}
@@ -54,8 +53,8 @@
 Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 {% endset %}
 
-    {% call section.block(classes="") -%}
-        {% call section.header({ title: badgetitle }) -%}
+    {% call layout.section(classes="") -%}
+        {% call layout.section_header({ title: badgetitle }) -%}
 
         {%- endcall %}
 
@@ -101,7 +100,7 @@ Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 
 
 
-        {% call section.footer() -%}
+        {% call layout.section_footer() -%}
         <em>Vivamus sagittis diam in vehicula lobortis sapien arcu mattis erat vel aliquet.</em>
         {%- endcall %}
     {%- endcall %}
@@ -109,10 +108,10 @@ Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 
 
 
-    {% call section.block(modifier="full-bleed", classes="") -%}
+    {% call layout.section(modifier="full-bleed", classes="") -%}
 
-        {% call section.header({ title: "Table" }) -%}
-            {% call section.actions() -%}
+        {% call layout.section_header({ title: "Table" }) -%}
+            {% call layout.section_actions() -%}
             <button class="tn-button tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--add" role="presentation"></span>
                 Add
@@ -122,7 +121,7 @@ Vivamus sagittis <span class="tn-badge tn-badge--success">Active</span>
 
     {{ table(data.table.properties) }}
 
-        {% call section.footer() -%}
+        {% call layout.section_footer() -%}
         <a href="#" class="tn-button tn-button--link">See All</a>
         {%- endcall %}
     {%- endcall %}
