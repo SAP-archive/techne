@@ -63,8 +63,8 @@ body {
 * Default styles for lists
 */
 ul, ol {
-  padding-left: 0;
-  list-style: none;
+    //padding-left: 0;
+    //list-style: none;
 }
 
 
@@ -87,6 +87,11 @@ a {
     &:focus {
         color: $tn-color--link-hover;
         outline: none;
+    }
+    &[aria-disabled="true"],
+    &.is-disabled {
+        color: $tn-color--link-disabled;
+        cursor: not-allowed;
     }
 }
 

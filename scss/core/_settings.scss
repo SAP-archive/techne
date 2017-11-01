@@ -118,7 +118,9 @@ $tn-margin-bottom: tn-space() !default;
 
 //interactive
 $tn-color--link: tn-color(action) !default;
-$tn-color--link-hover: tn-color(action) !default;
+$tn-color--link-hover: darken($tn-color--link, 5) !default;
+$tn-color--link-active: darken($tn-color--link, 10) !default;
+$tn-color--link-disabled: tn-color(text, 2) !default;
 
 //states
 $tn-color--error: tn-color(status, 3) !default;
