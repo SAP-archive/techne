@@ -10,7 +10,7 @@ $block: ns(card-group);
 .#{$block} {
     //LOCAL VARS (set all themeable properties, always include !default)
     $tn-card-group-items-per-group: 3 !default;
-    $tn-card-group-width--gutter: $tn-width--gutter !default;
+    $tn-card-group-width--gutter: tn-space(reg) !default;
 
     @include reset;
     @include tn-clearfix;
