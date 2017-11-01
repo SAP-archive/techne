@@ -15,7 +15,13 @@
   color: #21262c;
   width: 100%;
   max-width: 100%;
-  border-collapse: collapse
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-top: solid 1px #ccdaeb
+}
+.tn-table:last-child {
+  margin-bottom: 0;
+  margin-right: 0
 }
 .tn-table tr {
   -webkit-transition: background-color 125ms ease-in;

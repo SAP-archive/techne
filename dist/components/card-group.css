@@ -20,6 +20,14 @@
   -ms-flex-direction: column;
   flex-direction: column
 }
+.tn-card-group::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-card-group:last-child {
+  margin-bottom: -20px
+}
 @media (min-width:800px) {
   .tn-card-group {
     -webkit-box-orient: horizontal;

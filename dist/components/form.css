@@ -5,16 +5,14 @@
 */
 /*!
 .tn-form
-    .tn-form__group()
-        .tn-form__legend()
-        .tn-form__item+(--check, --inline)
-            .tn-form__label(.is-required)
-            .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
-        .tn-form__message(--help, --error, --warning)
+    .tn-form__set?
+        .tn-form__legend(.is-required)
+        .tn-form__group?
+            .tn-form__item+(--check, --inline)
+                .tn-form__label(.is-required)
+                .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
+            .tn-form__message(--help, --error, --warning)
 */
-.tn-form__group {
-  margin-bottom: 20px
-}
 .tn-form__group::after {
   content: "";
   display: table;
@@ -24,8 +22,24 @@
   margin-bottom: 0;
   margin-right: 0
 }
-.tn-form__item {
+.tn-form__group .tn-form__item {
   margin-right: 20px
+}
+.tn-form__group .tn-form__item:last-child {
+  margin-bottom: 0;
+  margin-right: 0
+}
+.tn-form__set {
+  margin-bottom: 20px
+}
+.tn-form__set .tn-form__item--inline {
+  margin-bottom: 0
+}
+.tn-form__set .tn-form__message {
+  margin-top: 8px
+}
+.tn-form__item {
+  margin-bottom: 20px
 }
 .tn-form__item:last-child {
   margin-bottom: 0;
@@ -33,8 +47,7 @@
 }
 .tn-form__item--check {
   position: relative;
-  display: block;
-  margin-bottom: 20px
+  display: block
 }
 .tn-form__item--check::after {
   content: "";
@@ -42,24 +55,31 @@
   clear: both
 }
 .tn-form__item--check .tn-form__label {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
   margin-bottom: 0;
-  margin-top: 4px;
-  float: left;
-  width: calc(100% - 40px)
+  display: inline-block;
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 28px
 }
 .tn-form__item--check .tn-form__control {
-  float: left
+  float: left;
+  vertical-align: middle;
+  margin-right: 12px
 }
-.tn-form__item--check .tn-form__control:focus + .tn-form__label {
-  color: #21262c
+.tn-form__item--check .tn-form__help {
+  float: none;
+  margin-left: 12px
 }
 .tn-form__item--inline {
-  float: left;
-  margin-bottom: 0
+  float: left
 }
 .tn-form__item--inline .tn-form__label {
   margin-top: 4px;
-  float: left;
   width: auto
 }
 .tn-form__label,
@@ -68,7 +88,7 @@
   line-height: 1.42857;
   font-weight: 400;
   display: block;
-  padding-bottom: 12px;
+  margin-bottom: 8px;
   border: 0;
   color: #63758b
 }
@@ -76,8 +96,14 @@
 .tn-form__legend.is-required {
   font-weight: 700
 }
+.tn-form__control {
+  min-width: 28px
+}
 .tn-form__legend {
   margin-bottom: 20px
+}
+.tn-form__help {
+  float: right
 }
 .tn-form__message {
   clear: both;
