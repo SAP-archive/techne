@@ -184,7 +184,7 @@ The *Simple Select* form component is used to let the user select on of various 
 Are used to let the user select only one of various options. All options are visible at all time. This component can also be **disabled** and displayed in a row.
 
 {% capture radio-buttons%}
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Radio buttons</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-1" name="radio-name-1" value="" checked>
@@ -200,7 +200,7 @@ Are used to let the user select only one of various options. All options are vis
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Radio buttons Disabled</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-10" name="radio-name-4" value="" disabled>
@@ -216,7 +216,7 @@ Are used to let the user select only one of various options. All options are vis
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Inline Radio buttons</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
         <input class="tn-form__control" type="radio" id="radio-13" name="radio-name-5" value="" checked>
@@ -241,7 +241,7 @@ Are used to let the user select only one of various options. All options are vis
 Checkboxes let the user select multiple options, while all the options been displayed. This component can be set **disabled** and also displayed in a row.
 
 {% capture checkbox %}    
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-1" name="checkbox-name-1" checked>
@@ -257,7 +257,7 @@ Checkboxes let the user select multiple options, while all the options been disp
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes disabled</legend>
     <div class="tn-form__item tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-4" name="checkbox-name-2" checked disabled>
@@ -273,7 +273,7 @@ Checkboxes let the user select multiple options, while all the options been disp
     </div>
 </fieldset>
 
-<fieldset class="tn-form__group">
+<fieldset class="tn-form__set">
     <legend class="tn-form__legend">Checkboxes inline</legend>
     <div class="tn-form__item tn-form__item--inline tn-form__item--check">
         <input class="tn-form__control" type="checkbox" id="checkbox-7" name="checkbox-name-3" checked>
