@@ -12,6 +12,12 @@
 .tn-has-text-align-right {
   text-align: right!important
 }
+.tn-has-float-left {
+  float: left!important
+}
+.tn-has-float-right {
+  float: right!important
+}
 .tn-has-border-radius-50percent {
   border-radius: 50%!important
 }
@@ -50,28 +56,29 @@
 .tn-has-type-3 {
   font-size: 1.625rem;
   line-height: 1.23077;
+  font-family: sans-serif;
   font-weight: 600
 }
 .tn-has-type-4 {
   font-size: 2.1875rem;
   line-height: 1.25714;
-  font-family: Dosis,sans-serif;
+  font-family: sans-serif;
   font-weight: 700
 }
 .tn-has-type-5 {
   font-size: 2.8125rem;
   line-height: 1.15556;
-  font-family: Dosis,sans-serif;
-  font-weight: 600
+  font-family: sans-serif;
+  font-weight: 500
 }
 .tn-has-font-family-body {
-  font-family: 'Open Sans',sans-serif
+  font-family: sans-serif
 }
 .tn-has-font-family-header {
-  font-family: Dosis,sans-serif
+  font-family: sans-serif
 }
 .tn-has-font-family-code {
-  font-family: Courier,sans-serif
+  font-family: monospace
 }
 .tn-has-font-weight-light {
   font-weight: 300
@@ -483,4 +490,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center
+}
+.tn-has-flex-grow-1 {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
 }

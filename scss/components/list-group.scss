@@ -21,6 +21,7 @@ $block: ns(list-group);
 
     @include reset;
     &__item {
+        list-style: none;
         border: 1px solid $tn-list-group-border-color;
         border-top: none;
         padding: $tn-list-group-item-padding;

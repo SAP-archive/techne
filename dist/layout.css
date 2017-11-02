@@ -4,10 +4,58 @@
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
 @charset "UTF-8";
+.tn-section {
+  padding: 40px 20px 20px
+}
+.tn-section::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-section--full-bleed {
+  padding-right: 0;
+  padding-left: 0
+}
+.tn-section--full-bleed .tn-section__footer,
+.tn-section--full-bleed .tn-section__header {
+  margin-left: 20px;
+  margin-right: 20px
+}
+.tn-section__header {
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px
+}
+.tn-section__title {
+  font-size: 1.625rem;
+  line-height: 1.23077;
+  font-family: sans-serif;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 0
+}
+.tn-section__actions {
+  margin-left: auto
+}
+.tn-section__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 16px
+}
 .tn-container {
-  padding: 0 20px;
   margin-bottom: 20px;
-  max-width: 1580px
+  max-width: 1290px
 }
 .tn-container::after {
   content: "";
@@ -19,9 +67,6 @@
 }
 .tn-container--fluid {
   max-width: 100%
-}
-.tn-container--bleed {
-  padding: 0
 }
 .tn-container--flex {
   display: -webkit-box;
@@ -196,8 +241,8 @@
 }
 .tn-ui--fixed .tn-ui__header {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
   position: static
 }
 .tn-ui--fixed .tn-ui__footer {
@@ -219,8 +264,8 @@
   z-index: 1;
   background: #006fbb;
   width: 100%;
-  min-height: 60px;
-  height: 60px
+  min-height: 50px;
+  height: 50px
 }
 .tn-ui__header--fixed {
   position: fixed
@@ -236,19 +281,13 @@
   bottom: 0
 }
 .tn-ui__app {
-  margin-top: 60px;
-  min-height: calc(100vh - 40px - 60px);
+  margin-top: 50px;
+  min-height: calc(100vh - 40px - 50px);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative
-}
-.tn-ui__sidebar {
-  background-color: #27394f;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 280px;
-  flex: 0 0 280px
 }
 .tn-ui__overlay {
   position: absolute
@@ -284,17 +323,17 @@
     max-height: 100%
   }
   .tn-app__sidebar:hover {
-    width: 280px;
+    width: 250px;
     position: relative;
     margin-right: -200px
   }
 }
 @media (min-width:1440px) {
   .tn-app__sidebar {
-    width: 280px
+    width: 250px
   }
   .tn-app__sidebar:hover {
-    width: 280px;
+    width: 250px;
     margin-right: 0
   }
 }
@@ -303,6 +342,83 @@
   -ms-flex: 1;
   flex: 1;
   overflow: scroll
+}
+.tn-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%
+}
+.tn-page__header {
+  border-bottom: solid 1px #ccdaeb;
+  background-color: #f0f5ff;
+  height: 76px
+}
+.tn-page__intro {
+  padding: 20px 20px;
+  background-color: #f0f5ff;
+  text-align: center;
+  border-bottom: solid 1px #ccdaeb;
+  margin-bottom: -1px
+}
+.tn-page__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
+}
+.tn-section {
+  padding: 40px 20px 20px
+}
+.tn-section::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-section--full-bleed {
+  padding-right: 0;
+  padding-left: 0
+}
+.tn-section--full-bleed .tn-section__footer,
+.tn-section--full-bleed .tn-section__header {
+  margin-left: 20px;
+  margin-right: 20px
+}
+.tn-section__header {
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px
+}
+.tn-section__title {
+  font-size: 1.625rem;
+  line-height: 1.23077;
+  font-family: sans-serif;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 0
+}
+.tn-section__actions {
+  margin-left: auto
+}
+.tn-section__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 16px
 }
 /*!
 .tn-overlay

@@ -22,6 +22,8 @@ $block: ns(pagination);
   @include tn-type(-1);
   display: inline-block;
   margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
   &__link {
     color: $tn-pagination-color--text;
     background-color: transparent;

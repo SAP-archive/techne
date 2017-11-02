@@ -17,6 +17,7 @@
   - name: expand 
   - name: feedback 
   - name: filter 
+  - name: filterremove 
   - name: grid 
   - name: help 
   - name: infoon 

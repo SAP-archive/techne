@@ -18,17 +18,24 @@
   position: relative;
   width: 100%;
   max-width: 100%;
-  border-bottom: solid 1px #ccdaeb
+  border-bottom: solid 1px #ccdaeb;
+  margin-bottom: 20px
+}
+.tn-tree:last-child {
+  margin-bottom: 0;
+  margin-right: 0
 }
 .tn-tree--header {
   border-bottom: 0;
-  border-top: solid 1px #ccdaeb
+  border-top: solid 1px #ccdaeb;
+  margin-bottom: 0
 }
 .tn-tree__group {
   -webkit-transition: opacity 125ms linear;
   transition: opacity 125ms linear;
   max-height: auto;
-  opacity: 1
+  opacity: 1;
+  margin-bottom: 0
 }
 .tn-tree__group.is-hidden,
 .tn-tree__group[aria-hidden=true] {
@@ -37,7 +44,8 @@
   overflow: hidden
 }
 .tn-tree__item {
-  border-top: solid 1px #ccdaeb
+  border-top: solid 1px #ccdaeb;
+  margin-bottom: 0
 }
 .tn-tree__row {
   padding: 0 20px;
@@ -71,7 +79,7 @@
   -ms-flex: 1;
   flex: 1;
   padding: 12px 0;
-  padding-left: 26px
+  padding-left: 30px
 }
 .tn-tree__col--control {
   -webkit-box-flex: 1;
@@ -80,28 +88,28 @@
   width: 25%
 }
 .tn-tree__group--sublevel-1 .tn-tree__col--control {
-  padding-left: 52px
+  padding-left: 60px
 }
 .tn-tree__group--sublevel-2 .tn-tree__col--control {
-  padding-left: 78px
+  padding-left: 90px
 }
 .tn-tree__group--sublevel-3 .tn-tree__col--control {
-  padding-left: 104px
+  padding-left: 120px
 }
 .tn-tree__group--sublevel-4 .tn-tree__col--control {
-  padding-left: 130px
+  padding-left: 150px
 }
 .tn-tree__group--sublevel-5 .tn-tree__col--control {
-  padding-left: 156px
+  padding-left: 180px
 }
 .tn-tree__group--sublevel-6 .tn-tree__col--control {
-  padding-left: 182px
+  padding-left: 210px
 }
 .tn-tree__group--sublevel-7 .tn-tree__col--control {
-  padding-left: 208px
+  padding-left: 240px
 }
 .tn-tree__group--sublevel-8 .tn-tree__col--control {
-  padding-left: 234px
+  padding-left: 270px
 }
 .tn-tree__col--actions {
   padding-top: 0;
@@ -129,7 +137,7 @@
   background-color: transparent;
   position: absolute;
   top: calc(50% - 18px/2);
-  margin-left: -26px;
+  margin-left: -30px;
   width: 18px;
   height: 18px;
   margin-right: 12px;
