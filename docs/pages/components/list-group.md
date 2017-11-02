@@ -16,16 +16,16 @@ You can use a link to allow the user to access more information about list item.
 {% capture list-group-default %}
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <a href="">List item 1</a>
+        List item 1
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 2</a>
+        List item 2
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 3</a> - Lorem ipsum dolor sit amet, consectetur sed do
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 4</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     </li>
 </ul>
 {% endcapture %}
@@ -41,36 +41,36 @@ The List items can also contain quick actions, like: remove, edit, copy, etc.
 {% capture list-group-action %}
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 1
-            <button class="tn-list-group__button">
+        List item 1
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small" aria-label="Delete">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 2
-            <button class="tn-list-group__button">
+        List item 2
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--edit" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
-            <button class="tn-list-group__button">
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--clone" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            <button class="tn-list-group__button">
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--options" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
 </ul>
 {% endcapture %}
