@@ -1,22 +1,25 @@
-{% set title = "Tree" %}
-{% extends "./layouts/starter.njk" %}
-{% import "./../utils.njk" as utils %}
-{% from "../toolbar/component.njk" import toolbar %}
+{% extends "./layouts/module.njk" %}
+{% set page_title = "Tree" %}
+{% set page_intro = "Page level help message goes here" %}
+{% set is_landing_page = false %}
+{% set show_toolbar = true %}
+
+{% import "../layout/section.njk" as section %}
+{% from "../layout/component.njk" import container, col %}
 {% from "../tree/component.njk" import tree %}
 
-{% block content %}
+{% block page_content %}
 
-<br>
-{# Add New Button #}
-<div class="tn-container tn-has-text-align-right">
-    <button class="tn-button tn-button--text tn-button--small">
-        <span class="tn-icon tn-icon--add" role="presentation"></span>ADD
-    </button>
-</div>
-
-{{ tree(data.tree.properties) }}
-
-
-
+    {%- call section.block(modifier="full-bleed") -%}
+        {%- call section.header() -%}
+            {% call section.actions() -%}
+            <button class="tn-button tn-button--text tn-button--small">
+                <span class="tn-icon tn-icon--add" role="presentation"></span>
+                Add
+            </button>
+            {%- endcall %}
+        {%- endcall %}
+        {{ tree(data.tree.properties) }}
+    {%- endcall %}
 
 {% endblock %}

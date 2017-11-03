@@ -5,10 +5,13 @@
 
 $block: ns(action-bar-button);
 
-$tn-action-bar-button-height--large: tn-space(19) !default;
-$tn-action-bar-button-icon-height--large: 32px !default;
+
 
 .#{$block}{
+
+    $tn-action-bar-button-height--large: tn-space(19) !default;
+    $tn-action-bar-button-icon-height--large: 32px !default;
+
     @extend .tn-button;
     @extend .tn-button--icon;
     @extend .#{$block}--large;

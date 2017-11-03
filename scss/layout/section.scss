@@ -6,8 +6,8 @@ $block: ns(section);
 .#{$block} {
 
     $tn-section-padding: $tn-padding--ui !default;
-    $tn-section-padding--top: tn-space(10) !default;
-    $tn-section-padding--bottom: tn-space(5) !default;
+    $tn-section-padding--top: tn-space(m) !default;
+    $tn-section-padding--bottom: tn-space(reg) !default;
 
     @include tn-clearfix;
     padding: $tn-section-padding--top $tn-section-padding $tn-section-padding--bottom;
@@ -23,7 +23,7 @@ $block: ns(section);
         min-height: tn-space(10);
         display: flex;
         align-items: center;
-        margin-bottom: tn-space(reg);
+        margin-bottom: tn-space(4);
     }
     &__title {
         @include tn-type(3);
@@ -31,11 +31,11 @@ $block: ns(section);
         margin-bottom: 0;
     }
     &__actions {
-
+        margin-left: auto;
     }
     &__footer {
         display: flex;
         justify-content: center;
-        margin-top: tn-space(3);
+        margin-top: tn-space(4);
     }
 }

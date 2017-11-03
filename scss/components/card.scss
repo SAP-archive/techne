@@ -29,7 +29,7 @@ $block: ns(card);
     $tn-card-shadow-hover: 0 0 5px 0 rgba(138, 143, 161, 0.4) !default;
     $tn-card-padding: tn-space(reg, true) !default;
     $tn-card-color-link: $tn-color--link !default;
-    $tn-card-margin-bottom: $tn-width--gutter !default;
+    $tn-card-margin-bottom: $tn-margin-bottom !default;
     //anim
     $tn-card-transition-params: $tn-animation--speed ease-in !default;
     $tn-card-time-hover: $tn-animation--speed!default;

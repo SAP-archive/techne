@@ -33,16 +33,16 @@ $tn-type: (
     0: 1rem (24/16) body reg none,     	        //16/24
     1: 1.125rem (24/18) body semi none,   	    //18/24
     2: 1.25rem (28/20) body semi none,   	    //20/28
-    3: 1.625rem (32/26) header semi none,	        //26/32
+    3: 1.625rem (32/26) header semi none,	    //26/32
     4: 2.1875rem (44/35) header bold none,	    //35/44
-    5: 2.8125rem (52/45) header med none,      //45/52
+    5: 2.8125rem (52/45) header med none,       //45/52
 ) !default;
 
 //fonts
 $tn-fonts: (
-    body: #{"'Open Sans'", sans-serif},
-    header: #{"Roboto", sans-serif},
-    code: #{"'Courier New'", monospace},
+    body: #{sans-serif},
+    header: #{sans-serif},
+    code: #{monospace},
 ) !default;
 
 $tn-weights: (
@@ -100,7 +100,7 @@ $tn-padding--ui: tn-space(reg) !default;
 $tn-max-width--ui: 1290px !default;
 
 //global widths
-$tn-width--gutter: tn-space(reg) !default;
+$tn-width--gutter: tn-space(8) !default;
 
 //type
 $tn-font-family: map-get($tn-fonts,body) !default;
@@ -118,7 +118,9 @@ $tn-margin-bottom: tn-space() !default;
 
 //interactive
 $tn-color--link: tn-color(action) !default;
-$tn-color--link-hover: tn-color(action) !default;
+$tn-color--link-hover: darken($tn-color--link, 5) !default;
+$tn-color--link-active: darken($tn-color--link, 10) !default;
+$tn-color--link-disabled: tn-color(text, 2) !default;
 
 //states
 $tn-color--error: tn-color(status, 3) !default;

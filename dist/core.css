@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -15,7 +15,7 @@ html {
 body,
 html {
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   line-height: 1.5
 }
 * {
@@ -70,8 +70,7 @@ ul:last-child {
 */
 ol,
 ul {
-  padding-left: 0;
-  list-style: none
+  padding-left: 0
 }
 /*!
 * @section Phrases Elements
@@ -86,12 +85,17 @@ a {
   text-decoration: none
 }
 a:hover {
-  color: #009cdf
+  color: #008ac6
 }
 a:active,
 a:focus {
-  color: #009cdf;
+  color: #008ac6;
   outline: 0
+}
+a.is-disabled,
+a[aria-disabled=true] {
+  color: #7f90a4;
+  cursor: not-allowed
 }
 /*!
 * @section Button Elements
@@ -109,7 +113,7 @@ input[type=radio] {
   color: #21262c;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   appearance: none;
   -webkit-appearance: textfield;
@@ -155,7 +159,8 @@ input[type=checkbox]:disabled,
 input[type=radio]:disabled {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #e4e4e4
+  border-color: #e4e4e4;
+  background-color: #f9fbfc
 }
 input.is-readonly[type=checkbox],
 input.is-readonly[type=radio],
@@ -201,7 +206,7 @@ textarea {
   color: #21262c;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   appearance: none;
   -webkit-appearance: textfield;
@@ -305,7 +310,8 @@ textarea:disabled,
 textarea[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #e4e4e4
+  border-color: #e4e4e4;
+  background-color: #f9fbfc
 }
 input[type=date].is-readonly,
 input[type=date][readonly],
@@ -339,7 +345,7 @@ select {
   color: #21262c;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   appearance: none;
   -webkit-appearance: textfield;
@@ -386,7 +392,8 @@ select:disabled,
 select[aria-disabled=true] {
   cursor: not-allowed;
   color: #63758b;
-  border-color: #e4e4e4
+  border-color: #e4e4e4;
+  background-color: #f9fbfc
 }
 select.is-readonly,
 select[readonly] {
@@ -417,7 +424,6 @@ input[type=radio] {
   height: 28px;
   width: 28px;
   margin: 0;
-  margin-right: 12px;
   vertical-align: middle;
   position: relative
 }

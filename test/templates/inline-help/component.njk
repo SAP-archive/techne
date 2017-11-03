@@ -1,12 +1,14 @@
 <!--
 inline-help:
-    properties={},
+    properties={ content: "" },
     modifier={ block: [] }
 -->
-{% macro inline_help(properties={}, modifier={}, state={}, aria={}) -%}
+{% macro inline_help(properties={
+        content: "Lorem ipsum dolor sit amet."
+    }, modifier={}, state={}, aria={}) -%}
 <span class="tn-inline-help"{{ aria | aria }}>
     <span class="tn-inline-help__content{{ modifier.content | modifier('inline-help__content') }}">
-            {{ properties.content }}
+        {{ properties.content }}
     </span>
 </span>
 {%- endmacro %}

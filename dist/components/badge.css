@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -14,10 +14,12 @@
   line-height: 1.33333;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 20px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  padding: 4px 8px
+  padding: 4px 8px;
+  vertical-align: middle
 }
 .tn-badge--pill {
   border-radius: 12.5px

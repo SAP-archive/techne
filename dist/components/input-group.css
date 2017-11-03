@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -53,7 +53,7 @@
 .tn-input-group__addon {
   font-size: .8125rem;
   line-height: 1.53846;
-  font-family: 'Open Sans',sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
   text-transform: normal;
   color: #63758b;
@@ -78,10 +78,6 @@
 }
 .tn-input-group__addon:last-child {
   border-left-width: 0
-}
-.tn-input-group__addon--step-down,
-.tn-input-group__addon--step-up {
-  font-size: 10px
 }
 .tn-input-group__addon--button {
   padding: 0
@@ -119,6 +115,10 @@
   width: 100%;
   display: block;
   min-width: 48px
+}
+.tn-input-group__button--step-down,
+.tn-input-group__button--step-up {
+  font-size: 10px
 }
 .tn-input-group__button--step-down::after,
 .tn-input-group__button--step-up::after {

@@ -10,7 +10,7 @@ $block: ns(card-group);
 .#{$block} {
     //LOCAL VARS (set all themeable properties, always include !default)
     $tn-card-group-items-per-group: 3 !default;
-    $tn-card-group-width--gutter: $tn-width--gutter !default;
+    $tn-card-group-width--gutter: tn-space(reg) !default;
 
     @include reset;
     @include tn-clearfix;
@@ -19,6 +19,9 @@ $block: ns(card-group);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    &:last-child {
+        margin-bottom: -$tn-margin-bottom;
+    }
     @include tn-screen(s) {
         flex-direction: row;
         & > * {

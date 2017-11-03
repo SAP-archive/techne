@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -19,6 +19,14 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column
+}
+.tn-card-group::after {
+  content: "";
+  display: table;
+  clear: both
+}
+.tn-card-group:last-child {
+  margin-bottom: -20px
 }
 @media (min-width:800px) {
   .tn-card-group {

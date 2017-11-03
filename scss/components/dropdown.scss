@@ -56,10 +56,13 @@ $block: ns(dropdown);
     &__icon {
         margin-right: tn-space(3);
         vertical-align: middle;
-        transform: translateY(-(tn-space(1)));
+        transform: translateY(-2px);
     }
     &__menu,
     &__options {
+        padding-left: 0;
+        list-style: none;
+        min-width: 100%;
         border: $tn-dropdown-menu-border;
         background: $tn-dropdown-menu-background-color;
         position: absolute;
@@ -75,11 +78,17 @@ $block: ns(dropdown);
             visibility: hidden;
         }
     }
+    &__group {
+        padding-left: 0;
+        list-style: none;
+    }
     &__item,
     &__option {
         @include reset;
         @include tn-type(-1,body);
         display: block;
+        padding-left: 0;
+        list-style: none;
         padding: $tn-dropdown-menu-item-padding;
         &:hover {
             color: $tn-dropdown-menu-item-color--hover;
