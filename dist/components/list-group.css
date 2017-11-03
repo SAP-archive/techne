@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -14,6 +14,7 @@
   color: #21262c
 }
 .tn-list-group__item {
+  list-style: none;
   border: 1px solid #e4e4e4;
   border-top: none;
   padding: 16px;

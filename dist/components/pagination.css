@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -228,7 +228,7 @@
 }
 @font-face {
   font-family: TechneIcons;
-  src: url(TechneIcons.woff2) format("woff2"),url(TechneIcons.woff) format("woff");
+  src: url(components/TechneIcons.woff2) format("woff2"),url(components/TechneIcons.woff) format("woff");
   font-weight: 400;
   font-style: normal
 }
@@ -385,7 +385,9 @@
   line-height: 1.42857;
   font-weight: 400;
   display: inline-block;
-  margin-bottom: 0
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none
 }
 .tn-pagination__link {
   color: #009cdf;
