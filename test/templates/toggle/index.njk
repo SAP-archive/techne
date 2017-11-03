@@ -1,6 +1,6 @@
 {% extends "layout.njk" %}
 {% from "./../format.njk" import format %}
-{% from "../button/component.njk" import button %}
+{% from "../form/component.njk" import form_item %}
 {% from "./component.njk" import toggle %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
@@ -114,41 +114,14 @@
 
 <br><br>
 
-<h1>Use with <code>.tn-form__item</code></h1>
+<h1>Use with <code>.tn-form__item--check</code></h1>
 <p>Replace the normal checkbox with the <code>.tn-toggle</code> component. Apply the <code>.tn-form__control</code> class to the <code>.tn-toggle</code> component instead of to the <code>input</code> element. Everything else works the same.</p>
 
 {% set example %}
-<div class="tn-form__item tn-form__item--check">
-    <label class="tn-form__label" for="1whS8203">
-        <span class="tn-form__control tn-toggle tn-toggle--small">
-            <input type="checkbox" name="" value="" id="1whS8203">
-            <span class="tn-toggle__switch" role="presentation"></span>
-        </span>
-        Field label
-    </label>
-</div>
-
-<div class="tn-form__item tn-form__item--check">
-    <label class="tn-form__label" for="1whS8202">
-        <span class="tn-form__control tn-toggle">
-            <input type="checkbox" name="" value="" id="1whS8202">
-            <span class="tn-toggle__switch" role="presentation"></span>
-        </span>
-        Field label
-    </label>
-</div>
-
-<div class="tn-form__item tn-form__item--check">
-    <label class="tn-form__label" for="1whS8201">
-        <span class="tn-form__control tn-toggle tn-toggle--large">
-            <input type="checkbox" name="" value="" id="1whS8201">
-            <span class="tn-toggle__switch" role="presentation"></span>
-        </span>
-        Field label
-    </label>
-</div>
+{{ form_item("toggle", modifier={ control: "small" }) }}
+{{ form_item("toggle") }}
+{{ form_item("toggle", modifier={ control: "large" }) }}
 {% endset %}
 {{ format(example) }}
-
 
 {% endblock %}
