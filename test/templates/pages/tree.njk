@@ -4,15 +4,14 @@
 {% set is_landing_page = false %}
 {% set show_toolbar = true %}
 
-{% import "../layout/section.njk" as section %}
-{% from "../layout/component.njk" import container, col %}
+{% import "../layout/component.njk" as layout %}
 {% from "../tree/component.njk" import tree %}
 
 {% block page_content %}
 
-    {%- call section.block(modifier="full-bleed") -%}
-        {%- call section.header() -%}
-            {% call section.actions() -%}
+    {%- call layout.section(modifier="full-bleed") -%}
+        {%- call layout.section_header() -%}
+            {% call layout.section_actions() -%}
             <button class="tn-button tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--add" role="presentation"></span>
                 Add
