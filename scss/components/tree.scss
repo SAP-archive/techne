@@ -48,6 +48,7 @@ $block: ns(tree);
     &__item {
         border-top: solid 1px $tn-tree-border-color;
         margin-bottom: 0;
+        list-style: none;
     }
     &__row {
         padding: 0 $tn-tree-cell-spacing;

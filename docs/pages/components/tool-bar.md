@@ -17,10 +17,15 @@ The Toolbar component is used always along a collection of items, like cards or 
         </button>
         <span role="separator"></span>
         <div class="tn-dropdown">
-            <button class="tn-dropdown__control tn-dropdown__control--no-border">
+            <button class="tn-dropdown__control tn-dropdown__control--no-border" aria-controls="oEeRk201" aria-expanded="false" aria-haspopup="true">
                 <span class="tn-icon tn-icon--sort tn-dropdown__icon" role="presentation"></span>
                 Newest
             </button>
+            <ul class="tn-dropdown__menu" aria-hidden="true" id="oEeRk201">
+                <li><a href="#" class="tn-dropdown__item">Oldest</a></li>
+                <li><a href="#" class="tn-dropdown__item">Price Ascending</a></li>
+                <li><a href="#" class="tn-dropdown__item">Price Descending</a></li>
+            </ul>            
         </div>
         <span role="separator"></span>
     </div>
