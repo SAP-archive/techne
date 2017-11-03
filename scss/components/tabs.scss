@@ -4,7 +4,8 @@
 
 /*!
 .tn-tabs+()
-    .tn-tabs__item+([aria-selected]|.is-selected)
+    .tn-tabs__item?
+    .tn-tabs__link+((.is-selected|[aria-selected=true]),(.is-disabled|[aria-disabled=true]))
 .tn-tabs__panel+([aria-expanded]|.is-expanded)
 */
 
@@ -18,6 +19,7 @@ $block: ns(tabs);
     $tn-tabs-link-border-width: 2px;
     $tn-tabs-link-border-color: tn-color(action, 1);
     $tn-tabs-link-transition-params: $tn-animation--speed ease-in !default;
+
     @include reset;
     display: flex;
     flex-wrap: wrap;
@@ -25,12 +27,7 @@ $block: ns(tabs);
     margin-bottom: $tn-margin-bottom;
     list-style: none;
     border-bottom: solid $tn-tabs-border-width $tn-tabs-border-color;
-    //MODIFIERS *******************************************
-    &--vertical {
-        flex-direction: column;
-    }
 
-    //ELEMENTS *******************************************
     &__item {
 
     }
