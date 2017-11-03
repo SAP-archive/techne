@@ -5,7 +5,7 @@ nav:
     state={},
     aria={}
 -->
-{% macro nav(properties={}, modifier={}, state={}, aria={}) -%}
+{% macro nav(properties={ items: [] }, modifier={}, state={}, aria={}) -%}
 <ul class="tn-nav{{ modifier.block | modifier('nav') }}{{ state | state }}"{{ aria | aria }}>
     {%- for item in properties.items %}
     <li class="tn-nav__item{{ modifier.item | modifier('nav__item') }}">
