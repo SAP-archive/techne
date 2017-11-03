@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -88,132 +88,132 @@
 @media (min-width:800px) {
   .tn-col--1 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 1) + 0px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 1) + 0px)
   }
   .tn-col--1:last-child {
     margin-right: 0
   }
   .tn-col--2 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 2) + 20px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 2) + 32px)
   }
   .tn-col--2:last-child {
     margin-right: 0
   }
   .tn-col--3 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 3) + 40px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 3) + 64px)
   }
   .tn-col--3:last-child {
     margin-right: 0
   }
   .tn-col--4 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 4) + 60px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 4) + 96px)
   }
   .tn-col--4:last-child {
     margin-right: 0
   }
   .tn-col--5 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 5) + 80px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 5) + 128px)
   }
   .tn-col--5:last-child {
     margin-right: 0
   }
   .tn-col--6 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 6) + 100px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 6) + 160px)
   }
   .tn-col--6:last-child {
     margin-right: 0
   }
   .tn-col--7 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 7) + 120px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 7) + 192px)
   }
   .tn-col--7:last-child {
     margin-right: 0
   }
   .tn-col--8 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 8) + 140px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 8) + 224px)
   }
   .tn-col--8:last-child {
     margin-right: 0
   }
   .tn-col--9 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 9) + 160px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 9) + 256px)
   }
   .tn-col--9:last-child {
     margin-right: 0
   }
   .tn-col--10 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 10) + 180px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 10) + 288px)
   }
   .tn-col--10:last-child {
     margin-right: 0
   }
   .tn-col--11 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 11) + 200px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 11) + 320px)
   }
   .tn-col--11:last-child {
     margin-right: 0
   }
   .tn-col--12 {
     float: left;
-    margin-right: 20px;
-    width: calc((((100% - 220px)/ 12) * 12) + 220px)
+    margin-right: 32px;
+    width: calc((((100% - 352px)/ 12) * 12) + 352px)
   }
   .tn-col--12:last-child {
     margin-right: 0
   }
   .tn-col--shift-1 {
-    margin-left: calc((((100% - 220px)/ 12) * 1) + 20px)
+    margin-left: calc((((100% - 352px)/ 12) * 1) + 32px)
   }
   .tn-col--shift-2 {
-    margin-left: calc((((100% - 220px)/ 12) * 2) + 40px)
+    margin-left: calc((((100% - 352px)/ 12) * 2) + 64px)
   }
   .tn-col--shift-3 {
-    margin-left: calc((((100% - 220px)/ 12) * 3) + 60px)
+    margin-left: calc((((100% - 352px)/ 12) * 3) + 96px)
   }
   .tn-col--shift-4 {
-    margin-left: calc((((100% - 220px)/ 12) * 4) + 80px)
+    margin-left: calc((((100% - 352px)/ 12) * 4) + 128px)
   }
   .tn-col--shift-5 {
-    margin-left: calc((((100% - 220px)/ 12) * 5) + 100px)
+    margin-left: calc((((100% - 352px)/ 12) * 5) + 160px)
   }
   .tn-col--shift-6 {
-    margin-left: calc((((100% - 220px)/ 12) * 6) + 120px)
+    margin-left: calc((((100% - 352px)/ 12) * 6) + 192px)
   }
   .tn-col--shift-7 {
-    margin-left: calc((((100% - 220px)/ 12) * 7) + 140px)
+    margin-left: calc((((100% - 352px)/ 12) * 7) + 224px)
   }
   .tn-col--shift-8 {
-    margin-left: calc((((100% - 220px)/ 12) * 8) + 160px)
+    margin-left: calc((((100% - 352px)/ 12) * 8) + 256px)
   }
   .tn-col--shift-9 {
-    margin-left: calc((((100% - 220px)/ 12) * 9) + 180px)
+    margin-left: calc((((100% - 352px)/ 12) * 9) + 288px)
   }
   .tn-col--shift-10 {
-    margin-left: calc((((100% - 220px)/ 12) * 10) + 200px)
+    margin-left: calc((((100% - 352px)/ 12) * 10) + 320px)
   }
   .tn-col--shift-11 {
-    margin-left: calc((((100% - 220px)/ 12) * 11) + 220px)
+    margin-left: calc((((100% - 352px)/ 12) * 11) + 352px)
   }
 }
 /*!

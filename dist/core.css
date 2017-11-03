@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -70,8 +70,7 @@ ul:last-child {
 */
 ol,
 ul {
-  padding-left: 0;
-  list-style: none
+  padding-left: 0
 }
 /*!
 * @section Phrases Elements
@@ -86,12 +85,17 @@ a {
   text-decoration: none
 }
 a:hover {
-  color: #009cdf
+  color: #008ac6
 }
 a:active,
 a:focus {
-  color: #009cdf;
+  color: #008ac6;
   outline: 0
+}
+a.is-disabled,
+a[aria-disabled=true] {
+  color: #7f90a4;
+  cursor: not-allowed
 }
 /*!
 * @section Button Elements

@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-5
+* Techne v2.0.0-alpha-6
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -50,12 +50,12 @@
 .tn-table td,
 .tn-table th {
   text-align: left;
-  padding: 12px 20px 12px 0;
+  padding: 12px 32px 12px 0;
   border-style: solid;
   border-width: 1px 0;
   border-color: #ccdaeb
 }
 .tn-table td:first-child,
 .tn-table th:first-child {
-  padding-left: 20px
+  padding-left: 32px
 }
