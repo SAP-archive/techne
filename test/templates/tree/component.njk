@@ -1,7 +1,7 @@
 {% import "./../utils.njk" as utils %}
 {% from "../label/component.njk" import label %}
-{% from "../button/component.njk" import button %}
-{% set btn = button(
+{% from "../icon-button/component.njk" import icon_button %}
+{% set icbtn = icon_button(
         { icon: 'more' },
         modifier={ block: ['icon','text'] },
         aria={ label: 'More' }
@@ -70,7 +70,7 @@ tree:
                 {{ label({label: item.status}) | indent(16) }}
             </div>
             <div class="tn-tree__col tn-tree__col--actions">
-                {{ btn | indent(16) }}
+                {{ icbtn | indent(16) }}
             </div>
         </div>
     {%- if item.items %}

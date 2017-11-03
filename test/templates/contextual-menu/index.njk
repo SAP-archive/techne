@@ -1,6 +1,7 @@
 {% extends "layout.njk" %}
 {% from "./../format.njk" import format %}
-{% from "../button/component.njk" import button %}
+{% from "../icon-button/component.njk" import icon_button %}
+{% from "../action-bar-button/component.njk" import action_bar_button %}
 {% from "../dropdown/component.njk" import menu %}
 {% import "./../utils.njk" as utils %}
 
@@ -18,7 +19,7 @@
     {% set example %}
 {%- set _id = utils.id() %}
 <div class="tn-dropdown">
-    {{ button({ icon: "more" }, modifier={ block: ["icon","text"] }, aria={ controls: _id, haspopup: true, expanded: false, label: "More" }) | indent(4) }}
+    {{ icon_button({ icon: "more" }, modifier={ block: ["text"] }, aria={ controls: _id, haspopup: true, expanded: false, label: "More" }) | indent(4) }}
     {{  menu(properties={
             id: _id,
             items: [
@@ -35,14 +36,14 @@
 
 {% set _id = utils.id() %}
 <div class="tn-dropdown">
-{{ button({ icon: "more" }, state={ disabled: true }, modifier={ block: ["icon","text"] }, aria={ controls: _id, haspopup: true, expanded: false, label: "More" }) | indent(4) }}
+{{ icon_button({ icon: "more" }, state={ disabled: true }, modifier={ block: ["text"] }, aria={ controls: _id, haspopup: true, expanded: false, label: "More" }) | indent(4) }}
 </div>
 
 {% set _id = utils.id() %}
 <div class="tn-dropdown">
-{{  button(
+{{  action_bar_button(
         { label: 'More', icon: 'more' },
-        modifier={ block: ['text','action-bar'] },
+        modifier={ block: ['text'] },
         aria={ controls: _id, haspopup: true, expanded: false, label: "More" }
     ) | indent(4)
 }}

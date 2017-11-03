@@ -20,7 +20,7 @@ Uses the main action color and perform the most important or primary actions on 
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -39,7 +39,7 @@ The buttons can be set to three sizes: **small**, **default** and **large**.
     <span class="tn-icon tn-icon--checked tn-icon--small" role="presentation"></span>
     Small Button
 </button>
-<button class="tn-button tn-button--icon tn-button--small" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button--small" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--small" role="presentation"></span>
 </button>
 
@@ -50,7 +50,7 @@ The buttons can be set to three sizes: **small**, **default** and **large**.
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Default Button
 </button>
-<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 
@@ -61,7 +61,7 @@ The buttons can be set to three sizes: **small**, **default** and **large**.
     <span class="tn-icon tn-icon--checked tn-icon--large" role="presentation"></span>
     Large Button
 </button>
-<button class="tn-button tn-button--icon tn-button--large" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button--large" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--large" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -84,7 +84,7 @@ The buttons can also be set to a state:
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--icon" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 
@@ -95,7 +95,7 @@ The buttons can also be set to a state:
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--icon" aria-selected="true" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button" aria-selected="true" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 
@@ -106,7 +106,7 @@ The buttons can also be set to a state:
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--icon" aria-disabled="true" disabled aria-label="BUTTON_LABEL">
+<button class="tn-icon-button" aria-disabled="true" disabled aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -125,7 +125,7 @@ The text button is used to let the user perform other actions that are less impo
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--icon">
+<button class="tn-icon-button tn-icon-button--text">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -163,11 +163,11 @@ The text button support the same sizes as the Standard button.
 <button class="tn-button tn-button--text tn-button--large">
     Large Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--large">
+<button class="tn-button tn-button--icon tn-button--text tn-button--large">
     <span class="tn-icon tn-icon--checked tn-icon--large" role="presentation"></span>
     Large Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--icon tn-button--large" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button-text tn-button--large" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--large" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -187,7 +187,7 @@ The text button can be set to: **normal**, **selected** and **disabled** state.
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--icon" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button--text" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 
@@ -198,7 +198,7 @@ The text button can be set to: **normal**, **selected** and **disabled** state.
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--icon" aria-selected="true" aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button--text" aria-selected="true" aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 
@@ -209,7 +209,7 @@ The text button can be set to: **normal**, **selected** and **disabled** state.
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Text Button
 </button>
-<button class="tn-button tn-button--text tn-button--icon" aria-disabled="true" disabled aria-label="BUTTON_LABEL">
+<button class="tn-icon-button tn-icon-button--text" aria-disabled="true" disabled aria-label="BUTTON_LABEL">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
 </button>
 {% endcapture %}
@@ -251,15 +251,15 @@ The link button let the user navigate to a different page instead of performing 
 The ActionBar button is used on the **ActionBar** Component. It can also be used for standalone actions.
 
 {% capture icon-button %}
-<button class="tn-button tn-button--text tn-button--action-bar">
+<button class="tn-action-bar-button tn-action-bar-button--text">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--text tn-button--action-bar">
+<button class="tn-action-bar-button tn-action-bar-button--text">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
-<button class="tn-button tn-button--action-bar">
+<button class="tn-action-bar-button">
     <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
     Button
 </button>
@@ -274,7 +274,7 @@ The “more” contextual menu is used with Cards or Tables when there is additi
 
 {% capture contextual-button %}
 <div class="tn-dropdown">
-    <button class="tn-button tn-button--icon tn-button--text" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
+    <button class="tn-icon-button tn-icon-button--text" aria-controls="nH3Yk786" aria-haspopup="true" aria-label="More">
         <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
     </button>
     <ul class="tn-dropdown__menu tn-contextual-menu" aria-hidden="true" id="nH3Yk786">
@@ -295,7 +295,7 @@ It can be also be set to a **disabled** state.
 
 {% capture contextual-button-disabled %}
 <div class="tn-dropdown">
-    <button class="tn-button tn-button--icon tn-button--text is-disabled" aria-controls="V9HDS171" aria-haspopup="true" aria-label="More">
+    <button class="tn-icon-button tn-icon-button--text is-disabled" aria-controls="V9HDS171" aria-haspopup="true" aria-label="More">
         <span class="tn-icon tn-icon--more tn-icon--medium" role="presentation"></span>
     </button>
 </div>

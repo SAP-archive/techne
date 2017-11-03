@@ -1,6 +1,7 @@
 {% extends "layout.njk" %}
 {% from "./component.njk" import card %}
 {% from "../button/component.njk" import button %}
+{% from "../icon-button/component.njk" import icon_button %}
 {% from "./../format.njk" import format %}
 {% set css_deps = ['helpers','icons','components/button'] %}
 
@@ -69,9 +70,9 @@
                 'title': 'Lorem ipsum dolor quam placeat numquam repellendus',
                 'description': 'Tenetur quam placeat ipsum dolor sit amet obcaecati molestias voluptatibus dolorum ut',
                 'status': '<span class="tn-has-color-status-1">Voluptate quis adipisci sit</span>',
-                'actions': button(
+                'actions': icon_button(
                         { icon: 'more' },
-                        modifier={ block: ['icon','text','small'] },
+                        modifier={ block: ['text','small'] },
                         aria={ label: 'BUTTON_LABEL' }
                     )
             },

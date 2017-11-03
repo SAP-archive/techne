@@ -155,7 +155,7 @@ The input add-on also support actions. The actions can show a label and also a i
         <div class="tn-input-group">
             <input class="" type="text" id="" name="" value="1000000">
             <span class="tn-input-group__addon tn-input-group__addon--button">
-                <button class="tn-button tn-button--icon">
+                <button class="tn-icon-button">
                     <span class="tn-icon tn-icon--chevron tn-icon--medium" role="presentation"></span>
                 </button>
             </span>
@@ -183,7 +183,7 @@ The input add-on also support actions. The actions can show a label and also a i
         <div class="tn-input-group">
             <input class="" type="text" id="" name="" value="1000000">
             <span class="tn-input-group__addon tn-input-group__addon--button">
-                <button class="tn-button tn-button--icon tn-button--text">
+                <button class="tn-icon-button tn-icon-button--text">
                     <span class="tn-icon tn-icon--chevron tn-icon--medium" role="presentation"></span>
                 </button>
             </span>

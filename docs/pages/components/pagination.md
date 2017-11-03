@@ -18,7 +18,7 @@ When the first page is active, the previous link should be disabled.
 <ul class="tn-pagination">
     <span class="tn-pagination__total">30 items</span>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -32,7 +32,7 @@ When the first page is active, the previous link should be disabled.
         <a href="#" class="tn-pagination__link">3</a>
     </li>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -50,7 +50,7 @@ Example with second page active.
 <ul class="tn-pagination">
     <span class="tn-pagination__total">30 items</span>
     <li class="tn-pagination__item tn-pagination__navigation">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -64,7 +64,7 @@ Example with second page active.
             <a href="#" class="tn-pagination__link">3</a>
     </li>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -81,7 +81,7 @@ Example with second page active.
 <ul class="tn-pagination">
     <span class="tn-pagination__total">500 items</span>
     <li class="tn-pagination__item tn-pagination__navigation">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -104,7 +104,7 @@ Example with second page active.
             <a href="#" class="tn-pagination__link">50</a>
     </li>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -121,7 +121,7 @@ Example with second page active.
 <ul class="tn-pagination">
     <span class="tn-pagination__total">500 items</span>
     <li class="tn-pagination__item tn-pagination__navigation">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -153,7 +153,7 @@ Example with second page active.
             <a href="#" class="tn-pagination__link">50</a>
     </li>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -171,7 +171,7 @@ On the last page, the next link should be disabled.
 <ul class="tn-pagination">
     <span class="tn-pagination__total">500 items</span>
     <li class="tn-pagination__item tn-pagination__navigation">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Previous" aria-disabled="true">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Previous" aria-disabled="true">
             <span class="tn-icon tn-icon--chevron-back tn-icon--small" role="presentation"></span>
         </button>
     </li>
@@ -191,7 +191,7 @@ On the last page, the next link should be disabled.
             <a href="#" class="tn-pagination__link" aria-selected="true">50</a>
     </li>
     <li class="tn-pagination__item">
-        <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="Next">
+        <button class="tn-icon-button tn-icon-button--text tn-icon-button--small" aria-label="Next">
             <span class="tn-icon tn-icon--chevron tn-icon--small" role="presentation"></span>
         </button>
     </li>

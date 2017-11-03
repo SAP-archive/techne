@@ -1,6 +1,7 @@
 {% extends "layout.njk" %}
 {% from "./component.njk" import input_group %}
 {% from "../button/component.njk" import button %}
+{% from "../icon-button/component.njk" import icon_button %}
 {% from "../icon/component.njk" import icon %}
 {% from "./../format.njk" import format %}
 {% set css_deps = ['helpers','components/button','icons'] %}
@@ -197,13 +198,13 @@
 
 <h1>Input Group — Button addon</h1>
 
-{%- set iconbtn %}{{  button(
+{%- set iconbtn %}{{  icon_button(
         {
             label: '',
             icon: 'chevron'
         },
         modifier={
-            block: ['icon','text']
+            block: ['text']
         })
 }}{%- endset %}
 {%- set btn %}{{  button(
@@ -269,7 +270,7 @@
                 value: "1000000"
             }
         },
-        after: button({ icon: 'chevron' }, modifier={ block: 'icon' })
+        after: iconbtn
     })
 }}
 {% endset %}

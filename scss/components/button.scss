@@ -30,7 +30,6 @@ $block: ns(button);
     $tn-button-height--link-small: tn-space(6) !default;
     $tn-button-icon-height: 26px !default;
     $tn-button-icon-height--small: 18px !default;
-    $tn-button-icon-height--large: 32px !default;
     //anim
     $tn-button-transition-params: $tn-animation--speed ease-in !default;
 
@@ -176,43 +175,6 @@ $block: ns(button);
             &::after {
                 display: none;
             }
-        }
-    }
-    //ELEMENTS
-    & > * {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: tn-space(3);
-        @at-root {
-            .#{$block}--icon > * {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        margin-top: $tn-button-height / 2 - $tn-button-icon-height / 2;
-        @at-root {
-            .#{$block}--small > * {
-                margin-top: $tn-button-height--small / 2 - $tn-button-icon-height--small / 2;
-            }
-        }
-        @at-root {
-            .#{$block}--large > * {
-                margin-top: $tn-button-height--large / 2 - $tn-button-icon-height--large / 2;
-            }
-        }
-    }
-    //special flavor
-    &--action-bar {
-        @extend .#{$block}--large;
-        @include tn-type(-3);
-        width: 135px;
-        line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
-        vertical-align: middle;
-        & > * {
-            display: block !important;
-            margin-top: tn-space(3);
-            margin-left: auto;
-            margin-right: auto;
         }
     }
 }

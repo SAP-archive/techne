@@ -1,0 +1,51 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "../components/button";
+
+$block: ns(icon-button);
+
+//sizes
+$tn-icon-button-height: tn-space(13) !default;
+$tn-icon-button-icon-height: 26px !default;
+$tn-icon-button-height--small: tn-space(10) !default;
+$tn-icon-button-height--large: tn-space(19) !default;
+$tn-icon-button-icon-height--small: 18px !default;
+$tn-icon-button-icon-height--large: 32px !default;
+
+.#{$block}{
+    @extend .tn-button;
+    @extend .tn-button--icon;
+    &--small{
+        @extend .tn-button--small;
+    }
+    &--large {
+        @extend .tn-button--large;
+    }
+    &--text{
+        @extend .tn-button--text;
+    }
+    //ELEMENTS
+    & > * {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 0;
+        @at-root {
+            .#{$block}--icon > * {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        margin-top: $tn-icon-button-height / 2 - $tn-icon-button-icon-height / 2;
+        @at-root {
+            .#{$block}--small > * {
+                margin-top: $tn-icon-button-height--small / 2 - $tn-icon-button-icon-height--small / 2;
+            }
+        }
+        @at-root {
+            .#{$block}--large > * {
+                margin-top: $tn-icon-button-height--large / 2 - $tn-icon-button-icon-height--large / 2;
+            }
+        }
+    }
+}

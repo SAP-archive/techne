@@ -1,6 +1,8 @@
 {% extends "layout.njk" %}
 {% from "./../format.njk" import format %}
 {% from "../button/component.njk" import button %}
+{% from "../icon-button/component.njk" import icon_button %}
+{% from "../action-bar-button/component.njk" import action_bar_button %}
 {% from "./component.njk" import action_bar %}
 {% from "../dropdown/component.njk" import menu %}
 {% import "./../utils.njk" as utils %}
@@ -18,30 +20,30 @@
     <h1>action-bar</h1>
 
 {%- set backbtn %}{{
-    button(
+    icon_button(
             { icon: 'backarrow' },
-            modifier={ block: ['text','icon','large'] },
+            modifier={ block: ['text','large'] },
             aria={ label: 'Back' }
         )
 }}{%- endset %}
 {%- set actionbtn %}{{
-    button(
+    action_bar_button(
             { label: 'Cancel', icon: 'close' },
-            modifier={ block: ['text','action-bar'] }
+            modifier={ block: ['text'] }
         )
 }}{%- endset %}
 {%- set primarybtn %}{{
-    button(
+    action_bar_button(
             { label: 'Save', icon: 'checked' },
-            modifier={ block: ['action-bar'] }
+            modifier={ block: [] }
         )
 }}{%- endset %}
 {%- set contextmenu %}
 {% set _id = utils.id() %}
 <div class="tn-dropdown">
-    {{  button(
+    {{  action_bar_button(
         { label: 'More', icon: 'more' },
-        modifier={ block: ['text','action-bar'] },
+        modifier={ block: ['text'] },
         aria={ controls: _id, haspopup: true, expanded: false, label: "More" }
     ) | indent(4)
 }}

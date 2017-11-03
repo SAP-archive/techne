@@ -1,0 +1,37 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+@import "../components/button";
+
+$block: ns(action-bar-button);
+
+
+
+.#{$block}{
+
+    $tn-action-bar-button-height--large: tn-space(19) !default;
+    $tn-action-bar-button-icon-height--large: 32px !default;
+
+    @extend .tn-button;
+    @extend .tn-button--icon;
+    @extend .#{$block}--large;
+    @include tn-type(-3);
+    width: 135px;
+    line-height: $tn-action-bar-button-height--large - $tn-action-bar-button-icon-height--large - tn-space(3);
+    vertical-align: middle;
+    &--small{
+        @extend .tn-button--small;
+    }
+    &--large {
+        @extend .tn-button--large;
+    }
+    &--text{
+        @extend .tn-button--text;
+    }
+    & > * {
+        display: block !important;
+        margin-top: tn-space(3);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
