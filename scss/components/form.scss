@@ -9,7 +9,7 @@
         .tn-form__group?
             .tn-form__item+(--check, --inline)
                 .tn-form__label(.is-required)
-                .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
+                .tn-form__control
             .tn-form__message(--help, --error, --warning)
 */
 $block: ns(form);
@@ -53,9 +53,9 @@ $block: ns(form);
             .#{$block}__label {
                 @include tn-type($tn-form-label-font-size--check);
                 margin-bottom: 0;
-                display: inline-block;
                 vertical-align: middle;
                 display: flex;
+                align-items: center;
                 line-height: $tn-forms-height--input-check;
             }
             .#{$block}__control {
