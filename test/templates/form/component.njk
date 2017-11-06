@@ -1,6 +1,7 @@
 {% import "../forms.njk" as forms %}
 {% import "./../utils.njk" as utils %}
 {% from "./../inline-help/component.njk" import inline_help %}
+{% from "./../toggle/component.njk" import toggle %}
 
 <!--
 form-set:
@@ -49,15 +50,15 @@ form-item:
             properties: { label: "Option 1", value: "1" }
         }]
     },
-    modifier={ item: [], message: [] },
+    modifier={ item: [], message: [], control: [] },
     state={ required: false, checked: false, disabled: false, readonly: false, status: "" },
     aria={})
 -%}
 {%- set _id = utils.id() %}
-<div class="tn-form__item{{ modifier.item | modifier('form__item') }}{{ ' tn-form__item--check' if type == "checkbox" or type == "radio" }}">
-    {%- if type == "checkbox" or type == "radio" %}
+<div class="tn-form__item{{ modifier.item | modifier('form__item') }}{{ ' tn-form__item--check' if type == "checkbox" or type == "radio" or type == "toggle" }}">
+    {%- if type == "checkbox" or type == "radio" or type == "toggle" %}
     <label class="tn-form__label{{ ' is-required' if state.required }}" for="{{_id}}">
-        {{ form_control(type,_id,properties,state=state,aria=aria) }}
+        {{ form_control(type,_id,properties,state=state,aria=aria,modifier=modifier.control) }}
         {{ properties.label }}
         {%- if properties.help %}
         <span class="tn-form__help">
@@ -74,7 +75,7 @@ form-item:
         </span>
         {%- endif %}
     </label>
-    {{ form_control(type,_id,properties,state=state,aria=aria) }}
+    {{ form_control(type,_id,properties,state=state,aria=aria,modifier=modifier.control) }}
     {%- endif %}
     {%- if properties.message %}
     {{ form_message({ message: properties.message }, modifier=modifier.message) }}
@@ -135,6 +136,8 @@ form-control:
     {{ forms.checkbox(props,state=state,aria=aria,classes=["form__control"]) }}
 {%- elif type == "select" -%}
     {{ forms.select(props,state=state,aria=aria,classes=["form__control"]) }}
+{%- elif type == "toggle" -%}
+    {{ toggle(props,state=state,aria=aria,modifier={ block: modifier },classes=["form__control"]) | indent(8) }}
 {%- else -%}
     {{ forms.text(type,props,state=state,aria=aria, classes="form__control") }}
 {%- endif -%}
