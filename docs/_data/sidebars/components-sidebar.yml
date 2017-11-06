@@ -60,6 +60,10 @@ entries:
       url: /table.html
       output: web
 
+    - title: Toggle
+      url: /toggle.html
+      output: web
+
     - title: Toolbar
       url: /toolbar.html
       output: web
