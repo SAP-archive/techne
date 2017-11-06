@@ -43,9 +43,6 @@ $block: ns(toggle);
         height: 100%;
         border-color: transparent;
         vertical-align: middle;
-        &:hover {
-            border-color: transparent;
-        }
         &:checked {
             &::after {
                 display: none;
