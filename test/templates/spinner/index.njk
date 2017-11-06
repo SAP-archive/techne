@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "../button/component.njk" import button %}
+{% from "./component.njk" import spinner %}
+
+<!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
+{% set css_deps = ['layout'] %}
+
+{% block content %}
+
+    <h1>spinner</h1>
+
+    <!-- output the component example and the code snippet -->
+    {% set example %}
+    {{  spinner(
+            properties=data.properties,
+            modifier=data.modifier,
+            state=data.state,
+            aria=data.aria
+        )
+    }}
+    {% endset %}
+    {{ format(example) }}
+<br><br>
+    {% set example %}
+<div class="tn-panel">
+    <div class="tn-panel__header">
+        <h1 class="tn-panel__title">Lorem ipsum</h1>
+    </div>
+    <div style="min-height: 200px;" aria-busy="true">
+
+        {{  spinner(
+            properties=data.properties,
+            modifier=data.modifier,
+            state=data.state,
+            aria=data.aria
+        ) | indent(8)
+    }}
+    </div>
+    <div class="tn-panel__footer">
+        <p><em>Etiam pulvinar turpis sed velit porttitor vel adipiscing velit fringilla.</em></p>
+    </div>
+</div>
+
+    {% endset %}
+    {{ format(example) }}
+
+
+
+
+{% endblock %}
