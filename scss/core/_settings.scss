@@ -27,15 +27,15 @@ $tn-spacing: (
 //type
 $tn-type--base: 16px;
 $tn-type: (
-    -3: 0.75rem (16/12) body bold uppercase,    //12/16
-    -2: 0.8125rem (20/13) body reg none,	    //13/20
-    -1: 0.875rem (20/14) body reg none,	        //14/20
-    0: 1rem (24/16) body reg none,     	        //16/24
-    1: 1.125rem (24/18) body semi none,   	    //18/24
-    2: 1.25rem (28/20) body semi none,   	    //20/28
-    3: 1.625rem (32/26) header semi none,	    //26/32
-    4: 2.1875rem (44/35) header bold none,	    //35/44
-    5: 2.8125rem (52/45) header med none,       //45/52
+    -3: 0.75rem 1.33334 body bold uppercase,    //12/16
+    -2: 0.8125rem 1.53847 body reg none,	    //13/20
+    -1: 0.875rem 1.42858 body reg none,	        //14/20
+    0: 1rem 1.5 body reg none,     	            //16/24
+    1: 1.125rem 1.33334 body semi none,   	    //18/24
+    2: 1.25rem 1.4 body semi none,   	        //20/28
+    3: 1.625rem 1.23077 header semi none,	    //26/32
+    4: 2.1875rem 1.25715 header bold none,	    //35/44
+    5: 2.8125rem 1.15556 header med none,       //45/52
 ) !default;
 
 //fonts
