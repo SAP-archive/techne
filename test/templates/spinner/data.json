@@ -11,7 +11,8 @@
 
     },
     "aria": {
-
+        "hidden": false,
+        "label": "Loading"
     }
 
 }
