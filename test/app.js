@@ -148,7 +148,8 @@ function getStarterData() {
     var data = {
         "toolbar": require(`./templates/toolbar/data.json`),
         "tree": require(`./templates/tree/data.json`),
-        "table": require(`./templates/table/data.json`)
+        "table": require(`./templates/table/data.json`),
+        "tabs": require(`./templates/tabs/data.json`)
     }
     return data;
 }

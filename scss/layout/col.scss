@@ -22,4 +22,15 @@ $block: ns(col);
             }
         }
     }
+    @at-root {
+        [class^="#{$block}"] {
+            margin-bottom: $tn-margin-bottom;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include tn-screen(s) {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

@@ -2,6 +2,14 @@
 @import "../core/functions";
 @import "../core/mixins";
 
+/*!
+.tn-panel
+    .tn-panel__header
+        .tn-panel__title
+        .tn-panel__actions
+    .tn-panel__footer
+*/
+
 $block: ns(panel);
 .#{$block} {
     @include tn-clearfix;
