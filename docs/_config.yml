@@ -89,6 +89,14 @@ defaults:
   -
     scope:
       path: ""
+      type: "layouts"
+    values:
+      layout: "layout"
+      comments: false
+      search: true
+  -
+    scope:
+      path: ""
       type: "tooltips"
     values:
       layout: "page"
@@ -116,15 +124,11 @@ sidebars:
 - guides-sidebar
 - tutorials-sidebar
 
-
 # the description is used in the feed.xml file
 description: ""
 
 # needed for sitemap.xml file only
 url:
-
-# Server Config options
-# livereload: true     # You no longer need to include --livereload
 
 keep_files: [css/techne.css, css/techne-icons.svg]
 exclude: [vendor]

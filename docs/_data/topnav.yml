@@ -6,13 +6,15 @@ topnav:
   items:
     - title: Get Started
       url: index.html
+
     - title: Styles
       url: styles.html
+
     - title: Components
       url: components.html
+
     - title: Starter Pages
       url: starter-pages.html
-    # - title: Guides
-    #   url: guides.html
-    # - title: Tutorials
-    #   url: tutorials.html
+
+    - title: Layouts
+      url: layouts.html
