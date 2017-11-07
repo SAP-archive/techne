@@ -8,22 +8,11 @@ $ns: ns();
             //set default selector for convenience
             .#{$ns}has-color-#{$type},
             .#{$ns}has-color-#{$type}-#{$shade} {
-                color: $value;
+                color: $value !important;
             }
         } @else {
             .#{$ns}has-color-#{$type}-#{$shade} {
-                color: $value;
-            }
-        }
-        @if $shade == 1 {
-            //set default selector for convenience
-            .#{$ns}has-background-color-#{$type},
-            .#{$ns}has-background-color-#{$type}-#{$shade} {
-                background-color: $value;
-            }
-        } @else {
-            .#{$ns}has-background-color-#{$type}-#{$shade} {
-                background-color: $value;
+                color: $value !important;
             }
         }
     }
