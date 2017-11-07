@@ -5,114 +5,92 @@ sidebar: components-sidebar
 toc: false
 permalink: toggle.html
 folder: components
-summary:
 ---
 
-## Default Toggle
-Use the Large Toggle component when the toggle action is a primary action on a page or to turn on/off secondary actions on the page
+The toggle component is used to activate or deactivate an element. Uses a visual metaphor that is know to the user with visible differences between on and off state.
+
+It is also recommended to use it always with a label to let know the user what is the element/setting that is been activated/deactivated.
+
+Toggles can be also used as a standalone element in a screen, to set properties like "visible", "active", "published", etc.
+
+<br/>
+
+## Toggle Sizes
+
+The toggle can be set to 3 sizes: **small**, **normal** and **large**. When used with forms is recommended to use the **small** size, to keep consistency with the other form components.
+
 
 {% capture default %}
-<span class="tn-toggle tn-toggle--small">
-    <input type="checkbox" name="" value="" id="9c0JI577">
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle">
-    <input type="checkbox" name="" value="" id="DhMDF142">
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle tn-toggle--large">
-    <input type="checkbox" name="" value="" id="iPFtH652">
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-{% endcapture %}
-
-{% include display-component.html component=default %}
-
-## Toggle Checked
-
-Add the attribute  `checked` for 'on' state
-
-{% capture checked %}
-<span class="tn-toggle tn-toggle--small">
-    <input type="checkbox" name="" value="" id="DNhXZ663" checked>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle">
-    <input type="checkbox" name="" value="" id="4XbeP846" checked>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle tn-toggle--large">
-    <input type="checkbox" name="" value="" id="VyOyD837" checked>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-{% endcapture %}
-
-{% include display-component.html component=checked %}
-
-## Disabled Toggle
-
-Add the attribute  `disabled` for 'disabled' state
-
-{% capture disabled %}
-<span class="tn-toggle tn-toggle--small">
-    <input type="checkbox" name="" value="" id="8ANI6288" disabled>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle">
-    <input type="checkbox" name="" value="" id="BjPKt701" disabled checked>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-
-<span class="tn-toggle tn-toggle--large">
-    <input type="checkbox" name="" value="" id="UTZjI977" disabled>
-    <span class="tn-toggle__switch" role="presentation"></span>
-</span>
-{% endcapture %}
-
-{% include display-component.html component=disabled %}
-
-## Use with form
-
-Replace the normal checkbox with the `.tn-toggle component`. Apply the `.tn-form__control` class to the `.tn-toggle` component instead of to the input element. Everything else works the same.
-
-{% capture form %}
 <div class="tn-form__item tn-form__item--check">
     <label class="tn-form__label" for="Yj07w605">
         <span class="tn-toggle tn-toggle--small tn-form__control">
             <input type="checkbox" name="" value="" id="Yj07w605">
             <span class="tn-toggle__switch" role="presentation"></span>
         </span>
-
-        Field label
+        Small toggle
     </label>
 </div>
 
 <div class="tn-form__item tn-form__item--check">
-    <label class="tn-form__label" for="0xXU6385">
+    <label class="tn-form__label" for="Yj07w606">
         <span class="tn-toggle tn-form__control">
-            <input type="checkbox" name="" value="" id="0xXU6385">
+            <input type="checkbox" name="" value="" id="Yj07w606" checked>
             <span class="tn-toggle__switch" role="presentation"></span>
         </span>
-
-        Field label
+        Normal toggle
     </label>
 </div>
 
 <div class="tn-form__item tn-form__item--check">
-    <label class="tn-form__label" for="0VRNl813">
+    <label class="tn-form__label" for="Yj07w607">
         <span class="tn-toggle tn-toggle--large tn-form__control">
-            <input type="checkbox" name="" value="" id="0VRNl813">
+            <input type="checkbox" name="" value="" id="Yj07w607">
             <span class="tn-toggle__switch" role="presentation"></span>
         </span>
-
-        Field label
+        Large toggle
     </label>
 </div>
 {% endcapture %}
 
-{% include display-component.html component=form %}
+{% include display-component.html component=default %}
+
+<br/>
+
+## Disabled state
+
+The toggle can be set to the disable state and still indicate if the element is active or inactive. For that just add the `disabled` parameter to the input element.
+
+{% capture toggle-disabled %}
+<div class="tn-form__item tn-form__item--check">
+    <label class="tn-form__label" for="zj07w605">
+        <span class="tn-toggle tn-toggle--small tn-form__control">
+            <input type="checkbox" name="" value="" id="zj07w605" disabled>
+            <span class="tn-toggle__switch" role="presentation"></span>
+        </span>
+        Small toggle
+    </label>
+</div>
+
+<div class="tn-form__item tn-form__item--check">
+    <label class="tn-form__label" for="zj07w606">
+        <span class="tn-toggle tn-form__control">
+            <input type="checkbox" name="" value="" id="zj07w606" checked disabled>
+            <span class="tn-toggle__switch" role="presentation"></span>
+        </span>
+        Normal toggle
+    </label>
+</div>
+
+<div class="tn-form__item tn-form__item--check">
+    <label class="tn-form__label" for="zj07w607">
+        <span class="tn-toggle tn-toggle--large tn-form__control">
+            <input type="checkbox" name="" value="" id="zj07w607" disabled>
+            <span class="tn-toggle__switch" role="presentation"></span>
+        </span>
+        Large toggle
+    </label>
+</div>
+{% endcapture %}
+
+{% include display-component.html component=toggle-disabled %}
+
