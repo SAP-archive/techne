@@ -1,0 +1,62 @@
+@import "../core/settings";
+@import "../core/mixins";
+@import "../core/functions";
+
+/*!
+.tn-image+((--rounded|--circle), (--xs|--s|--m|--l|--xl|--xxl), (--product|--profile))
+*/
+$block: ns(image);
+
+.#{$block} {
+    //LOCAL VARS (set all themeable properties, always include !default)
+    $tn-image-sizes: (
+        xs: 20px,
+        s: 36px,
+        m: 52px,
+        l: 72px,
+        xl: 92px,
+        xxl: 120px,
+    ) !default;
+    $tn-image-background: transparent !default;
+    $tn-image-background--placeholder: tn-color(neutral, 2) !default;
+    $tn-image-background-image--profile: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyMiAyNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q29tYmluZWQtU2hhcGU8L3RpdGxlPjxwYXRoIGQ9Ik0xMSAyNnYtMWgxMWMtMi43NTQuNjY3LTYuNDIgMS0xMSAxem0wIDBjLTIuMTQ4IDAtNS44MTUtLjMzMy0xMS0xaDExdjF6bTExLTFIMGMwLTUuNTU4IDMuNDY0LTEwLjIzNCA4LjE2NS0xMS41OThBNy4wMDIgNy4wMDIgMCAwIDEgMTEgMGE3IDcgMCAwIDEgMi44MzUgMTMuNDAyQzE4LjUzNiAxNC43NjYgMjIgMTkuNDQyIDIyIDI1eiIgZmlsbC1ydWxlPSJub256ZXJvIiBmaWxsPSIjRkZGIi8+PC9zdmc+" !default;
+    $tn-image-background-image--product: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UHJvZHVjdC10aHVtYi1wbGFjZWhvbGRlcjwvdGl0bGU+PHBhdGggZD0iTS44NzYgNS4yMjNMNi43NSAyLjY2OGwxMSA1LjkzNC01LjI5MSAyLjE3OEwuODc2IDUuMjIzek0wIDIwLjA0M1Y2LjAxMmwxMS45MTcgNS43MXYxNC4wOTFMLjMyNyAyMC41NEEuNTQuNTQgMCAwIDEgMCAyMC4wNDJ6bTMuMjUtOS4yMDl2NS40MTdhLjU0LjU0IDAgMCAwIC4zMTcuNDkzbDUuNDE3IDIuNzA4Yy4zNTguMTYzLjc2Ni0uMS43NjYtLjQ5M3YtNS40MTdhLjU0Mi41NDIgMCAwIDAtLjMxNy0uNDkyTDQuMDE2IDEwLjM0YS41NDIuNTQyIDAgMCAwLS43NjYuNDkzem05Ljc1Ljg4OWwxMy01LjcxdjE0LjAzYS41NC41NCAwIDAgMS0uMzI2LjQ5NkwxMyAyNS44MTVWMTEuNzIzem0xMi4xMjQtNi41bC02LjE0IDIuODEzTDguMDE1IDIuMTJsNC43Ny0yLjA3NGEuNTM2LjUzNiAwIDAgMSAuNDMyIDBsMTEuOTA4IDUuMTc4eiIgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" !default;
+
+    //BLOCK BASE *******************************************
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    //BLOCK MODIFIERS ************
+    //sizes
+    @each $size, $value in $tn-image-sizes {
+        &--#{$size} {
+            width: $value;
+            height: $value;
+        }
+    }
+    //borders
+    &--rounded {
+        border-radius: 8px;
+        &.#{$block}--xs,
+        &.#{$block}--s {
+            border-radius: 4px;
+        }
+    }
+    &--circle {
+        border-radius: 50%;
+    }
+    //placeholders
+    &--profile, &--product {
+        background-size: 50%;
+        background-color: $tn-image-background--placeholder;
+    }
+    &--profile {
+        background-image: url($tn-image-background-image--profile);
+    }
+    &--product {
+        background-image: url($tn-image-background-image--product);
+    }
+}
