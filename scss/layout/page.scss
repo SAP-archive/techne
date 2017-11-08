@@ -7,7 +7,7 @@ $block: ns(page);
     $tn-page-background-color: tn-color(background, 2) !default;
     $tn-page-header-height: 76px !default;
     $tn-page-intro-background-color: tn-color(background, 2) !default;
-    $tn-page-intro-padding: tn-space(5) !default;
+    $tn-page-intro-padding: tn-space(4) !default;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -18,6 +18,7 @@ $block: ns(page);
         height: $tn-page-header-height;
     }
     &__intro {
+        @include tn-type(-1);
         padding: $tn-page-intro-padding $tn-padding--ui;
         background-color: $tn-page-intro-background-color;
         text-align: center;

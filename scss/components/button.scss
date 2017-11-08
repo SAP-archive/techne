@@ -68,8 +68,8 @@ $block: ns(button);
         padding-left: tn-space(7);
         padding-right: tn-space(7);
         &.#{$block}--icon {
-            padding-left: tn-space(5);
-            padding-right: tn-space(5);
+            //padding-left: tn-space(5);
+            //padding-right: tn-space(5);
         }
     }
     &:hover {
@@ -205,7 +205,7 @@ $block: ns(button);
     &--action-bar {
         @extend .#{$block}--large;
         @include tn-type(-3);
-        width: 135px;
+        min-width: 135px;
         line-height: $tn-button-height--large - $tn-button-icon-height--large - tn-space(3);
         vertical-align: middle;
         & > * {
