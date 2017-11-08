@@ -1,5 +1,5 @@
 ---
-title: Getting Started - test 
+title: Getting Started
 keywords: getting started
 hide_sidebar: true
 toc: false

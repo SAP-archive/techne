@@ -11,3 +11,24 @@ $ns: ns();
     background-position: center;
     background-attachment: fixed;
 }
+.#{$ns}has-background-size-contain {
+    background-size: contain !important;
+}
+.#{$ns}has-background-size-cover {
+    background-size: cover !important;
+}
+@each $type, $shades in $tn-colors {
+    @each $shade, $value in $shades {
+        @if $shade == 1 {
+            //set default selector for convenience
+            .#{$ns}has-background-color-#{$type},
+            .#{$ns}has-background-color-#{$type}-#{$shade} {
+                background-color: $value !important;
+            }
+        } @else {
+            .#{$ns}has-background-color-#{$type}-#{$shade} {
+                background-color: $value !important;
+            }
+        }
+    }
+}
