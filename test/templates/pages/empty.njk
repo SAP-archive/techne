@@ -1,0 +1,29 @@
+{% extends "./layouts/page.njk" %}
+{% set page_title = "Table" %}
+{% set page_intro = "Page level help message goes here" %}
+{% set is_landing_page = false %}
+{% set show_toolbar = true %}
+
+{% import "../layout/component.njk" as layout %}
+
+{% block page_header -%}
+<header class="tn-action-bar">
+    <h1 class="tn-action-bar__title">
+        Page Title
+    </h1>
+</header>
+{%- endblock %}
+
+
+
+{% block page_content %}
+
+{%- call layout.section(modifier="full-bleed") -%}
+        <p class="tn-has-text-align-center tn-has-text-italic">
+            <span class="tn-has-text-bold">There are no items on this page.</span><br>
+            Add content <a href="#">here</a>.
+
+        </p>
+{%- endcall %}
+
+{% endblock %}
