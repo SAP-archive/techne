@@ -32,10 +32,22 @@
                     {{ button({ icon: 'backarrow' }, modifier={ block: ['text','icon','large'] }, aria={ label: 'Back' }) }}
                 {%- endset %}
             {%- endif %}
+            {%- if is_editable_page %}
+            {%- set actionbtn = button({ label: 'Cancel', icon: 'close' },modifier={ block: ['text','action-bar'] })
+            %}
+            {%- set primarybtn = button({ label: 'Save', icon: 'checked' },modifier={ block: ['action-bar'] })
+            %}
+            {% set actions_props = {
+                properties: {
+                    items: [ actionbtn, primarybtn ]
+                }
+            } %}
+            {%- endif %}
             {{  action_bar(
                     properties={
-                        title: "Page Title",
-                        navigation: backbtn
+                        title: page_title or "Page Title",
+                        navigation: backbtn,
+                        actions: actions_props
                     }
                 )
             }}
