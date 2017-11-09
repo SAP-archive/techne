@@ -2,43 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="description" content="">
-
 <meta name="keywords" content=" card">
-
 <title>Card | TECHNE</title>
 
 <link rel="stylesheet" href="css/syntax.css">
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <link rel="stylesheet" href="css/customstyles.css">
-
 <link rel="stylesheet" href="css/techne.css">
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-
-<!-- <script src="js/jquery.navgoco.min.js"></script> -->
-
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- Anchor.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
-
-<script src="js/toc.js"></script>
-
-<script src="js/customscripts.js"></script>
 
 <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 
@@ -91,6 +65,10 @@
                     
                         
                             <li><a href="starter-pages.html">Starter Pages</a></li>
+                        
+                    
+                        
+                            <li><a href="layouts.html">Layouts</a></li>
                         
                     
                 
@@ -245,6 +223,13 @@
             
             
             
+            <li><a href="toggle.html">Toggle</a></li>
+            
+            
+            
+            
+            
+            
             <li><a href="toolbar.html">Toolbar</a></li>
             
             
@@ -273,7 +258,7 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
 
             </div>
             
@@ -657,40 +642,13 @@
         </div>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
 
-
-
-<script type="text/javascript">
-//dropdown
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function(e) {
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        //alert
-        var isAlert = this.parentElement.getAttribute("role") === "alert";
-        if (isAlert) {
-            //remove or hide if we want some animation
-            // target.setAttribute("aria-hidden", true);
-            target.remove();
-            return;
-        }
-        //dropdown
-        var isDropdown = this.getAttribute("aria-haspopup") === "true";
-        if (isDropdown) {
-            //trigger
-            var isExpanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", !isExpanded);
-            //target
-            var targetIsHidden = target.getAttribute("aria-hidden") == "true";
-            target.setAttribute("aria-hidden", isExpanded);
-            return;
-        }
-    })
-}
-
-</script>
 
         </div>
     <!-- /.row -->

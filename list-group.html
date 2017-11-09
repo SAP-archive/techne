@@ -2,43 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="description" content="">
-
 <meta name="keywords" content=" list group, lists group, list, lists, groups">
-
 <title>List | TECHNE</title>
 
 <link rel="stylesheet" href="css/syntax.css">
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <link rel="stylesheet" href="css/customstyles.css">
-
 <link rel="stylesheet" href="css/techne.css">
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-
-<!-- <script src="js/jquery.navgoco.min.js"></script> -->
-
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- Anchor.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
-
-<script src="js/toc.js"></script>
-
-<script src="js/customscripts.js"></script>
 
 <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 
@@ -91,6 +65,10 @@
                     
                         
                             <li><a href="starter-pages.html">Starter Pages</a></li>
+                        
+                    
+                        
+                            <li><a href="layouts.html">Layouts</a></li>
                         
                     
                 
@@ -245,6 +223,13 @@
             
             
             
+            <li><a href="toggle.html">Toggle</a></li>
+            
+            
+            
+            
+            
+            
             <li><a href="toolbar.html">Toolbar</a></li>
             
             
@@ -273,7 +258,7 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
 
             </div>
             
@@ -304,31 +289,31 @@
 
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <a href="">List item 1</a>
+        List item 1
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 2</a>
+        List item 2
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 3</a> - Lorem ipsum dolor sit amet, consectetur sed do
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
     </li>
     <li class="tn-list-group__item">
-        <a href="">List item 4</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     </li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-list-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>List item 1<span class="nt">&lt;/a&gt;</span>
+        List item 1
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>List item 2<span class="nt">&lt;/a&gt;</span>
+        List item 2
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>List item 3<span class="nt">&lt;/a&gt;</span> - Lorem ipsum dolor sit amet, consectetur sed do
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>List item 4<span class="nt">&lt;/a&gt;</span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
@@ -340,71 +325,71 @@
 
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 1
-            <button class="tn-list-group__button">
+        List item 1
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small" aria-label="Delete">
                 <span class="tn-icon tn-icon--close" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 2
-            <button class="tn-list-group__button">
+        List item 2
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--edit" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
-            <button class="tn-list-group__button">
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--clone" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action">
-            List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            <button class="tn-list-group__button">
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        <span class="tn-list-group__action">
+            <button class="tn-button tn-button--icon tn-button--text tn-button--small">
                 <span class="tn-icon tn-icon--options" role="presentation"></span>
             </button>
-        </div>
+        </span>
     </li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-list-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
-            List item 1
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-list-group__button"</span><span class="nt">&gt;</span>
+        List item 1
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"Delete"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
-            List item 2
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-list-group__button"</span><span class="nt">&gt;</span>
+        List item 2
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
-            List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-list-group__button"</span><span class="nt">&gt;</span>
+        List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--clone"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
-            List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-list-group__button"</span><span class="nt">&gt;</span>
+        List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-list-group__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--icon tn-button--text tn-button--small"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--options"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
@@ -416,54 +401,70 @@
 
 <ul class="tn-list-group">
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form">
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-1" name="checkbox-name-1" />
-            <label class="tn-list-group__label" for="checkbox-1">List item 1</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-1">
+                <input class="tn-form__control" type="checkbox" id="checkbox-1" />
+                List item 1
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form">
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-2" name="checkbox-name-2" />
-            <label class="tn-list-group__label" for="checkbox-2">List item 2</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-2">
+                <input type="checkbox" class="tn-form__control" id="checkbox-2" />
+                List item 2
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form">
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-3" name="checkbox-name-3" />
-            <label class="tn-list-group__label" for="checkbox-3">List item 3 - Lorem ipsum dolor sit amet, consectetur sed do</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-3">
+                <input type="checkbox" class="tn-form__control" id="checkbox-3" />
+                List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+            </label>
         </div>
     </li>
     <li class="tn-list-group__item">
-        <div class="tn-list-group__action-form">
-            <input class="tn-list-group__control" type="checkbox" id="checkbox-4" name="checkbox-name-4" />
-            <label class="tn-list-group__label" for="checkbox-4">List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</label>
+        <div class="tn-form__item tn-form__item--check">
+            <label class="tn-form__label" for="checkbox-4">
+                <input type="checkbox" class="tn-form__control" id="checkbox-4" />
+                List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            </label>
         </div>
     </li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-list-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action-form"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-list-group__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-1"</span> <span class="na">name=</span><span class="s">"checkbox-name-1"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-list-group__label"</span> <span class="na">for=</span><span class="s">"checkbox-1"</span><span class="nt">&gt;</span>List item 1<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-1"</span><span class="nt">&gt;</span>
+                List item 1
+            <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action-form"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-list-group__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-2"</span> <span class="na">name=</span><span class="s">"checkbox-name-2"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-list-group__label"</span> <span class="na">for=</span><span class="s">"checkbox-2"</span><span class="nt">&gt;</span>List item 2<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-2"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"checkbox-2"</span><span class="nt">&gt;</span>
+                List item 2
+            <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action-form"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-list-group__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-3"</span> <span class="na">name=</span><span class="s">"checkbox-name-3"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-list-group__label"</span> <span class="na">for=</span><span class="s">"checkbox-3"</span><span class="nt">&gt;</span>List item 3 - Lorem ipsum dolor sit amet, consectetur sed do<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-3"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"checkbox-3"</span><span class="nt">&gt;</span>
+                List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+            <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-list-group__action-form"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-list-group__control"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox-4"</span> <span class="na">name=</span><span class="s">"checkbox-name-4"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-list-group__label"</span> <span class="na">for=</span><span class="s">"checkbox-4"</span><span class="nt">&gt;</span>List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item tn-form__item--check"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label"</span> <span class="na">for=</span><span class="s">"checkbox-4"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">id=</span><span class="s">"checkbox-4"</span><span class="nt">&gt;</span>
+                List item 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
@@ -489,40 +490,13 @@
         </div>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
 
-
-
-<script type="text/javascript">
-//dropdown
-var els = document.querySelectorAll("[aria-controls]");
-for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    el.addEventListener('click', function(e) {
-        var targetId = this.getAttribute("aria-controls");
-        var target = document.getElementById(targetId);
-        //alert
-        var isAlert = this.parentElement.getAttribute("role") === "alert";
-        if (isAlert) {
-            //remove or hide if we want some animation
-            // target.setAttribute("aria-hidden", true);
-            target.remove();
-            return;
-        }
-        //dropdown
-        var isDropdown = this.getAttribute("aria-haspopup") === "true";
-        if (isDropdown) {
-            //trigger
-            var isExpanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", !isExpanded);
-            //target
-            var targetIsHidden = target.getAttribute("aria-hidden") == "true";
-            target.setAttribute("aria-hidden", isExpanded);
-            return;
-        }
-    })
-}
-
-</script>
 
         </div>
     <!-- /.row -->

@@ -1308,3 +1308,11 @@ pre code{
     white-space: pre;
     overflow-x: scroll;
 }
+
+.tn-toggle input:focus{
+    outline: none;
+}
+
+.tn-card:hover{
+    text-decoration: none;
+}

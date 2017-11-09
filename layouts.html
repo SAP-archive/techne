@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Single sourcing pages | TECHNE</title>
+<meta name="keywords" content=" layouts">
+<title>Layouts | TECHNE</title>
 
 <link rel="stylesheet" href="css/syntax.css">
 <!-- Latest compiled and minified CSS -->
@@ -68,7 +68,7 @@
                         
                     
                         
-                            <li><a href="layouts.html">Layouts</a></li>
+                            <li class="active"><a href="layouts.html">Layouts</a></li>
                         
                     
                 
@@ -94,7 +94,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Single sourcing pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Layouts">{title}</a></li>',
                     noResultsText: '<li class="no-search-results">No results found</li>',
                             limit: 10,
                             fuzzy: true,
@@ -115,29 +115,11 @@
     <div class="row">
         
         
-            <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
-                
-
-<ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">
-        <h2></h2>
-    </li>
-    
-
-</ul>
-
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
-
-            </div>
-            
-        
 
         <!-- Content Column -->
-        <div class="col-md-9" id="tg-sb-content">
+        <div class="col-md-12" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Single sourcing pages</h1>
+   <h1 class="post-title-main">Layouts</h1>
 </div>
 
 
@@ -147,151 +129,62 @@
    
 
     
-        
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
 
-  <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">single_sourcing</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-
-        
-        
-
-   </tbody>
-</table>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
-<p>[]:</p>
-
+  <div class="tn-card-group">
+    <a class="tn-card" role="button" href="app-layout.html" target="_blank">
+      <div class="tn-card__content">
+           <h2 class="tn-card__header">
+               App
+           </h2>
+           <p class="tn-card__description">
+               Application Layout
+           </p>
+      </div>
+    </a>
+    <a class="tn-card" role="button" href="page-layout.html" target="_blank">
+        <div class="tn-card__content">
+           <h2 class="tn-card__header">
+               Page
+           </h2>
+           <p class="tn-card__description">
+               Page Layout
+           </p>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="section-layout.html" target="_blank">
+        <div class="tn-card__content">
+           <h2 class="tn-card__header">
+               Section
+           </h2>
+           <p class="tn-card__description">
+               Section Layout
+           </p>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="panel-layout.html" target="_blank">
+        <div class="tn-card__content">
+           <h2 class="tn-card__header">
+               Panel
+           </h2>
+           <p class="tn-card__description">
+               Panel Layout
+           </p>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="container-layout.html" target="_blank">
+        <div class="tn-card__content">
+           <h2 class="tn-card__header">
+               Container
+           </h2>
+           <p class="tn-card__description">
+               Container Layout
+           </p>
+        </div>
+    </a>
+</div>
 
 
     <div class="tags">
