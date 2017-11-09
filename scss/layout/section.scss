@@ -20,7 +20,7 @@ $block: ns(section);
 
     @include tn-clearfix;
     padding: $tn-section-padding--top $tn-section-padding $tn-section-padding--bottom;
-    border-bottom: solid 1px $tn-section-border-color;
+    border-bottom: solid 2px $tn-section-border-color;
     &:last-child,
     &--no-border {
         border-bottom: 0;
