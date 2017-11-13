@@ -6,10 +6,10 @@ $ns: ns();
 .#{$ns}text-transform-none {
     text-transform: none !important;
 }
-.#{$ns}has-text-bold {
+.#{$ns}has-font-weight-bold {
     font-weight: bold !important;
 }
-.#{$ns}has-text-italic {
+.#{$ns}has-font-style-italic {
     font-style: italic !important;
 }
 .#{$ns}has-text-align-center {
