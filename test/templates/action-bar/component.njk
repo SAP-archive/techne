@@ -6,7 +6,7 @@ action_bar:
     aria={}
 -->
 {%- macro action_bar(properties={}, modifier={}, state={}, aria={}) %}
-<header class="tn-action-bar{{ modifier.block | modifier('action-bar') }}">
+<div class="tn-action-bar{{ modifier.block | modifier('action-bar') }}">
 {%- if properties.navigation %}
     <div class="tn-action-bar__navigation">
         {{ properties.navigation | indent(8) }}
@@ -25,5 +25,5 @@ action_bar:
         {%- endfor %}
     </div>
     {%- endif %}
-</header>
+</div>
 {%- endmacro %}

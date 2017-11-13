@@ -22,7 +22,7 @@ $block: ns(form);
     $tn-form-message-font-size: -1 !default;
     $tn-form-message-color: tn-color(text, 2) !default;
     $tn-form-item-gutter: $tn-width--gutter !default;
-    $tn-form-item-margin-botton: $tn-margin-bottom !default;
+    $tn-form-item-margin-bottom: tn-space(8) !default;
 
     &__group {
         @include tn-clearfix;
@@ -33,7 +33,7 @@ $block: ns(form);
         }
     }
     &__set {
-        margin-bottom: $tn-form-item-margin-botton;
+        margin-bottom: $tn-form-item-margin-bottom;
         .#{$block}__item {
             &--inline {
                 margin-bottom: 0;
@@ -45,7 +45,7 @@ $block: ns(form);
     }
     &__item {
         @include tn-last-child;
-        margin-bottom: $tn-margin-bottom;
+        margin-bottom: $tn-form-item-margin-bottom;
         &--check {
             @include tn-clearfix;
             position: relative;
