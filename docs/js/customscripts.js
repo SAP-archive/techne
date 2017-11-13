@@ -92,4 +92,50 @@ $( document ).ready(function() {
             }
         })
     }
+
+    //climb up DOM to get block element
+    function getBlock(control) {
+        var block = control.parentNode;
+        while (block.getAttribute("role") !== "tablist") {
+            block = block.parentNode;
+        }
+        return block;
+    }
+    //get all tablists
+    var tablists = document.querySelectorAll('[role="tablist"]');
+    //handle each tablist
+    for (var i = 0; i < tablists.length; i++) {
+        var tablist = tablists[i];
+        //get all the tabs
+        var tabs = tablist.querySelectorAll("[aria-controls]");
+        for (var j = 0; j < tabs.length; j++) {
+            var el = tabs[j];
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                //check states
+                var isDisabled = this.getAttribute("aria-disabled") === "true";
+                var isSelected = this.getAttribute("aria-selected") === "true";
+                if (isDisabled || isSelected) {
+                    return;
+                }
+                //get all controls in grouping
+                var block = getBlock(this);
+                var controls = block.querySelectorAll("[aria-controls]");
+                //handle each controls
+                for (var k = 0; k < controls.length; k++) {
+                    var control = controls[k];
+                    //new selected tab
+                    var isTriggerTab = control === this;
+                    //get panel
+                    var panelId = control.getAttribute("aria-controls");
+                    var panel = document.getElementById(panelId);
+                    //set states
+                    control.setAttribute("aria-selected", isTriggerTab);
+                    control.classList.remove('is-selected');
+                    panel.setAttribute("aria-expanded", isTriggerTab);
+                    panel.classList.remove('is-expanded');
+                }
+            })
+        }
+    }
 })();
