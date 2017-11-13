@@ -48,6 +48,10 @@ entries:
       url: /list-group.html
       output: web
 
+    - title: Modal
+      url: /modal.html
+      output: web
+
     - title: Pagination
       url: /pagination.html
       output: web
@@ -60,6 +64,10 @@ entries:
       url: /table.html
       output: web
 
+    - title: Tabs
+      url: /tabs.html
+      output: web
+
     - title: Toggle
       url: /toggle.html
       output: web
@@ -70,8 +78,4 @@ entries:
 
     - title: Tree
       url: /tree.html
-      output: web
-
-    - title: Modal
-      url: /modal.html
       output: web
