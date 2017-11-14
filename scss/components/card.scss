@@ -6,7 +6,7 @@
     .tn-card+(--button,--vertical)+(.is-disabled|[aria-disabled=true])
         .tn-card__media+(--round,--fill)
         .tn-card__content
-            .tn-card__header, .tn-card__description, .tn-card__status
+            .tn-card__header, .tn-card__description, .tn-card__price, .tn-card__status
         .tn-card__actions
 */
 
@@ -136,6 +136,16 @@ $block: ns(card);
         //width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    &__price {
+        @include tn-type(1);
+        color: tn-color(text,1);
+        &--strikthrough{
+            text-decoration: line-through;
+        }
+        &--saleprice{
+            color: tn-color(status,3);
+        }
     }
     &__status {
         @include tn-type(-3);

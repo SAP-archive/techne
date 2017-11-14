@@ -3,6 +3,8 @@
         "title": "CARD_HEADER",
         "description": "CARD_DESCRIPTION",
         "status": "CARD_STATUS",
+        "price": "CARD_PRICE",
+        "saleprice": "CARD_SALE_PRICE",
         "media": {
             "image": "https://techne.yaas.io/images/product-thumbnail-wide.png",
             "alt": "CARD_MEDIA_ALT"

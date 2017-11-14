@@ -15,6 +15,19 @@
          <p class="tn-card__description">
              {{ properties.description }}
          </p>
+         {%- if properties.price %}
+         <p class="tn-card__price tn-card__price--strikthrough">
+             {{ properties.price }}
+         </p>
+         <p class="tn-card__price tn-card__price--saleprice">
+             {{ properties.saleprice }}
+         </p>
+
+         {%- elseif properties.price %}
+         <p class="tn-card__price">
+             {{ properties.price }}
+         </p>
+         {%- endif -%}
          {%- if properties.status %}
          <p class="tn-card__status">
              {{ properties.status }}
