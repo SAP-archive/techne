@@ -48,6 +48,10 @@ entries:
       url: /list-group.html
       output: web
 
+    - title: Loading Spinner
+      url: /loading-spinner.html
+      output: web
+
     - title: Modal
       url: /modal.html
       output: web
