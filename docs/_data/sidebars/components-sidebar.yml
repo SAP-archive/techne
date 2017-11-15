@@ -36,6 +36,10 @@ entries:
       url: /form.html
       output: web
 
+    - title: Image
+      url: /image.html
+      output: web
+
     - title: Icons
       url: /icons.html
       output: web
