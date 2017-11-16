@@ -27,6 +27,9 @@ $block: ns(tree);
     max-width: 100%;
     border-bottom: solid 1px $tn-tree-border-color;
     margin-bottom: $tn-margin-bottom;
+    &:last-child {
+        margin-bottom: 0;
+    }
     &--header {
         border-bottom: 0;
         border-top: solid 1px $tn-tree-border-color;
