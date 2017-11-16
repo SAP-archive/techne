@@ -36,8 +36,17 @@ This started page have an **Panel**, **AddButton** and **Tree**.
 
 ## Detail 1
 
-This started page is an example of typical detail page.
+This starter page is an example of typical detail page.
 
 <a href="detail-1-starter-page.html" target="_blank">Open Tree Starter Pages</a>
+
+<br/>
+
+## Empty Page
+
+This starter page shows and example of an empty page.
+
+<a href="empty-starter-page.html" target="_blank">Open Tree Starter Pages</a>
+
 
 <br/>
