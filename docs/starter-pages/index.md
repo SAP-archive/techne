@@ -25,10 +25,19 @@ This started page have an **ActionBar**, **ToolBar** and **Table**.
 <a href="table-starter-page.html" target="_blank">Open Table Starter Pages</a>
 
 <br/>
+
 ## Tree
 
 This started page have an **Panel**, **AddButton** and **Tree**.
 
 <a href="tree-starter-page.html" target="_blank">Open Tree Starter Pages</a>
+
+<br/>
+
+## Empty Page
+
+This start page shows and example of an empty page.
+
+<a href="empty-starter-page.html" target="_blank">Open Tree Starter Pages</a>
 
 <br/>
