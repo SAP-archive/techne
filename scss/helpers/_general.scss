@@ -6,6 +6,12 @@ $ns: ns();
 .#{$ns}text-transform-none {
     text-transform: none !important;
 }
+.#{$ns}has-font-weight-bold {
+    font-weight: bold !important;
+}
+.#{$ns}has-font-style-italic {
+    font-style: italic !important;
+}
 .#{$ns}has-text-align-center {
     text-align: center !important;
 }
