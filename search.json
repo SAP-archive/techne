@@ -82,6 +82,10 @@
 
 
 
+
+
+
+
 {
 "title": "Dropdown",
 "tags": "",
@@ -90,6 +94,8 @@
 "summary": ""
 }
 ,
+
+
 
 
 
@@ -122,10 +128,10 @@
 
 
 {
-"title": "Layouts",
+"title": "Image",
 "tags": "",
-"keywords": "layouts",
-"url": "layouts.html",
+"keywords": "image",
+"url": "image.html",
 "summary": ""
 }
 ,
@@ -170,6 +176,17 @@
 "tags": "",
 "keywords": "list group, lists group, list, lists, groups",
 "url": "list-group.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Loading Spinner",
+"tags": "",
+"keywords": "loading, spinner",
+"url": "loading-spinner.html",
 "summary": ""
 }
 ,
@@ -250,6 +267,17 @@
 
 
 
+{
+"title": "Tabs",
+"tags": "",
+"keywords": "tab, tabs",
+"url": "tabs.html",
+"summary": ""
+}
+,
+
+
+
 
 
 
@@ -294,6 +322,8 @@
 
 
 
+
+
 {
 "title": "Tree",
 "tags": "",
@@ -302,8 +332,6 @@
 "summary": ""
 }
 ,
-
-
 
 
 

@@ -6,28 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="keywords" content=" app, application, layout">
-    <title>Application Layout | TECHNE</title>
+    <meta name="keywords" content=" cards starter page">
+    <title>Cards Starter Page | TECHNE</title>
     <link rel="stylesheet" href="css/techne.css">
 </head>
 <body class="tn-ui tn-ui--techne">
 
-<header class="tn-action-bar">
-    <div class="tn-action-bar__navigation">
-
+<header class="tn-page__header">
+    <div class="tn-action-bar">
+        <div class="tn-action-bar__navigation">
             <button class="tn-button tn-button--text tn-button--icon tn-button--large" aria-label="Back">
-            <span class="tn-icon tn-icon--backarrow tn-icon--large" role="presentation"></span>
-        </button>
-
+                <span class="tn-icon tn-icon--backarrow tn-icon--large" role="presentation"></span>
+            </button>
+        </div>
+        <h1 class="tn-action-bar__title">
+            Page Title
+        </h1>
+        <div class="tn-action-bar__actions">
+            <div class="tn-action-bar__action-item">
+                <button class="tn-button tn-button--text tn-button--action-bar">
+                    <span class="tn-icon tn-icon--close tn-icon--medium" role="presentation"></span>
+                    Cancel
+                </button>
+            </div>
+            <div class="tn-action-bar__action-item">
+                <button class="tn-button tn-button--action-bar">
+                    <span class="tn-icon tn-icon--checked tn-icon--medium" role="presentation"></span>
+                    Save
+                </button>
+            </div>
+        </div>
     </div>
-    <h1 class="tn-action-bar__title">
-        Page Title
-    </h1>
 </header>
 
 <div class="tn-has-background-color-background-2">
     <div class="tn-container tn-has-text-align-center tn-has-padding-reg tn-has-margin-none">
-        <p><em>Page description volutpat felis lectus nec consequat ipsum mattis id</em></p>
+        <p><em>Page level help message goes here</em></p>
     </div>
 </div>
 
@@ -146,154 +160,154 @@
     </div>
 </div>
 
-<div class="tn-container tn-has-text-align-right">
+<div class="tn-page__content">
+    <div class="tn-section">
+        <div class="tn-has-text-align-right">
     <button class="tn-button tn-button--text tn-button--small">
         <span class="tn-icon tn-icon--add" role="presentation"></span>ADD
     </button>
 </div>
 
-<div class="tn-container">
-    <div class="tn-card-group">
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+        <div class="tn-card-group">
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button">
-            <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button">
+        <div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
-        <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
-            <div class="tn-card__content">
-                <h2 class="tn-card__header">
-                    user.name@email.com
-                </h2>
-                <p class="tn-card__description">
-                    First name Last name
-                </p>
-                <p class="tn-card__status">
-                    <span class="tn-label">
-                        Inactive
-                    </span>
-                </p>
-            </div>
+    </div>
+    <div class="tn-card" role="button"><div class="tn-card__media tn-card__media--round" style="background-image: url(https://techne.yaas.io/images/product-thumbnail-wide.png)" aria-label="YaaS product thumbnail"></div>
+        <div class="tn-card__content">
+            <h2 class="tn-card__header">
+                user.name@email.com
+            </h2>
+            <p class="tn-card__description">
+                First name Last name
+            </p>
+            <p class="tn-card__status">
+                <span class="tn-label">
+                    Inactive
+                </span>
+            </p>
         </div>
     </div>
 </div>
 
-<div class="tn-toolbar">
+        <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--view">
         <div class="tn-toolbar__pagination">
             <ul class="tn-pagination">
@@ -323,6 +337,8 @@
     </div>
 </div>
 
+    </div>
+</div>
 
 
 <script type="text/javascript">

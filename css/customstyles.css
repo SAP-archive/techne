@@ -1312,7 +1312,3 @@ pre code{
 .tn-toggle input:focus{
     outline: none;
 }
-
-.tn-card:hover{
-    text-decoration: none;
-}
