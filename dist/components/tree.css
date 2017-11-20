@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -24,6 +24,9 @@
 .tn-tree:last-child {
   margin-bottom: 0;
   margin-right: 0
+}
+.tn-tree:last-child {
+  margin-bottom: 0
 }
 .tn-tree--header {
   border-bottom: 0;
@@ -63,7 +66,7 @@
 }
 .tn-tree__row--header {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   font-weight: 700;
   color: #7f90a4

@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -9,7 +9,7 @@
 */
 .tn-inline-help {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   position: relative;
   display: inline-block;
@@ -31,7 +31,7 @@
 }
 .tn-inline-help__content {
   font-size: .8125rem;
-  line-height: 1.53846;
+  line-height: 1.53847;
   font-weight: 400;
   background: #63758b;
   padding: 12px;

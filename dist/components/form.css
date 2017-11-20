@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -10,7 +10,7 @@
         .tn-form__group?
             .tn-form__item+(--check, --inline)
                 .tn-form__label(.is-required)
-                .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
+                .tn-form__control
             .tn-form__message(--help, --error, --warning)
 */
 .tn-form__group::after {
@@ -30,7 +30,7 @@
   margin-right: 0
 }
 .tn-form__set {
-  margin-bottom: 20px
+  margin-bottom: 32px
 }
 .tn-form__set .tn-form__item--inline {
   margin-bottom: 0
@@ -39,7 +39,7 @@
   margin-top: 8px
 }
 .tn-form__item {
-  margin-bottom: 20px
+  margin-bottom: 32px
 }
 .tn-form__item:last-child {
   margin-bottom: 0;
@@ -59,11 +59,13 @@
   line-height: 1.5;
   font-weight: 400;
   margin-bottom: 0;
-  display: inline-block;
   vertical-align: middle;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   line-height: 28px
 }
 .tn-form__item--check .tn-form__control {
@@ -85,7 +87,7 @@
 .tn-form__label,
 .tn-form__legend {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   display: block;
   margin-bottom: 8px;
@@ -109,7 +111,7 @@
   clear: both;
   display: block;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   color: #7f90a4;
   padding: 4px 0;

@@ -11,13 +11,13 @@ This is an in-development, experimental version of SAP Hybris Techne. It should 
 Latest minified file is Available via CDN below
 
 ```
-https://techne.yaas.io/libs/techne/2.0.0-alpha-6/techne.min.css
+https://techne.yaas.io/libs/techne/2.0.0-alpha-7/techne.min.css
 ```
 ### NPM
 Install the library.
 
 ````
-npm install techne@2.0.0-alpha-6 --save
+npm install techne@2.0.0-alpha-7 --save
 ````
 ## Usage
 Include the full library.

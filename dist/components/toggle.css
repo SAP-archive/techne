@@ -1,0 +1,77 @@
+/*!
+* Techne v2.0.0-alpha-7
+* Copyright (c) 2017 SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/
+/*!
+.tn-toggle+(--no-border)
+    .tn-toggle__content+()
+    .tn-toggle__title+()
+*/
+.tn-toggle {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 76px
+}
+.tn-toggle__switch {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  -webkit-transition: left 125ms ease-in;
+  transition: left 125ms ease-in;
+  pointer-events: none
+}
+.tn-toggle input {
+  background-color: #ccdaeb;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  vertical-align: middle
+}
+.tn-toggle input:checked::after {
+  display: none
+}
+.tn-toggle input:checked + .tn-toggle__switch {
+  left: calc(50% + 2px)
+}
+.tn-toggle input.is-disabled,
+.tn-toggle input[aria-disabled=true],
+.tn-toggle input[disabled] {
+  border-color: #ccdaeb
+}
+.tn-toggle input.is-disabled + .tn-toggle__switch,
+.tn-toggle input[aria-disabled=true] + .tn-toggle__switch,
+.tn-toggle input[disabled] + .tn-toggle__switch {
+  background-color: #d7d7d7
+}
+.tn-toggle--small {
+  height: 32px;
+  width: 60px
+}
+.tn-toggle--small input {
+  border-radius: 16px
+}
+.tn-toggle--small .tn-toggle__switch {
+  height: 24px;
+  width: 24px
+}
+.tn-toggle--large {
+  height: 52px;
+  width: 100px
+}
+.tn-toggle--large input {
+  border-radius: 26px
+}
+.tn-toggle--large .tn-toggle__switch {
+  height: 44px;
+  width: 44px
+}

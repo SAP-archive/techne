@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -28,7 +28,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -66,11 +66,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -257,10 +252,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -297,7 +292,7 @@
 }
 .tn-modal__title {
   font-size: 2.1875rem;
-  line-height: 1.25714;
+  line-height: 1.25715;
   font-family: sans-serif;
   font-weight: 500
 }

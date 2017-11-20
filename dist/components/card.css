@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -110,13 +110,13 @@
 .tn-card__header {
   color: #21262c;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 600;
   margin-bottom: 1px
 }
 .tn-card__description {
   font-size: .8125rem;
-  line-height: 1.53846;
+  line-height: 1.53847;
   font-weight: 400;
   margin-bottom: 12px;
   overflow: hidden;
@@ -124,7 +124,7 @@
 }
 .tn-card__status {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase
 }

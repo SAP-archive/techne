@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -72,7 +72,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -110,11 +110,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -301,10 +296,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -473,7 +468,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-family: sans-serif;
   font-weight: 400;
   display: block;
@@ -492,7 +487,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -572,7 +567,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 20px;
@@ -619,7 +614,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -657,11 +652,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -848,10 +838,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -968,13 +958,13 @@
 .tn-card__header {
   color: #21262c;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 600;
   margin-bottom: 1px
 }
 .tn-card__description {
   font-size: .8125rem;
-  line-height: 1.53846;
+  line-height: 1.53847;
   font-weight: 400;
   margin-bottom: 12px;
   overflow: hidden;
@@ -982,7 +972,7 @@
 }
 .tn-card__status {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase
 }
@@ -1212,7 +1202,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-family: sans-serif;
   font-weight: 400;
   display: block;
@@ -1231,7 +1221,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -1248,7 +1238,7 @@
         .tn-form__group?
             .tn-form__item+(--check, --inline)
                 .tn-form__label(.is-required)
-                .tn-form__control((.is-valid | .is-invalid | .is-warning), (.is-disabled|[disabled]), (.is-readonly|[readonly]))
+                .tn-form__control
             .tn-form__message(--help, --error, --warning)
 */
 .tn-form__group::after {
@@ -1268,7 +1258,7 @@
   margin-right: 0
 }
 .tn-form__set {
-  margin-bottom: 20px
+  margin-bottom: 32px
 }
 .tn-form__set .tn-form__item--inline {
   margin-bottom: 0
@@ -1277,7 +1267,7 @@
   margin-top: 8px
 }
 .tn-form__item {
-  margin-bottom: 20px
+  margin-bottom: 32px
 }
 .tn-form__item:last-child {
   margin-bottom: 0;
@@ -1297,11 +1287,13 @@
   line-height: 1.5;
   font-weight: 400;
   margin-bottom: 0;
-  display: inline-block;
   vertical-align: middle;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   line-height: 28px
 }
 .tn-form__item--check .tn-form__control {
@@ -1323,7 +1315,7 @@
 .tn-form__label,
 .tn-form__legend {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   display: block;
   margin-bottom: 8px;
@@ -1347,7 +1339,7 @@
   clear: both;
   display: block;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   color: #7f90a4;
   padding: 4px 0;
@@ -1460,7 +1452,7 @@
 }
 .tn-input-group__addon {
   font-size: .8125rem;
-  line-height: 1.53846;
+  line-height: 1.53847;
   font-family: sans-serif;
   font-weight: 700;
   text-transform: normal;
@@ -1567,7 +1559,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase
 }
@@ -1605,7 +1597,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -1643,11 +1635,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -1834,10 +1821,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -2006,7 +1993,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-family: sans-serif;
   font-weight: 400;
   display: block;
@@ -2025,7 +2012,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -2164,7 +2151,7 @@
 }
 .tn-toolbar__applied-filter-item {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -2192,7 +2179,7 @@
 }
 .tn-toolbar__applied-filter-clear {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 600;
   text-transform: uppercase
@@ -2222,7 +2209,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -2260,11 +2247,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -2451,10 +2433,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -2620,7 +2602,7 @@
   line-height: 1.5;
   color: #21262c;
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0;
@@ -2692,7 +2674,7 @@
 }
 .tn-pagination__more {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
   color: #21262c;
@@ -2742,7 +2724,7 @@
 }
 .tn-table thead {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   color: #7f90a4
 }
@@ -2764,6 +2746,65 @@
 .tn-table td:first-child,
 .tn-table th:first-child {
   padding-left: 32px
+}
+/*!
+.tn-tabs+()
+    .tn-tabs__item?
+    .tn-tabs__link+((.is-selected|[aria-selected=true]),(.is-disabled|[aria-disabled=true]))
+.tn-tabs__panel+([aria-expanded]|.is-expanded)
+*/
+.tn-tabs {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 40px;
+  list-style: none;
+  border-bottom: solid 1px #ccdaeb
+}
+.tn-tabs__link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 1.125rem;
+  line-height: 1.33334;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #009cdf;
+  border-bottom: solid 2px transparent;
+  -webkit-transition: all 125ms ease-in;
+  transition: all 125ms ease-in;
+  cursor: pointer
+}
+.tn-tabs__link:hover {
+  border-bottom: solid 2px #009cdf;
+  color: #008ac6
+}
+.tn-tabs__link.is-selected,
+.tn-tabs__link[aria-selected=true] {
+  color: #21262c;
+  border-bottom: solid 2px #009cdf
+}
+.tn-tabs__link.is-disabled,
+.tn-tabs__link[aria-disabled=true] {
+  color: #7f90a4;
+  cursor: not-allowed
+}
+.tn-tabs__link.is-disabled:hover,
+.tn-tabs__link[aria-disabled=true]:hover {
+  border-bottom-color: transparent
+}
+.tn-tabs__panel[aria-expanded=false] {
+  display: none
+}
+.tn-tabs__panel.is-expanded,
+.tn-tabs__panel[aria-expanded=true] {
+  display: block
 }
 /*!
 .tn-button+( (--small | --large), --icon, --text, --link, --action-bar)+( (.is-disabled | [aria-disabled=true]) | (.is-selected | [aria-selected=true] | (.is-pressed | [aria-pressed=true]))
@@ -2790,7 +2831,7 @@
   white-space: nowrap;
   background-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-family: sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -2828,11 +2869,6 @@
   line-height: 76px;
   padding-left: 28px;
   padding-right: 28px
-}
-.tn-button--icon.tn-button--action-bar,
-.tn-button--large.tn-button--icon {
-  padding-left: 20px;
-  padding-right: 20px
 }
 .tn-button:hover,
 .tn-modal__button-primary:hover,
@@ -3019,10 +3055,10 @@
 }
 .tn-button--action-bar {
   font-size: .75rem;
-  line-height: 1.33333;
+  line-height: 1.33334;
   font-weight: 700;
   text-transform: uppercase;
-  width: 135px;
+  min-width: 135px;
   line-height: 32px;
   vertical-align: middle
 }
@@ -3059,7 +3095,7 @@
 }
 .tn-modal__title {
   font-size: 2.1875rem;
-  line-height: 1.25714;
+  line-height: 1.25715;
   font-family: sans-serif;
   font-weight: 500
 }
@@ -3094,6 +3130,9 @@
 .tn-tree:last-child {
   margin-bottom: 0;
   margin-right: 0
+}
+.tn-tree:last-child {
+  margin-bottom: 0
 }
 .tn-tree--header {
   border-bottom: 0;
@@ -3133,7 +3172,7 @@
 }
 .tn-tree__row--header {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   font-weight: 700;
   color: #7f90a4
@@ -3275,7 +3314,7 @@
 */
 .tn-inline-help {
   font-size: .875rem;
-  line-height: 1.42857;
+  line-height: 1.42858;
   font-weight: 400;
   position: relative;
   display: inline-block;
@@ -3297,7 +3336,7 @@
 }
 .tn-inline-help__content {
   font-size: .8125rem;
-  line-height: 1.53846;
+  line-height: 1.53847;
   font-weight: 400;
   background: #63758b;
   padding: 12px;
@@ -3388,4 +3427,305 @@
 .tn-nav__link.is-selected,
 .tn-nav__link[aria-selected=true] {
   color: #21262c
+}
+/*!
+.tn-tabs+()
+    .tn-tabs__item?
+    .tn-tabs__link+((.is-selected|[aria-selected=true]),(.is-disabled|[aria-disabled=true]))
+.tn-tabs__panel+([aria-expanded]|.is-expanded)
+*/
+.tn-tabs {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 40px;
+  list-style: none;
+  border-bottom: solid 1px #ccdaeb
+}
+.tn-tabs__link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 1.125rem;
+  line-height: 1.33334;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #009cdf;
+  border-bottom: solid 2px transparent;
+  -webkit-transition: all 125ms ease-in;
+  transition: all 125ms ease-in;
+  cursor: pointer
+}
+.tn-tabs__link:hover {
+  border-bottom: solid 2px #009cdf;
+  color: #008ac6
+}
+.tn-tabs__link.is-selected,
+.tn-tabs__link[aria-selected=true] {
+  color: #21262c;
+  border-bottom: solid 2px #009cdf
+}
+.tn-tabs__link.is-disabled,
+.tn-tabs__link[aria-disabled=true] {
+  color: #7f90a4;
+  cursor: not-allowed
+}
+.tn-tabs__link.is-disabled:hover,
+.tn-tabs__link[aria-disabled=true]:hover {
+  border-bottom-color: transparent
+}
+.tn-tabs__panel[aria-expanded=false] {
+  display: none
+}
+.tn-tabs__panel.is-expanded,
+.tn-tabs__panel[aria-expanded=true] {
+  display: block
+}
+/*!
+.tn-toggle+(--no-border)
+    .tn-toggle__content+()
+    .tn-toggle__title+()
+*/
+.tn-toggle {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #21262c;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 76px
+}
+.tn-toggle__switch {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  -webkit-transition: left 125ms ease-in;
+  transition: left 125ms ease-in;
+  pointer-events: none
+}
+.tn-toggle input {
+  background-color: #ccdaeb;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  vertical-align: middle
+}
+.tn-toggle input:checked::after {
+  display: none
+}
+.tn-toggle input:checked + .tn-toggle__switch {
+  left: calc(50% + 2px)
+}
+.tn-toggle input.is-disabled,
+.tn-toggle input[aria-disabled=true],
+.tn-toggle input[disabled] {
+  border-color: #ccdaeb
+}
+.tn-toggle input.is-disabled + .tn-toggle__switch,
+.tn-toggle input[aria-disabled=true] + .tn-toggle__switch,
+.tn-toggle input[disabled] + .tn-toggle__switch {
+  background-color: #d7d7d7
+}
+.tn-toggle--small {
+  height: 32px;
+  width: 60px
+}
+.tn-toggle--small input {
+  border-radius: 16px
+}
+.tn-toggle--small .tn-toggle__switch {
+  height: 24px;
+  width: 24px
+}
+.tn-toggle--large {
+  height: 52px;
+  width: 100px
+}
+.tn-toggle--large input {
+  border-radius: 26px
+}
+.tn-toggle--large .tn-toggle__switch {
+  height: 44px;
+  width: 44px
+}
+/*!
+.tn-spinner+(.is-hidden|[aria-hidden=true])
+
+Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+* Copyright 2015 Daniel Cardoso <@DanielCardoso>
+* Licensed under MIT
+*/
+.tn-spinner {
+  position: relative;
+  width: 29px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto
+}
+.tn-spinner.is-hidden,
+.tn-spinner[aria-hidden=true] {
+  display: none
+}
+.is-busy,
+[aria-busy=true] {
+  position: relative;
+  min-height: 40px
+}
+.is-busy::before,
+[aria-busy=true]::before {
+  position: absolute;
+  background-color: rgba(255,255,255,.95);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: ""
+}
+.is-busy .tn-spinner,
+[aria-busy=true] .tn-spinner {
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 29px/2);
+  top: calc(50% - 40px/2)
+}
+.tn-spinner::after,
+.tn-spinner::before {
+  content: "";
+  position: relative;
+  width: 5px;
+  height: 100%;
+  background-color: #009cdf
+}
+.tn-spinner div::after,
+.tn-spinner div::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #009cdf
+}
+.tn-spinner div::before {
+  left: 8px
+}
+.tn-spinner div::after {
+  right: 8px
+}
+.tn-spinner::before {
+  -webkit-animation: line-scale 1s infinite ease;
+  animation: line-scale 1s infinite ease;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s
+}
+.tn-spinner div::before {
+  -webkit-animation: line-scale 1s infinite ease;
+  animation: line-scale 1s infinite ease;
+  -webkit-animation-delay: -.9s;
+  animation-delay: -.9s
+}
+.tn-spinner div::after {
+  -webkit-animation: line-scale 1s infinite ease;
+  animation: line-scale 1s infinite ease;
+  -webkit-animation-delay: -.8s;
+  animation-delay: -.8s
+}
+.tn-spinner::after {
+  -webkit-animation: line-scale 1s infinite ease;
+  animation: line-scale 1s infinite ease;
+  -webkit-animation-delay: -.7s;
+  animation-delay: -.7s
+}
+@-webkit-keyframes line-scale {
+  0%,
+  100%,
+  40% {
+    -webkit-transform: scaleY(.4);
+    transform: scaleY(.4)
+  }
+  80% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+  }
+}
+@keyframes line-scale {
+  0%,
+  100%,
+  40% {
+    -webkit-transform: scaleY(.4);
+    transform: scaleY(.4)
+  }
+  80% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+  }
+}
+/*!
+.tn-image+((--rounded|--circle), (--xs|--s|--m|--l|--xl|--xxl), (--product|--profile))
+*/
+.tn-image {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%
+}
+.tn-image--xs {
+  width: 20px;
+  height: 20px
+}
+.tn-image--s {
+  width: 36px;
+  height: 36px
+}
+.tn-image--m {
+  width: 52px;
+  height: 52px
+}
+.tn-image--l {
+  width: 72px;
+  height: 72px
+}
+.tn-image--xl {
+  width: 92px;
+  height: 92px
+}
+.tn-image--xxl {
+  width: 120px;
+  height: 120px
+}
+.tn-image--rounded {
+  border-radius: 8px
+}
+.tn-image--rounded.tn-image--s,
+.tn-image--rounded.tn-image--xs {
+  border-radius: 4px
+}
+.tn-image--circle {
+  border-radius: 50%
+}
+.tn-image--product,
+.tn-image--profile {
+  background-color: #d7d7d7
+}
+.tn-image--profile {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+dG4taW1hZ2UtYmFja2dyb3VuZC1pbWFnZS0tcHJvZmlsZTwvdGl0bGU+PHBhdGggZD0iTTI2IDM5di0xaDExYy0yLjc1NC42NjctNi40MiAxLTExIDF6bTAgMGMtMi4xNDggMC01LjgxNS0uMzMzLTExLTFoMTF2MXptMTEtMUgxNWMwLTUuNTU4IDMuNDY0LTEwLjIzNCA4LjE2NS0xMS41OThBNy4wMDIgNy4wMDIgMCAwIDEgMjYgMTNhNyA3IDAgMCAxIDIuODM1IDEzLjQwMkMzMy41MzYgMjcuNzY2IDM3IDMyLjQ0MiAzNyAzOHoiIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==)
+}
+.tn-image--product {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+dG4taW1hZ2UtYmFja2dyb3VuZC1pbWFnZS0tcHJvZHVjdDwvdGl0bGU+PHBhdGggZD0iTTEzLjg3NiAxOC4yMjNsNS44NzQtMi41NTUgMTEgNS45MzQtNS4yOTEgMi4xNzgtMTEuNTgzLTUuNTU3ek0xMyAzMy4wNDN2LTE0LjAzbDExLjkxNyA1LjcxdjE0LjA5MWwtMTEuNTktNS4yNzVhLjU0LjU0IDAgMCAxLS4zMjctLjQ5N3ptMy4yNS05LjIwOXY1LjQxN2EuNTQuNTQgMCAwIDAgLjMxNy40OTNsNS40MTcgMi43MDhjLjM1OC4xNjMuNzY2LS4xLjc2Ni0uNDkzdi01LjQxN2EuNTQyLjU0MiAwIDAgMC0uMzE3LS40OTJsLTUuNDE3LTIuNzA5YS41NDIuNTQyIDAgMCAwLS43NjYuNDkzem05Ljc1Ljg4OWwxMy01LjcxdjE0LjAzYS41NC41NCAwIDAgMS0uMzI2LjQ5NkwyNiAzOC44MTVWMjQuNzIzem0xMi4xMjQtNi41bC02LjE0IDIuODEzLTEwLjk3LTUuOTE3IDQuNzctMi4wNzNhLjUzNi41MzYgMCAwIDEgLjQzMiAwbDExLjkwOCA1LjE3N3oiIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==)
 }

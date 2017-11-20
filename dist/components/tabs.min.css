@@ -1,0 +1,6 @@
+/*!
+* Techne v2.0.0-alpha-7
+* Copyright (c) 2017 SAP SE or an SAP affiliate company.
+* Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
+*/
+.tn-tabs{font-size:1rem;line-height:1.5;color:#21262c;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:40px;list-style:none;border-bottom:solid 1px #ccdaeb}.tn-tabs__link{display:block;padding:12px 20px;font-size:1.125rem;line-height:1.33334;font-family:sans-serif;font-weight:500;text-transform:uppercase;color:#009cdf;border-bottom:solid 2px transparent;-webkit-transition:all 125ms ease-in;transition:all 125ms ease-in;cursor:pointer}.tn-tabs__link:hover{border-bottom:solid 2px #009cdf;color:#008ac6}.tn-tabs__link.is-selected,.tn-tabs__link[aria-selected=true]{color:#21262c;border-bottom:solid 2px #009cdf}.tn-tabs__link.is-disabled,.tn-tabs__link[aria-disabled=true]{color:#7f90a4;cursor:not-allowed}.tn-tabs__link.is-disabled:hover,.tn-tabs__link[aria-disabled=true]:hover{border-bottom-color:transparent}.tn-tabs__panel[aria-expanded=false]{display:none}.tn-tabs__panel.is-expanded,.tn-tabs__panel[aria-expanded=true]{display:block}

@@ -1,5 +1,5 @@
 /*!
-* Techne v2.0.0-alpha-6
+* Techne v2.0.0-alpha-7
 * Copyright (c) 2017 SAP SE or an SAP affiliate company.
 * Licensed under Apache License 2.0 (https://github.com/SAP/techne/blob/master/LICENSE)
 */
@@ -183,6 +183,10 @@ input[type=checkbox]:-ms-input-placeholder,
 input[type=radio]:-ms-input-placeholder {
   color: #63758b
 }
+input[type=checkbox]::-ms-input-placeholder,
+input[type=radio]::-ms-input-placeholder {
+  color: #63758b
+}
 input[type=checkbox]::placeholder,
 input[type=radio]::placeholder {
   color: #63758b
@@ -336,7 +340,7 @@ textarea[readonly] {
   border-width: 0 0 1px
 }
 textarea {
-  height: 156px;
+  height: 104px;
   padding-top: 16px
 }
 select {
