@@ -1,7 +1,7 @@
 ---
 title: Modal
 keywords: modal, modals
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: modal.html
 folder: components
@@ -41,7 +41,7 @@ Used when you need to inform the user but the [Alert Component](alert.html) does
 
 {% include display-component.html component=default-modal %}
 
-<br/> 
+<br/>
 
 ## Confirmation Modal
 

@@ -1,7 +1,7 @@
 ---
 title: Toolbar
 keywords: toolbar
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: toolbar.html
 folder: components

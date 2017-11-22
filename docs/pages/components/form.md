@@ -1,7 +1,7 @@
 ---
 title: Forms
 keywords: form
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: form.html
 folder: components

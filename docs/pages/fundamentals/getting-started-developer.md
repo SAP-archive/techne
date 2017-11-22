@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+title: Developers
 keywords: getting started
 sidebar: left-navigation-sidebar
 toc: false
-permalink: index.html
-folder: getting-started
+permalink: getting-started-developers.html
+folder: fundamentals
 summary: This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version.
 ---
 

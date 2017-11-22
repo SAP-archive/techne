@@ -1,7 +1,7 @@
 ---
 title: Input Group
 keywords: input group, input groups, input, groups
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: input-group.html
 folder: components

@@ -1,7 +1,7 @@
 ---
 title: Action Bar
 keywords: action bar, action, bar
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: action-bar.html
 folder: components

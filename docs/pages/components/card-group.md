@@ -1,7 +1,7 @@
 ---
 title: Card Group
 keywords: card group
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: card-group.html
 folder: components
@@ -13,7 +13,7 @@ The Card Group is used to display a collection of Cards representing objects of 
 
 ## Three columns layout
 
-The default layout of the Cards group is a three columns layout. The three cards per row will adjust to fill the width of the container element. 
+The default layout of the Cards group is a three columns layout. The three cards per row will adjust to fill the width of the container element.
 
 {% capture default-card %}
 <div class="tn-card-group">

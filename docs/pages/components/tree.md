@@ -1,7 +1,7 @@
 ---
 title: Tree
 keywords: tree
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: tree.html
 folder: components

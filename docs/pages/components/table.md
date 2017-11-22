@@ -1,7 +1,7 @@
 ---
 title: Table
 keywords: table
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: table.html
 folder: components
@@ -29,7 +29,7 @@ Header columns should be present to allow the user to know and understand the da
     <tbody>
         <tr>
             <td><img src="http://api.adorable.io/avatars/50/rodney.artichoke@hybris.com.png"
-            class="tn-has-border-radius-50percent" 
+            class="tn-has-border-radius-50percent"
             width="32" height="32"></td>
             <td><a class="tn-has-font-weight-semi">user.name@email.com</a></td>
             <td>First Name</td>

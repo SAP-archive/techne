@@ -1,13 +1,31 @@
-# Components sidebar
+# Left navigation
 entries:
 - title:
 
   folders:
+
+  # Fundamentals
+  - title: Fundamentals
+    output: web
+
+    folderitems:
+    - title: Getting Started - Developers
+      url: /getting-started-developers.html
+      output: web
+
+    - title: Getting Started - Designers
+      url: /getting-started-designers.html
+      output: web
+
+    - title: UI Guidelines
+      url:
+      output: web
+
+  # Components
   - title: Components
     output: web
 
     folderitems:
-
     - title: Action Bar
       url: /action-bar.html
       output: web
@@ -85,5 +103,14 @@ entries:
       output: web
 
     - title: Tree
+      url: /tree.html
+      output: web
+
+  # Resources
+  - title: Resources
+    output: web
+
+    folderitems:
+    - title: UI Kit
       url: /tree.html
       output: web

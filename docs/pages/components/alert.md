@@ -1,7 +1,7 @@
 ---
 title: Alerts
 keywords: alert, alerts
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: alert.html
 folder: components

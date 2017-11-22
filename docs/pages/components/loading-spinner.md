@@ -1,7 +1,7 @@
 ---
 title: Loading Spinner
 keywords: loading, spinner
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: loading-spinner.html
 folder: components
