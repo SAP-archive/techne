@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" modal, modals">
+<title>Modal | TECHNE</title>
+
+<link rel="stylesheet" href="css/syntax.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/techne.css">
+
+<!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="tn-icon tn-icon--arrow"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle">TECHNE</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <!-- standard links -->
+                
+
+                
+
+                
+                    
+                        
+                            <li><a href="index.html">Get Started</a></li>
+                        
+                    
+                        
+                            <li><a href="styles.html">Styles</a></li>
+                        
+                    
+                        
+                            <li><a href="components.html">Components</a></li>
+                        
+                    
+                        
+                            <li><a href="starter-pages.html">Starter Pages</a></li>
+                        
+                    
+                
+
+                <!-- entries with drop-downs appear here -->
+
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+                <!-- feedback link -->
+                
+
+
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Modal">{title}</a></li>',
+                    noResultsText: '<li class="no-search-results">No results found</li>',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">
+        <h2></h2>
+    </li>
+    
+    
+    
+    <li>
+        <a href="" class="text-large">Components</a>
+        <ul>
+            
+            
+            
+            <li><a href="action-bar.html">Action Bar</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="alert.html">Alert</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="button.html">Button</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="card.html">Card</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="card-group.html">Card Group</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="dropdown.html">Dropdown</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="form.html">Forms</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="image.html">Image</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="icons.html">Icons</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="input-group.html">Input Group</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="list-group.html">List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="loading-spinner.html">Loading Spinner</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="modal.html">Modal</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pagination.html">Pagination</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="status-indicators.html">Status Indicators</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="table.html">Table</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tabs.html">Tabs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="toggle.html">Toggle</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="toolbar.html">Toolbar</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tree.html">Tree</a></li>
+            
+            
+            
+            
+        </ul>
+    </li>
+    
+    
+    
+
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Modal</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+
+    
+
+  <p>The Modal component is a high level component, used as a temporary container to be displayed on response of an user action. Can be used to collect simple information from the user: a small form; or give some contextual information that doesn’t need the use user to navigate to a new page.</p>
+
+<p><br /></p>
+
+<h2 id="informational-modal">Informational Modal</h2>
+
+<p>Used when you need to inform the user but the <a href="alert.html">Alert Component</a> doesn’t fit all the information. Also when the user have to acknowledge the information, actively, by clicking a button or closing the Modal.</p>
+
+<div class="modal-demo-bg">
+<div class="tn-modal">
+    <div class="tn-modal__content">
+        <div class="tn-modal__header">
+            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
+            </button>
+            <h4 class="tn-modal__title">Product Added</h4>
+        </div>
+        <div class="tn-modal__body">
+            <b>Thew new product have been added to your catalog.</b><br />
+            <br />
+            Automatic Product ID: <b>PD-3465334</b><br />
+            <br />
+            Expiration date: <b>13/03/2018</b><br />
+            <br />
+        </div>
+    </div>
+</div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-demo-bg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Product Added<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;b&gt;</span>Thew new product have been added to your catalog.<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+            Automatic Product ID: <span class="nt">&lt;b&gt;</span>PD-3465334<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+            Expiration date: <span class="nt">&lt;b&gt;</span>13/03/2018<span class="nt">&lt;/b&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;br/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="confirmation-modal">Confirmation Modal</h2>
+
+<p>Used to confirm with the user before continuing with destructive or complex actions. In this case the modal have two buttons at the bottom. With the “positive” path always been the primary button.</p>
+
+<div class="modal-demo-bg">
+<div class="tn-modal">
+    <div class="tn-modal__content">
+        <div class="tn-modal__header">
+            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
+            </button>
+            <h4 class="tn-modal__title">Delete</h4>
+        </div>
+        <div class="tn-modal__body">
+            Do you want to delete item <b>X</b>?
+        </div>
+        <footer class="tn-modal__footer-items">
+            <button class="tn-modal__button-primary">Yes</button>
+            <button class="tn-modal__button-secondary">No</button>
+        </footer>
+    </div>
+</div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-demo-bg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
+            Do you want to delete item <span class="nt">&lt;b&gt;</span>X<span class="nt">&lt;/b&gt;</span>?
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"tn-modal__footer-items"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-primary"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-secondary"</span><span class="nt">&gt;</span>No<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="form-modal">Form Modal</h2>
+
+<p>Used to collect simple information from the user. Please use with care and don’t include more than five inputs on a modal to avoid scrolling inside the modal.</p>
+
+<div class="modal-demo-bg">
+<div class="tn-modal">
+    <div class="tn-modal__content">
+        <div class="tn-modal__header">
+            <button class="tn-button tn-button--text tn-button--icon tn-button--small" aria-label="close">
+                <span class="tn-icon tn-icon--close" role="presentation"></span>
+            </button>
+            <h4 class="tn-modal__title">Invite user</h4>
+        </div>
+        <div class="tn-modal__body">
+        <div class="tn-form__group">
+            <div class="tn-form__item">
+                <label class="tn-form__label is-required" for="input-2">Email*</label>
+                <input class="tn-form__control" type="text" id="input-2" />
+            </div>
+        </div>
+        </div>
+        <footer class="tn-modal__footer-items">
+            <button class="tn-modal__button-primary">Invite</button>
+            <button class="tn-modal__button-secondary">Cancel</button>
+        </footer>
+    </div>
+</div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-demo-bg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon tn-button--small"</span> <span class="na">aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"tn-modal__title"</span><span class="nt">&gt;</span>Invite user<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-modal__body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-form__item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"tn-form__label is-required"</span> <span class="na">for=</span><span class="s">"input-2"</span><span class="nt">&gt;</span>Email*<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"tn-form__control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"tn-modal__footer-items"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-primary"</span><span class="nt">&gt;</span>Invite<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-modal__button-secondary"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+			Techne 2.0 Alpha
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
