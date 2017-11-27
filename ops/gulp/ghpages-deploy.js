@@ -28,7 +28,7 @@ const prepareDeploy = (cb) => {
 const ghDeploy = (cb) => {
 
     return gulp.src(paths.srcDeploy)
-      .pipe(ghPages({remoteUrl:'git@github.com:SAP/techne.git'}));
+      .pipe(ghPages({branch:'gh-pages'}));
 }
 
 gulp.task('prepareDeploy', prepareDeploy);
