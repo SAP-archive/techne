@@ -1,7 +1,5 @@
 language: node_js
 sudo: required
-git: 
-- 2.13
 node_js:
 - 7
 
