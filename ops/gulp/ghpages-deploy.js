@@ -28,7 +28,7 @@ const prepareDeploy = (cb) => {
 //Task for deploying compiled HTML to gh-pages branch for GitHub Pages hosting
 const ghDeploy = (cb) => {
 
-    ghPages.publish(paths.srcDeploy, cb);
+    ghPages.publish(paths.destPrepare, cb);
     //return gulp.src(paths.srcDeploy)
     //  .pipe(ghPages());
 }
