@@ -4,8 +4,11 @@ node_js:
 - 7
 
 before_install:
-- sudo apt-get update
-- sudo apt-cache show git #sudo apt-get install git=2.13
+- wget https://www.kernel.org/pub/software/scm/git/git-2.13.5.tar.gz
+- tar -zxf git-2.13.5.tar.gz
+- cd git-1.8.1.2
+- make prefix=/usr/local all
+- sudo make prefix=/usr/local install
 - git version
 - openssl aes-256-cbc -K $encrypted_f38ec6afcde3_key -iv $encrypted_f38ec6afcde3_iv -in deploy-key.enc -out deploy-key -d
 - chmod 600 deploy-key
