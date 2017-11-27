@@ -28,7 +28,7 @@ const prepareDeploy = (cb) => {
 const ghDeploy = (cb) => {
 
     return gulp.src(paths.srcDeploy)
-      .pipe(ghPages({branch:'gh-pages'}));
+      .pipe(ghPages());
 }
 
 gulp.task('prepareDeploy', prepareDeploy);
