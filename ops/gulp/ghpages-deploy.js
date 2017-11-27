@@ -28,14 +28,9 @@ const prepareDeploy = (cb) => {
 //Task for deploying compiled HTML to gh-pages branch for GitHub Pages hosting
 const ghDeploy = (cb) => {
 
-    ghPages.publish(paths.destPrepare, (err) => {
-        if (err) {
-            console.log('ghDeploy failes', err)
-            //needed to break travis build in case of errors
-            process.exit(1);
-        }
-        cb();
-    });
+    ghPages.publish(paths.destPrepare, {
+        repo: 'git@github.com:SAP/techne.git'
+    }, cb);
     //return gulp.src(paths.srcDeploy)
     //  .pipe(ghPages());
 }
