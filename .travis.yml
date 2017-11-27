@@ -10,6 +10,7 @@ before_install:
 - make prefix=/usr/local all
 - sudo make prefix=/usr/local install
 - git version
+- cd ..
 - openssl aes-256-cbc -K $encrypted_f38ec6afcde3_key -iv $encrypted_f38ec6afcde3_iv -in deploy-key.enc -out deploy-key -d
 - chmod 600 deploy-key
 - eval `ssh-agent -s`
