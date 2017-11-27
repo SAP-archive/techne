@@ -1,6 +1,5 @@
 const gulp = require('gulp');
-//const ghPages = require('gulp-gh-pages');
-const ghPages = require('gh-pages');
+const ghPages = require('gulp-gh-pages');
 const gulpSequence = require('gulp-sequence');
 
 const paths = {
@@ -28,11 +27,8 @@ const prepareDeploy = (cb) => {
 //Task for deploying compiled HTML to gh-pages branch for GitHub Pages hosting
 const ghDeploy = (cb) => {
 
-    ghPages.publish(paths.destPrepare, {
-        repo: 'git@github.com:SAP/techne.git'
-    }, cb);
-    //return gulp.src(paths.srcDeploy)
-    //  .pipe(ghPages());
+    return gulp.src(paths.srcDeploy)
+      .pipe(ghPages());
 }
 
 gulp.task('prepareDeploy', prepareDeploy);
