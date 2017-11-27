@@ -205,7 +205,7 @@
             
             
             
-            <li class="active"><a href="loading-spinner.html">Loading Spinner</a></li>
+            <li class="active"><a href="loading-spinner.html">Loading Indicators</a></li>
             
             
             
@@ -298,8 +298,9 @@
 
     
 
-  <p><br />
-Toggle the <code class="highlighter-rouge">aria-hidden</code> attribute to hide/show the spinner.</p>
+  <p>Loading indicators are used to signal the user that data on the page is still loading, or a process is been performed on the server.</p>
+
+<p>Loading indicators are not visible all the time, only when needed. To show and hide the loading indicator the <code class="highlighter-rouge">aria-hidden</code> attribute is used to hide/show the element.</p>
 
 <div class="tn-spinner" aria-hidden="false" aria-label="Loading">
     <div></div>
@@ -311,8 +312,8 @@ Toggle the <code class="highlighter-rouge">aria-hidden</code> attribute to hide/
 
 <p><br /></p>
 
-<h2 id="aria-busytrue">[aria-busy=”true”]</h2>
-<p>The spinnner is most often used within another component to indicate the loading state. Any container (even <code class="highlighter-rouge">ui-, app-, and page-level</code>) can be “activated” by setting <code class="highlighter-rouge">aria-busy="true"</code>.</p>
+<h2 id="usage-with-other-elements">Usage with other elements</h2>
+<p>The loading indicators is most often used within another component to indicate the loading state. Any container (even <code class="highlighter-rouge">ui-, app-, and page-level</code>) can be “activated” by setting <code class="highlighter-rouge">aria-busy="true"</code>.</p>
 
 <p>The spinner should be included inside the container. Its visibility can be toggled in relation to the <code class="highlighter-rouge">aria-busy</code> attribute. They should always be opposites, i.e, if currently loading, <code class="highlighter-rouge">section[aria-busy="true"], .tn-spinner[aria-hidden="false"]</code>, once the content is loaded, toggle to false and true respectively.</p>
 
