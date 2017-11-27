@@ -139,22 +139,22 @@
 
 
 {
-"title": "Getting Started",
+"title": "Starter Pages",
 "tags": "",
-"keywords": "getting started",
-"url": "index.html",
-"summary": "This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version."
+"keywords": "starter page",
+"url": "starter-pages.html",
+"summary": ""
 }
 ,
 
 
 
 {
-"title": "Starter Pages",
+"title": "Getting Started",
 "tags": "",
-"keywords": "starter page",
-"url": "starter-pages.html",
-"summary": ""
+"keywords": "getting started",
+"url": "index.html",
+"summary": "This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version."
 }
 ,
 
@@ -322,8 +322,6 @@
 
 
 
-
-
 {
 "title": "Tree",
 "tags": "",
@@ -332,6 +330,8 @@
 "summary": ""
 }
 ,
+
+
 
 
 
