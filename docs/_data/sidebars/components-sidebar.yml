@@ -52,7 +52,7 @@ entries:
       url: /list-group.html
       output: web
 
-    - title: Loading Spinner
+    - title: Loading Indicators
       url: /loading-spinner.html
       output: web
 
