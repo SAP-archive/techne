@@ -1,9 +1,9 @@
 ---
-title: Starter Pages
-keywords: starter page
+title: Layouts
+keywords: layouts
 toc: false
 sidebar: left-navigation-sidebar
-permalink: starter-pages.html
+permalink: layouts.html
 folder: components
 summary:
 ---

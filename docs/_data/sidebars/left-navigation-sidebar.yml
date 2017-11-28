@@ -17,8 +17,37 @@ entries:
       url: /getting-started-designers.html
       output: web
 
-    - title: UI Guidelines
-      url:
+  - title: UI Guidelines
+    url:
+    output: web
+    folderitems:
+    - title: Colors
+      url: /colors.html
+      output: web
+
+    - title: Grid
+      url: /grid.html
+      output: web
+
+    - title: Spacing
+      url: /spacing.html
+      output: web
+
+    - title: Type
+      url: /type.html
+      output: web
+
+  - title: Layouts & Starter Pages
+    url:
+    output: web
+
+    folderitems:
+    - title: Layouts
+      url: /layouts.html
+      output: web
+
+    - title: Starter Pages
+      url: /starter-pages.html
       output: web
 
   # Components
@@ -112,5 +141,5 @@ entries:
 
     folderitems:
     - title: UI Kit
-      url: /tree.html
+      url: /ui-kit.html
       output: web

@@ -42,7 +42,7 @@ feedback_subject_line: Fundamental UI Documentation Feedback
 feedback_email: fundamentalui@sap.com
 
 # if you uncomment the previous line, the Feedback link gets removed
-feedback_disable: true
+feedback_disable: false
 
 # if you uncomment the previous line, it changes the Feedback text
 # feedback_text: "Need help?"
@@ -110,12 +110,6 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 sidebars:
 - left-navigation-sidebar
-- home-sidebar
-- getting-started-sidebar
-- styles-sidebar
-- guides-sidebar
-- tutorials-sidebar
-
 
 # the description is used in the feed.xml file
 description: ""

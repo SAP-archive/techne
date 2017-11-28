@@ -1,6 +1,9 @@
 {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
 
 <ul id="mysidebar" class="nav">
+    <li>
+        {% include search-bar.html %}
+    </li>
     <li class="sidebarTitle">
         <h2>{{sidebar[0].title}}</h2>
     </li>

@@ -1,7 +1,7 @@
 ---
 title: Colors
 keywords: colors
-sidebar: styles-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: colors.html
 folder: styles
