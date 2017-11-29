@@ -1,0 +1,18 @@
+
+$search-border-color: docs-color(neturals, 1);
+
+.search-box{
+    height: 40px !important;
+    border-color: $search-border-color !important;
+}
+
+.search-results {
+    list-style: none;
+    font-size: 12px;
+    background-color: white;
+    position: absolute;
+    top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+    z-index: 1;
+    width:100%;
+    border: 1px solid $search-border-color;
+}

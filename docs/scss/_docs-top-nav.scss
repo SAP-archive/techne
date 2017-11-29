@@ -1,3 +1,10 @@
 .navbar-inverse {
     background-color: docs-color(text, 1);
 }
+
+.support-link{
+     @include tn-type(-1);
+    color: #fff !important;
+    padding: tn-space(s);
+    display: inline-block;
+}
