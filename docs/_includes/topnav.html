@@ -1,20 +1,22 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="tn-icon tn-icon--arrow"></span>
-            </button> -->
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">
-                <span class="projectTitle">Fundamental <span class="has-accent-color">UI</span></span>
+<nav class="top-nav">
+    <div class="container">
+
+        <!-- logo -->
+        <a class="top-nav__logo" href="index.html">
+            <span class="projectTitle">Fundamental <span class="has-accent-color">UI</span></span>
+        </a>
+
+        <!-- support links -->
+        <div class="tn-dropdown tn-has-float-right">
+            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="top-nav__support">
+                Support
             </a>
+            <ul class="tn-dropdown__menu" aria-hidden="true" id="aqn0K794">
+                <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
+                <li><a href="#" class="tn-dropdown__item">Ask a question</a></li>
+            </ul>
         </div>
 
-        <!-- feedback link -->
-        {% if site.feedback_disable == null or site.feedback_disable == false %}
-            {% include feedback.html %}
-        {% endif %}
-        </div>
-        <!-- /.container -->
+    </div>
 </nav>

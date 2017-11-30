@@ -3773,31 +3773,83 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .has-accent-color {
   color: #2fd0c8; }
 
-.navbar-inverse {
-  background-color: #424e5a; }
+.top-nav {
+  background-color: #424e5a;
+  height: 50px; }
+  .top-nav__logo {
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 20px; }
+  .top-nav__support {
+    font-size: 0.875rem;
+    line-height: 1.42858;
+    font-weight: 400;
+    color: #fff !important;
+    padding: 12px;
+    display: inline-block; }
 
-.support-link {
-  font-size: 0.875rem;
-  line-height: 1.42858;
-  font-weight: 400;
-  color: #fff !important;
-  padding: 12px;
-  display: inline-block; }
+.side-nav {
+  background-color: #f1f3f6;
+  padding: 20px; }
+  .side-nav__headers {
+    font-size: 15px;
+    font-weight: bold;
+    list-style: none; }
+    .side-nav__headers-link {
+      color: #424e5a;
+      padding: 15px 20px;
+      display: block; }
+      .side-nav__headers-link:hover {
+        color: #424e5a; }
+  .side-nav__links-container {
+    border: 2px solid #dbe7f3;
+    border-left: none;
+    border-right: none;
+    margin: 0 -20px; }
+  .side-nav__links {
+    list-style: none;
+    font-weight: normal; }
+    .side-nav__links-link {
+      color: #424e5a;
+      display: block;
+      padding: 13px 40px;
+      font-size: 13px; }
+      .side-nav__links-link:hover {
+        color: #424e5a;
+        border-left: 6px solid #2fd0c8;
+        padding-left: 34px; }
+    .side-nav__links.active a {
+      padding-left: 34px;
+      border-left: 6px solid #2fd0c8; }
+  .side-nav .search-box {
+    margin-bottom: 30px; }
 
 .right-nav {
   background-color: #f1f3f6; }
 
 .search-box {
-  height: 40px !important;
-  border-color: #cfdbe7 !important; }
-
-.search-results {
-  list-style: none;
-  font-size: 12px;
-  background-color: white;
-  position: absolute;
-  top: 40px;
-  /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-  z-index: 1;
-  width: 100%;
-  border: 1px solid #cfdbe7; }
+  position: relative; }
+  .search-box__icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #cfdbe7; }
+  .search-box__input {
+    height: 40px !important;
+    border-color: #cfdbe7 !important;
+    background-color: #ffffff !important;
+    padding-left: 35px !important; }
+  .search-box__results {
+    list-style: none;
+    font-size: 12px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    width: 100%;
+    border: 1px solid #cfdbe7; }
+    .search-box__results-links a {
+      display: block;
+      padding: 10px; }
+      .search-box__results-links a:hover {
+        background-color: #f1f3f6; }

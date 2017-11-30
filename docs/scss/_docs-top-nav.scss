@@ -1,10 +1,15 @@
-.navbar-inverse {
+.top-nav {
     background-color: docs-color(text, 1);
-}
-
-.support-link{
-     @include tn-type(-1);
-    color: #fff !important;
-    padding: tn-space(s);
-    display: inline-block;
+    height: 50px;
+    &__logo{
+        padding-top: 10px;
+        display: inline-block;
+        font-size: 20px;
+    }
+    &__support{
+         @include tn-type(-1);
+        color: #fff !important;
+        padding: tn-space(s);
+        display: inline-block;
+    }
 }
