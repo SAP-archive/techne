@@ -5,6 +5,7 @@
 * @section Root Element
 * Default styles for root elements
 */
+@import url("https://fonts.googleapis.com/css?family=Lato");
 html {
   box-sizing: border-box;
   min-height: 100%; }
@@ -3780,6 +3781,8 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
     padding-top: 10px;
     display: inline-block;
     font-size: 20px; }
+    .top-nav__logo:hover {
+      text-decoration: none; }
   .top-nav__support {
     font-size: 0.875rem;
     line-height: 1.42858;
@@ -3790,7 +3793,9 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 
 .side-nav {
   background-color: #f1f3f6;
-  padding: 20px; }
+  padding: 20px;
+  display: table-cell;
+  float: none; }
   .side-nav__headers {
     font-size: 15px;
     font-weight: bold;
@@ -3853,3 +3858,8 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
       padding: 10px; }
       .search-box__results-links a:hover {
         background-color: #f1f3f6; }
+
+.main-content {
+  display: table-cell;
+  float: none;
+  padding: 40px; }

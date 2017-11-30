@@ -5,6 +5,9 @@
         padding-top: 10px;
         display: inline-block;
         font-size: 20px;
+        &:hover{
+            text-decoration: none;
+        }
     }
     &__support{
          @include tn-type(-1);

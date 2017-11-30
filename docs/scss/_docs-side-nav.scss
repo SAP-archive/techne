@@ -5,6 +5,8 @@ $side-nav-link-active-border: docs-color(action, 1);
 .side-nav{
     background-color: $side-nav-bg;
     padding: 20px;
+    display: table-cell;
+    float: none;
 
     &__headers{
         font-size: 15px;

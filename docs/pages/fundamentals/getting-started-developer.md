@@ -5,7 +5,7 @@ sidebar: left-navigation-sidebar
 toc: false
 permalink: getting-started-developers.html
 folder: fundamentals
-summary: This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version.
+summary: This is an in-development, experimental version. It should NOT be used for production. Refer to the Techne website for details about the current version.
 ---
 
 ### CDN
