@@ -50,6 +50,15 @@ entries:
       url: /starter-pages.html
       output: web
 
+  # Resources
+  - title: Resources
+    output: web
+
+    folderitems:
+    - title: UI Kit
+      url: /ui-kit.html
+      output: web
+
   # Components
   - title: Components
     output: web
@@ -133,13 +142,4 @@ entries:
 
     - title: Tree
       url: /tree.html
-      output: web
-
-  # Resources
-  - title: Resources
-    output: web
-
-    folderitems:
-    - title: UI Kit
-      url: /ui-kit.html
       output: web

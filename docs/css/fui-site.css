@@ -3774,6 +3774,14 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .has-accent-color {
   color: #2fd0c8; }
 
+body {
+  font-family: 'Lato', sans-serif; }
+
+a {
+  color: #2fd0c8; }
+  a:hover {
+    color: #2fd0c8; }
+
 .top-nav {
   background-color: #424e5a;
   height: 50px; }
@@ -3795,7 +3803,8 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   background-color: #f1f3f6;
   padding: 20px;
   display: table-cell;
-  float: none; }
+  float: none;
+  vertical-align: top; }
   .side-nav__headers {
     font-size: 15px;
     font-weight: bold;
@@ -3807,9 +3816,7 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
       .side-nav__headers-link:hover {
         color: #424e5a; }
   .side-nav__links-container {
-    border: 2px solid #dbe7f3;
-    border-left: none;
-    border-right: none;
+    border-top: 2px solid #dbe7f3;
     margin: 0 -20px; }
   .side-nav__links {
     list-style: none;
@@ -3862,4 +3869,5 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .main-content {
   display: table-cell;
   float: none;
-  padding: 40px; }
+  padding: 40px;
+  vertical-align: top; }
