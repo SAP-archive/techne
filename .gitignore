@@ -18,4 +18,5 @@ tmp
 *.log
 
 # Files that are generated on project startup
-/docs/css/techne.css
+ghpages
+docs/css/techne.css

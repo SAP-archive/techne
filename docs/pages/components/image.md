@@ -8,152 +8,50 @@ folder: components
 summary:
 ---
 
-## Default Image
+When using images you can use our helpers classes to adjust the size and the shape.
+
+## Sizes
+
+Sizes helper classes are named from `tn-image-xs` to `tn-image-xxl`.
 
 {% capture default %}
-<span class="tn-image tn-image--xs" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--s" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--m" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--l" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xl" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xxl" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
+<span class="tn-image tn-image--xs" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--s" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--m" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--l" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--xl" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--xxl" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
 {% endcapture %}
 
 {% include display-component.html component=default %}
 
 <br>
 
-## Rounded
+## Shapes
 
-{% capture rounded %}
-<span class="tn-image tn-image--xs tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--s tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--m tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--l tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xl tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xxl tn-image--rounded" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
+The images can also have different shapes. The default been square when you don't specify the shape. Also you can use rounded corners with `tn-image--rounded` or a full circle shape `tn-image--circle`. 
+
+{% capture shapes %}
+<span class="tn-image tn-image--xxl" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--xxl tn-image--rounded" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
+<span class="tn-image tn-image--xxl tn-image--circle" aria-label="Image label" style="background-image: url('https://placeimg.com/400/400/nature');"></span>
 {% endcapture %}
 
-{% include display-component.html component=rounded %}
+{% include display-component.html component=shapes %}
 
 <br>
 
-## Circle
+# Placeholders
 
-{% capture circle %}
-<span class="tn-image tn-image--xs tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--s tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--m tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--l tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xl tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-<span class="tn-image tn-image--xxl tn-image--circle" aria-label="Image label" style="background-image: url('http://lorempixel.com/236/236/abstract/');"></span>
-{% endcapture %}
+Some of the images element can be empty at some point so you can use our helpers classes to display a placeholder instead. We defined two main placeholders, `tn-image--profile` used when displaying user avatars; `tn-image--product` for products, services, etc.
 
-{% include display-component.html component=circle %}
+The placeholders can be combined also with the sizes and shapes helpers as well.
 
-<br>
-
-# Placeholer Images
-
-## Profile
-
-{% capture profile %}
-<span class="tn-image tn-image--xs tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--s tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--m tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--l tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xl tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xxl tn-image--profile" aria-label="John Smith"></span>
-{% endcapture %}
-
-{% include display-component.html component=profile %}
-
-<br>
-
-## Profile Rounded
-
-{% capture profile %}
-<span class="tn-image tn-image--xs tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--s tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--m tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--l tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xl tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xxl tn-image--rounded tn-image--profile" aria-label="John Smith"></span>
-{% endcapture %}
-
-{% include display-component.html component=profile %}
-
-<br>
-
-## Profile Rounded
-
-{% capture profile-rounded %}
-<span class="tn-image tn-image--xs tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--s tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--m tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--l tn-image--circle tn-image--profile" aria-label="John Smith"></span>
+{% capture placeholders %}
+<span class="tn-image tn-image--xl tn-image--rounded tn-image--product" aria-label="Product"></span>
+<span class="tn-image tn-image--xxl tn-image--rounded tn-image--product" aria-label="Product"></span>
 <span class="tn-image tn-image--xl tn-image--circle tn-image--profile" aria-label="John Smith"></span>
 <span class="tn-image tn-image--xxl tn-image--circle tn-image--profile" aria-label="John Smith"></span>
 {% endcapture %}
 
-{% include display-component.html component=profile-rounded %}
-
-<br>
-
-## Profile Circle
-
-{% capture profile-circle %}
-<span class="tn-image tn-image--xs tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--s tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--m tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--l tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xl tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-<span class="tn-image tn-image--xxl tn-image--circle tn-image--profile" aria-label="John Smith"></span>
-{% endcapture %}
-
-{% include display-component.html component=profile-circle %}
-
-<br>
-
-## Product
-
-{% capture product %}
-<span class="tn-image tn-image--xs tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--s tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--m tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--l tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xl tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xxl tn-image--product" aria-label="Product name"></span>
-{% endcapture %}
-
-{% include display-component.html component=product %}
-
-<br>
-
-## Product Rounded
-
-{% capture product-rounded %}
-<span class="tn-image tn-image--xs tn-image--rounded tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--s tn-image--rounded tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--m tn-image--rounded tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--l tn-image--rounded tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xl tn-image--rounded tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xxl tn-image--rounded tn-image--product" aria-label="Product name"></span>
-{% endcapture %}
-
-{% include display-component.html component=product-rounded %}
-
-<br>
-
-## Product Circle
-
-{% capture product-circle %}
-<span class="tn-image tn-image--xs tn-image--circle tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--s tn-image--circle tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--m tn-image--circle tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--l tn-image--circle tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xl tn-image--circle tn-image--product" aria-label="Product name"></span>
-<span class="tn-image tn-image--xxl tn-image--circle tn-image--product" aria-label="Product name"></span>
-{% endcapture %}
-
-{% include display-component.html component=product-circle %}
+{% include display-component.html component=placeholders %}
