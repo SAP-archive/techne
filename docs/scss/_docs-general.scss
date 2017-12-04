@@ -8,3 +8,11 @@ a{
         color: docs-color(action, 1);
     }
 }
+
+ul,ol{
+    margin-left: 40px;
+}
+
+.highlight{
+    max-width: 767px;
+}

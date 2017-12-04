@@ -13,7 +13,7 @@ Fundamental UI is an unified, flexible design system that solves complex problem
 
 <br/><br/>
 
-<a class="tn-button tn-button--large" href="components.html">
+<a class="tn-button tn-button--large docs-home-btn" href="components.html">
     Explore Components
 </a>
 
@@ -24,7 +24,7 @@ Version: beta.0.1
 <br/><br/>
 </center>
 
-<div class="tn-card-group tn-card-group--2col">
+<div class="tn-card-group tn-card-group--2col docs-home-cards">
     <div class="tn-card" role="button">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">

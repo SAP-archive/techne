@@ -3774,6 +3774,9 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .has-accent-color {
   color: #2fd0c8; }
 
+.has-accent-background {
+  background-color: #2fd0c8; }
+
 body {
   font-family: 'Lato', sans-serif; }
 
@@ -3781,6 +3784,12 @@ a {
   color: #2fd0c8; }
   a:hover {
     color: #2fd0c8; }
+
+ul, ol {
+  margin-left: 40px; }
+
+.highlight {
+  max-width: 767px; }
 
 .top-nav {
   background-color: #424e5a;
@@ -3815,6 +3824,8 @@ a {
       display: block; }
       .side-nav__headers-link:hover {
         color: #424e5a; }
+    .side-nav__headers ol, .side-nav__headers ul {
+      margin-left: 0; }
   .side-nav__links-container {
     border-top: 2px solid #dbe7f3;
     margin: 0 -20px; }
@@ -3859,8 +3870,10 @@ a {
     top: 40px;
     z-index: 1;
     width: 100%;
+    margin-left: 0;
     border: 1px solid #cfdbe7; }
     .search-box__results-links a {
+      color: #424e5a;
       display: block;
       padding: 10px; }
       .search-box__results-links a:hover {
@@ -3869,5 +3882,26 @@ a {
 .main-content {
   display: table-cell;
   float: none;
-  padding: 40px;
   vertical-align: top; }
+
+.post-content {
+  padding: 40px 40px 80px 40px; }
+
+.docs-home-btn {
+  background-color: #2fd0c8; }
+  .docs-home-btn:hover {
+    background-color: #26a6a0; }
+
+.docs-home-cards .tn-card[role="button"]:hover {
+  border-color: #2fd0c8; }
+
+.docs-home-cards .tn-card__header {
+  color: #2fd0c8 !important; }
+
+.docs-footer {
+  border-top: 1px solid #cfdbe7;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  margin: 0 -15px;
+  width: 100%; }

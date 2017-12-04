@@ -43,10 +43,14 @@
                 {% assign content_col_size = "col-md-9" %}
             {% endunless %}
 
-            <!-- Content Column -->
             <div class="{{content_col_size}} main-content" id="tg-sb-content">
+                <!-- Content Column -->
                 {{content}}
+
+                <!-- footer -->
+                {% include footer.html %}
             </div>
+
         </div>
     </div>
 </div>

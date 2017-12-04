@@ -12,7 +12,7 @@ breadcrumb: Getting Started Designers
 
 Create a harmonious experience for users with Fundamental UI design language.  As designers, deliver geat outcomes with flexible consistent design that guarantees faster build times.
 
-## Design Principles
+# Design Principles
 
 ### Flexible
 Allow for frequent and infrequent task completion paths; linear and nonlinear ways of working.

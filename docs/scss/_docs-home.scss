@@ -1,0 +1,16 @@
+
+.docs-home-btn{
+    background-color: $accent-color;
+    &:hover{
+        background-color: darken($accent-color, 10%);
+    }
+}
+
+.docs-home-cards{
+    .tn-card[role="button"]:hover{
+        border-color: $accent-color;
+    }
+    .tn-card__header{
+        color: $accent-color !important;
+    }
+}

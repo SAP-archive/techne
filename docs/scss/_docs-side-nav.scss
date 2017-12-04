@@ -21,6 +21,9 @@ $side-nav-link-active-border: docs-color(action, 1);
                 color: $side-nav-links-color;
             }
         }
+        ol,ul{
+            margin-left: 0;
+        }
     }
 
     &__links-container{
