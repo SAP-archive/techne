@@ -24,8 +24,8 @@ Version: beta.0.1
 <br/><br/>
 </center>
 
-<div class="tn-card-group tn-card-group--2col docs-home-cards">
-    <div class="tn-card" role="button">
+<div class="tn-card-group tn-card-group--2col docs-cards">
+    <a class="tn-card" role="button" href="getting-started-designers.html">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
                  Designers
@@ -34,8 +34,8 @@ Version: beta.0.1
                  Get Started
              </p>
         </div>
-    </div>
-    <div class="tn-card" role="button">
+    </a>
+    <a class="tn-card" href="getting-started-developers.html" role="button">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
                  Developers
@@ -44,40 +44,40 @@ Version: beta.0.1
                  Get Started
              </p>
         </div>
-    </div>
-    <div class="tn-card" role="button">
+    </a>
+    <a class="tn-card" href="ui-guidelines.html" role="button">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
                  UI Guidelines
              </h2>
              <p class="tn-card__description">
                  Learn the basics of Fundamental UI - <br>
-                <a href="colors.html">Colors</a>, <a href="spacing.html">Spacing</a>, <a href="grids.html">Grids</a> and <a href="type.html">Typeface</a>
+                Colors, Spacing, Grids and Typeface
              </p>
         </div>
-    </div>
-    <div class="tn-card" role="button">
+    </a>
+    <a class="tn-card" role="button" href="layouts-starter-pages.html">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
-                 Layouts
+                 Layouts & Starter Pages
              </h2>
              <p class="tn-card__description">
                  Master the structure of Fundamental UI
              </p>
         </div>
-    </div>
-    <div class="tn-card" role="button">
+    </a>
+    <a class="tn-card" role="button" href="mailto:fundamental@sap.com" target="_blank">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
                  Have a design request?
              </h2>
         </div>
-    </div>
-    <div class="tn-card" role="button">
+    </a>
+    <a class="tn-card" role="button" href="https://github.com/SAP/techne/issues/new" target="_blank">
         <div class="tn-card__content tn-has-text-align-center">
              <h2 class="tn-card__header">
                  Ask a question
              </h2>
         </div>
-    </div>
+    </a>
 </div>

@@ -9,12 +9,12 @@ entries:
     output: web
 
     folderitems:
-    - title: Getting Started - Developers
-      url: /getting-started-developers.html
-      output: web
-
     - title: Getting Started - Designers
       url: /getting-started-designers.html
+      output: web
+
+    - title: Getting Started - Developers
+      url: /getting-started-developers.html
       output: web
 
   - title: UI Guidelines

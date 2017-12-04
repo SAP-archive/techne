@@ -3791,6 +3791,16 @@ ul, ol {
 .highlight {
   max-width: 767px; }
 
+.docs-cards .tn-card[role="button"]:hover {
+  border-color: #2fd0c8; }
+
+.docs-cards .tn-card__header {
+  color: #2fd0c8 !important; }
+
+.docs-cards a:hover {
+  color: inherit;
+  text-decoration: none; }
+
 .top-nav {
   background-color: #424e5a;
   height: 50px; }
@@ -3891,12 +3901,6 @@ ul, ol {
   background-color: #2fd0c8; }
   .docs-home-btn:hover {
     background-color: #26a6a0; }
-
-.docs-home-cards .tn-card[role="button"]:hover {
-  border-color: #2fd0c8; }
-
-.docs-home-cards .tn-card__header {
-  color: #2fd0c8 !important; }
 
 .docs-footer {
   border-top: 1px solid #cfdbe7;
