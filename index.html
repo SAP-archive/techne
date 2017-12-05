@@ -4,15 +4,14 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the...">
+<meta name="description" content="">
 <meta name="keywords" content=" getting started">
-<title>Getting Started | TECHNE</title>
+<title> | Fundamental UI</title>
 
 <link rel="stylesheet" href="css/syntax.css">
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/techne.css">
+<link rel="stylesheet" href="css/fui-site.css">
 
 <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 
@@ -25,105 +24,392 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 
-
-    
-
 </head>
 <body>
+
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="tn-icon tn-icon--arrow"></span>
-            </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle">TECHNE</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+<nav class="top-nav">
+    <div class="container">
 
+        <!-- logo -->
+        <a class="top-nav__logo" href="index.html">
+            <span class="projectTitle">Fundamental <span class="has-accent-color">UI</span></span>
+        </a>
 
-                <!-- standard links -->
-                
-
-                
-
-                
-                    
-                        
-                            <li class="active"><a href="index.html">Get Started</a></li>
-                        
-                    
-                        
-                            <li><a href="styles.html">Styles</a></li>
-                        
-                    
-                        
-                            <li><a href="components.html">Components</a></li>
-                        
-                    
-                        
-                            <li><a href="starter-pages.html">Starter Pages</a></li>
-                        
-                    
-                
-
-                <!-- entries with drop-downs appear here -->
-
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-
-                <!-- feedback link -->
-                
-
-
-                <li>
-                    <!--start search-->
-                    <div id="search-demo-container">
-                        <input type="text" id="search-input" placeholder="search...">
-                        <ul id="results-container"></ul>
-                    </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Getting Started">{title}</a></li>',
-                    noResultsText: '<li class="no-search-results">No results found</li>',
-                            limit: 10,
-                            fuzzy: true,
-                    })
-                    </script>
-                    <!--end search-->
-                </li>
+        <!-- support links -->
+        <div class="tn-dropdown tn-has-float-right">
+            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="top-nav__support">
+                Support
+            </a>
+            <ul class="tn-dropdown__menu tn-has-margin-left-none" aria-hidden="true" id="aqn0K794">
+                <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
+                <li><a href="mailto:fundamental@sap.com" target="_blank" class="tn-dropdown__item">Email Us</a></li>
             </ul>
         </div>
-        </div>
-        <!-- /.container -->
+
+    </div>
 </nav>
+
 
 <!-- Page Content -->
 <div class="container">
-  <div id="main">
-    <!-- Content Row -->
-    <div class="row">
-        
-        
+    <div id="main">
+        <!-- Content Row -->
+        <div class="row">
+            
+            
+                <!-- Sidebar Column -->
+                <div class="col-md-3 side-nav" id="tg-sb-sidebar">
+                    
 
-        <!-- Content Column -->
-        <div class="col-md-12" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">Getting Started</h1>
+<div class="search-box">
+    <span class="tn-icon tn-icon--search search-box__icon"></span>
+    <input type="text" id="search-input" class="search-box__input" placeholder="search...">
+    <ul id="results-container" class="search-box__results"></ul>
 </div>
 
+<script src="js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: 'search.json',
+        searchResultTemplate: '<li class="search-box__results-links"><a href="{url}" title="">{title}</a></li>',
+        noResultsText: '<li class="no-search-results">No results found</li>',
+        limit: 10,
+        fuzzy: true,
+    });
+</script>
 
+
+<ul class="side-nav__links-container">
+
+    
+        
+            <li class="side-nav__headers">
+                <span class="side-nav__headers-link">Fundamentals</span>
+                <ul >
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="getting-started-designers.html" class="side-nav__links-link">Getting Started - Designers</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="getting-started-developers.html" class="side-nav__links-link">Getting Started - Developers</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="side-nav__headers">
+                <span class="side-nav__headers-link">UI Guidelines</span>
+                <ul >
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="colors.html" class="side-nav__links-link">Colors</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="grid.html" class="side-nav__links-link">Grid</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="spacing.html" class="side-nav__links-link">Spacing</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="type.html" class="side-nav__links-link">Type</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="side-nav__headers">
+                <span class="side-nav__headers-link">Components</span>
+                <ul >
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="action-bar.html" class="side-nav__links-link">Action Bar</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="alert.html" class="side-nav__links-link">Alert</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="button.html" class="side-nav__links-link">Button</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="card.html" class="side-nav__links-link">Card</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="card-group.html" class="side-nav__links-link">Card Group</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="dropdown.html" class="side-nav__links-link">Dropdown</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="form.html" class="side-nav__links-link">Forms</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="image.html" class="side-nav__links-link">Image</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="icons.html" class="side-nav__links-link">Icons</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="input-group.html" class="side-nav__links-link">Input Group</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="list-group.html" class="side-nav__links-link">List</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="loading-spinner.html" class="side-nav__links-link">Loading Indicators</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="modal.html" class="side-nav__links-link">Modal</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="pagination.html" class="side-nav__links-link">Pagination</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="status-indicators.html" class="side-nav__links-link">Status Indicators</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="table.html" class="side-nav__links-link">Table</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="tabs.html" class="side-nav__links-link">Tabs</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="toggle.html" class="side-nav__links-link">Toggle</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="toolbar.html" class="side-nav__links-link">Toolbar</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="tree.html" class="side-nav__links-link">Tree</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="side-nav__headers">
+                <span class="side-nav__headers-link">Layouts & Starter Pages</span>
+                <ul >
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="layouts.html" class="side-nav__links-link">Layouts</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="starter-pages.html" class="side-nav__links-link">Starter Pages</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+        
+    
+        
+            <li class="side-nav__headers">
+                <span class="side-nav__headers-link">Resources</span>
+                <ul >
+                    
+                    
+                    
+                    <li class="side-nav__links">
+                        <a href="ui-kit.html" class="side-nav__links-link">UI Kit</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+        
+    
+
+
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+
+                </div>
+                
+            
+
+            <div class="col-md-9 main-content" id="tg-sb-content">
+                <!-- Content Column -->
+                
 
 <div class="post-content">
 
-   
-    <div class="summary">This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version.</div>
+    <h1></h1>
+
    
 
     
@@ -131,115 +417,117 @@
 
     
 
-  <h3 id="cdn">CDN</h3>
-<p>Latest minified file is Available via CDN below</p>
+  <center>
+<h1>Fundamental UI</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://techne.yaas.io/libs/techne/2.0.0-alpha-7/techne.min.css
-</code></pre></div></div>
-<h3 id="npm">NPM</h3>
-<p>Install the library.</p>
+Fundamental UI is an unified, flexible design system that solves complex problems in a meaningful way and creates simple intuitive experience.
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install techne@2.0.0-alpha-7 --save
-</code></pre></div></div>
-<h2 id="usage">Usage</h2>
-<p>Include the full library.</p>
+<br /><br />
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"node_modules/techne/dist/techne.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+<a class="tn-button tn-button--large docs-home-btn" href="components.html">
+    Explore Components
+</a>
 
-<h3 id="stand-alone-components">Stand alone components</h3>
-<p>The components can be used without loading the whole library. Take a look at the <a href="https://github.com/SAP/techne/wiki/Techne-Components">Available Techne Components</a> and the individual files at:</p>
+<br /><br />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dist/components/
-</code></pre></div></div>
+Version: beta.0.1
 
-<p>For example, to use only the cards</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"node_modules/techne/components/card.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+<br /><br />
+</center>
 
-<h1 id="the-project">The project</h1>
-<p>Techne 2.0 is a design system and pattern library package. This project packages the library for <code class="highlighter-rouge">npm</code> and generates the documentation as a static website.</p>
-
-<p>We rely on several core technologies.</p>
-
-<ul>
-  <li><a href="https://nodejs.org/">Node</a> (minimum v6.4)</li>
-  <li><a href="https://gulpjs.com/">Gulp</a></li>
-  <li>Sass</li>
-  <li>Nunjucks</li>
-  <li>Ruby</li>
-  <li>Bundle</li>
-  <li>Jekyll</li>
-</ul>
-
-<h2 id="install-gulp">Install Gulp</h2>
-<p>In addition to Node, you must have Gulp installed globally:</p>
-
-<p><code class="highlighter-rouge">npm install -g gulp</code></p>
-
-<h2 id="install-gems">Install Gems</h2>
-<p>The following gems needs to be installed for the documentation site generation</p>
-
-<p><code class="highlighter-rouge">gem install ruby bundle jekyll</code></p>
-
-<h2 id="install-dev-dependencies">Install dev dependencies</h2>
-
-<p><code class="highlighter-rouge">npm install</code></p>
-
-<h2 id="serve-it-locally">Serve it locally</h2>
-<p>The documentation website is served from the <code class="highlighter-rouge">docs/_site</code> directory which is generated by Jekyll. To generate and lunch the documentation site, simply execute the gulp command in terminal at the root of project directory.</p>
-
-<p><code class="highlighter-rouge">gulp</code></p>
-
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Please refer to the <a href="https://github.com/SAP/techne/wiki/Troubleshooting-&amp;-Known-Issues">Troubleshooting guide</a> if you are having issues with the setup.</p>
-
-<h1 id="contributing">Contributing</h1>
-<p>New branches should include the type (feature, bug, or hotfix) and the issue number or release number.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b feature/000
-git checkout -b bug/000
-git checkout -b hotfix/000
-</code></pre></div></div>
-
-<p>Create a pull request against branch  v2.0  and assign it for review.</p>
-
-<p>When accepted, the reviewer will merge and delete the branch.</p>
+<div class="tn-card-group tn-card-group--2col docs-cards">
+    <a class="tn-card" role="button" href="getting-started-designers.html">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 Designers
+             </h2>
+             <p class="tn-card__description">
+                 Get Started
+             </p>
+        </div>
+    </a>
+    <a class="tn-card" href="getting-started-developers.html" role="button">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 Developers
+             </h2>
+             <p class="tn-card__description">
+                 Get Started
+             </p>
+        </div>
+    </a>
+    <a class="tn-card" href="ui-guidelines.html" role="button">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 UI Guidelines
+             </h2>
+             <p class="tn-card__description">
+                 Learn the basics of Fundamental UI - <br />
+                Colors, Spacing, Grids and Typeface
+             </p>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="layouts-starter-pages.html">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 Layouts &amp; Starter Pages
+             </h2>
+             <p class="tn-card__description">
+                 Master the structure of Fundamental UI
+             </p>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="mailto:fundamental@sap.com" target="_blank">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 Have a design request?
+             </h2>
+        </div>
+    </a>
+    <a class="tn-card" role="button" href="https://github.com/SAP/techne/issues/new" target="_blank">
+        <div class="tn-card__content tn-has-text-align-center">
+             <h2 class="tn-card__header">
+                 Ask a question
+             </h2>
+        </div>
+    </a>
+</div>
 
 
     <div class="tags">
         
     </div>
 
-
-
-
 </div>
 
-<hr class="shaded"/>
 
-<footer>
+                <!-- footer -->
+                <footer class="docs-footer">
     <div class="row">
-        <div class="col-lg-12 footer">
-			Techne 2.0 Alpha
+        <div class="col-lg-4">
+            <span>Version 2.0.0-alpha-7</span>
+        </div>
+        <div class="col-lg-4 text-center">
+            <span>Copyright Info</span>
+        </div>
+        <div class="col-lg-4">
+            <span>Have a question? <a href="mailto:fundamental@sap.com">Email</a> us or <br> open a <a href="https://github.com/SAP/techne/issues/new" target="_blank">issue</a> on GitHub.</span>
         </div>
     </div>
 </footer>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
-<script src="js/toc.js"></script>
 <script src="js/customscripts.js"></script>
 
+            </div>
 
         </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
-</div>
-<!-- /#main -->
     </div>
+</div>
 
 </body>
 

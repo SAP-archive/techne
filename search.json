@@ -112,7 +112,36 @@
 
 
 
+{
+"title": "Designers",
+"tags": "",
+"keywords": "getting started designers",
+"url": "getting-started-designers.html",
+"summary": ""
+}
+,
 
+
+
+{
+"title": "Developers",
+"tags": "",
+"keywords": "getting started",
+"url": "getting-started-developers.html",
+"summary": "This is an in-development, experimental version. It should NOT be used for production. Refer to the Techne website for details about the current version."
+}
+,
+
+
+
+{
+"title": "Grid",
+"tags": "",
+"keywords": "grid",
+"url": "grid.html",
+"summary": ""
+}
+,
 
 
 
@@ -150,11 +179,11 @@
 
 
 {
-"title": "Getting Started",
+"title": "",
 "tags": "",
 "keywords": "getting started",
 "url": "index.html",
-"summary": "This is an in-development, experimental version of SAP Hybris Techne. It should NOT be used for production. Refer to the Techne website for details about the current version."
+"summary": ""
 }
 ,
 
@@ -165,6 +194,28 @@
 "tags": "",
 "keywords": "input group, input groups, input, groups",
 "url": "input-group.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Starter Pages",
+"tags": "",
+"keywords": "",
+"url": "layouts-starter-pages.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Layouts",
+"tags": "",
+"keywords": "layouts",
+"url": "layouts.html",
 "summary": ""
 }
 ,
@@ -244,17 +295,6 @@
 
 
 {
-"title": "Styles",
-"tags": "",
-"keywords": "styles",
-"url": "styles.html",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "Table",
 "tags": "",
 "keywords": "table",
@@ -275,28 +315,6 @@
 "summary": ""
 }
 ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -335,13 +353,33 @@
 
 
 
-
-
 {
 "title": "Type",
 "tags": "",
 "keywords": "type",
 "url": "type.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "UI Guidelines",
+"tags": "",
+"keywords": "ui guidelines",
+"url": "ui-guidelines.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "UI Kit",
+"tags": "",
+"keywords": "ui kit",
+"url": "ui-kit.html",
 "summary": ""
 }
 
