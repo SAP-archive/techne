@@ -1,0 +1,7 @@
+
+.docs-home-btn{
+    background-color: $accent-color;
+    &:hover{
+        background-color: darken($accent-color, 10%);
+    }
+}

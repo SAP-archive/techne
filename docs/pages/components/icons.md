@@ -1,7 +1,7 @@
 ---
 title: Icons
 keywords: icon, icons
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: icons.html
 folder: components

@@ -1,7 +1,7 @@
 ---
 title: Toggle
 keywords: toggle`
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: toggle.html
 folder: components
@@ -93,4 +93,3 @@ The toggle can be set to the disable state and still indicate if the element is 
 {% endcapture %}
 
 {% include display-component.html component=toggle-disabled %}
-

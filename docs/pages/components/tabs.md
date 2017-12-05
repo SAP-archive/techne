@@ -1,7 +1,7 @@
 ---
 title: Tabs
 keywords: tab, tabs
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: tabs.html
 folder: components

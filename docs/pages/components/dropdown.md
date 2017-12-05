@@ -1,7 +1,7 @@
 ---
 title: Dropdown
 keywords: dropdown, dropdowns
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: dropdown.html
 folder: components

@@ -1,7 +1,7 @@
 ---
 title: Image
 keywords: image
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: image.html
 folder: components

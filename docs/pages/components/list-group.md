@@ -1,7 +1,7 @@
 ---
 title: List
 keywords: list group, lists group, list, lists, groups
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: list-group.html
 folder: components

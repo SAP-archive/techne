@@ -1,7 +1,7 @@
 ---
 title: Pagination
 keywords: pagination
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: pagination.html
 folder: components

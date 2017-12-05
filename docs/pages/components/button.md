@@ -1,7 +1,7 @@
 ---
 title: Buttons
 keywords: button, buttons
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: button.html
 folder: components

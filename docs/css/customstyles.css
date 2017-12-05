@@ -118,73 +118,6 @@ dt[id]{
     color: gray;
 }
 
-/*table {
-    background-color: transparent;
-}
-caption {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #777;
-    text-align: left;
-}
-th {
-    text-align: left;
-}
-table {
-    max-width: 90%;
-    margin-bottom: 20px;
-    border: 1px solid #dedede;
-}
-
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-}
-table > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #ddd;
-    text-transform: none;
-    background-color: #777;
-    color: white;
-    text-align: left;
-}
-table > caption + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > th,
-table > thead:first-child > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > td {
-    border-top: 0;
-}
-
-table > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-}
-
-table col[class*="col-"] {
-    position: static;
-    display: table-column;
-    float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-    position: static;
-    display: table-cell;
-    float: none;
-}
-
-table tr td {
-    hyphens: auto;
-}
-*/
-
 p.external a {
     text-align:right;
     font-size:12px;
@@ -199,46 +132,6 @@ p.post-meta {font-size: 80%; color: #777;}
 
 .entry-date{font-size:14px;font-size:0.875rem;line-height:1.71429;margin-bottom:0;text-transform:uppercase;}
 
-/* search area */
-#search-demo-container ul#results-container {
-    list-style: none;
-    font-size: 12px;
-    background-color: white;
-    position: absolute;
-    top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-    left: 20px;
-    z-index: -1;
-    width:21.25em;
-    border-left: 1px solid #dedede;
-    box-shadow: 2px 3px 2px #dedede;
-}
-
-
-ul#results-container a {
-    background-color: transparent;
-}
-
-ul#results-container a:hover {
-    color: black;
-}
-
-
-#search-demo-container a:hover {
-    color: black;
-}
-#search-input {
-    padding: .5em;
-    margin-left:20px;
-    width:20em;
-    height: 2.5em;
-    font-size: 0.8em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-top:10px;
-    background: #fff;
-}
-/* end search */
 
 .filter-options {
     margin-bottom: 20px;
@@ -403,9 +296,6 @@ a.accordion-toggle, a.accordion-collapsed {
     margin-top: 20px;
 }
 
-ul#mysidebar {
-    border-radius:0px;
-}
 
 .nav ul li ul li a {
     padding-left:40px;
@@ -619,9 +509,6 @@ a[data-toggle] {
 a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
-
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
-
 .alert, .callout {
     overflow: hidden;
 }
@@ -674,14 +561,6 @@ div.tags {padding: 10px 5px;}
 
 .tabLabel {
     font-weight: normal;
-}
-
-hr {
-    background: #999;
-    margin: 30px 0px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 button.cursorNorm {
@@ -742,9 +621,7 @@ ol.series li {
     border-color: #248ec2 !important;
 }
 
-#mysidebar .nav ul {
-    background-color: #FAFAFA;
-}
+
 .nav ul.series li {
     list-style: decimal;
     font-size:12px;
@@ -881,26 +758,6 @@ span.soft {
     }
 }
 
-@media (max-width: 990px) {
-    #mysidebar {
-        position: relative;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    ul#mysidebar {
-        width: 225px;
-    }
-}
-
-@media (max-width: 900px) {
-
-    ul#mysidebar {
-        max-width: 100%;
-    }
-}
-
 .col-md-9.img {
     max-width: 100%;
     max-height: 100%;
@@ -952,17 +809,6 @@ span.soft {
     color: white;
     background-color: #444;
     padding:10px;
-}
-
-/* this part adds an icon after external links, using FontAwesome*/
-a[href^="http://"]:after, a[href^="https://"]:after {
-    content: "\f08e";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: none;
-    padding-left: 3px;
 }
 
 /* Strip the outbound icon when this class is present */

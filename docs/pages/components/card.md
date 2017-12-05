@@ -1,7 +1,7 @@
 ---
 title: Card
 keywords: card
-sidebar: components-sidebar
+sidebar: left-navigation-sidebar
 toc: false
 permalink: card.html
 folder: components
@@ -14,7 +14,7 @@ The cards can be [grouped](card-group.html) to display a set of the object of th
 Some common elements are styled by default:
 * **Primary info**: used mainly to display names or titles.
 * **Secondary info**: here you can add more information about the object.
-* **Status**: you can signal the status of the object, for instance: active/inactive 
+* **Status**: you can signal the status of the object, for instance: active/inactive
 
 <br/>
 

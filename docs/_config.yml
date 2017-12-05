@@ -8,13 +8,13 @@ output: web
 library_version: 2.0.0-alpha-7
 
 # this appears on the top navigation bar next to the home button
-topnav_title: TECHNE
+topnav_title: Fundamental UI
 
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-site_title: TECHNE
+site_title: Fundamental UI
 
 # this appears in the footer
-company_name: TECHNE
+company_name: Fundamental UI
 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 github_editme_path:
@@ -36,13 +36,13 @@ exclude:
   - .idea/
   - .gitignore
 
-feedback_subject_line: Techne Documentation Feedback
+feedback_subject_line: Fundamental UI Documentation Feedback
 
 # used as a contact email for the Feedback link in the top navigation bar
-feedback_email: techne@sap.com
+feedback_email: fundamentalui@sap.com
 
 # if you uncomment the previous line, the Feedback link gets removed
-feedback_disable: true
+feedback_disable: false
 
 # if you uncomment the previous line, it changes the Feedback text
 # feedback_text: "Need help?"
@@ -109,13 +109,7 @@ defaults:
 
 # these are defaults used for the frontmatter for these file types
 sidebars:
-- home-sidebar
-- getting-started-sidebar
-- styles-sidebar
-- components-sidebar
-- guides-sidebar
-- tutorials-sidebar
-
+- left-navigation-sidebar
 
 # the description is used in the feed.xml file
 description: ""
@@ -128,3 +122,8 @@ url:
 
 keep_files: [css/techne.css, css/techne-icons.svg]
 exclude: [vendor]
+
+breadcrumbs:
+  root:
+    hide: false  # show breadcrumbs on root/home page
+    image: false # Show image or title text
