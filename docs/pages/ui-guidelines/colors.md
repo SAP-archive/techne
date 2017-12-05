@@ -7,218 +7,38 @@ permalink: colors.html
 folder: styles
 ---
 
-<section class="docs-section" id="colors">
+Colors bring designs to life.  It is used in a meaningful way to express emotions and tone, and promotes a distinct and consistent look and feel throughout all application.
 
-    {% include colors.html %}
+{% include colors.html %}
 
-    <h2>Function</h2>
-    <h3><code>@function tn-color($type: text, $shade: 1)</code></h3>
+## Accessibility
 
-    <p>Example:<br>
-    </p><pre>.foo {
-        color: tn-color(action,2);
-        background-color: tn-color(neutral);
-    }
-    </pre>
+All type color combinations on Fundamental UI must pass WCAG AA standards of 4.5:1 for normal text and 3:1 for large text.
 
-    <h2>Helpers</h2>
-    <p>These classes are also available.</p>
+Example 1
+<div class="tn-alert docs-colors_example docs-colors_example--1" role="alert">
+    Grumpy Wizards Make Toxic Brew For the Evil Queen & Jack
+</div>
 
-    <h3>Text</h3>
+<br><br>
 
-        <p>
-            <code>.tn-has-color-brand-1, .tn-has-color-brand</code>
-            <br>
-        </p>
+Example 2
+<div class="tn-alert docs-colors_example docs-colors_example--2" role="alert">
+    Grumpy Wizards Make Toxic Brew For the Evil Queen & Jack
+</div>
 
-        <p>
-            <code>.tn-has-color-brand-2</code>
-            <br>
-        </p>
+<br><br>
 
+Example 3
+<div class="tn-alert docs-colors_example docs-colors_example--3" role="alert">
+    Grumpy Wizards Make Toxic Brew For the Evil Queen & Jack
+</div>
 
+<br><br>
 
-        <p>
-            <code>.tn-has-color-text-1, .tn-has-color-text</code>
-            <br>
-        </p>
+Example 4
+<div class="tn-alert docs-colors_example docs-colors_example--4" role="alert">
+    Grumpy Wizards Make Toxic Brew For the Evil Queen & Jack
+</div>
 
-        <p>
-            <code>.tn-has-color-text-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-text-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-color-inverse-1, .tn-has-color-inverse</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-inverse-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-inverse-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-color-action-1, .tn-has-color-action</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-action-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-action-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-color-neutral-1, .tn-has-color-neutral</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-neutral-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-neutral-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-color-status-success</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-status-warning</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-color-status-error</code>
-            <br>
-        </p>
-
-
-
-    <h3>Backgrounds</h3>
-
-
-        <p>
-            <code>.tn-has-background-color-brand-1, .tn-has-background-color-brand</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-brand-2</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-background-color-text-1, .tn-has-background-color-text</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-text-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-text-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-background-color-inverse-1, .tn-has-background-color-inverse</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-inverse-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-inverse-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-background-color-action-1, .tn-has-background-color-action</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-action-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-action-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-background-color-neutral-1, .tn-has-background-color-neutral</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-neutral-2</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-neutral-3</code>
-            <br>
-        </p>
-
-
-
-        <p>
-            <code>.tn-has-background-color-status-success</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-status-warning</code>
-            <br>
-        </p>
-
-        <p>
-            <code>.tn-has-background-color-status-error</code>
-            <br>
-        </p>
-
-</section>
+<br><br>
