@@ -3911,6 +3911,10 @@ ul, ol {
 .docs-colors_plaque {
   list-style: none;
   margin-left: 0; }
+  .docs-colors_plaque_color {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 4px; }
 
 .docs-colors_example {
   text-align: center; }

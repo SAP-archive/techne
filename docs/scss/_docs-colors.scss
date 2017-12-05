@@ -12,6 +12,11 @@ $colors-example-4-text: tn-color(text-inverse, 1);
     &_plaque{
         list-style: none;
         margin-left: 0;
+        &_color{
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 4px;
+        }
     }
 
     &_example{
