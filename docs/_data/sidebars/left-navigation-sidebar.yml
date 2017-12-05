@@ -37,28 +37,6 @@ entries:
       url: /type.html
       output: web
 
-  - title: Layouts & Starter Pages
-    url:
-    output: web
-
-    folderitems:
-    - title: Layouts
-      url: /layouts.html
-      output: web
-
-    - title: Starter Pages
-      url: /starter-pages.html
-      output: web
-
-  # Resources
-  - title: Resources
-    output: web
-
-    folderitems:
-    - title: UI Kit
-      url: /ui-kit.html
-      output: web
-
   # Components
   - title: Components
     output: web
@@ -142,4 +120,26 @@ entries:
 
     - title: Tree
       url: /tree.html
+      output: web
+
+  - title: Layouts & Starter Pages
+    url:
+    output: web
+
+    folderitems:
+    - title: Layouts
+      url: /layouts.html
+      output: web
+
+    - title: Starter Pages
+      url: /starter-pages.html
+      output: web
+
+  # Resources
+  - title: Resources
+    output: web
+
+    folderitems:
+    - title: UI Kit
+      url: /ui-kit.html
       output: web
