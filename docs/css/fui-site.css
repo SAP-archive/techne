@@ -3377,6 +3377,13 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .tn-has-color-primary-2 {
   color: #27394f !important; }
 
+.tn-has-color-action,
+.tn-has-color-action-1 {
+  color: #009cdf !important; }
+
+.tn-has-color-action-2 {
+  color: #8D9DBC !important; }
+
 .tn-has-color-text,
 .tn-has-color-text-1 {
   color: #21262c !important; }
@@ -3397,12 +3404,15 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .tn-has-color-text-inverse-3 {
   color: #eef1f3 !important; }
 
-.tn-has-color-action,
-.tn-has-color-action-1 {
-  color: #009cdf !important; }
+.tn-has-color-background,
+.tn-has-color-background-1 {
+  color: #ffffff !important; }
 
-.tn-has-color-action-2 {
-  color: #8D9DBC !important; }
+.tn-has-color-background-2 {
+  color: #f0f5ff !important; }
+
+.tn-has-color-background-3 {
+  color: #000000 !important; }
 
 .tn-has-color-neutral,
 .tn-has-color-neutral-1 {
@@ -3416,16 +3426,6 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 
 .tn-has-color-neutral-4 {
   color: #8a8fa1 !important; }
-
-.tn-has-color-background,
-.tn-has-color-background-1 {
-  color: #ffffff !important; }
-
-.tn-has-color-background-2 {
-  color: #f0f5ff !important; }
-
-.tn-has-color-background-3 {
-  color: #000000 !important; }
 
 .tn-has-color-status,
 .tn-has-color-status-1 {
@@ -3460,6 +3460,13 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .tn-has-background-color-primary-2 {
   background-color: #27394f !important; }
 
+.tn-has-background-color-action,
+.tn-has-background-color-action-1 {
+  background-color: #009cdf !important; }
+
+.tn-has-background-color-action-2 {
+  background-color: #8D9DBC !important; }
+
 .tn-has-background-color-text,
 .tn-has-background-color-text-1 {
   background-color: #21262c !important; }
@@ -3480,12 +3487,15 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 .tn-has-background-color-text-inverse-3 {
   background-color: #eef1f3 !important; }
 
-.tn-has-background-color-action,
-.tn-has-background-color-action-1 {
-  background-color: #009cdf !important; }
+.tn-has-background-color-background,
+.tn-has-background-color-background-1 {
+  background-color: #ffffff !important; }
 
-.tn-has-background-color-action-2 {
-  background-color: #8D9DBC !important; }
+.tn-has-background-color-background-2 {
+  background-color: #f0f5ff !important; }
+
+.tn-has-background-color-background-3 {
+  background-color: #000000 !important; }
 
 .tn-has-background-color-neutral,
 .tn-has-background-color-neutral-1 {
@@ -3499,16 +3509,6 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
 
 .tn-has-background-color-neutral-4 {
   background-color: #8a8fa1 !important; }
-
-.tn-has-background-color-background,
-.tn-has-background-color-background-1 {
-  background-color: #ffffff !important; }
-
-.tn-has-background-color-background-2 {
-  background-color: #f0f5ff !important; }
-
-.tn-has-background-color-background-3 {
-  background-color: #000000 !important; }
 
 .tn-has-background-color-status,
 .tn-has-background-color-status-1 {
@@ -3907,6 +3907,10 @@ ul, ol {
   background-color: #2fd0c8; }
   .docs-home-btn:hover {
     background-color: #26a6a0; }
+
+.docs-colors_plaque {
+  list-style: none;
+  margin-left: 0; }
 
 .docs-colors_example {
   text-align: center; }

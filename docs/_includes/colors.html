@@ -1,16 +1,18 @@
 
-{% for group in site.data.colors.group %}
-<div class="color-plaue-container">
-    <h2>{{ group.name }} </h2>
-    <ul>
-    {% for colors in group.colors %}
-        <li style="background-color: #{{ colors.colorvalue }};" class="demo-color-plaque">
-            <span class="color-info">
-                {{ colors.colorname }} #{{ colors.colorvalue }}
-            </span>
-        </li>
+<div class="row">
+    {% for group in site.data.colors.group %}
+        <div class="col-lg-3">
+            <h3>{{ group.name }} </h3>
+            <ul class="docs-colors_plaque">
+            {% for colors in group.colors %}
+                <li style="background-color: #{{ colors.colorvalue }};" class="docs-color_plaque">
+                    <span class="docs-color_plaque_info">
+                        {{ colors.colorname }} #{{ colors.colorvalue }}
+                    </span>
+                </li>
+            {% endfor %}
+            </ul>
+            <br style="clear:both">
+        </div>
     {% endfor %}
-    </ul>
-    <br style="clear:both">
 </div>
-{% endfor %}
