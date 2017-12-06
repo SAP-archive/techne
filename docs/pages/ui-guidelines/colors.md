@@ -9,6 +9,8 @@ folder: styles
 
 Colors bring designs to life.  It is used in a meaningful way to express emotions and tone, and promotes a distinct and consistent look and feel throughout all application.
 
+All the colors are divided in groups named after the usage.
+
 {% include colors.html %}
 
 <hr>
