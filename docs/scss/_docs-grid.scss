@@ -1,0 +1,16 @@
+$docs-breakpoint-table-border-color: docs-color(neturals, 1);
+
+.docs-breakpoints-table{
+    border:  1px solid $docs-breakpoint-table-border-color;
+
+    & th{
+        background-color: $docs-breakpoint-table-border-color;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: docs-color(text, 1);
+        font-weight: bold;
+    }
+    & td{
+        font-size: 14px;
+    }
+}
