@@ -3925,14 +3925,17 @@ hr {
   font-family: Lato;
   font-size: 28px;
   font-weight: 900;
-  line-height: 1.14; }
+  line-height: 1.14;
+  margin-top: 40px; }
 
 .docs-header-h3 {
   font-family: Lato;
   font-size: 16px;
   font-weight: bold;
   line-height: 1.88;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 40px; }
 
 .docs-colors_plaque {
   list-style: none;
