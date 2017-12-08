@@ -3794,6 +3794,9 @@ a {
 ul, ol {
   margin-left: 40px; }
 
+hr {
+  margin: 36px 0; }
+
 .highlight {
   max-width: 767px; }
 
@@ -3911,6 +3914,26 @@ hr {
   .docs-home-btn:hover {
     background-color: #26a6a0; }
 
+.docs-header-h1 {
+  font-family: Lato;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.06;
+  text-align: left; }
+
+.docs-header-h2 {
+  font-family: Lato;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.14; }
+
+.docs-header-h3 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.88;
+  text-transform: uppercase; }
+
 .docs-colors_plaque {
   list-style: none;
   margin-left: 0; }
@@ -3933,6 +3956,35 @@ hr {
   .docs-colors_example--4 {
     background-color: #000000;
     color: #ffffff; }
+
+.docs-breakpoints-table {
+  border: 1px solid #cfdbe7; }
+  .docs-breakpoints-table th {
+    background-color: #cfdbe7;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #424e5a;
+    font-weight: bold;
+    position: relative; }
+  .docs-breakpoints-table td {
+    font-size: 14px; }
+  .docs-breakpoints-table_col-legend {
+    position: relative !important; }
+    .docs-breakpoints-table_col-legend:before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: black;
+      position: absolute;
+      left: -20px;
+      top: 14px; }
+    .docs-breakpoints-table_col-legend--column::before {
+      background-color: #ff4aff; }
+    .docs-breakpoints-table_col-legend--gutter::before {
+      background-color: #50e3c2; }
+    .docs-breakpoints-table_col-legend--margin::before {
+      background-color: #f5a623; }
 
 .docs-spacing-example {
   background-color: #f1f3f6;
