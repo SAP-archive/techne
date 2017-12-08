@@ -3810,6 +3810,9 @@ hr {
   color: inherit;
   text-decoration: none; }
 
+hr {
+  margin: 36px 0; }
+
 .top-nav {
   background-color: #424e5a;
   height: 50px; }
@@ -3982,6 +3985,10 @@ hr {
       background-color: #50e3c2; }
     .docs-breakpoints-table_col-legend--margin::before {
       background-color: #f5a623; }
+
+.docs-spacing-example {
+  background-color: #f1f3f6;
+  border: 1px solid #cfdbe7; }
 
 .docs-footer {
   border-top: 1px solid #cfdbe7;
