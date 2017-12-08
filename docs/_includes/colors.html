@@ -2,7 +2,7 @@
 <div class="row">
     {% for group in site.data.colors.group %}
         <div class="col-lg-3 docs-colors_container">
-            <h3>{{ group.name }} </h3>
+            <p><strong>{{ group.name }}</strong></p>
             <ul class="docs-colors_plaque">
             {% for colors in group.colors %}
                 <li style="background-color: #{{ colors.colorvalue }}; color: #{{colors.textcolor}}; border: 1px solid #{{colors.bordercolor}}" class="docs-colors_plaque_color">
