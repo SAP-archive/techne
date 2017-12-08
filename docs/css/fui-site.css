@@ -3961,9 +3961,27 @@ hr {
     font-size: 14px;
     text-transform: uppercase;
     color: #424e5a;
-    font-weight: bold; }
+    font-weight: bold;
+    position: relative; }
   .docs-breakpoints-table td {
     font-size: 14px; }
+  .docs-breakpoints-table_col-legend {
+    position: relative !important; }
+    .docs-breakpoints-table_col-legend:before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: black;
+      position: absolute;
+      left: -20px;
+      top: 14px; }
+    .docs-breakpoints-table_col-legend--column::before {
+      background-color: #ff4aff; }
+    .docs-breakpoints-table_col-legend--gutter::before {
+      background-color: #50e3c2; }
+    .docs-breakpoints-table_col-legend--margin::before {
+      background-color: #f5a623; }
 
 .docs-footer {
   border-top: 1px solid #cfdbe7;
