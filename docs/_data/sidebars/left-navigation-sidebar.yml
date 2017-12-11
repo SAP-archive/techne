@@ -17,10 +17,6 @@ entries:
       url: /getting-started-developers.html
       output: web
 
-  - title: UI Guidelines
-    url:
-    output: web
-    folderitems:
     - title: Colors
       url: /colors.html
       output: web
