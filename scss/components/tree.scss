@@ -20,6 +20,8 @@ $block: ns(tree);
     $tn-tree-cell-padding: tn-space(3) !default;
     $tn-tree-control-width: 18px !default;
     $tn-tree-control-margin-right: tn-space(2) !default;
+    $tn-tree-transition-params: $tn-animation--speed ease-in !default;
+
     @include reset;
     @include tn-last-child;
     position: relative;
@@ -58,6 +60,7 @@ $block: ns(tree);
         display: flex;
         align-items: center;
         position: relative;
+        transition: background-color $tn-tree-transition-params;
         &:hover {
             background-color: lighten(tn-color(neutral, 3), 10);
         }
