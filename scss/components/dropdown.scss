@@ -73,7 +73,8 @@ $block: ns(dropdown);
         opacity: 1;
         visibility: visible;
         transition: opacity $tn-dropdown-menu-item-transition-params;
-        &[aria-hidden="true"] {
+        &[aria-hidden="true"],
+        &.is-hidden {
             opacity: 0;
             visibility: hidden;
         }
