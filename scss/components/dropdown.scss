@@ -50,7 +50,6 @@ $block: ns(dropdown);
             &:disabled {
                 border-color: transparent;
             }
-
         }
     }
     &__icon {
@@ -60,6 +59,7 @@ $block: ns(dropdown);
     }
     &__menu,
     &__options {
+        margin-left: 0;
         padding-left: 0;
         list-style: none;
         min-width: 100%;
@@ -79,6 +79,7 @@ $block: ns(dropdown);
         }
     }
     &__group {
+        margin-left: 0;
         padding-left: 0;
         list-style: none;
     }
