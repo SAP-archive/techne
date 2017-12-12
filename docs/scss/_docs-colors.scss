@@ -9,6 +9,12 @@ $colors-example-4-text: tn-color(text-inverse, 1);
 
 .docs-colors{
 
+    &_container{
+        width: 120px;
+        float: left;
+        margin-right: 20px
+    }
+
     &_plaque{
         list-style: none;
         margin-left: 0;

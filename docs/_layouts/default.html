@@ -8,14 +8,14 @@
 {% include topnav.html %}
 
 <!-- Page Content -->
-<div class="container">
+<div class="container docs-container">
     <div id="main">
         <!-- Content Row -->
         <div class="row">
             {% assign content_col_size = "col-md-12" %}
             {% unless page.hide_sidebar %}
                 <!-- Sidebar Column -->
-                <div class="col-md-3 side-nav" id="tg-sb-sidebar">
+                <div class="side-nav" id="tg-sb-sidebar">
                     {% include side-nav.html %}
                 </div>
                 {% assign content_col_size = "col-md-9" %}

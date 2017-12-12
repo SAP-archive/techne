@@ -3813,6 +3813,11 @@ hr {
 hr {
   margin: 36px 0; }
 
+.docs-container {
+  margin-left: 0;
+  width: auto;
+  max-width: 1350px; }
+
 .top-nav {
   background-color: #424e5a;
   height: 50px; }
@@ -3835,7 +3840,8 @@ hr {
   padding: 20px;
   display: table-cell;
   float: none;
-  vertical-align: top; }
+  vertical-align: top;
+  width: 17%; }
   .side-nav__headers {
     font-size: 15px;
     font-weight: bold;
@@ -3936,6 +3942,11 @@ hr {
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 40px; }
+
+.docs-colors_container {
+  width: 120px;
+  float: left;
+  margin-right: 20px; }
 
 .docs-colors_plaque {
   list-style: none;
