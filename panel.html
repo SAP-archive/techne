@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Starter Pages | Fundamental UI</title>
+<meta name="keywords" content=" panel">
+<title>Panel | Fundamental UI</title>
 
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -74,7 +74,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: 'search.json',
-        searchResultTemplate: '<li class="search-box__results-links"><a href="{url}" title="Starter Pages">{title}</a></li>',
+        searchResultTemplate: '<li class="search-box__results-links"><a href="{url}" title="Panel">{title}</a></li>',
         noResultsText: '<li class="no-search-results">No results found</li>',
         limit: 10,
         fuzzy: true,
@@ -281,7 +281,7 @@
                     
                     
                     
-                    <li class="side-nav__links">
+                    <li class="side-nav__links active">
                         <a href="panel.html" class="side-nav__links-link">Panel</a>
                     </li>
                     
@@ -408,7 +408,7 @@
 
 <div class="post-content">
 
-    <h1 class="docs-headers-h1">Starter Pages</h1>
+    <h1 class="docs-headers-h1">Panel</h1>
 
    
 
@@ -417,24 +417,200 @@
 
     
 
-  <p><br /><br /></p>
-<div class="tn-card-group tn-card-group--2col docs-cards">
-    <a class="tn-card" role="button" href="layouts.html">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Layouts
-             </h2>
-        </div>
-    </a>
-    <a class="tn-card" href="starter-pages.html" role="button">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Starter Pages
-             </h2>
-        </div>
-    </a>
+  <p>Panels are used to encapsulate part of the content, form elements, lists, collections, etc., on a page. Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand with the information displayed inside the panel.</p>
 
+<p><br /></p>
+
+<h2 id="panel-elements">Panel elements</h2>
+
+<p>The panel component can have elements like the <strong>Panel Title</strong>, the <strong>Panel Actions</strong>, <strong>Panel Content</strong> and <strong>Panel Footer</strong>. Use this elements to organize your panels in a easy way for the user to interact with the information displayed on the Panel.</p>
+
+<div class="tn-panel">
+    <div class="tn-panel__header">
+        <h1 class="tn-panel__title">
+            Panel Title
+        </h1>
+        <div class="tn-panel__actions">
+            Panel Actions
+        </div>
+    </div>
+
+    <p>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <div class="tn-panel__footer">
+        Panel Footer
+    </div>
 </div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-panel__title"</span><span class="nt">&gt;</span>
+            Panel Title
+        <span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__actions"</span><span class="nt">&gt;</span>
+            Panel Actions
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <span class="nt">&lt;/p&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__footer"</span><span class="nt">&gt;</span>
+        Panel Footer
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="panel-title">Panel Title</h2>
+
+<p>The panel title should be a descriptive name to identify the information displayed in the panel. Like <em>Users</em> or <em>Bills</em>.</p>
+
+<div class="tn-panel">
+    <div class="tn-panel__header">
+        <h1 class="tn-panel__title">
+            Panel Title
+        </h1>
+    </div>
+
+    <p>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-panel__title"</span><span class="nt">&gt;</span>
+            Panel Title
+        <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="panel-actions">Panel Actions</h2>
+
+<p>The Panel Actions element is where you can put Actions that can be performed on the data displayed by the panel.</p>
+
+<p>It is recommended to use icons along with the Actions Captions or only icons.</p>
+
+<div class="tn-panel">
+    <div class="tn-panel__header">
+        <h1 class="tn-panel__title">
+            Panel Title
+        </h1>
+        <div class="tn-panel__actions">
+            <button class="tn-button tn-button--text">
+                <i class="tn-icon tn-icon--checked tn-icon--medium"></i>
+                Approve
+            </button>
+            <button class="tn-button tn-button--text">
+                <i class="tn-icon tn-icon--close tn-icon--medium"></i>
+                Reject
+            </button>
+            <button class="tn-button tn-button--text tn-button--icon">
+                <i class="tn-icon tn-icon--edit tn-icon--medium"></i>
+            </button>
+        </div>
+    </div>
+
+    <p>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-panel__title"</span><span class="nt">&gt;</span>
+            Panel Title
+        <span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__actions"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--checked tn-icon--medium"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                Approve
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--close tn-icon--medium"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                Reject
+            <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--text tn-button--icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"tn-icon tn-icon--edit tn-icon--medium"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>
+        Panel content - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2 id="panel-footer">Panel Footer</h2>
+
+<p>The Panel Footer element is the place to put complementary information or navigation related to the content displayed by the panel.</p>
+
+<div class="tn-panel">
+    <div class="tn-panel__header">
+        <h1 class="tn-panel__title">
+            Panel Title
+        </h1>
+    </div>
+
+    <ul class="tn-list-group">
+        <li class="tn-list-group__item">
+            List item 1
+        </li>
+        <li class="tn-list-group__item">
+            List item 2
+        </li>
+        <li class="tn-list-group__item">
+            List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+        </li>
+    </ul>
+
+    <div class="tn-panel__footer">
+        Showing first 3 items.
+        <button class="tn-button tn-button--link">
+             Show All
+        </button>
+    </div>    
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"tn-panel__title"</span><span class="nt">&gt;</span>
+            Panel Title
+        <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tn-list-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
+            List item 1
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
+            List item 2
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tn-list-group__item"</span><span class="nt">&gt;</span>
+            List item 3 - Lorem ipsum dolor sit amet, consectetur sed do
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tn-panel__footer"</span><span class="nt">&gt;</span>
+        Showing first 3 items.
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tn-button tn-button--link"</span><span class="nt">&gt;</span>
+             Show All
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>    
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
 
 
     <div class="tags">
