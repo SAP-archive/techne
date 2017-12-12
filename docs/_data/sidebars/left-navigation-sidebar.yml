@@ -94,6 +94,10 @@ entries:
       url: /pagination.html
       output: web
 
+    - title: Panel
+      url: /panel.html
+      output: web
+
     - title: Status Indicators
       url: /status-indicators.html
       output: web
