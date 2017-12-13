@@ -1,16 +1,20 @@
-.top-nav {
+.docs-top-nav {
     background-color: docs-color(text, 1);
     height: 50px;
     &__logo{
         padding-top: 10px;
+        padding-left: 5px;
         display: inline-block;
         font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+
         &:hover{
             text-decoration: none;
         }
     }
     &__support{
-         @include tn-type(-1);
+        @include tn-type(-1);
         color: #fff !important;
         padding: tn-space(s);
         display: inline-block;

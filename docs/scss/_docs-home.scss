@@ -1,12 +1,11 @@
 .docs-home{
 
     &_hero{
-        padding: 20px;
         text-align: center;
         background-image: url('../images/home-hero-bg.png');
-        background-size: cover;
+        background-size: contain;
         color: docs-color(background, 1);
-        padding: 150px;
+        padding: 91px;
         font-family: 'Lato', sans-serif;
 
         &-heading{
@@ -40,11 +39,69 @@
             text-transform: none;
             padding: 5px 15px;
             border-radius: 20px;
+            font-weight: normal;
+        }
+    }
+
+    &_getting-started{
+        width: 50%;
+        float: left;
+        padding:100px 50px;
+        background-size: contain;
+        text-align: center;
+        display: inline-block;
+        transition:all 0.5s ease;
+        color:docs-color(text, 1);
+
+        &:hover{
+            color:docs-color(text, 1);
+            box-shadow: inset 0 0 50px #8d9dbc;
         }
 
+        &-lable{
+            margin-top: 30px;
+            display: block;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        &--designer{
+            background-image: url('../images/home-designers-bg.png');
+            border-right: 1px solid docs-color(neturals, 2);
+        }
+
+        &--developer{
+            background-image: url('../images/home-developers-bg.png');
+        }
     }
 
-    &_btn{
-        background-color: $accent-color;
+    &_ui-guidelines{
+        text-align: center;
+        background-color: docs-color(background, 1);
+        &-link{
+            width: 20%;
+            float: left;
+            padding: 20px;
+            img{
+                width: 170px;
+            }
+            &--color{
+
+            }
+            &--type{
+
+            }
+            &--spacing{
+
+            }
+            &--grids{
+
+            }
+            &--layouts{
+
+            }
+        }
     }
+
 }
