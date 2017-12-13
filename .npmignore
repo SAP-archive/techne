@@ -7,7 +7,6 @@
 /test
 /bower_components
 /tmp
-/scss/theme
 
 # Exclude Files
 .npmignore
