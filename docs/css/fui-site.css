@@ -3818,6 +3818,9 @@ hr {
   width: auto;
   max-width: 1350px; }
 
+.docs-landing-page {
+  margin: 0  -15px; }
+
 .top-nav {
   background-color: #424e5a;
   height: 50px; }
@@ -3915,10 +3918,40 @@ hr {
 .post-content {
   padding: 40px 40px 80px 40px; }
 
-.docs-home-btn {
+.docs-home_hero {
+  padding: 20px;
+  text-align: center;
+  background-image: url("../images/home-hero-bg.png");
+  background-size: cover;
+  color: #ffffff;
+  padding: 150px;
+  font-family: 'Lato', sans-serif; }
+  .docs-home_hero-heading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 0.76;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.09); }
+  .docs-home_hero-description {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2; }
+  .docs-home_hero-btn {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #424e5a;
+    display: inline-block;
+    margin: 36px 0 26px 0; }
+    .docs-home_hero-btn:hover {
+      background-color: #2fd0c8; }
+  .docs-home_hero-version {
+    background-color: #cfdbe7;
+    display: inline-block;
+    text-transform: none;
+    padding: 5px 15px;
+    border-radius: 20px; }
+
+.docs-home_btn {
   background-color: #2fd0c8; }
-  .docs-home-btn:hover {
-    background-color: #26a6a0; }
 
 .docs-header-h1 {
   font-family: Lato;

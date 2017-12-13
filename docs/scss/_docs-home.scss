@@ -1,6 +1,50 @@
-.docs-home-btn{
-    background-color: $accent-color;
-    &:hover{
-        background-color: darken($accent-color, 10%);
+.docs-home{
+
+    &_hero{
+        padding: 20px;
+        text-align: center;
+        background-image: url('../images/home-hero-bg.png');
+        background-size: cover;
+        color: docs-color(background, 1);
+        padding: 150px;
+        font-family: 'Lato', sans-serif;
+
+        &-heading{
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 0.76;
+            text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        &-description{
+            font-size: 15px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        &-btn{
+            font-size: 16px;
+            font-weight: bold;
+            background-color: docs-color(text, 1);
+            display: inline-block;
+            margin:36px 0 26px 0;
+
+            &:hover{
+                background-color: $accent-color;
+            }
+        }
+
+        &-version{
+            background-color: docs-color(neturals, 1);
+            display: inline-block;
+            text-transform: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+    }
+
+    &_btn{
+        background-color: $accent-color;
     }
 }
