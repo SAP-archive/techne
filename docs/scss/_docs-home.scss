@@ -1,10 +1,13 @@
 .docs-home{
 
+    $docs-home-white-color: docs-color(background, 1);
+    $docs-home-dark-color: docs-color(text, 1);
+
     &_hero{
         text-align: center;
         background-image: url('../images/home-hero-bg.png');
         background-size: contain;
-        color: docs-color(background, 1);
+        color: $docs-home-white-color;
         padding: 91px;
         font-family: 'Lato', sans-serif;
 
@@ -24,7 +27,7 @@
         &-btn{
             font-size: 16px;
             font-weight: bold;
-            background-color: docs-color(text, 1);
+            background-color: $docs-home-dark-color;
             display: inline-block;
             margin:36px 0 26px 0;
 
@@ -51,10 +54,10 @@
         text-align: center;
         display: inline-block;
         transition:all 0.5s ease;
-        color:docs-color(text, 1);
+        color:$docs-home-dark-color;
 
         &:hover{
-            color:docs-color(text, 1);
+            color:$docs-home-dark-color;
             box-shadow: inset 0 0 50px #8d9dbc;
         }
 
@@ -79,7 +82,7 @@
     &_ui-guidelines{
         text-align: center;
         background-color: docs-color(background, 3);
-        color: docs-color(background, 1);
+        color: $docs-home-white-color;
         padding: 100px 0;
 
         &-heading{
@@ -113,31 +116,32 @@
             font-size: 16px;
             font-weight: bold;
             text-transform: uppercase;
-            color: docs-color(background, 1);
+            color: $docs-home-white-color;
+
             &:hover{
-                color: docs-color(background, 1);
+                color: $docs-home-white-color;
+            }
+        }
+    }
+
+    &_support{
+        width: 60%;
+        margin: 0 auto;
+
+        &-link{
+            width: 50%;
+            float: left;
+            text-align: center;
+            color: docs-color(text, 2);
+
+            &:hover{
+                color: docs-color(text, 2);
             }
 
-
-
-            &--color{
-
-            }
-
-            &--type{
-
-            }
-
-            &--spacing{
-
-            }
-
-            &--grids{
-
-            }
-
-            &--layouts{
-
+            img{
+                display: block;
+                margin: 30px auto;
+                width: 80px;
             }
         }
     }

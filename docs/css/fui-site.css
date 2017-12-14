@@ -4009,6 +4009,21 @@ hr {
     .docs-home_ui-guidelines-link:hover {
       color: #ffffff; }
 
+.docs-home_support {
+  width: 60%;
+  margin: 0 auto; }
+  .docs-home_support-link {
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: black; }
+    .docs-home_support-link:hover {
+      color: black; }
+    .docs-home_support-link img {
+      display: block;
+      margin: 30px auto;
+      width: 80px; }
+
 .docs-header-h1 {
   font-family: Lato;
   font-size: 36px;
