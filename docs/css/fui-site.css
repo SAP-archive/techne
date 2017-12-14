@@ -3979,13 +3979,35 @@ hr {
 
 .docs-home_ui-guidelines {
   text-align: center;
-  background-color: #ffffff; }
+  background-color: #313c46;
+  color: #ffffff;
+  padding: 100px 0; }
+  .docs-home_ui-guidelines-heading {
+    font-size: 28px;
+    font-weight: 900; }
+  .docs-home_ui-guidelines-description {
+    font-size: 14px; }
+  .docs-home_ui-guidelines-img {
+    height: 120px;
+    vertical-align: baseline;
+    position: relative;
+    margin-bottom: 30px; }
+    .docs-home_ui-guidelines-img img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto; }
   .docs-home_ui-guidelines-link {
     width: 20%;
     float: left;
-    padding: 20px; }
-    .docs-home_ui-guidelines-link img {
-      width: 170px; }
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff; }
+    .docs-home_ui-guidelines-link:hover {
+      color: #ffffff; }
 
 .docs-header-h1 {
   font-family: Lato;

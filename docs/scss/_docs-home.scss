@@ -78,26 +78,64 @@
 
     &_ui-guidelines{
         text-align: center;
-        background-color: docs-color(background, 1);
+        background-color: docs-color(background, 3);
+        color: docs-color(background, 1);
+        padding: 100px 0;
+
+        &-heading{
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        &-description{
+            font-size: 14px;
+        }
+
+        &-img{
+            height: 120px;
+            vertical-align: baseline;
+            position: relative;
+            margin-bottom: 30px;
+
+            img{
+                position: absolute;
+                bottom: 0;
+                left:0;
+                right:0;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+
         &-link{
             width: 20%;
             float: left;
-            padding: 20px;
-            img{
-                width: 170px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: docs-color(background, 1);
+            &:hover{
+                color: docs-color(background, 1);
             }
+
+
+
             &--color{
 
             }
+
             &--type{
 
             }
+
             &--spacing{
 
             }
+
             &--grids{
 
             }
+
             &--layouts{
 
             }
