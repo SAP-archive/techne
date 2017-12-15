@@ -37,7 +37,6 @@
         }
 
         &-version{
-            background-color: docs-color(neturals, 1);
             display: inline-block;
             text-transform: none;
             padding: 5px 15px;
@@ -53,15 +52,14 @@
         background-size: contain;
         text-align: center;
         display: inline-block;
-        transition:all 0.5s ease;
+        transition: all 0.5s ease;
         color:$docs-home-dark-color;
 
         &:hover{
             color:$docs-home-dark-color;
-            box-shadow: inset 0 0 50px #8d9dbc;
         }
 
-        &-lable{
+        &-label{
             margin-top: 30px;
             display: block;
             font-weight: bold;
