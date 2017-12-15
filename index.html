@@ -28,17 +28,17 @@
 <body>
 
 <!-- Navigation -->
-<nav class="top-nav">
-    <div class="container">
+<nav class="docs-top-nav">
+    <div class="container docs-container">
 
         <!-- logo -->
-        <a class="top-nav__logo" href="index.html">
-            <span class="projectTitle">Fundamental <span class="has-accent-color">UI</span></span>
+        <a class="docs-top-nav__logo" href="index.html">
+            Fundamental <span class="has-accent-color">UI</span>
         </a>
 
         <!-- support links -->
         <div class="tn-dropdown tn-has-float-right">
-            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="top-nav__support">
+            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="docs-top-nav__support">
                 Support
             </a>
             <ul class="tn-dropdown__menu tn-has-margin-left-none" aria-hidden="true" id="aqn0K794">
@@ -52,14 +52,14 @@
 
 
 <!-- Page Content -->
-<div class="container">
+<div class="container docs-container">
     <div id="main">
         <!-- Content Row -->
         <div class="row">
             
             
                 <!-- Sidebar Column -->
-                <div class="col-md-3 side-nav" id="tg-sb-sidebar">
+                <div class="side-nav" id="tg-sb-sidebar">
                     
 
 <div class="search-box">
@@ -404,99 +404,80 @@
 
             <div class="col-md-9 main-content" id="tg-sb-content">
                 <!-- Content Column -->
-                
-
-<div class="post-content">
-
-    <h1 class="docs-headers-h1"></h1>
-
-   
-
-    
-
-
-    
-
-  <center>
-<h1>Fundamental UI</h1>
-
-Fundamental UI is an unified, flexible design system that solves complex problems in a meaningful way and creates simple intuitive experience.
-
-<br /><br />
-
-<a class="tn-button tn-button--large docs-home-btn" href="components.html">
-    Explore Components
-</a>
-
-<br /><br />
-
-Version: beta.0.1
-
-<br /><br />
-</center>
-
-<div class="tn-card-group tn-card-group--2col docs-cards">
-    <a class="tn-card" role="button" href="getting-started-designers.html">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Designers
-             </h2>
-             <p class="tn-card__description">
-                 Get Started
-             </p>
-        </div>
+                <div class="docs-landing-page">
+    <div class="docs-home_hero">
+    <h1 class="docs-home_hero-heading">Fundamental UI</h1>
+    <p class="docs-home_hero-description">
+        Fundamental UI is an unified, flexible design system that solves complex <br>
+        problems in a meaningful way and creates simple intuitive experience.
+    </p>
+    <a class="tn-button docs-home_hero-btn" href="components.html">
+        Explore Components
     </a>
-    <a class="tn-card" href="getting-started-developers.html" role="button">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Developers
-             </h2>
-             <p class="tn-card__description">
-                 Get Started
-             </p>
-        </div>
-    </a>
-    <a class="tn-card" href="ui-guidelines.html" role="button">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 UI Guidelines
-             </h2>
-             <p class="tn-card__description">
-                 Learn the basics of Fundamental UI - <br />
-                Colors, Spacing, Grids and Typeface
-             </p>
-        </div>
-    </a>
-    <a class="tn-card" role="button" href="layouts-starter-pages.html">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Layouts &amp; Starter Pages
-             </h2>
-             <p class="tn-card__description">
-                 Master the structure of Fundamental UI
-             </p>
-        </div>
-    </a>
-    <a class="tn-card" role="button" href="mailto:fundamental@sap.com" target="_blank">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Have a design request?
-             </h2>
-        </div>
-    </a>
-    <a class="tn-card" role="button" href="https://github.com/SAP/techne/issues/new" target="_blank">
-        <div class="tn-card__content tn-has-text-align-center">
-             <h2 class="tn-card__header">
-                 Ask a question
-             </h2>
-        </div>
-    </a>
+    <br>
+    <span class="docs-home_hero-version">Version: v1.0.0-BETA</span>
 </div>
 
+<a class="docs-home_getting-started docs-home_getting-started--designer" href="getting-started-designers.html">
+    <img src="/images/home-designers-letters.png" alt="Designers" width="300">
+    <span class="docs-home_getting-started-label">Start Developing ></span>
+</a>
 
-    <div class="tags">
-        
-    </div>
+<a class="docs-home_getting-started docs-home_getting-started--developer" href="getting-started-developers.html">
+    <img src="/images/home-developers-letters.png" alt="Developers" width="300">
+    <span class="docs-home_getting-started-label">Start Designing ></span>
+</a>
+
+<br clear="all">
+
+<div class="docs-home_ui-guidelines">
+    <h3 class="docs-home_ui-guidelines-heading">UI Guidelines</h3>
+    <p class="docs-home_ui-guidelies-description">Learn the basics of Fundamental UI</p>
+
+    <a class="docs-home_ui-guidelines-link" href="colors.html">
+        <div class="docs-home_ui-guidelines-img">
+            <img src="/images/home-colors.png" alt="Colors" width="100">
+        </div>
+        Colors
+    </a >
+    <a class="docs-home_ui-guidelines-link" href="type.html">
+        <div class="docs-home_ui-guidelines-img">
+            <img src="/images/home-typography.png" alt="Typography" width="100">
+        </div>
+        Typography
+    </a>
+    <a class="docs-home_ui-guidelines-link" href="spacing.html">
+        <div class="docs-home_ui-guidelines-img">
+            <img src="/images/home-spacing.png" alt="Spacing" width="150">
+        </div>
+        Spacing
+    </a>
+    <a class="docs-home_ui-guidelines-link" href="grid.html">
+        <div class="docs-home_ui-guidelines-img">
+            <img src="/images/home-grids.png" alt="Grids" width="120">
+        </div>
+        Grids
+    </a>
+    <a class="docs-home_ui-guidelines-link docs-home_ui-guidelines-link--layouts" href="layouts.html">
+        <div class="docs-home_ui-guidelines-img">
+            <img src="/images/home-layouts.png" alt="Layouts" width="120">
+        </div>
+        Layouts
+    </a>
+    <br clear="all">
+</div>
+
+<div class="docs-home_support">
+    <a href="mailto:fundamental@sap.com" target="_blank" class="docs-home_support-link docs-home_support-link--design">
+        <img src="/images/home-ask-a-question.png" alt="">
+        Have a design request?
+    </a>
+    <a href="https://github.com/SAP/techne/issues/new" target="_blank" class="docs-home_support-link docs-home_support-link--design">
+        <img src="/images/home-github-help.png" alt="">
+        Ask a question.
+    </a>
+
+</div>
 
 </div>
 

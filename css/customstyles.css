@@ -335,31 +335,6 @@ a.accordion-toggle, a.accordion-collapsed {
     border-radius: 5px;
 }
 
-
-span.projectTitle {
-    font-family: Helvetica;
-    font-weight: bold;
-    color: #fff;
-}
-
-span.projectTitle img{
-    width:30px;
-}
-
-.footer {
-    text-align: right;
-}
-
-.footerMeta {
-    background-color: whitesmoke;
-    padding: 10px;
-    max-width: 250px;
-    border-radius: 5px;
-    margin-top: 50px;
-    font-style:italic;
-    font-size:12px;
-}
-
 img.screenshotSmall {
     max-width: 300px;
 }

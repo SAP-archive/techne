@@ -168,10 +168,10 @@
 
 
 {
-"title": "Starter Pages",
+"title": "",
 "tags": "",
-"keywords": "starter page",
-"url": "starter-pages.html",
+"keywords": "getting started",
+"url": "index.html",
 "summary": ""
 }
 ,
@@ -179,10 +179,10 @@
 
 
 {
-"title": "",
+"title": "Starter Pages",
 "tags": "",
-"keywords": "getting started",
-"url": "index.html",
+"keywords": "starter page",
+"url": "starter-pages.html",
 "summary": ""
 }
 ,
