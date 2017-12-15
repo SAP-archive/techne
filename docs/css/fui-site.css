@@ -3813,16 +3813,29 @@ hr {
 hr {
   margin: 36px 0; }
 
-.top-nav {
+.docs-container {
+  margin-left: 0;
+  width: auto;
+  max-width: 1350px; }
+
+.docs-landing-page {
+  margin: 0  -15px; }
+
+.docs-top-nav {
   background-color: #424e5a;
   height: 50px; }
-  .top-nav__logo {
+  .docs-top-nav__logo {
     padding-top: 10px;
+    padding-left: 5px;
     display: inline-block;
-    font-size: 20px; }
-    .top-nav__logo:hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; }
+    .docs-top-nav__logo:hover {
       text-decoration: none; }
-  .top-nav__support {
+  .docs-top-nav .docs-container {
+    max-width: 100%; }
+  .docs-top-nav__support {
     font-size: 0.875rem;
     line-height: 1.42858;
     font-weight: 400;
@@ -3835,7 +3848,8 @@ hr {
   padding: 20px;
   display: table-cell;
   float: none;
-  vertical-align: top; }
+  vertical-align: top;
+  width: 17%; }
   .side-nav__headers {
     font-size: 15px;
     font-weight: bold;
@@ -3909,10 +3923,106 @@ hr {
 .post-content {
   padding: 40px 40px 80px 40px; }
 
-.docs-home-btn {
-  background-color: #2fd0c8; }
-  .docs-home-btn:hover {
-    background-color: #26a6a0; }
+.docs-home_hero {
+  text-align: center;
+  background-image: url("../images/home-hero-bg.png");
+  background-size: contain;
+  color: #ffffff;
+  padding: 91px;
+  font-family: 'Lato', sans-serif; }
+  .docs-home_hero-heading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 0.76;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.09); }
+  .docs-home_hero-description {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2; }
+  .docs-home_hero-btn {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #424e5a;
+    display: inline-block;
+    margin: 36px 0 26px 0; }
+    .docs-home_hero-btn:hover {
+      background-color: #2fd0c8; }
+  .docs-home_hero-version {
+    display: inline-block;
+    text-transform: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: normal; }
+
+.docs-home_getting-started {
+  width: 50%;
+  float: left;
+  padding: 100px 50px;
+  background-size: contain;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.5s ease;
+  color: #424e5a; }
+  .docs-home_getting-started:hover {
+    color: #424e5a; }
+  .docs-home_getting-started-label {
+    margin-top: 30px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px; }
+  .docs-home_getting-started--designer {
+    background-image: url("../images/home-designers-bg.png");
+    border-right: 1px solid #e4eaf1; }
+  .docs-home_getting-started--developer {
+    background-image: url("../images/home-developers-bg.png"); }
+
+.docs-home_ui-guidelines {
+  text-align: center;
+  background-color: #313c46;
+  color: #ffffff;
+  padding: 100px 0; }
+  .docs-home_ui-guidelines-heading {
+    font-size: 28px;
+    font-weight: 900; }
+  .docs-home_ui-guidelines-description {
+    font-size: 14px; }
+  .docs-home_ui-guidelines-img {
+    height: 120px;
+    vertical-align: baseline;
+    position: relative;
+    margin-bottom: 30px; }
+    .docs-home_ui-guidelines-img img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto; }
+  .docs-home_ui-guidelines-link {
+    width: 20%;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff; }
+    .docs-home_ui-guidelines-link:hover {
+      color: #ffffff; }
+
+.docs-home_support {
+  width: 60%;
+  margin: 0 auto; }
+  .docs-home_support-link {
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: black; }
+    .docs-home_support-link:hover {
+      color: black; }
+    .docs-home_support-link img {
+      display: block;
+      margin: 30px auto;
+      width: 80px; }
 
 .docs-header-h1 {
   font-family: Lato;
@@ -3936,6 +4046,11 @@ hr {
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 40px; }
+
+.docs-colors_container {
+  width: 120px;
+  float: left;
+  margin-right: 20px; }
 
 .docs-colors_plaque {
   list-style: none;

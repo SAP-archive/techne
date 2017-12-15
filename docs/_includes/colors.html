@@ -1,17 +1,15 @@
 
-<div class="row">
-    {% for group in site.data.colors.group %}
-        <div class="col-lg-3 docs-colors_container">
-            <p><strong>{{ group.name }}</strong></p>
-            <ul class="docs-colors_plaque">
-            {% for colors in group.colors %}
-                <li style="background-color: #{{ colors.colorvalue }}; color: #{{colors.textcolor}}; border: 1px solid #{{colors.bordercolor}}" class="docs-colors_plaque_color">
-                    {{ group.name }} {{ colors.colorname }} <br>
-                    #{{ colors.colorvalue }}
-                </li>
-            {% endfor %}
-            </ul>
-            <br style="clear:both">
-        </div>
-    {% endfor %}
-</div>
+{% for group in site.data.colors.group %}
+    <div class="docs-colors_container">
+        <p><strong>{{ group.name }}</strong></p>
+        <ul class="docs-colors_plaque">
+        {% for colors in group.colors %}
+            <li style="background-color: #{{ colors.colorvalue }}; color: #{{colors.textcolor}}; border: 1px solid #{{colors.bordercolor}}" class="docs-colors_plaque_color">
+                {{ group.name }} {{ colors.colorname }} <br>
+                #{{ colors.colorvalue }}
+            </li>
+        {% endfor %}
+        </ul>
+        <br style="clear:both">
+    </div>
+{% endfor %}

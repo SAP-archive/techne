@@ -1,13 +1,19 @@
-$colors-example-1-bg: tn-color(background, 1);
-$colors-example-1-text: tn-color(text, 1);
-$colors-example-2-bg: tn-color(action, 2);
-$colors-example-2-text: tn-color(text-inverse, 1);
-$colors-example-3-bg: tn-color(action, 1);
-$colors-example-3-text: tn-color(text-inverse, 1);
-$colors-example-4-bg: tn-color(background, 3);
-$colors-example-4-text: tn-color(text-inverse, 1);
 
 .docs-colors{
+    $colors-example-1-bg: tn-color(background, 1);
+    $colors-example-1-text: tn-color(text, 1);
+    $colors-example-2-bg: tn-color(action, 2);
+    $colors-example-2-text: tn-color(text-inverse, 1);
+    $colors-example-3-bg: tn-color(action, 1);
+    $colors-example-3-text: tn-color(text-inverse, 1);
+    $colors-example-4-bg: tn-color(background, 3);
+    $colors-example-4-text: tn-color(text-inverse, 1);
+
+    &_container{
+        width: 120px;
+        float: left;
+        margin-right: 20px
+    }
 
     &_plaque{
         list-style: none;

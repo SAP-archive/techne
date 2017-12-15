@@ -1,6 +1,7 @@
-$docs-breakpoint-table-border-color: docs-color(neturals, 1);
 
 .docs-breakpoints-table{
+    $docs-breakpoint-table-border-color: docs-color(neturals, 1);
+
     border:  1px solid $docs-breakpoint-table-border-color;
 
     & th{
