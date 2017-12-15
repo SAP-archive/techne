@@ -50,7 +50,6 @@ $block: ns(dropdown);
             &:disabled {
                 border-color: transparent;
             }
-
         }
     }
     &__icon {
@@ -60,6 +59,7 @@ $block: ns(dropdown);
     }
     &__menu,
     &__options {
+        margin-left: 0;
         padding-left: 0;
         list-style: none;
         min-width: 100%;
@@ -73,12 +73,14 @@ $block: ns(dropdown);
         opacity: 1;
         visibility: visible;
         transition: opacity $tn-dropdown-menu-item-transition-params;
-        &[aria-hidden="true"] {
+        &[aria-hidden="true"],
+        &.is-hidden {
             opacity: 0;
             visibility: hidden;
         }
     }
     &__group {
+        margin-left: 0;
         padding-left: 0;
         list-style: none;
     }

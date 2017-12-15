@@ -3833,6 +3833,8 @@ hr {
     color: #fff; }
     .docs-top-nav__logo:hover {
       text-decoration: none; }
+  .docs-top-nav .docs-container {
+    max-width: 100%; }
   .docs-top-nav__support {
     font-size: 0.875rem;
     line-height: 1.42858;
@@ -3946,7 +3948,6 @@ hr {
     .docs-home_hero-btn:hover {
       background-color: #2fd0c8; }
   .docs-home_hero-version {
-    background-color: #cfdbe7;
     display: inline-block;
     text-transform: none;
     padding: 5px 15px;
@@ -3963,9 +3964,8 @@ hr {
   transition: all 0.5s ease;
   color: #424e5a; }
   .docs-home_getting-started:hover {
-    color: #424e5a;
-    box-shadow: inset 0 0 50px #8d9dbc; }
-  .docs-home_getting-started-lable {
+    color: #424e5a; }
+  .docs-home_getting-started-label {
     margin-top: 30px;
     display: block;
     font-weight: bold;

@@ -20,6 +20,8 @@ $block: ns(list-group);
     $tn-list-group-transition-params: $tn-animation--speed ease-in !default;
 
     @include reset;
+
+    margin-left: 0;
     &__item {
         list-style: none;
         border: 1px solid $tn-list-group-border-color;

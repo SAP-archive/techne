@@ -80,6 +80,8 @@ $block: ns(card);
             border-color: $tn-card-color-link;
             background-color: $tn-card-background-color-hover;
             box-shadow: $tn-card-shadow-hover;
+            text-decoration: none;
+            color: inherit;
         }
     }
 
