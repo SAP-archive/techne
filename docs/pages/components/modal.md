@@ -10,7 +10,7 @@ summary:
 
 The Modal component is a high level component, used as a temporary container to be displayed on response of an user action. Can be used to collect simple information from the user: a small form; or give some contextual information that doesn't need the use user to navigate to a new page.
 
-<br />
+<hr />
 
 ## Informational Modal
 

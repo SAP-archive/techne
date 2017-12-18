@@ -9,6 +9,12 @@ folder: components
 
 The Toolbar component is used always along a collection of items, like cards or a table. The main use of it is to manipulate the collection. We provide elements and interaction patters for **filtering**, **sorting**, **pagination** and **view changes**.
 
+<hr>
+
+## Toolbar elements
+
+This is the look and feel of the Toolbar when all the components are used.
+
 {% capture toolbar-full %}
 <div class="tn-toolbar">
     <div class="tn-toolbar__group tn-toolbar__group--filter">

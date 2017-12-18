@@ -15,11 +15,13 @@ ul,ol{
 
 hr{
     margin: 36px 0;
+    float: none;
+    clear: both;
 }
 
 
 .highlight{
-    max-width: 767px;
+    max-width: 900px;
 }
 
 .docs-cards{

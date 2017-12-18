@@ -9,7 +9,7 @@ folder: components
 
 The dropdown component let the user select one of different options. It is more flexible than the normal Select.
 
-<br />
+<hr />
 
 ## Default Dropdown
 

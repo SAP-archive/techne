@@ -9,7 +9,7 @@ summary:
 ---
 Panels are used to encapsulate part of the content, form elements, lists, collections, etc., on a page. Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand with the information displayed inside the panel.
 
-<br/>
+<hr/>
 
 ## Panel elements
 

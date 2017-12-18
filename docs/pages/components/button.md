@@ -9,6 +9,8 @@ folder: components
 
 The Buttons are components that let the user perform an actions. For example: saving a form, submitting data to the server, adding one element to a list, etc.
 
+<hr>
+
 ## Standard button
 Uses the main action color and perform the most important or primary actions on screen. It also support icons along with the caption text, or the icon alone.
 
