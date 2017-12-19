@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,42 +26,39 @@
 <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 
 </head>
+
 <body>
 
-<!-- Navigation -->
+    <!-- Navigation -->
 <nav class="docs-top-nav">
-    <div class="container docs-container">
+    <div class="">
 
         <!-- logo -->
-        <a class="docs-top-nav__logo" href="index.html">
+        <a class="docs-top-nav__logo" href="/">
             Fundamental <span class="has-accent-color">UI</span>
         </a>
 
         <!-- support links -->
-        <div class="tn-dropdown tn-has-float-right">
-            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="docs-top-nav__support">
-                Support
-            </a>
-            <ul class="tn-dropdown__menu tn-has-margin-left-none" aria-hidden="true" id="aqn0K794">
-                <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
-                <li><a href="mailto:fundamental@sap.com" target="_blank" class="tn-dropdown__item">Email Us</a></li>
-            </ul>
+        <div class="docs-top-nav__support tn-has-float-right">
+            <div class="tn-dropdown">
+                <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="docs-top-nav__support">
+                    Support
+                </a>
+                <ul class="tn-dropdown__menu" aria-hidden="true" id="aqn0K794">
+                    <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
+                    <li><a href="mailto:fundamental@sap.com" target="_blank" class="tn-dropdown__item">Email Us</a></li>
+                </ul>
+            </div>
         </div>
-
     </div>
 </nav>
 
 
-<!-- Page Content -->
-<div class="container docs-container">
-    <div id="main">
-        <!-- Content Row -->
-        <div class="row">
+    <!-- Page Content -->
+    <div class="docs-container">
+        <!-- Sidebar Column -->
+        <div class="side-nav" id="tg-sb-sidebar">
             
-            
-                <!-- Sidebar Column -->
-                <div class="side-nav" id="tg-sb-sidebar">
-                    
 
 <div class="search-box">
     <span class="tn-icon tn-icon--search search-box__icon"></span>
@@ -398,13 +396,11 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
 
-                </div>
-                
-            
+        </div>
 
-            <div class="col-md-9 main-content" id="tg-sb-content">
-                <!-- Content Column -->
-                
+        <div class="main-content" id="tg-sb-content">
+            <!-- Content Column -->
+            
 
 <div class="post-content">
 
@@ -428,12 +424,12 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #006fbb; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Primary 1 <br>
+               <span class="docs-colors_plaque_color-name">Primary 1</span>
                 #006fbb
             </li>
         
             <li style="background-color: #27394f; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Primary 2 <br>
+               <span class="docs-colors_plaque_color-name">Primary 2</span>
                 #27394f
             </li>
         
@@ -446,12 +442,12 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #009cdf; color: #ffffff; border: 1px solid #" class="docs-colors_plaque_color">
-                Action 1 <br>
+               <span class="docs-colors_plaque_color-name">Action 1</span>
                 #009cdf
             </li>
         
             <li style="background-color: #8d9dbc; color: #ffffff; border: 1px solid #" class="docs-colors_plaque_color">
-                Action 2 <br>
+               <span class="docs-colors_plaque_color-name">Action 2</span>
                 #8d9dbc
             </li>
         
@@ -464,17 +460,17 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #21262c; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Text 1 <br>
+               <span class="docs-colors_plaque_color-name">Text 1</span>
                 #21262c
             </li>
         
             <li style="background-color: #7f90a4; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Text 2 <br>
+               <span class="docs-colors_plaque_color-name">Text 2</span>
                 #7f90a4
             </li>
         
             <li style="background-color: #63758b; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Text 3 <br>
+               <span class="docs-colors_plaque_color-name">Text 3</span>
                 #63758b
             </li>
         
@@ -487,17 +483,17 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #ffffff; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Text Inverse 1 <br>
+               <span class="docs-colors_plaque_color-name">Text Inverse 1</span>
                 #ffffff
             </li>
         
             <li style="background-color: #f6f8f9; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Text Inverse 2 <br>
+               <span class="docs-colors_plaque_color-name">Text Inverse 2</span>
                 #f6f8f9
             </li>
         
             <li style="background-color: #eef1f3; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Text Inverse 3 <br>
+               <span class="docs-colors_plaque_color-name">Text Inverse 3</span>
                 #eef1f3
             </li>
         
@@ -510,17 +506,17 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #ffffff; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Backgrounds 1 <br>
+               <span class="docs-colors_plaque_color-name">Backgrounds 1</span>
                 #ffffff
             </li>
         
             <li style="background-color: #f0f5ff; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Backgrounds 2 <br>
+               <span class="docs-colors_plaque_color-name">Backgrounds 2</span>
                 #f0f5ff
             </li>
         
             <li style="background-color: #0; color: #ffffff; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Backgrounds 3 <br>
+               <span class="docs-colors_plaque_color-name">Backgrounds 3</span>
                 #0
             </li>
         
@@ -533,22 +529,22 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #f9fbfc; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Neutral 1 <br>
+               <span class="docs-colors_plaque_color-name">Neutral 1</span>
                 #f9fbfc
             </li>
         
             <li style="background-color: #d7d7d7; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Neutral 2 <br>
+               <span class="docs-colors_plaque_color-name">Neutral 2</span>
                 #d7d7d7
             </li>
         
             <li style="background-color: #ccdaeb; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Neutral 3 <br>
+               <span class="docs-colors_plaque_color-name">Neutral 3</span>
                 #ccdaeb
             </li>
         
             <li style="background-color: #8a8fa1; color: #0; border: 1px solid #cfdbe7" class="docs-colors_plaque_color">
-                Neutral 4 <br>
+               <span class="docs-colors_plaque_color-name">Neutral 4</span>
                 #8a8fa1
             </li>
         
@@ -561,17 +557,17 @@
         <ul class="docs-colors_plaque">
         
             <li style="background-color: #61bf33; color: #; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Status 1 <br>
+               <span class="docs-colors_plaque_color-name">Status 1</span>
                 #61bf33
             </li>
         
             <li style="background-color: #e97326; color: #; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Status 2 <br>
+               <span class="docs-colors_plaque_color-name">Status 2</span>
                 #e97326
             </li>
         
             <li style="background-color: #df1919; color: #; border: 1px solid #ffffff" class="docs-colors_plaque_color">
-                Status 3 <br>
+               <span class="docs-colors_plaque_color-name">Status 3</span>
                 #df1919
             </li>
         
@@ -581,6 +577,7 @@
 
 
 
+<hr/>
 
 <h2 class="docs-header-h2">Accessibility</h2>
 
@@ -620,14 +617,16 @@
 </div>
 
 
-                <!-- footer -->
-                <footer class="docs-footer">
+            <!-- footer -->
+            <br style="clear:both; float:none;"/>
+
+<footer class="docs-footer">
     <div class="row">
         <div class="col-lg-4">
             <span>Version 2.0.0-alpha-7</span>
         </div>
         <div class="col-lg-4 text-center">
-            <span>(C) Copyright SAP Hybris 2017</span>
+            <span>&copy; Copyright SAP Hybris 2017</span>
         </div>
         <div class="col-lg-4">
             <span>Have a question? <a href="mailto:fundamental@sap.com">Email</a> us or <br> open a <a href="https://github.com/SAP/techne/issues/new" target="_blank">issue</a> on GitHub.</span>
@@ -642,12 +641,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
 <script src="js/customscripts.js"></script>
 
-            </div>
-
         </div>
     </div>
-</div>
 
 </body>
+
 
 </html>

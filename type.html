@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,42 +26,39 @@
 <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 
 </head>
+
 <body>
 
-<!-- Navigation -->
+    <!-- Navigation -->
 <nav class="docs-top-nav">
-    <div class="container docs-container">
+    <div class="">
 
         <!-- logo -->
-        <a class="docs-top-nav__logo" href="index.html">
+        <a class="docs-top-nav__logo" href="/">
             Fundamental <span class="has-accent-color">UI</span>
         </a>
 
         <!-- support links -->
-        <div class="tn-dropdown tn-has-float-right">
-            <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="docs-top-nav__support">
-                Support
-            </a>
-            <ul class="tn-dropdown__menu tn-has-margin-left-none" aria-hidden="true" id="aqn0K794">
-                <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
-                <li><a href="mailto:fundamental@sap.com" target="_blank" class="tn-dropdown__item">Email Us</a></li>
-            </ul>
+        <div class="docs-top-nav__support tn-has-float-right">
+            <div class="tn-dropdown">
+                <a href="#" aria-controls="aqn0K794" aria-expanded="false" aria-haspopup="true" class="docs-top-nav__support">
+                    Support
+                </a>
+                <ul class="tn-dropdown__menu" aria-hidden="true" id="aqn0K794">
+                    <li><a href="https://github.com/SAP/techne/issues/new" target="_blank" class="tn-dropdown__item">Submit an issue</a></li>
+                    <li><a href="mailto:fundamental@sap.com" target="_blank" class="tn-dropdown__item">Email Us</a></li>
+                </ul>
+            </div>
         </div>
-
     </div>
 </nav>
 
 
-<!-- Page Content -->
-<div class="container docs-container">
-    <div id="main">
-        <!-- Content Row -->
-        <div class="row">
+    <!-- Page Content -->
+    <div class="docs-container">
+        <!-- Sidebar Column -->
+        <div class="side-nav" id="tg-sb-sidebar">
             
-            
-                <!-- Sidebar Column -->
-                <div class="side-nav" id="tg-sb-sidebar">
-                    
 
 <div class="search-box">
     <span class="tn-icon tn-icon--search search-box__icon"></span>
@@ -398,13 +396,11 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
 
-                </div>
-                
-            
+        </div>
 
-            <div class="col-md-9 main-content" id="tg-sb-content">
-                <!-- Content Column -->
-                
+        <div class="main-content" id="tg-sb-content">
+            <!-- Content Column -->
+            
 
 <div class="post-content">
 
@@ -478,14 +474,16 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
 </div>
 
 
-                <!-- footer -->
-                <footer class="docs-footer">
+            <!-- footer -->
+            <br style="clear:both; float:none;"/>
+
+<footer class="docs-footer">
     <div class="row">
         <div class="col-lg-4">
             <span>Version 2.0.0-alpha-7</span>
         </div>
         <div class="col-lg-4 text-center">
-            <span>(C) Copyright SAP Hybris 2017</span>
+            <span>&copy; Copyright SAP Hybris 2017</span>
         </div>
         <div class="col-lg-4">
             <span>Have a question? <a href="mailto:fundamental@sap.com">Email</a> us or <br> open a <a href="https://github.com/SAP/techne/issues/new" target="_blank">issue</a> on GitHub.</span>
@@ -500,12 +498,10 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
 <script src="js/customscripts.js"></script>
 
-            </div>
-
         </div>
     </div>
-</div>
 
 </body>
+
 
 </html>
