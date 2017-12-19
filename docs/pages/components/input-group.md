@@ -9,7 +9,7 @@ folder: components
 
 The Input groups component are form inputs with add-ons that allows the user to better understand the information been entered.
 
-<br/>
+<hr/>
 
 ## Text add-on
 

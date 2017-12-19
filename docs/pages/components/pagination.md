@@ -10,6 +10,7 @@ summary:
 
 Use pagination components in conjunction with Tables (recommended) or Cards (if needed) to allow for more efficient performance and quick access to specific records in the overall data set.
 
+<hr>
 
 ## First Page
 When the first page is active, the previous link should be disabled.

@@ -1,9 +1,13 @@
 .main-content{
-    display: table-cell;
-    float: none;
-
     vertical-align: top;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .post-content{
     padding: 40px 40px 80px 40px;
+    min-width: 1024px;
+    max-width: 1600px;
+    width: 80%;
 }

@@ -10,7 +10,7 @@
     $colors-example-4-text: tn-color(text-inverse, 1);
 
     &_container{
-        width: 120px;
+        width: 12%;
         float: left;
         margin-right: 20px
     }
@@ -19,9 +19,19 @@
         list-style: none;
         margin-left: 0;
         &_color{
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 4px;
+            padding: 5px;
+            justify-content: center;
+            margin-bottom: 20px;
+            min-height: 115px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+
+            &-name { 
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
         }
     }
 

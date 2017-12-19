@@ -12,6 +12,12 @@ Loading indicators are used to signal the user that data on the page is still lo
 
 Loading indicators are not visible all the time, only when needed. To show and hide the loading indicator the `aria-hidden` attribute is used to hide/show the element.
 
+<hr>
+
+## Loader element
+
+The element used to display the loading indicator animation.
+
 {% capture default %}
 <div class="tn-spinner" aria-hidden="false" aria-label="Loading">
     <div></div>

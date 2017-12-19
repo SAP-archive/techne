@@ -9,6 +9,8 @@ folder: components
 
 Form Elements include the layout of a field itself, checkboxes, radio buttons and states of a field. Use these components along with inline help and error state.
 
+<hr/>
+
 ## Inputs
 Inputs are the used to collect data from the user. When a field is required the **label** is displayed in bold and noted by asterisk *
 

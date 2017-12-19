@@ -10,6 +10,8 @@ summary:
 
 When using images you can use our helpers classes to adjust the size and the shape.
 
+<hr>
+
 ## Sizes
 
 Sizes helper classes are named from `tn-image-xs` to `tn-image-xxl`.

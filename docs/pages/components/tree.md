@@ -9,7 +9,7 @@ folder: components
 
 The Tree component is used to display hierarchical data in tabular way. Permitting the user to dig deeper into the data in an simple way. Along with displaying the hierarchy information it can also contain other data in the same node as well.
 
-<br/>
+<hr/>
 
 ## Simple tree
 

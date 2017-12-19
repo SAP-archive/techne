@@ -13,7 +13,7 @@ It is also recommended to use it always with a label to let know the user what i
 
 Toggles can be also used as a standalone element in a screen, to set properties like "visible", "active", "published", etc.
 
-<br/>
+<hr/>
 
 ## Toggle Sizes
 

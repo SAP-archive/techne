@@ -9,7 +9,7 @@ folder: components
 
 The Table component is a common component used to display data that can be compared. Usually a set of item of the same type which data is divided on columns to facilitate the comparison between items.
 
-<br />
+<hr />
 
 ## Default Table
 

@@ -16,7 +16,7 @@ Some common elements are styled by default:
 * **Secondary info**: here you can add more information about the object.
 * **Status**: you can signal the status of the object, for instance: active/inactive
 
-<br/>
+<hr/>
 
 ## Default Card
 

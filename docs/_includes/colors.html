@@ -5,7 +5,7 @@
         <ul class="docs-colors_plaque">
         {% for colors in group.colors %}
             <li style="background-color: #{{ colors.colorvalue }}; color: #{{colors.textcolor}}; border: 1px solid #{{colors.bordercolor}}" class="docs-colors_plaque_color">
-                {{ group.name }} {{ colors.colorname }} <br>
+               <span class="docs-colors_plaque_color-name">{{ group.name }} {{ colors.colorname }}</span>
                 #{{ colors.colorvalue }}
             </li>
         {% endfor %}

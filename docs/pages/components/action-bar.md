@@ -11,7 +11,7 @@ The Action Bar is located at the top of the page and is used for three main func
 2. Navigate back on a detail page
 3. Display the main Actions for the page
 
-<br/>
+<hr>
 
 ## Title
 

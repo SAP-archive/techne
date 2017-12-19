@@ -16,7 +16,7 @@ The following color options are avialable for fast recognition of the status:
 * **Orange**: used for status like: in process, waiting, reviewing, etc.
 * **Red**: signal the user that the object or process needs attention: in error, rejected, expired, etc.
 
-<br />
+<hr />
 
 ## Indicators
 

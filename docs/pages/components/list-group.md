@@ -9,6 +9,8 @@ folder: components
 
 The List Component can be used to display a list of items with simple information such as - scopes, names, etc.
 
+<hr>
+
 ## Simple List
 
 You can use a link to allow the user to access more information about list item.
