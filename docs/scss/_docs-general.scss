@@ -21,7 +21,7 @@ hr{
 
 
 .highlight{
-    max-width: 900px;
+    width: 100%;
 }
 
 .docs-cards{
@@ -43,10 +43,10 @@ hr{
 
 .docs-container{
     margin-left: 0;
-    width: auto;
-    max-width: 1350px;
+    width: 100%;
+    display: flex;
 }
 
 .docs-landing-page{
-    margin: 0  -15px;
+    width: 100%;
 }
