@@ -3831,16 +3831,17 @@ hr {
   display: flex; }
 
 .docs-landing-page {
-  width: 100%; }
+  width: 100%;
+  min-width: 1024px; }
 
 .docs-top-nav {
   background-color: #424e5a;
   height: 50px; }
   .docs-top-nav__logo {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 15px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: #fff; }
     .docs-top-nav__logo:hover {
@@ -3850,7 +3851,7 @@ hr {
     line-height: 1.42858;
     font-weight: 400;
     color: #fff !important;
-    padding: 6px;
+    padding: 7px;
     display: inline-block; }
     .docs-top-nav__support .tn-dropdown__menu {
       margin-left: -70px; }
@@ -3868,7 +3869,7 @@ hr {
     list-style: none; }
     .side-nav__headers-link {
       color: #424e5a;
-      padding: 15px 20px 5px 20px;
+      padding: 20px 20px 5px 20px;
       display: block; }
       .side-nav__headers-link:hover {
         color: #424e5a; }
@@ -3945,8 +3946,9 @@ hr {
   text-align: center;
   background-image: url("../images/home-hero-bg.png");
   background-size: cover;
+  background-position: center;
   color: #ffffff;
-  padding: 91px;
+  padding: 160px;
   font-family: 'Lato', sans-serif; }
   .docs-home_hero-heading {
     font-size: 50px;
@@ -3975,8 +3977,9 @@ hr {
 .docs-home_getting-started {
   width: 50%;
   float: left;
-  padding: 100px 50px;
+  padding: 160px 50px;
   background-size: cover;
+  background-position: center;
   text-align: center;
   display: inline-block;
   transition: all 0.5s ease;
@@ -3999,7 +4002,7 @@ hr {
   text-align: center;
   background-color: #313c46;
   color: #ffffff;
-  padding: 100px 0; }
+  padding: 160px 0; }
   .docs-home_ui-guidelines-heading {
     font-size: 28px;
     font-weight: 900; }
@@ -4018,8 +4021,8 @@ hr {
       margin-left: auto;
       margin-right: auto; }
   .docs-home_ui-guidelines-link {
-    width: 20%;
-    float: left;
+    width: 200px;
+    display: inline-block;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -4029,7 +4032,7 @@ hr {
 
 .docs-home_support {
   width: 60%;
-  margin: 80px auto;
+  margin: 160px auto;
   display: flex; }
   .docs-home_support-link {
     width: 50%;

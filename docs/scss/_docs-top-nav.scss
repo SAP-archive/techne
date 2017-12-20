@@ -2,10 +2,10 @@
     background-color: docs-color(text, 1);
     height: 50px;
     &__logo{
-        padding-top: 10px;
+        padding-top: 5px;
         padding-left: 15px;
         display: inline-block;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
         color: #fff;
 
@@ -17,7 +17,7 @@
     &__support{
         @include tn-type(-1);
         color: #fff !important;
-        padding: 6px;
+        padding: 7px;
         display: inline-block;
 
         .tn-dropdown__menu { 
