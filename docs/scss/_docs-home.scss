@@ -7,8 +7,9 @@
         text-align: center;
         background-image: url('../images/home-hero-bg.png');
         background-size: cover;
+        background-position: center;
         color: $docs-home-white-color;
-        padding: 91px;
+        padding: 160px;
         font-family: 'Lato', sans-serif;
 
         &-heading{
@@ -48,8 +49,9 @@
     &_getting-started{
         width: 50%;
         float: left;
-        padding:100px 50px;
+        padding: 160px 50px;
         background-size: cover;
+        background-position: center;
         text-align: center;
         display: inline-block;
         transition: all 0.5s ease;
@@ -81,7 +83,7 @@
         text-align: center;
         background-color: docs-color(background, 3);
         color: $docs-home-white-color;
-        padding: 100px 0;
+        padding: 160px 0;
 
         &-heading{
             font-size: 28px;
@@ -109,8 +111,8 @@
         }
 
         &-link{
-            width: 20%;
-            float: left;
+            width: 200px;
+            display: inline-block;
             font-size: 16px;
             font-weight: bold;
             text-transform: uppercase;
@@ -124,7 +126,7 @@
 
     &_support{
         width: 60%;
-        margin: 80px auto;
+        margin: 160px auto;
         display: flex;
 
         &-link{
