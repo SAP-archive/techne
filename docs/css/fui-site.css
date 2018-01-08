@@ -3810,7 +3810,7 @@ hr {
   clear: both; }
 
 .highlight {
-  width: 100%; }
+  max-width: 1600px; }
 
 .docs-cards .tn-card[role="button"]:hover {
   border-color: #2fd0c8; }
@@ -3933,7 +3933,6 @@ hr {
   vertical-align: top;
   flex-grow: 1;
   display: flex;
-  align-items: center;
   flex-direction: column; }
 
 .post-content {
