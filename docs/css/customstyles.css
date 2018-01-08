@@ -1122,7 +1122,7 @@ h4.panel-title {
 }
 
 pre code{
-    white-space: pre;
+    white-space:pre-wrap
     overflow-x: scroll;
 }
 
