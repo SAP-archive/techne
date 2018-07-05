@@ -1,11 +1,16 @@
+# Techne in Maintenance mode
+
+Please note that Techne component library is no longer being actively developed. The project will remain active for the time being. For the next evolution of techne, please check out [Fundamental UI](https://github.com/SAP/fundamental)
+
+
 Hybris Techne is the design guideline and component library for modern, mobile-first, user-centric experience design on YaaS.
 
-# Components
+## Components
 See this page for a list of UI Components included in Hybris Techne.
 https://techne.yaas.io/components/Alerts-Errors-Notifications.html
 
 
-# Installation
+## Installation
 
 ### Install using bower
 You can install Techne using [Bower](http://bower.io/) by with the following command in terminal or command prompt:
