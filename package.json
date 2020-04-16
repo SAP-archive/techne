@@ -13,7 +13,7 @@
   "homepage": "http://techne.yaas.io/",
   "author": "SAP SE",
   "license": "Apache-2.0",
-  "dependencies": {
+  "devDependencies": {
     "bower": "^1.8.0",
     "browser-sync": "^2.24.5",
     "gulp": "^3.8.11",
