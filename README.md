@@ -1,3 +1,8 @@
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
+
+# Important Notice
+This public repository is read-only and no longer maintained.
+
 # Techne in Maintenance mode
 
 Please note that Techne component library is no longer being actively developed. The project will remain active for the time being. For the next evolution of techne, please check out [Fundamental UI](https://github.com/SAP/fundamental)
